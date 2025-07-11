@@ -122,11 +122,28 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
-  // Auth routes - removed authentication requirement for now
+  // Auth routes - return development user data for testing
   app.get('/api/auth/user', async (req: any, res) => {
     try {
-      // Return null user when not authenticated
-      res.status(401).json({ message: "Not authenticated" });
+      // In development mode, return a mock user or get real user data
+      const userId = 'dev-user-123';
+      let user = await storage.getUser(userId);
+      
+      // If no user exists, create one with default values
+      if (!user) {
+        user = await storage.upsertUser({
+          id: userId,
+          email: 'ben.barere@gmail.com',
+          firstName: 'Ben',
+          lastName: 'Barère',
+          phone: '+33 6 12 34 56 78',
+          location: 'Paris, France',
+          bio: 'Développeur passionné de technologie',
+          profileImageUrl: null,
+        });
+      }
+      
+      res.json(user);
     } catch (error) {
       console.error("Error fetching user:", error);
       res.status(500).json({ message: "Failed to fetch user" });

@@ -1,8 +1,7 @@
 import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
-import { useCognitoAuth } from "@/hooks/useCognitoAuth";
+import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import { useToast } from "@/hooks/use-toast";
-import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { apiRequest } from "@/lib/queryClient";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
@@ -36,7 +35,13 @@ import { Link } from "wouter";
 
 export default function Profile() {
   const { t } = useTranslation();
-  const { user, isAuthenticated, isLoading } = useCognitoAuth();
+  // Use the standard API endpoint for user data
+  const { data: user, isLoading, isError } = useQuery({
+    queryKey: ['/api/auth/user'],
+    retry: false,
+  });
+  
+  const isAuthenticated = !!user;
   const { toast } = useToast();
   const queryClient = useQueryClient();
   const [isEditing, setIsEditing] = useState(false);
