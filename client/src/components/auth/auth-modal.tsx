@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -21,34 +21,34 @@ type AuthModalProps = {
 type AuthStep = "login" | "register" | "forgot-password" | "otp-verification" | "new-password";
 
 const loginSchema = z.object({
-  email: z.string().email("auth.errors.invalidEmail"),
-  password: z.string().min(6, "auth.errors.passwordTooShort"),
+  email: z.string().email("Invalid email address"),
+  password: z.string().min(6, "Password must be at least 6 characters"),
 });
 
 const registerSchema = z.object({
-  email: z.string().email("auth.errors.invalidEmail"),
-  password: z.string().min(8, "auth.errors.passwordTooShort"),
-  confirmPassword: z.string().min(8, "auth.errors.passwordTooShort"),
-  firstName: z.string().min(2, "auth.errors.firstNameRequired"),
-  lastName: z.string().min(2, "auth.errors.lastNameRequired"),
+  email: z.string().email("Invalid email address"),
+  password: z.string().min(8, "Password must be at least 8 characters"),
+  confirmPassword: z.string().min(8, "Password must be at least 8 characters"),
+  firstName: z.string().min(2, "First name is required"),
+  lastName: z.string().min(2, "Last name is required"),
 }).refine((data) => data.password === data.confirmPassword, {
-  message: "auth.errors.passwordsDoNotMatch",
+  message: "Passwords do not match",
   path: ["confirmPassword"],
 });
 
 const forgotPasswordSchema = z.object({
-  email: z.string().email("auth.errors.invalidEmail"),
+  email: z.string().email("Invalid email address"),
 });
 
 const otpSchema = z.object({
-  code: z.string().length(6, "auth.errors.otpInvalid"),
+  code: z.string().length(6, "OTP must be 6 digits"),
 });
 
 const newPasswordSchema = z.object({
-  password: z.string().min(8, "auth.errors.passwordTooShort"),
-  confirmPassword: z.string().min(8, "auth.errors.passwordTooShort"),
+  password: z.string().min(8, "Password must be at least 8 characters"),
+  confirmPassword: z.string().min(8, "Password must be at least 8 characters"),
 }).refine((data) => data.password === data.confirmPassword, {
-  message: "auth.errors.passwordsDoNotMatch",
+  message: "Passwords do not match",
   path: ["confirmPassword"],
 });
 
@@ -710,9 +710,35 @@ export default function AuthModal({ isOpen, onClose, onSuccess }: AuthModalProps
     }
   };
 
+  const getDialogTitle = () => {
+    switch (step) {
+      case "login": return t("auth.login.title");
+      case "register": return t("auth.register.title");
+      case "forgot-password": return t("auth.forgotPassword.title");
+      case "otp-verification": return t("auth.otpVerification.title");
+      case "new-password": return t("auth.newPassword.title");
+      default: return t("auth.login.title");
+    }
+  };
+
+  const getDialogDescription = () => {
+    switch (step) {
+      case "login": return t("auth.login.subtitle");
+      case "register": return t("auth.register.subtitle");
+      case "forgot-password": return t("auth.forgotPassword.subtitle");
+      case "otp-verification": return t("auth.otpVerification.subtitle", { email });
+      case "new-password": return t("auth.newPassword.subtitle");
+      default: return t("auth.login.subtitle");
+    }
+  };
+
   return (
     <Dialog open={isOpen} onOpenChange={handleClose}>
       <DialogContent className="sm:max-w-[480px] max-h-[90vh] overflow-y-auto">
+        <DialogHeader className="sr-only">
+          <DialogTitle>{getDialogTitle()}</DialogTitle>
+          <DialogDescription>{getDialogDescription()}</DialogDescription>
+        </DialogHeader>
         {renderStepContent()}
       </DialogContent>
     </Dialog>
