@@ -1,6 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
+import Footer from "@/components/footer";
 
 export default function MentionsLegales() {
   const { t } = useTranslation();
@@ -467,6 +468,8 @@ export default function MentionsLegales() {
           </CardContent>
         </Card>
       </div>
+      
+      <Footer />
     </div>
   );
 }

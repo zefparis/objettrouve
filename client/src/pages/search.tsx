@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next";
 import { useLocation, Link } from "wouter";
 import Navbar from "@/components/navbar";
 import ItemCard from "@/components/item-card";
+import Footer from "@/components/footer";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
@@ -169,6 +170,8 @@ export default function Search() {
           )}
         </div>
       </div>
+      
+      <Footer />
     </div>
   );
 }

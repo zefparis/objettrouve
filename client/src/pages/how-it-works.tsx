@@ -3,6 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
+import Footer from "@/components/footer";
 import { 
   Search, 
   MessageCircle, 
@@ -238,6 +239,8 @@ export default function HowItWorks() {
           </div>
         </div>
       </div>
+      
+      <Footer />
     </div>
   );
 }

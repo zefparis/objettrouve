@@ -10,6 +10,7 @@ import { Separator } from "@/components/ui/separator";
 import { useToast } from "@/hooks/use-toast";
 import { useState } from "react";
 import { Link } from "wouter";
+import Footer from "@/components/footer";
 import { 
   Mail, 
   Phone, 
@@ -339,6 +340,8 @@ export default function Contact() {
           </CardContent>
         </Card>
       </div>
+      
+      <Footer />
     </div>
   );
 }

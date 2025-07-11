@@ -3,6 +3,7 @@ import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import { useTranslation } from "react-i18next";
 import { useAuth } from "@/hooks/useAuth";
 import Navbar from "@/components/navbar";
+import Footer from "@/components/footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -506,6 +507,8 @@ export default function Dashboard() {
           </TabsContent>
         </Tabs>
       </div>
+      
+      <Footer />
     </div>
   );
 }
