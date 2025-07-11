@@ -171,6 +171,9 @@
     "loginToMessage": "Debes iniciar sesión para enviar un mensaje.",
     "messageError": "Ocurrió un error al enviar el mensaje",
     "noMessages": "No hay mensajes",
+    "startConversation": "¡Comienza la conversación!",
+    "conversation": "Conversación",
+    "noMessages": "No hay mensajes",
     "startConversation": "¡Inicia la conversación!",
     "conversation": "Conversación"
   },

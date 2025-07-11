@@ -171,6 +171,9 @@
     "loginToMessage": "Você deve estar logado para enviar uma mensagem.",
     "messageError": "Ocorreu um erro ao enviar a mensagem",
     "noMessages": "Nenhuma mensagem",
+    "startConversation": "Comece a conversa!",
+    "conversation": "Conversa",
+    "noMessages": "Nenhuma mensagem",
     "startConversation": "Inicie a conversa!",
     "conversation": "Conversa"
   },

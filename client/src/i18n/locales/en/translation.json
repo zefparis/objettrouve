@@ -172,6 +172,9 @@
     "messageError": "An error occurred while sending the message",
     "noMessages": "No messages",
     "startConversation": "Start the conversation!",
+    "conversation": "Conversation",
+    "noMessages": "No messages",
+    "startConversation": "Start the conversation!",
     "conversation": "Conversation"
   },
   "itemDetail": {

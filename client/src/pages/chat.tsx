@@ -15,7 +15,7 @@ import { isUnauthorizedError } from "@/lib/authUtils";
 import { Send, ArrowLeft } from "lucide-react";
 
 export default function Chat() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const { itemId } = useParams();
   const { user } = useAuth();
   const { toast } = useToast();
@@ -175,7 +175,7 @@ export default function Chat() {
                           <p className={`text-xs mt-1 ${
                             isOwnMessage ? 'text-blue-100' : 'text-gray-500'
                           }`}>
-                            {new Date(msg.createdAt).toLocaleTimeString("fr-FR", {
+                            {new Date(msg.createdAt).toLocaleTimeString(i18n.language, {
                               hour: '2-digit',
                               minute: '2-digit'
                             })}
