@@ -1,7 +1,9 @@
 import { useQuery } from "@tanstack/react-query";
+import { useTranslation } from "react-i18next";
 import { Card, CardContent } from "@/components/ui/card";
 
 export default function Stats() {
+  const { t } = useTranslation();
   const { data: stats } = useQuery({
     queryKey: ["/api/stats"],
     queryFn: async () => {
@@ -22,7 +24,7 @@ export default function Stats() {
               <div className="text-4xl font-bold text-primary mb-2">
                 {stats?.totalItems?.toLocaleString("fr-FR") || "0"}
               </div>
-              <p className="text-gray-600">Objets déclarés</p>
+              <p className="text-gray-600">{t("stats.totalItems")}</p>
             </CardContent>
           </Card>
           <Card>
@@ -30,7 +32,7 @@ export default function Stats() {
               <div className="text-4xl font-bold text-secondary mb-2">
                 {stats?.foundItems?.toLocaleString("fr-FR") || "0"}
               </div>
-              <p className="text-gray-600">Objets trouvés</p>
+              <p className="text-gray-600">{t("stats.foundItems")}</p>
             </CardContent>
           </Card>
           <Card>
@@ -38,7 +40,7 @@ export default function Stats() {
               <div className="text-4xl font-bold text-accent mb-2">
                 {stats?.users?.toLocaleString("fr-FR") || "0"}
               </div>
-              <p className="text-gray-600">Utilisateurs actifs</p>
+              <p className="text-gray-600">{t("stats.users")}</p>
             </CardContent>
           </Card>
         </div>

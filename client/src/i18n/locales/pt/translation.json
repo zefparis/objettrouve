@@ -1,7 +1,7 @@
 {
   "nav": {
     "home": "Início",
-    "search": "Buscar",
+    "search": "Procurar",
     "publish": "Publicar",
     "dashboard": "Painel",
     "chat": "Mensagens",
@@ -10,13 +10,13 @@
   },
   "hero": {
     "title": "Encontre seus objetos perdidos",
-    "subtitle": "A plataforma francesa de referência para encontrar seus objetos perdidos ou reportar seus achados",
-    "searchPlaceholder": "Buscar um objeto...",
-    "searchButton": "Buscar",
+    "subtitle": "A plataforma francesa de referência para recuperar seus objetos perdidos ou reportar seus achados",
+    "searchPlaceholder": "Procurar um objeto...",
+    "searchButton": "Procurar",
     "publishButton": "Publicar anúncio"
   },
   "stats": {
-    "totalItems": "Objetos reportados",
+    "totalItems": "Objetos declarados",
     "lostItems": "Objetos perdidos",
     "foundItems": "Objetos encontrados",
     "users": "Usuários ativos"
@@ -33,25 +33,25 @@
     "sports": "Esportes",
     "books": "Livros",
     "pets": "Animais",
-    "other": "Outros"
+    "other": "Outro"
   },
   "howItWorks": {
-    "title": "Como funciona",
+    "title": "Como funciona?",
     "step1": {
       "title": "Reporte seu objeto",
       "description": "Publique um anúncio com foto e descrição detalhada"
     },
     "step2": {
-      "title": "Busque e filtre",
+      "title": "Procure e filtre",
       "description": "Use nossos filtros para encontrar rapidamente o que procura"
     },
     "step3": {
       "title": "Contate e recupere",
-      "description": "Troque informações com segurança com outros usuários"
+      "description": "Troque com segurança com outros usuários"
     }
   },
   "search": {
-    "title": "Buscar objetos",
+    "title": "Procurar objetos",
     "filters": "Filtros",
     "type": "Tipo",
     "all": "Todos",
@@ -59,7 +59,7 @@
     "found": "Encontrados",
     "category": "Categoria",
     "location": "Localização",
-    "searchPlaceholder": "Buscar por palavra-chave...",
+    "searchPlaceholder": "Procurar por palavra-chave...",
     "noResults": "Nenhum resultado encontrado",
     "noResultsDesc": "Tente modificar seus critérios de busca",
     "itemType": {
@@ -77,10 +77,10 @@
       "type": "Tipo de anúncio",
       "category": "Categoria",
       "location": "Localização",
-      "locationPlaceholder": "Ex: Paris 15°, Estação Montparnasse",
+      "locationPlaceholder": "Ex: Paris 15º, Estação Montparnasse",
       "dateOccurred": "Data do incidente",
       "contactInfo": "Informações de contato",
-      "contactPlaceholder": "Como entrar em contato...",
+      "contactPlaceholder": "Como contatá-lo...",
       "image": "Foto do objeto",
       "imageHelp": "Adicione uma foto para aumentar suas chances",
       "publish": "Publicar anúncio",
@@ -90,7 +90,7 @@
     "error": "Erro ao publicar anúncio"
   },
   "dashboard": {
-    "title": "Meu painel",
+    "title": "Meu Painel",
     "myItems": "Meus anúncios",
     "statistics": "Estatísticas",
     "recentActivity": "Atividade recente",
@@ -105,12 +105,12 @@
   "chat": {
     "title": "Mensagens",
     "noConversations": "Nenhuma conversa",
-    "noConversationsDesc": "Inicie uma conversa entrando em contato com alguém",
+    "noConversationsDesc": "Inicie uma conversa contatando alguém",
     "typePlaceholder": "Digite sua mensagem...",
     "send": "Enviar"
   },
   "itemDetail": {
-    "contactOwner": "Contactar proprietário",
+    "contactOwner": "Contatar proprietário",
     "reportedOn": "Reportado em",
     "category": "Categoria",
     "location": "Localização",
@@ -132,22 +132,22 @@
     "noImage": "Sem imagem",
     "timeAgo": {
       "now": "Agora mesmo",
-      "minutes": "{{count}} minuto atrás",
-      "minutes_plural": "{{count}} minutos atrás",
-      "hours": "{{count}} hora atrás",
-      "hours_plural": "{{count}} horas atrás",
-      "days": "{{count}} dia atrás",
-      "days_plural": "{{count}} dias atrás",
-      "weeks": "{{count}} semana atrás",
-      "weeks_plural": "{{count}} semanas atrás",
-      "months": "{{count}} mês atrás",
-      "months_plural": "{{count}} meses atrás",
-      "years": "{{count}} ano atrás",
-      "years_plural": "{{count}} anos atrás"
+      "minutes": "há {{count}} minuto",
+      "minutes_plural": "há {{count}} minutos",
+      "hours": "há {{count}} hora",
+      "hours_plural": "há {{count}} horas",
+      "days": "há {{count}} dia",
+      "days_plural": "há {{count}} dias",
+      "weeks": "há {{count}} semana",
+      "weeks_plural": "há {{count}} semanas",
+      "months": "há {{count}} mês",
+      "months_plural": "há {{count}} meses",
+      "years": "há {{count}} ano",
+      "years_plural": "há {{count}} anos"
     }
   },
   "footer": {
-    "description": "A plataforma francesa de referência para encontrar seus objetos perdidos",
+    "description": "A plataforma francesa de referência para recuperar seus objetos perdidos",
     "links": {
       "about": "Sobre",
       "contact": "Contato",

@@ -10,13 +10,13 @@
   },
   "hero": {
     "title": "Trova i tuoi oggetti smarriti",
-    "subtitle": "La piattaforma francese di riferimento per trovare i tuoi oggetti smarriti o segnalare i tuoi ritrovamenti",
+    "subtitle": "La piattaforma francese di riferimento per recuperare i tuoi oggetti smarriti o segnalare i tuoi ritrovamenti",
     "searchPlaceholder": "Cerca un oggetto...",
     "searchButton": "Cerca",
     "publishButton": "Pubblica annuncio"
   },
   "stats": {
-    "totalItems": "Oggetti segnalati",
+    "totalItems": "Oggetti dichiarati",
     "lostItems": "Oggetti smarriti",
     "foundItems": "Oggetti trovati",
     "users": "Utenti attivi"
@@ -36,18 +36,18 @@
     "other": "Altro"
   },
   "howItWorks": {
-    "title": "Come funziona",
+    "title": "Come funziona?",
     "step1": {
       "title": "Segnala il tuo oggetto",
       "description": "Pubblica un annuncio con foto e descrizione dettagliata"
     },
     "step2": {
       "title": "Cerca e filtra",
-      "description": "Usa i nostri filtri per trovare rapidamente quello che cerchi"
+      "description": "Usa i nostri filtri per trovare rapidamente ciò che cerchi"
     },
     "step3": {
       "title": "Contatta e recupera",
-      "description": "Scambia informazioni in sicurezza con altri utenti"
+      "description": "Scambia in sicurezza con altri utenti"
     }
   },
   "search": {
@@ -77,7 +77,7 @@
       "type": "Tipo di annuncio",
       "category": "Categoria",
       "location": "Posizione",
-      "locationPlaceholder": "Es: Parigi 15°, Stazione Montparnasse",
+      "locationPlaceholder": "Es: Parigi 15º, Stazione Montparnasse",
       "dateOccurred": "Data dell'incidente",
       "contactInfo": "Informazioni di contatto",
       "contactPlaceholder": "Come contattarti...",
@@ -90,7 +90,7 @@
     "error": "Errore nella pubblicazione dell'annuncio"
   },
   "dashboard": {
-    "title": "La mia dashboard",
+    "title": "La Mia Dashboard",
     "myItems": "I miei annunci",
     "statistics": "Statistiche",
     "recentActivity": "Attività recente",
@@ -128,7 +128,7 @@
     "back": "Indietro",
     "next": "Avanti",
     "previous": "Precedente",
-    "viewDetails": "Vedi dettagli",
+    "viewDetails": "Visualizza dettagli",
     "noImage": "Nessuna immagine",
     "timeAgo": {
       "now": "Proprio ora",
@@ -147,10 +147,10 @@
     }
   },
   "footer": {
-    "description": "La piattaforma francese di riferimento per trovare i tuoi oggetti smarriti",
+    "description": "La piattaforma francese di riferimento per recuperare i tuoi oggetti smarriti",
     "links": {
       "about": "Chi siamo",
-      "contact": "Contatti",
+      "contact": "Contatto",
       "privacy": "Privacy",
       "terms": "Termini"
     },

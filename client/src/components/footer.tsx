@@ -1,7 +1,9 @@
 import { Link } from "wouter";
+import { useTranslation } from "react-i18next";
 import { Search, Facebook, Twitter, Instagram } from "lucide-react";
 
 export default function Footer() {
+  const { t } = useTranslation();
   return (
     <footer className="bg-gray-900 text-white py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -12,7 +14,7 @@ export default function Footer() {
               ObjetsTrouvés
             </h3>
             <p className="text-gray-400 mb-4">
-              La plateforme française de référence pour retrouver vos objets perdus.
+              {t("footer.description")}
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-gray-400 hover:text-white transition-colors">

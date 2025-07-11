@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
+import { useTranslation } from "react-i18next";
 import { useLocation } from "wouter";
 import { z } from "zod";
 import Navbar from "@/components/navbar";
@@ -33,6 +34,7 @@ const publishSchema = z.object({
 type PublishFormData = z.infer<typeof publishSchema>;
 
 export default function Publish() {
+  const { t } = useTranslation();
   const [location, setLocation] = useLocation();
   const { toast } = useToast();
   const queryClient = useQueryClient();

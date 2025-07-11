@@ -5,21 +5,21 @@
     "publish": "Publish",
     "dashboard": "Dashboard",
     "chat": "Messages",
-    "login": "Sign In",
-    "logout": "Sign Out"
+    "login": "Login",
+    "logout": "Logout"
   },
   "hero": {
     "title": "Find Your Lost Items",
-    "subtitle": "The French reference platform to find your lost items or report your findings",
+    "subtitle": "The French reference platform to recover your lost items or report your findings",
     "searchPlaceholder": "Search for an item...",
     "searchButton": "Search",
-    "publishButton": "Post an Ad"
+    "publishButton": "Post an ad"
   },
   "stats": {
-    "totalItems": "Items Reported",
-    "lostItems": "Lost Items",
-    "foundItems": "Found Items",
-    "users": "Active Users"
+    "totalItems": "Declared items",
+    "lostItems": "Lost items",
+    "foundItems": "Found items",
+    "users": "Active users"
   },
   "categories": {
     "title": "Popular Categories",
@@ -36,22 +36,22 @@
     "other": "Other"
   },
   "howItWorks": {
-    "title": "How It Works",
+    "title": "How it works?",
     "step1": {
-      "title": "Report Your Item",
+      "title": "Report your item",
       "description": "Post an ad with photo and detailed description"
     },
     "step2": {
-      "title": "Search and Filter",
+      "title": "Search and filter",
       "description": "Use our filters to quickly find what you're looking for"
     },
     "step3": {
-      "title": "Contact and Recover",
-      "description": "Exchange safely with other users"
+      "title": "Contact and recover",
+      "description": "Safely exchange with other users"
     }
   },
   "search": {
-    "title": "Search Items",
+    "title": "Search for items",
     "filters": "Filters",
     "type": "Type",
     "all": "All",
@@ -68,34 +68,34 @@
     }
   },
   "publish": {
-    "title": "Post an Ad",
+    "title": "Post an ad",
     "form": {
-      "title": "Ad Title",
-      "titlePlaceholder": "Ex: iPhone 13 Pro lost in subway",
-      "description": "Detailed Description",
+      "title": "Ad title",
+      "titlePlaceholder": "E.g.: iPhone 13 Pro lost in subway",
+      "description": "Detailed description",
       "descriptionPlaceholder": "Describe your item in detail...",
-      "type": "Ad Type",
+      "type": "Ad type",
       "category": "Category",
       "location": "Location",
-      "locationPlaceholder": "Ex: Paris 15th, Montparnasse Station",
-      "dateOccurred": "Date of Incident",
-      "contactInfo": "Contact Information",
+      "locationPlaceholder": "E.g.: Paris 15th, Montparnasse Station",
+      "dateOccurred": "Date of incident",
+      "contactInfo": "Contact information",
       "contactPlaceholder": "How to contact you...",
-      "image": "Item Photo",
+      "image": "Item photo",
       "imageHelp": "Add a photo to increase your chances",
-      "publish": "Post Ad",
+      "publish": "Publish ad",
       "publishing": "Publishing..."
     },
-    "success": "Ad posted successfully!",
-    "error": "Error posting ad"
+    "success": "Ad published successfully!",
+    "error": "Error publishing ad"
   },
   "dashboard": {
     "title": "My Dashboard",
-    "myItems": "My Ads",
+    "myItems": "My ads",
     "statistics": "Statistics",
-    "recentActivity": "Recent Activity",
-    "noItems": "No ads posted",
-    "noItemsDesc": "Post your first ad to get started",
+    "recentActivity": "Recent activity",
+    "noItems": "No ads published",
+    "noItemsDesc": "Publish your first ad to get started",
     "actions": {
       "edit": "Edit",
       "delete": "Delete",
@@ -110,13 +110,13 @@
     "send": "Send"
   },
   "itemDetail": {
-    "contactOwner": "Contact Owner",
+    "contactOwner": "Contact owner",
     "reportedOn": "Reported on",
     "category": "Category",
     "location": "Location",
     "contactInfo": "Contact",
     "description": "Description",
-    "similarItems": "Similar Items"
+    "similarItems": "Similar items"
   },
   "common": {
     "loading": "Loading...",
@@ -128,8 +128,8 @@
     "back": "Back",
     "next": "Next",
     "previous": "Previous",
-    "viewDetails": "View Details",
-    "noImage": "No Image",
+    "viewDetails": "View details",
+    "noImage": "No image",
     "timeAgo": {
       "now": "Just now",
       "minutes": "{{count}} minute ago",
@@ -147,14 +147,14 @@
     }
   },
   "footer": {
-    "description": "The French reference platform to find your lost items",
+    "description": "The French reference platform for recovering your lost items",
     "links": {
       "about": "About",
       "contact": "Contact",
       "privacy": "Privacy",
       "terms": "Terms"
     },
-    "followUs": "Follow Us",
+    "followUs": "Follow us",
     "copyright": "© 2024 ObjetsTrouvés. All rights reserved."
   }
 }

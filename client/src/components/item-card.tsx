@@ -1,6 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { useTranslation } from "react-i18next";
 import { MapPin, Clock, Search, Plus } from "lucide-react";
 import { CATEGORIES } from "@shared/schema";
 
@@ -19,6 +20,7 @@ interface ItemCardProps {
 }
 
 export default function ItemCard({ item }: ItemCardProps) {
+  const { t } = useTranslation();
   const category = CATEGORIES.find(c => c.id === item.category);
   const timeAgo = getTimeAgo(item.createdAt);
 
@@ -41,12 +43,12 @@ export default function ItemCard({ item }: ItemCardProps) {
             {item.type === "lost" ? (
               <>
                 <Search className="h-3 w-3 mr-1" />
-                Perdu
+                {t("search.itemType.lost")}
               </>
             ) : (
               <>
                 <Plus className="h-3 w-3 mr-1" />
-                Trouvé
+                {t("search.itemType.found")}
               </>
             )}
           </Badge>
@@ -68,7 +70,7 @@ export default function ItemCard({ item }: ItemCardProps) {
           className="w-full"
           onClick={() => window.location.href = `/annonce/${item.id}`}
         >
-          Voir les détails
+          {t("common.viewDetails")}
         </Button>
       </CardContent>
     </Card>

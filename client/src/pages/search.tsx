@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useQuery } from "@tanstack/react-query";
+import { useTranslation } from "react-i18next";
 import { useLocation, Link } from "wouter";
 import Navbar from "@/components/navbar";
 import ItemCard from "@/components/item-card";
@@ -12,6 +13,7 @@ import { Search as SearchIcon, Filter, MapPin } from "lucide-react";
 import { CATEGORIES } from "@shared/schema";
 
 export default function Search() {
+  const { t } = useTranslation();
   const [search, setSearch] = useState("");
   const [selectedType, setSelectedType] = useState<string>("all");
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
@@ -43,7 +45,7 @@ export default function Search() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="mb-8">
           <h1 className="text-3xl font-bold text-gray-900 mb-4">
-            Rechercher des objets
+            {t("search.title")}
           </h1>
           <p className="text-gray-600">
             Trouvez des objets perdus ou trouvés près de chez vous

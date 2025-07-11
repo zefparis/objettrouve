@@ -1,13 +1,15 @@
 import { Card, CardContent } from "@/components/ui/card";
+import { useTranslation } from "react-i18next";
 import { Plus, Search, Handshake } from "lucide-react";
 
 export default function HowItWorks() {
+  const { t } = useTranslation();
   return (
     <section className="py-16 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">
-            Comment ça marche ?
+            {t("howItWorks.title")}
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
             Retrouvez vos objets perdus en 3 étapes simples
@@ -21,10 +23,10 @@ export default function HowItWorks() {
                 <Plus className="h-8 w-8 text-white" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                1. Déclarez
+                1. {t("howItWorks.step1.title")}
               </h3>
               <p className="text-gray-600">
-                Publiez une annonce avec photo, description et lieu de perte ou de découverte
+                {t("howItWorks.step1.description")}
               </p>
             </CardContent>
           </Card>
@@ -35,10 +37,10 @@ export default function HowItWorks() {
                 <Search className="h-8 w-8 text-white" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                2. Recherchez
+                2. {t("howItWorks.step2.title")}
               </h3>
               <p className="text-gray-600">
-                Parcourez les annonces ou créez des alertes pour être notifié automatiquement
+                {t("howItWorks.step2.description")}
               </p>
             </CardContent>
           </Card>
@@ -49,10 +51,10 @@ export default function HowItWorks() {
                 <Handshake className="h-8 w-8 text-white" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                3. Reconnectez
+                3. {t("howItWorks.step3.title")}
               </h3>
               <p className="text-gray-600">
-                Contactez le propriétaire via notre chat sécurisé et organisez la restitution
+                {t("howItWorks.step3.description")}
               </p>
             </CardContent>
           </Card>

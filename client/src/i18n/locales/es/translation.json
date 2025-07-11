@@ -5,18 +5,18 @@
     "publish": "Publicar",
     "dashboard": "Panel",
     "chat": "Mensajes",
-    "login": "Iniciar Sesión",
-    "logout": "Cerrar Sesión"
+    "login": "Iniciar sesión",
+    "logout": "Cerrar sesión"
   },
   "hero": {
     "title": "Encuentra tus objetos perdidos",
-    "subtitle": "La plataforma francesa de referencia para encontrar tus objetos perdidos o reportar tus hallazgos",
+    "subtitle": "La plataforma francesa de referencia para recuperar tus objetos perdidos o reportar tus hallazgos",
     "searchPlaceholder": "Buscar un objeto...",
     "searchButton": "Buscar",
     "publishButton": "Publicar anuncio"
   },
   "stats": {
-    "totalItems": "Objetos reportados",
+    "totalItems": "Objetos declarados",
     "lostItems": "Objetos perdidos",
     "foundItems": "Objetos encontrados",
     "users": "Usuarios activos"
@@ -28,12 +28,12 @@
     "accessories": "Accesorios",
     "documents": "Documentos",
     "keys": "Llaves",
-    "jewelry": "Joyas",
+    "jewelry": "Joyería",
     "bags": "Bolsos",
     "sports": "Deportes",
     "books": "Libros",
     "pets": "Mascotas",
-    "other": "Otros"
+    "other": "Otro"
   },
   "howItWorks": {
     "title": "¿Cómo funciona?",
@@ -71,26 +71,26 @@
     "title": "Publicar anuncio",
     "form": {
       "title": "Título del anuncio",
-      "titlePlaceholder": "Ej: iPhone 13 Pro perdido en el metro",
+      "titlePlaceholder": "Ej: iPhone 13 Pro perdido en metro",
       "description": "Descripción detallada",
       "descriptionPlaceholder": "Describe tu objeto en detalle...",
       "type": "Tipo de anuncio",
       "category": "Categoría",
       "location": "Ubicación",
-      "locationPlaceholder": "Ej: París 15°, Estación Montparnasse",
+      "locationPlaceholder": "Ej: París 15º, Estación Montparnasse",
       "dateOccurred": "Fecha del incidente",
       "contactInfo": "Información de contacto",
       "contactPlaceholder": "Cómo contactarte...",
       "image": "Foto del objeto",
-      "imageHelp": "Añade una foto para aumentar tus posibilidades",
+      "imageHelp": "Agrega una foto para aumentar tus posibilidades",
       "publish": "Publicar anuncio",
       "publishing": "Publicando..."
     },
-    "success": "¡Anuncio publicado con éxito!",
+    "success": "¡Anuncio publicado exitosamente!",
     "error": "Error al publicar el anuncio"
   },
   "dashboard": {
-    "title": "Mi panel",
+    "title": "Mi Panel",
     "myItems": "Mis anuncios",
     "statistics": "Estadísticas",
     "recentActivity": "Actividad reciente",
@@ -125,7 +125,7 @@
     "cancel": "Cancelar",
     "save": "Guardar",
     "close": "Cerrar",
-    "back": "Volver",
+    "back": "Atrás",
     "next": "Siguiente",
     "previous": "Anterior",
     "viewDetails": "Ver detalles",
@@ -147,7 +147,7 @@
     }
   },
   "footer": {
-    "description": "La plataforma francesa de referencia para encontrar tus objetos perdidos",
+    "description": "La plataforma francesa de referencia para recuperar tus objetos perdidos",
     "links": {
       "about": "Acerca de",
       "contact": "Contacto",
