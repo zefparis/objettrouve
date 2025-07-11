@@ -24,7 +24,7 @@ import {
   Home
 } from "lucide-react";
 import { Link } from "wouter";
-import { useCognitoAuth } from "@/hooks/useCognitoAuth";
+import { useAuth } from "@/hooks/useAuth";
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import { apiRequest } from "@/lib/queryClient";
 import { useToast } from "@/hooks/use-toast";
@@ -32,7 +32,7 @@ import { format } from "date-fns";
 
 export default function AdminDashboard() {
   const { t } = useTranslation();
-  const { isAuthenticated, user } = useCognitoAuth();
+  const { isAuthenticated, user } = useAuth();
   const { toast } = useToast();
   const queryClient = useQueryClient();
   const [selectedPeriod, setSelectedPeriod] = useState("30d");

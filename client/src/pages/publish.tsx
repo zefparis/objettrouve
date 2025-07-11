@@ -39,13 +39,7 @@ export default function Publish() {
   const search = useSearch();
   const { toast } = useToast();
   const queryClient = useQueryClient();
-  // Use the standard API endpoint for user data
-  const { data: user, isLoading, isError } = useQuery({
-    queryKey: ['/api/auth/user'],
-    retry: false,
-  });
-  
-  const isAuthenticated = !!user;
+  const { user, isLoading, isAuthenticated } = useAuth();
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [previewUrl, setPreviewUrl] = useState<string | null>(null);
 

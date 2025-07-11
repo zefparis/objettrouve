@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useLocation } from "wouter";
-import { useCognitoAuth } from "@/hooks/useCognitoAuth";
+import { useAuth } from "@/hooks/useAuth";
 import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -12,7 +12,7 @@ import AuthModal from "./auth/auth-modal";
 
 export default function Navbar() {
   const [location] = useLocation();
-  const { user, isAuthenticated, isLoading, signOut } = useCognitoAuth();
+  const { user, isAuthenticated, isLoading, signOut } = useAuth();
   const { t } = useTranslation();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [authModalOpen, setAuthModalOpen] = useState(false);

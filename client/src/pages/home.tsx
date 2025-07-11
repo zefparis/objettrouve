@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
-import { useCognitoAuth } from "@/hooks/useCognitoAuth";
+import { useAuth } from "@/hooks/useAuth";
 import { useToast } from "@/hooks/use-toast";
 import Navbar from "@/components/navbar";
 import Hero from "@/components/hero";
@@ -21,7 +21,7 @@ import { Crown, CreditCard, DollarSign, Settings, ShoppingCart, Star } from "luc
 export default function Home() {
   const { t } = useTranslation();
   const { toast } = useToast();
-  const { isAuthenticated, isLoading } = useCognitoAuth();
+  const { isAuthenticated, isLoading } = useAuth();
 
   useEffect(() => {
     if (!isLoading && !isAuthenticated) {

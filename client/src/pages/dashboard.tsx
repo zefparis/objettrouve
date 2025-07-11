@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import { useTranslation } from "react-i18next";
-import { useCognitoAuth } from "@/hooks/useCognitoAuth";
+import { useAuth } from "@/hooks/useAuth";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import { Button } from "@/components/ui/button";
@@ -35,7 +35,7 @@ import { CATEGORIES } from "@shared/schema";
 
 export default function Dashboard() {
   const { t } = useTranslation();
-  const { user, isAuthenticated, isLoading } = useCognitoAuth();
+  const { user, isAuthenticated, isLoading } = useAuth();
   const { toast } = useToast();
   const queryClient = useQueryClient();
 

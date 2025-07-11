@@ -5,14 +5,14 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Check, Zap, Shield, Star, Mail, ImageIcon, MapPin } from "lucide-react";
-import { useCognitoAuth } from "@/hooks/useCognitoAuth";
+import { useAuth } from "@/hooks/useAuth";
 import { Link } from "wouter";
 import { ArrowLeft, Home } from "lucide-react";
 import AuthModal from "@/components/auth/auth-modal";
 
 export default function Pricing() {
   const { t } = useTranslation();
-  const { isAuthenticated } = useCognitoAuth();
+  const { isAuthenticated } = useAuth();
   const [selectedService, setSelectedService] = useState<string | null>(null);
   const [showModal, setShowModal] = useState(false);
   const [showAuthModal, setShowAuthModal] = useState(false);
