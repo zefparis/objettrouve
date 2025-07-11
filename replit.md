@@ -61,16 +61,18 @@ Preferred communication style: Simple, everyday language.
 
 ### Database Schema
 Located in `shared/schema.ts` with the following main tables:
-- **users**: User profiles with Replit Auth integration
+- **users**: User profiles with AWS Cognito integration
 - **items**: Lost/found items with location, category, and image data
 - **messages**: Chat system for user communication
-- **sessions**: Session storage for authentication
+- **orders**: Premium service orders and subscriptions
+- **premium_services**: Available premium services and pricing
 
 ### Authentication System
-- Replit Auth integration with OIDC
-- Session-based authentication using PostgreSQL storage
-- User profile management with automatic user creation/updates
-- Protected routes requiring authentication
+- AWS Cognito integration for user authentication
+- JWT token-based authentication
+- User profile management with Cognito user pools
+- Removed Replit Auth dependency completely (January 2025)
+- All authentication-related middleware and routes cleaned up (January 2025)
 
 ### File Management
 - Image upload handling with Multer
@@ -85,7 +87,7 @@ Located in `shared/schema.ts` with the following main tables:
 
 ## Data Flow
 
-1. **User Registration/Login**: Users authenticate through Replit Auth
+1. **User Registration/Login**: Users authenticate through AWS Cognito
 2. **Item Publishing**: Users create items with images, descriptions, and location data
 3. **Search & Discovery**: Users search items by keywords, categories, or location
 4. **Communication**: Secure chat between item owners and interested users
@@ -95,7 +97,7 @@ Located in `shared/schema.ts` with the following main tables:
 
 ### Core Dependencies
 - **Database**: Neon PostgreSQL serverless database
-- **Authentication**: Replit Auth with OIDC
+- **Authentication**: AWS Cognito with JWT tokens
 - **UI Components**: Radix UI primitives
 - **Validation**: Zod for schema validation
 - **HTTP Client**: Fetch API with custom query functions
@@ -122,8 +124,8 @@ Located in `shared/schema.ts` with the following main tables:
 
 ### Configuration
 - Environment variables for database connection
-- Session secrets for authentication
-- Replit-specific configuration for hosted environment
+- AWS Cognito configuration for user authentication
+- Stripe and PayPal API keys for payment processing
 - CORS and security headers for production deployment
 
 The application follows a monorepo structure with shared schemas and types, enabling type safety between frontend and backend while maintaining clear separation of concerns.

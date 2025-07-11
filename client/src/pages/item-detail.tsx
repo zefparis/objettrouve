@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useParams } from "wouter";
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import { useTranslation } from "react-i18next";
-import { useAuth } from "@/hooks/useAuth";
+import { useCognitoAuth } from "@/hooks/useCognitoAuth";
 import Navbar from "@/components/navbar";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -11,7 +11,6 @@ import { Textarea } from "@/components/ui/textarea";
 import { Separator } from "@/components/ui/separator";
 import { useToast } from "@/hooks/use-toast";
 import { apiRequest } from "@/lib/queryClient";
-import { isUnauthorizedError } from "@/lib/authUtils";
 import { MapPin, Calendar, Phone, Mail, MessageCircle, User, ArrowLeft, Home } from "lucide-react";
 import { Link } from "wouter";
 import { CATEGORIES } from "@shared/schema";
@@ -19,7 +18,7 @@ import { CATEGORIES } from "@shared/schema";
 export default function ItemDetail() {
   const { t } = useTranslation();
   const { id } = useParams();
-  const { user } = useAuth();
+  const { user } = useCognitoAuth();
   const { toast } = useToast();
   const queryClient = useQueryClient();
   const [message, setMessage] = useState("");
@@ -54,18 +53,6 @@ export default function ItemDetail() {
       queryClient.invalidateQueries({ queryKey: ["/api/conversations"] });
     },
     onError: (error) => {
-      if (isUnauthorizedError(error)) {
-        toast({
-          title: t("common.unauthorized"),
-          description: t("itemDetail.loginToMessage"),
-          variant: "destructive",
-        });
-        setTimeout(() => {
-          window.location.href = "/api/login";
-        }, 500);
-        return;
-      }
-      
       toast({
         title: t("common.error"),
         description: t("itemDetail.messageError"),

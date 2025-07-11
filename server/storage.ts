@@ -18,7 +18,7 @@ import { db } from "./db";
 import { eq, desc, and, or, ilike, sql, count, sum, gte, lte } from "drizzle-orm";
 
 export interface IStorage {
-  // User operations (required for Replit Auth)
+  // User operations (removed Replit Auth dependency)
   getUser(id: string): Promise<User | undefined>;
   upsertUser(user: UpsertUser): Promise<User>;
   

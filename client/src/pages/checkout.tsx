@@ -7,7 +7,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ArrowLeft, CreditCard, Shield } from "lucide-react";
-import { useAuth } from "@/hooks/useAuth";
+import { useCognitoAuth } from "@/hooks/useCognitoAuth";
 import { useToast } from "@/hooks/use-toast";
 import { apiRequest } from "@/lib/queryClient";
 import PayPalButton from "@/components/PayPalButton";
@@ -104,7 +104,7 @@ const CheckoutForm = ({ planDetails, method }: CheckoutFormProps) => {
 
 export default function Checkout() {
   const { t } = useTranslation();
-  const { isAuthenticated } = useAuth();
+  const { isAuthenticated } = useCognitoAuth();
   const [, setLocation] = useLocation();
   const [clientSecret, setClientSecret] = useState("");
   const [planDetails, setPlanDetails] = useState<any>(null);
