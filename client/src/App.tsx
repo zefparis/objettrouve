@@ -15,6 +15,10 @@ import Chat from "@/pages/chat";
 import HowItWorks from "@/pages/how-it-works";
 import Contact from "@/pages/contact";
 import Profile from "@/pages/profile";
+import AdminDashboard from "@/pages/admin-dashboard";
+import Pricing from "@/pages/pricing";
+import Checkout from "@/pages/checkout";
+import PaymentSuccess from "@/pages/payment-success";
 import MentionsLegales from "@/pages/legal/mentions-legales";
 import PolitiqueConfidentialite from "@/pages/legal/politique-confidentialite";
 import CGU from "@/pages/legal/cgu";
@@ -36,6 +40,10 @@ function Router() {
       <Route path="/dashboard" component={Dashboard} />
       <Route path="/profile" component={Profile} />
       <Route path="/profil" component={Profile} />
+      <Route path="/pricing" component={Pricing} />
+      <Route path="/checkout" component={Checkout} />
+      <Route path="/payment-success" component={PaymentSuccess} />
+      <Route path="/admin" component={AdminDashboard} />
       <Route path="/mentions-legales" component={MentionsLegales} />
       <Route path="/politique-confidentialite" component={PolitiqueConfidentialite} />
       <Route path="/cgu" component={CGU} />

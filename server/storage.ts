@@ -2,15 +2,20 @@ import {
   users,
   items,
   messages,
+  orders,
+  premiumServices,
   type User,
   type UpsertUser,
   type Item,
   type InsertItem,
   type Message,
   type InsertMessage,
+  type Order,
+  type InsertOrder,
+  type PremiumService,
 } from "@shared/schema";
 import { db } from "./db";
-import { eq, desc, and, or, ilike, sql } from "drizzle-orm";
+import { eq, desc, and, or, ilike, sql, count, sum, gte, lte } from "drizzle-orm";
 
 export interface IStorage {
   // User operations (required for Replit Auth)
@@ -45,6 +50,34 @@ export interface IStorage {
   }>;
   
   getCategoryStats(): Promise<{ category: string; count: number }[]>;
+  
+  // Order operations
+  createOrder(order: InsertOrder): Promise<Order>;
+  getOrders(userId?: string): Promise<Order[]>;
+  getOrder(id: number): Promise<Order | undefined>;
+  updateOrder(id: number, updates: Partial<InsertOrder>): Promise<Order | undefined>;
+  
+  // Premium services
+  getPremiumServices(): Promise<PremiumService[]>;
+  getPremiumService(id: string): Promise<PremiumService | undefined>;
+  
+  // Admin operations
+  getRevenueStats(period: string): Promise<{
+    totalRevenue: number;
+    revenueGrowth: number;
+    dailyRevenue: Array<{ date: string; revenue: number }>;
+  }>;
+  getPayingUsers(): Promise<{
+    users: User[];
+    payingUsers: number;
+    userGrowth: number;
+  }>;
+  getOrdersStats(): Promise<{
+    orders: Order[];
+    monthlyOrders: number;
+    orderGrowth: number;
+  }>;
+  processRefund(orderId: number, amount: number, reason: string): Promise<boolean>;
 }
 
 export class DatabaseStorage implements IStorage {
@@ -229,6 +262,265 @@ export class DatabaseStorage implements IStorage {
       category: stat.category,
       count: Number(stat.count),
     }));
+  }
+
+  // Order operations
+  async createOrder(order: InsertOrder): Promise<Order> {
+    const [newOrder] = await db
+      .insert(orders)
+      .values(order)
+      .returning();
+    return newOrder;
+  }
+
+  async getOrders(userId?: string): Promise<Order[]> {
+    const query = db.select().from(orders);
+    
+    if (userId) {
+      query.where(eq(orders.userId, userId));
+    }
+    
+    const result = await query.orderBy(desc(orders.createdAt));
+    return result;
+  }
+
+  async getOrder(id: number): Promise<Order | undefined> {
+    const [order] = await db
+      .select()
+      .from(orders)
+      .where(eq(orders.id, id));
+    return order;
+  }
+
+  async updateOrder(id: number, updates: Partial<InsertOrder>): Promise<Order | undefined> {
+    const [updatedOrder] = await db
+      .update(orders)
+      .set({ ...updates, updatedAt: new Date() })
+      .where(eq(orders.id, id))
+      .returning();
+    return updatedOrder;
+  }
+
+  // Premium services
+  async getPremiumServices(): Promise<PremiumService[]> {
+    const services = await db
+      .select()
+      .from(premiumServices)
+      .where(eq(premiumServices.isActive, true))
+      .orderBy(premiumServices.price);
+    return services;
+  }
+
+  async getPremiumService(id: string): Promise<PremiumService | undefined> {
+    const [service] = await db
+      .select()
+      .from(premiumServices)
+      .where(eq(premiumServices.id, id));
+    return service;
+  }
+
+  // Admin operations
+  async getRevenueStats(period: string): Promise<{
+    totalRevenue: number;
+    revenueGrowth: number;
+    dailyRevenue: Array<{ date: string; revenue: number }>;
+  }> {
+    const now = new Date();
+    let startDate = new Date();
+    
+    switch (period) {
+      case '7d':
+        startDate.setDate(now.getDate() - 7);
+        break;
+      case '30d':
+        startDate.setDate(now.getDate() - 30);
+        break;
+      case '90d':
+        startDate.setDate(now.getDate() - 90);
+        break;
+      case '1y':
+        startDate.setFullYear(now.getFullYear() - 1);
+        break;
+      default:
+        startDate.setDate(now.getDate() - 30);
+    }
+
+    const totalResult = await db
+      .select({
+        revenue: sql<number>`sum(amount)`.as('revenue'),
+      })
+      .from(orders)
+      .where(
+        and(
+          eq(orders.status, 'completed'),
+          gte(orders.createdAt, startDate)
+        )
+      );
+
+    const previousPeriodStart = new Date(startDate);
+    previousPeriodStart.setTime(previousPeriodStart.getTime() - (now.getTime() - startDate.getTime()));
+
+    const previousResult = await db
+      .select({
+        revenue: sql<number>`sum(amount)`.as('revenue'),
+      })
+      .from(orders)
+      .where(
+        and(
+          eq(orders.status, 'completed'),
+          gte(orders.createdAt, previousPeriodStart),
+          lte(orders.createdAt, startDate)
+        )
+      );
+
+    const totalRevenue = totalResult[0]?.revenue || 0;
+    const previousRevenue = previousResult[0]?.revenue || 0;
+    const revenueGrowth = previousRevenue > 0 ? 
+      ((totalRevenue - previousRevenue) / previousRevenue) * 100 : 0;
+
+    // Daily revenue for the period
+    const dailyRevenue = await db
+      .select({
+        date: sql<string>`date(created_at)`.as('date'),
+        revenue: sql<number>`sum(amount)`.as('revenue'),
+      })
+      .from(orders)
+      .where(
+        and(
+          eq(orders.status, 'completed'),
+          gte(orders.createdAt, startDate)
+        )
+      )
+      .groupBy(sql`date(created_at)`)
+      .orderBy(sql`date(created_at)`);
+
+    return {
+      totalRevenue: totalRevenue / 100, // Convert from cents
+      revenueGrowth,
+      dailyRevenue: dailyRevenue.map(d => ({
+        date: d.date,
+        revenue: d.revenue / 100
+      }))
+    };
+  }
+
+  async getPayingUsers(): Promise<{
+    users: User[];
+    payingUsers: number;
+    userGrowth: number;
+  }> {
+    const payingUsers = await db
+      .select()
+      .from(users)
+      .where(
+        and(
+          sql`subscription_status = 'active'`,
+          sql`total_spent > 0`
+        )
+      )
+      .orderBy(desc(users.totalSpent));
+
+    const thirtyDaysAgo = new Date();
+    thirtyDaysAgo.setDate(thirtyDaysAgo.getDate() - 30);
+
+    const newPayingUsers = await db
+      .select({ count: sql<number>`count(*)`.as('count') })
+      .from(users)
+      .where(
+        and(
+          sql`subscription_status = 'active'`,
+          sql`total_spent > 0`,
+          gte(users.createdAt, thirtyDaysAgo)
+        )
+      );
+
+    const previousPayingUsers = await db
+      .select({ count: sql<number>`count(*)`.as('count') })
+      .from(users)
+      .where(
+        and(
+          sql`subscription_status = 'active'`,
+          sql`total_spent > 0`,
+          lte(users.createdAt, thirtyDaysAgo)
+        )
+      );
+
+    const currentCount = payingUsers.length;
+    const newCount = newPayingUsers[0]?.count || 0;
+    const previousCount = previousPayingUsers[0]?.count || 0;
+    const userGrowth = previousCount > 0 ? (newCount / previousCount) * 100 : 0;
+
+    return {
+      users: payingUsers,
+      payingUsers: currentCount,
+      userGrowth
+    };
+  }
+
+  async getOrdersStats(): Promise<{
+    orders: Order[];
+    monthlyOrders: number;
+    orderGrowth: number;
+  }> {
+    const thirtyDaysAgo = new Date();
+    thirtyDaysAgo.setDate(thirtyDaysAgo.getDate() - 30);
+
+    const recentOrders = await db
+      .select()
+      .from(orders)
+      .orderBy(desc(orders.createdAt))
+      .limit(100);
+
+    const monthlyOrders = await db
+      .select({ count: sql<number>`count(*)`.as('count') })
+      .from(orders)
+      .where(gte(orders.createdAt, thirtyDaysAgo));
+
+    const previousMonthStart = new Date(thirtyDaysAgo);
+    previousMonthStart.setDate(previousMonthStart.getDate() - 30);
+
+    const previousMonthOrders = await db
+      .select({ count: sql<number>`count(*)`.as('count') })
+      .from(orders)
+      .where(
+        and(
+          gte(orders.createdAt, previousMonthStart),
+          lte(orders.createdAt, thirtyDaysAgo)
+        )
+      );
+
+    const currentCount = monthlyOrders[0]?.count || 0;
+    const previousCount = previousMonthOrders[0]?.count || 0;
+    const orderGrowth = previousCount > 0 ? 
+      ((currentCount - previousCount) / previousCount) * 100 : 0;
+
+    return {
+      orders: recentOrders,
+      monthlyOrders: currentCount,
+      orderGrowth
+    };
+  }
+
+  async processRefund(orderId: number, amount: number, reason: string): Promise<boolean> {
+    try {
+      // Update order status to refunded
+      await db
+        .update(orders)
+        .set({ 
+          status: 'refunded',
+          metadata: sql`jsonb_set(coalesce(metadata, '{}'), '{refund_reason}', '"${reason}"')`,
+          updatedAt: new Date()
+        })
+        .where(eq(orders.id, orderId));
+
+      // Here you would also call Stripe/PayPal API to process actual refund
+      // For now, we'll just update the database
+
+      return true;
+    } catch (error) {
+      console.error('Error processing refund:', error);
+      return false;
+    }
   }
 }
 

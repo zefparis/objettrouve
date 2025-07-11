@@ -36,6 +36,13 @@ export const users = pgTable("users", {
   bio: text("bio"),
   createdAt: timestamp("created_at").defaultNow(),
   updatedAt: timestamp("updated_at").defaultNow(),
+  // Monetization fields
+  stripeCustomerId: varchar("stripe_customer_id"),
+  subscriptionTier: varchar("subscription_tier").default("free"), // free, pro, advanced, premium
+  subscriptionStatus: varchar("subscription_status").default("inactive"), // active, inactive, cancelled
+  subscriptionStartDate: timestamp("subscription_start_date"),
+  subscriptionEndDate: timestamp("subscription_end_date"),
+  totalSpent: integer("total_spent").default(0), // in cents
 });
 
 // Items table for lost/found objects
@@ -68,11 +75,43 @@ export const messages = pgTable("messages", {
   createdAt: timestamp("created_at").defaultNow(),
 });
 
+// Orders table for purchases
+export const orders = pgTable("orders", {
+  id: serial("id").primaryKey(),
+  userId: varchar("user_id").notNull().references(() => users.id),
+  stripePaymentIntentId: varchar("stripe_payment_intent_id"),
+  paypalOrderId: varchar("paypal_order_id"),
+  amount: integer("amount").notNull(), // in cents
+  currency: varchar("currency").default("usd"),
+  status: varchar("status").default("pending"), // pending, completed, failed, refunded
+  paymentMethod: varchar("payment_method").notNull(), // stripe, paypal
+  productType: varchar("product_type").notNull(), // subscription, premium_service
+  productId: varchar("product_id").notNull(), // pro, advanced, premium, boost_listing, etc.
+  metadata: jsonb("metadata"), // additional data
+  createdAt: timestamp("created_at").defaultNow(),
+  updatedAt: timestamp("updated_at").defaultNow(),
+});
+
+// Premium services table
+export const premiumServices = pgTable("premium_services", {
+  id: varchar("id").primaryKey(),
+  name: varchar("name").notNull(),
+  description: text("description").notNull(),
+  price: integer("price").notNull(), // in cents
+  currency: varchar("currency").default("usd"),
+  duration: integer("duration"), // in days (null for one-time services)
+  features: jsonb("features"), // list of features
+  isActive: boolean("is_active").default(true),
+  createdAt: timestamp("created_at").defaultNow(),
+  updatedAt: timestamp("updated_at").defaultNow(),
+});
+
 // Relations
 export const usersRelations = relations(users, ({ many }) => ({
   items: many(items),
   sentMessages: many(messages, { relationName: "sender" }),
   receivedMessages: many(messages, { relationName: "receiver" }),
+  orders: many(orders),
 }));
 
 export const itemsRelations = relations(items, ({ one, many }) => ({
@@ -100,6 +139,13 @@ export const messagesRelations = relations(messages, ({ one }) => ({
   }),
 }));
 
+export const ordersRelations = relations(orders, ({ one }) => ({
+  user: one(users, {
+    fields: [orders.userId],
+    references: [users.id],
+  }),
+}));
+
 // Zod schemas
 export const insertItemSchema = createInsertSchema(items).omit({
   id: true,
@@ -112,6 +158,12 @@ export const insertMessageSchema = createInsertSchema(messages).omit({
   createdAt: true,
 });
 
+export const insertOrderSchema = createInsertSchema(orders).omit({
+  id: true,
+  createdAt: true,
+  updatedAt: true,
+});
+
 // Types
 export type UpsertUser = typeof users.$inferInsert;
 export type User = typeof users.$inferSelect;
@@ -119,6 +171,9 @@ export type Item = typeof items.$inferSelect;
 export type InsertItem = z.infer<typeof insertItemSchema>;
 export type Message = typeof messages.$inferSelect;
 export type InsertMessage = z.infer<typeof insertMessageSchema>;
+export type Order = typeof orders.$inferSelect;
+export type InsertOrder = z.infer<typeof insertOrderSchema>;
+export type PremiumService = typeof premiumServices.$inferSelect;
 
 // Categories
 export const CATEGORIES = [

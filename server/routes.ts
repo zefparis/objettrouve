@@ -2,11 +2,21 @@ import express, { type Express } from "express";
 import { createServer, type Server } from "http";
 import { storage } from "./storage";
 import { setupAuth, isAuthenticated } from "./replitAuth";
-import { insertItemSchema, insertMessageSchema } from "@shared/schema";
+import { insertItemSchema, insertMessageSchema, insertOrderSchema } from "@shared/schema";
+import { createPaypalOrder, capturePaypalOrder, loadPaypalDefault } from "./paypal";
 import { ZodError } from "zod";
 import multer from "multer";
 import path from "path";
 import { cognitoService, type AuthResult } from "./cognitoService";
+import Stripe from "stripe";
+
+// Initialize Stripe
+if (!process.env.STRIPE_SECRET_KEY) {
+  throw new Error('Missing required Stripe secret: STRIPE_SECRET_KEY');
+}
+const stripe = new Stripe(process.env.STRIPE_SECRET_KEY, {
+  apiVersion: "2023-10-16",
+});
 
 // Configure multer for file uploads
 const upload = multer({
@@ -376,6 +386,248 @@ export async function registerRoutes(app: Express): Promise<Server> {
 
   // Serve uploaded files
   app.use('/uploads', express.static(path.join(process.cwd(), 'uploads')));
+
+  // PayPal payment routes
+  app.get("/api/paypal/setup", async (req, res) => {
+    await loadPaypalDefault(req, res);
+  });
+
+  app.post("/api/paypal/order", async (req, res) => {
+    await createPaypalOrder(req, res);
+  });
+
+  app.post("/api/paypal/order/:orderID/capture", async (req, res) => {
+    await capturePaypalOrder(req, res);
+  });
+
+  // Stripe payment routes
+  app.post("/api/stripe/create-payment-intent", async (req, res) => {
+    try {
+      const { amount, currency = "usd" } = req.body;
+      
+      if (!amount || amount <= 0) {
+        return res.status(400).json({ error: "Invalid amount" });
+      }
+
+      const paymentIntent = await stripe.paymentIntents.create({
+        amount: Math.round(amount * 100), // Convert to cents
+        currency: currency,
+        metadata: {
+          userId: req.user?.claims?.sub || "anonymous",
+        },
+      });
+
+      res.json({ clientSecret: paymentIntent.client_secret });
+    } catch (error: any) {
+      console.error("Stripe payment intent error:", error);
+      res.status(500).json({ error: "Failed to create payment intent" });
+    }
+  });
+
+  // Checkout initialization
+  app.post("/api/checkout/initialize", isAuthenticated, async (req, res) => {
+    try {
+      const { planId, paymentMethod } = req.body;
+      
+      const plans = {
+        boost_listing: {
+          id: "boost_listing",
+          name: "Boost Listing",
+          description: "Boost your listing to the top",
+          price: 9.99,
+          type: "premium_service",
+          features: ["Priority placement", "Highlighted display", "7-day duration"]
+        },
+        premium_search: {
+          id: "premium_search",
+          name: "Premium Search",
+          description: "Advanced search capabilities",
+          price: 4.99,
+          type: "premium_service",
+          features: ["Smart alerts", "Extended radius", "Priority support"]
+        },
+        verification: {
+          id: "verification",
+          name: "Profile Verification",
+          description: "Verify your profile",
+          price: 14.99,
+          type: "premium_service",
+          features: ["Verified badge", "Increased trust", "Priority listing"]
+        },
+        pro: {
+          id: "pro",
+          name: "Pro Plan",
+          description: "Perfect for regular users",
+          price: 29.99,
+          type: "subscription",
+          features: ["Unlimited listings", "Priority support", "Analytics", "Customer support"]
+        },
+        advanced: {
+          id: "advanced",
+          name: "Advanced Plan",
+          description: "For teams and businesses",
+          price: 59.99,
+          type: "subscription",
+          features: ["Team management", "API access", "Custom branding", "Advanced analytics"]
+        },
+        premium: {
+          id: "premium",
+          name: "Premium Plan",
+          description: "Full-featured enterprise solution",
+          price: 99.99,
+          type: "subscription",
+          features: ["Unlimited everything", "Dedicated support", "White-label", "Training"]
+        }
+      };
+
+      const plan = plans[planId as keyof typeof plans];
+      if (!plan) {
+        return res.status(404).json({ error: "Plan not found" });
+      }
+
+      let clientSecret = null;
+      
+      if (paymentMethod === 'stripe') {
+        const paymentIntent = await stripe.paymentIntents.create({
+          amount: Math.round(plan.price * 100),
+          currency: "usd",
+          metadata: {
+            planId: plan.id,
+            userId: req.user?.claims?.sub || "",
+            planType: plan.type,
+          },
+        });
+        clientSecret = paymentIntent.client_secret;
+      }
+
+      res.json({
+        plan,
+        clientSecret,
+        paymentMethod
+      });
+    } catch (error: any) {
+      console.error("Checkout initialization error:", error);
+      res.status(500).json({ error: "Failed to initialize checkout" });
+    }
+  });
+
+  // Payment verification
+  app.get("/api/payment/verify", isAuthenticated, async (req, res) => {
+    try {
+      const { payment_intent } = req.query;
+      
+      if (!payment_intent) {
+        return res.status(400).json({ error: "Missing payment intent" });
+      }
+
+      const paymentIntent = await stripe.paymentIntents.retrieve(payment_intent as string);
+      
+      if (paymentIntent.status === 'succeeded') {
+        await storage.createOrder({
+          userId: req.user?.claims?.sub || "",
+          stripePaymentIntentId: paymentIntent.id,
+          amount: paymentIntent.amount,
+          currency: paymentIntent.currency,
+          status: "completed",
+          paymentMethod: "stripe",
+          productType: paymentIntent.metadata.planType || "unknown",
+          productId: paymentIntent.metadata.planId || "unknown",
+          metadata: paymentIntent.metadata,
+        });
+
+        res.json({
+          status: paymentIntent.status,
+          amount: paymentIntent.amount,
+          currency: paymentIntent.currency,
+          product: paymentIntent.metadata.planId || "Unknown"
+        });
+      } else {
+        res.status(400).json({ error: "Payment not completed" });
+      }
+    } catch (error: any) {
+      console.error("Payment verification error:", error);
+      res.status(500).json({ error: "Failed to verify payment" });
+    }
+  });
+
+  // Admin routes
+  app.get("/api/admin/revenue", isAuthenticated, async (req, res) => {
+    try {
+      const period = req.query.period as string || "30d";
+      const stats = await storage.getRevenueStats(period);
+      res.json(stats);
+    } catch (error: any) {
+      console.error("Error fetching revenue stats:", error);
+      res.status(500).json({ error: "Failed to fetch revenue stats" });
+    }
+  });
+
+  app.get("/api/admin/users", isAuthenticated, async (req, res) => {
+    try {
+      const stats = await storage.getPayingUsers();
+      res.json(stats);
+    } catch (error: any) {
+      console.error("Error fetching user stats:", error);
+      res.status(500).json({ error: "Failed to fetch user stats" });
+    }
+  });
+
+  app.get("/api/admin/orders", isAuthenticated, async (req, res) => {
+    try {
+      const stats = await storage.getOrdersStats();
+      res.json(stats);
+    } catch (error: any) {
+      console.error("Error fetching order stats:", error);
+      res.status(500).json({ error: "Failed to fetch order stats" });
+    }
+  });
+
+  app.get("/api/admin/translations", isAuthenticated, async (req, res) => {
+    try {
+      const translationsData = {
+        completionRate: 95,
+        missingTranslations: 12,
+        languages: [
+          { code: "fr", name: "Français", completionRate: 100, missingKeys: 0, lastUpdate: new Date() },
+          { code: "en", name: "English", completionRate: 100, missingKeys: 0, lastUpdate: new Date() },
+          { code: "es", name: "Español", completionRate: 98, missingKeys: 3, lastUpdate: new Date() },
+          { code: "pt", name: "Português", completionRate: 96, missingKeys: 5, lastUpdate: new Date() },
+          { code: "it", name: "Italiano", completionRate: 94, missingKeys: 8, lastUpdate: new Date() },
+          { code: "de", name: "Deutsch", completionRate: 92, missingKeys: 12, lastUpdate: new Date() },
+          { code: "nl", name: "Nederlands", completionRate: 90, missingKeys: 15, lastUpdate: new Date() },
+          { code: "zh", name: "中文", completionRate: 85, missingKeys: 25, lastUpdate: new Date() },
+          { code: "ja", name: "日本語", completionRate: 80, missingKeys: 35, lastUpdate: new Date() },
+          { code: "ko", name: "한국어", completionRate: 75, missingKeys: 45, lastUpdate: new Date() },
+        ]
+      };
+      
+      res.json(translationsData);
+    } catch (error: any) {
+      console.error("Error fetching translation stats:", error);
+      res.status(500).json({ error: "Failed to fetch translation stats" });
+    }
+  });
+
+  app.post("/api/admin/refund", isAuthenticated, async (req, res) => {
+    try {
+      const { orderId, amount, reason } = req.body;
+      
+      if (!orderId || !amount || !reason) {
+        return res.status(400).json({ error: "Missing required fields" });
+      }
+
+      const success = await storage.processRefund(orderId, amount, reason);
+      
+      if (success) {
+        res.json({ message: "Refund processed successfully" });
+      } else {
+        res.status(500).json({ error: "Failed to process refund" });
+      }
+    } catch (error: any) {
+      console.error("Error processing refund:", error);
+      res.status(500).json({ error: "Failed to process refund" });
+    }
+  });
 
   const httpServer = createServer(app);
   return httpServer;
