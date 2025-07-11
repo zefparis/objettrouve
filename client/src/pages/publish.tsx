@@ -128,7 +128,7 @@ export default function Publish() {
 
         <Card>
           <CardHeader>
-            <CardTitle>Informations sur l'objet</CardTitle>
+            <CardTitle>{t("publish.form.objectInfo")}</CardTitle>
           </CardHeader>
           <CardContent>
             <Form {...form}>
@@ -139,7 +139,7 @@ export default function Publish() {
                   name="type"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Type d'annonce</FormLabel>
+                      <FormLabel>{t("publish.form.type")}</FormLabel>
                       <FormControl>
                         <RadioGroup
                           value={field.value}
@@ -173,7 +173,7 @@ export default function Publish() {
                   name="title"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Titre de l'annonce</FormLabel>
+                      <FormLabel>{t("publish.form.title")}</FormLabel>
                       <FormControl>
                         <Input
                           placeholder="ex: iPhone 14 Pro bleu"
@@ -191,7 +191,7 @@ export default function Publish() {
                   name="category"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Catégorie</FormLabel>
+                      <FormLabel>{t("publish.form.category")}</FormLabel>
                       <Select value={field.value} onValueChange={field.onChange}>
                         <FormControl>
                           <SelectTrigger>
@@ -220,7 +220,7 @@ export default function Publish() {
                   name="description"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Description détaillée</FormLabel>
+                      <FormLabel>{t("publish.form.description")}</FormLabel>
                       <FormControl>
                         <Textarea
                           placeholder="Décrivez l'objet en détail (couleur, marque, particularités...)"
@@ -239,7 +239,7 @@ export default function Publish() {
                   name="location"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Lieu</FormLabel>
+                      <FormLabel>{t("publish.form.location")}</FormLabel>
                       <FormControl>
                         <div className="relative">
                           <MapPin className="absolute left-3 top-3 h-4 w-4 text-gray-400" />
@@ -318,7 +318,7 @@ export default function Publish() {
 
                 {/* Image Upload */}
                 <div className="space-y-4">
-                  <Label>Photo de l'objet</Label>
+                  <Label>{t("publish.form.image")}</Label>
                   <div className="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center">
                     {previewUrl ? (
                       <div className="space-y-4">

@@ -46,8 +46,8 @@ export default function ItemDetail() {
     },
     onSuccess: () => {
       toast({
-        title: "Message envoyé",
-        description: "Votre message a été envoyé avec succès !",
+        title: t("common.success"),
+        description: t("itemDetail.messageSent"),
       });
       setMessage("");
       queryClient.invalidateQueries({ queryKey: ["/api/conversations"] });
@@ -55,8 +55,8 @@ export default function ItemDetail() {
     onError: (error) => {
       if (isUnauthorizedError(error)) {
         toast({
-          title: "Non autorisé",
-          description: "Vous devez être connecté pour envoyer un message.",
+          title: t("common.unauthorized"),
+          description: t("itemDetail.loginToMessage"),
           variant: "destructive",
         });
         setTimeout(() => {
@@ -66,8 +66,8 @@ export default function ItemDetail() {
       }
       
       toast({
-        title: "Erreur",
-        description: "Une erreur est survenue lors de l'envoi du message",
+        title: t("common.error"),
+        description: t("itemDetail.messageError"),
         variant: "destructive",
       });
     },
@@ -141,7 +141,7 @@ export default function ItemDetail() {
                     </h1>
                     <div className="flex items-center gap-2 mb-4">
                       <Badge variant={item.type === "lost" ? "destructive" : "secondary"}>
-                        {item.type === "lost" ? "Perdu" : "Trouvé"}
+                        {item.type === "lost" ? t("search.itemType.lost") : t("search.itemType.found")}
                       </Badge>
                       {category && (
                         <Badge variant="outline">
@@ -184,7 +184,7 @@ export default function ItemDetail() {
                   <div className="flex items-center text-gray-600">
                     <Calendar className="h-5 w-5 mr-2" />
                     <span>
-                      {item.type === "lost" ? "Perdu le" : "Trouvé le"}{" "}
+                      {item.type === "lost" ? t("itemDetail.lostOn") : t("itemDetail.foundOn")}{" "}
                       {new Date(item.dateOccurred).toLocaleDateString("fr-FR")}
                     </span>
                   </div>
@@ -205,7 +205,7 @@ export default function ItemDetail() {
             {!isOwnItem && (
               <Card>
                 <CardHeader>
-                  <CardTitle>Contacter le propriétaire</CardTitle>
+                  <CardTitle>{t("itemDetail.contactOwner")}</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-4">
                   {!showContact ? (
@@ -237,7 +237,7 @@ export default function ItemDetail() {
 
                       {/* Message Form */}
                       <div className="space-y-3">
-                        <h4 className="font-medium">Envoyer un message</h4>
+                        <h4 className="font-medium">{t("itemDetail.sendMessage")}</h4>
                         <Textarea
                           placeholder="Décrivez votre objet pour prouver qu'il vous appartient..."
                           value={message}
@@ -249,7 +249,7 @@ export default function ItemDetail() {
                           disabled={!message.trim() || sendMessageMutation.isPending}
                           className="w-full"
                         >
-                          {sendMessageMutation.isPending ? "Envoi..." : "Envoyer"}
+                          {sendMessageMutation.isPending ? t("itemDetail.sending") : t("itemDetail.send")}
                         </Button>
                       </div>
                     </div>
@@ -262,7 +262,7 @@ export default function ItemDetail() {
             {isOwnItem && (
               <Card>
                 <CardHeader>
-                  <CardTitle>Gestion de l'annonce</CardTitle>
+                  <CardTitle>{t("itemDetail.manageAd")}</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <Button variant="outline" className="w-full">
@@ -281,7 +281,7 @@ export default function ItemDetail() {
             {/* Similar Items */}
             <Card>
               <CardHeader>
-                <CardTitle>Annonces similaires</CardTitle>
+                <CardTitle>{t("itemDetail.similarItems")}</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-gray-600">

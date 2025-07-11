@@ -8,12 +8,14 @@ import Testimonials from "@/components/testimonials";
 import Categories from "@/components/categories";
 import Footer from "@/components/footer";
 import { useQuery } from "@tanstack/react-query";
+import { useTranslation } from "react-i18next";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { MapPin, Clock } from "lucide-react";
 
 export default function Landing() {
+  const { t } = useTranslation();
   const { data: items, isLoading } = useQuery({
     queryKey: ["/api/items"],
     queryFn: async () => {
@@ -33,10 +35,10 @@ export default function Landing() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Objets récemment déclarés
+              {t("home.recentItems")}
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Découvrez les derniers objets perdus et trouvés dans votre région
+              {t("home.recentItemsDesc")}
             </p>
           </div>
           
@@ -44,13 +46,13 @@ export default function Landing() {
           <div className="flex justify-center mb-8">
             <div className="bg-white rounded-xl p-1 shadow-sm">
               <Button variant="default" className="px-6 py-2 rounded-lg">
-                Tous
+                {t("search.all")}
               </Button>
               <Button variant="ghost" className="px-6 py-2 rounded-lg">
-                Objets perdus
+                {t("search.lost")}
               </Button>
               <Button variant="ghost" className="px-6 py-2 rounded-lg">
-                Objets trouvés
+                {t("search.found")}
               </Button>
             </div>
           </div>
@@ -74,14 +76,14 @@ export default function Landing() {
               ))
             ) : (
               <div className="col-span-full text-center py-8">
-                <p className="text-gray-600">Aucun objet déclaré pour le moment</p>
+                <p className="text-gray-600">{t("home.noItemsYet")}</p>
               </div>
             )}
           </div>
           
           <div className="text-center mt-12">
             <Button size="lg" className="px-8 py-3">
-              Voir tous les objets
+{t("home.viewAllItems")}
             </Button>
           </div>
         </div>
@@ -95,9 +97,9 @@ export default function Landing() {
       {/* CTA Section */}
       <section className="py-16 bg-primary text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold mb-4">Prêt à retrouver vos objets ?</h2>
+          <h2 className="text-3xl font-bold mb-4">{t("home.ctaTitle")}</h2>
           <p className="text-xl mb-8 text-blue-100 max-w-2xl mx-auto">
-            Rejoignez des milliers d'utilisateurs qui font confiance à ObjetsTrouvés
+            {t("home.ctaSubtitle")}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 
@@ -106,14 +108,14 @@ export default function Landing() {
               className="px-8 py-3"
               onClick={() => window.location.href = "/api/login"}
             >
-              Créer un compte gratuit
+{t("nav.login")}
             </Button>
             <Button 
               size="lg" 
               variant="outline" 
               className="px-8 py-3 border-white text-white hover:bg-white hover:text-primary"
             >
-              Publier une annonce
+{t("home.publishAd")}
             </Button>
           </div>
         </div>

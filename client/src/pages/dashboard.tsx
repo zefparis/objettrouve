@@ -47,15 +47,15 @@ export default function Dashboard() {
     },
     onSuccess: () => {
       toast({
-        title: "Succès",
-        description: "Annonce supprimée avec succès",
+        title: t("common.success"),
+        description: t("dashboard.deleteSuccess"),
       });
       queryClient.invalidateQueries({ queryKey: ["/api/user/items"] });
     },
     onError: (error) => {
       if (isUnauthorizedError(error)) {
         toast({
-          title: "Non autorisé",
+          title: t("common.unauthorized"),
           description: "Vous devez être connecté. Redirection...",
           variant: "destructive",
         });
@@ -66,8 +66,8 @@ export default function Dashboard() {
       }
       
       toast({
-        title: "Erreur",
-        description: "Une erreur est survenue lors de la suppression",
+        title: t("common.error"),
+        description: t("dashboard.deleteError"),
         variant: "destructive",
       });
     },
@@ -180,15 +180,15 @@ export default function Dashboard() {
         {/* Tabs */}
         <Tabs defaultValue="items" className="space-y-6">
           <TabsList className="grid w-full grid-cols-2">
-            <TabsTrigger value="items">Mes annonces</TabsTrigger>
-            <TabsTrigger value="conversations">Conversations</TabsTrigger>
+            <TabsTrigger value="items">{t("dashboard.myItems")}</TabsTrigger>
+            <TabsTrigger value="conversations">{t("dashboard.conversations")}</TabsTrigger>
           </TabsList>
 
           {/* Items Tab */}
           <TabsContent value="items" className="space-y-6">
             <Card>
               <CardHeader>
-                <CardTitle>Mes annonces</CardTitle>
+                <CardTitle>{t("dashboard.myItems")}</CardTitle>
               </CardHeader>
               <CardContent>
                 {itemsLoading ? (
@@ -213,7 +213,7 @@ export default function Dashboard() {
                                   {item.title}
                                 </h3>
                                 <Badge variant={item.type === "lost" ? "destructive" : "secondary"}>
-                                  {item.type === "lost" ? "Perdu" : "Trouvé"}
+                                  {item.type === "lost" ? t("search.itemType.lost") : t("search.itemType.found")}
                                 </Badge>
                                 {category && (
                                   <Badge variant="outline">
@@ -276,7 +276,7 @@ export default function Dashboard() {
           <TabsContent value="conversations" className="space-y-6">
             <Card>
               <CardHeader>
-                <CardTitle>Conversations</CardTitle>
+                <CardTitle>{t("dashboard.conversations")}</CardTitle>
               </CardHeader>
               <CardContent>
                 {conversationsLoading ? (

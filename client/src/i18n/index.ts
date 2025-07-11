@@ -14,6 +14,7 @@ i18n
   .use(initReactI18next)
   .init({
     debug: false,
+    lng: 'fr', // Force French as default language
     fallbackLng: 'fr',
     interpolation: {
       escapeValue: false,

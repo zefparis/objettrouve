@@ -64,8 +64,8 @@ export default function Chat() {
     onError: (error) => {
       if (isUnauthorizedError(error)) {
         toast({
-          title: "Non autorisé",
-          description: "Vous devez être connecté pour envoyer un message.",
+          title: t("common.unauthorized"),
+          description: t("chat.loginToMessage"),
           variant: "destructive",
         });
         setTimeout(() => {
@@ -75,8 +75,8 @@ export default function Chat() {
       }
       
       toast({
-        title: "Erreur",
-        description: "Une erreur est survenue lors de l'envoi du message",
+        title: t("common.error"),
+        description: t("chat.messageError"),
         variant: "destructive",
       });
     },
@@ -187,7 +187,7 @@ export default function Chat() {
                 ) : (
                   <div className="flex items-center justify-center h-full">
                     <div className="text-center">
-                      <p className="text-gray-500 mb-2">Aucun message</p>
+                      <p className="text-gray-500 mb-2">{t("chat.noMessages")}</p>
                       <p className="text-gray-400 text-sm">
                         Commencez la conversation !
                       </p>

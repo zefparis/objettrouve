@@ -79,6 +79,7 @@
     "title": "Publier une annonce",
     "subtitle": "Déclarez un objet perdu ou trouvé pour aider la communauté",
     "form": {
+      "objectInfo": "Informations sur l'objet",
       "title": "Titre de l'annonce",
       "titlePlaceholder": "Ex: iPhone 13 Pro perdu dans le métro",
       "description": "Description détaillée",
@@ -113,6 +114,7 @@
     "activeAds": "Annonces actives",
     "confirmDelete": "Êtes-vous sûr de vouloir supprimer cette annonce ?",
     "deleteError": "Une erreur est survenue lors de la suppression",
+    "deleteSuccess": "Annonce supprimée avec succès",
     "actions": {
       "edit": "Modifier",
       "delete": "Supprimer",
@@ -127,7 +129,10 @@
     "send": "Envoyer",
     "conversationNotFound": "Conversation introuvable",
     "selectValidConversation": "Veuillez sélectionner une conversation valide.",
-    "backToDashboard": "Retour au tableau de bord"
+    "backToDashboard": "Retour au tableau de bord",
+    "loginToMessage": "Vous devez être connecté pour envoyer un message.",
+    "messageError": "Une erreur est survenue lors de l'envoi du message",
+    "noMessages": "Aucun message"
   },
   "itemDetail": {
     "contactOwner": "Contacter le propriétaire",
@@ -136,7 +141,16 @@
     "location": "Lieu",
     "contactInfo": "Contact",
     "description": "Description",
-    "similarItems": "Objets similaires"
+    "similarItems": "Objets similaires",
+    "messageSent": "Votre message a été envoyé avec succès !",
+    "messageError": "Une erreur est survenue lors de l'envoi du message",
+    "loginToMessage": "Vous devez être connecté pour envoyer un message.",
+    "lostOn": "Perdu le",
+    "foundOn": "Trouvé le",
+    "sendMessage": "Envoyer un message",
+    "send": "Envoyer",
+    "sending": "Envoi...",
+    "manageAd": "Gestion de l'annonce"
   },
   "home": {
     "recentItems": "Objets récemment déclarés",
@@ -173,6 +187,7 @@
     "previous": "Précédent",
     "viewDetails": "Voir les détails",
     "noImage": "Aucune image",
+    "unauthorized": "Non autorisé",
     "unauthorized": "Non autorisé",
     "loginRequired": "Vous devez être connecté. Redirection...",
     "timeAgo": {

@@ -24,7 +24,7 @@ export default function Home() {
   useEffect(() => {
     if (!isLoading && !isAuthenticated) {
       toast({
-        title: "Non autorisé",
+        title: t("common.unauthorized"),
         description: "Vous devez être connecté. Redirection...",
         variant: "destructive",
       });
