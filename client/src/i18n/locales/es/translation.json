@@ -11,6 +11,9 @@
     "howItWorks": "Cómo funciona",
     "contact": "Contacto"
   },
+  "common": {
+    "back": "Volver"
+  },
   "hero": {
     "title": "Encuentra tus objetos perdidos",
     "subtitle": "La plataforma francesa de referencia para recuperar tus objetos perdidos o reportar tus hallazgos",

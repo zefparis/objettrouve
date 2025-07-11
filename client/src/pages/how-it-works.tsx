@@ -14,7 +14,9 @@ import {
   ArrowRight,
   Upload,
   Filter,
-  Bell
+  Bell,
+  ArrowLeft,
+  Home
 } from "lucide-react";
 
 export default function HowItWorks() {
@@ -81,8 +83,18 @@ export default function HowItWorks() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800">
+      {/* Back Button */}
+      <div className="container mx-auto px-4 pt-8">
+        <Link href="/">
+          <Button variant="ghost" className="mb-4">
+            <ArrowLeft className="w-4 h-4 mr-2" />
+            {t('common.back')}
+          </Button>
+        </Link>
+      </div>
+      
       {/* Hero Section */}
-      <div className="container mx-auto px-4 py-16">
+      <div className="container mx-auto px-4 pb-16">
         <div className="text-center mb-16">
           <Badge variant="outline" className="mb-4">
             {t('howItWorks.badge')}

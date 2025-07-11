@@ -11,6 +11,9 @@
     "howItWorks": "How it works",
     "contact": "Contact"
   },
+  "common": {
+    "back": "Back"
+  },
   "hero": {
     "title": "Find Your Lost Items",
     "subtitle": "The French reference platform to recover your lost items or report your findings",

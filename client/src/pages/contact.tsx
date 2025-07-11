@@ -9,6 +9,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Separator } from "@/components/ui/separator";
 import { useToast } from "@/hooks/use-toast";
 import { useState } from "react";
+import { Link } from "wouter";
 import { 
   Mail, 
   Phone, 
@@ -22,7 +23,9 @@ import {
   Facebook,
   Twitter,
   Instagram,
-  Linkedin
+  Linkedin,
+  ArrowLeft,
+  Home
 } from "lucide-react";
 
 export default function Contact() {
@@ -111,7 +114,17 @@ export default function Contact() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800">
-      <div className="container mx-auto px-4 py-16">
+      <div className="container mx-auto px-4 pt-8">
+        {/* Back Button */}
+        <Link href="/">
+          <Button variant="ghost" className="mb-4">
+            <ArrowLeft className="w-4 h-4 mr-2" />
+            {t('common.back')}
+          </Button>
+        </Link>
+      </div>
+      
+      <div className="container mx-auto px-4 pb-16">
         {/* Hero Section */}
         <div className="text-center mb-16">
           <Badge variant="outline" className="mb-4">

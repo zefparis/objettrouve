@@ -11,6 +11,9 @@
     "howItWorks": "Comment ça marche",
     "contact": "Contact"
   },
+  "common": {
+    "back": "Retour"
+  },
   "hero": {
     "title": "Retrouvez vos objets perdus",
     "subtitle": "La plateforme française de référence pour retrouver vos objets perdus ou déclarer vos trouvailles",
