@@ -12,7 +12,19 @@
     "contact": "Contato"
   },
   "common": {
-    "back": "Voltar"
+    "back": "Voltar",
+    "success": "Sucesso",
+    "error": "Erro",
+    "loading": "Carregando...",
+    "cancel": "Cancelar",
+    "save": "Salvar",
+    "close": "Fechar",
+    "next": "Próximo",
+    "previous": "Anterior",
+    "viewDetails": "Ver Detalhes",
+    "noImage": "Sem Imagem",
+    "unauthorized": "Não autorizado",
+    "loginRequired": "Você deve estar logado. Redirecionando..."
   },
   "hero": {
     "title": "Encontre seus objetos perdidos",
@@ -414,6 +426,103 @@
       "title": "Emergência Técnica",
       "description": "Para problemas urgentes que afetam o funcionamento do site",
       "button": "Suporte de Emergência"
+    }
+  },
+  "auth": {
+    "login": {
+      "title": "Entrar",
+      "subtitle": "Acesse sua conta",
+      "noAccount": "Não tem conta?",
+      "hasAccount": "Já tem conta?"
+    },
+    "register": {
+      "title": "Registrar",
+      "subtitle": "Crie sua conta gratuita",
+      "hasAccount": "Já tem conta?"
+    },
+    "forgotPassword": {
+      "title": "Esqueci minha senha",
+      "subtitle": "Digite seu email para receber um código de redefinição"
+    },
+    "otpVerification": {
+      "title": "Verificação OTP",
+      "subtitle": "Digite o código enviado para {{email}}"
+    },
+    "newPassword": {
+      "title": "Nova senha",
+      "subtitle": "Defina sua nova senha"
+    },
+    "fields": {
+      "email": "Email",
+      "password": "Senha",
+      "newPassword": "Nova senha",
+      "confirmPassword": "Confirmar senha",
+      "firstName": "Nome",
+      "lastName": "Sobrenome",
+      "otpCode": "Código OTP"
+    },
+    "placeholders": {
+      "email": "seu@email.com",
+      "password": "Sua senha",
+      "newPassword": "Nova senha",
+      "confirmPassword": "Confirmar senha",
+      "firstName": "Nome",
+      "lastName": "Sobrenome",
+      "otpCode": "000000"
+    },
+    "actions": {
+      "signIn": "Entrar",
+      "signUp": "Registrar",
+      "signingIn": "Entrando...",
+      "signingUp": "Registrando...",
+      "forgotPassword": "Esqueceu sua senha?",
+      "sendCode": "Enviar código",
+      "sending": "Enviando...",
+      "verify": "Verificar",
+      "verifying": "Verificando...",
+      "resendCode": "Reenviar código",
+      "backToLogin": "Voltar ao login",
+      "updatePassword": "Atualizar senha",
+      "updating": "Atualizando..."
+    },
+    "success": {
+      "loginTitle": "Login realizado com sucesso",
+      "loginDescription": "Bem-vindo ao ObjetsTrouvés!",
+      "registerTitle": "Registro realizado com sucesso",
+      "registerDescription": "Por favor, verifique seu email para confirmar sua conta",
+      "forgotPasswordTitle": "Código enviado",
+      "forgotPasswordDescription": "Verifique seu email para o código de redefinição",
+      "otpVerificationTitle": "Verificação realizada com sucesso",
+      "otpVerificationDescription": "Sua conta foi verificada com sucesso",
+      "newPasswordTitle": "Senha atualizada",
+      "newPasswordDescription": "Agora você pode entrar com sua nova senha",
+      "resendOtpTitle": "Código reenviado",
+      "resendOtpDescription": "Um novo código foi enviado para seu email"
+    },
+    "errors": {
+      "general": "Ocorreu um erro",
+      "invalidEmail": "Endereço de email inválido",
+      "passwordTooShort": "A senha deve ter pelo menos 8 caracteres",
+      "passwordsDoNotMatch": "As senhas não coincidem",
+      "firstNameRequired": "O nome é obrigatório",
+      "lastNameRequired": "O sobrenome é obrigatório",
+      "otpInvalid": "O código OTP deve ter 6 dígitos",
+      "loginFailed": "Falha no login",
+      "registerFailed": "Falha no registro",
+      "forgotPasswordFailed": "Falha ao enviar código de redefinição",
+      "otpVerificationFailed": "Falha na verificação",
+      "newPasswordFailed": "Falha ao atualizar senha",
+      "resendOtpFailed": "Falha ao reenviar código",
+      "UserNotFoundException": "Usuário não encontrado",
+      "NotAuthorizedException": "Email ou senha incorretos",
+      "UserNotConfirmedException": "Por favor, confirme seu endereço de email",
+      "InvalidPasswordException": "A senha não atende aos requisitos",
+      "UsernameExistsException": "Este endereço de email já está em uso",
+      "CodeMismatchException": "Código incorreto",
+      "ExpiredCodeException": "O código expirou",
+      "LimitExceededException": "Muitas tentativas, tente mais tarde",
+      "InvalidParameterException": "Parâmetro inválido",
+      "TooManyRequestsException": "Muitas solicitações, tente mais tarde"
     }
   }
 }

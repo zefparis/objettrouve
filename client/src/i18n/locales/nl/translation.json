@@ -308,5 +308,102 @@
     "uploaded": "Fout bij uploaden",
     "uuid": "Moet een geldige UUID zijn",
     "custom": "Het {{attribute}} veld is ongeldig"
+  },
+  "auth": {
+    "login": {
+      "title": "Inloggen",
+      "subtitle": "Log in op je account",
+      "noAccount": "Geen account?",
+      "hasAccount": "Heb je al een account?"
+    },
+    "register": {
+      "title": "Registreren",
+      "subtitle": "Maak je gratis account aan",
+      "hasAccount": "Heb je al een account?"
+    },
+    "forgotPassword": {
+      "title": "Wachtwoord vergeten",
+      "subtitle": "Voer je e-mail in om een reset code te ontvangen"
+    },
+    "otpVerification": {
+      "title": "OTP Verificatie",
+      "subtitle": "Voer de code in die naar {{email}} is verstuurd"
+    },
+    "newPassword": {
+      "title": "Nieuw wachtwoord",
+      "subtitle": "Stel je nieuwe wachtwoord in"
+    },
+    "fields": {
+      "email": "E-mail",
+      "password": "Wachtwoord",
+      "newPassword": "Nieuw wachtwoord",
+      "confirmPassword": "Bevestig wachtwoord",
+      "firstName": "Voornaam",
+      "lastName": "Achternaam",
+      "otpCode": "OTP Code"
+    },
+    "placeholders": {
+      "email": "jouw@email.com",
+      "password": "Je wachtwoord",
+      "newPassword": "Nieuw wachtwoord",
+      "confirmPassword": "Bevestig wachtwoord",
+      "firstName": "Voornaam",
+      "lastName": "Achternaam",
+      "otpCode": "000000"
+    },
+    "actions": {
+      "signIn": "Inloggen",
+      "signUp": "Registreren",
+      "signingIn": "Inloggen...",
+      "signingUp": "Registreren...",
+      "forgotPassword": "Wachtwoord vergeten?",
+      "sendCode": "Code versturen",
+      "sending": "Versturen...",
+      "verify": "Verifiëren",
+      "verifying": "Verifiëren...",
+      "resendCode": "Code opnieuw versturen",
+      "backToLogin": "Terug naar inloggen",
+      "updatePassword": "Wachtwoord bijwerken",
+      "updating": "Bijwerken..."
+    },
+    "success": {
+      "loginTitle": "Inloggen succesvol",
+      "loginDescription": "Welkom bij ObjetsTrouvés!",
+      "registerTitle": "Registratie succesvol",
+      "registerDescription": "Controleer je e-mail om je account te bevestigen",
+      "forgotPasswordTitle": "Code verstuurd",
+      "forgotPasswordDescription": "Controleer je e-mail voor de reset code",
+      "otpVerificationTitle": "Verificatie succesvol",
+      "otpVerificationDescription": "Je account is succesvol geverifieerd",
+      "newPasswordTitle": "Wachtwoord bijgewerkt",
+      "newPasswordDescription": "Je kunt nu inloggen met je nieuwe wachtwoord",
+      "resendOtpTitle": "Code opnieuw verstuurd",
+      "resendOtpDescription": "Een nieuwe code is naar je e-mail verstuurd"
+    },
+    "errors": {
+      "general": "Er is een fout opgetreden",
+      "invalidEmail": "Ongeldig e-mailadres",
+      "passwordTooShort": "Wachtwoord moet minimaal 8 tekens lang zijn",
+      "passwordsDoNotMatch": "Wachtwoorden komen niet overeen",
+      "firstNameRequired": "Voornaam is vereist",
+      "lastNameRequired": "Achternaam is vereist",
+      "otpInvalid": "OTP code moet 6 cijfers hebben",
+      "loginFailed": "Inloggen mislukt",
+      "registerFailed": "Registratie mislukt",
+      "forgotPasswordFailed": "Versturen reset code mislukt",
+      "otpVerificationFailed": "Verificatie mislukt",
+      "newPasswordFailed": "Wachtwoord bijwerken mislukt",
+      "resendOtpFailed": "Code opnieuw versturen mislukt",
+      "UserNotFoundException": "Gebruiker niet gevonden",
+      "NotAuthorizedException": "Onjuist e-mail of wachtwoord",
+      "UserNotConfirmedException": "Bevestig je e-mailadres",
+      "InvalidPasswordException": "Wachtwoord voldoet niet aan de vereisten",
+      "UsernameExistsException": "Dit e-mailadres is al in gebruik",
+      "CodeMismatchException": "Onjuiste code",
+      "ExpiredCodeException": "Code is verlopen",
+      "LimitExceededException": "Te veel pogingen, probeer later opnieuw",
+      "InvalidParameterException": "Ongeldige parameter",
+      "TooManyRequestsException": "Te veel verzoeken, probeer later opnieuw"
+    }
   }
 }

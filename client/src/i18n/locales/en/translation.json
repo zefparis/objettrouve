@@ -12,7 +12,19 @@
     "contact": "Contact"
   },
   "common": {
-    "back": "Back"
+    "back": "Back",
+    "success": "Success",
+    "error": "Error",
+    "loading": "Loading...",
+    "cancel": "Cancel",
+    "save": "Save",
+    "close": "Close",
+    "next": "Next",
+    "previous": "Previous",
+    "viewDetails": "View Details",
+    "noImage": "No Image",
+    "unauthorized": "Unauthorized",
+    "loginRequired": "You must be logged in. Redirecting..."
   },
   "hero": {
     "title": "Find Your Lost Items",
@@ -414,6 +426,103 @@
       "title": "Technical Emergency",
       "description": "For urgent issues affecting site functionality",
       "button": "Emergency Support"
+    }
+  },
+  "auth": {
+    "login": {
+      "title": "Login",
+      "subtitle": "Sign in to your account",
+      "noAccount": "Don't have an account?",
+      "hasAccount": "Already have an account?"
+    },
+    "register": {
+      "title": "Sign Up",
+      "subtitle": "Create your free account",
+      "hasAccount": "Already have an account?"
+    },
+    "forgotPassword": {
+      "title": "Forgot Password",
+      "subtitle": "Enter your email to receive a reset code"
+    },
+    "otpVerification": {
+      "title": "OTP Verification",
+      "subtitle": "Enter the code sent to {{email}}"
+    },
+    "newPassword": {
+      "title": "New Password",
+      "subtitle": "Set your new password"
+    },
+    "fields": {
+      "email": "Email",
+      "password": "Password",
+      "newPassword": "New Password",
+      "confirmPassword": "Confirm Password",
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "otpCode": "OTP Code"
+    },
+    "placeholders": {
+      "email": "your@email.com",
+      "password": "Your password",
+      "newPassword": "New password",
+      "confirmPassword": "Confirm password",
+      "firstName": "First name",
+      "lastName": "Last name",
+      "otpCode": "000000"
+    },
+    "actions": {
+      "signIn": "Sign In",
+      "signUp": "Sign Up",
+      "signingIn": "Signing in...",
+      "signingUp": "Signing up...",
+      "forgotPassword": "Forgot password?",
+      "sendCode": "Send Code",
+      "sending": "Sending...",
+      "verify": "Verify",
+      "verifying": "Verifying...",
+      "resendCode": "Resend Code",
+      "backToLogin": "Back to login",
+      "updatePassword": "Update Password",
+      "updating": "Updating..."
+    },
+    "success": {
+      "loginTitle": "Login Successful",
+      "loginDescription": "Welcome to ObjetsTrouvés!",
+      "registerTitle": "Registration Successful",
+      "registerDescription": "Please check your email to confirm your account",
+      "forgotPasswordTitle": "Code Sent",
+      "forgotPasswordDescription": "Check your email for the reset code",
+      "otpVerificationTitle": "Verification Successful",
+      "otpVerificationDescription": "Your account has been verified successfully",
+      "newPasswordTitle": "Password Updated",
+      "newPasswordDescription": "You can now sign in with your new password",
+      "resendOtpTitle": "Code Resent",
+      "resendOtpDescription": "A new code has been sent to your email"
+    },
+    "errors": {
+      "general": "An error occurred",
+      "invalidEmail": "Invalid email address",
+      "passwordTooShort": "Password must be at least 8 characters long",
+      "passwordsDoNotMatch": "Passwords do not match",
+      "firstNameRequired": "First name is required",
+      "lastNameRequired": "Last name is required",
+      "otpInvalid": "OTP code must be 6 digits",
+      "loginFailed": "Login failed",
+      "registerFailed": "Registration failed",
+      "forgotPasswordFailed": "Failed to send reset code",
+      "otpVerificationFailed": "Verification failed",
+      "newPasswordFailed": "Failed to update password",
+      "resendOtpFailed": "Failed to resend code",
+      "UserNotFoundException": "User not found",
+      "NotAuthorizedException": "Incorrect email or password",
+      "UserNotConfirmedException": "Please confirm your email address",
+      "InvalidPasswordException": "Password does not meet requirements",
+      "UsernameExistsException": "This email address is already in use",
+      "CodeMismatchException": "Incorrect code",
+      "ExpiredCodeException": "Code has expired",
+      "LimitExceededException": "Too many attempts, please try again later",
+      "InvalidParameterException": "Invalid parameter",
+      "TooManyRequestsException": "Too many requests, please try again later"
     }
   }
 }

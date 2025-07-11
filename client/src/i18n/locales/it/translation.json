@@ -12,7 +12,19 @@
     "contact": "Contatto"
   },
   "common": {
-    "back": "Indietro"
+    "back": "Indietro",
+    "success": "Successo",
+    "error": "Errore",
+    "loading": "Caricamento...",
+    "cancel": "Annulla",
+    "save": "Salva",
+    "close": "Chiudi",
+    "next": "Avanti",
+    "previous": "Precedente",
+    "viewDetails": "Vedi Dettagli",
+    "noImage": "Nessuna Immagine",
+    "unauthorized": "Non autorizzato",
+    "loginRequired": "Devi essere loggato. Reindirizzamento..."
   },
   "hero": {
     "title": "Trova i tuoi oggetti smarriti",
@@ -414,6 +426,103 @@
       "title": "Emergenza Tecnica",
       "description": "Per problemi urgenti che riguardano il funzionamento del sito",
       "button": "Supporto di Emergenza"
+    }
+  },
+  "auth": {
+    "login": {
+      "title": "Accedi",
+      "subtitle": "Accedi al tuo account",
+      "noAccount": "Non hai un account?",
+      "hasAccount": "Hai già un account?"
+    },
+    "register": {
+      "title": "Registrati",
+      "subtitle": "Crea il tuo account gratuito",
+      "hasAccount": "Hai già un account?"
+    },
+    "forgotPassword": {
+      "title": "Password dimenticata",
+      "subtitle": "Inserisci la tua email per ricevere un codice di reset"
+    },
+    "otpVerification": {
+      "title": "Verifica OTP",
+      "subtitle": "Inserisci il codice inviato a {{email}}"
+    },
+    "newPassword": {
+      "title": "Nuova password",
+      "subtitle": "Imposta la tua nuova password"
+    },
+    "fields": {
+      "email": "Email",
+      "password": "Password",
+      "newPassword": "Nuova password",
+      "confirmPassword": "Conferma password",
+      "firstName": "Nome",
+      "lastName": "Cognome",
+      "otpCode": "Codice OTP"
+    },
+    "placeholders": {
+      "email": "tua@email.com",
+      "password": "La tua password",
+      "newPassword": "Nuova password",
+      "confirmPassword": "Conferma password",
+      "firstName": "Nome",
+      "lastName": "Cognome",
+      "otpCode": "000000"
+    },
+    "actions": {
+      "signIn": "Accedi",
+      "signUp": "Registrati",
+      "signingIn": "Accedendo...",
+      "signingUp": "Registrandosi...",
+      "forgotPassword": "Password dimenticata?",
+      "sendCode": "Invia codice",
+      "sending": "Inviando...",
+      "verify": "Verifica",
+      "verifying": "Verificando...",
+      "resendCode": "Reinvia codice",
+      "backToLogin": "Torna al login",
+      "updatePassword": "Aggiorna password",
+      "updating": "Aggiornando..."
+    },
+    "success": {
+      "loginTitle": "Accesso effettuato con successo",
+      "loginDescription": "Benvenuto su ObjetsTrouvés!",
+      "registerTitle": "Registrazione effettuata con successo",
+      "registerDescription": "Per favore controlla la tua email per confermare il tuo account",
+      "forgotPasswordTitle": "Codice inviato",
+      "forgotPasswordDescription": "Controlla la tua email per il codice di reset",
+      "otpVerificationTitle": "Verifica effettuata con successo",
+      "otpVerificationDescription": "Il tuo account è stato verificato con successo",
+      "newPasswordTitle": "Password aggiornata",
+      "newPasswordDescription": "Ora puoi accedere con la tua nuova password",
+      "resendOtpTitle": "Codice rinviato",
+      "resendOtpDescription": "Un nuovo codice è stato inviato alla tua email"
+    },
+    "errors": {
+      "general": "Si è verificato un errore",
+      "invalidEmail": "Indirizzo email non valido",
+      "passwordTooShort": "La password deve essere lunga almeno 8 caratteri",
+      "passwordsDoNotMatch": "Le password non corrispondono",
+      "firstNameRequired": "Il nome è obbligatorio",
+      "lastNameRequired": "Il cognome è obbligatorio",
+      "otpInvalid": "Il codice OTP deve avere 6 cifre",
+      "loginFailed": "Accesso fallito",
+      "registerFailed": "Registrazione fallita",
+      "forgotPasswordFailed": "Invio del codice di reset fallito",
+      "otpVerificationFailed": "Verifica fallita",
+      "newPasswordFailed": "Aggiornamento password fallito",
+      "resendOtpFailed": "Reinvio del codice fallito",
+      "UserNotFoundException": "Utente non trovato",
+      "NotAuthorizedException": "Email o password incorretti",
+      "UserNotConfirmedException": "Per favore conferma il tuo indirizzo email",
+      "InvalidPasswordException": "La password non soddisfa i requisiti",
+      "UsernameExistsException": "Questo indirizzo email è già in uso",
+      "CodeMismatchException": "Codice incorretto",
+      "ExpiredCodeException": "Il codice è scaduto",
+      "LimitExceededException": "Troppi tentativi, riprova più tardi",
+      "InvalidParameterException": "Parametro non valido",
+      "TooManyRequestsException": "Troppe richieste, riprova più tardi"
     }
   }
 }

@@ -308,5 +308,102 @@
     "uploaded": "アップロードに失敗しました",
     "uuid": "有効なUUIDである必要があります",
     "custom": "{{attribute}}フィールドが無効です"
+  },
+  "auth": {
+    "login": {
+      "title": "ログイン",
+      "subtitle": "アカウントにログイン",
+      "noAccount": "アカウントをお持ちでない方",
+      "hasAccount": "既にアカウントをお持ちの方"
+    },
+    "register": {
+      "title": "登録",
+      "subtitle": "無料アカウントを作成",
+      "hasAccount": "既にアカウントをお持ちの方"
+    },
+    "forgotPassword": {
+      "title": "パスワードを忘れた方",
+      "subtitle": "リセットコードを受信するためにメールアドレスを入力してください"
+    },
+    "otpVerification": {
+      "title": "OTP認証",
+      "subtitle": "{{email}}に送信されたコードを入力してください"
+    },
+    "newPassword": {
+      "title": "新しいパスワード",
+      "subtitle": "新しいパスワードを設定してください"
+    },
+    "fields": {
+      "email": "メールアドレス",
+      "password": "パスワード",
+      "newPassword": "新しいパスワード",
+      "confirmPassword": "パスワード確認",
+      "firstName": "名",
+      "lastName": "姓",
+      "otpCode": "OTPコード"
+    },
+    "placeholders": {
+      "email": "あなたの@メール.com",
+      "password": "パスワード",
+      "newPassword": "新しいパスワード",
+      "confirmPassword": "パスワード確認",
+      "firstName": "名",
+      "lastName": "姓",
+      "otpCode": "000000"
+    },
+    "actions": {
+      "signIn": "ログイン",
+      "signUp": "登録",
+      "signingIn": "ログイン中...",
+      "signingUp": "登録中...",
+      "forgotPassword": "パスワードを忘れた方",
+      "sendCode": "コードを送信",
+      "sending": "送信中...",
+      "verify": "認証",
+      "verifying": "認証中...",
+      "resendCode": "コードを再送信",
+      "backToLogin": "ログインに戻る",
+      "updatePassword": "パスワードを更新",
+      "updating": "更新中..."
+    },
+    "success": {
+      "loginTitle": "ログイン成功",
+      "loginDescription": "ObjetsTrouvésへようこそ！",
+      "registerTitle": "登録成功",
+      "registerDescription": "アカウントを確認するためにメールをチェックしてください",
+      "forgotPasswordTitle": "コードを送信しました",
+      "forgotPasswordDescription": "リセットコードのメールをチェックしてください",
+      "otpVerificationTitle": "認証成功",
+      "otpVerificationDescription": "アカウントが正常に認証されました",
+      "newPasswordTitle": "パスワードを更新しました",
+      "newPasswordDescription": "新しいパスワードでログインできます",
+      "resendOtpTitle": "コードを再送信しました",
+      "resendOtpDescription": "新しいコードがメールに送信されました"
+    },
+    "errors": {
+      "general": "エラーが発生しました",
+      "invalidEmail": "無効なメールアドレス",
+      "passwordTooShort": "パスワードは8文字以上である必要があります",
+      "passwordsDoNotMatch": "パスワードが一致しません",
+      "firstNameRequired": "名は必須です",
+      "lastNameRequired": "姓は必須です",
+      "otpInvalid": "OTPコードは6桁である必要があります",
+      "loginFailed": "ログインに失敗しました",
+      "registerFailed": "登録に失敗しました",
+      "forgotPasswordFailed": "リセットコードの送信に失敗しました",
+      "otpVerificationFailed": "認証に失敗しました",
+      "newPasswordFailed": "パスワードの更新に失敗しました",
+      "resendOtpFailed": "コードの再送信に失敗しました",
+      "UserNotFoundException": "ユーザーが見つかりません",
+      "NotAuthorizedException": "メールアドレスまたはパスワードが間違っています",
+      "UserNotConfirmedException": "メールアドレスを確認してください",
+      "InvalidPasswordException": "パスワードが要件を満たしていません",
+      "UsernameExistsException": "このメールアドレスは既に使用されています",
+      "CodeMismatchException": "コードが間違っています",
+      "ExpiredCodeException": "コードの有効期限が切れています",
+      "LimitExceededException": "試行回数が多すぎます、後でもう一度お試しください",
+      "InvalidParameterException": "無効なパラメーター",
+      "TooManyRequestsException": "リクエストが多すぎます、後でもう一度お試しください"
+    }
   }
 }

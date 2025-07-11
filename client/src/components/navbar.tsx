@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useLocation } from "wouter";
-import { useAuth } from "@/hooks/useAuth";
+import { useCognitoAuth } from "@/hooks/useCognitoAuth";
 import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -8,12 +8,14 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { Menu, Search, Plus, User, Settings, LogOut, X } from "lucide-react";
 import LanguageSelector from "./language-selector";
+import AuthModal from "./auth/auth-modal";
 
 export default function Navbar() {
   const [location] = useLocation();
-  const { user, isAuthenticated, isLoading } = useAuth();
+  const { user, isAuthenticated, isLoading, signOut } = useCognitoAuth();
   const { t } = useTranslation();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [authModalOpen, setAuthModalOpen] = useState(false);
 
   const navigation = [
     { name: t("nav.home"), href: "/" },
@@ -107,7 +109,14 @@ export default function Navbar() {
                       <Plus className="h-4 w-4 mr-2" />
                       {t("nav.publish")}
                     </DropdownMenuItem>
-                    <DropdownMenuItem onClick={() => window.location.href = "/api/logout"}>
+                    <DropdownMenuItem onClick={async () => {
+                      try {
+                        await signOut();
+                        window.location.href = "/";
+                      } catch (error) {
+                        console.error("Logout error:", error);
+                      }
+                    }}>
                       <LogOut className="h-4 w-4 mr-2" />
                       {t("nav.logout")}
                     </DropdownMenuItem>
@@ -117,7 +126,7 @@ export default function Navbar() {
             ) : (
               <Button
                 size="sm"
-                onClick={() => window.location.href = "/api/login"}
+                onClick={() => setAuthModalOpen(true)}
                 className="text-white px-3 py-2"
               >
                 <User className="h-4 w-4 mr-1" />
@@ -175,6 +184,16 @@ export default function Navbar() {
           </div>
         )}
       </div>
+      
+      {/* Auth Modal */}
+      <AuthModal
+        isOpen={authModalOpen}
+        onClose={() => setAuthModalOpen(false)}
+        onSuccess={(user) => {
+          console.log("Auth success:", user);
+          setAuthModalOpen(false);
+        }}
+      />
     </nav>
   );
 }

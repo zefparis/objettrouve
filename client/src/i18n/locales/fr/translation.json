@@ -12,7 +12,10 @@
     "contact": "Contact"
   },
   "common": {
-    "back": "Retour"
+    "back": "Retour",
+    "success": "Succès",
+    "error": "Erreur",
+    "loading": "Chargement..."
   },
   "hero": {
     "title": "Retrouvez vos objets perdus",
@@ -204,8 +207,6 @@
     "previous": "Précédent",
     "viewDetails": "Voir les détails",
     "noImage": "Aucune image",
-    "unauthorized": "Non autorisé",
-    "loginRequired": "Vous devez être connecté. Redirection...",
     "unauthorized": "Non autorisé",
     "loginRequired": "Vous devez être connecté. Redirection...",
     "timeAgo": {
@@ -413,6 +414,103 @@
       "title": "Urgence technique",
       "description": "Pour les problèmes urgents affectant le fonctionnement du site",
       "button": "Assistance d'urgence"
+    }
+  },
+  "auth": {
+    "login": {
+      "title": "Connexion",
+      "subtitle": "Connectez-vous à votre compte",
+      "noAccount": "Pas de compte ?",
+      "hasAccount": "Vous avez déjà un compte ?"
+    },
+    "register": {
+      "title": "Inscription",
+      "subtitle": "Créez votre compte gratuit",
+      "hasAccount": "Vous avez déjà un compte ?"
+    },
+    "forgotPassword": {
+      "title": "Mot de passe oublié",
+      "subtitle": "Entrez votre email pour recevoir un code de réinitialisation"
+    },
+    "otpVerification": {
+      "title": "Vérification OTP",
+      "subtitle": "Entrez le code envoyé à {{email}}"
+    },
+    "newPassword": {
+      "title": "Nouveau mot de passe",
+      "subtitle": "Définissez votre nouveau mot de passe"
+    },
+    "fields": {
+      "email": "Email",
+      "password": "Mot de passe",
+      "newPassword": "Nouveau mot de passe",
+      "confirmPassword": "Confirmer le mot de passe",
+      "firstName": "Prénom",
+      "lastName": "Nom",
+      "otpCode": "Code OTP"
+    },
+    "placeholders": {
+      "email": "votre@email.com",
+      "password": "Votre mot de passe",
+      "newPassword": "Nouveau mot de passe",
+      "confirmPassword": "Confirmer le mot de passe",
+      "firstName": "Prénom",
+      "lastName": "Nom",
+      "otpCode": "000000"
+    },
+    "actions": {
+      "signIn": "Se connecter",
+      "signUp": "S'inscrire",
+      "signingIn": "Connexion...",
+      "signingUp": "Inscription...",
+      "forgotPassword": "Mot de passe oublié ?",
+      "sendCode": "Envoyer le code",
+      "sending": "Envoi...",
+      "verify": "Vérifier",
+      "verifying": "Vérification...",
+      "resendCode": "Renvoyer le code",
+      "backToLogin": "Retour à la connexion",
+      "updatePassword": "Mettre à jour",
+      "updating": "Mise à jour..."
+    },
+    "success": {
+      "loginTitle": "Connexion réussie",
+      "loginDescription": "Bienvenue sur ObjetsTrouvés !",
+      "registerTitle": "Inscription réussie",
+      "registerDescription": "Vérifiez votre email pour confirmer votre compte",
+      "forgotPasswordTitle": "Code envoyé",
+      "forgotPasswordDescription": "Vérifiez votre email pour le code de réinitialisation",
+      "otpVerificationTitle": "Vérification réussie",
+      "otpVerificationDescription": "Votre compte a été vérifié avec succès",
+      "newPasswordTitle": "Mot de passe mis à jour",
+      "newPasswordDescription": "Vous pouvez maintenant vous connecter",
+      "resendOtpTitle": "Code renvoyé",
+      "resendOtpDescription": "Un nouveau code a été envoyé à votre email"
+    },
+    "errors": {
+      "general": "Une erreur s'est produite",
+      "invalidEmail": "Email invalide",
+      "passwordTooShort": "Le mot de passe doit contenir au moins 8 caractères",
+      "passwordsDoNotMatch": "Les mots de passe ne correspondent pas",
+      "firstNameRequired": "Le prénom est requis",
+      "lastNameRequired": "Le nom est requis",
+      "otpInvalid": "Le code OTP doit contenir 6 chiffres",
+      "loginFailed": "Échec de la connexion",
+      "registerFailed": "Échec de l'inscription",
+      "forgotPasswordFailed": "Échec de l'envoi du code",
+      "otpVerificationFailed": "Échec de la vérification",
+      "newPasswordFailed": "Échec de la mise à jour",
+      "resendOtpFailed": "Échec du renvoi du code",
+      "UserNotFoundException": "Utilisateur non trouvé",
+      "NotAuthorizedException": "Email ou mot de passe incorrect",
+      "UserNotConfirmedException": "Veuillez confirmer votre email",
+      "InvalidPasswordException": "Le mot de passe ne respecte pas les critères",
+      "UsernameExistsException": "Cette adresse email est déjà utilisée",
+      "CodeMismatchException": "Code incorrect",
+      "ExpiredCodeException": "Le code a expiré",
+      "LimitExceededException": "Trop de tentatives, réessayez plus tard",
+      "InvalidParameterException": "Paramètre invalide",
+      "TooManyRequestsException": "Trop de demandes, réessayez plus tard"
     }
   }
 }
