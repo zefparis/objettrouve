@@ -23,6 +23,10 @@ if (!CLIENT_ID || !USER_POOL_ID || !CLIENT_SECRET) {
 
 const client = new CognitoIdentityProviderClient({
   region: REGION,
+  credentials: {
+    accessKeyId: process.env.AWS_ACCESS_KEY_ID || "dummy",
+    secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY || "dummy",
+  },
 });
 
 // Function to calculate SECRET_HASH using HMAC-SHA256
