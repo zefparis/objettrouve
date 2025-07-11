@@ -131,7 +131,7 @@ export default function Profile() {
       
       return await res.json();
     },
-    onSuccess: () => {
+    onSuccess: (data) => {
       toast({
         title: t("profile.updateSuccess"),
         description: t("profile.updateSuccessDesc"),
@@ -139,6 +139,19 @@ export default function Profile() {
       setIsEditing(false);
       setSelectedFile(null);
       setPreviewUrl(null);
+      
+      // Update profile data with the returned data to preserve photo
+      setProfileData(prev => ({
+        ...prev,
+        firstName: data.firstName || "",
+        lastName: data.lastName || "",
+        email: data.email || "",
+        phone: data.phone || "",
+        location: data.location || "",
+        bio: data.bio || "",
+        profileImage: data.profileImageUrl || prev.profileImage
+      }));
+      
       queryClient.invalidateQueries({ queryKey: ["/api/auth/user"] });
     },
     onError: (error) => {

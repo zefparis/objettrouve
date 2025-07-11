@@ -129,6 +129,9 @@ export async function registerRoutes(app: Express): Promise<Server> {
       const userId = req.user?.claims?.sub || 'dev-user-123';
       const { firstName, lastName, email, phone, location, bio } = req.body;
       
+      // Get existing user data to preserve photo if no new one is uploaded
+      const existingUser = await storage.getUser(userId);
+      
       const updates = {
         firstName: firstName || null,
         lastName: lastName || null,
@@ -136,9 +139,13 @@ export async function registerRoutes(app: Express): Promise<Server> {
         phone: phone || null,
         location: location || null,
         bio: bio || null,
-        profileImageUrl: req.file ? `/uploads/${req.file.filename}` : undefined,
         updatedAt: new Date(),
       };
+
+      // Only update profile image if a new one is uploaded
+      if (req.file) {
+        updates.profileImageUrl = `/uploads/${req.file.filename}`;
+      }
 
       // Remove undefined values
       Object.keys(updates).forEach(key => {
