@@ -1,14 +1,13 @@
 import {
   CognitoIdentityProviderClient,
-  AdminInitiateAuthCommand,
+  InitiateAuthCommand,
+  RespondToAuthChallengeCommand,
   SignUpCommand,
   ConfirmSignUpCommand,
   ForgotPasswordCommand,
   ConfirmForgotPasswordCommand,
   ResendConfirmationCodeCommand,
-  AdminRespondToAuthChallengeCommand,
-  AdminGetUserCommand,
-  AdminDeleteUserCommand,
+  GetUserCommand,
 } from "@aws-sdk/client-cognito-identity-provider";
 import CryptoJS from "crypto-js";
 
@@ -123,10 +122,9 @@ export class CognitoService {
 
   async signIn(email: string, password: string): Promise<AuthResult> {
     try {
-      const command = new AdminInitiateAuthCommand({
-        UserPoolId: USER_POOL_ID,
+      const command = new InitiateAuthCommand({
         ClientId: CLIENT_ID,
-        AuthFlow: "ADMIN_NO_SRP_AUTH",
+        AuthFlow: "USER_PASSWORD_AUTH",
         AuthParameters: {
           USERNAME: email,
           PASSWORD: password,
@@ -181,10 +179,9 @@ export class CognitoService {
   ): Promise<AuthResult> {
     try {
       // First, get the session by signing in with temporary password
-      const initiateCommand = new AdminInitiateAuthCommand({
-        UserPoolId: USER_POOL_ID,
+      const initiateCommand = new InitiateAuthCommand({
         ClientId: CLIENT_ID,
-        AuthFlow: "ADMIN_NO_SRP_AUTH",
+        AuthFlow: "USER_PASSWORD_AUTH",
         AuthParameters: {
           USERNAME: email,
           PASSWORD: temporaryPassword,
@@ -199,8 +196,7 @@ export class CognitoService {
       }
 
       // Then respond to the NEW_PASSWORD_REQUIRED challenge
-      const respondCommand = new AdminRespondToAuthChallengeCommand({
-        UserPoolId: USER_POOL_ID,
+      const respondCommand = new RespondToAuthChallengeCommand({
         ClientId: CLIENT_ID,
         ChallengeName: "NEW_PASSWORD_REQUIRED",
         Session: initiateResponse.Session,
@@ -298,9 +294,8 @@ export class CognitoService {
 
   async getCurrentUser(accessToken: string): Promise<CognitoUserData | null> {
     try {
-      const command = new AdminGetUserCommand({
-        UserPoolId: USER_POOL_ID,
-        Username: accessToken, // This should be the username, not access token
+      const command = new GetUserCommand({
+        AccessToken: accessToken,
       });
 
       const response = await client.send(command);
