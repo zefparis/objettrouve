@@ -1,12 +1,12 @@
 import {
   CognitoIdentityProviderClient,
   InitiateAuthCommand,
+  RespondToAuthChallengeCommand,
   SignUpCommand,
   ConfirmSignUpCommand,
   ForgotPasswordCommand,
   ConfirmForgotPasswordCommand,
   ResendConfirmationCodeCommand,
-  RespondToAuthChallengeCommand,
   GetUserCommand,
   GlobalSignOutCommand,
 } from "@aws-sdk/client-cognito-identity-provider";
@@ -36,7 +36,10 @@ const client = new CognitoIdentityProviderClient({
   region: REGION,
 });
 
-export interface CognitoUser {
+// Note: For web applications with CLIENT_SECRET, we need to use ALLOW_ADMIN_USER_PASSWORD_AUTH
+// This requires different authentication flow
+
+export interface CognitoUserData {
   username: string;
   email: string;
   firstName?: string;
@@ -46,7 +49,7 @@ export interface CognitoUser {
 }
 
 export interface AuthResult {
-  user: CognitoUser;
+  user: CognitoUserData;
   accessToken: string;
   idToken: string;
   refreshToken: string;
@@ -58,7 +61,7 @@ class CognitoService {
   private accessToken: string | null = null;
   private idToken: string | null = null;
   private refreshToken: string | null = null;
-  private currentUser: CognitoUser | null = null;
+  private currentUser: CognitoUserData | null = null;
 
   constructor() {
     this.loadTokensFromStorage();
@@ -95,7 +98,7 @@ class CognitoService {
     }
   }
 
-  private saveUserToStorage(user: CognitoUser) {
+  private saveUserToStorage(user: CognitoUserData) {
     try {
       localStorage.setItem("cognito_user", JSON.stringify(user));
       this.currentUser = user;
@@ -119,7 +122,7 @@ class CognitoService {
     }
   }
 
-  private parseUserFromToken(idToken: string): CognitoUser {
+  private parseUserFromToken(idToken: string): CognitoUserData {
     try {
       const payload = JSON.parse(atob(idToken.split('.')[1]));
       return {
@@ -189,7 +192,7 @@ class CognitoService {
     try {
       const command = new InitiateAuthCommand({
         ClientId: CLIENT_ID,
-        AuthFlow: "USER_PASSWORD_AUTH",
+        AuthFlow: "ADMIN_NO_SRP_AUTH",
         AuthParameters: {
           USERNAME: email,
           PASSWORD: password,
@@ -254,7 +257,7 @@ class CognitoService {
       // First, get the session by signing in with temporary password
       const initiateCommand = new InitiateAuthCommand({
         ClientId: CLIENT_ID,
-        AuthFlow: "USER_PASSWORD_AUTH",
+        AuthFlow: "ADMIN_NO_SRP_AUTH",
         AuthParameters: {
           USERNAME: email,
           PASSWORD: temporaryPassword,
