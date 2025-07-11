@@ -6,7 +6,8 @@
     "dashboard": "Dashboard",
     "chat": "Messages",
     "login": "Login",
-    "logout": "Logout"
+    "logout": "Logout",
+    "features": "Features"
   },
   "hero": {
     "title": "Find Your Lost Items",
@@ -23,6 +24,7 @@
   },
   "categories": {
     "title": "Popular Categories",
+    "subtitle": "Search by item type to find more easily",
     "electronics": "Electronics",
     "clothing": "Clothing",
     "accessories": "Accessories",
@@ -52,6 +54,7 @@
   },
   "search": {
     "title": "Search for items",
+    "subtitle": "Find lost or found items near you",
     "filters": "Filters",
     "type": "Type",
     "all": "All",
@@ -59,7 +62,7 @@
     "found": "Found",
     "category": "Category",
     "location": "Location",
-    "searchPlaceholder": "Search by keyword...",
+    "searchPlaceholder": "Search by item, location, description...",
     "noResults": "No results found",
     "noResultsDesc": "Try modifying your search criteria",
     "itemType": {
@@ -69,6 +72,7 @@
   },
   "publish": {
     "title": "Post an ad",
+    "subtitle": "Report a lost or found item to help the community",
     "form": {
       "title": "Ad title",
       "titlePlaceholder": "E.g.: iPhone 13 Pro lost in subway",
@@ -118,6 +122,10 @@
     "description": "Description",
     "similarItems": "Similar items"
   },
+  "home": {
+    "recentItems": "Recently reported items",
+    "recentItemsDesc": "Discover the latest lost and found items in your area"
+  },
   "common": {
     "loading": "Loading...",
     "error": "Error",
@@ -148,11 +156,20 @@
   },
   "footer": {
     "description": "The French reference platform for recovering your lost items",
+    "interactiveMap": "Interactive map",
+    "emailAlerts": "Email alerts",
+    "support": "Support",
+    "helpCenter": "Help center",
+    "faq": "FAQ",
+    "reportIssue": "Report an issue",
+    "legal": "Legal",
+    "legalNotice": "Legal notice",
+    "cookies": "Cookies",
     "links": {
       "about": "About",
       "contact": "Contact",
-      "privacy": "Privacy",
-      "terms": "Terms"
+      "privacy": "Privacy policy",
+      "terms": "Terms of service"
     },
     "followUs": "Follow us",
     "copyright": "© 2024 ObjetsTrouvés. All rights reserved."

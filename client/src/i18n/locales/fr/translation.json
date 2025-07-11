@@ -6,7 +6,8 @@
     "dashboard": "Tableau de bord",
     "chat": "Messages",
     "login": "Se connecter",
-    "logout": "Se déconnecter"
+    "logout": "Se déconnecter",
+    "features": "Fonctionnalités"
   },
   "hero": {
     "title": "Retrouvez vos objets perdus",
@@ -23,6 +24,7 @@
   },
   "categories": {
     "title": "Catégories populaires",
+    "subtitle": "Recherchez par type d'objet pour trouver plus facilement",
     "electronics": "Électronique",
     "clothing": "Vêtements",
     "accessories": "Accessoires",
@@ -52,6 +54,7 @@
   },
   "search": {
     "title": "Rechercher des objets",
+    "subtitle": "Trouvez des objets perdus ou trouvés près de chez vous",
     "filters": "Filtres",
     "type": "Type",
     "all": "Tous",
@@ -59,7 +62,7 @@
     "found": "Trouvés",
     "category": "Catégorie",
     "location": "Lieu",
-    "searchPlaceholder": "Rechercher par mot-clé...",
+    "searchPlaceholder": "Rechercher par objet, lieu, description...",
     "noResults": "Aucun résultat trouvé",
     "noResultsDesc": "Essayez de modifier vos critères de recherche",
     "itemType": {
@@ -69,6 +72,7 @@
   },
   "publish": {
     "title": "Publier une annonce",
+    "subtitle": "Déclarez un objet perdu ou trouvé pour aider la communauté",
     "form": {
       "title": "Titre de l'annonce",
       "titlePlaceholder": "Ex: iPhone 13 Pro perdu dans le métro",
@@ -118,6 +122,10 @@
     "description": "Description",
     "similarItems": "Objets similaires"
   },
+  "home": {
+    "recentItems": "Objets récemment déclarés",
+    "recentItemsDesc": "Découvrez les derniers objets perdus et trouvés dans votre région"
+  },
   "common": {
     "loading": "Chargement...",
     "error": "Erreur",
@@ -148,11 +156,20 @@
   },
   "footer": {
     "description": "La plateforme française de référence pour retrouver vos objets perdus",
+    "interactiveMap": "Carte interactive",
+    "emailAlerts": "Alertes email",
+    "support": "Support",
+    "helpCenter": "Centre d'aide",
+    "faq": "FAQ",
+    "reportIssue": "Signaler un problème",
+    "legal": "Légal",
+    "legalNotice": "Mentions légales",
+    "cookies": "Cookies",
     "links": {
       "about": "À propos",
       "contact": "Contact",
-      "privacy": "Confidentialité",
-      "terms": "Conditions"
+      "privacy": "Politique de confidentialité",
+      "terms": "CGU"
     },
     "followUs": "Suivez-nous",
     "copyright": "© 2024 ObjetsTrouvés. Tous droits réservés."

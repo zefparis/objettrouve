@@ -6,7 +6,8 @@
     "dashboard": "Panel",
     "chat": "Mensajes",
     "login": "Iniciar sesión",
-    "logout": "Cerrar sesión"
+    "logout": "Cerrar sesión",
+    "features": "Características"
   },
   "hero": {
     "title": "Encuentra tus objetos perdidos",
@@ -23,6 +24,7 @@
   },
   "categories": {
     "title": "Categorías populares",
+    "subtitle": "Busca por tipo de objeto para encontrar más fácilmente",
     "electronics": "Electrónicos",
     "clothing": "Ropa",
     "accessories": "Accesorios",
@@ -52,6 +54,7 @@
   },
   "search": {
     "title": "Buscar objetos",
+    "subtitle": "Encuentra objetos perdidos o encontrados cerca de ti",
     "filters": "Filtros",
     "type": "Tipo",
     "all": "Todos",
@@ -59,7 +62,7 @@
     "found": "Encontrados",
     "category": "Categoría",
     "location": "Ubicación",
-    "searchPlaceholder": "Buscar por palabra clave...",
+    "searchPlaceholder": "Buscar por objeto, lugar, descripción...",
     "noResults": "No se encontraron resultados",
     "noResultsDesc": "Intenta modificar tus criterios de búsqueda",
     "itemType": {
@@ -69,6 +72,7 @@
   },
   "publish": {
     "title": "Publicar anuncio",
+    "subtitle": "Reporta un objeto perdido o encontrado para ayudar a la comunidad",
     "form": {
       "title": "Título del anuncio",
       "titlePlaceholder": "Ej: iPhone 13 Pro perdido en metro",
@@ -118,6 +122,10 @@
     "description": "Descripción",
     "similarItems": "Objetos similares"
   },
+  "home": {
+    "recentItems": "Objetos reportados recientemente",
+    "recentItemsDesc": "Descubre los últimos objetos perdidos y encontrados en tu área"
+  },
   "common": {
     "loading": "Cargando...",
     "error": "Error",
@@ -155,6 +163,15 @@
       "terms": "Términos"
     },
     "followUs": "Síguenos",
+    "interactiveMap": "Mapa interactivo",
+    "emailAlerts": "Alertas por email",
+    "support": "Soporte",
+    "helpCenter": "Centro de ayuda",
+    "faq": "FAQ",
+    "reportIssue": "Reportar problema",
+    "legal": "Legal",
+    "legalNotice": "Aviso legal",
+    "cookies": "Cookies",
     "copyright": "© 2024 ObjetsTrouvés. Todos los derechos reservados."
   }
 }

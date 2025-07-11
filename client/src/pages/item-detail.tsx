@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useParams } from "wouter";
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
+import { useTranslation } from "react-i18next";
 import { useAuth } from "@/hooks/useAuth";
 import Navbar from "@/components/navbar";
 import { Button } from "@/components/ui/button";
@@ -15,6 +16,7 @@ import { MapPin, Calendar, Phone, Mail, MessageCircle, User } from "lucide-react
 import { CATEGORIES } from "@shared/schema";
 
 export default function ItemDetail() {
+  const { t } = useTranslation();
   const { id } = useParams();
   const { user } = useAuth();
   const { toast } = useToast();

@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { useTranslation } from "react-i18next";
 import { useAuth } from "@/hooks/useAuth";
 import { useToast } from "@/hooks/use-toast";
 import { isUnauthorizedError } from "@/lib/authUtils";
@@ -16,6 +17,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
 export default function Home() {
+  const { t } = useTranslation();
   const { toast } = useToast();
   const { isAuthenticated, isLoading } = useAuth();
 
@@ -60,10 +62,10 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Objets récemment déclarés
+              {t("home.recentItems")}
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Découvrez les derniers objets perdus et trouvés dans votre région
+              {t("home.recentItemsDesc")}
             </p>
           </div>
           

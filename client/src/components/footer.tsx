@@ -30,78 +30,78 @@ export default function Footer() {
           </div>
           
           <div>
-            <h4 className="font-semibold mb-4">Fonctionnalités</h4>
+            <h4 className="font-semibold mb-4">{t("nav.features")}</h4>
             <ul className="space-y-2 text-gray-400">
               <li>
                 <Link href="/publier" className="hover:text-white transition-colors">
-                  Publier une annonce
+                  {t("nav.publish")}
                 </Link>
               </li>
               <li>
                 <Link href="/rechercher" className="hover:text-white transition-colors">
-                  Rechercher
+                  {t("nav.search")}
                 </Link>
               </li>
               <li>
                 <a href="#" className="hover:text-white transition-colors">
-                  Carte interactive
+                  {t("footer.interactiveMap")}
                 </a>
               </li>
               <li>
                 <a href="#" className="hover:text-white transition-colors">
-                  Alertes email
-                </a>
-              </li>
-            </ul>
-          </div>
-          
-          <div>
-            <h4 className="font-semibold mb-4">Support</h4>
-            <ul className="space-y-2 text-gray-400">
-              <li>
-                <a href="#" className="hover:text-white transition-colors">
-                  Centre d'aide
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-white transition-colors">
-                  Contact
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-white transition-colors">
-                  FAQ
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-white transition-colors">
-                  Signaler un problème
+                  {t("footer.emailAlerts")}
                 </a>
               </li>
             </ul>
           </div>
           
           <div>
-            <h4 className="font-semibold mb-4">Légal</h4>
+            <h4 className="font-semibold mb-4">{t("footer.support")}</h4>
             <ul className="space-y-2 text-gray-400">
               <li>
                 <a href="#" className="hover:text-white transition-colors">
-                  Mentions légales
+                  {t("footer.helpCenter")}
                 </a>
               </li>
               <li>
                 <a href="#" className="hover:text-white transition-colors">
-                  Politique de confidentialité
+                  {t("footer.links.contact")}
                 </a>
               </li>
               <li>
                 <a href="#" className="hover:text-white transition-colors">
-                  CGU
+                  {t("footer.faq")}
                 </a>
               </li>
               <li>
                 <a href="#" className="hover:text-white transition-colors">
-                  Cookies
+                  {t("footer.reportIssue")}
+                </a>
+              </li>
+            </ul>
+          </div>
+          
+          <div>
+            <h4 className="font-semibold mb-4">{t("footer.legal")}</h4>
+            <ul className="space-y-2 text-gray-400">
+              <li>
+                <a href="#" className="hover:text-white transition-colors">
+                  {t("footer.legalNotice")}
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-white transition-colors">
+                  {t("footer.links.privacy")}
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-white transition-colors">
+                  {t("footer.links.terms")}
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-white transition-colors">
+                  {t("footer.cookies")}
                 </a>
               </li>
             </ul>

@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { useParams } from "wouter";
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
+import { useTranslation } from "react-i18next";
 import { useAuth } from "@/hooks/useAuth";
 import Navbar from "@/components/navbar";
 import { Button } from "@/components/ui/button";
@@ -14,6 +15,7 @@ import { isUnauthorizedError } from "@/lib/authUtils";
 import { Send, ArrowLeft } from "lucide-react";
 
 export default function Chat() {
+  const { t } = useTranslation();
   const { itemId } = useParams();
   const { user } = useAuth();
   const { toast } = useToast();

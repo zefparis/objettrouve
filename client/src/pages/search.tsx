@@ -48,7 +48,7 @@ export default function Search() {
             {t("search.title")}
           </h1>
           <p className="text-gray-600">
-            Trouvez des objets perdus ou trouvés près de chez vous
+            {t("search.subtitle")}
           </p>
         </div>
 
@@ -61,7 +61,7 @@ export default function Search() {
                   <div className="relative">
                     <SearchIcon className="absolute left-3 top-3 h-4 w-4 text-gray-400" />
                     <Input
-                      placeholder="Rechercher par objet, lieu, description..."
+                      placeholder={t("search.searchPlaceholder")}
                       value={search}
                       onChange={(e) => setSearch(e.target.value)}
                       className="pl-10"
@@ -70,23 +70,23 @@ export default function Search() {
                 </div>
                 <Select value={selectedType} onValueChange={setSelectedType}>
                   <SelectTrigger className="w-full md:w-48">
-                    <SelectValue placeholder="Type d'objet" />
+                    <SelectValue placeholder={t("search.type")} />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="all">Tous les types</SelectItem>
-                    <SelectItem value="lost">Objets perdus</SelectItem>
-                    <SelectItem value="found">Objets trouvés</SelectItem>
+                    <SelectItem value="all">{t("search.all")}</SelectItem>
+                    <SelectItem value="lost">{t("search.lost")}</SelectItem>
+                    <SelectItem value="found">{t("search.found")}</SelectItem>
                   </SelectContent>
                 </Select>
                 <Select value={selectedCategory} onValueChange={setSelectedCategory}>
                   <SelectTrigger className="w-full md:w-48">
-                    <SelectValue placeholder="Catégorie" />
+                    <SelectValue placeholder={t("search.category")} />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="all">Toutes les catégories</SelectItem>
+                    <SelectItem value="all">{t("search.all")}</SelectItem>
                     {CATEGORIES.map((category) => (
                       <SelectItem key={category.id} value={category.id}>
-                        {category.name}
+                        {t(`categories.${category.id}`)}
                       </SelectItem>
                     ))}
                   </SelectContent>
@@ -94,7 +94,7 @@ export default function Search() {
               </div>
               <Button type="submit" className="w-full md:w-auto">
                 <SearchIcon className="h-4 w-4 mr-2" />
-                Rechercher
+                {t("nav.search")}
               </Button>
             </form>
           </CardContent>
@@ -104,17 +104,17 @@ export default function Search() {
         <div className="mb-6">
           <div className="flex items-center justify-between">
             <h2 className="text-xl font-semibold text-gray-900">
-              {isLoading ? "Chargement..." : `${items?.length || 0} résultat(s)`}
+              {isLoading ? t("common.loading") : `${items?.length || 0} résultat(s)`}
             </h2>
             <div className="flex gap-2">
               {selectedType !== "all" && (
                 <Badge variant="secondary">
-                  Type: {selectedType === "lost" ? "Perdu" : "Trouvé"}
+                  {t("search.type")}: {selectedType === "lost" ? t("search.itemType.lost") : t("search.itemType.found")}
                 </Badge>
               )}
               {selectedCategory !== "all" && (
                 <Badge variant="secondary">
-                  Catégorie: {CATEGORIES.find(c => c.id === selectedCategory)?.name}
+                  {t("search.category")}: {t(`categories.${selectedCategory}`)}
                 </Badge>
               )}
             </div>

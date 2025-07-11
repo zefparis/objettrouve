@@ -28,7 +28,7 @@ export default function Categories() {
             {t("categories.title")}
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Recherchez par type d'objet pour trouver plus facilement
+            {t("categories.subtitle")}
           </p>
         </div>
         
