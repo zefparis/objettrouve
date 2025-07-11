@@ -32,9 +32,44 @@ import { CATEGORIES } from "@shared/schema";
 
 export default function Dashboard() {
   const { t } = useTranslation();
-  const { user } = useAuth();
+  const { user, isAuthenticated, isLoading } = useAuth();
   const { toast } = useToast();
   const queryClient = useQueryClient();
+
+  // In development, allow access to dashboard without authentication
+  const isDevelopment = import.meta.env.DEV;
+  
+  // Redirect to login if not authenticated (except in development)
+  useEffect(() => {
+    if (!isDevelopment && !isLoading && !isAuthenticated) {
+      toast({
+        title: t("common.unauthorized"),
+        description: t("common.loginRequired"),
+        variant: "destructive",
+      });
+      setTimeout(() => {
+        window.location.href = "/api/login";
+      }, 500);
+      return;
+    }
+  }, [isAuthenticated, isLoading, toast, t, isDevelopment]);
+
+  // Show loading state while checking authentication (except in development)
+  if (!isDevelopment && isLoading) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
+          <p className="text-gray-600">{t("common.loading")}</p>
+        </div>
+      </div>
+    );
+  }
+
+  // Don't render dashboard if not authenticated (except in development)
+  if (!isDevelopment && !isAuthenticated) {
+    return null;
+  }
 
   const { data: items, isLoading: itemsLoading } = useQuery({
     queryKey: ["/api/user/items"],

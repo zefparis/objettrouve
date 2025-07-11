@@ -28,12 +28,12 @@ function Router() {
       <Route path="/annonce/:id" component={ItemDetail} />
       <Route path="/chat" component={Chat} />
       <Route path="/chat/:itemId" component={Chat} />
+      <Route path="/dashboard" component={Dashboard} />
       {isLoading || !isAuthenticated ? (
         <Route path="/" component={Landing} />
       ) : (
         <>
           <Route path="/" component={Home} />
-          <Route path="/dashboard" component={Dashboard} />
         </>
       )}
       <Route component={NotFound} />
