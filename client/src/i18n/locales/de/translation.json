@@ -65,10 +65,10 @@
         "name": "Erweitert",
         "description": "Für häufige Benutzer",
         "features": {
-          "everything": "Alles vom Pro-Plan",
-          "boost": "Monatlicher kostenloser Boost",
-          "premium": "Premium-Suche inklusive",
-          "api": "API-Zugang"
+          "listings": "Unbegrenzte Anzeigen",
+          "team": "Team-Management",
+          "api": "API-Zugang",
+          "custom": "Benutzerdefinierte Integrationen"
         }
       },
       "premium": {
@@ -77,10 +77,15 @@
         "features": {
           "unlimited": "Alles unbegrenzt",
           "dedicated": "Dedicated Account Manager",
-          "custom": "Benutzerdefinierte Integrationen",
-          "priority": "Maximaler prioritärer Support"
+          "white_label": "White-Label-Lösung",
+          "training": "Personalisiertes Training"
         }
       }
+    },
+    "subscribe": "Abonnieren",
+    "payment": {
+      "title": "Zahlungsmethode wählen",
+      "description": "Wählen Sie Ihre bevorzugte Zahlungsmethode"
     }
   }
 }

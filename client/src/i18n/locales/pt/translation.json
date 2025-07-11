@@ -334,10 +334,10 @@
         "name": "Avançado",
         "description": "Para usuários frequentes",
         "features": {
-          "everything": "Tudo do plano Pro",
-          "boost": "Impulsionamento gratuito mensal",
-          "premium": "Busca premium incluída",
-          "api": "Acesso à API"
+          "listings": "Anúncios ilimitados",
+          "team": "Gestão de equipe",
+          "api": "Acesso à API",
+          "custom": "Integrações personalizadas"
         }
       },
       "premium": {
@@ -346,10 +346,15 @@
         "features": {
           "unlimited": "Tudo ilimitado",
           "dedicated": "Gerente de conta dedicado",
-          "custom": "Integrações personalizadas",
-          "priority": "Suporte prioritário máximo"
+          "white_label": "Solução de marca branca",
+          "training": "Treinamento personalizado"
         }
       }
+    },
+    "subscribe": "Inscrever-se",
+    "payment": {
+      "title": "Escolher método de pagamento",
+      "description": "Selecione seu método de pagamento preferido"
     }
   },
   "error": {

@@ -65,10 +65,10 @@
         "name": "Geavanceerd",
         "description": "Voor frequente gebruikers",
         "features": {
-          "everything": "Alles van Pro-plan",
-          "boost": "Maandelijkse gratis boost",
-          "premium": "Premium zoeken inbegrepen",
-          "api": "API-toegang"
+          "listings": "Onbeperkte advertenties",
+          "team": "Team beheer",
+          "api": "API-toegang",
+          "custom": "Aangepaste integraties"
         }
       },
       "premium": {
@@ -77,10 +77,15 @@
         "features": {
           "unlimited": "Alles onbeperkt",
           "dedicated": "Toegewijde accountmanager",
-          "custom": "Aangepaste integraties",
-          "priority": "Maximale prioriteit ondersteuning"
+          "white_label": "White-label oplossing",
+          "training": "Gepersonaliseerde training"
         }
       }
+    },
+    "subscribe": "Abonneren",
+    "payment": {
+      "title": "Kies betaalmethode",
+      "description": "Selecteer uw gewenste betaalmethode"
     }
   }
 }

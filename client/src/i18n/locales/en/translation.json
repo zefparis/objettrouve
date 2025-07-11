@@ -335,10 +335,10 @@
         "name": "Advanced",
         "description": "For frequent users",
         "features": {
-          "everything": "Everything in Pro",
-          "boost": "Monthly free boost",
-          "premium": "Premium search included",
-          "api": "API access"
+          "listings": "Unlimited listings",
+          "team": "Team management",
+          "api": "API access",
+          "custom": "Custom integrations"
         }
       },
       "premium": {
@@ -347,10 +347,15 @@
         "features": {
           "unlimited": "Everything unlimited",
           "dedicated": "Dedicated account manager",
-          "custom": "Custom integrations",
-          "priority": "Maximum priority support"
+          "white_label": "White-label solution",
+          "training": "Personalized training"
         }
       }
+    },
+    "subscribe": "Subscribe",
+    "payment": {
+      "title": "Choose payment method",
+      "description": "Select your preferred payment method"
     }
   },
   "error": {

@@ -65,10 +65,10 @@
         "name": "고급",
         "description": "자주 사용하는 사용자용",
         "features": {
-          "everything": "프로 플랜의 모든 것",
-          "boost": "월간 무료 부스트",
-          "premium": "프리미엄 검색 포함",
-          "api": "API 액세스"
+          "listings": "무제한 광고",
+          "team": "팀 관리",
+          "api": "API 액세스",
+          "custom": "사용자 정의 통합"
         }
       },
       "premium": {
@@ -77,10 +77,15 @@
         "features": {
           "unlimited": "모든 것 무제한",
           "dedicated": "전담 계정 관리자",
-          "custom": "사용자 정의 통합",
-          "priority": "최대 우선 지원"
+          "white_label": "화이트 라벨 솔루션",
+          "training": "개인화된 교육"
         }
       }
+    },
+    "subscribe": "구독",
+    "payment": {
+      "title": "결제 방법 선택",
+      "description": "선호하는 결제 방법을 선택하세요"
     }
   }
 }

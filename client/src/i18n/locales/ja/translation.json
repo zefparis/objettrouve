@@ -65,10 +65,10 @@
         "name": "アドバンス",
         "description": "頻繁なユーザー向け",
         "features": {
-          "everything": "プロプランのすべて",
-          "boost": "月額無料ブースト",
-          "premium": "プレミアム検索を含む",
-          "api": "API アクセス"
+          "listings": "無制限の広告",
+          "team": "チーム管理",
+          "api": "API アクセス",
+          "custom": "カスタム統合"
         }
       },
       "premium": {
@@ -77,10 +77,15 @@
         "features": {
           "unlimited": "すべて無制限",
           "dedicated": "専用アカウントマネージャー",
-          "custom": "カスタム統合",
-          "priority": "最大優先サポート"
+          "white_label": "ホワイトラベルソリューション",
+          "training": "個人向けトレーニング"
         }
       }
+    },
+    "subscribe": "購読",
+    "payment": {
+      "title": "支払い方法を選択",
+      "description": "お好みの支払い方法を選択してください"
     }
   }
 }

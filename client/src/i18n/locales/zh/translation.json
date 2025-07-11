@@ -197,6 +197,82 @@
     },
     "copyright": "© 2024 ObjetsTrouvés. 版权所有。"
   },
+  "pricing": {
+    "title": "定价",
+    "subtitle": "选择适合您的方案",
+    "popular": "热门",
+    "select": "选择",
+    "tabs": {
+      "services": "服务",
+      "subscriptions": "订阅"
+    },
+    "services": {
+      "boost": {
+        "name": "广告推广",
+        "description": "突出显示您的广告以获得更好的可见度",
+        "features": {
+          "priority": "优先显示",
+          "highlight": "彩色突出显示",
+          "duration": "持续时间：7天"
+        }
+      },
+      "search": {
+        "name": "高级搜索",
+        "description": "为您的搜索提供高级提醒和过滤器",
+        "features": {
+          "alerts": "自定义邮件提醒",
+          "radius": "扩展搜索范围",
+          "priority": "优先获取新广告"
+        }
+      },
+      "verification": {
+        "name": "身份验证",
+        "description": "为您的广告提供信任徽章",
+        "features": {
+          "badge": "已验证的信任徽章",
+          "trust": "增加用户信任度",
+          "priority": "优先支持"
+        }
+      }
+    },
+    "plans": {
+      "pro": {
+        "name": "专业版",
+        "description": "适合普通用户",
+        "features": {
+          "listings": "无限广告",
+          "priority": "优先支持",
+          "analytics": "详细分析",
+          "support": "24/7支持"
+        }
+      },
+      "advanced": {
+        "name": "高级版",
+        "description": "适合频繁用户",
+        "features": {
+          "listings": "无限广告",
+          "team": "团队管理",
+          "api": "API访问",
+          "custom": "自定义集成"
+        }
+      },
+      "premium": {
+        "name": "尊享版",
+        "description": "适合专业用户",
+        "features": {
+          "unlimited": "一切无限",
+          "dedicated": "专属客户经理",
+          "white_label": "白标解决方案",
+          "training": "个性化培训"
+        }
+      }
+    },
+    "subscribe": "订阅",
+    "payment": {
+      "title": "选择付款方式",
+      "description": "选择您首选的付款方式"
+    }
+  },
   "errors": {
     "required": "此字段是必需的",
     "email_invalid": "无效的电子邮件地址",
