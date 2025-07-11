@@ -10,13 +10,26 @@ import {
   GetUserCommand,
   GlobalSignOutCommand,
 } from "@aws-sdk/client-cognito-identity-provider";
+import CryptoJS from "crypto-js";
 
 const REGION = import.meta.env.VITE_AWS_REGION || "us-east-1";
 const CLIENT_ID = import.meta.env.VITE_COGNITO_CLIENT_ID;
+const CLIENT_SECRET = import.meta.env.VITE_COGNITO_CLIENT_SECRET;
 const USER_POOL_ID = import.meta.env.VITE_COGNITO_USER_POOL_ID;
 
 if (!CLIENT_ID || !USER_POOL_ID) {
   throw new Error("Missing Cognito configuration. Please set VITE_COGNITO_CLIENT_ID and VITE_COGNITO_USER_POOL_ID");
+}
+
+// Function to calculate SECRET_HASH using HMAC-SHA256
+function calculateSecretHash(username: string): string {
+  if (!CLIENT_SECRET) {
+    throw new Error("CLIENT_SECRET is required but not configured");
+  }
+  
+  const message = username + CLIENT_ID;
+  const hash = CryptoJS.HmacSHA256(message, CLIENT_SECRET);
+  return CryptoJS.enc.Base64.stringify(hash);
 }
 
 const client = new CognitoIdentityProviderClient({
@@ -133,6 +146,7 @@ class CognitoService {
         ClientId: CLIENT_ID,
         Username: email,
         Password: password,
+        SecretHash: calculateSecretHash(email),
         UserAttributes: [
           { Name: "email", Value: email },
           ...Object.entries(attributes).map(([key, value]) => ({
@@ -158,6 +172,7 @@ class CognitoService {
         ClientId: CLIENT_ID,
         Username: email,
         ConfirmationCode: code,
+        SecretHash: calculateSecretHash(email),
       });
 
       await client.send(command);
@@ -178,6 +193,7 @@ class CognitoService {
         AuthParameters: {
           USERNAME: email,
           PASSWORD: password,
+          SECRET_HASH: calculateSecretHash(email),
         },
       });
 
@@ -242,6 +258,7 @@ class CognitoService {
         AuthParameters: {
           USERNAME: email,
           PASSWORD: temporaryPassword,
+          SECRET_HASH: calculateSecretHash(email),
         },
       });
 
@@ -259,6 +276,7 @@ class CognitoService {
         ChallengeResponses: {
           USERNAME: email,
           NEW_PASSWORD: newPassword,
+          SECRET_HASH: calculateSecretHash(email),
         },
       });
 
@@ -304,6 +322,7 @@ class CognitoService {
       const command = new ForgotPasswordCommand({
         ClientId: CLIENT_ID,
         Username: email,
+        SecretHash: calculateSecretHash(email),
       });
 
       await client.send(command);
@@ -323,6 +342,7 @@ class CognitoService {
         Username: email,
         ConfirmationCode: code,
         Password: newPassword,
+        SecretHash: calculateSecretHash(email),
       });
 
       await client.send(command);
@@ -340,6 +360,7 @@ class CognitoService {
       const command = new ResendConfirmationCodeCommand({
         ClientId: CLIENT_ID,
         Username: email,
+        SecretHash: calculateSecretHash(email),
       });
 
       await client.send(command);
