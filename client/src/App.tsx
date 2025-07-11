@@ -15,6 +15,10 @@ import Chat from "@/pages/chat";
 import HowItWorks from "@/pages/how-it-works";
 import Contact from "@/pages/contact";
 import Profile from "@/pages/profile";
+import MentionsLegales from "@/pages/legal/mentions-legales";
+import PolitiqueConfidentialite from "@/pages/legal/politique-confidentialite";
+import CGU from "@/pages/legal/cgu";
+import Cookies from "@/pages/legal/cookies";
 
 function Router() {
   const { isAuthenticated, isLoading } = useAuth();
@@ -32,6 +36,10 @@ function Router() {
       <Route path="/dashboard" component={Dashboard} />
       <Route path="/profile" component={Profile} />
       <Route path="/profil" component={Profile} />
+      <Route path="/mentions-legales" component={MentionsLegales} />
+      <Route path="/politique-confidentialite" component={PolitiqueConfidentialite} />
+      <Route path="/cgu" component={CGU} />
+      <Route path="/cookies" component={Cookies} />
       {isLoading || !isAuthenticated ? (
         <Route path="/" component={Landing} />
       ) : (
