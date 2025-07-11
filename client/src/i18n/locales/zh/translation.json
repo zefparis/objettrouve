@@ -123,7 +123,13 @@
   "home": {
     "recentItems": "最新物品",
     "recentItemsDesc": "发现最新的失物招领广告",
-    "seeAll": "查看全部"
+    "seeAll": "查看全部",
+    "noItemsYet": "暂无物品",
+    "viewAllItems": "查看所有物品",
+    "ctaTitle": "准备开始寻找您的物品？",
+    "ctaSubtitle": "加入数千名信任ObjetsTrouvés的用户",
+    "publishAd": "发布广告",
+    "myDashboard": "我的仪表板"
   },
   "map": {
     "title": "互动地图",
