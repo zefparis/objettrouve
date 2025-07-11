@@ -47,7 +47,11 @@
     "sports": "Sport",
     "books": "Livres",
     "pets": "Animaux",
-    "other": "Autre"
+    "other": "Autre",
+    "phones": "Téléphones",
+    "wallets": "Portefeuilles",
+    "glasses": "Lunettes",
+    "computers": "Ordinateurs"
   },
   "howItWorks": {
     "title": "Comment ça marche ?",

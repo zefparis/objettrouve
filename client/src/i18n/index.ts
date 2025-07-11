@@ -21,6 +21,7 @@ i18n
     debug: false,
     lng: 'fr', // Force French as default language
     fallbackLng: 'fr',
+    load: 'languageOnly',
     interpolation: {
       escapeValue: false,
     },
@@ -59,6 +60,9 @@ i18n
     detection: {
       order: ['localStorage', 'navigator', 'htmlTag'],
       caches: ['localStorage'],
+    },
+    react: {
+      useSuspense: false,
     },
   });
 
