@@ -14,6 +14,7 @@ import Dashboard from "@/pages/dashboard";
 import Chat from "@/pages/chat";
 import HowItWorks from "@/pages/how-it-works";
 import Contact from "@/pages/contact";
+import Profile from "@/pages/profile";
 
 function Router() {
   const { isAuthenticated, isLoading } = useAuth();
@@ -29,6 +30,8 @@ function Router() {
       <Route path="/chat" component={Chat} />
       <Route path="/chat/:itemId" component={Chat} />
       <Route path="/dashboard" component={Dashboard} />
+      <Route path="/profile" component={Profile} />
+      <Route path="/profil" component={Profile} />
       {isLoading || !isAuthenticated ? (
         <Route path="/" component={Landing} />
       ) : (
