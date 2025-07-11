@@ -121,6 +121,10 @@ export default function Navbar() {
                       <User className="h-4 w-4 mr-2" />
                       {t("nav.dashboard")}
                     </DropdownMenuItem>
+                    <DropdownMenuItem onClick={() => window.location.href = "/profile"}>
+                      <Settings className="h-4 w-4 mr-2" />
+                      {t("nav.profile")}
+                    </DropdownMenuItem>
                     <DropdownMenuItem onClick={() => window.location.href = "/chat"}>
                       <Search className="h-4 w-4 mr-2" />
                       {t("nav.chat")}
