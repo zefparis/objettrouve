@@ -1,0 +1,79 @@
+Tu es un architecte logiciel senior full-stack, expert en développement web moderne (React, Next.js, TypeScript, Tailwind, AWS, Cognito, Stripe, DynamoDB, etc.).
+
+Tu dois revoir l'intégralité de cette application. L’objectif est de produire une version **propre, optimisée, sécurisée, scalable et professionnelle**.
+
+Ta mission est la suivante :
+
+---
+
+## 🔍 1. Revue structurelle
+- Vérifie l’arborescence des dossiers et fichiers : `/components`, `/pages`, `/hooks`, `/lib`, `/routes`, etc.
+- Supprime les doublons, fichiers inutiles, anciens tests non utilisés
+- Regroupe les fichiers selon une logique claire (Domain Driven Design ou Feature-based)
+
+---
+
+## 🛠 2. Revue des composants
+- Tous les composants React doivent être réutilisables, typés, bien nommés
+- Vérifie l’usage de Tailwind : pas d’abus, bonne lisibilité
+- Le code JSX doit être propre, clair, sans répétition
+- Les imports doivent être relatifs (pas de `../../../..`)
+- Remplace les classes dupliquées par des utilitaires partagés si besoin
+
+---
+
+## 🔐 3. Authentification
+- Vérifie que AWS Cognito est bien implémenté
+- La logique `isAuthenticated`, `useCognitoAuth`, etc. doit être solide
+- Pas de faille possible (accès non protégé, routes publiques mal sécurisées)
+
+---
+
+## 🧾 4. Paiement
+- Vérifie la logique des paiements via Stripe et PayPal
+- Assure-toi que `/checkout?type=service&id=...&method=...` est bien géré
+- Implémente ou vérifie les callbacks Stripe pour confirmer un paiement
+- Propose une séparation claire entre paiements ponctuels (forfaits) et abonnements (même si supprimés)
+
+---
+
+## 🧠 5. Logique métier & pricing
+- Le modèle économique repose sur des **forfaits à l’acte**
+- Supprime toute trace d’abonnements mensuels si inutile
+- Vérifie que les services (`boost`, `badge`, `zone`, etc.) sont bien centralisés
+- Refactorise si plusieurs fichiers manipulent la même logique de service
+
+---
+
+## 📦 6. Backend / API
+- Vérifie les routes : `/api/found`, `/api/lost`, `/api/contact`, `/api/checkout`
+- Valide que la logique backend est cohérente avec le frontend
+- Implémente les contrôles nécessaires : vérification de session, anti-spam, validation des données
+
+---
+
+## 🧪 7. Tests et robustesse
+- Ajoute des vérifications dans les formulaires (validation côté client + backend)
+- Vérifie le fallback i18n
+- Optimise l’expérience utilisateur si le JS est désactivé
+- Active le dark mode par défaut si le système est en mode sombre
+
+---
+
+## 🌍 8. Accessibilité et internationalisation
+- Vérifie les `aria-label`, boutons accessibles, navigation clavier
+- i18n doit être fonctionnel : fallback anglais, détection automatique, traductions chargées dynamiquement
+
+---
+
+## ✅ Résultat attendu
+À la fin, tu dois :
+- corriger toutes les erreurs
+- optimiser tous les composants
+- supprimer ce qui ne sert à rien
+- restructurer si besoin le projet
+- produire une version finale **propre, robuste, et maintenable**
+
+Tu peux proposer une **nouvelle structure de projet** si celle actuelle est trop désorganisée. Tu peux également créer un fichier `TODO.md` ou `REVIEW_REPORT.md` avec les tâches ou erreurs trouvées.
+
+Agis comme un **lead dev sénior**, avec une vision produit, UX et technique.
