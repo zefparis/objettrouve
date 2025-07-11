@@ -77,9 +77,20 @@ export default function Publish() {
   const createItemMutation = useMutation({
     mutationFn: async (data: PublishFormData) => {
       const formData = new FormData();
-      Object.entries(data).forEach(([key, value]) => {
-        if (value) formData.append(key, value);
-      });
+      
+      // Append all form fields explicitly
+      formData.append("type", data.type);
+      formData.append("title", data.title);
+      formData.append("description", data.description);
+      formData.append("category", data.category);
+      formData.append("location", data.location);
+      formData.append("dateOccurred", data.dateOccurred);
+      
+      // Append optional fields only if they have values
+      if (data.contactPhone) formData.append("contactPhone", data.contactPhone);
+      if (data.contactEmail) formData.append("contactEmail", data.contactEmail);
+      
+      // Append image if selected
       if (selectedFile) {
         formData.append("image", selectedFile);
       }
