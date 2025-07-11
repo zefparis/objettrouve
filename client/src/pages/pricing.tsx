@@ -6,14 +6,16 @@ import { Badge } from "@/components/ui/badge";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Check, Crown, Zap, Shield, Star, Users, ArrowLeft, Home } from "lucide-react";
-import { useAuth } from "@/hooks/useAuth";
+import { useCognitoAuth } from "@/hooks/useCognitoAuth";
 import { Link } from "wouter";
+import AuthModal from "@/components/auth/auth-modal";
 
 export default function Pricing() {
   const { t } = useTranslation();
-  const { isAuthenticated } = useAuth();
+  const { isAuthenticated } = useCognitoAuth();
   const [selectedPlan, setSelectedPlan] = useState<string | null>(null);
   const [showModal, setShowModal] = useState(false);
+  const [showAuthModal, setShowAuthModal] = useState(false);
 
   const premiumServices = [
     {
@@ -102,11 +104,21 @@ export default function Pricing() {
 
   const handleSelectPlan = (planId: string, type: 'service' | 'subscription') => {
     if (!isAuthenticated) {
-      window.location.href = "/api/login";
+      // Open auth modal for login
+      setSelectedPlan(planId);
+      setShowAuthModal(true);
       return;
     }
     setSelectedPlan(planId);
     setShowModal(true);
+  };
+
+  const handleAuthSuccess = (user: any) => {
+    setShowAuthModal(false);
+    // After successful login, show payment modal
+    if (selectedPlan) {
+      setShowModal(true);
+    }
   };
 
   const handlePayment = (method: 'stripe' | 'paypal') => {
@@ -247,19 +259,25 @@ export default function Pricing() {
                   className="w-full"
                   variant="outline"
                 >
-                  <img src="/stripe-logo.png" alt="Stripe" className="w-16 h-6" />
+                  Stripe
                 </Button>
                 <Button
                   onClick={() => handlePayment('paypal')}
                   className="w-full"
                   variant="outline"
                 >
-                  <img src="/paypal-logo.png" alt="PayPal" className="w-16 h-6" />
+                  PayPal
                 </Button>
               </div>
             </div>
           </DialogContent>
         </Dialog>
+
+        <AuthModal
+          isOpen={showAuthModal}
+          onClose={() => setShowAuthModal(false)}
+          onSuccess={handleAuthSuccess}
+        />
       </div>
     </div>
   );

@@ -5,11 +5,11 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { CheckCircle, Download, ArrowRight, ArrowLeft, Home } from "lucide-react";
 import { Link } from "wouter";
-import { useAuth } from "@/hooks/useAuth";
+import { useCognitoAuth } from "@/hooks/useCognitoAuth";
 
 export default function PaymentSuccess() {
   const { t } = useTranslation();
-  const { isAuthenticated } = useAuth();
+  const { isAuthenticated } = useCognitoAuth();
   const [, setLocation] = useLocation();
   const [paymentDetails, setPaymentDetails] = useState<any>(null);
 
