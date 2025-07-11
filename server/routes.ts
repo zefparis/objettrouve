@@ -195,18 +195,34 @@ export async function registerRoutes(app: Express): Promise<Server> {
     try {
       // Use a default user ID for development
       const userId = 'dev-user-123';
+      
+      // Log the received data for debugging
+      console.log('Received item data:', req.body);
+      console.log('Received file:', req.file);
+      
       const itemData = {
         ...req.body,
         userId,
         imageUrl: req.file ? `/uploads/${req.file.filename}` : null,
-        dateOccurred: new Date(req.body.dateOccurred),
+        dateOccurred: req.body.dateOccurred ? new Date(req.body.dateOccurred) : new Date(),
+        isActive: true, // Set default value
       };
+
+      // Remove any undefined or null values that might cause validation issues
+      Object.keys(itemData).forEach(key => {
+        if (itemData[key] === undefined || itemData[key] === '') {
+          delete itemData[key];
+        }
+      });
+
+      console.log('Processed item data:', itemData);
 
       const validatedData = insertItemSchema.parse(itemData);
       const item = await storage.createItem(validatedData);
       res.json(item);
     } catch (error) {
       if (error instanceof ZodError) {
+        console.error("Validation errors:", error.errors);
         return res.status(400).json({ message: "Données invalides", errors: error.errors });
       }
       console.error("Error creating item:", error);

@@ -151,6 +151,14 @@ export const insertItemSchema = createInsertSchema(items).omit({
   id: true,
   createdAt: true,
   updatedAt: true,
+}).extend({
+  // Make optional fields truly optional
+  locationLat: z.string().optional(),
+  locationLng: z.string().optional(),
+  imageUrl: z.string().nullable().optional(),
+  contactPhone: z.string().optional(),
+  contactEmail: z.string().optional(),
+  isActive: z.boolean().default(true).optional(),
 });
 
 export const insertMessageSchema = createInsertSchema(messages).omit({
