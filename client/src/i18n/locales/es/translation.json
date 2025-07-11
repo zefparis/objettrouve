@@ -1,0 +1,160 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "search": "Buscar",
+    "publish": "Publicar",
+    "dashboard": "Panel",
+    "chat": "Mensajes",
+    "login": "Iniciar Sesión",
+    "logout": "Cerrar Sesión"
+  },
+  "hero": {
+    "title": "Encuentra tus objetos perdidos",
+    "subtitle": "La plataforma francesa de referencia para encontrar tus objetos perdidos o reportar tus hallazgos",
+    "searchPlaceholder": "Buscar un objeto...",
+    "searchButton": "Buscar",
+    "publishButton": "Publicar anuncio"
+  },
+  "stats": {
+    "totalItems": "Objetos reportados",
+    "lostItems": "Objetos perdidos",
+    "foundItems": "Objetos encontrados",
+    "users": "Usuarios activos"
+  },
+  "categories": {
+    "title": "Categorías populares",
+    "electronics": "Electrónicos",
+    "clothing": "Ropa",
+    "accessories": "Accesorios",
+    "documents": "Documentos",
+    "keys": "Llaves",
+    "jewelry": "Joyas",
+    "bags": "Bolsos",
+    "sports": "Deportes",
+    "books": "Libros",
+    "pets": "Mascotas",
+    "other": "Otros"
+  },
+  "howItWorks": {
+    "title": "¿Cómo funciona?",
+    "step1": {
+      "title": "Reporta tu objeto",
+      "description": "Publica un anuncio con foto y descripción detallada"
+    },
+    "step2": {
+      "title": "Busca y filtra",
+      "description": "Usa nuestros filtros para encontrar rápidamente lo que buscas"
+    },
+    "step3": {
+      "title": "Contacta y recupera",
+      "description": "Intercambia de forma segura con otros usuarios"
+    }
+  },
+  "search": {
+    "title": "Buscar objetos",
+    "filters": "Filtros",
+    "type": "Tipo",
+    "all": "Todos",
+    "lost": "Perdidos",
+    "found": "Encontrados",
+    "category": "Categoría",
+    "location": "Ubicación",
+    "searchPlaceholder": "Buscar por palabra clave...",
+    "noResults": "No se encontraron resultados",
+    "noResultsDesc": "Intenta modificar tus criterios de búsqueda",
+    "itemType": {
+      "lost": "Perdido",
+      "found": "Encontrado"
+    }
+  },
+  "publish": {
+    "title": "Publicar anuncio",
+    "form": {
+      "title": "Título del anuncio",
+      "titlePlaceholder": "Ej: iPhone 13 Pro perdido en el metro",
+      "description": "Descripción detallada",
+      "descriptionPlaceholder": "Describe tu objeto en detalle...",
+      "type": "Tipo de anuncio",
+      "category": "Categoría",
+      "location": "Ubicación",
+      "locationPlaceholder": "Ej: París 15°, Estación Montparnasse",
+      "dateOccurred": "Fecha del incidente",
+      "contactInfo": "Información de contacto",
+      "contactPlaceholder": "Cómo contactarte...",
+      "image": "Foto del objeto",
+      "imageHelp": "Añade una foto para aumentar tus posibilidades",
+      "publish": "Publicar anuncio",
+      "publishing": "Publicando..."
+    },
+    "success": "¡Anuncio publicado con éxito!",
+    "error": "Error al publicar el anuncio"
+  },
+  "dashboard": {
+    "title": "Mi panel",
+    "myItems": "Mis anuncios",
+    "statistics": "Estadísticas",
+    "recentActivity": "Actividad reciente",
+    "noItems": "No hay anuncios publicados",
+    "noItemsDesc": "Publica tu primer anuncio para comenzar",
+    "actions": {
+      "edit": "Editar",
+      "delete": "Eliminar",
+      "view": "Ver"
+    }
+  },
+  "chat": {
+    "title": "Mensajes",
+    "noConversations": "No hay conversaciones",
+    "noConversationsDesc": "Inicia una conversación contactando a alguien",
+    "typePlaceholder": "Escribe tu mensaje...",
+    "send": "Enviar"
+  },
+  "itemDetail": {
+    "contactOwner": "Contactar propietario",
+    "reportedOn": "Reportado el",
+    "category": "Categoría",
+    "location": "Ubicación",
+    "contactInfo": "Contacto",
+    "description": "Descripción",
+    "similarItems": "Objetos similares"
+  },
+  "common": {
+    "loading": "Cargando...",
+    "error": "Error",
+    "success": "Éxito",
+    "cancel": "Cancelar",
+    "save": "Guardar",
+    "close": "Cerrar",
+    "back": "Volver",
+    "next": "Siguiente",
+    "previous": "Anterior",
+    "viewDetails": "Ver detalles",
+    "noImage": "Sin imagen",
+    "timeAgo": {
+      "now": "Ahora mismo",
+      "minutes": "hace {{count}} minuto",
+      "minutes_plural": "hace {{count}} minutos",
+      "hours": "hace {{count}} hora",
+      "hours_plural": "hace {{count}} horas",
+      "days": "hace {{count}} día",
+      "days_plural": "hace {{count}} días",
+      "weeks": "hace {{count}} semana",
+      "weeks_plural": "hace {{count}} semanas",
+      "months": "hace {{count}} mes",
+      "months_plural": "hace {{count}} meses",
+      "years": "hace {{count}} año",
+      "years_plural": "hace {{count}} años"
+    }
+  },
+  "footer": {
+    "description": "La plataforma francesa de referencia para encontrar tus objetos perdidos",
+    "links": {
+      "about": "Acerca de",
+      "contact": "Contacto",
+      "privacy": "Privacidad",
+      "terms": "Términos"
+    },
+    "followUs": "Síguenos",
+    "copyright": "© 2024 ObjetsTrouvés. Todos los derechos reservados."
+  }
+}

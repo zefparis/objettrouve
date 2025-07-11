@@ -1,0 +1,160 @@
+{
+  "nav": {
+    "home": "Home",
+    "search": "Search",
+    "publish": "Publish",
+    "dashboard": "Dashboard",
+    "chat": "Messages",
+    "login": "Sign In",
+    "logout": "Sign Out"
+  },
+  "hero": {
+    "title": "Find Your Lost Items",
+    "subtitle": "The French reference platform to find your lost items or report your findings",
+    "searchPlaceholder": "Search for an item...",
+    "searchButton": "Search",
+    "publishButton": "Post an Ad"
+  },
+  "stats": {
+    "totalItems": "Items Reported",
+    "lostItems": "Lost Items",
+    "foundItems": "Found Items",
+    "users": "Active Users"
+  },
+  "categories": {
+    "title": "Popular Categories",
+    "electronics": "Electronics",
+    "clothing": "Clothing",
+    "accessories": "Accessories",
+    "documents": "Documents",
+    "keys": "Keys",
+    "jewelry": "Jewelry",
+    "bags": "Bags",
+    "sports": "Sports",
+    "books": "Books",
+    "pets": "Pets",
+    "other": "Other"
+  },
+  "howItWorks": {
+    "title": "How It Works",
+    "step1": {
+      "title": "Report Your Item",
+      "description": "Post an ad with photo and detailed description"
+    },
+    "step2": {
+      "title": "Search and Filter",
+      "description": "Use our filters to quickly find what you're looking for"
+    },
+    "step3": {
+      "title": "Contact and Recover",
+      "description": "Exchange safely with other users"
+    }
+  },
+  "search": {
+    "title": "Search Items",
+    "filters": "Filters",
+    "type": "Type",
+    "all": "All",
+    "lost": "Lost",
+    "found": "Found",
+    "category": "Category",
+    "location": "Location",
+    "searchPlaceholder": "Search by keyword...",
+    "noResults": "No results found",
+    "noResultsDesc": "Try modifying your search criteria",
+    "itemType": {
+      "lost": "Lost",
+      "found": "Found"
+    }
+  },
+  "publish": {
+    "title": "Post an Ad",
+    "form": {
+      "title": "Ad Title",
+      "titlePlaceholder": "Ex: iPhone 13 Pro lost in subway",
+      "description": "Detailed Description",
+      "descriptionPlaceholder": "Describe your item in detail...",
+      "type": "Ad Type",
+      "category": "Category",
+      "location": "Location",
+      "locationPlaceholder": "Ex: Paris 15th, Montparnasse Station",
+      "dateOccurred": "Date of Incident",
+      "contactInfo": "Contact Information",
+      "contactPlaceholder": "How to contact you...",
+      "image": "Item Photo",
+      "imageHelp": "Add a photo to increase your chances",
+      "publish": "Post Ad",
+      "publishing": "Publishing..."
+    },
+    "success": "Ad posted successfully!",
+    "error": "Error posting ad"
+  },
+  "dashboard": {
+    "title": "My Dashboard",
+    "myItems": "My Ads",
+    "statistics": "Statistics",
+    "recentActivity": "Recent Activity",
+    "noItems": "No ads posted",
+    "noItemsDesc": "Post your first ad to get started",
+    "actions": {
+      "edit": "Edit",
+      "delete": "Delete",
+      "view": "View"
+    }
+  },
+  "chat": {
+    "title": "Messages",
+    "noConversations": "No conversations",
+    "noConversationsDesc": "Start a conversation by contacting someone",
+    "typePlaceholder": "Type your message...",
+    "send": "Send"
+  },
+  "itemDetail": {
+    "contactOwner": "Contact Owner",
+    "reportedOn": "Reported on",
+    "category": "Category",
+    "location": "Location",
+    "contactInfo": "Contact",
+    "description": "Description",
+    "similarItems": "Similar Items"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "cancel": "Cancel",
+    "save": "Save",
+    "close": "Close",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "viewDetails": "View Details",
+    "noImage": "No Image",
+    "timeAgo": {
+      "now": "Just now",
+      "minutes": "{{count}} minute ago",
+      "minutes_plural": "{{count}} minutes ago",
+      "hours": "{{count}} hour ago",
+      "hours_plural": "{{count}} hours ago",
+      "days": "{{count}} day ago",
+      "days_plural": "{{count}} days ago",
+      "weeks": "{{count}} week ago",
+      "weeks_plural": "{{count}} weeks ago",
+      "months": "{{count}} month ago",
+      "months_plural": "{{count}} months ago",
+      "years": "{{count}} year ago",
+      "years_plural": "{{count}} years ago"
+    }
+  },
+  "footer": {
+    "description": "The French reference platform to find your lost items",
+    "links": {
+      "about": "About",
+      "contact": "Contact",
+      "privacy": "Privacy",
+      "terms": "Terms"
+    },
+    "followUs": "Follow Us",
+    "copyright": "© 2024 ObjetsTrouvés. All rights reserved."
+  }
+}

@@ -1,29 +1,32 @@
 import { useState } from "react";
 import { Link, useLocation } from "wouter";
 import { useAuth } from "@/hooks/useAuth";
+import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { Menu, Search, Plus, User, Settings, LogOut } from "lucide-react";
+import LanguageSelector from "./language-selector";
 
 export default function Navbar() {
   const [location] = useLocation();
   const { user, isAuthenticated, isLoading } = useAuth();
+  const { t } = useTranslation();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navigation = [
-    { name: "Accueil", href: "/" },
-    { name: "Rechercher", href: "/rechercher" },
+    { name: t("nav.home"), href: "/" },
+    { name: t("nav.search"), href: "/rechercher" },
     { name: "Comment ça marche", href: "#how-it-works" },
     { name: "Contact", href: "#contact" },
   ];
 
   const authenticatedNavigation = [
-    { name: "Accueil", href: "/" },
-    { name: "Rechercher", href: "/rechercher" },
-    { name: "Tableau de bord", href: "/dashboard" },
-    { name: "Chat", href: "/chat" },
+    { name: t("nav.home"), href: "/" },
+    { name: t("nav.search"), href: "/rechercher" },
+    { name: t("nav.dashboard"), href: "/dashboard" },
+    { name: t("nav.chat"), href: "/chat" },
   ];
 
   const currentNavigation = isAuthenticated ? authenticatedNavigation : navigation;
@@ -71,7 +74,7 @@ export default function Navbar() {
                   onClick={() => window.location.href = "/publier"}
                 >
                   <Plus className="h-4 w-4 mr-2" />
-                  Publier
+                  {t("nav.publish")}
                 </Button>
                 
                 <DropdownMenu>
@@ -88,15 +91,15 @@ export default function Navbar() {
                   <DropdownMenuContent align="end">
                     <DropdownMenuItem onClick={() => window.location.href = "/dashboard"}>
                       <User className="h-4 w-4 mr-2" />
-                      Tableau de bord
+                      {t("nav.dashboard")}
                     </DropdownMenuItem>
                     <DropdownMenuItem onClick={() => window.location.href = "/chat"}>
                       <Search className="h-4 w-4 mr-2" />
-                      Messages
+                      {t("nav.chat")}
                     </DropdownMenuItem>
                     <DropdownMenuItem onClick={() => window.location.href = "/api/logout"}>
                       <LogOut className="h-4 w-4 mr-2" />
-                      Déconnexion
+                      {t("nav.logout")}
                     </DropdownMenuItem>
                   </DropdownMenuContent>
                 </DropdownMenu>
@@ -107,9 +110,11 @@ export default function Navbar() {
                 className="text-white"
               >
                 <User className="h-4 w-4 mr-2" />
-                Connexion
+                {t("nav.login")}
               </Button>
             )}
+            
+            <LanguageSelector />
             
             <Button
               variant="ghost"

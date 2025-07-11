@@ -1,9 +1,11 @@
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Search, SearchX, SearchCode } from "lucide-react";
 
 export default function Hero() {
+  const { t } = useTranslation();
   const [searchTerm, setSearchTerm] = useState("");
 
   const handleSearch = (e: React.FormEvent) => {
@@ -18,11 +20,10 @@ export default function Hero() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
         <div className="text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            Retrouvez vos objets perdus
+            {t("hero.title")}
           </h1>
           <p className="text-xl md:text-2xl mb-12 text-blue-100 max-w-3xl mx-auto">
-            La plateforme française pour retrouver et restituer les objets perdus. 
-            Publiez, recherchez et reconnectez avec vos biens en toute sécurité.
+            {t("hero.subtitle")}
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
@@ -50,7 +51,7 @@ export default function Hero() {
             <form onSubmit={handleSearch} className="relative">
               <Input
                 type="text"
-                placeholder="Rechercher par objet, lieu, date..."
+                placeholder={t("hero.searchPlaceholder")}
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 className="w-full px-6 py-4 rounded-xl text-gray-900 text-lg focus:outline-none focus:ring-4 focus:ring-blue-300"

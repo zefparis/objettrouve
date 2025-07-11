@@ -1,0 +1,160 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "search": "Rechercher",
+    "publish": "Publier",
+    "dashboard": "Tableau de bord",
+    "chat": "Messages",
+    "login": "Se connecter",
+    "logout": "Se déconnecter"
+  },
+  "hero": {
+    "title": "Retrouvez vos objets perdus",
+    "subtitle": "La plateforme française de référence pour retrouver vos objets perdus ou déclarer vos trouvailles",
+    "searchPlaceholder": "Rechercher un objet...",
+    "searchButton": "Rechercher",
+    "publishButton": "Publier une annonce"
+  },
+  "stats": {
+    "totalItems": "Objets déclarés",
+    "lostItems": "Objets perdus",
+    "foundItems": "Objets trouvés",
+    "users": "Utilisateurs actifs"
+  },
+  "categories": {
+    "title": "Catégories populaires",
+    "electronics": "Électronique",
+    "clothing": "Vêtements",
+    "accessories": "Accessoires",
+    "documents": "Documents",
+    "keys": "Clés",
+    "jewelry": "Bijoux",
+    "bags": "Sacs",
+    "sports": "Sport",
+    "books": "Livres",
+    "pets": "Animaux",
+    "other": "Autre"
+  },
+  "howItWorks": {
+    "title": "Comment ça marche ?",
+    "step1": {
+      "title": "Déclarez votre objet",
+      "description": "Publiez une annonce avec photo et description détaillée"
+    },
+    "step2": {
+      "title": "Recherchez et filtrez",
+      "description": "Utilisez nos filtres pour trouver rapidement ce que vous cherchez"
+    },
+    "step3": {
+      "title": "Contactez et récupérez",
+      "description": "Échangez en toute sécurité avec les autres utilisateurs"
+    }
+  },
+  "search": {
+    "title": "Rechercher des objets",
+    "filters": "Filtres",
+    "type": "Type",
+    "all": "Tous",
+    "lost": "Perdus",
+    "found": "Trouvés",
+    "category": "Catégorie",
+    "location": "Lieu",
+    "searchPlaceholder": "Rechercher par mot-clé...",
+    "noResults": "Aucun résultat trouvé",
+    "noResultsDesc": "Essayez de modifier vos critères de recherche",
+    "itemType": {
+      "lost": "Perdu",
+      "found": "Trouvé"
+    }
+  },
+  "publish": {
+    "title": "Publier une annonce",
+    "form": {
+      "title": "Titre de l'annonce",
+      "titlePlaceholder": "Ex: iPhone 13 Pro perdu dans le métro",
+      "description": "Description détaillée",
+      "descriptionPlaceholder": "Décrivez votre objet en détail...",
+      "type": "Type d'annonce",
+      "category": "Catégorie",
+      "location": "Lieu",
+      "locationPlaceholder": "Ex: Paris 15ème, Gare Montparnasse",
+      "dateOccurred": "Date de l'incident",
+      "contactInfo": "Informations de contact",
+      "contactPlaceholder": "Comment vous contacter...",
+      "image": "Photo de l'objet",
+      "imageHelp": "Ajoutez une photo pour augmenter vos chances",
+      "publish": "Publier l'annonce",
+      "publishing": "Publication en cours..."
+    },
+    "success": "Annonce publiée avec succès !",
+    "error": "Erreur lors de la publication"
+  },
+  "dashboard": {
+    "title": "Mon tableau de bord",
+    "myItems": "Mes annonces",
+    "statistics": "Statistiques",
+    "recentActivity": "Activité récente",
+    "noItems": "Aucune annonce publiée",
+    "noItemsDesc": "Publiez votre première annonce pour commencer",
+    "actions": {
+      "edit": "Modifier",
+      "delete": "Supprimer",
+      "view": "Voir"
+    }
+  },
+  "chat": {
+    "title": "Messages",
+    "noConversations": "Aucune conversation",
+    "noConversationsDesc": "Commencez une conversation en contactant quelqu'un",
+    "typePlaceholder": "Tapez votre message...",
+    "send": "Envoyer"
+  },
+  "itemDetail": {
+    "contactOwner": "Contacter le propriétaire",
+    "reportedOn": "Signalé le",
+    "category": "Catégorie",
+    "location": "Lieu",
+    "contactInfo": "Contact",
+    "description": "Description",
+    "similarItems": "Objets similaires"
+  },
+  "common": {
+    "loading": "Chargement...",
+    "error": "Erreur",
+    "success": "Succès",
+    "cancel": "Annuler",
+    "save": "Enregistrer",
+    "close": "Fermer",
+    "back": "Retour",
+    "next": "Suivant",
+    "previous": "Précédent",
+    "viewDetails": "Voir les détails",
+    "noImage": "Aucune image",
+    "timeAgo": {
+      "now": "À l'instant",
+      "minutes": "il y a {{count}} minute",
+      "minutes_plural": "il y a {{count}} minutes",
+      "hours": "il y a {{count}} heure",
+      "hours_plural": "il y a {{count}} heures",
+      "days": "il y a {{count}} jour",
+      "days_plural": "il y a {{count}} jours",
+      "weeks": "il y a {{count}} semaine",
+      "weeks_plural": "il y a {{count}} semaines",
+      "months": "il y a {{count}} mois",
+      "months_plural": "il y a {{count}} mois",
+      "years": "il y a {{count}} an",
+      "years_plural": "il y a {{count}} ans"
+    }
+  },
+  "footer": {
+    "description": "La plateforme française de référence pour retrouver vos objets perdus",
+    "links": {
+      "about": "À propos",
+      "contact": "Contact",
+      "privacy": "Confidentialité",
+      "terms": "Conditions"
+    },
+    "followUs": "Suivez-nous",
+    "copyright": "© 2024 ObjetsTrouvés. Tous droits réservés."
+  }
+}

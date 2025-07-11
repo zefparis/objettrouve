@@ -1,0 +1,160 @@
+{
+  "nav": {
+    "home": "Home",
+    "search": "Cerca",
+    "publish": "Pubblica",
+    "dashboard": "Dashboard",
+    "chat": "Messaggi",
+    "login": "Accedi",
+    "logout": "Esci"
+  },
+  "hero": {
+    "title": "Trova i tuoi oggetti smarriti",
+    "subtitle": "La piattaforma francese di riferimento per trovare i tuoi oggetti smarriti o segnalare i tuoi ritrovamenti",
+    "searchPlaceholder": "Cerca un oggetto...",
+    "searchButton": "Cerca",
+    "publishButton": "Pubblica annuncio"
+  },
+  "stats": {
+    "totalItems": "Oggetti segnalati",
+    "lostItems": "Oggetti smarriti",
+    "foundItems": "Oggetti trovati",
+    "users": "Utenti attivi"
+  },
+  "categories": {
+    "title": "Categorie popolari",
+    "electronics": "Elettronica",
+    "clothing": "Abbigliamento",
+    "accessories": "Accessori",
+    "documents": "Documenti",
+    "keys": "Chiavi",
+    "jewelry": "Gioielli",
+    "bags": "Borse",
+    "sports": "Sport",
+    "books": "Libri",
+    "pets": "Animali",
+    "other": "Altro"
+  },
+  "howItWorks": {
+    "title": "Come funziona",
+    "step1": {
+      "title": "Segnala il tuo oggetto",
+      "description": "Pubblica un annuncio con foto e descrizione dettagliata"
+    },
+    "step2": {
+      "title": "Cerca e filtra",
+      "description": "Usa i nostri filtri per trovare rapidamente quello che cerchi"
+    },
+    "step3": {
+      "title": "Contatta e recupera",
+      "description": "Scambia informazioni in sicurezza con altri utenti"
+    }
+  },
+  "search": {
+    "title": "Cerca oggetti",
+    "filters": "Filtri",
+    "type": "Tipo",
+    "all": "Tutti",
+    "lost": "Smarriti",
+    "found": "Trovati",
+    "category": "Categoria",
+    "location": "Posizione",
+    "searchPlaceholder": "Cerca per parola chiave...",
+    "noResults": "Nessun risultato trovato",
+    "noResultsDesc": "Prova a modificare i tuoi criteri di ricerca",
+    "itemType": {
+      "lost": "Smarrito",
+      "found": "Trovato"
+    }
+  },
+  "publish": {
+    "title": "Pubblica annuncio",
+    "form": {
+      "title": "Titolo dell'annuncio",
+      "titlePlaceholder": "Es: iPhone 13 Pro smarrito in metro",
+      "description": "Descrizione dettagliata",
+      "descriptionPlaceholder": "Descrivi il tuo oggetto in dettaglio...",
+      "type": "Tipo di annuncio",
+      "category": "Categoria",
+      "location": "Posizione",
+      "locationPlaceholder": "Es: Parigi 15°, Stazione Montparnasse",
+      "dateOccurred": "Data dell'incidente",
+      "contactInfo": "Informazioni di contatto",
+      "contactPlaceholder": "Come contattarti...",
+      "image": "Foto dell'oggetto",
+      "imageHelp": "Aggiungi una foto per aumentare le tue possibilità",
+      "publish": "Pubblica annuncio",
+      "publishing": "Pubblicando..."
+    },
+    "success": "Annuncio pubblicato con successo!",
+    "error": "Errore nella pubblicazione dell'annuncio"
+  },
+  "dashboard": {
+    "title": "La mia dashboard",
+    "myItems": "I miei annunci",
+    "statistics": "Statistiche",
+    "recentActivity": "Attività recente",
+    "noItems": "Nessun annuncio pubblicato",
+    "noItemsDesc": "Pubblica il tuo primo annuncio per iniziare",
+    "actions": {
+      "edit": "Modifica",
+      "delete": "Elimina",
+      "view": "Visualizza"
+    }
+  },
+  "chat": {
+    "title": "Messaggi",
+    "noConversations": "Nessuna conversazione",
+    "noConversationsDesc": "Inizia una conversazione contattando qualcuno",
+    "typePlaceholder": "Scrivi il tuo messaggio...",
+    "send": "Invia"
+  },
+  "itemDetail": {
+    "contactOwner": "Contatta proprietario",
+    "reportedOn": "Segnalato il",
+    "category": "Categoria",
+    "location": "Posizione",
+    "contactInfo": "Contatto",
+    "description": "Descrizione",
+    "similarItems": "Oggetti simili"
+  },
+  "common": {
+    "loading": "Caricamento...",
+    "error": "Errore",
+    "success": "Successo",
+    "cancel": "Annulla",
+    "save": "Salva",
+    "close": "Chiudi",
+    "back": "Indietro",
+    "next": "Avanti",
+    "previous": "Precedente",
+    "viewDetails": "Vedi dettagli",
+    "noImage": "Nessuna immagine",
+    "timeAgo": {
+      "now": "Proprio ora",
+      "minutes": "{{count}} minuto fa",
+      "minutes_plural": "{{count}} minuti fa",
+      "hours": "{{count}} ora fa",
+      "hours_plural": "{{count}} ore fa",
+      "days": "{{count}} giorno fa",
+      "days_plural": "{{count}} giorni fa",
+      "weeks": "{{count}} settimana fa",
+      "weeks_plural": "{{count}} settimane fa",
+      "months": "{{count}} mese fa",
+      "months_plural": "{{count}} mesi fa",
+      "years": "{{count}} anno fa",
+      "years_plural": "{{count}} anni fa"
+    }
+  },
+  "footer": {
+    "description": "La piattaforma francese di riferimento per trovare i tuoi oggetti smarriti",
+    "links": {
+      "about": "Chi siamo",
+      "contact": "Contatti",
+      "privacy": "Privacy",
+      "terms": "Termini"
+    },
+    "followUs": "Seguici",
+    "copyright": "© 2024 ObjetsTrouvés. Tutti i diritti riservati."
+  }
+}
