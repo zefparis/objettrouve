@@ -18,8 +18,8 @@ export default function Navbar() {
   const navigation = [
     { name: t("nav.home"), href: "/" },
     { name: t("nav.search"), href: "/rechercher" },
-    { name: "Comment ça marche", href: "#how-it-works" },
-    { name: "Contact", href: "#contact" },
+    { name: t("nav.howItWorks"), href: "#how-it-works" },
+    { name: t("nav.contact"), href: "#contact" },
   ];
 
   const authenticatedNavigation = [

@@ -100,13 +100,13 @@ export default function Chat() {
           <Card>
             <CardContent className="text-center py-12">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">
-                Conversation introuvable
+                {t("chat.conversationNotFound")}
               </h2>
               <p className="text-gray-600 mb-6">
-                Veuillez sélectionner une conversation valide.
+                {t("chat.selectValidConversation")}
               </p>
               <Button onClick={() => window.location.href = "/dashboard"}>
-                Retour au tableau de bord
+                {t("chat.backToDashboard")}
               </Button>
             </CardContent>
           </Card>
@@ -137,7 +137,7 @@ export default function Chat() {
                 {item && (
                   <div className="flex items-center gap-2 mt-1">
                     <Badge variant={item.type === "lost" ? "destructive" : "secondary"}>
-                      {item.type === "lost" ? "Perdu" : "Trouvé"}
+                      {item.type === "lost" ? t("search.itemType.lost") : t("search.itemType.found")}
                     </Badge>
                     <span className="text-sm text-gray-500">
                       {item.location}

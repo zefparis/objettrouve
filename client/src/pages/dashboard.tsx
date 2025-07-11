@@ -74,7 +74,7 @@ export default function Dashboard() {
   });
 
   const handleDeleteItem = (itemId: number) => {
-    if (confirm("Êtes-vous sûr de vouloir supprimer cette annonce ?")) {
+    if (confirm(t("dashboard.confirmDelete"))) {
       deleteItemMutation.mutate(itemId);
     }
   };
@@ -90,15 +90,15 @@ export default function Dashboard() {
         <div className="flex items-center justify-between mb-8">
           <div>
             <h1 className="text-3xl font-bold text-gray-900">
-              Tableau de bord
+              {t("dashboard.title")}
             </h1>
             <p className="text-gray-600">
-              Gérez vos annonces et conversations
+              {t("dashboard.subtitle")}
             </p>
           </div>
           <Button onClick={() => window.location.href = "/publier"}>
             <Plus className="h-4 w-4 mr-2" />
-            Nouvelle annonce
+            {t("dashboard.newAd")}
           </Button>
         </div>
 
@@ -113,7 +113,7 @@ export default function Dashboard() {
                   </div>
                 </div>
                 <div className="ml-4">
-                  <p className="text-sm text-gray-500">Objets perdus</p>
+                  <p className="text-sm text-gray-500">{t("dashboard.lostItems")}</p>
                   <p className="text-2xl font-bold text-gray-900">
                     {lostItems.length}
                   </p>
@@ -131,7 +131,7 @@ export default function Dashboard() {
                   </div>
                 </div>
                 <div className="ml-4">
-                  <p className="text-sm text-gray-500">Objets trouvés</p>
+                  <p className="text-sm text-gray-500">{t("dashboard.foundItems")}</p>
                   <p className="text-2xl font-bold text-gray-900">
                     {foundItems.length}
                   </p>
@@ -149,7 +149,7 @@ export default function Dashboard() {
                   </div>
                 </div>
                 <div className="ml-4">
-                  <p className="text-sm text-gray-500">Conversations</p>
+                  <p className="text-sm text-gray-500">{t("dashboard.conversations")}</p>
                   <p className="text-2xl font-bold text-gray-900">
                     {conversations?.length || 0}
                   </p>
@@ -167,7 +167,7 @@ export default function Dashboard() {
                   </div>
                 </div>
                 <div className="ml-4">
-                  <p className="text-sm text-gray-500">Annonces actives</p>
+                  <p className="text-sm text-gray-500">{t("dashboard.activeAds")}</p>
                   <p className="text-2xl font-bold text-gray-900">
                     {items?.filter((item: any) => item.isActive).length || 0}
                   </p>

@@ -88,14 +88,14 @@ export default function Home() {
               ))
             ) : (
               <div className="col-span-full text-center py-8">
-                <p className="text-gray-600">Aucun objet déclaré pour le moment</p>
+                <p className="text-gray-600">{t("home.noItemsYet")}</p>
               </div>
             )}
           </div>
           
           <div className="text-center mt-12">
             <Button size="lg" className="px-8 py-3">
-              Voir tous les objets
+              {t("home.viewAllItems")}
             </Button>
           </div>
         </div>
@@ -109,9 +109,9 @@ export default function Home() {
       {/* CTA Section */}
       <section className="py-16 bg-primary text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold mb-4">Prêt à retrouver vos objets ?</h2>
+          <h2 className="text-3xl font-bold mb-4">{t("home.ctaTitle")}</h2>
           <p className="text-xl mb-8 text-blue-100 max-w-2xl mx-auto">
-            Rejoignez des milliers d'utilisateurs qui font confiance à ObjetsTrouvés
+            {t("home.ctaSubtitle")}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 
@@ -120,7 +120,7 @@ export default function Home() {
               className="px-8 py-3"
               onClick={() => window.location.href = "/publier"}
             >
-              Publier une annonce
+              {t("home.publishAd")}
             </Button>
             <Button 
               size="lg" 
@@ -128,7 +128,7 @@ export default function Home() {
               className="px-8 py-3 border-white text-white hover:bg-white hover:text-primary"
               onClick={() => window.location.href = "/dashboard"}
             >
-              Mon tableau de bord
+              {t("home.myDashboard")}
             </Button>
           </div>
         </div>

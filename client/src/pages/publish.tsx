@@ -78,8 +78,8 @@ export default function Publish() {
     onError: (error) => {
       if (isUnauthorizedError(error)) {
         toast({
-          title: "Non autorisé",
-          description: "Vous devez être connecté. Redirection...",
+          title: t("common.unauthorized"),
+          description: t("common.loginRequired"),
           variant: "destructive",
         });
         setTimeout(() => {
@@ -89,8 +89,8 @@ export default function Publish() {
       }
       
       toast({
-        title: "Erreur",
-        description: "Une erreur est survenue lors de la publication",
+        title: t("common.error"),
+        description: t("publish.error"),
         variant: "destructive",
       });
     },

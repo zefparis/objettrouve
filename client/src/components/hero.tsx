@@ -34,7 +34,7 @@ export default function Hero() {
               onClick={() => window.location.href = "/publier?type=lost"}
             >
               <SearchX className="h-5 w-5 mr-3" />
-              J'ai perdu quelque chose
+              {t("hero.iLostSomething")}
             </Button>
             <Button
               size="lg"
@@ -42,7 +42,7 @@ export default function Hero() {
               onClick={() => window.location.href = "/publier?type=found"}
             >
               <SearchCode className="h-5 w-5 mr-3" />
-              J'ai trouvé quelque chose
+              {t("hero.iFoundSomething")}
             </Button>
           </div>
           

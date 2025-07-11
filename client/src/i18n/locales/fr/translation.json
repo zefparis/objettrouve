@@ -7,14 +7,18 @@
     "chat": "Messages",
     "login": "Se connecter",
     "logout": "Se déconnecter",
-    "features": "Fonctionnalités"
+    "features": "Fonctionnalités",
+    "howItWorks": "Comment ça marche",
+    "contact": "Contact"
   },
   "hero": {
     "title": "Retrouvez vos objets perdus",
     "subtitle": "La plateforme française de référence pour retrouver vos objets perdus ou déclarer vos trouvailles",
     "searchPlaceholder": "Rechercher un objet...",
     "searchButton": "Rechercher",
-    "publishButton": "Publier une annonce"
+    "publishButton": "Publier une annonce",
+    "iLostSomething": "J'ai perdu quelque chose",
+    "iFoundSomething": "J'ai trouvé quelque chose"
   },
   "stats": {
     "totalItems": "Objets déclarés",
@@ -39,6 +43,7 @@
   },
   "howItWorks": {
     "title": "Comment ça marche ?",
+    "subtitle": "Retrouvez vos objets perdus en 3 étapes simples",
     "step1": {
       "title": "Déclarez votre objet",
       "description": "Publiez une annonce avec photo et description détaillée"
@@ -94,12 +99,20 @@
     "error": "Erreur lors de la publication"
   },
   "dashboard": {
-    "title": "Mon tableau de bord",
+    "title": "Tableau de bord",
+    "subtitle": "Gérez vos annonces et conversations",
     "myItems": "Mes annonces",
     "statistics": "Statistiques",
     "recentActivity": "Activité récente",
     "noItems": "Aucune annonce publiée",
     "noItemsDesc": "Publiez votre première annonce pour commencer",
+    "newAd": "Nouvelle annonce",
+    "lostItems": "Objets perdus",
+    "foundItems": "Objets trouvés",
+    "conversations": "Conversations",
+    "activeAds": "Annonces actives",
+    "confirmDelete": "Êtes-vous sûr de vouloir supprimer cette annonce ?",
+    "deleteError": "Une erreur est survenue lors de la suppression",
     "actions": {
       "edit": "Modifier",
       "delete": "Supprimer",
@@ -111,7 +124,10 @@
     "noConversations": "Aucune conversation",
     "noConversationsDesc": "Commencez une conversation en contactant quelqu'un",
     "typePlaceholder": "Tapez votre message...",
-    "send": "Envoyer"
+    "send": "Envoyer",
+    "conversationNotFound": "Conversation introuvable",
+    "selectValidConversation": "Veuillez sélectionner une conversation valide.",
+    "backToDashboard": "Retour au tableau de bord"
   },
   "itemDetail": {
     "contactOwner": "Contacter le propriétaire",
@@ -124,7 +140,26 @@
   },
   "home": {
     "recentItems": "Objets récemment déclarés",
-    "recentItemsDesc": "Découvrez les derniers objets perdus et trouvés dans votre région"
+    "recentItemsDesc": "Découvrez les derniers objets perdus et trouvés dans votre région",
+    "noItemsYet": "Aucun objet déclaré pour le moment",
+    "viewAllItems": "Voir tous les objets",
+    "ctaTitle": "Prêt à retrouver vos objets ?",
+    "ctaSubtitle": "Rejoignez des milliers d'utilisateurs qui font confiance à ObjetsTrouvés",
+    "publishAd": "Publier une annonce",
+    "myDashboard": "Mon tableau de bord"
+  },
+  "map": {
+    "title": "Carte interactive",
+    "subtitle": "Visualisez les objets perdus et trouvés près de chez vous",
+    "interactiveMap": "Carte interactive avec géolocalisation",
+    "integration": "Intégration avec Google Maps ou OpenStreetMap",
+    "lostItems": "Objets perdus",
+    "foundItems": "Objets trouvés",
+    "fullscreen": "Voir en plein écran"
+  },
+  "testimonials": {
+    "title": "Témoignages",
+    "subtitle": "Découvrez les histoires de retrouvailles de notre communauté"
   },
   "common": {
     "loading": "Chargement...",
@@ -138,6 +173,8 @@
     "previous": "Précédent",
     "viewDetails": "Voir les détails",
     "noImage": "Aucune image",
+    "unauthorized": "Non autorisé",
+    "loginRequired": "Vous devez être connecté. Redirection...",
     "timeAgo": {
       "now": "À l'instant",
       "minutes": "il y a {{count}} minute",

@@ -1,17 +1,19 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { useTranslation } from "react-i18next";
 import { MapPin, Map } from "lucide-react";
 
 export default function MapSection() {
+  const { t } = useTranslation();
   return (
     <section className="py-16 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">
-            Carte interactive
+            {t("map.title")}
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Visualisez les objets perdus et trouvés près de chez vous
+            {t("map.subtitle")}
           </p>
         </div>
         
@@ -20,10 +22,10 @@ export default function MapSection() {
             <div className="text-center">
               <Map className="h-16 w-16 text-primary mx-auto mb-4" />
               <p className="text-gray-700 text-lg mb-2">
-                Carte interactive avec géolocalisation
+                {t("map.interactiveMap")}
               </p>
               <p className="text-gray-500 text-sm">
-                Intégration avec Google Maps ou OpenStreetMap
+                {t("map.integration")}
               </p>
             </div>
             
@@ -39,15 +41,15 @@ export default function MapSection() {
               <div className="flex items-center space-x-6">
                 <div className="flex items-center">
                   <div className="w-3 h-3 bg-accent rounded-full mr-2"></div>
-                  <span className="text-sm text-gray-600">Objets perdus</span>
+                  <span className="text-sm text-gray-600">{t("map.lostItems")}</span>
                 </div>
                 <div className="flex items-center">
                   <div className="w-3 h-3 bg-secondary rounded-full mr-2"></div>
-                  <span className="text-sm text-gray-600">Objets trouvés</span>
+                  <span className="text-sm text-gray-600">{t("map.foundItems")}</span>
                 </div>
               </div>
               <Button variant="outline">
-                Voir en plein écran
+                {t("map.fullscreen")}
               </Button>
             </div>
           </CardContent>

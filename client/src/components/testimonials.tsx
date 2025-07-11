@@ -1,8 +1,10 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
+import { useTranslation } from "react-i18next";
 import { Star } from "lucide-react";
 
 export default function Testimonials() {
+  const { t } = useTranslation();
   const testimonials = [
     {
       name: "Marie L.",
@@ -23,10 +25,10 @@ export default function Testimonials() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">
-            Témoignages
+            {t("testimonials.title")}
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Découvrez les histoires de retrouvailles de notre communauté
+            {t("testimonials.subtitle")}
           </p>
         </div>
         

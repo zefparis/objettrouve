@@ -12,7 +12,7 @@ export default function HowItWorks() {
             {t("howItWorks.title")}
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Retrouvez vos objets perdus en 3 étapes simples
+            {t("howItWorks.subtitle")}
           </p>
         </div>
         
