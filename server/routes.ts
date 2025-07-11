@@ -226,6 +226,31 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
+  // Test route for AWS Cognito configuration
+  app.get("/api/cognito/config", async (req, res) => {
+    try {
+      const config = {
+        region: process.env.VITE_AWS_REGION,
+        userPoolId: process.env.VITE_COGNITO_USER_POOL_ID,
+        clientId: process.env.VITE_COGNITO_CLIENT_ID,
+      };
+      
+      const hasAllSecrets = config.region && config.userPoolId && config.clientId;
+      
+      res.json({
+        message: "AWS Cognito Configuration Test",
+        configured: hasAllSecrets,
+        config: {
+          region: config.region ? "✓ Set" : "✗ Missing",
+          userPoolId: config.userPoolId ? "✓ Set" : "✗ Missing",
+          clientId: config.clientId ? "✓ Set" : "✗ Missing",
+        }
+      });
+    } catch (error) {
+      res.status(500).json({ error: "Configuration test failed" });
+    }
+  });
+
   // Serve uploaded files
   app.use('/uploads', express.static(path.join(process.cwd(), 'uploads')));
 
