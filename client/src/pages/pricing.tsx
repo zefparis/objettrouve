@@ -4,136 +4,91 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Check, Crown, Zap, Shield, Star, Users, ArrowLeft, Home } from "lucide-react";
+import { Check, Zap, Shield, Star, Mail, ImageIcon, MapPin } from "lucide-react";
 import { useCognitoAuth } from "@/hooks/useCognitoAuth";
 import { Link } from "wouter";
+import { ArrowLeft, Home } from "lucide-react";
 import AuthModal from "@/components/auth/auth-modal";
 
 export default function Pricing() {
   const { t } = useTranslation();
   const { isAuthenticated } = useCognitoAuth();
-  const [selectedPlan, setSelectedPlan] = useState<string | null>(null);
+  const [selectedService, setSelectedService] = useState<string | null>(null);
   const [showModal, setShowModal] = useState(false);
   const [showAuthModal, setShowAuthModal] = useState(false);
 
-  const premiumServices = [
+  const services = [
     {
       id: "boost_listing",
-      name: t("pricing.services.boost.name"),
-      description: t("pricing.services.boost.description"),
-      price: 4.99,
+      name: "Mise en avant",
+      description: "Votre annonce apparaît en haut de la liste pendant 48h.",
+      price: 1.99,
       icon: <Zap className="w-8 h-8 text-yellow-500" />,
-      features: [
-        t("pricing.services.boost.features.priority"),
-        t("pricing.services.boost.features.highlight"),
-        t("pricing.services.boost.features.duration"),
-      ],
+      features: ["Visibilité prioritaire", "Badge visible", "Durée 48h"],
       popular: true,
     },
     {
-      id: "premium_search",
-      name: t("pricing.services.search.name"),
-      description: t("pricing.services.search.description"),
-      price: 2.49,
+      id: "verified_badge",
+      name: "Badge vérifié",
+      description: "Ajoute un badge de confiance à votre annonce.",
+      price: 2.99,
       icon: <Shield className="w-8 h-8 text-blue-500" />,
-      features: [
-        t("pricing.services.search.features.alerts"),
-        t("pricing.services.search.features.radius"),
-        t("pricing.services.search.features.priority"),
-      ],
+      features: ["Vérification email/téléphone", "Annonces mises en avant", "Plus de confiance"],
     },
     {
-      id: "verification",
-      name: t("pricing.services.verification.name"),
-      description: t("pricing.services.verification.description"),
-      price: 7.49,
-      icon: <Star className="w-8 h-8 text-green-500" />,
-      features: [
-        t("pricing.services.verification.features.badge"),
-        t("pricing.services.verification.features.trust"),
-        t("pricing.services.verification.features.priority"),
-      ],
+      id: "extra_images",
+      name: "Photos supplémentaires",
+      description: "Ajoutez jusqu'à 5 photos en plus (0.50€ / photo).",
+      price: 0.50,
+      icon: <ImageIcon className="w-8 h-8 text-pink-500" />,
+      features: ["3 gratuites", "0.50€ par photo supplémentaire", "Maximum 5 en plus"],
+    },
+    {
+      id: "wide_search",
+      name: "Zone de recherche élargie",
+      description: "Permet de rechercher dans un rayon étendu.",
+      price: 1.00,
+      icon: <MapPin className="w-8 h-8 text-green-500" />,
+      features: ["Rayon de 50km+", "Filtres plus puissants", "Alertes élargies"],
+    },
+    {
+      id: "priority_contact",
+      name: "Transmission prioritaire",
+      description: "Envoi prioritaire aux autorités ou gestionnaires.",
+      price: 4.99,
+      icon: <Mail className="w-8 h-8 text-red-500" />,
+      features: ["Envoi instantané", "Confirmation email", "Accès prioritaire"],
     },
   ];
 
-  const subscriptionPlans = [
-    {
-      id: "pro",
-      name: t("pricing.plans.pro.name"),
-      description: t("pricing.plans.pro.description"),
-      price: 14.99,
-      icon: <Crown className="w-8 h-8 text-purple-500" />,
-      features: [
-        t("pricing.plans.pro.features.listings"),
-        t("pricing.plans.pro.features.priority"),
-        t("pricing.plans.pro.features.analytics"),
-        t("pricing.plans.pro.features.support"),
-      ],
-      popular: false,
-    },
-    {
-      id: "advanced",
-      name: t("pricing.plans.advanced.name"),
-      description: t("pricing.plans.advanced.description"),
-      price: 29.99,
-      icon: <Users className="w-8 h-8 text-orange-500" />,
-      features: [
-        t("pricing.plans.advanced.features.listings"),
-        t("pricing.plans.advanced.features.team"),
-        t("pricing.plans.advanced.features.api"),
-        t("pricing.plans.advanced.features.custom"),
-      ],
-      popular: true,
-    },
-    {
-      id: "premium",
-      name: t("pricing.plans.premium.name"),
-      description: t("pricing.plans.premium.description"),
-      price: 49.99,
-      icon: <Shield className="w-8 h-8 text-red-500" />,
-      features: [
-        t("pricing.plans.premium.features.unlimited"),
-        t("pricing.plans.premium.features.dedicated"),
-        t("pricing.plans.premium.features.white_label"),
-        t("pricing.plans.premium.features.training"),
-      ],
-      popular: false,
-    },
-  ];
-
-  const handleSelectPlan = (planId: string, type: 'service' | 'subscription') => {
+  const handleSelect = (serviceId: string) => {
     if (!isAuthenticated) {
-      // Open auth modal for login
-      setSelectedPlan(planId);
+      setSelectedService(serviceId);
       setShowAuthModal(true);
       return;
     }
-    setSelectedPlan(planId);
+    setSelectedService(serviceId);
     setShowModal(true);
   };
 
-  const handleAuthSuccess = (user: any) => {
+  const handleAuthSuccess = () => {
     setShowAuthModal(false);
-    // After successful login, show payment modal
-    if (selectedPlan) {
-      setShowModal(true);
-    }
+    if (selectedService) setShowModal(true);
   };
 
-  const handlePayment = (method: 'stripe' | 'paypal') => {
-    if (selectedPlan) {
-      window.location.href = `/checkout?plan=${selectedPlan}&method=${method}`;
+  const handlePayment = (method: "stripe" | "paypal") => {
+    if (selectedService) {
+      window.location.href = `/checkout?type=service&id=${selectedService}&method=${method}`;
     }
   };
 
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900 py-12">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Bouton retour à l'accueil */}
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Retour accueil */}
         <div className="mb-6">
           <Link href="/">
-            <Button variant="ghost" className="flex items-center gap-2 hover:bg-gray-100 dark:hover:bg-gray-800">
+            <Button variant="ghost" className="flex items-center gap-2">
               <ArrowLeft className="w-4 h-4" />
               <Home className="w-4 h-4" />
               <span>{t("nav.home")}</span>
@@ -142,130 +97,58 @@ export default function Pricing() {
         </div>
 
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
-            {t("pricing.title")}
+          <h1 className="text-4xl font-bold text-gray-900 dark:text-white">
+            Services Premium
           </h1>
-          <p className="text-xl text-gray-600 dark:text-gray-300">
-            {t("pricing.subtitle")}
+          <p className="text-lg text-gray-600 dark:text-gray-300">
+            Améliorez la visibilité et l'efficacité de vos annonces avec nos options à la carte.
           </p>
         </div>
 
-        <Tabs defaultValue="services" className="w-full">
-          <TabsList className="grid w-full grid-cols-2 mb-8">
-            <TabsTrigger value="services" className="text-lg">
-              {t("pricing.tabs.services")}
-            </TabsTrigger>
-            <TabsTrigger value="subscriptions" className="text-lg">
-              {t("pricing.tabs.subscriptions")}
-            </TabsTrigger>
-          </TabsList>
-
-          <TabsContent value="services">
-            <div className="grid md:grid-cols-3 gap-8">
-              {premiumServices.map((service) => (
-                <Card key={service.id} className="relative hover:shadow-lg transition-shadow">
-                  {service.popular && (
-                    <Badge className="absolute -top-2 left-1/2 transform -translate-x-1/2 bg-yellow-500">
-                      {t("pricing.popular")}
-                    </Badge>
-                  )}
-                  <CardHeader className="text-center">
-                    <div className="flex justify-center mb-4">
-                      {service.icon}
-                    </div>
-                    <CardTitle className="text-xl">{service.name}</CardTitle>
-                    <CardDescription>{service.description}</CardDescription>
-                    <div className="text-3xl font-bold text-primary">
-                      €{service.price}
-                    </div>
-                  </CardHeader>
-                  <CardContent>
-                    <ul className="space-y-3 mb-6">
-                      {service.features.map((feature, index) => (
-                        <li key={index} className="flex items-center">
-                          <Check className="w-4 h-4 text-green-500 mr-2" />
-                          <span className="text-sm">{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
-                    <Button
-                      onClick={() => handleSelectPlan(service.id, 'service')}
-                      className="w-full"
-                      variant={service.popular ? "default" : "outline"}
-                    >
-                      {t("pricing.select")}
-                    </Button>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </TabsContent>
-
-          <TabsContent value="subscriptions">
-            <div className="grid md:grid-cols-3 gap-8">
-              {subscriptionPlans.map((plan) => (
-                <Card key={plan.id} className="relative hover:shadow-lg transition-shadow">
-                  {plan.popular && (
-                    <Badge className="absolute -top-2 left-1/2 transform -translate-x-1/2 bg-primary">
-                      {t("pricing.popular")}
-                    </Badge>
-                  )}
-                  <CardHeader className="text-center">
-                    <div className="flex justify-center mb-4">
-                      {plan.icon}
-                    </div>
-                    <CardTitle className="text-xl">{plan.name}</CardTitle>
-                    <CardDescription>{plan.description}</CardDescription>
-                    <div className="text-3xl font-bold text-primary">
-                      €{plan.price}
-                      <span className="text-sm text-gray-500">/mois</span>
-                    </div>
-                  </CardHeader>
-                  <CardContent>
-                    <ul className="space-y-3 mb-6">
-                      {plan.features.map((feature, index) => (
-                        <li key={index} className="flex items-center">
-                          <Check className="w-4 h-4 text-green-500 mr-2" />
-                          <span className="text-sm">{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
-                    <Button
-                      onClick={() => handleSelectPlan(plan.id, 'subscription')}
-                      className="w-full"
-                      variant={plan.popular ? "default" : "outline"}
-                    >
-                      {t("pricing.subscribe")}
-                    </Button>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </TabsContent>
-        </Tabs>
+        <div className="grid md:grid-cols-3 gap-8">
+          {services.map((service) => (
+            <Card key={service.id} className="relative hover:shadow-lg transition-shadow">
+              {service.popular && (
+                <Badge className="absolute -top-2 left-1/2 transform -translate-x-1/2 bg-yellow-500">
+                  Populaire
+                </Badge>
+              )}
+              <CardHeader className="text-center">
+                <div className="flex justify-center mb-4">{service.icon}</div>
+                <CardTitle className="text-xl">{service.name}</CardTitle>
+                <CardDescription>{service.description}</CardDescription>
+                <div className="text-3xl font-bold text-primary">
+                  €{service.price.toFixed(2)}
+                </div>
+              </CardHeader>
+              <CardContent>
+                <ul className="space-y-2 mb-4">
+                  {service.features.map((f, idx) => (
+                    <li key={idx} className="flex items-center text-sm">
+                      <Check className="w-4 h-4 text-green-500 mr-2" />
+                      {f}
+                    </li>
+                  ))}
+                </ul>
+                <Button onClick={() => handleSelect(service.id)} className="w-full">
+                  Acheter
+                </Button>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
 
         <Dialog open={showModal} onOpenChange={setShowModal}>
           <DialogContent className="sm:max-w-md">
             <DialogHeader>
-              <DialogTitle>{t("pricing.payment.title")}</DialogTitle>
+              <DialogTitle>Choisissez un mode de paiement</DialogTitle>
             </DialogHeader>
             <div className="space-y-4">
-              <p className="text-sm text-gray-600 dark:text-gray-300">
-                {t("pricing.payment.description")}
-              </p>
               <div className="grid grid-cols-2 gap-4">
-                <Button
-                  onClick={() => handlePayment('stripe')}
-                  className="w-full"
-                  variant="outline"
-                >
+                <Button onClick={() => handlePayment("stripe")} variant="outline">
                   Stripe
                 </Button>
-                <Button
-                  onClick={() => handlePayment('paypal')}
-                  className="w-full"
-                  variant="outline"
-                >
+                <Button onClick={() => handlePayment("paypal")} variant="outline">
                   PayPal
                 </Button>
               </div>
