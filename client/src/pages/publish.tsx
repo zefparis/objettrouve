@@ -22,13 +22,13 @@ import { Camera, Upload, MapPin, Calendar } from "lucide-react";
 
 const publishSchema = z.object({
   type: z.enum(["lost", "found"]),
-  title: z.string().min(1, "Le titre est requis"),
-  description: z.string().min(10, "La description doit contenir au moins 10 caractères"),
-  category: z.string().min(1, "La catégorie est requise"),
-  location: z.string().min(1, "Le lieu est requis"),
-  dateOccurred: z.string().min(1, "La date est requise"),
+  title: z.string().min(1, "validation.title_required"),
+  description: z.string().min(10, "validation.description_min_length"),
+  category: z.string().min(1, "validation.category_required"),
+  location: z.string().min(1, "validation.location_required"),
+  dateOccurred: z.string().min(1, "validation.date_required"),
   contactPhone: z.string().optional(),
-  contactEmail: z.string().email("Email invalide").optional(),
+  contactEmail: z.string().email("validation.email_invalid").optional(),
 });
 
 type PublishFormData = z.infer<typeof publishSchema>;
@@ -176,7 +176,7 @@ export default function Publish() {
                       <FormLabel>{t("publish.form.title")}</FormLabel>
                       <FormControl>
                         <Input
-                          placeholder="ex: iPhone 14 Pro bleu"
+                          placeholder={t("publish.form.titlePlaceholder")}
                           {...field}
                         />
                       </FormControl>
@@ -195,7 +195,7 @@ export default function Publish() {
                       <Select value={field.value} onValueChange={field.onChange}>
                         <FormControl>
                           <SelectTrigger>
-                            <SelectValue placeholder="Sélectionnez une catégorie" />
+                            <SelectValue placeholder={t("publish.form.categoryPlaceholder")} />
                           </SelectTrigger>
                         </FormControl>
                         <SelectContent>
@@ -223,7 +223,7 @@ export default function Publish() {
                       <FormLabel>{t("publish.form.description")}</FormLabel>
                       <FormControl>
                         <Textarea
-                          placeholder="Décrivez l'objet en détail (couleur, marque, particularités...)"
+                          placeholder={t("publish.form.descriptionPlaceholder")}
                           rows={4}
                           {...field}
                         />
@@ -244,7 +244,7 @@ export default function Publish() {
                         <div className="relative">
                           <MapPin className="absolute left-3 top-3 h-4 w-4 text-gray-400" />
                           <Input
-                            placeholder="ex: Métro République, Paris 11e"
+                            placeholder={t("publish.form.locationPlaceholder")}
                             className="pl-10"
                             {...field}
                           />
@@ -286,10 +286,10 @@ export default function Publish() {
                     name="contactPhone"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Téléphone (optionnel)</FormLabel>
+                        <FormLabel>{t("publish.form.phone")}</FormLabel>
                         <FormControl>
                           <Input
-                            placeholder="06 00 00 00 00"
+                            placeholder={t("publish.form.phonePlaceholder")}
                             {...field}
                           />
                         </FormControl>
@@ -302,11 +302,11 @@ export default function Publish() {
                     name="contactEmail"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Email (optionnel)</FormLabel>
+                        <FormLabel>{t("publish.form.email")}</FormLabel>
                         <FormControl>
                           <Input
                             type="email"
-                            placeholder="votre@email.com"
+                            placeholder={t("publish.form.emailPlaceholder")}
                             {...field}
                           />
                         </FormControl>
@@ -376,7 +376,7 @@ export default function Publish() {
                   ) : (
                     <>
                       <Upload className="mr-2 h-4 w-4" />
-                      Publier l'annonce
+{t("publish.form.publish")}
                     </>
                   )}
                 </Button>

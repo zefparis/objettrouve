@@ -56,7 +56,7 @@ export default function Dashboard() {
       if (isUnauthorizedError(error)) {
         toast({
           title: t("common.unauthorized"),
-          description: "Vous devez être connecté. Redirection...",
+          description: t("common.loginRequired"),
           variant: "destructive",
         });
         setTimeout(() => {
@@ -261,10 +261,10 @@ export default function Dashboard() {
                 ) : (
                   <div className="text-center py-8">
                     <p className="text-gray-600 mb-4">
-                      Vous n'avez pas encore publié d'annonce
+                      {t("dashboard.noItemsDesc")}
                     </p>
                     <Button onClick={() => window.location.href = "/publier"}>
-                      Publier votre première annonce
+{t("dashboard.publishFirstAd")}
                     </Button>
                   </div>
                 )}

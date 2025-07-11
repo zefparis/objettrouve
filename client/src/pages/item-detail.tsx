@@ -239,7 +239,7 @@ export default function ItemDetail() {
                       <div className="space-y-3">
                         <h4 className="font-medium">{t("itemDetail.sendMessage")}</h4>
                         <Textarea
-                          placeholder="Décrivez votre objet pour prouver qu'il vous appartient..."
+                          placeholder={t("itemDetail.messagePlaceholder")}
                           value={message}
                           onChange={(e) => setMessage(e.target.value)}
                           rows={4}
@@ -266,13 +266,13 @@ export default function ItemDetail() {
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <Button variant="outline" className="w-full">
-                    Modifier l'annonce
+{t("itemDetail.editAd")}
                   </Button>
                   <Button variant="outline" className="w-full">
-                    Marquer comme retrouvé
+{t("itemDetail.markAsFound")}
                   </Button>
                   <Button variant="destructive" className="w-full">
-                    Supprimer l'annonce
+{t("itemDetail.deleteAd")}
                   </Button>
                 </CardContent>
               </Card>
@@ -285,10 +285,10 @@ export default function ItemDetail() {
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-gray-600">
-                  Créez une alerte pour être notifié d'objets similaires
+{t("itemDetail.alertDescription")}
                 </p>
                 <Button variant="outline" className="w-full mt-3">
-                  Créer une alerte
+{t("itemDetail.createAlert")}
                 </Button>
               </CardContent>
             </Card>

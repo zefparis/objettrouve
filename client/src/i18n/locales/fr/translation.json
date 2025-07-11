@@ -94,7 +94,12 @@
       "image": "Photo de l'objet",
       "imageHelp": "Ajoutez une photo pour augmenter vos chances",
       "publish": "Publier l'annonce",
-      "publishing": "Publication en cours..."
+      "publishing": "Publication en cours...",
+      "categoryPlaceholder": "Sélectionnez une catégorie",
+      "phonePlaceholder": "06 00 00 00 00",
+      "emailPlaceholder": "votre@email.com",
+      "phone": "Téléphone (optionnel)",
+      "email": "Email (optionnel)"
     },
     "success": "Annonce publiée avec succès !",
     "error": "Erreur lors de la publication"
@@ -119,7 +124,8 @@
       "edit": "Modifier",
       "delete": "Supprimer",
       "view": "Voir"
-    }
+    },
+    "publishFirstAd": "Publier votre première annonce"
   },
   "chat": {
     "title": "Messages",
@@ -132,7 +138,9 @@
     "backToDashboard": "Retour au tableau de bord",
     "loginToMessage": "Vous devez être connecté pour envoyer un message.",
     "messageError": "Une erreur est survenue lors de l'envoi du message",
-    "noMessages": "Aucun message"
+    "noMessages": "Aucun message",
+    "startConversation": "Commencez la conversation !",
+    "conversation": "Conversation"
   },
   "itemDetail": {
     "contactOwner": "Contacter le propriétaire",
@@ -150,7 +158,13 @@
     "sendMessage": "Envoyer un message",
     "send": "Envoyer",
     "sending": "Envoi...",
-    "manageAd": "Gestion de l'annonce"
+    "manageAd": "Gestion de l'annonce",
+    "messagePlaceholder": "Décrivez votre objet pour prouver qu'il vous appartient...",
+    "editAd": "Modifier l'annonce",
+    "markAsFound": "Marquer comme retrouvé",
+    "deleteAd": "Supprimer l'annonce",
+    "alertDescription": "Créez une alerte pour être notifié d'objets similaires",
+    "createAlert": "Créer une alerte"
   },
   "home": {
     "recentItems": "Objets récemment déclarés",
@@ -188,6 +202,7 @@
     "viewDetails": "Voir les détails",
     "noImage": "Aucune image",
     "unauthorized": "Non autorisé",
+    "loginRequired": "Vous devez être connecté. Redirection...",
     "unauthorized": "Non autorisé",
     "loginRequired": "Vous devez être connecté. Redirection...",
     "timeAgo": {
@@ -225,5 +240,20 @@
     },
     "followUs": "Suivez-nous",
     "copyright": "© 2024 ObjetsTrouvés. Tous droits réservés."
+  },
+  "error": {
+    "404_title": "404 Page introuvable",
+    "404_message": "La page que vous recherchez n'existe pas ou a été déplacée."
+  },
+  "validation": {
+    "title_required": "Le titre est requis",
+    "description_min_length": "La description doit contenir au moins 10 caractères",
+    "category_required": "La catégorie est requise",
+    "location_required": "Le lieu est requis",
+    "date_required": "La date est requise",
+    "email_invalid": "Email invalide"
+  },
+  "sidebar": {
+    "toggle": "Basculer la barre latérale"
   }
 }

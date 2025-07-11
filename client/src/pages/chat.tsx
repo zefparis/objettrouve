@@ -65,7 +65,7 @@ export default function Chat() {
       if (isUnauthorizedError(error)) {
         toast({
           title: t("common.unauthorized"),
-          description: t("chat.loginToMessage"),
+          description: t("common.loginRequired"),
           variant: "destructive",
         });
         setTimeout(() => {
@@ -132,7 +132,7 @@ export default function Chat() {
               </Button>
               <div className="flex-1">
                 <CardTitle className="text-lg">
-                  {item?.title || "Conversation"}
+{item?.title || t("chat.conversation")}
                 </CardTitle>
                 {item && (
                   <div className="flex items-center gap-2 mt-1">
@@ -189,7 +189,7 @@ export default function Chat() {
                     <div className="text-center">
                       <p className="text-gray-500 mb-2">{t("chat.noMessages")}</p>
                       <p className="text-gray-400 text-sm">
-                        Commencez la conversation !
+{t("chat.startConversation")}
                       </p>
                     </div>
                   </div>
@@ -203,7 +203,7 @@ export default function Chat() {
                   <Input
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
-                    placeholder="Tapez votre message..."
+                    placeholder={t("chat.typePlaceholder")}
                     className="flex-1"
                     disabled={sendMessageMutation.isPending}
                   />

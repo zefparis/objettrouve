@@ -25,7 +25,7 @@ export default function Home() {
     if (!isLoading && !isAuthenticated) {
       toast({
         title: t("common.unauthorized"),
-        description: "Vous devez être connecté. Redirection...",
+        description: t("common.loginRequired"),
         variant: "destructive",
       });
       setTimeout(() => {
