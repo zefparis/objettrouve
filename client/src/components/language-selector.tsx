@@ -38,11 +38,11 @@ export default function LanguageSelector() {
         <Button 
           variant="ghost" 
           size="sm" 
-          className="flex items-center gap-2 h-8 px-2"
+          className="flex items-center gap-1 sm:gap-2 h-8 px-1 sm:px-2"
         >
-          <span className="text-lg">{currentLanguage.flag}</span>
-          <span className="hidden sm:inline text-sm">{currentLanguage.name}</span>
-          <ChevronDown className="h-3 w-3" />
+          <span className="text-base sm:text-lg">{currentLanguage.flag}</span>
+          <span className="hidden sm:inline text-xs sm:text-sm">{currentLanguage.name}</span>
+          <ChevronDown className="h-3 w-3 sm:h-4 sm:w-4" />
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end" className="w-48 max-h-64 overflow-y-auto">

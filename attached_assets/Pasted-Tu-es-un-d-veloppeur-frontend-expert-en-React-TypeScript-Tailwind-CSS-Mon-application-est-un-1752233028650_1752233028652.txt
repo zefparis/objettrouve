@@ -1,0 +1,60 @@
+Tu es un développeur frontend expert en React + TypeScript + Tailwind CSS.
+
+Mon application est une plateforme de gestion d’objets perdus et retrouvés, avec les pages suivantes :
+- Landing Page (hero, stats, CTA)
+- Formulaire de publication
+- Recherche avec filtres
+- Dashboard utilisateur
+- Page de détail d’un objet
+- Messagerie / Chat
+- Auth (login/register)
+- Navbar + Footer
+
+---
+
+### 🎯 Objectif :
+➡️ Rendre **l’intégralité de l’interface 100% responsive**, adaptée à :
+- Téléphones (320px - 768px)
+- Tablettes (768px - 1024px)
+- Ordinateurs classiques (1024px - 1920px)
+- Écrans larges (ultrawide > 1920px)
+
+---
+
+### ✅ À faire :
+1. Refactorise tous les composants en utilisant **Tailwind CSS responsive utilities** :
+   - `sm:` `md:` `lg:` `xl:` `2xl:` pour les breakpoints
+   - Utilise `flex`, `grid`, `container`, `max-w-screen`, etc.
+   - Gère les tailles des images et cards (`w-full`, `h-auto`, `object-contain`...)
+
+2. Vérifie que :
+   - Les **cards, boutons, sections** s’adaptent correctement en mobile
+   - Les **formulaires** sont lisibles sans zoom
+   - Le **chat** fonctionne bien même sur petit écran
+   - La **navbar est collapsée (burger menu)** sur mobile
+   - Le **footer ne déborde pas** sur petits écrans
+   - Le contenu est toujours centré ou bien aligné (`mx-auto`, `px-4`, etc.)
+
+3. Revois la **Landing Page** :
+   - Hero section : image + texte doivent s’empiler proprement en mobile
+   - Stats en `grid` responsive
+   - Boutons CTA visibles et bien espacés
+
+4. Si une section n’est pas mobile-friendly :
+   - Applique une **structure mobile-first**
+   - Casse les `flex-row` en `flex-col` sur petits écrans
+
+---
+
+### 📦 Fournis :
+- Composants refactorisés
+- Classes Tailwind bien optimisées (`gap`, `p`, `m`, `min-h-screen`, etc.)
+- Navbar responsive avec menu burger
+- Footer responsive sans overflow
+- Formulaires et cards fluides
+
+---
+
+### 🧠 Bonus :
+- Active le `dark mode` Tailwind si ce n’est pas déjà fait
+- Prévois un comportement `overflow-x-hidden` pour éviter les scrolls horizontaux
