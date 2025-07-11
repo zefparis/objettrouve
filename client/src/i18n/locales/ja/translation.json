@@ -9,504 +9,78 @@
     "logout": "ログアウト",
     "features": "機能",
     "howItWorks": "使い方",
-    "contact": "お問い合わせ"
+    "contact": "お問い合わせ",
+    "pricing": "料金"
   },
-  "common": {
-    "back": "戻る"
-  },
-  "hero": {
-    "title": "失くした物を見つけよう",
-    "subtitle": "遺失物の発見や落とし物の報告ができるフランスの主要プラットフォーム",
-    "searchPlaceholder": "物品を検索...",
-    "searchButton": "検索",
-    "publishButton": "広告を投稿",
-    "iLostSomething": "何かを失くしました",
-    "iFoundSomething": "何かを見つけました"
-  },
-  "stats": {
-    "totalItems": "報告された物品",
-    "lostItems": "紛失物",
-    "foundItems": "発見物",
-    "users": "アクティブユーザー"
-  },
-  "categories": {
-    "title": "人気のカテゴリ",
-    "subtitle": "物品の種類で検索して簡単に見つけましょう",
-    "electronics": "電子機器",
-    "clothing": "衣類",
-    "accessories": "アクセサリー",
-    "documents": "書類",
-    "keys": "鍵",
-    "jewelry": "宝飾品",
-    "bags": "バッグ",
-    "sports": "スポーツ",
-    "books": "書籍",
-    "pets": "ペット",
-    "other": "その他"
-  },
-  "howItWorks": {
-    "title": "使い方",
-    "subtitle": "3つの簡単なステップで失くした物を見つけましょう",
-    "badge": "完全ガイド",
-    "stepNumber": "ステップ{{number}}",
-    "step1": {
-      "title": "物品を報告",
-      "description": "写真と詳細な説明付きで広告を投稿",
-      "detail1": "物品の鮮明な写真を追加",
-      "detail2": "特徴を正確に記述",
-      "detail3": "紛失した場所と日時を記載"
+  "pricing": {
+    "title": "料金",
+    "subtitle": "あなたに合ったプランを選択してください",
+    "popular": "人気",
+    "select": "選択",
+    "tabs": {
+      "services": "サービス",
+      "subscriptions": "サブスクリプション"
     },
-    "step2": {
-      "title": "検索とフィルタリング",
-      "description": "フィルターを使用して探している物を素早く見つける",
-      "detail1": "カテゴリと場所でフィルタリング",
-      "detail2": "キーワード検索を使用",
-      "detail3": "最新の広告を閲覧"
-    },
-    "step3": {
-      "title": "連絡と回収",
-      "description": "他のユーザーと安全にメッセージを交換",
-      "detail1": "統合された安全なメッセージシステム",
-      "detail2": "身元確認",
-      "detail3": "コミュニティ評価システム"
-    },
-    "features": {
-      "title": "主要機能",
-      "security": {
-        "title": "セキュリティ保証",
-        "description": "あなたのデータと取引は高度なセキュリティシステムで保護されています"
+    "services": {
+      "boost": {
+        "name": "広告ブースト",
+        "description": "より良い可視性のために広告をハイライトします",
+        "features": {
+          "priority": "優先表示",
+          "highlight": "カラーハイライト",
+          "duration": "期間：7日"
+        }
       },
-      "location": {
-        "title": "位置情報",
-        "description": "最適な検索結果のための正確な位置特定"
+      "search": {
+        "name": "プレミアム検索",
+        "description": "検索用の高度なアラートとフィルター",
+        "features": {
+          "alerts": "カスタマイズされたメールアラート",
+          "radius": "拡張検索半径",
+          "priority": "新しい広告への優先アクセス"
+        }
       },
-      "community": {
-        "title": "活発なコミュニティ",
-        "description": "親切で献身的なコミュニティに参加しましょう"
+      "verification": {
+        "name": "身元確認",
+        "description": "広告の信頼バッジ",
+        "features": {
+          "badge": "確認済み信頼バッジ",
+          "trust": "ユーザーの信頼を高める",
+          "priority": "優先サポート"
+        }
       }
     },
-    "timeline": {
-      "title": "あなたの成功への道",
-      "report": "報告",
-      "search": "検索",
-      "contact": "連絡",
-      "recover": "回収"
-    },
-    "cta": {
-      "title": "始める準備はできましたか？",
-      "subtitle": "私たちのプラットフォームを通じて既に物品を見つけた何千人ものユーザーに参加しましょう",
-      "startButton": "今すぐ始める",
-      "learnMore": "詳しく学ぶ"
-    }
-  },
-  "contact": {
-    "badge": "お問い合わせ",
-    "title": "私たちがお手伝いします",
-    "subtitle": "ご質問やサポートが必要ですか？私たちのチームがお手伝いします",
-    "form": {
-      "title": "メッセージを送信",
-      "name": "氏名",
-      "namePlaceholder": "お名前",
-      "email": "メールアドレス",
-      "emailPlaceholder": "your.email@example.com",
-      "subject": "件名",
-      "subjectPlaceholder": "何についてですか？",
-      "message": "メッセージ",
-      "messagePlaceholder": "お問い合わせ内容を記述してください...",
-      "send": "メッセージを送信",
-      "sending": "送信中...",
-      "success": "メッセージが正常に送信されました！",
-      "error": "メッセージの送信中にエラーが発生しました"
-    },
-    "info": {
-      "title": "連絡先情報",
-      "email": "メール",
-      "phone": "電話",
-      "address": "住所",
-      "hours": "営業時間",
-      "hoursDetail": "月曜日 - 金曜日：9:00 - 18:00"
-    },
-    "faq": {
-      "title": "よくある質問",
-      "q1": "広告を投稿するにはどうすればよいですか？",
-      "a1": "「投稿」をクリックし、フォームに記入して写真を追加してください。",
-      "q2": "サービスは無料ですか？",
-      "a2": "はい、基本サービスはすべてのユーザーに対して完全に無料です。",
-      "q3": "誰かに連絡するにはどうすればよいですか？",
-      "a3": "安全なメッセージシステムを使用して他のユーザーと直接コミュニケーションを取ってください。",
-      "q4": "広告を削除するにはどうすればよいですか？",
-      "a4": "ダッシュボードに移動し、広告の横にある「削除」をクリックしてください。"
-    },
-    "social": {
-      "title": "フォローする",
-      "subtitle": "ソーシャルメディアで私たちとつながりましょう"
-    }
-  },
-  "search": {
-    "title": "物品を検索",
-    "subtitle": "数千の遺失物・落とし物の広告を検索",
-    "searchPlaceholder": "物品を検索...",
-    "searchButton": "検索",
-    "filters": "フィルター",
-    "type": "タイプ",
-    "category": "カテゴリ",
-    "location": "場所",
-    "all": "すべて",
-    "lost": "紛失",
-    "found": "発見",
-    "noResults": "結果が見つかりませんでした",
-    "noResultsDesc": "検索条件を変更してみてください",
-    "itemType": {
-      "lost": "紛失",
-      "found": "発見"
-    }
-  },
-  "publish": {
-    "title": "広告を投稿",
-    "subtitle": "紛失または発見した物品を報告",
-    "form": {
-      "title": "タイトル",
-      "titlePlaceholder": "例：iPhone 12 Pro紛失",
-      "description": "説明",
-      "descriptionPlaceholder": "物品を詳しく説明してください...",
-      "type": "タイプ",
-      "typeLost": "何かを失くしました",
-      "typeFound": "何かを見つけました",
-      "category": "カテゴリ",
-      "categoryPlaceholder": "カテゴリを選択",
-      "location": "場所",
-      "locationPlaceholder": "どこで起こりましたか？",
-      "date": "日付",
-      "datePlaceholder": "いつ起こりましたか？",
-      "image": "写真",
-      "imageDesc": "写真を追加（任意）",
-      "publish": "投稿",
-      "publishing": "投稿中...",
-      "success": "広告が正常に投稿されました！",
-      "error": "広告の投稿中にエラーが発生しました"
-    }
-  },
-  "dashboard": {
-    "title": "マイダッシュボード",
-    "subtitle": "広告とメッセージを管理",
-    "welcome": "ようこそ",
-    "user": "ユーザー",
-    "myItems": "私の広告",
-    "statistics": "統計",
-    "recentActivity": "最近の活動",
-    "activity": "活動",
-    "noItems": "広告が投稿されていません",
-    "noItemsDesc": "最初の広告を投稿して始めましょう",
-    "publishFirstAd": "最初の広告を投稿",
-    "newAd": "新しい広告",
-    "reportLost": "紛失物を報告",
-    "reportFound": "発見物を報告",
-    "lostItems": "紛失物",
-    "foundItems": "発見物",
-    "conversations": "会話",
-    "activeAds": "アクティブな広告",
-    "totalViews": "総閲覧数",
-    "yourItems": "あなたのアイテム",
-    "active": "アクティブ",
-    "allItems": "すべてのアイテム",
-    "views": "回閲覧",
-    "noConversations": "会話がありません",
-    "noConversationsDesc": "他のユーザーとチャットを始めましょう",
-    "noActivity": "活動がありません",
-    "noActivityDesc": "最初の広告を投稿して活動を確認しましょう",
-    "lostItemActivity": "紛失物を報告しました",
-    "foundItemActivity": "発見物を報告しました",
-    "justNow": "今すぐ",
-    "hoursAgo": "{{hours}}時間前",
-    "daysAgo": "{{days}}日前",
-    "confirmDelete": "本当にこの広告を削除しますか？",
-    "deleteError": "削除中にエラーが発生しました",
-    "deleteSuccess": "広告が正常に削除されました",
-    "actions": {
-      "edit": "編集",
-      "delete": "削除",
-      "view": "表示"
-    }
-  },
-  "chat": {
-    "title": "メッセージ",
-    "noConversations": "会話がありません",
-    "noConversationsDesc": "誰かに連絡して会話を始めましょう",
-    "typePlaceholder": "メッセージを入力...",
-    "send": "送信",
-    "conversationNotFound": "会話が見つかりません",
-    "selectValidConversation": "有効な会話を選択してください。",
-    "backToDashboard": "ダッシュボードに戻る",
-    "loginToMessage": "メッセージを送信するにはログインする必要があります。",
-    "messageError": "メッセージの送信中にエラーが発生しました",
-    "noMessages": "メッセージがありません",
-    "startConversation": "会話を始めましょう！",
-    "conversation": "会話",
-    "you": "あなた",
-    "contactOwner": "所有者に連絡",
-    "contactFinder": "発見者に連絡"
-  },
-  "itemDetail": {
-    "contactOwner": "所有者に連絡",
-    "contactFinder": "発見者に連絡",
-    "reportedOn": "報告日",
-    "location": "場所",
-    "category": "カテゴリ",
-    "description": "説明",
-    "contact": "連絡",
-    "backToSearch": "検索に戻る"
-  },
-  "home": {
-    "recentItems": "最近の物品",
-    "recentItemsDesc": "最新の遺失物・落とし物の広告を発見",
-    "seeAll": "すべて見る"
-  },
-  "map": {
-    "title": "インタラクティブマップ",
-    "subtitle": "あなたの近くの遺失物・拾得物を表示",
-    "interactiveMap": "位置情報付きインタラクティブマップ",
-    "integration": "Google MapsまたはOpenStreetMapとの統合",
-    "lostItems": "紛失物",
-    "foundItems": "拾得物",
-    "fullscreen": "全画面表示"
-  },
-  "footer": {
-    "description": "フランスの主要遺失物発見プラットフォーム",
-    "links": {
-      "about": "概要",
-      "privacy": "プライバシー",
-      "terms": "利用規約",
-      "help": "ヘルプ"
-    },
-    "contact": {
-      "title": "連絡先",
-      "email": "contact@objetstrouves.fr",
-      "phone": "+33 1 23 45 67 89"
-    },
-    "social": {
-      "title": "フォロー"
-    },
-    "copyright": "© 2024 ObjetsTrouvés. All rights reserved."
-  },
-  "errors": {
-    "required": "このフィールドは必須です",
-    "email_invalid": "無効なメールアドレス",
-    "title_min": "タイトルは最低5文字必要です",
-    "title_max": "タイトルは最大100文字です",
-    "description_min": "説明は最低10文字必要です",
-    "description_max": "説明は最大1000文字です",
-    "location_min": "場所は最低2文字必要です",
-    "image_size": "画像サイズは5MBを超えてはいけません",
-    "image_type": "JPEG、PNG、GIFファイルのみ許可されています"
-  },
-  "validation": {
-    "required": "必須",
-    "email": "有効なメールアドレスが必要です",
-    "min": "最低{{min}}文字必要です",
-    "max": "最大{{max}}文字まで許可されています",
-    "phone": "有効な電話番号が必要です",
-    "url": "有効なURLが必要です",
-    "number": "数値である必要があります",
-    "integer": "整数である必要があります",
-    "positive": "正の数である必要があります",
-    "date": "有効な日付が必要です",
-    "time": "有効な時刻が必要です",
-    "datetime": "有効な日時が必要です",
-    "boolean": "trueまたはfalseである必要があります",
-    "array": "配列である必要があります",
-    "object": "オブジェクトである必要があります",
-    "string": "文字列である必要があります",
-    "enum": "許可された値のいずれかである必要があります",
-    "unique": "一意である必要があります",
-    "exists": "存在する必要があります",
-    "confirmed": "確認が一致しません",
-    "accepted": "承認される必要があります",
-    "declined": "拒否される必要があります",
-    "prohibited": "このフィールドは許可されていません",
-    "prohibited_if": "{{other}}が{{value}}の場合、このフィールドは許可されていません",
-    "prohibited_unless": "{{other}}が{{value}}でない限り、このフィールドは許可されていません",
-    "same": "{{other}}と同じである必要があります",
-    "different": "{{other}}と異なる必要があります",
-    "regex": "フォーマットが無効です",
-    "alpha": "文字のみ含むことができます",
-    "alpha_dash": "文字、数字、ダッシュ、アンダースコアのみ含むことができます",
-    "alpha_num": "文字と数字のみ含むことができます",
-    "ascii": "ASCII文字のみ含むことができます",
-    "digits": "{{digits}}桁である必要があります",
-    "digits_between": "{{min}}桁から{{max}}桁の間である必要があります",
-    "file": "ファイルである必要があります",
-    "filled": "値が必要です",
-    "image": "画像である必要があります",
-    "in": "選択された値が無効です",
-    "not_in": "選択された値が無効です",
-    "numeric": "数値である必要があります",
-    "present": "存在する必要があります",
-    "size": "{{size}}のサイズである必要があります",
-    "timezone": "有効なタイムゾーンである必要があります",
-    "uploaded": "アップロードに失敗しました",
-    "uuid": "有効なUUIDである必要があります",
-    "custom": "{{attribute}}フィールドが無効です"
-  },
-  "auth": {
-    "login": {
-      "title": "ログイン",
-      "subtitle": "アカウントにログイン",
-      "noAccount": "アカウントをお持ちでない方",
-      "hasAccount": "既にアカウントをお持ちの方"
-    },
-    "register": {
-      "title": "登録",
-      "subtitle": "無料アカウントを作成",
-      "hasAccount": "既にアカウントをお持ちの方"
-    },
-    "forgotPassword": {
-      "title": "パスワードを忘れた方",
-      "subtitle": "リセットコードを受信するためにメールアドレスを入力してください"
-    },
-    "otpVerification": {
-      "title": "OTP認証",
-      "subtitle": "{{email}}に送信されたコードを入力してください"
-    },
-    "newPassword": {
-      "title": "新しいパスワード",
-      "subtitle": "新しいパスワードを設定してください"
-    },
-    "fields": {
-      "email": "メールアドレス",
-      "password": "パスワード",
-      "newPassword": "新しいパスワード",
-      "confirmPassword": "パスワード確認",
-      "firstName": "名",
-      "lastName": "姓",
-      "otpCode": "OTPコード"
-    },
-    "placeholders": {
-      "email": "あなたの@メール.com",
-      "password": "パスワード",
-      "newPassword": "新しいパスワード",
-      "confirmPassword": "パスワード確認",
-      "firstName": "名",
-      "lastName": "姓",
-      "otpCode": "000000"
-    },
-    "actions": {
-      "signIn": "ログイン",
-      "signUp": "登録",
-      "signingIn": "ログイン中...",
-      "signingUp": "登録中...",
-      "forgotPassword": "パスワードを忘れた方",
-      "sendCode": "コードを送信",
-      "sending": "送信中...",
-      "verify": "認証",
-      "verifying": "認証中...",
-      "resendCode": "コードを再送信",
-      "backToLogin": "ログインに戻る",
-      "updatePassword": "パスワードを更新",
-      "updating": "更新中..."
-    },
-    "success": {
-      "loginTitle": "ログイン成功",
-      "loginDescription": "ObjetsTrouvésへようこそ！",
-      "registerTitle": "登録成功",
-      "registerDescription": "アカウントを確認するためにメールをチェックしてください",
-      "forgotPasswordTitle": "コードを送信しました",
-      "forgotPasswordDescription": "リセットコードのメールをチェックしてください",
-      "otpVerificationTitle": "認証成功",
-      "otpVerificationDescription": "アカウントが正常に認証されました",
-      "newPasswordTitle": "パスワードを更新しました",
-      "newPasswordDescription": "新しいパスワードでログインできます",
-      "resendOtpTitle": "コードを再送信しました",
-      "resendOtpDescription": "新しいコードがメールに送信されました"
-    },
-    "errors": {
-      "general": "エラーが発生しました",
-      "invalidEmail": "無効なメールアドレス",
-      "passwordTooShort": "パスワードは8文字以上である必要があります",
-      "passwordsDoNotMatch": "パスワードが一致しません",
-      "firstNameRequired": "名は必須です",
-      "lastNameRequired": "姓は必須です",
-      "otpInvalid": "OTPコードは6桁である必要があります",
-      "loginFailed": "ログインに失敗しました",
-      "registerFailed": "登録に失敗しました",
-      "forgotPasswordFailed": "リセットコードの送信に失敗しました",
-      "otpVerificationFailed": "認証に失敗しました",
-      "newPasswordFailed": "パスワードの更新に失敗しました",
-      "resendOtpFailed": "コードの再送信に失敗しました",
-      "UserNotFoundException": "ユーザーが見つかりません",
-      "NotAuthorizedException": "メールアドレスまたはパスワードが間違っています",
-      "UserNotConfirmedException": "メールアドレスを確認してください",
-      "InvalidPasswordException": "パスワードが要件を満たしていません",
-      "UsernameExistsException": "このメールアドレスは既に使用されています",
-      "CodeMismatchException": "コードが間違っています",
-      "ExpiredCodeException": "コードの有効期限が切れています",
-      "LimitExceededException": "試行回数が多すぎます、後でもう一度お試しください",
-      "InvalidParameterException": "無効なパラメーター",
-      "TooManyRequestsException": "リクエストが多すぎます、後でもう一度お試しください"
-    }
-  },
-  "publishNew": {
-    "title": "投稿する",
-    "subtitle": "紛失物・拾得物を報告",
-    "lostTitle": "紛失物を報告",
-    "foundTitle": "拾得物を報告",
-    "lostSubtitle": "紛失物を見つけるお手伝いをします",
-    "foundSubtitle": "誰かのものを見つけるお手伝いをします",
-    "loginNotice": "広告を投稿するにはログインする必要があります。フォームに記入して送信時にログインしてください。",
-    "type": {
-      "label": "投稿タイプ",
-      "lost": "紛失物",
-      "found": "拾得物"
-    },
-    "form": {
-      "title": {
-        "label": "投稿タイトル",
-        "placeholder": "例：地下鉄で紛失したiPhone 12 Pro"
+    "plans": {
+      "pro": {
+        "name": "プロ",
+        "description": "一般ユーザー向け",
+        "features": {
+          "listings": "無制限の広告",
+          "priority": "優先サポート",
+          "analytics": "詳細な分析",
+          "support": "24時間サポート"
+        }
       },
-      "description": {
-        "label": "詳細な説明",
-        "placeholder": "アイテムの詳細、紛失/発見の状況を記載..."
+      "advanced": {
+        "name": "アドバンス",
+        "description": "頻繁なユーザー向け",
+        "features": {
+          "everything": "プロプランのすべて",
+          "boost": "月額無料ブースト",
+          "premium": "プレミアム検索を含む",
+          "api": "API アクセス"
+        }
       },
-      "category": {
-        "label": "カテゴリー",
-        "placeholder": "カテゴリーを選択"
-      },
-      "location": {
-        "label": "場所",
-        "placeholder": "アイテムが紛失/発見された場所"
-      },
-      "dateOccurred": {
-        "label": "発生日",
-        "placeholder": "いつ発生しましたか？"
-      },
-      "contactPhone": {
-        "label": "連絡先電話番号",
-        "placeholder": "+81 90-1234-5678"
-      },
-      "contactEmail": {
-        "label": "連絡先メール",
-        "placeholder": "あなたの@メール.com"
-      },
-      "image": {
-        "label": "アイテムの写真",
-        "placeholder": "識別を助けるために写真を追加",
-        "upload": "クリックして写真をアップロード",
-        "change": "写真を変更",
-        "remove": "写真を削除"
+      "premium": {
+        "name": "プレミアム",
+        "description": "プロフェッショナル向け",
+        "features": {
+          "unlimited": "すべて無制限",
+          "dedicated": "専用アカウントマネージャー",
+          "custom": "カスタム統合",
+          "priority": "最大優先サポート"
+        }
       }
-    },
-    "validation": {
-      "title_required": "タイトルは必須です",
-      "description_min_length": "説明は10文字以上である必要があります",
-      "category_required": "カテゴリーを選択してください",
-      "location_required": "場所は必須です",
-      "date_required": "日付は必須です",
-      "email_invalid": "無効なメール形式"
-    },
-    "success": "投稿が正常に公開されました！",
-    "error": "公開中にエラーが発生しました",
-    "buttons": {
-      "publish": "投稿する",
-      "publishing": "公開中..."
     }
   }
 }

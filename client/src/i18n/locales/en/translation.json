@@ -282,6 +282,77 @@
     "followUs": "Follow Us",
     "copyright": "© 2024 ObjetsTrouvés. All rights reserved."
   },
+  "pricing": {
+    "title": "Pricing",
+    "subtitle": "Choose the plan that suits you",
+    "popular": "Popular",
+    "select": "Select",
+    "tabs": {
+      "services": "Services",
+      "subscriptions": "Subscriptions"
+    },
+    "services": {
+      "boost": {
+        "name": "Boost Listing",
+        "description": "Highlight your listing for better visibility",
+        "features": {
+          "priority": "Priority display",
+          "highlight": "Colored highlighting",
+          "duration": "Duration: 7 days"
+        }
+      },
+      "search": {
+        "name": "Premium Search",
+        "description": "Advanced alerts and filters for your searches",
+        "features": {
+          "alerts": "Custom email alerts",
+          "radius": "Extended search radius",
+          "priority": "Priority access to new listings"
+        }
+      },
+      "verification": {
+        "name": "Identity Verification",
+        "description": "Trust badge for your listings",
+        "features": {
+          "badge": "Verified trust badge",
+          "trust": "Increases user trust",
+          "priority": "Priority support"
+        }
+      }
+    },
+    "plans": {
+      "pro": {
+        "name": "Pro",
+        "description": "For regular users",
+        "features": {
+          "listings": "Unlimited listings",
+          "priority": "Priority support",
+          "analytics": "Detailed analytics",
+          "support": "24/7 support"
+        }
+      },
+      "advanced": {
+        "name": "Advanced",
+        "description": "For frequent users",
+        "features": {
+          "everything": "Everything in Pro",
+          "boost": "Monthly free boost",
+          "premium": "Premium search included",
+          "api": "API access"
+        }
+      },
+      "premium": {
+        "name": "Premium",
+        "description": "For professionals",
+        "features": {
+          "unlimited": "Everything unlimited",
+          "dedicated": "Dedicated account manager",
+          "custom": "Custom integrations",
+          "priority": "Maximum priority support"
+        }
+      }
+    }
+  },
   "error": {
     "404_title": "404 Page Not Found",
     "404_message": "The page you are looking for does not exist or has been moved."

@@ -9,504 +9,78 @@
     "logout": "로그아웃",
     "features": "기능",
     "howItWorks": "사용법",
-    "contact": "연락처"
+    "contact": "문의",
+    "pricing": "가격"
   },
-  "common": {
-    "back": "뒤로"
-  },
-  "hero": {
-    "title": "잃어버린 물건을 찾아보세요",
-    "subtitle": "분실물 신고와 습득물 발견을 위한 프랑스 대표 플랫폼",
-    "searchPlaceholder": "물건 검색...",
-    "searchButton": "검색",
-    "publishButton": "광고 게시",
-    "iLostSomething": "뭔가를 잃어버렸어요",
-    "iFoundSomething": "뭔가를 찾았어요"
-  },
-  "stats": {
-    "totalItems": "신고된 물건",
-    "lostItems": "분실물",
-    "foundItems": "습득물",
-    "users": "활성 사용자"
-  },
-  "categories": {
-    "title": "인기 카테고리",
-    "subtitle": "물건 유형별로 검색하여 쉽게 찾아보세요",
-    "electronics": "전자제품",
-    "clothing": "의류",
-    "accessories": "액세서리",
-    "documents": "문서",
-    "keys": "열쇠",
-    "jewelry": "보석",
-    "bags": "가방",
-    "sports": "스포츠",
-    "books": "책",
-    "pets": "반려동물",
-    "other": "기타"
-  },
-  "howItWorks": {
-    "title": "사용법",
-    "subtitle": "3가지 간단한 단계로 잃어버린 물건을 찾아보세요",
-    "badge": "완전 가이드",
-    "stepNumber": "{{number}}단계",
-    "step1": {
-      "title": "물건 신고",
-      "description": "사진과 자세한 설명이 포함된 광고 게시",
-      "detail1": "물건의 선명한 사진 추가",
-      "detail2": "특징을 정확히 기술",
-      "detail3": "분실 장소와 날짜 명시"
+  "pricing": {
+    "title": "가격",
+    "subtitle": "당신에게 맞는 플랜을 선택하세요",
+    "popular": "인기",
+    "select": "선택",
+    "tabs": {
+      "services": "서비스",
+      "subscriptions": "구독"
     },
-    "step2": {
-      "title": "검색 및 필터링",
-      "description": "필터를 사용하여 찾고 있는 것을 빠르게 찾기",
-      "detail1": "카테고리와 위치로 필터링",
-      "detail2": "키워드 검색 사용",
-      "detail3": "최신 광고 둘러보기"
-    },
-    "step3": {
-      "title": "연락 및 회수",
-      "description": "다른 사용자와 안전하게 메시지 교환",
-      "detail1": "통합 보안 메시지 시스템",
-      "detail2": "신원 확인",
-      "detail3": "커뮤니티 평가 시스템"
-    },
-    "features": {
-      "title": "주요 기능",
-      "security": {
-        "title": "보안 보장",
-        "description": "귀하의 데이터와 거래는 고급 보안 시스템으로 보호됩니다"
+    "services": {
+      "boost": {
+        "name": "광고 부스트",
+        "description": "더 나은 가시성을 위해 광고를 강조합니다",
+        "features": {
+          "priority": "우선 표시",
+          "highlight": "컬러 강조",
+          "duration": "기간: 7일"
+        }
       },
-      "location": {
-        "title": "위치 정보",
-        "description": "최적의 검색 결과를 위한 정확한 위치 확인"
+      "search": {
+        "name": "프리미엄 검색",
+        "description": "검색을 위한 고급 알림 및 필터",
+        "features": {
+          "alerts": "사용자 정의 이메일 알림",
+          "radius": "확장 검색 반경",
+          "priority": "새 광고에 우선 접근"
+        }
       },
-      "community": {
-        "title": "활발한 커뮤니티",
-        "description": "도움이 되고 헌신적인 커뮤니티에 참여하세요"
+      "verification": {
+        "name": "신원 확인",
+        "description": "광고의 신뢰 배지",
+        "features": {
+          "badge": "확인된 신뢰 배지",
+          "trust": "사용자 신뢰도 증가",
+          "priority": "우선 지원"
+        }
       }
     },
-    "timeline": {
-      "title": "성공의 길",
-      "report": "신고",
-      "search": "검색",
-      "contact": "연락",
-      "recover": "회수"
-    },
-    "cta": {
-      "title": "시작할 준비가 되셨나요?",
-      "subtitle": "우리 플랫폼을 통해 이미 물건을 찾은 수천 명의 사용자들과 함께하세요",
-      "startButton": "지금 시작",
-      "learnMore": "더 알아보기"
-    }
-  },
-  "contact": {
-    "badge": "문의하기",
-    "title": "도움을 드리겠습니다",
-    "subtitle": "질문이 있거나 도움이 필요하신가요? 저희 팀이 도와드립니다",
-    "form": {
-      "title": "메시지 보내기",
-      "name": "성명",
-      "namePlaceholder": "성함",
-      "email": "이메일 주소",
-      "emailPlaceholder": "your.email@example.com",
-      "subject": "제목",
-      "subjectPlaceholder": "무엇에 관한 내용인가요?",
-      "message": "메시지",
-      "messagePlaceholder": "요청사항을 설명해주세요...",
-      "send": "메시지 보내기",
-      "sending": "보내는 중...",
-      "success": "메시지가 성공적으로 전송되었습니다!",
-      "error": "메시지 전송 중 오류가 발생했습니다"
-    },
-    "info": {
-      "title": "연락처 정보",
-      "email": "이메일",
-      "phone": "전화",
-      "address": "주소",
-      "hours": "운영 시간",
-      "hoursDetail": "월요일 - 금요일: 9:00 - 18:00"
-    },
-    "faq": {
-      "title": "자주 묻는 질문",
-      "q1": "광고는 어떻게 게시하나요?",
-      "a1": "'게시'를 클릭하여 양식을 작성하고 사진을 추가하세요.",
-      "q2": "서비스는 무료인가요?",
-      "a2": "네, 기본 서비스는 모든 사용자에게 완전 무료입니다.",
-      "q3": "누군가에게 연락하려면 어떻게 해야 하나요?",
-      "a3": "보안 메시지 시스템을 사용하여 다른 사용자와 직접 소통하세요.",
-      "q4": "광고를 삭제하려면 어떻게 해야 하나요?",
-      "a4": "대시보드로 가서 광고 옆의 '삭제'를 클릭하세요."
-    },
-    "social": {
-      "title": "팔로우하기",
-      "subtitle": "소셜 미디어에서 저희와 연결하세요"
-    }
-  },
-  "search": {
-    "title": "물건 검색",
-    "subtitle": "수천 개의 분실물·습득물 광고를 검색하세요",
-    "searchPlaceholder": "물건 검색...",
-    "searchButton": "검색",
-    "filters": "필터",
-    "type": "유형",
-    "category": "카테고리",
-    "location": "위치",
-    "all": "전체",
-    "lost": "분실",
-    "found": "습득",
-    "noResults": "결과를 찾을 수 없습니다",
-    "noResultsDesc": "검색 조건을 변경해보세요",
-    "itemType": {
-      "lost": "분실",
-      "found": "습득"
-    }
-  },
-  "publish": {
-    "title": "광고 게시",
-    "subtitle": "분실하거나 찾은 물건을 신고하세요",
-    "form": {
-      "title": "제목",
-      "titlePlaceholder": "예: iPhone 12 Pro 분실",
-      "description": "설명",
-      "descriptionPlaceholder": "물건을 자세히 설명해주세요...",
-      "type": "유형",
-      "typeLost": "뭔가를 잃어버렸어요",
-      "typeFound": "뭔가를 찾았어요",
-      "category": "카테고리",
-      "categoryPlaceholder": "카테고리 선택",
-      "location": "위치",
-      "locationPlaceholder": "어디서 발생했나요?",
-      "date": "날짜",
-      "datePlaceholder": "언제 발생했나요?",
-      "image": "사진",
-      "imageDesc": "사진 추가 (선택사항)",
-      "publish": "게시",
-      "publishing": "게시 중...",
-      "success": "광고가 성공적으로 게시되었습니다!",
-      "error": "광고 게시 중 오류가 발생했습니다"
-    }
-  },
-  "dashboard": {
-    "title": "내 대시보드",
-    "subtitle": "광고와 메시지를 관리하세요",
-    "welcome": "환영합니다",
-    "user": "사용자",
-    "myItems": "내 광고",
-    "statistics": "통계",
-    "recentActivity": "최근 활동",
-    "activity": "활동",
-    "noItems": "게시된 광고가 없습니다",
-    "noItemsDesc": "첫 번째 광고를 게시하여 시작하세요",
-    "publishFirstAd": "첫 번째 광고 게시",
-    "newAd": "새 광고",
-    "reportLost": "분실물 신고",
-    "reportFound": "습득물 신고",
-    "lostItems": "분실물",
-    "foundItems": "습득물",
-    "conversations": "대화",
-    "activeAds": "활성 광고",
-    "totalViews": "총 조회수",
-    "yourItems": "귀하의 아이템",
-    "active": "활성",
-    "allItems": "모든 아이템",
-    "views": "조회수",
-    "noConversations": "대화가 없습니다",
-    "noConversationsDesc": "다른 사용자와 채팅을 시작하세요",
-    "noActivity": "활동이 없습니다",
-    "noActivityDesc": "첫 번째 광고를 게시하여 활동을 확인하세요",
-    "lostItemActivity": "분실물을 신고했습니다",
-    "foundItemActivity": "습득물을 신고했습니다",
-    "justNow": "방금",
-    "hoursAgo": "{{hours}}시간 전",
-    "daysAgo": "{{days}}일 전",
-    "confirmDelete": "정말로 이 광고를 삭제하시겠습니까?",
-    "deleteError": "삭제 중 오류가 발생했습니다",
-    "deleteSuccess": "광고가 성공적으로 삭제되었습니다",
-    "actions": {
-      "edit": "편집",
-      "delete": "삭제",
-      "view": "보기"
-    }
-  },
-  "chat": {
-    "title": "메시지",
-    "noConversations": "대화 없음",
-    "noConversationsDesc": "누군가에게 연락하여 대화를 시작하세요",
-    "typePlaceholder": "메시지를 입력하세요...",
-    "send": "보내기",
-    "conversationNotFound": "대화를 찾을 수 없습니다",
-    "selectValidConversation": "유효한 대화를 선택하세요.",
-    "backToDashboard": "대시보드로 돌아가기",
-    "loginToMessage": "메시지를 보내려면 로그인해야 합니다.",
-    "messageError": "메시지 전송 중 오류가 발생했습니다",
-    "noMessages": "메시지 없음",
-    "startConversation": "대화를 시작하세요!",
-    "conversation": "대화",
-    "you": "나",
-    "contactOwner": "소유자에게 연락",
-    "contactFinder": "발견자에게 연락"
-  },
-  "itemDetail": {
-    "contactOwner": "소유자에게 연락",
-    "contactFinder": "발견자에게 연락",
-    "reportedOn": "신고일",
-    "location": "위치",
-    "category": "카테고리",
-    "description": "설명",
-    "contact": "연락",
-    "backToSearch": "검색으로 돌아가기"
-  },
-  "home": {
-    "recentItems": "최근 물건",
-    "recentItemsDesc": "최신 분실물·습득물 광고를 확인하세요",
-    "seeAll": "모두 보기"
-  },
-  "map": {
-    "title": "인터랙티브 지도",
-    "subtitle": "근처의 분실물·습득물을 시각화",
-    "interactiveMap": "위치 정보가 포함된 인터랙티브 지도",
-    "integration": "Google Maps 또는 OpenStreetMap과 통합",
-    "lostItems": "분실물",
-    "foundItems": "습득물",
-    "fullscreen": "전체 화면으로 보기"
-  },
-  "footer": {
-    "description": "프랑스 대표 분실물 찾기 플랫폼",
-    "links": {
-      "about": "소개",
-      "privacy": "개인정보",
-      "terms": "이용약관",
-      "help": "도움말"
-    },
-    "contact": {
-      "title": "연락처",
-      "email": "contact@objetstrouves.fr",
-      "phone": "+33 1 23 45 67 89"
-    },
-    "social": {
-      "title": "팔로우"
-    },
-    "copyright": "© 2024 ObjetsTrouvés. 모든 권리 보유."
-  },
-  "errors": {
-    "required": "이 필드는 필수입니다",
-    "email_invalid": "유효하지 않은 이메일 주소",
-    "title_min": "제목은 최소 5자 이상이어야 합니다",
-    "title_max": "제목은 최대 100자까지 가능합니다",
-    "description_min": "설명은 최소 10자 이상이어야 합니다",
-    "description_max": "설명은 최대 1000자까지 가능합니다",
-    "location_min": "위치는 최소 2자 이상이어야 합니다",
-    "image_size": "이미지 크기는 5MB를 초과할 수 없습니다",
-    "image_type": "JPEG, PNG, GIF 파일만 허용됩니다"
-  },
-  "validation": {
-    "required": "필수",
-    "email": "유효한 이메일 주소가 필요합니다",
-    "min": "최소 {{min}}자 이상 필요합니다",
-    "max": "최대 {{max}}자까지 허용됩니다",
-    "phone": "유효한 전화번호가 필요합니다",
-    "url": "유효한 URL이 필요합니다",
-    "number": "숫자여야 합니다",
-    "integer": "정수여야 합니다",
-    "positive": "양수여야 합니다",
-    "date": "유효한 날짜가 필요합니다",
-    "time": "유효한 시간이 필요합니다",
-    "datetime": "유효한 날짜와 시간이 필요합니다",
-    "boolean": "참 또는 거짓이어야 합니다",
-    "array": "배열이어야 합니다",
-    "object": "객체여야 합니다",
-    "string": "문자열이어야 합니다",
-    "enum": "허용된 값 중 하나여야 합니다",
-    "unique": "고유해야 합니다",
-    "exists": "존재해야 합니다",
-    "confirmed": "확인이 일치하지 않습니다",
-    "accepted": "승인되어야 합니다",
-    "declined": "거부되어야 합니다",
-    "prohibited": "이 필드는 허용되지 않습니다",
-    "prohibited_if": "{{other}}가 {{value}}일 때 이 필드는 허용되지 않습니다",
-    "prohibited_unless": "{{other}}가 {{value}}가 아닌 경우 이 필드는 허용되지 않습니다",
-    "same": "{{other}}와 같아야 합니다",
-    "different": "{{other}}와 달라야 합니다",
-    "regex": "형식이 유효하지 않습니다",
-    "alpha": "문자만 포함할 수 있습니다",
-    "alpha_dash": "문자, 숫자, 대시, 밑줄만 포함할 수 있습니다",
-    "alpha_num": "문자와 숫자만 포함할 수 있습니다",
-    "ascii": "ASCII 문자만 포함할 수 있습니다",
-    "digits": "{{digits}}자리 숫자여야 합니다",
-    "digits_between": "{{min}}자리에서 {{max}}자리 사이의 숫자여야 합니다",
-    "file": "파일이어야 합니다",
-    "filled": "값이 있어야 합니다",
-    "image": "이미지여야 합니다",
-    "in": "선택된 값이 유효하지 않습니다",
-    "not_in": "선택된 값이 유효하지 않습니다",
-    "numeric": "숫자여야 합니다",
-    "present": "존재해야 합니다",
-    "size": "크기가 {{size}}여야 합니다",
-    "timezone": "유효한 시간대여야 합니다",
-    "uploaded": "업로드에 실패했습니다",
-    "uuid": "유효한 UUID여야 합니다",
-    "custom": "{{attribute}} 필드가 유효하지 않습니다"
-  },
-  "auth": {
-    "login": {
-      "title": "로그인",
-      "subtitle": "계정에 로그인",
-      "noAccount": "계정이 없으신가요?",
-      "hasAccount": "이미 계정이 있으신가요?"
-    },
-    "register": {
-      "title": "회원가입",
-      "subtitle": "무료 계정 만들기",
-      "hasAccount": "이미 계정이 있으신가요?"
-    },
-    "forgotPassword": {
-      "title": "비밀번호 찾기",
-      "subtitle": "재설정 코드를 받기 위해 이메일을 입력하세요"
-    },
-    "otpVerification": {
-      "title": "OTP 인증",
-      "subtitle": "{{email}}으로 전송된 코드를 입력하세요"
-    },
-    "newPassword": {
-      "title": "새 비밀번호",
-      "subtitle": "새 비밀번호를 설정하세요"
-    },
-    "fields": {
-      "email": "이메일",
-      "password": "비밀번호",
-      "newPassword": "새 비밀번호",
-      "confirmPassword": "비밀번호 확인",
-      "firstName": "이름",
-      "lastName": "성",
-      "otpCode": "OTP 코드"
-    },
-    "placeholders": {
-      "email": "당신의@이메일.com",
-      "password": "비밀번호",
-      "newPassword": "새 비밀번호",
-      "confirmPassword": "비밀번호 확인",
-      "firstName": "이름",
-      "lastName": "성",
-      "otpCode": "000000"
-    },
-    "actions": {
-      "signIn": "로그인",
-      "signUp": "회원가입",
-      "signingIn": "로그인 중...",
-      "signingUp": "가입 중...",
-      "forgotPassword": "비밀번호를 잊으셨나요?",
-      "sendCode": "코드 전송",
-      "sending": "전송 중...",
-      "verify": "인증",
-      "verifying": "인증 중...",
-      "resendCode": "코드 재전송",
-      "backToLogin": "로그인으로 돌아가기",
-      "updatePassword": "비밀번호 업데이트",
-      "updating": "업데이트 중..."
-    },
-    "success": {
-      "loginTitle": "로그인 성공",
-      "loginDescription": "ObjetsTrouvés에 오신 것을 환영합니다!",
-      "registerTitle": "회원가입 성공",
-      "registerDescription": "계정을 확인하기 위해 이메일을 확인하세요",
-      "forgotPasswordTitle": "코드 전송됨",
-      "forgotPasswordDescription": "재설정 코드를 위해 이메일을 확인하세요",
-      "otpVerificationTitle": "인증 성공",
-      "otpVerificationDescription": "계정이 성공적으로 인증되었습니다",
-      "newPasswordTitle": "비밀번호 업데이트됨",
-      "newPasswordDescription": "이제 새 비밀번호로 로그인할 수 있습니다",
-      "resendOtpTitle": "코드 재전송됨",
-      "resendOtpDescription": "새 코드가 이메일로 전송되었습니다"
-    },
-    "errors": {
-      "general": "오류가 발생했습니다",
-      "invalidEmail": "유효하지 않은 이메일 주소",
-      "passwordTooShort": "비밀번호는 최소 8자 이상이어야 합니다",
-      "passwordsDoNotMatch": "비밀번호가 일치하지 않습니다",
-      "firstNameRequired": "이름이 필요합니다",
-      "lastNameRequired": "성이 필요합니다",
-      "otpInvalid": "OTP 코드는 6자리여야 합니다",
-      "loginFailed": "로그인에 실패했습니다",
-      "registerFailed": "회원가입에 실패했습니다",
-      "forgotPasswordFailed": "재설정 코드 전송에 실패했습니다",
-      "otpVerificationFailed": "인증에 실패했습니다",
-      "newPasswordFailed": "비밀번호 업데이트에 실패했습니다",
-      "resendOtpFailed": "코드 재전송에 실패했습니다",
-      "UserNotFoundException": "사용자를 찾을 수 없습니다",
-      "NotAuthorizedException": "이메일 또는 비밀번호가 잘못되었습니다",
-      "UserNotConfirmedException": "이메일 주소를 확인하세요",
-      "InvalidPasswordException": "비밀번호가 요구사항을 충족하지 않습니다",
-      "UsernameExistsException": "이 이메일 주소는 이미 사용 중입니다",
-      "CodeMismatchException": "코드가 잘못되었습니다",
-      "ExpiredCodeException": "코드가 만료되었습니다",
-      "LimitExceededException": "시도 횟수가 너무 많습니다. 나중에 다시 시도하세요",
-      "InvalidParameterException": "유효하지 않은 매개변수",
-      "TooManyRequestsException": "요청이 너무 많습니다. 나중에 다시 시도하세요"
-    }
-  },
-  "publishNew": {
-    "title": "게시물 올리기",
-    "subtitle": "분실물이나 습득물을 신고",
-    "lostTitle": "분실물 신고",
-    "foundTitle": "습득물 신고",
-    "lostSubtitle": "분실물을 찾는 데 도움을 주세요",
-    "foundSubtitle": "누군가의 물건을 찾는 데 도움을 주세요",
-    "loginNotice": "광고를 게시하려면 로그인해야 합니다. 양식을 작성하고 제출 시 로그인하세요.",
-    "type": {
-      "label": "게시물 유형",
-      "lost": "분실물",
-      "found": "습득물"
-    },
-    "form": {
-      "title": {
-        "label": "게시물 제목",
-        "placeholder": "예: 지하철에서 분실한 iPhone 12 Pro"
+    "plans": {
+      "pro": {
+        "name": "프로",
+        "description": "일반 사용자용",
+        "features": {
+          "listings": "무제한 광고",
+          "priority": "우선 지원",
+          "analytics": "상세한 분석",
+          "support": "24시간 지원"
+        }
       },
-      "description": {
-        "label": "자세한 설명",
-        "placeholder": "물건에 대한 자세한 설명, 분실/발견 상황..."
+      "advanced": {
+        "name": "고급",
+        "description": "자주 사용하는 사용자용",
+        "features": {
+          "everything": "프로 플랜의 모든 것",
+          "boost": "월간 무료 부스트",
+          "premium": "프리미엄 검색 포함",
+          "api": "API 액세스"
+        }
       },
-      "category": {
-        "label": "카테고리",
-        "placeholder": "카테고리를 선택하세요"
-      },
-      "location": {
-        "label": "위치",
-        "placeholder": "물건이 분실/발견된 장소"
-      },
-      "dateOccurred": {
-        "label": "사건 날짜",
-        "placeholder": "언제 발생했나요?"
-      },
-      "contactPhone": {
-        "label": "연락처 전화번호",
-        "placeholder": "+82 10-1234-5678"
-      },
-      "contactEmail": {
-        "label": "연락처 이메일",
-        "placeholder": "당신의@이메일.com"
-      },
-      "image": {
-        "label": "물건 사진",
-        "placeholder": "식별을 돕기 위해 사진을 추가하세요",
-        "upload": "클릭하여 사진 업로드",
-        "change": "사진 변경",
-        "remove": "사진 제거"
+      "premium": {
+        "name": "프리미엄",
+        "description": "전문가용",
+        "features": {
+          "unlimited": "모든 것 무제한",
+          "dedicated": "전담 계정 관리자",
+          "custom": "사용자 정의 통합",
+          "priority": "최대 우선 지원"
+        }
       }
-    },
-    "validation": {
-      "title_required": "제목이 필요합니다",
-      "description_min_length": "설명은 10자 이상이어야 합니다",
-      "category_required": "카테고리를 선택해주세요",
-      "location_required": "위치가 필요합니다",
-      "date_required": "날짜가 필요합니다",
-      "email_invalid": "유효하지 않은 이메일 형식"
-    },
-    "success": "게시물이 성공적으로 게시되었습니다!",
-    "error": "게시 중 오류가 발생했습니다",
-    "buttons": {
-      "publish": "게시물 올리기",
-      "publishing": "게시 중..."
     }
   }
 }

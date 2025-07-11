@@ -9,7 +9,8 @@
     "logout": "Cerrar sesión",
     "features": "Características",
     "howItWorks": "Cómo funciona",
-    "contact": "Contacto"
+    "contact": "Contacto",
+    "pricing": "Precios"
   },
   "common": {
     "back": "Volver",
@@ -279,6 +280,77 @@
     },
     "followUs": "Síguenos",
     "copyright": "© 2024 ObjetsTrouvés. Todos los derechos reservados."
+  },
+  "pricing": {
+    "title": "Precios",
+    "subtitle": "Elige el plan que te conviene",
+    "popular": "Popular",
+    "select": "Seleccionar",
+    "tabs": {
+      "services": "Servicios",
+      "subscriptions": "Suscripciones"
+    },
+    "services": {
+      "boost": {
+        "name": "Impulsar anuncio",
+        "description": "Destaca tu anuncio para mayor visibilidad",
+        "features": {
+          "priority": "Visualización prioritaria",
+          "highlight": "Resaltado en color",
+          "duration": "Duración: 7 días"
+        }
+      },
+      "search": {
+        "name": "Búsqueda premium",
+        "description": "Alertas y filtros avanzados para tus búsquedas",
+        "features": {
+          "alerts": "Alertas personalizadas por email",
+          "radius": "Radio de búsqueda extendido",
+          "priority": "Acceso prioritario a nuevos anuncios"
+        }
+      },
+      "verification": {
+        "name": "Verificación de identidad",
+        "description": "Insignia de confianza para tus anuncios",
+        "features": {
+          "badge": "Insignia de confianza verificada",
+          "trust": "Aumenta la confianza de los usuarios",
+          "priority": "Soporte prioritario"
+        }
+      }
+    },
+    "plans": {
+      "pro": {
+        "name": "Pro",
+        "description": "Para usuarios regulares",
+        "features": {
+          "listings": "Anuncios ilimitados",
+          "priority": "Soporte prioritario",
+          "analytics": "Análisis detallados",
+          "support": "Soporte 24/7"
+        }
+      },
+      "advanced": {
+        "name": "Avanzado",
+        "description": "Para usuarios frecuentes",
+        "features": {
+          "everything": "Todo del plan Pro",
+          "boost": "Impulso gratuito mensual",
+          "premium": "Búsqueda premium incluida",
+          "api": "Acceso a API"
+        }
+      },
+      "premium": {
+        "name": "Premium",
+        "description": "Para profesionales",
+        "features": {
+          "unlimited": "Todo ilimitado",
+          "dedicated": "Gestor de cuenta dedicado",
+          "custom": "Integraciones personalizadas",
+          "priority": "Soporte prioritario máximo"
+        }
+      }
+    }
   },
   "error": {
     "404_title": "404 Página no encontrada",

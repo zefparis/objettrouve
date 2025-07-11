@@ -267,6 +267,77 @@
     "followUs": "Suivez-nous",
     "copyright": "© 2024 ObjetsTrouvés. Tous droits réservés."
   },
+  "pricing": {
+    "title": "Tarification",
+    "subtitle": "Choisissez le plan qui vous convient",
+    "popular": "Populaire",
+    "select": "Sélectionner",
+    "tabs": {
+      "services": "Services",
+      "subscriptions": "Abonnements"
+    },
+    "services": {
+      "boost": {
+        "name": "Booster l'annonce",
+        "description": "Mettez en avant votre annonce pour plus de visibilité",
+        "features": {
+          "priority": "Affichage prioritaire",
+          "highlight": "Mise en évidence colorée",
+          "duration": "Durée: 7 jours"
+        }
+      },
+      "search": {
+        "name": "Recherche premium",
+        "description": "Alertes et filtres avancés pour vos recherches",
+        "features": {
+          "alerts": "Alertes email personnalisées",
+          "radius": "Rayon de recherche étendu",
+          "priority": "Accès prioritaire aux nouvelles annonces"
+        }
+      },
+      "verification": {
+        "name": "Vérification d'identité",
+        "description": "Badge de confiance pour vos annonces",
+        "features": {
+          "badge": "Badge de confiance vérifié",
+          "trust": "Augmente la confiance des utilisateurs",
+          "priority": "Support prioritaire"
+        }
+      }
+    },
+    "plans": {
+      "pro": {
+        "name": "Pro",
+        "description": "Pour les utilisateurs réguliers",
+        "features": {
+          "listings": "Annonces illimitées",
+          "priority": "Support prioritaire",
+          "analytics": "Statistiques détaillées",
+          "support": "Support 24/7"
+        }
+      },
+      "advanced": {
+        "name": "Avancé",
+        "description": "Pour les utilisateurs fréquents",
+        "features": {
+          "everything": "Tout du plan Pro",
+          "boost": "Boost gratuit mensuel",
+          "premium": "Recherche premium incluse",
+          "api": "Accès API"
+        }
+      },
+      "premium": {
+        "name": "Premium",
+        "description": "Pour les professionnels",
+        "features": {
+          "unlimited": "Tout illimité",
+          "dedicated": "Gestionnaire de compte dédié",
+          "custom": "Intégrations personnalisées",
+          "priority": "Support prioritaire maximum"
+        }
+      }
+    }
+  },
   "error": {
     "404_title": "404 Page introuvable",
     "404_message": "La page que vous recherchez n'existe pas ou a été déplacée."
