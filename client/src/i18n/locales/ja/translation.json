@@ -223,6 +223,15 @@
     "recentItemsDesc": "最新の遺失物・落とし物の広告を発見",
     "seeAll": "すべて見る"
   },
+  "map": {
+    "title": "インタラクティブマップ",
+    "subtitle": "あなたの近くの遺失物・拾得物を表示",
+    "interactiveMap": "位置情報付きインタラクティブマップ",
+    "integration": "Google MapsまたはOpenStreetMapとの統合",
+    "lostItems": "紛失物",
+    "foundItems": "拾得物",
+    "fullscreen": "全画面表示"
+  },
   "footer": {
     "description": "フランスの主要遺失物発見プラットフォーム",
     "links": {

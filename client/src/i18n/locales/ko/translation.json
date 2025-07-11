@@ -223,6 +223,15 @@
     "recentItemsDesc": "최신 분실물·습득물 광고를 확인하세요",
     "seeAll": "모두 보기"
   },
+  "map": {
+    "title": "인터랙티브 지도",
+    "subtitle": "근처의 분실물·습득물을 시각화",
+    "interactiveMap": "위치 정보가 포함된 인터랙티브 지도",
+    "integration": "Google Maps 또는 OpenStreetMap과 통합",
+    "lostItems": "분실물",
+    "foundItems": "습득물",
+    "fullscreen": "전체 화면으로 보기"
+  },
   "footer": {
     "description": "프랑스 대표 분실물 찾기 플랫폼",
     "links": {

@@ -218,6 +218,15 @@
     "contact": "Contact",
     "backToSearch": "Terug naar zoeken"
   },
+  "map": {
+    "title": "Interactieve Kaart",
+    "subtitle": "Visualiseer verloren en gevonden voorwerpen bij je in de buurt",
+    "interactiveMap": "Interactieve kaart met geolocatie",
+    "integration": "Integratie met Google Maps of OpenStreetMap",
+    "lostItems": "Verloren voorwerpen",
+    "foundItems": "Gevonden voorwerpen",
+    "fullscreen": "Volledig scherm bekijken"
+  },
   "home": {
     "recentItems": "Recente voorwerpen",
     "recentItemsDesc": "Ontdek de nieuwste advertenties van verloren en gevonden voorwerpen",

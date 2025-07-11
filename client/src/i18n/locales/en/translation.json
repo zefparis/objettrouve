@@ -186,6 +186,15 @@
     "alertDescription": "Create an alert to be notified of similar objects",
     "createAlert": "Create Alert"
   },
+  "map": {
+    "title": "Interactive Map",
+    "subtitle": "Visualize lost and found objects near you",
+    "interactiveMap": "Interactive map with geolocation",
+    "integration": "Integration with Google Maps or OpenStreetMap",
+    "lostItems": "Lost items",
+    "foundItems": "Found items",
+    "fullscreen": "View fullscreen"
+  },
   "common": {
     "loading": "Loading...",
     "error": "Error",

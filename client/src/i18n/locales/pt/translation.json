@@ -186,6 +186,15 @@
     "alertDescription": "Crie um alerta para ser notificado de objetos similares",
     "createAlert": "Criar alerta"
   },
+  "map": {
+    "title": "Mapa Interativo",
+    "subtitle": "Visualize objetos perdidos e encontrados perto de você",
+    "interactiveMap": "Mapa interativo com geolocalização",
+    "integration": "Integração com Google Maps ou OpenStreetMap",
+    "lostItems": "Objetos perdidos",
+    "foundItems": "Objetos encontrados",
+    "fullscreen": "Ver em tela cheia"
+  },
   "common": {
     "loading": "Carregando...",
     "error": "Erro",

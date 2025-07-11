@@ -125,6 +125,15 @@
     "recentItemsDesc": "发现最新的失物招领广告",
     "seeAll": "查看全部"
   },
+  "map": {
+    "title": "互动地图",
+    "subtitle": "查看您附近的失物招领信息",
+    "interactiveMap": "带地理定位的互动地图",
+    "integration": "集成Google Maps或OpenStreetMap",
+    "lostItems": "丢失物品",
+    "foundItems": "找到物品",
+    "fullscreen": "全屏查看"
+  },
   "footer": {
     "description": "法国领先的失物招领平台",
     "links": {

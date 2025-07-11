@@ -218,6 +218,15 @@
     "contact": "Kontakt",
     "backToSearch": "Zurück zur Suche"
   },
+  "map": {
+    "title": "Interaktive Karte",
+    "subtitle": "Visualisieren Sie verlorene und gefundene Gegenstände in Ihrer Nähe",
+    "interactiveMap": "Interaktive Karte mit Geolokalisierung",
+    "integration": "Integration mit Google Maps oder OpenStreetMap",
+    "lostItems": "Verlorene Gegenstände",
+    "foundItems": "Gefundene Gegenstände",
+    "fullscreen": "Vollbild anzeigen"
+  },
   "home": {
     "recentItems": "Aktuelle Gegenstände",
     "recentItemsDesc": "Entdecken Sie die neuesten Anzeigen von verlorenen und gefundenen Gegenständen",
