@@ -46,6 +46,15 @@ Preferred communication style: Simple, everyday language.
 - **Full Internationalization**: All pages translated into all 10 supported languages
 - **Navigation Integration**: Added links in navbar and footer for easy access
 
+### Navigation & User Experience Improvements (January 2025)
+- **Universal Back to Home Buttons**: Added consistent navigation buttons to all major pages
+  - Dashboard, publish, profile, checkout, search, contact, how-it-works, payment-success, admin-dashboard, item-detail
+  - Buttons feature both arrow-left and home icons for clear navigation intent
+- **Currency Localization**: Converted all pricing and financial displays from USD to EUR
+  - Updated checkout process, payment success page, admin dashboard, and pricing components
+  - Configured PayPal and Stripe integration to use EUR currency
+- **French Market Optimization**: Platform now fully aligned with French market expectations
+
 ### Database Schema
 Located in `shared/schema.ts` with the following main tables:
 - **users**: User profiles with Replit Auth integration

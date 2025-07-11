@@ -19,7 +19,8 @@ import { useToast } from "@/hooks/use-toast";
 import { apiRequest } from "@/lib/queryClient";
 import { isUnauthorizedError } from "@/lib/authUtils";
 import { CATEGORIES } from "@shared/schema";
-import { Camera, Upload, MapPin, Calendar } from "lucide-react";
+import { Camera, Upload, MapPin, Calendar, ArrowLeft, Home } from "lucide-react";
+import { Link } from "wouter";
 
 const publishSchema = z.object({
   type: z.enum(["lost", "found"]),
@@ -146,6 +147,17 @@ export default function Publish() {
       <Navbar />
       
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        {/* Bouton retour à l'accueil */}
+        <div className="mb-6">
+          <Link href="/">
+            <Button variant="ghost" className="flex items-center gap-2 hover:bg-gray-100 dark:hover:bg-gray-800">
+              <ArrowLeft className="w-4 h-4" />
+              <Home className="w-4 h-4" />
+              <span>{t("nav.home")}</span>
+            </Button>
+          </Link>
+        </div>
+
         {/* Authentication notice for non-authenticated users */}
         {!isAuthenticated && !isLoading && (
           <div className="mb-6 p-4 bg-blue-50 border border-blue-200 rounded-lg">

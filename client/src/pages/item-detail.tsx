@@ -12,7 +12,8 @@ import { Separator } from "@/components/ui/separator";
 import { useToast } from "@/hooks/use-toast";
 import { apiRequest } from "@/lib/queryClient";
 import { isUnauthorizedError } from "@/lib/authUtils";
-import { MapPin, Calendar, Phone, Mail, MessageCircle, User } from "lucide-react";
+import { MapPin, Calendar, Phone, Mail, MessageCircle, User, ArrowLeft, Home } from "lucide-react";
+import { Link } from "wouter";
 import { CATEGORIES } from "@shared/schema";
 
 export default function ItemDetail() {
@@ -129,6 +130,17 @@ export default function ItemDetail() {
       <Navbar />
       
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        {/* Bouton retour à l'accueil */}
+        <div className="mb-6">
+          <Link href="/">
+            <Button variant="ghost" className="flex items-center gap-2 hover:bg-gray-100 dark:hover:bg-gray-800">
+              <ArrowLeft className="w-4 h-4" />
+              <Home className="w-4 h-4" />
+              <span>{t("nav.home")}</span>
+            </Button>
+          </Link>
+        </div>
+
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Main Content */}
           <div className="lg:col-span-2">

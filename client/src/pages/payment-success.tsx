@@ -3,7 +3,8 @@ import { useEffect, useState } from "react";
 import { useLocation } from "wouter";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { CheckCircle, Download, ArrowRight } from "lucide-react";
+import { CheckCircle, Download, ArrowRight, ArrowLeft, Home } from "lucide-react";
+import { Link } from "wouter";
 import { useAuth } from "@/hooks/useAuth";
 
 export default function PaymentSuccess() {
@@ -39,7 +40,7 @@ export default function PaymentSuccess() {
       setPaymentDetails({
         status: 'succeeded',
         amount: 0,
-        currency: 'usd',
+        currency: 'eur',
         product: 'Unknown'
       });
     }
@@ -60,6 +61,17 @@ export default function PaymentSuccess() {
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900 py-12">
       <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Bouton retour à l'accueil */}
+        <div className="mb-6">
+          <Link href="/">
+            <Button variant="ghost" className="flex items-center gap-2 hover:bg-gray-100 dark:hover:bg-gray-800">
+              <ArrowLeft className="w-4 h-4" />
+              <Home className="w-4 h-4" />
+              <span>{t("nav.home")}</span>
+            </Button>
+          </Link>
+        </div>
+
         <Card className="text-center">
           <CardHeader>
             <div className="flex justify-center mb-4">

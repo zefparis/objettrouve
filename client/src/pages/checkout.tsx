@@ -73,7 +73,7 @@ const CheckoutForm = ({ planDetails, method }: CheckoutFormProps) => {
         </div>
         <PayPalButton
           amount={planDetails.price.toString()}
-          currency="USD"
+          currency="EUR"
           intent="CAPTURE"
         />
       </div>
@@ -96,7 +96,7 @@ const CheckoutForm = ({ planDetails, method }: CheckoutFormProps) => {
         className="w-full"
         size="lg"
       >
-        {isProcessing ? t("checkout.processing") : t("checkout.pay", { amount: planDetails.price })}
+        {isProcessing ? t("checkout.processing") : t("checkout.pay", { amount: `€${planDetails.price}` })}
       </Button>
     </form>
   );
@@ -215,16 +215,16 @@ export default function Checkout() {
               <div className="space-y-2">
                 <div className="flex justify-between">
                   <span>{t("checkout.summary.subtotal")}</span>
-                  <span>${planDetails.price}</span>
+                  <span>€{planDetails.price}</span>
                 </div>
                 <div className="flex justify-between">
                   <span>{t("checkout.summary.tax")}</span>
-                  <span>$0.00</span>
+                  <span>€0.00</span>
                 </div>
                 <div className="border-t pt-2">
                   <div className="flex justify-between font-semibold text-lg">
                     <span>{t("checkout.summary.total")}</span>
-                    <span>${planDetails.price}</span>
+                    <span>€{planDetails.price}</span>
                   </div>
                 </div>
               </div>

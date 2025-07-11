@@ -27,8 +27,11 @@ import {
   Eye,
   Clock,
   CheckCircle,
-  AlertCircle
+  AlertCircle,
+  ArrowLeft,
+  Home
 } from "lucide-react";
+import { Link } from "wouter";
 import { CATEGORIES } from "@shared/schema";
 
 export default function Dashboard() {
@@ -173,6 +176,17 @@ export default function Dashboard() {
       <Navbar />
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        {/* Bouton retour à l'accueil */}
+        <div className="mb-6">
+          <Link href="/">
+            <Button variant="ghost" className="flex items-center gap-2 hover:bg-gray-100 dark:hover:bg-gray-800">
+              <ArrowLeft className="w-4 h-4" />
+              <Home className="w-4 h-4" />
+              <span>{t("nav.home")}</span>
+            </Button>
+          </Link>
+        </div>
+
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-8">
           <div className="mb-4 md:mb-0">

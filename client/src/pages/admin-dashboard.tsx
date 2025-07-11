@@ -19,8 +19,11 @@ import {
   AlertCircle,
   CheckCircle,
   Languages,
-  FileText
+  FileText,
+  ArrowLeft,
+  Home
 } from "lucide-react";
+import { Link } from "wouter";
 import { useAuth } from "@/hooks/useAuth";
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import { apiRequest } from "@/lib/queryClient";
@@ -119,6 +122,17 @@ export default function AdminDashboard() {
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900 py-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Bouton retour à l'accueil */}
+        <div className="mb-6">
+          <Link href="/">
+            <Button variant="ghost" className="flex items-center gap-2 hover:bg-gray-100 dark:hover:bg-gray-800">
+              <ArrowLeft className="w-4 h-4" />
+              <Home className="w-4 h-4" />
+              <span>{t("nav.home")}</span>
+            </Button>
+          </Link>
+        </div>
+
         <div className="mb-8">
           <h1 className="text-3xl font-bold text-gray-900 dark:text-white">
             {t("admin.title")}
@@ -137,7 +151,7 @@ export default function AdminDashboard() {
             </CardHeader>
             <CardContent>
               <div className="text-2xl font-bold">
-                ${revenueData?.totalRevenue?.toLocaleString() || "0"}
+                €{revenueData?.totalRevenue?.toLocaleString() || "0"}
               </div>
               <p className="text-xs text-muted-foreground">
                 +{revenueData?.revenueGrowth || 0}% {t("admin.revenue.growth")}

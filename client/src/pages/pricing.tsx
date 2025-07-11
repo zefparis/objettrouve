@@ -5,8 +5,9 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Check, Crown, Zap, Shield, Star, Users } from "lucide-react";
+import { Check, Crown, Zap, Shield, Star, Users, ArrowLeft, Home } from "lucide-react";
 import { useAuth } from "@/hooks/useAuth";
+import { Link } from "wouter";
 
 export default function Pricing() {
   const { t } = useTranslation();
@@ -117,6 +118,17 @@ export default function Pricing() {
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900 py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Bouton retour à l'accueil */}
+        <div className="mb-6">
+          <Link href="/">
+            <Button variant="ghost" className="flex items-center gap-2 hover:bg-gray-100 dark:hover:bg-gray-800">
+              <ArrowLeft className="w-4 h-4" />
+              <Home className="w-4 h-4" />
+              <span>{t("nav.home")}</span>
+            </Button>
+          </Link>
+        </div>
+
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
             {t("pricing.title")}
@@ -152,7 +164,7 @@ export default function Pricing() {
                     <CardTitle className="text-xl">{service.name}</CardTitle>
                     <CardDescription>{service.description}</CardDescription>
                     <div className="text-3xl font-bold text-primary">
-                      ${service.price}
+                      €{service.price}
                     </div>
                   </CardHeader>
                   <CardContent>
@@ -193,8 +205,8 @@ export default function Pricing() {
                     <CardTitle className="text-xl">{plan.name}</CardTitle>
                     <CardDescription>{plan.description}</CardDescription>
                     <div className="text-3xl font-bold text-primary">
-                      ${plan.price}
-                      <span className="text-sm text-gray-500">/{t("pricing.month")}</span>
+                      €{plan.price}
+                      <span className="text-sm text-gray-500">/mois</span>
                     </div>
                   </CardHeader>
                   <CardContent>

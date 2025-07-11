@@ -29,8 +29,11 @@ import {
   Bell,
   Globe,
   Eye,
-  Lock
+  Lock,
+  ArrowLeft,
+  Home
 } from "lucide-react";
+import { Link } from "wouter";
 
 export default function Profile() {
   const { t } = useTranslation();
@@ -233,6 +236,17 @@ export default function Profile() {
       
       <div className="container mx-auto px-4 py-8">
         <div className="max-w-4xl mx-auto">
+          {/* Bouton retour à l'accueil */}
+          <div className="mb-6">
+            <Link href="/">
+              <Button variant="ghost" className="flex items-center gap-2 hover:bg-gray-100 dark:hover:bg-gray-800">
+                <ArrowLeft className="w-4 h-4" />
+                <Home className="w-4 h-4" />
+                <span>{t("nav.home")}</span>
+              </Button>
+            </Link>
+          </div>
+
           {/* Profile Header */}
           <Card className="mb-8 overflow-hidden">
             <div className="h-32 bg-gradient-to-r from-blue-500 to-purple-600"></div>
