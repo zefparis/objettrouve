@@ -11,7 +11,7 @@ export default function Hero() {
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
     if (searchTerm.trim()) {
-      window.location.href = `/rechercher?search=${encodeURIComponent(searchTerm)}`;
+      window.location.href = `/search?search=${encodeURIComponent(searchTerm)}`;
     }
   };
 

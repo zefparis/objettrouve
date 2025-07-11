@@ -14,10 +14,13 @@ import { CATEGORIES } from "@shared/schema";
 
 export default function Search() {
   const { t } = useTranslation();
-  const [search, setSearch] = useState("");
-  const [selectedType, setSelectedType] = useState<string>("all");
-  const [selectedCategory, setSelectedCategory] = useState<string>("all");
   const [location, setLocation] = useLocation();
+  
+  // Get URL params
+  const urlParams = new URLSearchParams(window.location.search);
+  const [search, setSearch] = useState(urlParams.get("search") || "");
+  const [selectedType, setSelectedType] = useState<string>(urlParams.get("type") || "all");
+  const [selectedCategory, setSelectedCategory] = useState<string>(urlParams.get("category") || "all");
 
   const { data: items, isLoading } = useQuery({
     queryKey: ["/api/items", { search, type: selectedType, category: selectedCategory }],

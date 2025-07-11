@@ -37,7 +37,7 @@ export default function Categories() {
             <Card
               key={category.id}
               className="hover:shadow-md transition-shadow cursor-pointer"
-              onClick={() => window.location.href = `/rechercher?category=${category.id}`}
+              onClick={() => window.location.href = `/search?category=${category.id}`}
             >
               <CardContent className="p-6 text-center">
                 <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mx-auto mb-3">
