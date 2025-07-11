@@ -425,6 +425,7 @@
     "foundTitle": "Gefundenen Gegenstand melden",
     "lostSubtitle": "Helfen Sie uns, Ihren verlorenen Gegenstand zu finden",
     "foundSubtitle": "Helfen Sie jemandem, seinen Gegenstand zurückzubekommen",
+    "loginNotice": "Sie müssen angemeldet sein, um eine Anzeige zu veröffentlichen. Füllen Sie das Formular aus und melden Sie sich beim Senden an.",
     "type": {
       "label": "Anzeigentyp",
       "lost": "Verlorener Gegenstand",

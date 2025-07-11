@@ -413,6 +413,7 @@
     "foundTitle": "습득물 신고",
     "lostSubtitle": "분실물을 찾는 데 도움을 주세요",
     "foundSubtitle": "누군가의 물건을 찾는 데 도움을 주세요",
+    "loginNotice": "광고를 게시하려면 로그인해야 합니다. 양식을 작성하고 제출 시 로그인하세요.",
     "type": {
       "label": "게시물 유형",
       "lost": "분실물",

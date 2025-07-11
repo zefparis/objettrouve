@@ -413,6 +413,7 @@
     "foundTitle": "Gevonden item melden",
     "lostSubtitle": "Help ons je verloren item te vinden",
     "foundSubtitle": "Help iemand zijn item terug te krijgen",
+    "loginNotice": "Je moet ingelogd zijn om een advertentie te plaatsen. Vul het formulier in en log in bij het versturen.",
     "type": {
       "label": "Advertentietype",
       "lost": "Verloren item",

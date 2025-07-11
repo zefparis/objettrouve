@@ -532,6 +532,7 @@
     "foundTitle": "Reportar Objeto Encontrado",
     "lostSubtitle": "Ayúdanos a encontrar tu objeto perdido",
     "foundSubtitle": "Ayuda a alguien a recuperar su objeto",
+    "loginNotice": "Debes iniciar sesión para publicar un anuncio. Completa el formulario e inicia sesión al enviar.",
     "type": {
       "label": "Tipo de Anuncio",
       "lost": "Objeto Perdido",

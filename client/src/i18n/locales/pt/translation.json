@@ -532,6 +532,7 @@
     "foundTitle": "Reportar Item Encontrado",
     "lostSubtitle": "Ajude-nos a encontrar seu item perdido",
     "foundSubtitle": "Ajude alguém a recuperar seu item",
+    "loginNotice": "Você deve estar logado para publicar um anúncio. Preencha o formulário e faça login ao enviar.",
     "type": {
       "label": "Tipo de Anúncio",
       "lost": "Item Perdido",

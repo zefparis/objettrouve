@@ -24,13 +24,13 @@ function Router() {
       <Route path="/contact" component={Contact} />
       <Route path="/search" component={Search} />
       <Route path="/rechercher" component={Search} />
+      <Route path="/publier" component={Publish} />
+      <Route path="/annonce/:id" component={ItemDetail} />
       {isLoading || !isAuthenticated ? (
         <Route path="/" component={Landing} />
       ) : (
         <>
           <Route path="/" component={Home} />
-          <Route path="/publier" component={Publish} />
-          <Route path="/annonce/:id" component={ItemDetail} />
           <Route path="/dashboard" component={Dashboard} />
           <Route path="/chat" component={Chat} />
           <Route path="/chat/:itemId" component={Chat} />

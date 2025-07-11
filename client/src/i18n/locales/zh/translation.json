@@ -273,6 +273,7 @@
     "foundTitle": "报告找到物品",
     "lostSubtitle": "帮助我们找到您丢失的物品",
     "foundSubtitle": "帮助某人找回他们的物品",
+    "loginNotice": "您必须登录才能发布广告。请填写表单并在提交时登录。",
     "type": {
       "label": "信息类型",
       "lost": "丢失物品",

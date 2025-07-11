@@ -532,6 +532,7 @@
     "foundTitle": "Report Found Item",
     "lostSubtitle": "Help us find your lost item",
     "foundSubtitle": "Help someone recover their item",
+    "loginNotice": "You must be logged in to publish an ad. Fill out the form and log in when submitting.",
     "type": {
       "label": "Listing Type",
       "lost": "Lost Item",

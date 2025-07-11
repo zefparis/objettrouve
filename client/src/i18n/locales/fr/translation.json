@@ -520,6 +520,7 @@
     "foundTitle": "Déclarer un objet trouvé",
     "lostSubtitle": "Aidez-nous à retrouver votre objet perdu",
     "foundSubtitle": "Aidez quelqu'un à récupérer son objet",
+    "loginNotice": "Vous devez vous connecter pour publier une annonce. Remplissez le formulaire et connectez-vous lors de la soumission.",
     "type": {
       "label": "Type d'annonce",
       "lost": "Objet perdu",
