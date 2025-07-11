@@ -73,6 +73,12 @@ Located in `shared/schema.ts` with the following main tables:
 - User profile management with Cognito user pools
 - Removed Replit Auth dependency completely (January 2025)
 - All authentication-related middleware and routes cleaned up (January 2025)
+- **Major Architecture Restructuring (January 2025)**:
+  - Unified authentication system with single `useAuth` hook
+  - Removed inconsistent `useCognitoAuth` usage across all components
+  - Created `AuthGuard` component for route protection
+  - Centralized authentication utilities in `authUtils.ts`
+  - Fixed critical FormData transmission bug in `apiRequest` function
 
 ### File Management
 - Image upload handling with Multer
