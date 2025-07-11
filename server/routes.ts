@@ -99,6 +99,17 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
+  app.post('/api/cognito/complete-new-password', async (req, res) => {
+    try {
+      const { email, temporaryPassword, newPassword } = req.body;
+      const result = await cognitoService.completeNewPassword(email, temporaryPassword, newPassword);
+      res.json(result);
+    } catch (error: any) {
+      console.error("Cognito complete new password error:", error);
+      res.status(400).json({ error: error.code || 'CompleteNewPasswordError', message: error.message });
+    }
+  });
+
   // Auth routes
   app.get('/api/auth/user', isAuthenticated, async (req: any, res) => {
     try {
