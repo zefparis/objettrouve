@@ -1,0 +1,78 @@
+Tu es un expert full-stack. Crée une **application complète de gestion d’objets perdus** comme FranceObjetsTrouvés, avec une architecture moderne orientée AWS et un design UX clean, 100% en français.
+
+---
+
+## 🎯 Objectif
+Application moderne en SaaS, pour publier, rechercher et retrouver des objets perdus ou trouvés, avec chat sécurisé et paiements.
+
+---
+
+## ⚙️ Tech Stack
+- **Frontend** : SvelteKit + TailwindCSS
+- **Backend** : Node.js (Express.js)
+- **Auth** : AWS Cognito (email + téléphone obligatoires)
+- **Base de données** : DynamoDB (AWS) ou RDS PostgreSQL
+- **Stockage fichiers (images)** : AWS S3
+- **Paiement** : Stripe + PayPal (pour mises en avant & abonnements)
+- **Chat** : Socket.io ou AWS AppSync (si GraphQL)
+- **Déploiement** : Railway (backend + frontend séparés ou fullstack)
+
+---
+
+## 🔐 Authentification (RGPD conforme)
+- Inscription : nom, email, téléphone obligatoires
+- Connexion : par email + mot de passe (Cognito Hosted UI ou API)
+- Confirmation OTP par SMS (optionnel)
+
+---
+
+## 📦 Fonctionnalités principales
+
+### 👤 Utilisateurs
+- Créer compte / login via Cognito
+- Gérer leurs annonces (perdu ou trouvé)
+- Consulter leur historique
+
+### 📸 Annonce
+- Déposer un objet avec :
+  - 📍 Lieu (adresse + map)
+  - 📷 Photo(s)
+  - 🕒 Date de perte/découverte
+  - 📱 Téléphone et email requis
+  - 📝 Description + catégorie
+
+### 🔎 Recherche
+- 🔍 Par mot-clé, catégorie, lieu, date
+- 🗺️ Carte interactive des objets
+- 📬 Alerte mail si un objet correspond
+
+### 💬 Chat intégré
+- Démarrage d’un chat sécurisé avec le propriétaire sans partager le numéro
+- Chat visible uniquement après clic sur “Cet objet m’appartient”
+- Backend WebSocket sécurisé
+
+### 💳 Paiements
+- Stripe et PayPal :
+  - 1€ = mise en avant de l’annonce
+  - 5€/mois = compte pro (hôtels, taxis, villes)
+- Intégration webhook
+- Génération de factures PDF avec nom/entreprise
+
+---
+
+## 🧩 Pages à générer
+- `/` accueil avec boutons "J’ai perdu / J’ai trouvé"
+- `/annonce/[id]` fiche objet
+- `/publier` formulaire de publication
+- `/dashboard` historique utilisateur
+- `/chat` messagerie privée
+- `/admin` (bonus) : modération & stats
+- `/pro` : offres entreprises
+
+---
+
+## 🧱 Fournis-moi :
+- Le code complet (frontend + backend)
+- Les composants UI bien découpés
+- README d'installation local + Railway
+- Instructions AWS : setup Cognito, S3, DynamoDB
