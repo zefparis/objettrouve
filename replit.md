@@ -53,6 +53,10 @@ Preferred communication style: Simple, everyday language.
 - **Currency Localization**: Converted all pricing and financial displays from USD to EUR
   - Updated checkout process, payment success page, admin dashboard, and pricing components
   - Configured PayPal and Stripe integration to use EUR currency
+- **Pricing Reduction (January 2025)**: Reduced all prices by 50% to make the platform more accessible
+  - Services: Boost Listing €4.99 → €2.49, Premium Search €4.99 → €2.49, Verification €14.99 → €7.49
+  - Subscriptions: Pro €29.99 → €14.99, Advanced €59.99 → €29.99, Premium €99.99 → €49.99
+  - Updated both frontend pricing page and backend API routes
 - **French Market Optimization**: Platform now fully aligned with French market expectations
 
 ### Database Schema

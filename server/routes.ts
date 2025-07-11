@@ -403,7 +403,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
   // Stripe payment routes
   app.post("/api/stripe/create-payment-intent", async (req, res) => {
     try {
-      const { amount, currency = "usd" } = req.body;
+      const { amount, currency = "eur" } = req.body;
       
       if (!amount || amount <= 0) {
         return res.status(400).json({ error: "Invalid amount" });
@@ -434,7 +434,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
           id: "boost_listing",
           name: "Boost Listing",
           description: "Boost your listing to the top",
-          price: 9.99,
+          price: 4.99,
           type: "premium_service",
           features: ["Priority placement", "Highlighted display", "7-day duration"]
         },
@@ -442,7 +442,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
           id: "premium_search",
           name: "Premium Search",
           description: "Advanced search capabilities",
-          price: 4.99,
+          price: 2.49,
           type: "premium_service",
           features: ["Smart alerts", "Extended radius", "Priority support"]
         },
@@ -450,7 +450,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
           id: "verification",
           name: "Profile Verification",
           description: "Verify your profile",
-          price: 14.99,
+          price: 7.49,
           type: "premium_service",
           features: ["Verified badge", "Increased trust", "Priority listing"]
         },
@@ -458,7 +458,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
           id: "pro",
           name: "Pro Plan",
           description: "Perfect for regular users",
-          price: 29.99,
+          price: 14.99,
           type: "subscription",
           features: ["Unlimited listings", "Priority support", "Analytics", "Customer support"]
         },
@@ -466,7 +466,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
           id: "advanced",
           name: "Advanced Plan",
           description: "For teams and businesses",
-          price: 59.99,
+          price: 29.99,
           type: "subscription",
           features: ["Team management", "API access", "Custom branding", "Advanced analytics"]
         },
@@ -474,7 +474,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
           id: "premium",
           name: "Premium Plan",
           description: "Full-featured enterprise solution",
-          price: 99.99,
+          price: 49.99,
           type: "subscription",
           features: ["Unlimited everything", "Dedicated support", "White-label", "Training"]
         }
@@ -490,7 +490,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       if (paymentMethod === 'stripe') {
         const paymentIntent = await stripe.paymentIntents.create({
           amount: Math.round(plan.price * 100),
-          currency: "usd",
+          currency: "eur",
           metadata: {
             planId: plan.id,
             userId: req.user?.claims?.sub || "",

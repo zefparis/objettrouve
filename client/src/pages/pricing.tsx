@@ -20,7 +20,7 @@ export default function Pricing() {
       id: "boost_listing",
       name: t("pricing.services.boost.name"),
       description: t("pricing.services.boost.description"),
-      price: 9.99,
+      price: 4.99,
       icon: <Zap className="w-8 h-8 text-yellow-500" />,
       features: [
         t("pricing.services.boost.features.priority"),
@@ -33,7 +33,7 @@ export default function Pricing() {
       id: "premium_search",
       name: t("pricing.services.search.name"),
       description: t("pricing.services.search.description"),
-      price: 4.99,
+      price: 2.49,
       icon: <Shield className="w-8 h-8 text-blue-500" />,
       features: [
         t("pricing.services.search.features.alerts"),
@@ -45,7 +45,7 @@ export default function Pricing() {
       id: "verification",
       name: t("pricing.services.verification.name"),
       description: t("pricing.services.verification.description"),
-      price: 14.99,
+      price: 7.49,
       icon: <Star className="w-8 h-8 text-green-500" />,
       features: [
         t("pricing.services.verification.features.badge"),
@@ -60,7 +60,7 @@ export default function Pricing() {
       id: "pro",
       name: t("pricing.plans.pro.name"),
       description: t("pricing.plans.pro.description"),
-      price: 29.99,
+      price: 14.99,
       icon: <Crown className="w-8 h-8 text-purple-500" />,
       features: [
         t("pricing.plans.pro.features.listings"),
@@ -74,7 +74,7 @@ export default function Pricing() {
       id: "advanced",
       name: t("pricing.plans.advanced.name"),
       description: t("pricing.plans.advanced.description"),
-      price: 59.99,
+      price: 29.99,
       icon: <Users className="w-8 h-8 text-orange-500" />,
       features: [
         t("pricing.plans.advanced.features.listings"),
@@ -88,7 +88,7 @@ export default function Pricing() {
       id: "premium",
       name: t("pricing.plans.premium.name"),
       description: t("pricing.plans.premium.description"),
-      price: 99.99,
+      price: 49.99,
       icon: <Shield className="w-8 h-8 text-red-500" />,
       features: [
         t("pricing.plans.premium.features.unlimited"),
