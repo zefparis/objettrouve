@@ -1,43 +1,4 @@
-import {
-  CognitoIdentityProviderClient,
-  InitiateAuthCommand,
-  RespondToAuthChallengeCommand,
-  SignUpCommand,
-  ConfirmSignUpCommand,
-  ForgotPasswordCommand,
-  ConfirmForgotPasswordCommand,
-  ResendConfirmationCodeCommand,
-  GetUserCommand,
-  GlobalSignOutCommand,
-} from "@aws-sdk/client-cognito-identity-provider";
-import CryptoJS from "crypto-js";
-
-const REGION = import.meta.env.VITE_AWS_REGION || "us-east-1";
-const CLIENT_ID = import.meta.env.VITE_COGNITO_CLIENT_ID;
-const CLIENT_SECRET = import.meta.env.VITE_COGNITO_CLIENT_SECRET;
-const USER_POOL_ID = import.meta.env.VITE_COGNITO_USER_POOL_ID;
-
-if (!CLIENT_ID || !USER_POOL_ID) {
-  throw new Error("Missing Cognito configuration. Please set VITE_COGNITO_CLIENT_ID and VITE_COGNITO_USER_POOL_ID");
-}
-
-// Function to calculate SECRET_HASH using HMAC-SHA256
-function calculateSecretHash(username: string): string {
-  if (!CLIENT_SECRET) {
-    throw new Error("CLIENT_SECRET is required but not configured");
-  }
-  
-  const message = username + CLIENT_ID;
-  const hash = CryptoJS.HmacSHA256(message, CLIENT_SECRET);
-  return CryptoJS.enc.Base64.stringify(hash);
-}
-
-const client = new CognitoIdentityProviderClient({
-  region: REGION,
-});
-
-// Note: For web applications with CLIENT_SECRET, we need to use ALLOW_ADMIN_USER_PASSWORD_AUTH
-// This requires different authentication flow
+// Client-side Cognito service that uses backend API endpoints
 
 export interface CognitoUserData {
   username: string;
@@ -145,25 +106,30 @@ class CognitoService {
     attributes: Record<string, string> = {}
   ): Promise<void> {
     try {
-      const command = new SignUpCommand({
-        ClientId: CLIENT_ID,
-        Username: email,
-        Password: password,
-        SecretHash: calculateSecretHash(email),
-        UserAttributes: [
-          { Name: "email", Value: email },
-          ...Object.entries(attributes).map(([key, value]) => ({
-            Name: key,
-            Value: value,
-          })),
-        ],
+      const response = await fetch('/api/cognito/signup', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          email,
+          password,
+          firstName: attributes.given_name,
+          lastName: attributes.family_name,
+        }),
       });
 
-      await client.send(command);
+      if (!response.ok) {
+        const error = await response.json();
+        throw {
+          code: error.error,
+          message: error.message,
+        };
+      }
     } catch (error: any) {
       console.error("SignUp error:", error);
       throw {
-        code: error.name,
+        code: error.code || 'SignUpError',
         message: error.message,
       };
     }
@@ -171,18 +137,28 @@ class CognitoService {
 
   async confirmSignUp(email: string, code: string): Promise<void> {
     try {
-      const command = new ConfirmSignUpCommand({
-        ClientId: CLIENT_ID,
-        Username: email,
-        ConfirmationCode: code,
-        SecretHash: calculateSecretHash(email),
+      const response = await fetch('/api/cognito/confirm-signup', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          email,
+          code,
+        }),
       });
 
-      await client.send(command);
+      if (!response.ok) {
+        const error = await response.json();
+        throw {
+          code: error.error,
+          message: error.message,
+        };
+      }
     } catch (error: any) {
       console.error("ConfirmSignUp error:", error);
       throw {
-        code: error.name,
+        code: error.code || 'ConfirmSignUpError',
         message: error.message,
       };
     }
@@ -190,59 +166,51 @@ class CognitoService {
 
   async signIn(email: string, password: string): Promise<AuthResult> {
     try {
-      const command = new InitiateAuthCommand({
-        ClientId: CLIENT_ID,
-        AuthFlow: "ADMIN_NO_SRP_AUTH",
-        AuthParameters: {
-          USERNAME: email,
-          PASSWORD: password,
-          SECRET_HASH: calculateSecretHash(email),
+      const response = await fetch('/api/cognito/signin', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
         },
+        body: JSON.stringify({
+          email,
+          password,
+        }),
       });
 
-      const response = await client.send(command);
+      if (!response.ok) {
+        const error = await response.json();
+        throw {
+          code: error.error,
+          message: error.message,
+        };
+      }
 
-      if (response.ChallengeName === "NEW_PASSWORD_REQUIRED") {
+      const result = await response.json();
+
+      if (result.challengeName === "NEW_PASSWORD_REQUIRED") {
         return {
           user: { username: email, email, emailVerified: false, attributes: {} },
           accessToken: "",
           idToken: "",
           refreshToken: "",
-          challengeName: response.ChallengeName,
-          session: response.Session,
+          challengeName: result.challengeName,
+          session: result.session,
         };
       }
 
-      if (!response.AuthenticationResult) {
-        throw new Error("Authentication failed");
-      }
-
-      const { AccessToken, IdToken, RefreshToken } = response.AuthenticationResult;
-
-      if (!AccessToken || !IdToken || !RefreshToken) {
-        throw new Error("Invalid authentication response");
-      }
-
-      const user = this.parseUserFromToken(IdToken);
-
       this.saveTokensToStorage({
-        accessToken: AccessToken,
-        idToken: IdToken,
-        refreshToken: RefreshToken,
+        accessToken: result.accessToken,
+        idToken: result.idToken,
+        refreshToken: result.refreshToken,
       });
 
-      this.saveUserToStorage(user);
+      this.saveUserToStorage(result.user);
 
-      return {
-        user,
-        accessToken: AccessToken,
-        idToken: IdToken,
-        refreshToken: RefreshToken,
-      };
+      return result;
     } catch (error: any) {
       console.error("SignIn error:", error);
       throw {
-        code: error.name,
+        code: error.code || 'SignInError',
         message: error.message,
       };
     }
@@ -322,17 +290,27 @@ class CognitoService {
 
   async forgotPassword(email: string): Promise<void> {
     try {
-      const command = new ForgotPasswordCommand({
-        ClientId: CLIENT_ID,
-        Username: email,
-        SecretHash: calculateSecretHash(email),
+      const response = await fetch('/api/cognito/forgot-password', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          email,
+        }),
       });
 
-      await client.send(command);
+      if (!response.ok) {
+        const error = await response.json();
+        throw {
+          code: error.error,
+          message: error.message,
+        };
+      }
     } catch (error: any) {
       console.error("ForgotPassword error:", error);
       throw {
-        code: error.name,
+        code: error.code || 'ForgotPasswordError',
         message: error.message,
       };
     }
@@ -340,19 +318,29 @@ class CognitoService {
 
   async confirmPassword(email: string, code: string, newPassword: string): Promise<void> {
     try {
-      const command = new ConfirmForgotPasswordCommand({
-        ClientId: CLIENT_ID,
-        Username: email,
-        ConfirmationCode: code,
-        Password: newPassword,
-        SecretHash: calculateSecretHash(email),
+      const response = await fetch('/api/cognito/confirm-password', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          email,
+          code,
+          newPassword,
+        }),
       });
 
-      await client.send(command);
+      if (!response.ok) {
+        const error = await response.json();
+        throw {
+          code: error.error,
+          message: error.message,
+        };
+      }
     } catch (error: any) {
       console.error("ConfirmPassword error:", error);
       throw {
-        code: error.name,
+        code: error.code || 'ConfirmPasswordError',
         message: error.message,
       };
     }
@@ -360,17 +348,27 @@ class CognitoService {
 
   async resendSignUp(email: string): Promise<void> {
     try {
-      const command = new ResendConfirmationCodeCommand({
-        ClientId: CLIENT_ID,
-        Username: email,
-        SecretHash: calculateSecretHash(email),
+      const response = await fetch('/api/cognito/resend-signup', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          email,
+        }),
       });
 
-      await client.send(command);
+      if (!response.ok) {
+        const error = await response.json();
+        throw {
+          code: error.error,
+          message: error.message,
+        };
+      }
     } catch (error: any) {
       console.error("ResendSignUp error:", error);
       throw {
-        code: error.name,
+        code: error.code || 'ResendSignUpError',
         message: error.message,
       };
     }

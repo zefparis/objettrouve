@@ -6,6 +6,7 @@ import { insertItemSchema, insertMessageSchema } from "@shared/schema";
 import { ZodError } from "zod";
 import multer from "multer";
 import path from "path";
+import { cognitoService, type AuthResult } from "./cognitoService";
 
 // Configure multer for file uploads
 const upload = multer({
@@ -26,6 +27,77 @@ const upload = multer({
 export async function registerRoutes(app: Express): Promise<Server> {
   // Auth middleware
   await setupAuth(app);
+
+  // AWS Cognito Auth routes
+  app.post('/api/cognito/signup', async (req, res) => {
+    try {
+      const { email, password, firstName, lastName } = req.body;
+      const attributes: Record<string, string> = {};
+      if (firstName) attributes['given_name'] = firstName;
+      if (lastName) attributes['family_name'] = lastName;
+      
+      await cognitoService.signUp(email, password, attributes);
+      res.json({ message: 'User created successfully' });
+    } catch (error: any) {
+      console.error("Cognito signup error:", error);
+      res.status(400).json({ error: error.code || 'SignUpError', message: error.message });
+    }
+  });
+
+  app.post('/api/cognito/confirm-signup', async (req, res) => {
+    try {
+      const { email, code } = req.body;
+      await cognitoService.confirmSignUp(email, code);
+      res.json({ message: 'User confirmed successfully' });
+    } catch (error: any) {
+      console.error("Cognito confirm signup error:", error);
+      res.status(400).json({ error: error.code || 'ConfirmSignUpError', message: error.message });
+    }
+  });
+
+  app.post('/api/cognito/signin', async (req, res) => {
+    try {
+      const { email, password } = req.body;
+      const result = await cognitoService.signIn(email, password);
+      res.json(result);
+    } catch (error: any) {
+      console.error("Cognito signin error:", error);
+      res.status(400).json({ error: error.code || 'SignInError', message: error.message });
+    }
+  });
+
+  app.post('/api/cognito/forgot-password', async (req, res) => {
+    try {
+      const { email } = req.body;
+      await cognitoService.forgotPassword(email);
+      res.json({ message: 'Password reset code sent' });
+    } catch (error: any) {
+      console.error("Cognito forgot password error:", error);
+      res.status(400).json({ error: error.code || 'ForgotPasswordError', message: error.message });
+    }
+  });
+
+  app.post('/api/cognito/confirm-password', async (req, res) => {
+    try {
+      const { email, code, newPassword } = req.body;
+      await cognitoService.confirmPassword(email, code, newPassword);
+      res.json({ message: 'Password reset successfully' });
+    } catch (error: any) {
+      console.error("Cognito confirm password error:", error);
+      res.status(400).json({ error: error.code || 'ConfirmPasswordError', message: error.message });
+    }
+  });
+
+  app.post('/api/cognito/resend-signup', async (req, res) => {
+    try {
+      const { email } = req.body;
+      await cognitoService.resendSignUp(email);
+      res.json({ message: 'Confirmation code resent' });
+    } catch (error: any) {
+      console.error("Cognito resend signup error:", error);
+      res.status(400).json({ error: error.code || 'ResendSignUpError', message: error.message });
+    }
+  });
 
   // Auth routes
   app.get('/api/auth/user', isAuthenticated, async (req: any, res) => {
