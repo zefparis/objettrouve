@@ -14,7 +14,9 @@
     "subtitle": "The French reference platform to recover your lost items or report your findings",
     "searchPlaceholder": "Search for an item...",
     "searchButton": "Search",
-    "publishButton": "Post an ad"
+    "publishButton": "Post an ad",
+    "iLostSomething": "I lost something",
+    "iFoundSomething": "I found something"
   },
   "stats": {
     "totalItems": "Declared items",
@@ -39,6 +41,7 @@
   },
   "howItWorks": {
     "title": "How it works?",
+    "subtitle": "Find your lost items in 3 simple steps",
     "step1": {
       "title": "Report your item",
       "description": "Post an ad with photo and detailed description"
@@ -53,6 +56,41 @@
     }
   },
   "search": {
+    "title": "Search Items",
+    "subtitle": "Discover the latest lost and found items in your area",
+    "searchPlaceholder": "Search by item, location, description...",
+    "type": "Type",
+    "all": "All",
+    "lost": "Lost",
+    "found": "Found",
+    "category": "Category",
+    "noResults": "No results found",
+    "noResultsDesc": "Try modifying your search criteria",
+    "itemType": {
+      "lost": "Lost",
+      "found": "Found"
+    }
+  },
+  "home": {
+    "recentItems": "Recently Reported Items",
+    "recentItemsDesc": "Discover the latest lost and found items in your area",
+    "noItemsYet": "No items reported yet",
+    "viewAllItems": "View All Items",
+    "ctaTitle": "Ready to find your items?",
+    "ctaSubtitle": "Join thousands of users who trust ObjetsTrouvés",
+    "publishAd": "Post an ad",
+    "myDashboard": "My Dashboard"
+  },
+  "map": {
+    "title": "Interactive Map",
+    "subtitle": "Visualize lost and found items near you",
+    "interactiveMap": "Interactive map with geolocation",
+    "integration": "Integration with Google Maps or OpenStreetMap",
+    "lostItems": "Lost items",
+    "foundItems": "Found items",
+    "fullscreen": "View fullscreen"
+  },
+  "original_search": {
     "title": "Search for items",
     "subtitle": "Find lost or found items near you",
     "filters": "Filters",
