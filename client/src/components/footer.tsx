@@ -16,8 +16,9 @@ export default function Footer() {
             </p>
             <div className="text-sm text-gray-400">
               <p>IA-Solution</p>
-              <p>123 Avenue des Champs-Élysées</p>
-              <p>75008 Paris, France</p>
+              <p>Domaine privé du Cap</p>
+              <p>Roquebrune-Cap-Martin 06190</p>
+              <p>Alpes-Maritimes, France</p>
               <p>Email: contact@ia-solution.fr</p>
               <p>Téléphone: +33 1 23 45 67 89</p>
             </div>
