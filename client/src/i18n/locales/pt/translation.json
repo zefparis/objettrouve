@@ -524,5 +524,69 @@
       "InvalidParameterException": "Parâmetro inválido",
       "TooManyRequestsException": "Muitas solicitações, tente mais tarde"
     }
+  },
+  "publishNew": {
+    "title": "Publicar Anúncio",
+    "subtitle": "Reportar um item perdido ou encontrado",
+    "lostTitle": "Reportar Item Perdido",
+    "foundTitle": "Reportar Item Encontrado",
+    "lostSubtitle": "Ajude-nos a encontrar seu item perdido",
+    "foundSubtitle": "Ajude alguém a recuperar seu item",
+    "type": {
+      "label": "Tipo de Anúncio",
+      "lost": "Item Perdido",
+      "found": "Item Encontrado"
+    },
+    "form": {
+      "title": {
+        "label": "Título do Anúncio",
+        "placeholder": "ex: iPhone 12 Pro perdido no metrô"
+      },
+      "description": {
+        "label": "Descrição Detalhada",
+        "placeholder": "Descreva o item em detalhes, circunstâncias da perda/descoberta..."
+      },
+      "category": {
+        "label": "Categoria",
+        "placeholder": "Selecione uma categoria"
+      },
+      "location": {
+        "label": "Local",
+        "placeholder": "Onde o item foi perdido/encontrado"
+      },
+      "dateOccurred": {
+        "label": "Data do Incidente",
+        "placeholder": "Quando isso aconteceu?"
+      },
+      "contactPhone": {
+        "label": "Telefone de Contato",
+        "placeholder": "+55 11 99999-9999"
+      },
+      "contactEmail": {
+        "label": "Email de Contato",
+        "placeholder": "seu@email.com"
+      },
+      "image": {
+        "label": "Foto do Item",
+        "placeholder": "Adicione uma foto para ajudar na identificação",
+        "upload": "Clique para enviar uma foto",
+        "change": "Alterar foto",
+        "remove": "Remover foto"
+      }
+    },
+    "validation": {
+      "title_required": "O título é obrigatório",
+      "description_min_length": "A descrição deve ter pelo menos 10 caracteres",
+      "category_required": "Por favor selecione uma categoria",
+      "location_required": "O local é obrigatório",
+      "date_required": "A data é obrigatória",
+      "email_invalid": "Formato de email inválido"
+    },
+    "success": "Seu anúncio foi publicado com sucesso!",
+    "error": "Ocorreu um erro ao publicar",
+    "buttons": {
+      "publish": "Publicar Anúncio",
+      "publishing": "Publicando..."
+    }
   }
 }

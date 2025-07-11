@@ -524,5 +524,69 @@
       "InvalidParameterException": "Invalid parameter",
       "TooManyRequestsException": "Too many requests, please try again later"
     }
+  },
+  "publishNew": {
+    "title": "Publish Listing",
+    "subtitle": "Report a lost or found item",
+    "lostTitle": "Report Lost Item",
+    "foundTitle": "Report Found Item",
+    "lostSubtitle": "Help us find your lost item",
+    "foundSubtitle": "Help someone recover their item",
+    "type": {
+      "label": "Listing Type",
+      "lost": "Lost Item",
+      "found": "Found Item"
+    },
+    "form": {
+      "title": {
+        "label": "Listing Title",
+        "placeholder": "e.g., iPhone 12 Pro lost on subway"
+      },
+      "description": {
+        "label": "Detailed Description",
+        "placeholder": "Describe the item in detail, circumstances of loss/discovery..."
+      },
+      "category": {
+        "label": "Category",
+        "placeholder": "Select a category"
+      },
+      "location": {
+        "label": "Location",
+        "placeholder": "Where the item was lost/found"
+      },
+      "dateOccurred": {
+        "label": "Date of Incident",
+        "placeholder": "When did this happen?"
+      },
+      "contactPhone": {
+        "label": "Contact Phone",
+        "placeholder": "+1 555-123-4567"
+      },
+      "contactEmail": {
+        "label": "Contact Email",
+        "placeholder": "your@email.com"
+      },
+      "image": {
+        "label": "Item Photo",
+        "placeholder": "Add a photo to help identification",
+        "upload": "Click to upload a photo",
+        "change": "Change photo",
+        "remove": "Remove photo"
+      }
+    },
+    "validation": {
+      "title_required": "Title is required",
+      "description_min_length": "Description must be at least 10 characters",
+      "category_required": "Please select a category",
+      "location_required": "Location is required",
+      "date_required": "Date is required",
+      "email_invalid": "Invalid email format"
+    },
+    "success": "Your listing has been published successfully!",
+    "error": "An error occurred while publishing",
+    "buttons": {
+      "publish": "Publish Listing",
+      "publishing": "Publishing..."
+    }
   }
 }

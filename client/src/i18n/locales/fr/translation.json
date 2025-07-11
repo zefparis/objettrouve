@@ -512,5 +512,69 @@
       "InvalidParameterException": "Paramètre invalide",
       "TooManyRequestsException": "Trop de demandes, réessayez plus tard"
     }
+  },
+  "publishNew": {
+    "title": "Publier une annonce",
+    "subtitle": "Signalez un objet perdu ou trouvé",
+    "lostTitle": "Déclarer un objet perdu",
+    "foundTitle": "Déclarer un objet trouvé",
+    "lostSubtitle": "Aidez-nous à retrouver votre objet perdu",
+    "foundSubtitle": "Aidez quelqu'un à récupérer son objet",
+    "type": {
+      "label": "Type d'annonce",
+      "lost": "Objet perdu",
+      "found": "Objet trouvé"
+    },
+    "form": {
+      "title": {
+        "label": "Titre de l'annonce",
+        "placeholder": "Ex: iPhone 12 Pro perdu dans le métro"
+      },
+      "description": {
+        "label": "Description détaillée",
+        "placeholder": "Décrivez l'objet en détail, les circonstances de la perte/découverte..."
+      },
+      "category": {
+        "label": "Catégorie",
+        "placeholder": "Sélectionnez une catégorie"
+      },
+      "location": {
+        "label": "Lieu",
+        "placeholder": "Où l'objet a été perdu/trouvé"
+      },
+      "dateOccurred": {
+        "label": "Date de l'incident",
+        "placeholder": "Quand cela s'est-il passé ?"
+      },
+      "contactPhone": {
+        "label": "Téléphone de contact",
+        "placeholder": "+33 6 12 34 56 78"
+      },
+      "contactEmail": {
+        "label": "Email de contact",
+        "placeholder": "votre@email.com"
+      },
+      "image": {
+        "label": "Photo de l'objet",
+        "placeholder": "Ajoutez une photo pour aider à l'identification",
+        "upload": "Cliquez pour télécharger une photo",
+        "change": "Changer la photo",
+        "remove": "Supprimer la photo"
+      }
+    },
+    "validation": {
+      "title_required": "Le titre est requis",
+      "description_min_length": "La description doit contenir au moins 10 caractères",
+      "category_required": "Veuillez sélectionner une catégorie",
+      "location_required": "Le lieu est requis",
+      "date_required": "La date est requise",
+      "email_invalid": "Format d'email invalide"
+    },
+    "success": "Votre annonce a été publiée avec succès !",
+    "error": "Une erreur s'est produite lors de la publication",
+    "buttons": {
+      "publish": "Publier l'annonce",
+      "publishing": "Publication en cours..."
+    }
   }
 }

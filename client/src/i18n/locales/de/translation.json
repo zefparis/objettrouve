@@ -417,5 +417,69 @@
       "InvalidParameterException": "Ungültiger Parameter",
       "TooManyRequestsException": "Zu viele Anfragen, bitte später erneut versuchen"
     }
+  },
+  "publishNew": {
+    "title": "Anzeige veröffentlichen",
+    "subtitle": "Einen verlorenen oder gefundenen Gegenstand melden",
+    "lostTitle": "Verlorenen Gegenstand melden",
+    "foundTitle": "Gefundenen Gegenstand melden",
+    "lostSubtitle": "Helfen Sie uns, Ihren verlorenen Gegenstand zu finden",
+    "foundSubtitle": "Helfen Sie jemandem, seinen Gegenstand zurückzubekommen",
+    "type": {
+      "label": "Anzeigentyp",
+      "lost": "Verlorener Gegenstand",
+      "found": "Gefundener Gegenstand"
+    },
+    "form": {
+      "title": {
+        "label": "Anzeigentitel",
+        "placeholder": "z.B. iPhone 12 Pro in der U-Bahn verloren"
+      },
+      "description": {
+        "label": "Detaillierte Beschreibung",
+        "placeholder": "Beschreiben Sie den Gegenstand detailliert, Umstände des Verlustes/Fundes..."
+      },
+      "category": {
+        "label": "Kategorie",
+        "placeholder": "Wählen Sie eine Kategorie"
+      },
+      "location": {
+        "label": "Ort",
+        "placeholder": "Wo wurde der Gegenstand verloren/gefunden"
+      },
+      "dateOccurred": {
+        "label": "Datum des Vorfalls",
+        "placeholder": "Wann ist das passiert?"
+      },
+      "contactPhone": {
+        "label": "Kontakttelefon",
+        "placeholder": "+49 123 456 7890"
+      },
+      "contactEmail": {
+        "label": "Kontakt-E-Mail",
+        "placeholder": "ihre@email.com"
+      },
+      "image": {
+        "label": "Foto des Gegenstands",
+        "placeholder": "Fügen Sie ein Foto zur Identifizierung hinzu",
+        "upload": "Klicken zum Hochladen eines Fotos",
+        "change": "Foto ändern",
+        "remove": "Foto entfernen"
+      }
+    },
+    "validation": {
+      "title_required": "Der Titel ist erforderlich",
+      "description_min_length": "Die Beschreibung muss mindestens 10 Zeichen haben",
+      "category_required": "Bitte wählen Sie eine Kategorie",
+      "location_required": "Der Ort ist erforderlich",
+      "date_required": "Das Datum ist erforderlich",
+      "email_invalid": "Ungültiges E-Mail-Format"
+    },
+    "success": "Ihre Anzeige wurde erfolgreich veröffentlicht!",
+    "error": "Beim Veröffentlichen ist ein Fehler aufgetreten",
+    "buttons": {
+      "publish": "Anzeige veröffentlichen",
+      "publishing": "Veröffentlichen..."
+    }
   }
 }

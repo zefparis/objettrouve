@@ -405,5 +405,69 @@
       "InvalidParameterException": "Ongeldige parameter",
       "TooManyRequestsException": "Te veel verzoeken, probeer later opnieuw"
     }
+  },
+  "publishNew": {
+    "title": "Advertentie plaatsen",
+    "subtitle": "Een verloren of gevonden item melden",
+    "lostTitle": "Verloren item melden",
+    "foundTitle": "Gevonden item melden",
+    "lostSubtitle": "Help ons je verloren item te vinden",
+    "foundSubtitle": "Help iemand zijn item terug te krijgen",
+    "type": {
+      "label": "Advertentietype",
+      "lost": "Verloren item",
+      "found": "Gevonden item"
+    },
+    "form": {
+      "title": {
+        "label": "Advertentietitel",
+        "placeholder": "bijv. iPhone 12 Pro verloren in de metro"
+      },
+      "description": {
+        "label": "Gedetailleerde beschrijving",
+        "placeholder": "Beschrijf het item in detail, omstandigheden van verlies/vondst..."
+      },
+      "category": {
+        "label": "Categorie",
+        "placeholder": "Selecteer een categorie"
+      },
+      "location": {
+        "label": "Locatie",
+        "placeholder": "Waar werd het item verloren/gevonden"
+      },
+      "dateOccurred": {
+        "label": "Datum van het incident",
+        "placeholder": "Wanneer is dit gebeurd?"
+      },
+      "contactPhone": {
+        "label": "Contacttelefoon",
+        "placeholder": "+31 6 12345678"
+      },
+      "contactEmail": {
+        "label": "Contact e-mail",
+        "placeholder": "jouw@email.com"
+      },
+      "image": {
+        "label": "Foto van het item",
+        "placeholder": "Voeg een foto toe om identificatie te helpen",
+        "upload": "Klik om een foto te uploaden",
+        "change": "Foto wijzigen",
+        "remove": "Foto verwijderen"
+      }
+    },
+    "validation": {
+      "title_required": "Titel is vereist",
+      "description_min_length": "Beschrijving moet minimaal 10 tekens hebben",
+      "category_required": "Selecteer een categorie",
+      "location_required": "Locatie is vereist",
+      "date_required": "Datum is vereist",
+      "email_invalid": "Ongeldig e-mailformaat"
+    },
+    "success": "Je advertentie is succesvol geplaatst!",
+    "error": "Er is een fout opgetreden bij het plaatsen",
+    "buttons": {
+      "publish": "Advertentie plaatsen",
+      "publishing": "Plaatsen..."
+    }
   }
 }

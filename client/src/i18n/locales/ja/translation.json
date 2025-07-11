@@ -405,5 +405,69 @@
       "InvalidParameterException": "無効なパラメーター",
       "TooManyRequestsException": "リクエストが多すぎます、後でもう一度お試しください"
     }
+  },
+  "publishNew": {
+    "title": "投稿する",
+    "subtitle": "紛失物・拾得物を報告",
+    "lostTitle": "紛失物を報告",
+    "foundTitle": "拾得物を報告",
+    "lostSubtitle": "紛失物を見つけるお手伝いをします",
+    "foundSubtitle": "誰かのものを見つけるお手伝いをします",
+    "type": {
+      "label": "投稿タイプ",
+      "lost": "紛失物",
+      "found": "拾得物"
+    },
+    "form": {
+      "title": {
+        "label": "投稿タイトル",
+        "placeholder": "例：地下鉄で紛失したiPhone 12 Pro"
+      },
+      "description": {
+        "label": "詳細な説明",
+        "placeholder": "アイテムの詳細、紛失/発見の状況を記載..."
+      },
+      "category": {
+        "label": "カテゴリー",
+        "placeholder": "カテゴリーを選択"
+      },
+      "location": {
+        "label": "場所",
+        "placeholder": "アイテムが紛失/発見された場所"
+      },
+      "dateOccurred": {
+        "label": "発生日",
+        "placeholder": "いつ発生しましたか？"
+      },
+      "contactPhone": {
+        "label": "連絡先電話番号",
+        "placeholder": "+81 90-1234-5678"
+      },
+      "contactEmail": {
+        "label": "連絡先メール",
+        "placeholder": "あなたの@メール.com"
+      },
+      "image": {
+        "label": "アイテムの写真",
+        "placeholder": "識別を助けるために写真を追加",
+        "upload": "クリックして写真をアップロード",
+        "change": "写真を変更",
+        "remove": "写真を削除"
+      }
+    },
+    "validation": {
+      "title_required": "タイトルは必須です",
+      "description_min_length": "説明は10文字以上である必要があります",
+      "category_required": "カテゴリーを選択してください",
+      "location_required": "場所は必須です",
+      "date_required": "日付は必須です",
+      "email_invalid": "無効なメール形式"
+    },
+    "success": "投稿が正常に公開されました！",
+    "error": "公開中にエラーが発生しました",
+    "buttons": {
+      "publish": "投稿する",
+      "publishing": "公開中..."
+    }
   }
 }

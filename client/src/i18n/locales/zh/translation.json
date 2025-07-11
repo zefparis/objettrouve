@@ -265,5 +265,69 @@
       "InvalidParameterException": "无效参数",
       "TooManyRequestsException": "请求过多，请稍后再试"
     }
+  },
+  "publishNew": {
+    "title": "发布信息",
+    "subtitle": "报告丢失或找到的物品",
+    "lostTitle": "报告丢失物品",
+    "foundTitle": "报告找到物品",
+    "lostSubtitle": "帮助我们找到您丢失的物品",
+    "foundSubtitle": "帮助某人找回他们的物品",
+    "type": {
+      "label": "信息类型",
+      "lost": "丢失物品",
+      "found": "找到物品"
+    },
+    "form": {
+      "title": {
+        "label": "信息标题",
+        "placeholder": "例如：地铁里丢失的iPhone 12 Pro"
+      },
+      "description": {
+        "label": "详细描述",
+        "placeholder": "详细描述物品，丢失/发现的情况..."
+      },
+      "category": {
+        "label": "类别",
+        "placeholder": "选择类别"
+      },
+      "location": {
+        "label": "位置",
+        "placeholder": "物品丢失/找到的地点"
+      },
+      "dateOccurred": {
+        "label": "事件日期",
+        "placeholder": "这是什么时候发生的？"
+      },
+      "contactPhone": {
+        "label": "联系电话",
+        "placeholder": "+86 138 0013 8000"
+      },
+      "contactEmail": {
+        "label": "联系邮箱",
+        "placeholder": "你的@邮箱.com"
+      },
+      "image": {
+        "label": "物品照片",
+        "placeholder": "添加照片帮助识别",
+        "upload": "点击上传照片",
+        "change": "更换照片",
+        "remove": "移除照片"
+      }
+    },
+    "validation": {
+      "title_required": "标题是必需的",
+      "description_min_length": "描述至少需要10个字符",
+      "category_required": "请选择类别",
+      "location_required": "位置是必需的",
+      "date_required": "日期是必需的",
+      "email_invalid": "邮箱格式无效"
+    },
+    "success": "您的信息已成功发布！",
+    "error": "发布时出现错误",
+    "buttons": {
+      "publish": "发布信息",
+      "publishing": "发布中..."
+    }
   }
 }

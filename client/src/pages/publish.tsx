@@ -1,9 +1,9 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { useTranslation } from "react-i18next";
-import { useLocation } from "wouter";
+import { useLocation, useSearch } from "wouter";
 import { z } from "zod";
 import Navbar from "@/components/navbar";
 import { Button } from "@/components/ui/button";
@@ -22,13 +22,13 @@ import { Camera, Upload, MapPin, Calendar } from "lucide-react";
 
 const publishSchema = z.object({
   type: z.enum(["lost", "found"]),
-  title: z.string().min(1, "validation.title_required"),
-  description: z.string().min(10, "validation.description_min_length"),
-  category: z.string().min(1, "validation.category_required"),
-  location: z.string().min(1, "validation.location_required"),
-  dateOccurred: z.string().min(1, "validation.date_required"),
+  title: z.string().min(1, "publishNew.validation.title_required"),
+  description: z.string().min(10, "publishNew.validation.description_min_length"),
+  category: z.string().min(1, "publishNew.validation.category_required"),
+  location: z.string().min(1, "publishNew.validation.location_required"),
+  dateOccurred: z.string().min(1, "publishNew.validation.date_required"),
   contactPhone: z.string().optional(),
-  contactEmail: z.string().email("validation.email_invalid").optional(),
+  contactEmail: z.string().email("publishNew.validation.email_invalid").optional(),
 });
 
 type PublishFormData = z.infer<typeof publishSchema>;
@@ -36,15 +36,20 @@ type PublishFormData = z.infer<typeof publishSchema>;
 export default function Publish() {
   const { t } = useTranslation();
   const [location, setLocation] = useLocation();
+  const search = useSearch();
   const { toast } = useToast();
   const queryClient = useQueryClient();
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [previewUrl, setPreviewUrl] = useState<string | null>(null);
 
+  // Get type from URL parameters
+  const urlParams = new URLSearchParams(search);
+  const typeFromUrl = urlParams.get('type') as 'lost' | 'found' | null;
+
   const form = useForm<PublishFormData>({
     resolver: zodResolver(publishSchema),
     defaultValues: {
-      type: "lost",
+      type: typeFromUrl || "lost",
       title: "",
       description: "",
       category: "",
@@ -54,6 +59,13 @@ export default function Publish() {
       contactEmail: "",
     },
   });
+
+  // Update form type when URL parameter changes
+  useEffect(() => {
+    if (typeFromUrl) {
+      form.setValue('type', typeFromUrl);
+    }
+  }, [typeFromUrl, form]);
 
   const createItemMutation = useMutation({
     mutationFn: async (data: PublishFormData) => {
@@ -70,7 +82,7 @@ export default function Publish() {
     onSuccess: () => {
       toast({
         title: t("common.success"),
-        description: t("publish.success"),
+        description: t("publishNew.success"),
       });
       queryClient.invalidateQueries({ queryKey: ["/api/items"] });
       setLocation("/dashboard");
@@ -90,7 +102,7 @@ export default function Publish() {
       
       toast({
         title: t("common.error"),
-        description: t("publish.error"),
+        description: t("publishNew.error"),
         variant: "destructive",
       });
     },
@@ -112,6 +124,9 @@ export default function Publish() {
     createItemMutation.mutate(data);
   };
 
+  const currentType = form.watch("type");
+  const isLostType = currentType === "lost";
+
   return (
     <div className="min-h-screen bg-gray-50">
       <Navbar />
@@ -119,16 +134,18 @@ export default function Publish() {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="mb-8">
           <h1 className="text-3xl font-bold text-gray-900 mb-4">
-            {t("publish.title")}
+            {isLostType ? t("publishNew.lostTitle") : t("publishNew.foundTitle")}
           </h1>
           <p className="text-gray-600">
-            {t("publish.subtitle")}
+            {isLostType ? t("publishNew.lostSubtitle") : t("publishNew.foundSubtitle")}
           </p>
         </div>
 
         <Card>
           <CardHeader>
-            <CardTitle>{t("publish.form.objectInfo")}</CardTitle>
+            <CardTitle>
+              {isLostType ? t("publishNew.lostTitle") : t("publishNew.foundTitle")}
+            </CardTitle>
           </CardHeader>
           <CardContent>
             <Form {...form}>
@@ -139,7 +156,7 @@ export default function Publish() {
                   name="type"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>{t("publish.form.type")}</FormLabel>
+                      <FormLabel>{t("publishNew.type.label")}</FormLabel>
                       <FormControl>
                         <RadioGroup
                           value={field.value}
@@ -150,14 +167,14 @@ export default function Publish() {
                             <RadioGroupItem value="lost" id="lost" />
                             <Label htmlFor="lost" className="flex items-center">
                               <span className="text-red-600 mr-2">●</span>
-                              J'ai perdu cet objet
+                              {t("publishNew.type.lost")}
                             </Label>
                           </div>
                           <div className="flex items-center space-x-2">
                             <RadioGroupItem value="found" id="found" />
                             <Label htmlFor="found" className="flex items-center">
                               <span className="text-green-600 mr-2">●</span>
-                              J'ai trouvé cet objet
+                              {t("publishNew.type.found")}
                             </Label>
                           </div>
                         </RadioGroup>
@@ -173,10 +190,10 @@ export default function Publish() {
                   name="title"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>{t("publish.form.title")}</FormLabel>
+                      <FormLabel>{t("publishNew.form.title.label")}</FormLabel>
                       <FormControl>
                         <Input
-                          placeholder={t("publish.form.titlePlaceholder")}
+                          placeholder={t("publishNew.form.title.placeholder")}
                           {...field}
                         />
                       </FormControl>
@@ -191,11 +208,11 @@ export default function Publish() {
                   name="category"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>{t("publish.form.category")}</FormLabel>
+                      <FormLabel>{t("publishNew.form.category.label")}</FormLabel>
                       <Select value={field.value} onValueChange={field.onChange}>
                         <FormControl>
                           <SelectTrigger>
-                            <SelectValue placeholder={t("publish.form.categoryPlaceholder")} />
+                            <SelectValue placeholder={t("publishNew.form.category.placeholder")} />
                           </SelectTrigger>
                         </FormControl>
                         <SelectContent>
@@ -203,7 +220,7 @@ export default function Publish() {
                             <SelectItem key={category.id} value={category.id}>
                               <div className="flex items-center">
                                 <i className={`${category.icon} mr-2`} />
-                                {category.name}
+                                {t(`categories.${category.id}`)}
                               </div>
                             </SelectItem>
                           ))}
@@ -220,10 +237,10 @@ export default function Publish() {
                   name="description"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>{t("publish.form.description")}</FormLabel>
+                      <FormLabel>{t("publishNew.form.description.label")}</FormLabel>
                       <FormControl>
                         <Textarea
-                          placeholder={t("publish.form.descriptionPlaceholder")}
+                          placeholder={t("publishNew.form.description.placeholder")}
                           rows={4}
                           {...field}
                         />
@@ -239,12 +256,12 @@ export default function Publish() {
                   name="location"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>{t("publish.form.location")}</FormLabel>
+                      <FormLabel>{t("publishNew.form.location.label")}</FormLabel>
                       <FormControl>
                         <div className="relative">
                           <MapPin className="absolute left-3 top-3 h-4 w-4 text-gray-400" />
                           <Input
-                            placeholder={t("publish.form.locationPlaceholder")}
+                            placeholder={t("publishNew.form.location.placeholder")}
                             className="pl-10"
                             {...field}
                           />
@@ -261,15 +278,14 @@ export default function Publish() {
                   name="dateOccurred"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>
-                        Date de {form.watch("type") === "lost" ? "perte" : "découverte"}
-                      </FormLabel>
+                      <FormLabel>{t("publishNew.form.dateOccurred.label")}</FormLabel>
                       <FormControl>
                         <div className="relative">
                           <Calendar className="absolute left-3 top-3 h-4 w-4 text-gray-400" />
                           <Input
                             type="date"
                             className="pl-10"
+                            placeholder={t("publishNew.form.dateOccurred.placeholder")}
                             {...field}
                           />
                         </div>
@@ -286,10 +302,10 @@ export default function Publish() {
                     name="contactPhone"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>{t("publish.form.phone")}</FormLabel>
+                        <FormLabel>{t("publishNew.form.contactPhone.label")}</FormLabel>
                         <FormControl>
                           <Input
-                            placeholder={t("publish.form.phonePlaceholder")}
+                            placeholder={t("publishNew.form.contactPhone.placeholder")}
                             {...field}
                           />
                         </FormControl>
@@ -302,11 +318,11 @@ export default function Publish() {
                     name="contactEmail"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>{t("publish.form.email")}</FormLabel>
+                        <FormLabel>{t("publishNew.form.contactEmail.label")}</FormLabel>
                         <FormControl>
                           <Input
                             type="email"
-                            placeholder={t("publish.form.emailPlaceholder")}
+                            placeholder={t("publishNew.form.contactEmail.placeholder")}
                             {...field}
                           />
                         </FormControl>
@@ -318,13 +334,13 @@ export default function Publish() {
 
                 {/* Image Upload */}
                 <div className="space-y-4">
-                  <Label>{t("publish.form.image")}</Label>
+                  <Label>{t("publishNew.form.image.label")}</Label>
                   <div className="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center">
                     {previewUrl ? (
                       <div className="space-y-4">
                         <img
                           src={previewUrl}
-                          alt="Aperçu"
+                          alt="Preview"
                           className="mx-auto max-h-64 rounded-lg"
                         />
                         <Button
@@ -335,7 +351,7 @@ export default function Publish() {
                             setPreviewUrl(null);
                           }}
                         >
-                          Supprimer la photo
+                          {t("publishNew.form.image.remove")}
                         </Button>
                       </div>
                     ) : (
@@ -344,7 +360,7 @@ export default function Publish() {
                         <div>
                           <Label htmlFor="image-upload" className="cursor-pointer">
                             <span className="text-primary hover:underline">
-                              Cliquez pour ajouter une photo
+                              {t("publishNew.form.image.upload")}
                             </span>
                           </Label>
                           <Input
@@ -356,7 +372,7 @@ export default function Publish() {
                           />
                         </div>
                         <p className="text-sm text-gray-500">
-                          JPG, PNG, GIF jusqu'à 5MB
+                          {t("publishNew.form.image.placeholder")}
                         </p>
                       </div>
                     )}
@@ -371,12 +387,12 @@ export default function Publish() {
                   {createItemMutation.isPending ? (
                     <>
                       <Upload className="mr-2 h-4 w-4 animate-spin" />
-                      Publication en cours...
+                      {t("publishNew.buttons.publishing")}
                     </>
                   ) : (
                     <>
                       <Upload className="mr-2 h-4 w-4" />
-{t("publish.form.publish")}
+                      {t("publishNew.buttons.publish")}
                     </>
                   )}
                 </Button>

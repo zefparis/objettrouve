@@ -405,5 +405,69 @@
       "InvalidParameterException": "유효하지 않은 매개변수",
       "TooManyRequestsException": "요청이 너무 많습니다. 나중에 다시 시도하세요"
     }
+  },
+  "publishNew": {
+    "title": "게시물 올리기",
+    "subtitle": "분실물이나 습득물을 신고",
+    "lostTitle": "분실물 신고",
+    "foundTitle": "습득물 신고",
+    "lostSubtitle": "분실물을 찾는 데 도움을 주세요",
+    "foundSubtitle": "누군가의 물건을 찾는 데 도움을 주세요",
+    "type": {
+      "label": "게시물 유형",
+      "lost": "분실물",
+      "found": "습득물"
+    },
+    "form": {
+      "title": {
+        "label": "게시물 제목",
+        "placeholder": "예: 지하철에서 분실한 iPhone 12 Pro"
+      },
+      "description": {
+        "label": "자세한 설명",
+        "placeholder": "물건에 대한 자세한 설명, 분실/발견 상황..."
+      },
+      "category": {
+        "label": "카테고리",
+        "placeholder": "카테고리를 선택하세요"
+      },
+      "location": {
+        "label": "위치",
+        "placeholder": "물건이 분실/발견된 장소"
+      },
+      "dateOccurred": {
+        "label": "사건 날짜",
+        "placeholder": "언제 발생했나요?"
+      },
+      "contactPhone": {
+        "label": "연락처 전화번호",
+        "placeholder": "+82 10-1234-5678"
+      },
+      "contactEmail": {
+        "label": "연락처 이메일",
+        "placeholder": "당신의@이메일.com"
+      },
+      "image": {
+        "label": "물건 사진",
+        "placeholder": "식별을 돕기 위해 사진을 추가하세요",
+        "upload": "클릭하여 사진 업로드",
+        "change": "사진 변경",
+        "remove": "사진 제거"
+      }
+    },
+    "validation": {
+      "title_required": "제목이 필요합니다",
+      "description_min_length": "설명은 10자 이상이어야 합니다",
+      "category_required": "카테고리를 선택해주세요",
+      "location_required": "위치가 필요합니다",
+      "date_required": "날짜가 필요합니다",
+      "email_invalid": "유효하지 않은 이메일 형식"
+    },
+    "success": "게시물이 성공적으로 게시되었습니다!",
+    "error": "게시 중 오류가 발생했습니다",
+    "buttons": {
+      "publish": "게시물 올리기",
+      "publishing": "게시 중..."
+    }
   }
 }

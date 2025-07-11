@@ -524,5 +524,69 @@
       "InvalidParameterException": "Parametro non valido",
       "TooManyRequestsException": "Troppe richieste, riprova più tardi"
     }
+  },
+  "publishNew": {
+    "title": "Pubblica Annuncio",
+    "subtitle": "Segnala un oggetto perso o trovato",
+    "lostTitle": "Segnala Oggetto Perso",
+    "foundTitle": "Segnala Oggetto Trovato",
+    "lostSubtitle": "Aiutaci a trovare il tuo oggetto perso",
+    "foundSubtitle": "Aiuta qualcuno a recuperare il suo oggetto",
+    "type": {
+      "label": "Tipo di Annuncio",
+      "lost": "Oggetto Perso",
+      "found": "Oggetto Trovato"
+    },
+    "form": {
+      "title": {
+        "label": "Titolo dell'Annuncio",
+        "placeholder": "es: iPhone 12 Pro perso in metropolitana"
+      },
+      "description": {
+        "label": "Descrizione Dettagliata",
+        "placeholder": "Descrivi l'oggetto in dettaglio, circostanze della perdita/ritrovamento..."
+      },
+      "category": {
+        "label": "Categoria",
+        "placeholder": "Seleziona una categoria"
+      },
+      "location": {
+        "label": "Luogo",
+        "placeholder": "Dove è stato perso/trovato l'oggetto"
+      },
+      "dateOccurred": {
+        "label": "Data dell'Incidente",
+        "placeholder": "Quando è successo?"
+      },
+      "contactPhone": {
+        "label": "Telefono di Contatto",
+        "placeholder": "+39 333 123 4567"
+      },
+      "contactEmail": {
+        "label": "Email di Contatto",
+        "placeholder": "tua@email.com"
+      },
+      "image": {
+        "label": "Foto dell'Oggetto",
+        "placeholder": "Aggiungi una foto per aiutare l'identificazione",
+        "upload": "Clicca per caricare una foto",
+        "change": "Cambia foto",
+        "remove": "Rimuovi foto"
+      }
+    },
+    "validation": {
+      "title_required": "Il titolo è obbligatorio",
+      "description_min_length": "La descrizione deve avere almeno 10 caratteri",
+      "category_required": "Per favore seleziona una categoria",
+      "location_required": "Il luogo è obbligatorio",
+      "date_required": "La data è obbligatoria",
+      "email_invalid": "Formato email non valido"
+    },
+    "success": "Il tuo annuncio è stato pubblicato con successo!",
+    "error": "Si è verificato un errore durante la pubblicazione",
+    "buttons": {
+      "publish": "Pubblica Annuncio",
+      "publishing": "Pubblicando..."
+    }
   }
 }
