@@ -1,6 +1,7 @@
 import {
   CognitoIdentityProviderClient,
   InitiateAuthCommand,
+  AdminInitiateAuthCommand,
   RespondToAuthChallengeCommand,
   SignUpCommand,
   ConfirmSignUpCommand,
@@ -122,58 +123,59 @@ export class CognitoService {
 
   async signIn(email: string, password: string): Promise<AuthResult> {
     try {
-      // Try USER_PASSWORD_AUTH first
-      try {
-        const command = new InitiateAuthCommand({
-          ClientId: CLIENT_ID,
-          AuthFlow: "USER_PASSWORD_AUTH",
-          AuthParameters: {
-            USERNAME: email,
-            PASSWORD: password,
-            SECRET_HASH: calculateSecretHash(email),
-          },
-        });
+      // Try USER_PASSWORD_AUTH first (most straightforward approach)
+      const command = new InitiateAuthCommand({
+        ClientId: CLIENT_ID,
+        AuthFlow: "USER_PASSWORD_AUTH",
+        AuthParameters: {
+          USERNAME: email,
+          PASSWORD: password,
+          SECRET_HASH: calculateSecretHash(email),
+        },
+      });
 
-        const response = await client.send(command);
+      const response = await client.send(command);
 
-        if (response.ChallengeName === "NEW_PASSWORD_REQUIRED") {
-          return {
-            user: { username: email, email, emailVerified: false, attributes: {} },
-            accessToken: "",
-            idToken: "",
-            refreshToken: "",
-            challengeName: response.ChallengeName,
-            session: response.Session,
-          };
-        }
-
-        if (!response.AuthenticationResult) {
-          throw new Error("Authentication failed");
-        }
-
-        const { AccessToken, IdToken, RefreshToken } = response.AuthenticationResult;
-
-        if (!AccessToken || !IdToken || !RefreshToken) {
-          throw new Error("Invalid authentication response");
-        }
-
-        const user = this.parseUserFromToken(IdToken);
-
+      if (response.ChallengeName === "NEW_PASSWORD_REQUIRED") {
         return {
-          user,
-          accessToken: AccessToken,
-          idToken: IdToken,
-          refreshToken: RefreshToken,
+          user: { username: email, email, emailVerified: false, attributes: {} },
+          accessToken: "",
+          idToken: "",
+          refreshToken: "",
+          challengeName: response.ChallengeName,
+          session: response.Session,
         };
-      } catch (flowError: any) {
-        // If USER_PASSWORD_AUTH fails, provide a helpful error message
-        if (flowError.name === "InvalidParameterException" && flowError.message.includes("USER_PASSWORD_AUTH flow not enabled")) {
-          throw new Error("Please enable USER_PASSWORD_AUTH flow in your AWS Cognito User Pool App Client settings. Go to AWS Console > Cognito > User Pool > App integration > App client > Edit > Enable 'ALLOW_USER_PASSWORD_AUTH' in the Authentication flows.");
-        }
-        throw flowError;
       }
+
+      if (!response.AuthenticationResult) {
+        throw new Error("Authentication failed");
+      }
+
+      const { AccessToken, IdToken, RefreshToken } = response.AuthenticationResult;
+
+      if (!AccessToken || !IdToken || !RefreshToken) {
+        throw new Error("Invalid authentication response");
+      }
+
+      const user = this.parseUserFromToken(IdToken);
+
+      return {
+        user,
+        accessToken: AccessToken,
+        idToken: IdToken,
+        refreshToken: RefreshToken,
+      };
     } catch (error: any) {
       console.error("SignIn error:", error);
+      
+      // Provide helpful error message for USER_PASSWORD_AUTH flow
+      if (error.name === "InvalidParameterException" && error.message.includes("USER_PASSWORD_AUTH flow not enabled")) {
+        throw {
+          code: "ConfigurationRequired",
+          message: "Pour utiliser l'authentification par mot de passe, vous devez activer le flow USER_PASSWORD_AUTH dans votre configuration AWS Cognito.\n\nÉtapes:\n1. Ouvrez AWS Console → Amazon Cognito\n2. Sélectionnez votre User Pool\n3. Allez dans App integration → App client\n4. Cliquez sur Edit\n5. Dans Authentication flows, cochez ALLOW_USER_PASSWORD_AUTH\n6. Sauvegardez les changements",
+        };
+      }
+      
       throw {
         code: error.name,
         message: error.message,
