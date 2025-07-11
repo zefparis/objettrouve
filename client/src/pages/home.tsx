@@ -13,8 +13,11 @@ import Testimonials from "@/components/testimonials";
 import Categories from "@/components/categories";
 import Footer from "@/components/footer";
 import { useQuery } from "@tanstack/react-query";
-import { Card, CardContent } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { Link } from "wouter";
+import { Crown, CreditCard, DollarSign, Settings, ShoppingCart, Star } from "lucide-react";
 
 export default function Home() {
   const { t } = useTranslation();
@@ -97,6 +100,141 @@ export default function Home() {
             <Button size="lg" className="px-8 py-3">
               {t("home.viewAllItems")}
             </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Monetization Features Section */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <Badge className="mb-4">🚀 Nouvelles fonctionnalités</Badge>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              Fonctionnalités Premium
+            </h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              Découvrez toutes les fonctionnalités de monétisation et d'administration
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {/* Pricing Page */}
+            <Card className="hover:shadow-lg transition-shadow">
+              <CardHeader>
+                <CardTitle className="flex items-center">
+                  <Star className="w-5 h-5 mr-2 text-yellow-500" />
+                  Tarification
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600 mb-4">
+                  Services premium et abonnements avec intégration Stripe/PayPal
+                </p>
+                <Link href="/pricing">
+                  <Button className="w-full">
+                    Voir les tarifs
+                  </Button>
+                </Link>
+              </CardContent>
+            </Card>
+
+            {/* Checkout System */}
+            <Card className="hover:shadow-lg transition-shadow">
+              <CardHeader>
+                <CardTitle className="flex items-center">
+                  <ShoppingCart className="w-5 h-5 mr-2 text-green-500" />
+                  Système de paiement
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600 mb-4">
+                  Processus de commande complet avec vérification des paiements
+                </p>
+                <Link href="/checkout">
+                  <Button className="w-full">
+                    Voir checkout
+                  </Button>
+                </Link>
+              </CardContent>
+            </Card>
+
+            {/* Admin Dashboard */}
+            <Card className="hover:shadow-lg transition-shadow">
+              <CardHeader>
+                <CardTitle className="flex items-center">
+                  <Crown className="w-5 h-5 mr-2 text-purple-500" />
+                  Dashboard Admin
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600 mb-4">
+                  Tableau de bord administrateur avec analyses de revenus
+                </p>
+                <Link href="/admin">
+                  <Button className="w-full">
+                    Voir admin
+                  </Button>
+                </Link>
+              </CardContent>
+            </Card>
+
+            {/* Payment Success */}
+            <Card className="hover:shadow-lg transition-shadow">
+              <CardHeader>
+                <CardTitle className="flex items-center">
+                  <CreditCard className="w-5 h-5 mr-2 text-blue-500" />
+                  Confirmation de paiement
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600 mb-4">
+                  Page de confirmation après paiement réussi
+                </p>
+                <Link href="/payment-success">
+                  <Button className="w-full">
+                    Voir confirmation
+                  </Button>
+                </Link>
+              </CardContent>
+            </Card>
+
+            {/* API Documentation */}
+            <Card className="hover:shadow-lg transition-shadow">
+              <CardHeader>
+                <CardTitle className="flex items-center">
+                  <Settings className="w-5 h-5 mr-2 text-gray-500" />
+                  API de paiement
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600 mb-4">
+                  Routes API complètes pour Stripe, PayPal et gestion admin
+                </p>
+                <Button className="w-full" variant="outline">
+                  Voir documentation
+                </Button>
+              </CardContent>
+            </Card>
+
+            {/* Revenue Analytics */}
+            <Card className="hover:shadow-lg transition-shadow">
+              <CardHeader>
+                <CardTitle className="flex items-center">
+                  <DollarSign className="w-5 h-5 mr-2 text-green-600" />
+                  Analyses de revenus
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600 mb-4">
+                  Statistiques détaillées des revenus et utilisateurs payants
+                </p>
+                <Link href="/admin">
+                  <Button className="w-full" variant="outline">
+                    Voir analyses
+                  </Button>
+                </Link>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>

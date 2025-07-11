@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
-import { Menu, Search, Plus, User, Settings, LogOut, X } from "lucide-react";
+import { Menu, Search, Plus, User, Settings, LogOut, X, Crown } from "lucide-react";
 import LanguageSelector from "./language-selector";
 import AuthModal from "./auth/auth-modal";
 
@@ -21,6 +21,7 @@ export default function Navbar() {
     { name: t("nav.home"), href: "/" },
     { name: t("nav.search"), href: "/search" },
     { name: t("nav.howItWorks"), href: "/how-it-works" },
+    { name: t("nav.pricing"), href: "/pricing" },
     { name: t("nav.contact"), href: "/contact" },
   ];
 
@@ -29,6 +30,7 @@ export default function Navbar() {
     { name: t("nav.search"), href: "/search" },
     { name: t("nav.dashboard"), href: "/dashboard" },
     { name: t("nav.chat"), href: "/chat" },
+    { name: t("nav.pricing"), href: "/pricing" },
   ];
 
   const currentNavigation = isAuthenticated ? authenticatedNavigation : navigation;
@@ -128,6 +130,10 @@ export default function Navbar() {
                     <DropdownMenuItem onClick={() => window.location.href = "/chat"}>
                       <Search className="h-4 w-4 mr-2" />
                       {t("nav.chat")}
+                    </DropdownMenuItem>
+                    <DropdownMenuItem onClick={() => window.location.href = "/admin"}>
+                      <Crown className="h-4 w-4 mr-2" />
+                      Admin
                     </DropdownMenuItem>
                     <DropdownMenuItem className="sm:hidden" onClick={() => window.location.href = "/publier?type=lost"}>
                       <span className="w-3 h-3 bg-red-500 rounded-full mr-2"></span>
