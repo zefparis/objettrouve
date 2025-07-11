@@ -122,6 +122,38 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
+  // Profile routes
+  app.put('/api/profile', isAuthenticated, upload.single('profileImage'), async (req: any, res) => {
+    try {
+      const userId = req.user.claims.sub;
+      const { firstName, lastName, email, phone, location, bio } = req.body;
+      
+      const updates = {
+        firstName: firstName || null,
+        lastName: lastName || null,
+        email: email || null,
+        phone: phone || null,
+        location: location || null,
+        bio: bio || null,
+        profileImageUrl: req.file ? `/uploads/${req.file.filename}` : undefined,
+        updatedAt: new Date(),
+      };
+
+      // Remove undefined values
+      Object.keys(updates).forEach(key => {
+        if (updates[key] === undefined) {
+          delete updates[key];
+        }
+      });
+
+      const updatedUser = await storage.upsertUser({ id: userId, ...updates });
+      res.json(updatedUser);
+    } catch (error) {
+      console.error("Error updating profile:", error);
+      res.status(500).json({ message: "Erreur lors de la mise à jour du profil" });
+    }
+  });
+
   // Items routes
   app.post('/api/items', isAuthenticated, upload.single('image'), async (req: any, res) => {
     try {
