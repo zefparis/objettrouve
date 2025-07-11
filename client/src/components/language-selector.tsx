@@ -15,6 +15,11 @@ const languages = [
   { code: 'es', name: 'Español', flag: '🇪🇸' },
   { code: 'pt', name: 'Português', flag: '🇵🇹' },
   { code: 'it', name: 'Italiano', flag: '🇮🇹' },
+  { code: 'de', name: 'Deutsch', flag: '🇩🇪' },
+  { code: 'nl', name: 'Nederlands', flag: '🇳🇱' },
+  { code: 'zh', name: '中文', flag: '🇨🇳' },
+  { code: 'ja', name: '日本語', flag: '🇯🇵' },
+  { code: 'ko', name: '한국어', flag: '🇰🇷' },
 ];
 
 export default function LanguageSelector() {
@@ -40,7 +45,7 @@ export default function LanguageSelector() {
           <ChevronDown className="h-3 w-3" />
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent align="end" className="w-48">
+      <DropdownMenuContent align="end" className="w-48 max-h-64 overflow-y-auto">
         {languages.map((language) => (
           <DropdownMenuItem
             key={language.code}

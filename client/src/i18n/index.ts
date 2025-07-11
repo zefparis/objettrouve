@@ -8,6 +8,11 @@ import enTranslation from './locales/en/translation.json';
 import esTranslation from './locales/es/translation.json';
 import ptTranslation from './locales/pt/translation.json';
 import itTranslation from './locales/it/translation.json';
+import deTranslation from './locales/de/translation.json';
+import nlTranslation from './locales/nl/translation.json';
+import zhTranslation from './locales/zh/translation.json';
+import jaTranslation from './locales/ja/translation.json';
+import koTranslation from './locales/ko/translation.json';
 
 i18n
   .use(LanguageDetector)
@@ -34,6 +39,21 @@ i18n
       },
       it: {
         translation: itTranslation,
+      },
+      de: {
+        translation: deTranslation,
+      },
+      nl: {
+        translation: nlTranslation,
+      },
+      zh: {
+        translation: zhTranslation,
+      },
+      ja: {
+        translation: jaTranslation,
+      },
+      ko: {
+        translation: koTranslation,
       },
     },
     detection: {

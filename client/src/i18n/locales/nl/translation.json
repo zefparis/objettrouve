@@ -1,0 +1,303 @@
+{
+  "nav": {
+    "home": "Home",
+    "search": "Zoeken",
+    "publish": "Publiceren",
+    "dashboard": "Dashboard",
+    "chat": "Berichten",
+    "login": "Inloggen",
+    "logout": "Uitloggen",
+    "features": "Functies",
+    "howItWorks": "Hoe het werkt",
+    "contact": "Contact"
+  },
+  "common": {
+    "back": "Terug"
+  },
+  "hero": {
+    "title": "Vind je verloren voorwerpen",
+    "subtitle": "Het Franse referentieplatform voor het terugvinden van verloren voorwerpen of het melden van vondsten",
+    "searchPlaceholder": "Zoek naar een voorwerp...",
+    "searchButton": "Zoeken",
+    "publishButton": "Advertentie plaatsen",
+    "iLostSomething": "Ik ben iets verloren",
+    "iFoundSomething": "Ik heb iets gevonden"
+  },
+  "stats": {
+    "totalItems": "Gemelde voorwerpen",
+    "lostItems": "Verloren voorwerpen",
+    "foundItems": "Gevonden voorwerpen",
+    "users": "Actieve gebruikers"
+  },
+  "categories": {
+    "title": "Populaire categorieën",
+    "subtitle": "Zoek op type voorwerp voor gemakkelijker vinden",
+    "electronics": "Elektronica",
+    "clothing": "Kleding",
+    "accessories": "Accessoires",
+    "documents": "Documenten",
+    "keys": "Sleutels",
+    "jewelry": "Sieraden",
+    "bags": "Tassen",
+    "sports": "Sport",
+    "books": "Boeken",
+    "pets": "Dieren",
+    "other": "Overig"
+  },
+  "howItWorks": {
+    "title": "Hoe werkt het?",
+    "subtitle": "Vind je verloren voorwerpen in 3 eenvoudige stappen",
+    "badge": "Volledige gids",
+    "stepNumber": "Stap {{number}}",
+    "step1": {
+      "title": "Meld je voorwerp",
+      "description": "Plaats een advertentie met foto en gedetailleerde beschrijving",
+      "detail1": "Voeg duidelijke foto's van je voorwerp toe",
+      "detail2": "Beschrijf de kenmerken precies",
+      "detail3": "Geef plaats en datum van verlies aan"
+    },
+    "step2": {
+      "title": "Zoek en filter",
+      "description": "Gebruik onze filters om snel te vinden wat je zoekt",
+      "detail1": "Filter op categorie en locatie",
+      "detail2": "Gebruik zoekwoorden",
+      "detail3": "Blader door recente advertenties"
+    },
+    "step3": {
+      "title": "Contacteer en vind terug",
+      "description": "Wissel veilig berichten uit met andere gebruikers",
+      "detail1": "Geïntegreerd veilig berichtensysteem",
+      "detail2": "Identiteitsverificatie",
+      "detail3": "Community beoordelingssysteem"
+    },
+    "features": {
+      "title": "Hoofdfuncties",
+      "security": {
+        "title": "Gegarandeerde veiligheid",
+        "description": "Je gegevens en uitwisselingen zijn beschermd door een geavanceerd beveiligingssysteem"
+      },
+      "location": {
+        "title": "Geolocatie",
+        "description": "Precieze locatiebepaling voor optimale zoekresultaten"
+      },
+      "community": {
+        "title": "Actieve gemeenschap",
+        "description": "Sluit je aan bij een behulpzame en toegewijde gemeenschap"
+      }
+    },
+    "timeline": {
+      "title": "Jouw succespad",
+      "report": "Melden",
+      "search": "Zoeken",
+      "contact": "Contacteren",
+      "recover": "Terugvinden"
+    },
+    "cta": {
+      "title": "Klaar om te beginnen?",
+      "subtitle": "Sluit je aan bij duizenden gebruikers die hun voorwerpen al hebben teruggevonden dankzij ons platform",
+      "startButton": "Nu beginnen",
+      "learnMore": "Meer leren"
+    }
+  },
+  "contact": {
+    "badge": "Neem contact op",
+    "title": "We zijn hier om je te helpen",
+    "subtitle": "Heb je vragen of heb je hulp nodig? Ons team staat voor je klaar",
+    "form": {
+      "title": "Stuur ons een bericht",
+      "name": "Volledige naam",
+      "namePlaceholder": "Je naam",
+      "email": "E-mailadres",
+      "emailPlaceholder": "jouw.email@voorbeeld.com",
+      "subject": "Onderwerp",
+      "subjectPlaceholder": "Waar gaat het over?",
+      "message": "Bericht",
+      "messagePlaceholder": "Beschrijf je verzoek...",
+      "send": "Bericht verzenden",
+      "sending": "Aan het verzenden...",
+      "success": "Bericht succesvol verzonden!",
+      "error": "Fout bij het verzenden van het bericht"
+    },
+    "info": {
+      "title": "Contactgegevens",
+      "email": "E-mail",
+      "phone": "Telefoon",
+      "address": "Adres",
+      "hours": "Openingstijden",
+      "hoursDetail": "Maandag - Vrijdag: 9:00 - 18:00"
+    },
+    "faq": {
+      "title": "Veelgestelde vragen",
+      "q1": "Hoe plaats ik een advertentie?",
+      "a1": "Klik op 'Publiceren', vul het formulier in en voeg foto's toe.",
+      "q2": "Is de service gratis?",
+      "a2": "Ja, onze basisdiensten zijn volledig gratis voor alle gebruikers.",
+      "q3": "Hoe contacteer ik iemand?",
+      "a3": "Gebruik ons veilige berichtensysteem om direct te communiceren met andere gebruikers.",
+      "q4": "Hoe verwijder ik mijn advertentie?",
+      "a4": "Ga naar je dashboard en klik op 'Verwijderen' naast je advertentie."
+    },
+    "social": {
+      "title": "Volg ons",
+      "subtitle": "Blijf in contact met ons via sociale media"
+    }
+  },
+  "search": {
+    "title": "Zoek je voorwerpen",
+    "subtitle": "Doorzoek duizenden advertenties van verloren en gevonden voorwerpen",
+    "searchPlaceholder": "Zoek naar een voorwerp...",
+    "searchButton": "Zoeken",
+    "filters": "Filters",
+    "type": "Type",
+    "category": "Categorie",
+    "location": "Locatie",
+    "all": "Alle",
+    "lost": "Verloren",
+    "found": "Gevonden",
+    "noResults": "Geen resultaten gevonden",
+    "noResultsDesc": "Probeer je zoekcriteria te wijzigen",
+    "itemType": {
+      "lost": "Verloren",
+      "found": "Gevonden"
+    }
+  },
+  "publish": {
+    "title": "Plaats een advertentie",
+    "subtitle": "Meld een verloren of gevonden voorwerp",
+    "form": {
+      "title": "Titel",
+      "titlePlaceholder": "bijv. iPhone 12 Pro verloren",
+      "description": "Beschrijving",
+      "descriptionPlaceholder": "Beschrijf het voorwerp in detail...",
+      "type": "Type",
+      "typeLost": "Ik ben iets verloren",
+      "typeFound": "Ik heb iets gevonden",
+      "category": "Categorie",
+      "categoryPlaceholder": "Selecteer een categorie",
+      "location": "Locatie",
+      "locationPlaceholder": "Waar is het gebeurd?",
+      "date": "Datum",
+      "datePlaceholder": "Wanneer is het gebeurd?",
+      "image": "Foto",
+      "imageDesc": "Voeg een foto toe (optioneel)",
+      "publish": "Publiceren",
+      "publishing": "Aan het publiceren...",
+      "success": "Advertentie succesvol geplaatst!",
+      "error": "Fout bij het plaatsen van de advertentie"
+    }
+  },
+  "dashboard": {
+    "title": "Mijn dashboard",
+    "subtitle": "Beheer je advertenties en berichten",
+    "myAds": "Mijn advertenties",
+    "noAds": "Je hebt nog geen advertenties geplaatst",
+    "createFirst": "Maak je eerste advertentie",
+    "edit": "Bewerken",
+    "delete": "Verwijderen",
+    "deleteConfirm": "Weet je zeker dat je deze advertentie wilt verwijderen?",
+    "deleteSuccess": "Advertentie succesvol verwijderd"
+  },
+  "chat": {
+    "title": "Berichten",
+    "subtitle": "Je gesprekken",
+    "noConversations": "Geen gesprekken",
+    "startConversation": "Begin een gesprek door iemand te contacteren over een voorwerp",
+    "typeMessage": "Typ een bericht...",
+    "send": "Verzenden",
+    "you": "Jij",
+    "contactOwner": "Eigenaar contacteren",
+    "contactFinder": "Vinder contacteren"
+  },
+  "itemDetail": {
+    "contactOwner": "Eigenaar contacteren",
+    "contactFinder": "Vinder contacteren",
+    "reportedOn": "Gemeld op",
+    "location": "Locatie",
+    "category": "Categorie",
+    "description": "Beschrijving",
+    "contact": "Contact",
+    "backToSearch": "Terug naar zoeken"
+  },
+  "home": {
+    "recentItems": "Recente voorwerpen",
+    "recentItemsDesc": "Ontdek de nieuwste advertenties van verloren en gevonden voorwerpen",
+    "seeAll": "Alles bekijken"
+  },
+  "footer": {
+    "description": "Het Franse referentieplatform voor het terugvinden van verloren voorwerpen",
+    "links": {
+      "about": "Over ons",
+      "privacy": "Privacy",
+      "terms": "Voorwaarden",
+      "help": "Help"
+    },
+    "contact": {
+      "title": "Contact",
+      "email": "contact@objetstrouves.fr",
+      "phone": "+33 1 23 45 67 89"
+    },
+    "social": {
+      "title": "Volg ons"
+    },
+    "copyright": "© 2024 ObjetsTrouvés. Alle rechten voorbehouden."
+  },
+  "errors": {
+    "required": "Dit veld is verplicht",
+    "email_invalid": "Ongeldig e-mailadres",
+    "title_min": "Titel moet minimaal 5 karakters lang zijn",
+    "title_max": "Titel mag maximaal 100 karakters lang zijn",
+    "description_min": "Beschrijving moet minimaal 10 karakters lang zijn",
+    "description_max": "Beschrijving mag maximaal 1000 karakters lang zijn",
+    "location_min": "Locatie moet minimaal 2 karakters lang zijn",
+    "image_size": "Bestandsgrootte mag niet meer dan 5MB zijn",
+    "image_type": "Alleen JPEG, PNG en GIF bestanden zijn toegestaan"
+  },
+  "validation": {
+    "required": "Verplicht",
+    "email": "Geldig e-mailadres vereist",
+    "min": "Minimaal {{min}} karakters vereist",
+    "max": "Maximaal {{max}} karakters toegestaan",
+    "phone": "Geldig telefoonnummer vereist",
+    "url": "Geldige URL vereist",
+    "number": "Moet een getal zijn",
+    "integer": "Moet een heel getal zijn",
+    "positive": "Moet een positief getal zijn",
+    "date": "Geldige datum vereist",
+    "time": "Geldige tijd vereist",
+    "datetime": "Geldige datum en tijd vereist",
+    "boolean": "Moet waar of onwaar zijn",
+    "array": "Moet een array zijn",
+    "object": "Moet een object zijn",
+    "string": "Moet een string zijn",
+    "enum": "Moet een van de toegestane waarden zijn",
+    "unique": "Moet uniek zijn",
+    "exists": "Moet bestaan",
+    "confirmed": "Bevestiging komt niet overeen",
+    "accepted": "Moet geaccepteerd worden",
+    "declined": "Moet geweigerd worden",
+    "prohibited": "Dit veld is niet toegestaan",
+    "prohibited_if": "Dit veld is niet toegestaan als {{other}} {{value}} is",
+    "prohibited_unless": "Dit veld is niet toegestaan tenzij {{other}} {{value}} is",
+    "same": "Moet hetzelfde zijn als {{other}}",
+    "different": "Moet anders zijn dan {{other}}",
+    "regex": "Het formaat is ongeldig",
+    "alpha": "Mag alleen letters bevatten",
+    "alpha_dash": "Mag alleen letters, cijfers, streepjes en underscores bevatten",
+    "alpha_num": "Mag alleen letters en cijfers bevatten",
+    "ascii": "Mag alleen ASCII karakters bevatten",
+    "digits": "Moet {{digits}} cijfers hebben",
+    "digits_between": "Moet tussen {{min}} en {{max}} cijfers hebben",
+    "file": "Moet een bestand zijn",
+    "filled": "Moet een waarde hebben",
+    "image": "Moet een afbeelding zijn",
+    "in": "De geselecteerde waarde is ongeldig",
+    "not_in": "De geselecteerde waarde is ongeldig",
+    "numeric": "Moet numeriek zijn",
+    "present": "Moet aanwezig zijn",
+    "size": "Moet {{size}} groot zijn",
+    "timezone": "Moet een geldige tijdzone zijn",
+    "uploaded": "Fout bij uploaden",
+    "uuid": "Moet een geldige UUID zijn",
+    "custom": "Het {{attribute}} veld is ongeldig"
+  }
+}

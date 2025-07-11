@@ -4,6 +4,8 @@
 
 This is a full-stack French lost and found objects management application (ObjetsTrouvés) built with modern technologies. The application allows users to publish, search, and recover lost or found items with secure chat functionality. It features a React frontend with shadcn/ui components and an Express.js backend with PostgreSQL database using Drizzle ORM.
 
+**Language Support**: Complete multilingual platform supporting 10 languages with perfect isolation and zero language mixing.
+
 ## User Preferences
 
 Preferred communication style: Simple, everyday language.
@@ -30,10 +32,18 @@ Preferred communication style: Simple, everyday language.
 
 ## Key Components
 
+### Multilingual Expansion (January 2025)
+- **Language Support Extended**: From 5 to 10 languages total
+- **Original Languages**: French (fr), English (en), Spanish (es), Portuguese (pt), Italian (it)
+- **New Languages Added**: German (de), Dutch (nl), Chinese Simplified (zh), Japanese (ja), Korean (ko)
+- **Complete Translation Coverage**: All interface elements, forms, navigation, and content fully translated
+- **Enhanced Language Selector**: Updated dropdown with all 10 languages including native names and flags
+- **Perfect Language Isolation**: Zero language mixing ensured across all components
+
 ### New Pages Added (January 2025)
 - **How It Works Page** (`/how-it-works`): Complete guide explaining the 3-step process (report, search, contact)
 - **Contact Page** (`/contact`): Comprehensive contact form with FAQ, social links, and support information
-- **Full Internationalization**: Both pages translated into all 5 supported languages (FR, EN, ES, PT, IT)
+- **Full Internationalization**: All pages translated into all 10 supported languages
 - **Navigation Integration**: Added links in navbar and footer for easy access
 
 ### Database Schema

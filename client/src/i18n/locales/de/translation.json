@@ -1,0 +1,303 @@
+{
+  "nav": {
+    "home": "Startseite",
+    "search": "Suchen",
+    "publish": "Veröffentlichen",
+    "dashboard": "Dashboard",
+    "chat": "Nachrichten",
+    "login": "Anmelden",
+    "logout": "Abmelden",
+    "features": "Funktionen",
+    "howItWorks": "Wie es funktioniert",
+    "contact": "Kontakt"
+  },
+  "common": {
+    "back": "Zurück"
+  },
+  "hero": {
+    "title": "Finden Sie Ihre verlorenen Gegenstände",
+    "subtitle": "Die französische Referenzplattform zum Wiederfinden verlorener Gegenstände oder zum Melden von Fundstücken",
+    "searchPlaceholder": "Nach einem Gegenstand suchen...",
+    "searchButton": "Suchen",
+    "publishButton": "Anzeige veröffentlichen",
+    "iLostSomething": "Ich habe etwas verloren",
+    "iFoundSomething": "Ich habe etwas gefunden"
+  },
+  "stats": {
+    "totalItems": "Gemeldete Gegenstände",
+    "lostItems": "Verlorene Gegenstände",
+    "foundItems": "Gefundene Gegenstände",
+    "users": "Aktive Benutzer"
+  },
+  "categories": {
+    "title": "Beliebte Kategorien",
+    "subtitle": "Suchen Sie nach Gegenstandstyp für einfacheres Finden",
+    "electronics": "Elektronik",
+    "clothing": "Kleidung",
+    "accessories": "Accessoires",
+    "documents": "Dokumente",
+    "keys": "Schlüssel",
+    "jewelry": "Schmuck",
+    "bags": "Taschen",
+    "sports": "Sport",
+    "books": "Bücher",
+    "pets": "Tiere",
+    "other": "Andere"
+  },
+  "howItWorks": {
+    "title": "Wie funktioniert es?",
+    "subtitle": "Finden Sie Ihre verlorenen Gegenstände in 3 einfachen Schritten",
+    "badge": "Vollständiger Leitfaden",
+    "stepNumber": "Schritt {{number}}",
+    "step1": {
+      "title": "Melden Sie Ihren Gegenstand",
+      "description": "Veröffentlichen Sie eine Anzeige mit Foto und detaillierter Beschreibung",
+      "detail1": "Klare Fotos Ihres Gegenstands hinzufügen",
+      "detail2": "Eigenschaften genau beschreiben",
+      "detail3": "Ort und Datum des Verlusts angeben"
+    },
+    "step2": {
+      "title": "Suchen und filtern",
+      "description": "Nutzen Sie unsere Filter, um schnell zu finden, was Sie suchen",
+      "detail1": "Nach Kategorie und Standort filtern",
+      "detail2": "Stichwortsuche verwenden",
+      "detail3": "Durch aktuelle Anzeigen blättern"
+    },
+    "step3": {
+      "title": "Kontaktieren und wiederfinden",
+      "description": "Tauschen Sie sicher Nachrichten mit anderen Benutzern aus",
+      "detail1": "Integrierte sichere Nachrichtenfunktion",
+      "detail2": "Identitätsverifikation",
+      "detail3": "Community-Bewertungssystem"
+    },
+    "features": {
+      "title": "Hauptfunktionen",
+      "security": {
+        "title": "Garantierte Sicherheit",
+        "description": "Ihre Daten und Austausche sind durch ein fortschrittliches Sicherheitssystem geschützt"
+      },
+      "location": {
+        "title": "Geolokalisierung",
+        "description": "Präzise Standortbestimmung für optimale Suchergebnisse"
+      },
+      "community": {
+        "title": "Aktive Gemeinschaft",
+        "description": "Treten Sie einer hilfsbereiten und engagierten Gemeinschaft bei"
+      }
+    },
+    "timeline": {
+      "title": "Ihr Erfolgsweg",
+      "report": "Melden",
+      "search": "Suchen",
+      "contact": "Kontaktieren",
+      "recover": "Wiederfinden"
+    },
+    "cta": {
+      "title": "Bereit anzufangen?",
+      "subtitle": "Schließen Sie sich Tausenden von Benutzern an, die bereits ihre Gegenstände dank unserer Plattform wiedergefunden haben",
+      "startButton": "Jetzt starten",
+      "learnMore": "Mehr erfahren"
+    }
+  },
+  "contact": {
+    "badge": "Kontaktieren Sie uns",
+    "title": "Wir sind hier, um Ihnen zu helfen",
+    "subtitle": "Haben Sie Fragen oder brauchen Sie Hilfe? Unser Team steht Ihnen zur Verfügung",
+    "form": {
+      "title": "Senden Sie uns eine Nachricht",
+      "name": "Vollständiger Name",
+      "namePlaceholder": "Ihr Name",
+      "email": "E-Mail-Adresse",
+      "emailPlaceholder": "ihre.email@beispiel.com",
+      "subject": "Betreff",
+      "subjectPlaceholder": "Worum geht es?",
+      "message": "Nachricht",
+      "messagePlaceholder": "Beschreiben Sie Ihr Anliegen...",
+      "send": "Nachricht senden",
+      "sending": "Wird gesendet...",
+      "success": "Nachricht erfolgreich gesendet!",
+      "error": "Fehler beim Senden der Nachricht"
+    },
+    "info": {
+      "title": "Kontaktinformationen",
+      "email": "E-Mail",
+      "phone": "Telefon",
+      "address": "Adresse",
+      "hours": "Öffnungszeiten",
+      "hoursDetail": "Montag - Freitag: 9:00 - 18:00"
+    },
+    "faq": {
+      "title": "Häufig gestellte Fragen",
+      "q1": "Wie veröffentliche ich eine Anzeige?",
+      "a1": "Klicken Sie auf 'Veröffentlichen', füllen Sie das Formular aus und fügen Sie Fotos hinzu.",
+      "q2": "Ist der Service kostenlos?",
+      "a2": "Ja, unsere Grunddienste sind völlig kostenlos für alle Benutzer.",
+      "q3": "Wie kontaktiere ich jemanden?",
+      "a3": "Verwenden Sie unser sicheres Nachrichtensystem, um direkt mit anderen Benutzern zu kommunizieren.",
+      "q4": "Wie lösche ich meine Anzeige?",
+      "a4": "Gehen Sie zu Ihrem Dashboard und klicken Sie auf 'Löschen' neben Ihrer Anzeige."
+    },
+    "social": {
+      "title": "Folgen Sie uns",
+      "subtitle": "Bleiben Sie mit uns in Kontakt über soziale Medien"
+    }
+  },
+  "search": {
+    "title": "Suchen Sie Ihre Gegenstände",
+    "subtitle": "Durchsuchen Sie Tausende von Anzeigen von verlorenen und gefundenen Gegenständen",
+    "searchPlaceholder": "Nach einem Gegenstand suchen...",
+    "searchButton": "Suchen",
+    "filters": "Filter",
+    "type": "Typ",
+    "category": "Kategorie",
+    "location": "Standort",
+    "all": "Alle",
+    "lost": "Verloren",
+    "found": "Gefunden",
+    "noResults": "Keine Ergebnisse gefunden",
+    "noResultsDesc": "Versuchen Sie, Ihre Suchkriterien zu ändern",
+    "itemType": {
+      "lost": "Verloren",
+      "found": "Gefunden"
+    }
+  },
+  "publish": {
+    "title": "Veröffentlichen Sie eine Anzeige",
+    "subtitle": "Melden Sie einen verlorenen oder gefundenen Gegenstand",
+    "form": {
+      "title": "Titel",
+      "titlePlaceholder": "z.B. iPhone 12 Pro verloren",
+      "description": "Beschreibung",
+      "descriptionPlaceholder": "Beschreiben Sie den Gegenstand detailliert...",
+      "type": "Typ",
+      "typeLost": "Ich habe etwas verloren",
+      "typeFound": "Ich habe etwas gefunden",
+      "category": "Kategorie",
+      "categoryPlaceholder": "Wählen Sie eine Kategorie",
+      "location": "Standort",
+      "locationPlaceholder": "Wo ist es passiert?",
+      "date": "Datum",
+      "datePlaceholder": "Wann ist es passiert?",
+      "image": "Foto",
+      "imageDesc": "Fügen Sie ein Foto hinzu (optional)",
+      "publish": "Veröffentlichen",
+      "publishing": "Wird veröffentlicht...",
+      "success": "Anzeige erfolgreich veröffentlicht!",
+      "error": "Fehler beim Veröffentlichen der Anzeige"
+    }
+  },
+  "dashboard": {
+    "title": "Mein Dashboard",
+    "subtitle": "Verwalten Sie Ihre Anzeigen und Nachrichten",
+    "myAds": "Meine Anzeigen",
+    "noAds": "Sie haben noch keine Anzeigen veröffentlicht",
+    "createFirst": "Erstellen Sie Ihre erste Anzeige",
+    "edit": "Bearbeiten",
+    "delete": "Löschen",
+    "deleteConfirm": "Möchten Sie diese Anzeige wirklich löschen?",
+    "deleteSuccess": "Anzeige erfolgreich gelöscht"
+  },
+  "chat": {
+    "title": "Nachrichten",
+    "subtitle": "Ihre Gespräche",
+    "noConversations": "Keine Gespräche",
+    "startConversation": "Beginnen Sie ein Gespräch, indem Sie jemanden zu einem Gegenstand kontaktieren",
+    "typeMessage": "Nachricht eingeben...",
+    "send": "Senden",
+    "you": "Sie",
+    "contactOwner": "Eigentümer kontaktieren",
+    "contactFinder": "Finder kontaktieren"
+  },
+  "itemDetail": {
+    "contactOwner": "Eigentümer kontaktieren",
+    "contactFinder": "Finder kontaktieren",
+    "reportedOn": "Gemeldet am",
+    "location": "Standort",
+    "category": "Kategorie",
+    "description": "Beschreibung",
+    "contact": "Kontakt",
+    "backToSearch": "Zurück zur Suche"
+  },
+  "home": {
+    "recentItems": "Aktuelle Gegenstände",
+    "recentItemsDesc": "Entdecken Sie die neuesten Anzeigen von verlorenen und gefundenen Gegenständen",
+    "seeAll": "Alle ansehen"
+  },
+  "footer": {
+    "description": "Die französische Referenzplattform zum Wiederfinden verlorener Gegenstände",
+    "links": {
+      "about": "Über uns",
+      "privacy": "Datenschutz",
+      "terms": "Nutzungsbedingungen",
+      "help": "Hilfe"
+    },
+    "contact": {
+      "title": "Kontakt",
+      "email": "kontakt@objetstrouves.fr",
+      "phone": "+33 1 23 45 67 89"
+    },
+    "social": {
+      "title": "Folgen Sie uns"
+    },
+    "copyright": "© 2024 ObjetsTrouvés. Alle Rechte vorbehalten."
+  },
+  "errors": {
+    "required": "Dieses Feld ist erforderlich",
+    "email_invalid": "Ungültige E-Mail-Adresse",
+    "title_min": "Der Titel muss mindestens 5 Zeichen lang sein",
+    "title_max": "Der Titel darf höchstens 100 Zeichen lang sein",
+    "description_min": "Die Beschreibung muss mindestens 10 Zeichen lang sein",
+    "description_max": "Die Beschreibung darf höchstens 1000 Zeichen lang sein",
+    "location_min": "Der Standort muss mindestens 2 Zeichen lang sein",
+    "image_size": "Die Bildgröße darf 5MB nicht überschreiten",
+    "image_type": "Nur JPEG, PNG und GIF-Dateien sind erlaubt"
+  },
+  "validation": {
+    "required": "Erforderlich",
+    "email": "Gültige E-Mail-Adresse erforderlich",
+    "min": "Mindestens {{min}} Zeichen erforderlich",
+    "max": "Höchstens {{max}} Zeichen erlaubt",
+    "phone": "Gültige Telefonnummer erforderlich",
+    "url": "Gültige URL erforderlich",
+    "number": "Muss eine Zahl sein",
+    "integer": "Muss eine ganze Zahl sein",
+    "positive": "Muss eine positive Zahl sein",
+    "date": "Gültiges Datum erforderlich",
+    "time": "Gültige Uhrzeit erforderlich",
+    "datetime": "Gültiges Datum und Uhrzeit erforderlich",
+    "boolean": "Muss wahr oder falsch sein",
+    "array": "Muss ein Array sein",
+    "object": "Muss ein Objekt sein",
+    "string": "Muss eine Zeichenkette sein",
+    "enum": "Muss einer der erlaubten Werte sein",
+    "unique": "Muss eindeutig sein",
+    "exists": "Muss existieren",
+    "confirmed": "Bestätigung stimmt nicht überein",
+    "accepted": "Muss akzeptiert werden",
+    "declined": "Muss abgelehnt werden",
+    "prohibited": "Dieses Feld ist nicht erlaubt",
+    "prohibited_if": "Dieses Feld ist nicht erlaubt wenn {{other}} {{value}} ist",
+    "prohibited_unless": "Dieses Feld ist nicht erlaubt außer {{other}} ist {{value}}",
+    "same": "Muss mit {{other}} übereinstimmen",
+    "different": "Muss sich von {{other}} unterscheiden",
+    "regex": "Das Format ist ungültig",
+    "alpha": "Darf nur Buchstaben enthalten",
+    "alpha_dash": "Darf nur Buchstaben, Zahlen, Bindestriche und Unterstriche enthalten",
+    "alpha_num": "Darf nur Buchstaben und Zahlen enthalten",
+    "ascii": "Darf nur ASCII-Zeichen enthalten",
+    "digits": "Muss {{digits}} Ziffern haben",
+    "digits_between": "Muss zwischen {{min}} und {{max}} Ziffern haben",
+    "file": "Muss eine Datei sein",
+    "filled": "Muss einen Wert haben",
+    "image": "Muss ein Bild sein",
+    "in": "Der ausgewählte Wert ist ungültig",
+    "not_in": "Der ausgewählte Wert ist ungültig",
+    "numeric": "Muss eine Zahl sein",
+    "present": "Muss vorhanden sein",
+    "size": "Muss {{size}} groß sein",
+    "timezone": "Muss eine gültige Zeitzone sein",
+    "uploaded": "Fehler beim Hochladen",
+    "uuid": "Muss eine gültige UUID sein",
+    "custom": "Das {{attribute}} Feld ist ungültig"
+  }
+}

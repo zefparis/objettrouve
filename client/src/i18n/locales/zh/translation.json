@@ -1,0 +1,157 @@
+{
+  "nav": {
+    "home": "首页",
+    "search": "搜索",
+    "publish": "发布",
+    "dashboard": "仪表板",
+    "chat": "消息",
+    "login": "登录",
+    "logout": "退出",
+    "features": "功能",
+    "howItWorks": "如何使用",
+    "contact": "联系我们"
+  },
+  "common": {
+    "back": "返回"
+  },
+  "hero": {
+    "title": "找回您的失物",
+    "subtitle": "法国领先的失物招领平台，帮助您找回失物或报告发现的物品",
+    "searchPlaceholder": "搜索物品...",
+    "searchButton": "搜索",
+    "publishButton": "发布广告",
+    "iLostSomething": "我丢失了东西",
+    "iFoundSomething": "我找到了东西"
+  },
+  "stats": {
+    "totalItems": "已报告物品",
+    "lostItems": "丢失物品",
+    "foundItems": "发现物品",
+    "users": "活跃用户"
+  },
+  "categories": {
+    "title": "热门分类",
+    "subtitle": "按物品类型搜索，更容易找到",
+    "electronics": "电子产品",
+    "clothing": "服装",
+    "accessories": "配件",
+    "documents": "文件",
+    "keys": "钥匙",
+    "jewelry": "珠宝",
+    "bags": "包",
+    "sports": "运动",
+    "books": "书籍",
+    "pets": "宠物",
+    "other": "其他"
+  },
+  "search": {
+    "title": "搜索您的物品",
+    "subtitle": "搜索数千个失物招领广告",
+    "searchPlaceholder": "搜索物品...",
+    "searchButton": "搜索",
+    "filters": "筛选器",
+    "type": "类型",
+    "category": "类别",
+    "location": "位置",
+    "all": "全部",
+    "lost": "丢失",
+    "found": "找到",
+    "noResults": "未找到结果",
+    "noResultsDesc": "尝试更改您的搜索条件",
+    "itemType": {
+      "lost": "丢失",
+      "found": "找到"
+    }
+  },
+  "publish": {
+    "title": "发布广告",
+    "subtitle": "报告丢失或找到的物品",
+    "form": {
+      "title": "标题",
+      "titlePlaceholder": "例如：丢失iPhone 12 Pro",
+      "description": "描述",
+      "descriptionPlaceholder": "详细描述物品...",
+      "type": "类型",
+      "typeLost": "我丢失了东西",
+      "typeFound": "我找到了东西",
+      "category": "类别",
+      "categoryPlaceholder": "选择类别",
+      "location": "位置",
+      "locationPlaceholder": "在哪里发生的？",
+      "date": "日期",
+      "datePlaceholder": "什么时候发生的？",
+      "image": "照片",
+      "imageDesc": "添加照片（可选）",
+      "publish": "发布",
+      "publishing": "发布中...",
+      "success": "广告发布成功！",
+      "error": "发布广告时出错"
+    }
+  },
+  "dashboard": {
+    "title": "我的仪表板",
+    "subtitle": "管理您的广告和消息",
+    "myAds": "我的广告",
+    "noAds": "您还没有发布任何广告",
+    "createFirst": "创建您的第一个广告",
+    "edit": "编辑",
+    "delete": "删除",
+    "deleteConfirm": "您确定要删除此广告吗？",
+    "deleteSuccess": "广告删除成功"
+  },
+  "chat": {
+    "title": "消息",
+    "subtitle": "您的对话",
+    "noConversations": "没有对话",
+    "startConversation": "通过就某个物品联系某人来开始对话",
+    "typeMessage": "输入消息...",
+    "send": "发送",
+    "you": "您",
+    "contactOwner": "联系所有者",
+    "contactFinder": "联系发现者"
+  },
+  "itemDetail": {
+    "contactOwner": "联系所有者",
+    "contactFinder": "联系发现者",
+    "reportedOn": "报告于",
+    "location": "位置",
+    "category": "类别",
+    "description": "描述",
+    "contact": "联系",
+    "backToSearch": "返回搜索"
+  },
+  "home": {
+    "recentItems": "最新物品",
+    "recentItemsDesc": "发现最新的失物招领广告",
+    "seeAll": "查看全部"
+  },
+  "footer": {
+    "description": "法国领先的失物招领平台",
+    "links": {
+      "about": "关于我们",
+      "privacy": "隐私",
+      "terms": "条款",
+      "help": "帮助"
+    },
+    "contact": {
+      "title": "联系",
+      "email": "contact@objetstrouves.fr",
+      "phone": "+33 1 23 45 67 89"
+    },
+    "social": {
+      "title": "关注我们"
+    },
+    "copyright": "© 2024 ObjetsTrouvés. 版权所有。"
+  },
+  "errors": {
+    "required": "此字段是必需的",
+    "email_invalid": "无效的电子邮件地址",
+    "title_min": "标题必须至少5个字符",
+    "title_max": "标题最多100个字符",
+    "description_min": "描述必须至少10个字符",
+    "description_max": "描述最多1000个字符",
+    "location_min": "位置必须至少2个字符",
+    "image_size": "图像大小不得超过5MB",
+    "image_type": "只允许JPEG、PNG和GIF文件"
+  }
+}
