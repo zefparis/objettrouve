@@ -1,11 +1,10 @@
 import { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useMutation, useQueryClient } from "@tanstack/react-query";
+import { useMutation, useQueryClient, useQuery } from "@tanstack/react-query";
 import { useTranslation } from "react-i18next";
 import { useLocation, useSearch } from "wouter";
 import { z } from "zod";
-import { useCognitoAuth } from "@/hooks/useCognitoAuth";
 import Navbar from "@/components/navbar";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -40,7 +39,13 @@ export default function Publish() {
   const search = useSearch();
   const { toast } = useToast();
   const queryClient = useQueryClient();
-  const { isAuthenticated, isLoading } = useCognitoAuth();
+  // Use the standard API endpoint for user data
+  const { data: user, isLoading, isError } = useQuery({
+    queryKey: ['/api/auth/user'],
+    retry: false,
+  });
+  
+  const isAuthenticated = !!user;
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [previewUrl, setPreviewUrl] = useState<string | null>(null);
 
@@ -111,8 +116,9 @@ export default function Publish() {
   };
 
   const onSubmit = (data: PublishFormData) => {
-    // Check if user is authenticated before submitting
-    if (!isAuthenticated) {
+    // In development mode, allow without authentication
+    const isDevelopment = import.meta.env.DEV;
+    if (!isDevelopment && !isAuthenticated) {
       toast({
         title: t("common.unauthorized"),
         description: t("common.loginRequired"),
@@ -123,6 +129,8 @@ export default function Publish() {
       }, 500);
       return;
     }
+    
+    console.log("Form data being submitted:", data);
     createItemMutation.mutate(data);
   };
 
