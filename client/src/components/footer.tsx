@@ -59,14 +59,14 @@ export default function Footer() {
             <h4 className="font-semibold mb-4">{t("footer.support")}</h4>
             <ul className="space-y-2 text-gray-400">
               <li>
-                <a href="#" className="hover:text-white transition-colors">
-                  {t("footer.helpCenter")}
-                </a>
+                <Link href="/how-it-works" className="hover:text-white transition-colors">
+                  {t("nav.howItWorks")}
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-white transition-colors">
+                <Link href="/contact" className="hover:text-white transition-colors">
                   {t("footer.links.contact")}
-                </a>
+                </Link>
               </li>
               <li>
                 <a href="#" className="hover:text-white transition-colors">

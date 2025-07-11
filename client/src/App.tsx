@@ -12,12 +12,16 @@ import Publish from "@/pages/publish";
 import ItemDetail from "@/pages/item-detail";
 import Dashboard from "@/pages/dashboard";
 import Chat from "@/pages/chat";
+import HowItWorks from "@/pages/how-it-works";
+import Contact from "@/pages/contact";
 
 function Router() {
   const { isAuthenticated, isLoading } = useAuth();
 
   return (
     <Switch>
+      <Route path="/how-it-works" component={HowItWorks} />
+      <Route path="/contact" component={Contact} />
       {isLoading || !isAuthenticated ? (
         <Route path="/" component={Landing} />
       ) : (
@@ -29,6 +33,8 @@ function Router() {
           <Route path="/dashboard" component={Dashboard} />
           <Route path="/chat" component={Chat} />
           <Route path="/chat/:itemId" component={Chat} />
+          <Route path="/how-it-works" component={HowItWorks} />
+          <Route path="/contact" component={Contact} />
         </>
       )}
       <Route component={NotFound} />

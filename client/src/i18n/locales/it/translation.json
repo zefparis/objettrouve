@@ -247,5 +247,161 @@
   },
   "sidebar": {
     "toggle": "Attiva/disattiva barra laterale"
+  },
+  "howItWorks": {
+    "badge": "Guida Completa",
+    "title": "Come funziona?",
+    "subtitle": "Trova i tuoi oggetti smarriti in 3 passaggi semplici ed efficaci",
+    "stepNumber": "Passaggio {{number}}",
+    "step1": {
+      "title": "Segnala il tuo oggetto",
+      "description": "Pubblica un annuncio con foto e descrizione dettagliata",
+      "detail1": "Aggiungi foto chiare del tuo oggetto",
+      "detail2": "Descrivi precisamente le caratteristiche",
+      "detail3": "Indica il luogo e la data dello smarrimento"
+    },
+    "step2": {
+      "title": "Cerca e filtra",
+      "description": "Usa i nostri filtri per trovare rapidamente quello che cerchi",
+      "detail1": "Filtra per categoria e posizione",
+      "detail2": "Usa la ricerca per parole chiave",
+      "detail3": "Naviga tra gli annunci recenti"
+    },
+    "step3": {
+      "title": "Contatta e recupera",
+      "description": "Scambia messaggi in sicurezza con altri utenti",
+      "detail1": "Messaggistica sicura integrata",
+      "detail2": "Verifica dell'identità",
+      "detail3": "Sistema di valutazione della comunità"
+    },
+    "features": {
+      "title": "Caratteristiche Principali",
+      "security": {
+        "title": "Sicurezza Garantita",
+        "description": "I tuoi dati e scambi sono protetti da un sistema di sicurezza avanzato"
+      },
+      "location": {
+        "title": "Geolocalizzazione",
+        "description": "Trova oggetti vicino a te grazie al nostro sistema di localizzazione preciso"
+      },
+      "notifications": {
+        "title": "Avvisi Intelligenti",
+        "description": "Ricevi notifiche per oggetti che corrispondono ai tuoi criteri"
+      },
+      "community": {
+        "title": "Comunità Attiva",
+        "description": "Unisciti a una comunità di migliaia di utenti solidali"
+      }
+    },
+    "timeline": {
+      "title": "Cronologia Tipica",
+      "immediate": "Immediato",
+      "minutes": "Pochi minuti",
+      "hours": "Poche ore",
+      "step1": {
+        "title": "Pubblicazione dell'Annuncio",
+        "description": "Il tuo annuncio è online e visibile a tutti"
+      },
+      "step2": {
+        "title": "Prima Visibilità",
+        "description": "Il tuo annuncio inizia a essere visto da altri utenti"
+      },
+      "step3": {
+        "title": "Contatti Potenziali",
+        "description": "Ricevi i tuoi primi messaggi da persone interessate"
+      }
+    },
+    "cta": {
+      "title": "Pronto a trovare i tuoi oggetti?",
+      "description": "Unisciti a migliaia di utenti che si fidano di ObjetsTrouvés",
+      "publishButton": "Pubblica annuncio",
+      "searchButton": "Cerca oggetti"
+    }
+  },
+  "contact": {
+    "badge": "Supporto",
+    "title": "Contattaci",
+    "subtitle": "Il nostro team è qui per aiutarti a trovare i tuoi oggetti smarriti",
+    "form": {
+      "title": "Invia un Messaggio",
+      "description": "Descrivi il tuo problema e risponderemo rapidamente",
+      "name": "Nome Completo",
+      "namePlaceholder": "Il tuo nome e cognome",
+      "email": "Indirizzo Email",
+      "emailPlaceholder": "tua@email.com",
+      "category": "Categoria",
+      "categoryPlaceholder": "Seleziona una categoria",
+      "categories": {
+        "general": "Domanda Generale",
+        "technical": "Problema Tecnico",
+        "billing": "Fatturazione",
+        "feedback": "Feedback",
+        "report": "Segnalazione"
+      },
+      "subject": "Oggetto",
+      "subjectPlaceholder": "Riassunto della tua richiesta",
+      "message": "Messaggio",
+      "messagePlaceholder": "Descrivi il tuo problema o domanda in dettaglio...",
+      "send": "Invia Messaggio",
+      "sending": "Invio...",
+      "success": "Messaggio inviato!",
+      "successMessage": "Abbiamo ricevuto il tuo messaggio e risponderemo il prima possibile."
+    },
+    "info": {
+      "title": "Informazioni di Contatto",
+      "description": "Diversi modi per contattarci secondo le tue preferenze"
+    },
+    "methods": {
+      "email": {
+        "title": "Email",
+        "description": "Risposta entro 24h in media",
+        "action": "Scrivici"
+      },
+      "phone": {
+        "title": "Telefono",
+        "description": "Supporto telefonico diretto",
+        "action": "Chiamaci"
+      },
+      "address": {
+        "title": "Indirizzo",
+        "description": "Sede dell'azienda",
+        "action": "Visitaci"
+      },
+      "hours": {
+        "title": "Orari",
+        "description": "Disponibilità del nostro team",
+        "value": "Lun-Ven 9-18, Sab 9-12",
+        "action": "Vedi orari"
+      }
+    },
+    "social": {
+      "title": "Social Media",
+      "description": "Seguici per le ultime notizie"
+    },
+    "faq": {
+      "title": "Domande Frequenti",
+      "subtitle": "Trova rapidamente risposte alle domande più comuni",
+      "item1": {
+        "question": "Come pubblicare un annuncio?",
+        "answer": "Clicca 'Pubblica' nel menu, riempi il modulo con i dettagli del tuo oggetto smarrito o trovato, aggiungi una foto e convalida."
+      },
+      "item2": {
+        "question": "Come contattare qualcuno?",
+        "answer": "Nella pagina di un annuncio, clicca 'Contatta' per inviare un messaggio privato al proprietario dell'annuncio."
+      },
+      "item3": {
+        "question": "È gratis usare la piattaforma?",
+        "answer": "Sì, ObjetsTrouvés è completamente gratuito. Puoi pubblicare annunci e contattare altri utenti senza costi."
+      },
+      "item4": {
+        "question": "Cosa fare se trovo il mio oggetto?",
+        "answer": "Accedi al tuo account, vai su 'Il mio pannello' e marca il tuo annuncio come 'Trovato' o eliminalo."
+      }
+    },
+    "emergency": {
+      "title": "Emergenza Tecnica",
+      "description": "Per problemi urgenti che riguardano il funzionamento del sito",
+      "button": "Supporto di Emergenza"
+    }
   }
 }

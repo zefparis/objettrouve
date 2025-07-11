@@ -247,5 +247,161 @@
   },
   "sidebar": {
     "toggle": "Toggle Sidebar"
+  },
+  "howItWorks": {
+    "badge": "Complete Guide",
+    "title": "How it works?",
+    "subtitle": "Find your lost items in 3 simple and effective steps",
+    "stepNumber": "Step {{number}}",
+    "step1": {
+      "title": "Report your item",
+      "description": "Post an ad with photo and detailed description",
+      "detail1": "Add clear photos of your item",
+      "detail2": "Describe precisely the characteristics",
+      "detail3": "Indicate the place and date of loss"
+    },
+    "step2": {
+      "title": "Search and filter",
+      "description": "Use our filters to quickly find what you're looking for",
+      "detail1": "Filter by category and location",
+      "detail2": "Use keyword search",
+      "detail3": "Browse recent ads"
+    },
+    "step3": {
+      "title": "Contact and recover",
+      "description": "Exchange safely with other users",
+      "detail1": "Integrated secure messaging",
+      "detail2": "Identity verification",
+      "detail3": "Community rating system"
+    },
+    "features": {
+      "title": "Main Features",
+      "security": {
+        "title": "Guaranteed Security",
+        "description": "Your data and exchanges are protected by an advanced security system"
+      },
+      "location": {
+        "title": "Geolocation",
+        "description": "Find items near you thanks to our precise location system"
+      },
+      "notifications": {
+        "title": "Smart Alerts",
+        "description": "Receive notifications for items matching your criteria"
+      },
+      "community": {
+        "title": "Active Community",
+        "description": "Join a community of thousands of supportive users"
+      }
+    },
+    "timeline": {
+      "title": "Typical Timeline",
+      "immediate": "Immediate",
+      "minutes": "Few minutes",
+      "hours": "Few hours",
+      "step1": {
+        "title": "Ad Publication",
+        "description": "Your ad is online and visible to everyone"
+      },
+      "step2": {
+        "title": "First Visibility",
+        "description": "Your ad starts being seen by other users"
+      },
+      "step3": {
+        "title": "Potential Contacts",
+        "description": "You receive your first messages from interested people"
+      }
+    },
+    "cta": {
+      "title": "Ready to find your items?",
+      "description": "Join thousands of users who trust ObjetsTrouvés",
+      "publishButton": "Post an ad",
+      "searchButton": "Search for items"
+    }
+  },
+  "contact": {
+    "badge": "Support",
+    "title": "Contact Us",
+    "subtitle": "Our team is here to help you find your lost items",
+    "form": {
+      "title": "Send a Message",
+      "description": "Describe your problem and we'll respond quickly",
+      "name": "Full Name",
+      "namePlaceholder": "Your first and last name",
+      "email": "Email Address",
+      "emailPlaceholder": "your@email.com",
+      "category": "Category",
+      "categoryPlaceholder": "Select a category",
+      "categories": {
+        "general": "General Question",
+        "technical": "Technical Issue",
+        "billing": "Billing",
+        "feedback": "Feedback",
+        "report": "Report"
+      },
+      "subject": "Subject",
+      "subjectPlaceholder": "Summary of your request",
+      "message": "Message",
+      "messagePlaceholder": "Describe your problem or question in detail...",
+      "send": "Send Message",
+      "sending": "Sending...",
+      "success": "Message sent!",
+      "successMessage": "We have received your message and will respond as soon as possible."
+    },
+    "info": {
+      "title": "Contact Information",
+      "description": "Multiple ways to contact us according to your preferences"
+    },
+    "methods": {
+      "email": {
+        "title": "Email",
+        "description": "Response within 24h on average",
+        "action": "Write to us"
+      },
+      "phone": {
+        "title": "Phone",
+        "description": "Direct phone support",
+        "action": "Call us"
+      },
+      "address": {
+        "title": "Address",
+        "description": "Company headquarters",
+        "action": "Visit us"
+      },
+      "hours": {
+        "title": "Hours",
+        "description": "Our team availability",
+        "value": "Mon-Fri 9am-6pm, Sat 9am-12pm",
+        "action": "See hours"
+      }
+    },
+    "social": {
+      "title": "Social Media",
+      "description": "Follow us for the latest news"
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "subtitle": "Quickly find answers to the most common questions",
+      "item1": {
+        "question": "How to post an ad?",
+        "answer": "Click 'Publish' in the menu, fill out the form with details of your lost or found item, add a photo and validate."
+      },
+      "item2": {
+        "question": "How to contact someone?",
+        "answer": "On an ad page, click 'Contact' to send a private message to the ad owner."
+      },
+      "item3": {
+        "question": "Is it free to use?",
+        "answer": "Yes, ObjetsTrouvés is completely free. You can post ads and contact other users at no cost."
+      },
+      "item4": {
+        "question": "What to do if I find my item?",
+        "answer": "Log into your account, go to 'My Dashboard' and mark your ad as 'Found' or delete it."
+      }
+    },
+    "emergency": {
+      "title": "Technical Emergency",
+      "description": "For urgent issues affecting site functionality",
+      "button": "Emergency Support"
+    }
   }
 }

@@ -30,6 +30,12 @@ Preferred communication style: Simple, everyday language.
 
 ## Key Components
 
+### New Pages Added (January 2025)
+- **How It Works Page** (`/how-it-works`): Complete guide explaining the 3-step process (report, search, contact)
+- **Contact Page** (`/contact`): Comprehensive contact form with FAQ, social links, and support information
+- **Full Internationalization**: Both pages translated into all 5 supported languages (FR, EN, ES, PT, IT)
+- **Navigation Integration**: Added links in navbar and footer for easy access
+
 ### Database Schema
 Located in `shared/schema.ts` with the following main tables:
 - **users**: User profiles with Replit Auth integration
