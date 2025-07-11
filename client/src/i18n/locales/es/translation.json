@@ -7,14 +7,18 @@
     "chat": "Mensajes",
     "login": "Iniciar sesión",
     "logout": "Cerrar sesión",
-    "features": "Características"
+    "features": "Características",
+    "howItWorks": "Cómo funciona",
+    "contact": "Contacto"
   },
   "hero": {
     "title": "Encuentra tus objetos perdidos",
     "subtitle": "La plataforma francesa de referencia para recuperar tus objetos perdidos o reportar tus hallazgos",
     "searchPlaceholder": "Buscar un objeto...",
     "searchButton": "Buscar",
-    "publishButton": "Publicar anuncio"
+    "publishButton": "Publicar anuncio",
+    "iLostSomething": "Perdí algo",
+    "iFoundSomething": "Encontré algo"
   },
   "stats": {
     "totalItems": "Objetos declarados",
@@ -30,8 +34,8 @@
     "accessories": "Accesorios",
     "documents": "Documentos",
     "keys": "Llaves",
-    "jewelry": "Joyería",
-    "bags": "Bolsos",
+    "jewelry": "Joyas",
+    "bags": "Bolsas",
     "sports": "Deportes",
     "books": "Libros",
     "pets": "Mascotas",
@@ -39,6 +43,7 @@
   },
   "howItWorks": {
     "title": "¿Cómo funciona?",
+    "subtitle": "Encuentra tus objetos perdidos en 3 pasos simples",
     "step1": {
       "title": "Reporta tu objeto",
       "description": "Publica un anuncio con foto y descripción detallada"
@@ -54,15 +59,13 @@
   },
   "search": {
     "title": "Buscar objetos",
-    "subtitle": "Encuentra objetos perdidos o encontrados cerca de ti",
-    "filters": "Filtros",
+    "subtitle": "Descubre los últimos objetos perdidos y encontrados en tu área",
+    "searchPlaceholder": "Buscar por objeto, ubicación, descripción...",
     "type": "Tipo",
     "all": "Todos",
     "lost": "Perdidos",
     "found": "Encontrados",
     "category": "Categoría",
-    "location": "Ubicación",
-    "searchPlaceholder": "Buscar por objeto, lugar, descripción...",
     "noResults": "No se encontraron resultados",
     "noResultsDesc": "Intenta modificar tus criterios de búsqueda",
     "itemType": {
@@ -70,10 +73,30 @@
       "found": "Encontrado"
     }
   },
+  "home": {
+    "recentItems": "Objetos reportados recientemente",
+    "recentItemsDesc": "Descubre los últimos objetos perdidos y encontrados en tu área",
+    "noItemsYet": "Aún no hay objetos reportados",
+    "viewAllItems": "Ver todos los objetos",
+    "ctaTitle": "¿Listo para encontrar tus objetos?",
+    "ctaSubtitle": "Únete a miles de usuarios que confían en ObjetsTrouvés",
+    "publishAd": "Publicar anuncio",
+    "myDashboard": "Mi panel"
+  },
+  "map": {
+    "title": "Mapa interactivo",
+    "subtitle": "Visualiza objetos perdidos y encontrados cerca de ti",
+    "interactiveMap": "Mapa interactivo con geolocalización",
+    "integration": "Integración con Google Maps u OpenStreetMap",
+    "lostItems": "Objetos perdidos",
+    "foundItems": "Objetos encontrados",
+    "fullscreen": "Ver en pantalla completa"
+  },
   "publish": {
     "title": "Publicar anuncio",
-    "subtitle": "Reporta un objeto perdido o encontrado para ayudar a la comunidad",
+    "subtitle": "Ayuda a alguien a encontrar su objeto perdido o reporta un hallazgo",
     "form": {
+      "objectInfo": "Información del objeto",
       "title": "Título del anuncio",
       "titlePlaceholder": "Ej: iPhone 13 Pro perdido en metro",
       "description": "Descripción detallada",
@@ -81,37 +104,60 @@
       "type": "Tipo de anuncio",
       "category": "Categoría",
       "location": "Ubicación",
-      "locationPlaceholder": "Ej: París 15º, Estación Montparnasse",
+      "locationPlaceholder": "Ej: París 15, Estación Montparnasse",
       "dateOccurred": "Fecha del incidente",
       "contactInfo": "Información de contacto",
       "contactPlaceholder": "Cómo contactarte...",
       "image": "Foto del objeto",
       "imageHelp": "Agrega una foto para aumentar tus posibilidades",
       "publish": "Publicar anuncio",
-      "publishing": "Publicando..."
+      "publishing": "Publicando...",
+      "categoryPlaceholder": "Selecciona una categoría",
+      "phonePlaceholder": "06 00 00 00 00",
+      "emailPlaceholder": "tu@email.com",
+      "phone": "Teléfono (opcional)",
+      "email": "Email (opcional)"
     },
     "success": "¡Anuncio publicado exitosamente!",
     "error": "Error al publicar el anuncio"
   },
   "dashboard": {
-    "title": "Mi Panel",
+    "title": "Panel de control",
+    "subtitle": "Gestiona tus anuncios y conversaciones",
     "myItems": "Mis anuncios",
     "statistics": "Estadísticas",
     "recentActivity": "Actividad reciente",
     "noItems": "No hay anuncios publicados",
     "noItemsDesc": "Publica tu primer anuncio para comenzar",
+    "newAd": "Nuevo anuncio",
+    "lostItems": "Objetos perdidos",
+    "foundItems": "Objetos encontrados",
+    "conversations": "Conversaciones",
+    "activeAds": "Anuncios activos",
+    "confirmDelete": "¿Estás seguro de que quieres eliminar este anuncio?",
+    "deleteError": "Ocurrió un error al eliminar",
+    "deleteSuccess": "Anuncio eliminado exitosamente",
     "actions": {
       "edit": "Editar",
       "delete": "Eliminar",
       "view": "Ver"
-    }
+    },
+    "publishFirstAd": "Publica tu primer anuncio"
   },
   "chat": {
     "title": "Mensajes",
     "noConversations": "No hay conversaciones",
     "noConversationsDesc": "Inicia una conversación contactando a alguien",
     "typePlaceholder": "Escribe tu mensaje...",
-    "send": "Enviar"
+    "send": "Enviar",
+    "conversationNotFound": "Conversación no encontrada",
+    "selectValidConversation": "Por favor selecciona una conversación válida.",
+    "backToDashboard": "Volver al panel",
+    "loginToMessage": "Debes iniciar sesión para enviar un mensaje.",
+    "messageError": "Ocurrió un error al enviar el mensaje",
+    "noMessages": "No hay mensajes",
+    "startConversation": "¡Inicia la conversación!",
+    "conversation": "Conversación"
   },
   "itemDetail": {
     "contactOwner": "Contactar propietario",
@@ -120,11 +166,22 @@
     "location": "Ubicación",
     "contactInfo": "Contacto",
     "description": "Descripción",
-    "similarItems": "Objetos similares"
-  },
-  "home": {
-    "recentItems": "Objetos reportados recientemente",
-    "recentItemsDesc": "Descubre los últimos objetos perdidos y encontrados en tu área"
+    "similarItems": "Objetos similares",
+    "messageSent": "¡Tu mensaje ha sido enviado exitosamente!",
+    "messageError": "Ocurrió un error al enviar el mensaje",
+    "loginToMessage": "Debes iniciar sesión para enviar un mensaje.",
+    "lostOn": "Perdido el",
+    "foundOn": "Encontrado el",
+    "sendMessage": "Enviar mensaje",
+    "send": "Enviar",
+    "sending": "Enviando...",
+    "manageAd": "Gestionar anuncio",
+    "messagePlaceholder": "Describe tu objeto para probar que te pertenece...",
+    "editAd": "Editar anuncio",
+    "markAsFound": "Marcar como encontrado",
+    "deleteAd": "Eliminar anuncio",
+    "alertDescription": "Crea una alerta para ser notificado de objetos similares",
+    "createAlert": "Crear alerta"
   },
   "common": {
     "loading": "Cargando...",
@@ -138,6 +195,8 @@
     "previous": "Anterior",
     "viewDetails": "Ver detalles",
     "noImage": "Sin imagen",
+    "unauthorized": "No autorizado",
+    "loginRequired": "Debes iniciar sesión. Redirigiendo...",
     "timeAgo": {
       "now": "Ahora mismo",
       "minutes": "hace {{count}} minuto",
@@ -155,14 +214,7 @@
     }
   },
   "footer": {
-    "description": "La plataforma francesa de referencia para recuperar tus objetos perdidos",
-    "links": {
-      "about": "Acerca de",
-      "contact": "Contacto",
-      "privacy": "Privacidad",
-      "terms": "Términos"
-    },
-    "followUs": "Síguenos",
+    "description": "La plataforma francesa de referencia para encontrar tus objetos perdidos",
     "interactiveMap": "Mapa interactivo",
     "emailAlerts": "Alertas por email",
     "support": "Soporte",
@@ -172,6 +224,28 @@
     "legal": "Legal",
     "legalNotice": "Aviso legal",
     "cookies": "Cookies",
+    "links": {
+      "about": "Acerca de",
+      "contact": "Contacto",
+      "privacy": "Política de privacidad",
+      "terms": "Términos de servicio"
+    },
+    "followUs": "Síguenos",
     "copyright": "© 2024 ObjetsTrouvés. Todos los derechos reservados."
+  },
+  "error": {
+    "404_title": "404 Página no encontrada",
+    "404_message": "La página que buscas no existe o ha sido movida."
+  },
+  "validation": {
+    "title_required": "El título es requerido",
+    "description_min_length": "La descripción debe tener al menos 10 caracteres",
+    "category_required": "La categoría es requerida",
+    "location_required": "La ubicación es requerida",
+    "date_required": "La fecha es requerida",
+    "email_invalid": "Email inválido"
+  },
+  "sidebar": {
+    "toggle": "Alternar barra lateral"
   }
 }

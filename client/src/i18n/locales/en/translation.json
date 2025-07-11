@@ -7,7 +7,9 @@
     "chat": "Messages",
     "login": "Login",
     "logout": "Logout",
-    "features": "Features"
+    "features": "Features",
+    "howItWorks": "How it works",
+    "contact": "Contact"
   },
   "hero": {
     "title": "Find Your Lost Items",
@@ -90,79 +92,96 @@
     "foundItems": "Found items",
     "fullscreen": "View fullscreen"
   },
-  "original_search": {
-    "title": "Search for items",
-    "subtitle": "Find lost or found items near you",
-    "filters": "Filters",
-    "type": "Type",
-    "all": "All",
-    "lost": "Lost",
-    "found": "Found",
-    "category": "Category",
-    "location": "Location",
-    "searchPlaceholder": "Search by item, location, description...",
-    "noResults": "No results found",
-    "noResultsDesc": "Try modifying your search criteria",
-    "itemType": {
-      "lost": "Lost",
-      "found": "Found"
-    }
-  },
   "publish": {
-    "title": "Post an ad",
-    "subtitle": "Report a lost or found item to help the community",
+    "title": "Publish an Ad",
+    "subtitle": "Help someone find their lost item or report a found item",
     "form": {
-      "title": "Ad title",
-      "titlePlaceholder": "E.g.: iPhone 13 Pro lost in subway",
-      "description": "Detailed description",
-      "descriptionPlaceholder": "Describe your item in detail...",
-      "type": "Ad type",
+      "objectInfo": "Object Information",
+      "title": "Ad Title",
+      "titlePlaceholder": "Ex: iPhone 13 Pro lost in subway",
+      "description": "Detailed Description",
+      "descriptionPlaceholder": "Describe your object in detail...",
+      "type": "Ad Type",
       "category": "Category",
       "location": "Location",
-      "locationPlaceholder": "E.g.: Paris 15th, Montparnasse Station",
-      "dateOccurred": "Date of incident",
-      "contactInfo": "Contact information",
+      "locationPlaceholder": "Ex: Paris 15th, Montparnasse Station",
+      "dateOccurred": "Date of Incident",
+      "contactInfo": "Contact Information",
       "contactPlaceholder": "How to contact you...",
-      "image": "Item photo",
+      "image": "Photo of the object",
       "imageHelp": "Add a photo to increase your chances",
-      "publish": "Publish ad",
-      "publishing": "Publishing..."
+      "publish": "Publish Ad",
+      "publishing": "Publishing...",
+      "categoryPlaceholder": "Select a category",
+      "phonePlaceholder": "06 00 00 00 00",
+      "emailPlaceholder": "your@email.com",
+      "phone": "Phone (optional)",
+      "email": "Email (optional)"
     },
     "success": "Ad published successfully!",
     "error": "Error publishing ad"
   },
   "dashboard": {
-    "title": "My Dashboard",
-    "myItems": "My ads",
+    "title": "Dashboard",
+    "subtitle": "Manage your ads and conversations",
+    "myItems": "My Ads",
     "statistics": "Statistics",
-    "recentActivity": "Recent activity",
+    "recentActivity": "Recent Activity",
     "noItems": "No ads published",
     "noItemsDesc": "Publish your first ad to get started",
+    "newAd": "New Ad",
+    "lostItems": "Lost Items",
+    "foundItems": "Found Items",
+    "conversations": "Conversations",
+    "activeAds": "Active Ads",
+    "confirmDelete": "Are you sure you want to delete this ad?",
+    "deleteError": "An error occurred while deleting",
+    "deleteSuccess": "Ad deleted successfully",
     "actions": {
       "edit": "Edit",
       "delete": "Delete",
       "view": "View"
-    }
+    },
+    "publishFirstAd": "Publish your first ad"
   },
   "chat": {
     "title": "Messages",
     "noConversations": "No conversations",
     "noConversationsDesc": "Start a conversation by contacting someone",
     "typePlaceholder": "Type your message...",
-    "send": "Send"
+    "send": "Send",
+    "conversationNotFound": "Conversation not found",
+    "selectValidConversation": "Please select a valid conversation.",
+    "backToDashboard": "Back to Dashboard",
+    "loginToMessage": "You must be logged in to send a message.",
+    "messageError": "An error occurred while sending the message",
+    "noMessages": "No messages",
+    "startConversation": "Start the conversation!",
+    "conversation": "Conversation"
   },
   "itemDetail": {
-    "contactOwner": "Contact owner",
+    "contactOwner": "Contact Owner",
     "reportedOn": "Reported on",
     "category": "Category",
     "location": "Location",
     "contactInfo": "Contact",
     "description": "Description",
-    "similarItems": "Similar items"
-  },
-  "home": {
-    "recentItems": "Recently reported items",
-    "recentItemsDesc": "Discover the latest lost and found items in your area"
+    "similarItems": "Similar Items",
+    "messageSent": "Your message has been sent successfully!",
+    "messageError": "An error occurred while sending the message",
+    "loginToMessage": "You must be logged in to send a message.",
+    "lostOn": "Lost on",
+    "foundOn": "Found on",
+    "sendMessage": "Send Message",
+    "send": "Send",
+    "sending": "Sending...",
+    "manageAd": "Manage Ad",
+    "messagePlaceholder": "Describe your object to prove it belongs to you...",
+    "editAd": "Edit Ad",
+    "markAsFound": "Mark as Found",
+    "deleteAd": "Delete Ad",
+    "alertDescription": "Create an alert to be notified of similar objects",
+    "createAlert": "Create Alert"
   },
   "common": {
     "loading": "Loading...",
@@ -174,8 +193,10 @@
     "back": "Back",
     "next": "Next",
     "previous": "Previous",
-    "viewDetails": "View details",
-    "noImage": "No image",
+    "viewDetails": "View Details",
+    "noImage": "No Image",
+    "unauthorized": "Unauthorized",
+    "loginRequired": "You must be logged in. Redirecting...",
     "timeAgo": {
       "now": "Just now",
       "minutes": "{{count}} minute ago",
@@ -193,23 +214,38 @@
     }
   },
   "footer": {
-    "description": "The French reference platform for recovering your lost items",
-    "interactiveMap": "Interactive map",
-    "emailAlerts": "Email alerts",
+    "description": "The French reference platform for finding your lost items",
+    "interactiveMap": "Interactive Map",
+    "emailAlerts": "Email Alerts",
     "support": "Support",
-    "helpCenter": "Help center",
+    "helpCenter": "Help Center",
     "faq": "FAQ",
-    "reportIssue": "Report an issue",
+    "reportIssue": "Report Issue",
     "legal": "Legal",
-    "legalNotice": "Legal notice",
+    "legalNotice": "Legal Notice",
     "cookies": "Cookies",
     "links": {
       "about": "About",
       "contact": "Contact",
-      "privacy": "Privacy policy",
-      "terms": "Terms of service"
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service"
     },
-    "followUs": "Follow us",
+    "followUs": "Follow Us",
     "copyright": "© 2024 ObjetsTrouvés. All rights reserved."
+  },
+  "error": {
+    "404_title": "404 Page Not Found",
+    "404_message": "The page you are looking for does not exist or has been moved."
+  },
+  "validation": {
+    "title_required": "Title is required",
+    "description_min_length": "Description must be at least 10 characters long",
+    "category_required": "Category is required",
+    "location_required": "Location is required",
+    "date_required": "Date is required",
+    "email_invalid": "Invalid email"
+  },
+  "sidebar": {
+    "toggle": "Toggle Sidebar"
   }
 }

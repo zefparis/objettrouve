@@ -3,17 +3,22 @@
     "home": "Home",
     "search": "Cerca",
     "publish": "Pubblica",
-    "dashboard": "Dashboard",
+    "dashboard": "Pannello",
     "chat": "Messaggi",
     "login": "Accedi",
-    "logout": "Esci"
+    "logout": "Esci",
+    "features": "Caratteristiche",
+    "howItWorks": "Come funziona",
+    "contact": "Contatto"
   },
   "hero": {
     "title": "Trova i tuoi oggetti smarriti",
     "subtitle": "La piattaforma francese di riferimento per recuperare i tuoi oggetti smarriti o segnalare i tuoi ritrovamenti",
     "searchPlaceholder": "Cerca un oggetto...",
     "searchButton": "Cerca",
-    "publishButton": "Pubblica annuncio"
+    "publishButton": "Pubblica annuncio",
+    "iLostSomething": "Ho perso qualcosa",
+    "iFoundSomething": "Ho trovato qualcosa"
   },
   "stats": {
     "totalItems": "Oggetti dichiarati",
@@ -23,6 +28,7 @@
   },
   "categories": {
     "title": "Categorie popolari",
+    "subtitle": "Cerca per tipo di oggetto per trovare più facilmente",
     "electronics": "Elettronica",
     "clothing": "Abbigliamento",
     "accessories": "Accessori",
@@ -37,29 +43,29 @@
   },
   "howItWorks": {
     "title": "Come funziona?",
+    "subtitle": "Trova i tuoi oggetti smarriti in 3 semplici passaggi",
     "step1": {
       "title": "Segnala il tuo oggetto",
       "description": "Pubblica un annuncio con foto e descrizione dettagliata"
     },
     "step2": {
       "title": "Cerca e filtra",
-      "description": "Usa i nostri filtri per trovare rapidamente ciò che cerchi"
+      "description": "Usa i nostri filtri per trovare rapidamente quello che cerchi"
     },
     "step3": {
       "title": "Contatta e recupera",
-      "description": "Scambia in sicurezza con altri utenti"
+      "description": "Scambia messaggi in sicurezza con altri utenti"
     }
   },
   "search": {
     "title": "Cerca oggetti",
-    "filters": "Filtri",
+    "subtitle": "Scopri gli ultimi oggetti smarriti e trovati nella tua zona",
+    "searchPlaceholder": "Cerca per oggetto, posizione, descrizione...",
     "type": "Tipo",
     "all": "Tutti",
     "lost": "Smarriti",
     "found": "Trovati",
     "category": "Categoria",
-    "location": "Posizione",
-    "searchPlaceholder": "Cerca per parola chiave...",
     "noResults": "Nessun risultato trovato",
     "noResultsDesc": "Prova a modificare i tuoi criteri di ricerca",
     "itemType": {
@@ -67,47 +73,91 @@
       "found": "Trovato"
     }
   },
+  "home": {
+    "recentItems": "Oggetti segnalati di recente",
+    "recentItemsDesc": "Scopri gli ultimi oggetti smarriti e trovati nella tua zona",
+    "noItemsYet": "Non ci sono ancora oggetti segnalati",
+    "viewAllItems": "Visualizza tutti gli oggetti",
+    "ctaTitle": "Pronto a trovare i tuoi oggetti?",
+    "ctaSubtitle": "Unisciti a migliaia di utenti che si fidano di ObjetsTrouvés",
+    "publishAd": "Pubblica annuncio",
+    "myDashboard": "Il mio pannello"
+  },
+  "map": {
+    "title": "Mappa interattiva",
+    "subtitle": "Visualizza oggetti smarriti e trovati vicino a te",
+    "interactiveMap": "Mappa interattiva con geolocalizzazione",
+    "integration": "Integrazione con Google Maps o OpenStreetMap",
+    "lostItems": "Oggetti smarriti",
+    "foundItems": "Oggetti trovati",
+    "fullscreen": "Visualizza a schermo intero"
+  },
   "publish": {
     "title": "Pubblica annuncio",
+    "subtitle": "Aiuta qualcuno a trovare il suo oggetto smarrito o segnala un ritrovamento",
     "form": {
-      "title": "Titolo dell'annuncio",
-      "titlePlaceholder": "Es: iPhone 13 Pro smarrito in metro",
+      "objectInfo": "Informazioni oggetto",
+      "title": "Titolo annuncio",
+      "titlePlaceholder": "Es: iPhone 13 Pro smarrito in metropolitana",
       "description": "Descrizione dettagliata",
       "descriptionPlaceholder": "Descrivi il tuo oggetto in dettaglio...",
       "type": "Tipo di annuncio",
       "category": "Categoria",
       "location": "Posizione",
-      "locationPlaceholder": "Es: Parigi 15º, Stazione Montparnasse",
+      "locationPlaceholder": "Es: Parigi 15°, Stazione Montparnasse",
       "dateOccurred": "Data dell'incidente",
       "contactInfo": "Informazioni di contatto",
       "contactPlaceholder": "Come contattarti...",
       "image": "Foto dell'oggetto",
       "imageHelp": "Aggiungi una foto per aumentare le tue possibilità",
       "publish": "Pubblica annuncio",
-      "publishing": "Pubblicando..."
+      "publishing": "Pubblicando...",
+      "categoryPlaceholder": "Seleziona una categoria",
+      "phonePlaceholder": "06 00 00 00 00",
+      "emailPlaceholder": "tua@email.com",
+      "phone": "Telefono (opzionale)",
+      "email": "Email (opzionale)"
     },
     "success": "Annuncio pubblicato con successo!",
     "error": "Errore nella pubblicazione dell'annuncio"
   },
   "dashboard": {
-    "title": "La Mia Dashboard",
+    "title": "Pannello di controllo",
+    "subtitle": "Gestisci i tuoi annunci e conversazioni",
     "myItems": "I miei annunci",
     "statistics": "Statistiche",
     "recentActivity": "Attività recente",
     "noItems": "Nessun annuncio pubblicato",
     "noItemsDesc": "Pubblica il tuo primo annuncio per iniziare",
+    "newAd": "Nuovo annuncio",
+    "lostItems": "Oggetti smarriti",
+    "foundItems": "Oggetti trovati",
+    "conversations": "Conversazioni",
+    "activeAds": "Annunci attivi",
+    "confirmDelete": "Sei sicuro di voler eliminare questo annuncio?",
+    "deleteError": "Si è verificato un errore durante l'eliminazione",
+    "deleteSuccess": "Annuncio eliminato con successo",
     "actions": {
       "edit": "Modifica",
       "delete": "Elimina",
       "view": "Visualizza"
-    }
+    },
+    "publishFirstAd": "Pubblica il tuo primo annuncio"
   },
   "chat": {
     "title": "Messaggi",
     "noConversations": "Nessuna conversazione",
     "noConversationsDesc": "Inizia una conversazione contattando qualcuno",
     "typePlaceholder": "Scrivi il tuo messaggio...",
-    "send": "Invia"
+    "send": "Invia",
+    "conversationNotFound": "Conversazione non trovata",
+    "selectValidConversation": "Per favore seleziona una conversazione valida.",
+    "backToDashboard": "Torna al pannello",
+    "loginToMessage": "Devi essere connesso per inviare un messaggio.",
+    "messageError": "Si è verificato un errore nell'invio del messaggio",
+    "noMessages": "Nessun messaggio",
+    "startConversation": "Inizia la conversazione!",
+    "conversation": "Conversazione"
   },
   "itemDetail": {
     "contactOwner": "Contatta proprietario",
@@ -116,7 +166,22 @@
     "location": "Posizione",
     "contactInfo": "Contatto",
     "description": "Descrizione",
-    "similarItems": "Oggetti simili"
+    "similarItems": "Oggetti simili",
+    "messageSent": "Il tuo messaggio è stato inviato con successo!",
+    "messageError": "Si è verificato un errore nell'invio del messaggio",
+    "loginToMessage": "Devi essere connesso per inviare un messaggio.",
+    "lostOn": "Smarrito il",
+    "foundOn": "Trovato il",
+    "sendMessage": "Invia messaggio",
+    "send": "Invia",
+    "sending": "Invio...",
+    "manageAd": "Gestisci annuncio",
+    "messagePlaceholder": "Descrivi il tuo oggetto per dimostrare che ti appartiene...",
+    "editAd": "Modifica annuncio",
+    "markAsFound": "Segna come trovato",
+    "deleteAd": "Elimina annuncio",
+    "alertDescription": "Crea un avviso per essere notificato di oggetti simili",
+    "createAlert": "Crea avviso"
   },
   "common": {
     "loading": "Caricamento...",
@@ -130,6 +195,8 @@
     "previous": "Precedente",
     "viewDetails": "Visualizza dettagli",
     "noImage": "Nessuna immagine",
+    "unauthorized": "Non autorizzato",
+    "loginRequired": "Devi essere connesso. Reindirizzamento...",
     "timeAgo": {
       "now": "Proprio ora",
       "minutes": "{{count}} minuto fa",
@@ -147,14 +214,38 @@
     }
   },
   "footer": {
-    "description": "La piattaforma francese di riferimento per recuperare i tuoi oggetti smarriti",
+    "description": "La piattaforma francese di riferimento per trovare i tuoi oggetti smarriti",
+    "interactiveMap": "Mappa interattiva",
+    "emailAlerts": "Avvisi email",
+    "support": "Supporto",
+    "helpCenter": "Centro assistenza",
+    "faq": "FAQ",
+    "reportIssue": "Segnala problema",
+    "legal": "Legale",
+    "legalNotice": "Note legali",
+    "cookies": "Cookie",
     "links": {
-      "about": "Chi siamo",
+      "about": "Informazioni",
       "contact": "Contatto",
-      "privacy": "Privacy",
-      "terms": "Termini"
+      "privacy": "Privacy policy",
+      "terms": "Termini di servizio"
     },
     "followUs": "Seguici",
     "copyright": "© 2024 ObjetsTrouvés. Tutti i diritti riservati."
+  },
+  "error": {
+    "404_title": "404 Pagina non trovata",
+    "404_message": "La pagina che stai cercando non esiste o è stata spostata."
+  },
+  "validation": {
+    "title_required": "Il titolo è obbligatorio",
+    "description_min_length": "La descrizione deve avere almeno 10 caratteri",
+    "category_required": "La categoria è obbligatoria",
+    "location_required": "La posizione è obbligatoria",
+    "date_required": "La data è obbligatoria",
+    "email_invalid": "Email non valida"
+  },
+  "sidebar": {
+    "toggle": "Attiva/disattiva barra laterale"
   }
 }
