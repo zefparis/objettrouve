@@ -133,17 +133,36 @@ export default function Publish() {
       
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="mb-8">
-          <h1 className="text-3xl font-bold text-gray-900 mb-4">
-            {isLostType ? t("publishNew.lostTitle") : t("publishNew.foundTitle")}
-          </h1>
-          <p className="text-gray-600">
-            {isLostType ? t("publishNew.lostSubtitle") : t("publishNew.foundSubtitle")}
-          </p>
+          <div className={`p-4 rounded-lg border-l-4 mb-6 ${
+            isLostType 
+              ? 'bg-red-50 border-red-500' 
+              : 'bg-green-50 border-green-500'
+          }`}>
+            <h1 className={`text-3xl font-bold mb-4 ${
+              isLostType ? 'text-red-900' : 'text-green-900'
+            }`}>
+              {isLostType ? t("publishNew.lostTitle") : t("publishNew.foundTitle")}
+            </h1>
+            <p className={`${
+              isLostType ? 'text-red-700' : 'text-green-700'
+            }`}>
+              {isLostType ? t("publishNew.lostSubtitle") : t("publishNew.foundSubtitle")}
+            </p>
+          </div>
         </div>
 
         <Card>
-          <CardHeader>
-            <CardTitle>
+          <CardHeader className={`${
+            isLostType 
+              ? 'bg-red-50 border-b border-red-200' 
+              : 'bg-green-50 border-b border-green-200'
+          }`}>
+            <CardTitle className={`flex items-center ${
+              isLostType ? 'text-red-900' : 'text-green-900'
+            }`}>
+              <span className={`w-3 h-3 rounded-full mr-3 ${
+                isLostType ? 'bg-red-500' : 'bg-green-500'
+              }`}></span>
               {isLostType ? t("publishNew.lostTitle") : t("publishNew.foundTitle")}
             </CardTitle>
           </CardHeader>
@@ -381,7 +400,11 @@ export default function Publish() {
 
                 <Button
                   type="submit"
-                  className="w-full"
+                  className={`w-full ${
+                    isLostType 
+                      ? 'bg-red-600 hover:bg-red-700 text-white' 
+                      : 'bg-green-600 hover:bg-green-700 text-white'
+                  }`}
                   disabled={createItemMutation.isPending}
                 >
                   {createItemMutation.isPending ? (

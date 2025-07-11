@@ -75,15 +75,35 @@ export default function Navbar() {
               </div>
             ) : isAuthenticated ? (
               <div className="flex items-center space-x-2">
-                <Button
-                  size="sm"
-                  className="hidden sm:flex"
-                  onClick={() => window.location.href = "/publier"}
-                >
-                  <Plus className="h-4 w-4 mr-1" />
-                  <span className="hidden md:inline">{t("nav.publish")}</span>
-                  <span className="md:hidden">+</span>
-                </Button>
+                <DropdownMenu>
+                  <DropdownMenuTrigger asChild>
+                    <Button size="sm" className="hidden sm:flex">
+                      <Plus className="h-4 w-4 mr-1" />
+                      <span className="hidden md:inline">{t("nav.publish")}</span>
+                      <span className="md:hidden">+</span>
+                    </Button>
+                  </DropdownMenuTrigger>
+                  <DropdownMenuContent align="end" className="w-56">
+                    <DropdownMenuItem onClick={() => window.location.href = "/publier?type=lost"}>
+                      <div className="flex items-center">
+                        <span className="w-3 h-3 bg-red-500 rounded-full mr-2"></span>
+                        <div>
+                          <div className="font-medium text-red-800">{t("publishNew.type.lost")}</div>
+                          <div className="text-xs text-gray-500">{t("publishNew.lostSubtitle")}</div>
+                        </div>
+                      </div>
+                    </DropdownMenuItem>
+                    <DropdownMenuItem onClick={() => window.location.href = "/publier?type=found"}>
+                      <div className="flex items-center">
+                        <span className="w-3 h-3 bg-green-500 rounded-full mr-2"></span>
+                        <div>
+                          <div className="font-medium text-green-800">{t("publishNew.type.found")}</div>
+                          <div className="text-xs text-gray-500">{t("publishNew.foundSubtitle")}</div>
+                        </div>
+                      </div>
+                    </DropdownMenuItem>
+                  </DropdownMenuContent>
+                </DropdownMenu>
                 
                 <DropdownMenu>
                   <DropdownMenuTrigger asChild>
@@ -105,9 +125,13 @@ export default function Navbar() {
                       <Search className="h-4 w-4 mr-2" />
                       {t("nav.chat")}
                     </DropdownMenuItem>
-                    <DropdownMenuItem className="sm:hidden" onClick={() => window.location.href = "/publier"}>
-                      <Plus className="h-4 w-4 mr-2" />
-                      {t("nav.publish")}
+                    <DropdownMenuItem className="sm:hidden" onClick={() => window.location.href = "/publier?type=lost"}>
+                      <span className="w-3 h-3 bg-red-500 rounded-full mr-2"></span>
+                      {t("publishNew.type.lost")}
+                    </DropdownMenuItem>
+                    <DropdownMenuItem className="sm:hidden" onClick={() => window.location.href = "/publier?type=found"}>
+                      <span className="w-3 h-3 bg-green-500 rounded-full mr-2"></span>
+                      {t("publishNew.type.found")}
                     </DropdownMenuItem>
                     <DropdownMenuItem onClick={async () => {
                       try {
