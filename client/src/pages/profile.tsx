@@ -118,10 +118,18 @@ export default function Profile() {
   // Update profile mutation
   const updateProfileMutation = useMutation({
     mutationFn: async (formData: FormData) => {
-      return await apiRequest("/api/profile", {
+      const res = await fetch("/api/profile", {
         method: "PUT",
         body: formData,
+        credentials: "include",
       });
+      
+      if (!res.ok) {
+        const text = (await res.text()) || res.statusText;
+        throw new Error(`${res.status}: ${text}`);
+      }
+      
+      return await res.json();
     },
     onSuccess: () => {
       toast({
