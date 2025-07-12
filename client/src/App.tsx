@@ -21,6 +21,7 @@ import AdminDashboard from "@/pages/admin-dashboard";
 import Pricing from "@/pages/pricing";
 import Checkout from "@/pages/checkout";
 import PaymentSuccess from "@/pages/payment-success";
+import MapPage from "@/pages/map";
 import MentionsLegales from "@/pages/legal/mentions-legales";
 import PolitiqueConfidentialite from "@/pages/legal/politique-confidentialite";
 import CGU from "@/pages/legal/cgu";
@@ -45,6 +46,8 @@ function Router() {
       <Route path="/pricing" component={Pricing} />
       <Route path="/checkout" component={Checkout} />
       <Route path="/payment-success" component={PaymentSuccess} />
+      <Route path="/map" component={MapPage} />
+      <Route path="/carte" component={MapPage} />
       <Route path="/admin" component={AdminDashboard} />
       <Route path="/mentions-legales" component={MentionsLegales} />
       <Route path="/politique-confidentialite" component={PolitiqueConfidentialite} />

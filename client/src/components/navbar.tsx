@@ -20,6 +20,7 @@ export default function Navbar() {
   const navigation = [
     { name: t("nav.home"), href: "/" },
     { name: t("nav.search"), href: "/search" },
+    { name: t("nav.map"), href: "/map" },
     { name: t("nav.howItWorks"), href: "/how-it-works" },
     { name: t("nav.pricing"), href: "/pricing" },
     { name: t("nav.contact"), href: "/contact" },
@@ -28,6 +29,7 @@ export default function Navbar() {
   const authenticatedNavigation = [
     { name: t("nav.home"), href: "/" },
     { name: t("nav.search"), href: "/search" },
+    { name: t("nav.map"), href: "/map" },
     { name: t("nav.dashboard"), href: "/dashboard" },
     { name: t("nav.chat"), href: "/chat" },
     { name: t("nav.pricing"), href: "/pricing" },

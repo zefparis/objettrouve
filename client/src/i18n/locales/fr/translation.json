@@ -2,6 +2,7 @@
   "nav": {
     "home": "Accueil",
     "search": "Rechercher",
+    "map": "Carte",
     "publish": "Publier",
     "dashboard": "Tableau de bord",
     "profile": "Profil",
@@ -238,7 +239,15 @@
     "integration": "Intégration avec Google Maps ou OpenStreetMap",
     "lostItems": "Objets perdus",
     "foundItems": "Objets trouvés",
-    "fullscreen": "Voir en plein écran"
+    "fullscreen": "Voir en plein écran",
+    "loading": "Chargement de la carte...",
+    "loadError": "Erreur de chargement de la carte",
+    "loadErrorDesc": "Impossible de charger Google Maps. Vérifiez votre connexion.",
+    "myLocation": "Ma position",
+    "yourLocation": "Votre position",
+    "totalItems": "objets",
+    "viewOnMap": "Voir sur la carte",
+    "centerOnLocation": "Centrer sur cette position"
   },
   "testimonials": {
     "title": "Témoignages",
