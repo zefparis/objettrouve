@@ -22,20 +22,26 @@ const languages = [
   { code: 'ko', name: '한국어', flag: 'KR', emoji: '🇰🇷' },
 ];
 
-const FlagIcon = ({ emoji, className = "" }: { emoji: string; className?: string }) => {
+const FlagIcon = ({ countryCode, emoji, className = "" }: { countryCode: string; emoji: string; className?: string }) => {
+  // Map country codes to colors for visual distinction
+  const flagColors = {
+    'FR': 'bg-blue-500',
+    'GB': 'bg-red-500', 
+    'ES': 'bg-yellow-500',
+    'PT': 'bg-green-500',
+    'IT': 'bg-green-600',
+    'DE': 'bg-gray-800',
+    'NL': 'bg-orange-500',
+    'CN': 'bg-red-600',
+    'JP': 'bg-red-500',
+    'KR': 'bg-blue-600'
+  };
+  
+  const bgColor = flagColors[countryCode as keyof typeof flagColors] || 'bg-gray-500';
+  
   return (
-    <span className={`inline-flex items-center justify-center ${className}`}>
-      <span 
-        className="text-lg select-none" 
-        style={{ 
-          fontFamily: 'Apple Color Emoji, Segoe UI Emoji, Noto Color Emoji, system-ui',
-          fontSize: '18px',
-          lineHeight: '1',
-          WebkitFontSmoothing: 'antialiased'
-        }}
-      >
-        {emoji}
-      </span>
+    <span className={`inline-flex items-center justify-center ${className} ${bgColor} text-white text-xs font-bold rounded`}>
+      {countryCode}
     </span>
   );
 };
@@ -59,10 +65,11 @@ export default function LanguageSelector() {
           className="flex items-center gap-1 sm:gap-2 h-8 px-1 sm:px-2"
         >
           <FlagIcon 
+            countryCode={currentLanguage.flag}
             emoji={currentLanguage.emoji}
-            className="w-5 h-5" 
+            className="w-8 h-5" 
           />
-          <span className="hidden sm:inline text-xs sm:text-sm font-medium">{currentLanguage.flag}</span>
+          <span className="hidden sm:inline text-xs sm:text-sm font-medium">{currentLanguage.name}</span>
           <ChevronDown className="h-3 w-3 sm:h-4 sm:w-4" />
         </Button>
       </DropdownMenuTrigger>
@@ -74,8 +81,9 @@ export default function LanguageSelector() {
             className="flex items-center gap-3 cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-800"
           >
             <FlagIcon 
+              countryCode={language.flag}
               emoji={language.emoji}
-              className="w-6 h-6" 
+              className="w-8 h-5" 
             />
             <span className="text-sm font-medium">{language.name}</span>
             {language.code === i18n.language && (
