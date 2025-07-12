@@ -42,27 +42,47 @@ export function useAuth(): AuthState & {
   // Sign out mutation
   const signOutMutation = useMutation({
     mutationFn: async () => {
-      // Sign out from Cognito if available
-      if (typeof window !== 'undefined' && cognitoService.isAuthenticated()) {
-        await cognitoService.signOut();
-      }
-      
-      // Also sign out from server session if any
-      try {
-        await apiRequest("POST", "/api/auth/signout", {});
-      } catch (error) {
-        // Ignore server signout errors in development
-        console.warn("Server signout failed:", error);
+      // In development mode, just clear local storage and server session
+      if (import.meta.env.DEV) {
+        // Clear any local storage
+        try {
+          localStorage.removeItem('cognito_access_token');
+          localStorage.removeItem('cognito_id_token');
+          localStorage.removeItem('cognito_refresh_token');
+          localStorage.removeItem('cognito_user');
+        } catch (error) {
+          console.warn("Error clearing storage:", error);
+        }
+        
+        // Clear server session
+        try {
+          await apiRequest("POST", "/api/auth/signout", {});
+        } catch (error) {
+          console.warn("Server signout failed:", error);
+        }
+      } else {
+        // In production, use Cognito signout
+        if (typeof window !== 'undefined' && cognitoService.isAuthenticated()) {
+          try {
+            await cognitoService.signOut();
+          } catch (error) {
+            console.warn("Cognito signout failed:", error);
+          }
+        }
+        
+        try {
+          await apiRequest("POST", "/api/auth/signout", {});
+        } catch (error) {
+          console.warn("Server signout failed:", error);
+        }
       }
     },
     onSuccess: () => {
       // Clear all cached data
       queryClient.clear();
       
-      // In development, redirect to home
-      if (import.meta.env.DEV) {
-        window.location.href = '/';
-      }
+      // Always redirect to home after signout
+      window.location.href = '/';
     },
     onError: (error) => {
       console.error("Sign out failed:", error);

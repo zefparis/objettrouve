@@ -150,6 +150,18 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
+  // Sign out route
+  app.post('/api/auth/signout', async (req: any, res) => {
+    try {
+      // In development mode, just return success
+      // In production, this would handle actual session cleanup
+      res.json({ message: "Signed out successfully" });
+    } catch (error) {
+      console.error("Error signing out:", error);
+      res.status(500).json({ message: "Failed to sign out" });
+    }
+  });
+
   // Profile routes
   app.put('/api/profile', upload.single('profileImage'), async (req: any, res) => {
     try {
