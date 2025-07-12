@@ -36,6 +36,67 @@ app.use((req, res, next) => {
   next();
 });
 
+// DIRECT AUTH ROUTES - HOTFIX
+app.post('/api/auth/signup', async (req, res) => {
+  try {
+    const { signUp } = await import("./auth");
+    const { email, password, firstName, lastName, phone } = req.body;
+    
+    if (!email || !password) {
+      return res.status(400).json({ message: "Email et mot de passe requis" });
+    }
+
+    const result = await signUp({ email, password, firstName, lastName, phone });
+    
+    res.json({
+      message: "Inscription réussie. Vérifiez votre email pour le code de confirmation.",
+      userSub: result.userSub,
+      codeDeliveryDetails: result.codeDeliveryDetails,
+    });
+  } catch (error: any) {
+    console.error("Sign up error:", error);
+    
+    let message = "Erreur lors de l'inscription";
+    if (error.name === 'UsernameExistsException') {
+      message = "Cet email est déjà utilisé";
+    } else if (error.name === 'InvalidPasswordException') {
+      message = "Le mot de passe ne respecte pas les critères requis";
+    }
+    
+    res.status(400).json({ message });
+  }
+});
+
+app.post('/api/auth/signin', async (req, res) => {
+  try {
+    const { signIn } = await import("./auth");
+    const { email, password } = req.body;
+    
+    if (!email || !password) {
+      return res.status(400).json({ message: "Email et mot de passe requis" });
+    }
+
+    const result = await signIn(email, password);
+    
+    res.json({
+      message: "Connexion réussie",
+      user: result.user,
+      tokens: result.tokens,
+    });
+  } catch (error: any) {
+    console.error("Sign in error:", error);
+    
+    let message = "Erreur lors de la connexion";
+    if (error.name === 'NotAuthorizedException') {
+      message = "Email ou mot de passe incorrect";
+    } else if (error.name === 'UserNotConfirmedException') {
+      message = "Veuillez confirmer votre email avant de vous connecter";
+    }
+    
+    res.status(400).json({ message });
+  }
+});
+
 (async () => {
   const server = await registerRoutes(app);
 
