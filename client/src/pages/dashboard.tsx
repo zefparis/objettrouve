@@ -165,7 +165,7 @@ export default function Dashboard() {
           </div>
           <div className="flex gap-3">
             <Button 
-              onClick={() => window.location.href = "/publier?type=lost"}
+              onClick={() => window.location.href = "/publish?type=lost"}
               variant="outline"
               className="border-red-200 text-red-700 hover:bg-red-50"
             >
@@ -173,7 +173,7 @@ export default function Dashboard() {
               {t("dashboard.reportLost")}
             </Button>
             <Button 
-              onClick={() => window.location.href = "/publier?type=found"}
+              onClick={() => window.location.href = "/publish?type=found"}
               className="bg-green-600 hover:bg-green-700"
             >
               <CheckCircle className="h-4 w-4 mr-2" />
@@ -337,14 +337,14 @@ export default function Dashboard() {
                           <Button
                             variant="ghost"
                             size="sm"
-                            onClick={() => window.location.href = `/annonce/${item.id}`}
+                            onClick={() => window.location.href = `/item/${item.id}`}
                           >
                             <Eye className="h-4 w-4" />
                           </Button>
                           <Button
                             variant="ghost"
                             size="sm"
-                            onClick={() => window.location.href = `/publier?edit=${item.id}`}
+                            onClick={() => window.location.href = `/publish?edit=${item.id}`}
                           >
                             <Edit className="h-4 w-4" />
                           </Button>
@@ -369,7 +369,7 @@ export default function Dashboard() {
                     <p className="text-gray-500 mb-6">
                       {t("dashboard.noItemsDesc")}
                     </p>
-                    <Button onClick={() => window.location.href = "/publier"}>
+                    <Button onClick={() => window.location.href = "/publish"}>
                       <Plus className="h-4 w-4 mr-2" />
                       {t("dashboard.publishFirstAd")}
                     </Button>

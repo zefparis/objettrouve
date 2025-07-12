@@ -39,7 +39,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/publier" className="hover:text-orange-400 transition-colors">
+                <Link href="/publish" className="hover:text-orange-400 transition-colors">
                   {t("nav.publish")}
                 </Link>
               </li>

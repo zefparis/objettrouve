@@ -243,7 +243,7 @@ export default function Home() {
               size="lg" 
               variant="secondary" 
               className="px-8 py-3"
-              onClick={() => window.location.href = "/publier"}
+              onClick={() => window.location.href = "/publish"}
             >
               {t("home.publishAd")}
             </Button>

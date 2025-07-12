@@ -88,7 +88,7 @@ export default function Navbar() {
                     </Button>
                   </DropdownMenuTrigger>
                   <DropdownMenuContent align="end" className="w-56">
-                    <DropdownMenuItem onClick={() => window.location.href = "/publier?type=lost"}>
+                    <DropdownMenuItem onClick={() => window.location.href = "/publish?type=lost"}>
                       <div className="flex items-center">
                         <span className="w-3 h-3 bg-red-500 rounded-full mr-2"></span>
                         <div>
@@ -97,7 +97,7 @@ export default function Navbar() {
                         </div>
                       </div>
                     </DropdownMenuItem>
-                    <DropdownMenuItem onClick={() => window.location.href = "/publier?type=found"}>
+                    <DropdownMenuItem onClick={() => window.location.href = "/publish?type=found"}>
                       <div className="flex items-center">
                         <span className="w-3 h-3 bg-green-500 rounded-full mr-2"></span>
                         <div>
@@ -137,11 +137,11 @@ export default function Navbar() {
                       <Crown className="h-4 w-4 mr-2" />
                       Admin
                     </DropdownMenuItem>
-                    <DropdownMenuItem className="sm:hidden" onClick={() => window.location.href = "/publier?type=lost"}>
+                    <DropdownMenuItem className="sm:hidden" onClick={() => window.location.href = "/publish?type=lost"}>
                       <span className="w-3 h-3 bg-red-500 rounded-full mr-2"></span>
                       {t("publishNew.type.lost")}
                     </DropdownMenuItem>
-                    <DropdownMenuItem className="sm:hidden" onClick={() => window.location.href = "/publier?type=found"}>
+                    <DropdownMenuItem className="sm:hidden" onClick={() => window.location.href = "/publish?type=found"}>
                       <span className="w-3 h-3 bg-green-500 rounded-full mr-2"></span>
                       {t("publishNew.type.found")}
                     </DropdownMenuItem>

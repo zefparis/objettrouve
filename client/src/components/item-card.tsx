@@ -74,7 +74,7 @@ export default function ItemCard({ item }: ItemCardProps) {
         <Button
           variant="outline"
           className="w-full text-sm sm:text-base"
-          onClick={() => window.location.href = `/annonce/${item.id}`}
+          onClick={() => window.location.href = `/item/${item.id}`}
         >
           {t("common.viewDetails")}
         </Button>

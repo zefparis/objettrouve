@@ -22,10 +22,7 @@ import Pricing from "@/pages/pricing";
 import Checkout from "@/pages/checkout";
 import PaymentSuccess from "@/pages/payment-success";
 import MapPage from "@/pages/map";
-import MentionsLegales from "@/pages/legal/mentions-legales";
-import PolitiqueConfidentialite from "@/pages/legal/politique-confidentialite";
-import CGU from "@/pages/legal/cgu";
-import Cookies from "@/pages/legal/cookies";
+
 
 function Router() {
   const { isAuthenticated, isLoading } = useAuth();
@@ -35,24 +32,17 @@ function Router() {
       <Route path="/how-it-works" component={HowItWorks} />
       <Route path="/contact" component={Contact} />
       <Route path="/search" component={Search} />
-      <Route path="/rechercher" component={Search} />
-      <Route path="/publier" component={Publish} />
-      <Route path="/annonce/:id" component={ItemDetail} />
+      <Route path="/publish" component={Publish} />
+      <Route path="/item/:id" component={ItemDetail} />
       <Route path="/chat" component={Chat} />
       <Route path="/chat/:itemId" component={Chat} />
       <Route path="/dashboard" component={Dashboard} />
       <Route path="/profile" component={Profile} />
-      <Route path="/profil" component={Profile} />
       <Route path="/pricing" component={Pricing} />
       <Route path="/checkout" component={Checkout} />
       <Route path="/payment-success" component={PaymentSuccess} />
       <Route path="/map" component={MapPage} />
-      <Route path="/carte" component={MapPage} />
       <Route path="/admin" component={AdminDashboard} />
-      <Route path="/mentions-legales" component={MentionsLegales} />
-      <Route path="/politique-confidentialite" component={PolitiqueConfidentialite} />
-      <Route path="/cgu" component={CGU} />
-      <Route path="/cookies" component={Cookies} />
       {isLoading || !isAuthenticated ? (
         <Route path="/" component={Landing} />
       ) : (

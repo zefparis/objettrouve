@@ -31,7 +31,7 @@ export default function Hero() {
               size="lg"
               variant="secondary"
               className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold"
-              onClick={() => window.location.href = "/publier?type=lost"}
+              onClick={() => window.location.href = "/publish?type=lost"}
             >
               <SearchX className="h-4 w-4 sm:h-5 sm:w-5 mr-2 sm:mr-3" />
               <span className="truncate">{t("hero.iLostSomething")}</span>
@@ -39,7 +39,7 @@ export default function Hero() {
             <Button
               size="lg"
               className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold bg-secondary text-white hover:bg-green-700"
-              onClick={() => window.location.href = "/publier?type=found"}
+              onClick={() => window.location.href = "/publish?type=found"}
             >
               <SearchCode className="h-4 w-4 sm:h-5 sm:w-5 mr-2 sm:mr-3" />
               <span className="truncate">{t("hero.iFoundSomething")}</span>
