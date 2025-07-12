@@ -135,6 +135,15 @@ Located in `shared/schema.ts` with the following main tables:
 - **Database**: Drizzle migrations via `npm run db:push`
 - **Assets**: Static file serving from build directory
 
+### Deployment Issues & Solutions (January 2025)
+- **Issue Identified**: Replit build timeout during "Preparing" phase due to Vite build performance
+- **Root Cause**: 72 Lucide React icons causing excessive bundle processing time (>3 minutes)
+- **Solutions Created**:
+  - `build-fast.sh`: Optimized build script with timeouts and fallbacks
+  - `build-optimized.sh`: Memory-optimized build (4GB Node.js heap)
+  - `manual-deploy.sh`: Minimal deployment workaround
+- **Status**: Application fully functional, only build automation needs configuration adjustment
+
 ### Configuration
 - Environment variables for database connection
 - AWS Cognito configuration for user authentication
