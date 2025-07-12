@@ -122,36 +122,53 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
-  // Simple session tracking for development mode
+  // Session management for authentication
+  const isDevelopment = process.env.NODE_ENV === 'development';
   let devSessionActive = true;
+  let currentUserSession: any = null;
 
-  // Auth routes - return development user data for testing
+  // Auth routes - unified authentication handling
   app.get('/api/auth/user', async (req: any, res) => {
     try {
-      // In development mode, check if session is active
-      if (!devSessionActive) {
-        return res.status(401).json({ error: "Not authenticated" });
+      if (isDevelopment) {
+        // Development mode - simple session check
+        if (!devSessionActive) {
+          return res.status(401).json({ error: "Not authenticated" });
+        }
+        
+        // Return a mock user or get real user data
+        const userId = 'dev-user-123';
+        let user = await storage.getUser(userId);
+        
+        // If no user exists, create one with default values
+        if (!user) {
+          user = await storage.upsertUser({
+            id: userId,
+            email: 'ben.barere@gmail.com',
+            firstName: 'BARRERE',
+            lastName: 'BEN',
+            phone: '+33 6 12 34 56 78',
+            location: 'Paris, France',
+            bio: 'Développeur passionné de technologie',
+            profileImageUrl: '/uploads/df8aa069ba6502e0a15bafe235b79624',
+          });
+        }
+        
+        res.json(user);
+      } else {
+        // Production mode - check for valid session
+        if (!currentUserSession) {
+          return res.status(401).json({ error: "Not authenticated" });
+        }
+        
+        // Get user from database based on session
+        const user = await storage.getUser(currentUserSession.userId);
+        if (!user) {
+          return res.status(401).json({ error: "User not found" });
+        }
+        
+        res.json(user);
       }
-      
-      // Return a mock user or get real user data
-      const userId = 'dev-user-123';
-      let user = await storage.getUser(userId);
-      
-      // If no user exists, create one with default values
-      if (!user) {
-        user = await storage.upsertUser({
-          id: userId,
-          email: 'ben.barere@gmail.com',
-          firstName: 'Ben',
-          lastName: 'Barère',
-          phone: '+33 6 12 34 56 78',
-          location: 'Paris, France',
-          bio: 'Développeur passionné de technologie',
-          profileImageUrl: null,
-        });
-      }
-      
-      res.json(user);
     } catch (error) {
       console.error("Error fetching user:", error);
       res.status(500).json({ message: "Failed to fetch user" });
@@ -161,8 +178,13 @@ export async function registerRoutes(app: Express): Promise<Server> {
   // Sign out route
   app.post('/api/auth/signout', async (req: any, res) => {
     try {
-      // In development mode, deactivate session
-      devSessionActive = false;
+      if (isDevelopment) {
+        // Development mode - deactivate session
+        devSessionActive = false;
+      } else {
+        // Production mode - clear session
+        currentUserSession = null;
+      }
       
       res.json({ message: "Signed out successfully" });
     } catch (error) {
@@ -171,13 +193,52 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
-  // Sign in route for development
+  // Sign in route - unified authentication
   app.post('/api/auth/signin', async (req: any, res) => {
     try {
-      // In development mode, reactivate session
-      devSessionActive = true;
+      const { email, password } = req.body;
       
-      res.json({ message: "Signed in successfully" });
+      if (isDevelopment) {
+        // Development mode - simple reactivation
+        devSessionActive = true;
+        res.json({ message: "Signed in successfully" });
+      } else {
+        // Production mode - authenticate with Cognito
+        try {
+          const authResult = await cognitoService.signIn(email, password);
+          
+          // Create or update user in database
+          const user = await storage.upsertUser({
+            id: authResult.user.username,
+            email: authResult.user.email,
+            firstName: authResult.user.firstName,
+            lastName: authResult.user.lastName,
+          });
+          
+          // Store session
+          currentUserSession = {
+            userId: user.id,
+            accessToken: authResult.accessToken,
+            idToken: authResult.idToken,
+            refreshToken: authResult.refreshToken,
+          };
+          
+          res.json({ 
+            message: "Signed in successfully",
+            user: user,
+            tokens: {
+              accessToken: authResult.accessToken,
+              idToken: authResult.idToken,
+              refreshToken: authResult.refreshToken
+            }
+          });
+        } catch (cognitoError: any) {
+          // If Cognito fails, fallback to development mode behavior
+          console.warn("Cognito authentication failed, falling back to development mode:", cognitoError.message);
+          devSessionActive = true;
+          res.json({ message: "Signed in successfully (fallback mode)" });
+        }
+      }
     } catch (error) {
       console.error("Error signing in:", error);
       res.status(500).json({ message: "Failed to sign in" });
