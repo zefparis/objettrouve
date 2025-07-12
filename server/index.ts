@@ -57,99 +57,39 @@ app.use((req, res, next) => {
 });
 
 (async () => {
-  // DIRECT AUTH ROUTES - PRIORITY SETUP BEFORE OTHER ROUTES
+  // SIMPLE AUTH ROUTES - PRIORITY SETUP BEFORE OTHER ROUTES
   app.post('/api/auth/signup', async (req, res) => {
     try {
-      const { signUp } = await import("./auth");
-      const { email, password, firstName, lastName, phone } = req.body;
+      const { signUp } = await import("./simple-auth");
+      const { email, password, firstName, lastName } = req.body;
       
       if (!email || !password) {
         return res.status(400).json({ message: "Email et mot de passe requis" });
       }
 
-      const result = await signUp({ email, password, firstName, lastName, phone });
+      const result = await signUp(email, password, firstName, lastName);
       
-      res.json({
-        message: "Inscription réussie. Vérifiez votre email pour le code de confirmation.",
-        userSub: result.userSub,
-        codeDeliveryDetails: result.codeDeliveryDetails,
-      });
+      if (result.success) {
+        req.session = req.session || {};
+        req.session.user = result.user;
+        res.json({
+          message: result.message,
+          user: result.user,
+        });
+      } else {
+        res.status(400).json({ message: result.message });
+      }
     } catch (error: any) {
       console.error("Sign up error:", error);
-      
-      let message = "Erreur lors de l'inscription";
-      if (error.name === 'UsernameExistsException') {
-        message = "Cet email est déjà utilisé. Essayez de vous connecter ou de réinitialiser votre mot de passe.";
-      } else if (error.name === 'InvalidPasswordException') {
-        message = "Le mot de passe ne respecte pas les critères requis";
-      }
-      
-      res.status(400).json({ message });
+      res.status(500).json({ message: "Erreur lors de l'inscription" });
     }
   });
 
-  // Route pour renvoyer le code de confirmation
-  app.post('/api/auth/resend-code', async (req, res) => {
-    try {
-      const { resendConfirmationCode } = await import("./auth");
-      const { email } = req.body;
-      
-      if (!email) {
-        return res.status(400).json({ message: "Email requis" });
-      }
 
-      const result = await resendConfirmationCode(email);
-      
-      res.json({
-        message: "Code de confirmation renvoyé. Vérifiez votre email.",
-        codeDeliveryDetails: result,
-      });
-    } catch (error: any) {
-      console.error("Resend code error:", error);
-      
-      let message = "Erreur lors de l'envoi du code";
-      if (error.name === 'UserNotFoundException') {
-        message = "Utilisateur non trouvé";
-      } else if (error.name === 'InvalidParameterException') {
-        message = "Utilisateur déjà confirmé";
-      }
-      
-      res.status(400).json({ message });
-    }
-  });
-
-  // Route pour confirmer l'inscription
-  app.post('/api/auth/confirm-signup', async (req, res) => {
-    try {
-      const { confirmSignUp } = await import("./auth");
-      const { email, code } = req.body;
-      
-      if (!email || !code) {
-        return res.status(400).json({ message: "Email et code requis" });
-      }
-
-      await confirmSignUp(email, code);
-      
-      res.json({
-        message: "Compte confirmé avec succès. Vous pouvez maintenant vous connecter.",
-      });
-    } catch (error: any) {
-      console.error("Confirm signup error:", error);
-      
-      let message = "Erreur lors de la confirmation";
-      if (error.name === 'CodeMismatchException') {
-        message = "Code de confirmation invalide";
-      } else if (error.name === 'ExpiredCodeException') {
-        message = "Code de confirmation expiré";
-      }
-      
-      res.status(400).json({ message });
-    }
-  });
 
   app.post('/api/auth/signin', async (req, res) => {
     try {
-      const { signIn } = await import("./auth");
+      const { signIn } = await import("./simple-auth");
       const { email, password } = req.body;
       
       if (!email || !password) {
@@ -158,27 +98,21 @@ app.use((req, res, next) => {
 
       const result = await signIn(email, password);
       
-      // Store user in session for authentication
-      req.session = req.session || {};
-      req.session.user = result.user;
-      req.session.tokens = result.tokens;
-      
-      res.json({
-        message: "Connexion réussie",
-        user: result.user,
-        tokens: result.tokens,
-      });
+      if (result.success) {
+        // Store user in session for authentication
+        req.session = req.session || {};
+        req.session.user = result.user;
+        
+        res.json({
+          message: result.message,
+          user: result.user,
+        });
+      } else {
+        res.status(400).json({ message: result.message });
+      }
     } catch (error: any) {
       console.error("Sign in error:", error);
-      
-      let message = "Erreur lors de la connexion";
-      if (error.name === 'NotAuthorizedException') {
-        message = "Email ou mot de passe incorrect";
-      } else if (error.name === 'UserNotConfirmedException') {
-        message = "Votre compte n'est pas encore confirmé. Vérifiez votre email pour le code de confirmation.";
-      }
-      
-      res.status(400).json({ message });
+      res.status(500).json({ message: "Erreur lors de la connexion" });
     }
   });
 

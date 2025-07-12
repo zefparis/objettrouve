@@ -1,11 +1,14 @@
 import {
   users,
+  authUsers,
   items,
   messages,
   orders,
   premiumServices,
   type User,
   type UpsertUser,
+  type AuthUser,
+  type UpsertAuthUser,
   type Item,
   type InsertItem,
   type Message,
@@ -18,9 +21,14 @@ import { db } from "./db";
 import { eq, desc, and, or, ilike, sql, count, sum, gte, lte } from "drizzle-orm";
 
 export interface IStorage {
-  // User operations (removed Replit Auth dependency)
+  // User operations
   getUser(id: string): Promise<User | undefined>;
+  getUserByEmail(email: string): Promise<User | undefined>;
   upsertUser(user: UpsertUser): Promise<User>;
+  // Auth user operations
+  getAuthUser(id: string): Promise<AuthUser | undefined>;
+  getAuthUserByEmail(email: string): Promise<AuthUser | undefined>;
+  upsertAuthUser(user: UpsertAuthUser): Promise<AuthUser>;
   
   // Item operations
   createItem(item: InsertItem): Promise<Item>;
@@ -87,12 +95,43 @@ export class DatabaseStorage implements IStorage {
     return user;
   }
 
+  async getUserByEmail(email: string): Promise<User | undefined> {
+    const [user] = await db.select().from(users).where(eq(users.email, email));
+    return user;
+  }
+
   async upsertUser(userData: UpsertUser): Promise<User> {
     const [user] = await db
       .insert(users)
       .values(userData)
       .onConflictDoUpdate({
         target: users.id,
+        set: {
+          ...userData,
+          updatedAt: new Date(),
+        },
+      })
+      .returning();
+    return user;
+  }
+
+  // Auth user operations
+  async getAuthUser(id: string): Promise<AuthUser | undefined> {
+    const [user] = await db.select().from(authUsers).where(eq(authUsers.id, id));
+    return user;
+  }
+
+  async getAuthUserByEmail(email: string): Promise<AuthUser | undefined> {
+    const [user] = await db.select().from(authUsers).where(eq(authUsers.email, email));
+    return user;
+  }
+
+  async upsertAuthUser(userData: UpsertAuthUser): Promise<AuthUser> {
+    const [user] = await db
+      .insert(authUsers)
+      .values(userData)
+      .onConflictDoUpdate({
+        target: authUsers.id,
         set: {
           ...userData,
           updatedAt: new Date(),

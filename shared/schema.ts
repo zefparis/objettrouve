@@ -24,7 +24,7 @@ export const sessions = pgTable(
   (table) => [index("IDX_session_expire").on(table.expire)],
 );
 
-// User storage table for Replit Auth
+// User storage table (keep original for backward compatibility)
 export const users = pgTable("users", {
   id: varchar("id").primaryKey().notNull(),
   email: varchar("email").unique(),
@@ -43,6 +43,19 @@ export const users = pgTable("users", {
   subscriptionStartDate: timestamp("subscription_start_date"),
   subscriptionEndDate: timestamp("subscription_end_date"),
   totalSpent: integer("total_spent").default(0), // in cents
+});
+
+// Simple auth users table (new)
+export const authUsers = pgTable("auth_users", {
+  id: varchar("id").primaryKey().notNull(),
+  email: varchar("email").unique().notNull(),
+  firstName: varchar("first_name"),
+  lastName: varchar("last_name"),
+  passwordHash: varchar("password_hash").notNull(),
+  profileImageUrl: varchar("profile_image_url"),
+  emailVerified: boolean("email_verified").default(true),
+  createdAt: timestamp("created_at").defaultNow(),
+  updatedAt: timestamp("updated_at").defaultNow(),
 });
 
 // Items table for lost/found objects
@@ -175,6 +188,8 @@ export const insertOrderSchema = createInsertSchema(orders).omit({
 // Types
 export type UpsertUser = typeof users.$inferInsert;
 export type User = typeof users.$inferSelect;
+export type AuthUser = typeof authUsers.$inferSelect;
+export type UpsertAuthUser = typeof authUsers.$inferInsert;
 export type Item = typeof items.$inferSelect;
 export type InsertItem = z.infer<typeof insertItemSchema>;
 export type Message = typeof messages.$inferSelect;
