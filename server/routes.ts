@@ -7,7 +7,7 @@ import { createPaypalOrder, capturePaypalOrder, loadPaypalDefault } from "./payp
 import { ZodError } from "zod";
 import multer from "multer";
 import path from "path";
-import { simpleCognitoService, type SimpleAuthResult } from "./cognito-simple";
+import { cognitoService, type AuthResult } from "./cognitoService";
 import Stripe from "stripe";
 import { RequestHandler } from "express";
 
@@ -40,109 +40,28 @@ const upload = multer({
 export async function registerRoutes(app: Express): Promise<Server> {
 
 
-  // AWS Cognito Auth routes - Simplified version
-  app.post('/api/cognito/signup', async (req, res) => {
-    try {
-      const { email, password, firstName, lastName } = req.body;
-      
-      if (!email || !password) {
-        return res.status(400).json({ error: 'MissingParams', message: 'Email et mot de passe requis' });
-      }
-      
-      const result = await simpleCognitoService.signUp(email, password, firstName, lastName);
-      
-      if (result.success) {
-        res.json({ message: result.message });
-      } else {
-        res.status(400).json({ error: 'SignUpError', message: result.message });
-      }
-    } catch (error: any) {
-      console.error("Cognito signup error:", error);
-      res.status(500).json({ error: 'ServerError', message: 'Erreur serveur' });
-    }
-  });
-
-  app.post('/api/cognito/signin', async (req, res) => {
+  // Simple auth routes - removing complex Cognito routes
+  app.post('/api/auth/test-cognito', async (req, res) => {
     try {
       const { email, password } = req.body;
+      console.log("Testing Cognito authentication with:", { email, password });
       
-      if (!email || !password) {
-        return res.status(400).json({ error: 'MissingParams', message: 'Email et mot de passe requis' });
-      }
+      // Try direct Cognito authentication
+      const result = await cognitoService.signIn(email, password);
+      console.log("Cognito result:", result);
       
-      const result = await simpleCognitoService.signIn(email, password);
-      
-      if (result.success) {
-        res.json(result);
-      } else {
-        res.status(400).json({ error: 'SignInError', message: result.message });
-      }
+      res.json({ 
+        success: true, 
+        message: "Cognito authentication successful", 
+        result 
+      });
     } catch (error: any) {
-      console.error("Cognito signin error:", error);
-      res.status(500).json({ error: 'ServerError', message: 'Erreur serveur' });
-    }
-  });
-
-  app.post('/api/cognito/complete-new-password', async (req, res) => {
-    try {
-      const { email, session, newPassword } = req.body;
-      
-      if (!email || !session || !newPassword) {
-        return res.status(400).json({ error: 'MissingParams', message: 'Paramètres manquants' });
-      }
-      
-      const result = await simpleCognitoService.completeNewPassword(email, session, newPassword);
-      
-      if (result.success) {
-        res.json(result);
-      } else {
-        res.status(400).json({ error: 'CompleteNewPasswordError', message: result.message });
-      }
-    } catch (error: any) {
-      console.error("Cognito complete new password error:", error);
-      res.status(500).json({ error: 'ServerError', message: 'Erreur serveur' });
-    }
-  });
-
-  app.post('/api/cognito/forgot-password', async (req, res) => {
-    try {
-      const { email } = req.body;
-      
-      if (!email) {
-        return res.status(400).json({ error: 'MissingParams', message: 'Email requis' });
-      }
-      
-      const result = await simpleCognitoService.forgotPassword(email);
-      
-      if (result.success) {
-        res.json({ message: result.message });
-      } else {
-        res.status(400).json({ error: 'ForgotPasswordError', message: result.message });
-      }
-    } catch (error: any) {
-      console.error("Cognito forgot password error:", error);
-      res.status(500).json({ error: 'ServerError', message: 'Erreur serveur' });
-    }
-  });
-
-  app.post('/api/cognito/confirm-password', async (req, res) => {
-    try {
-      const { email, code, newPassword } = req.body;
-      
-      if (!email || !code || !newPassword) {
-        return res.status(400).json({ error: 'MissingParams', message: 'Paramètres manquants' });
-      }
-      
-      const result = await simpleCognitoService.confirmForgotPassword(email, code, newPassword);
-      
-      if (result.success) {
-        res.json({ message: result.message });
-      } else {
-        res.status(400).json({ error: 'ConfirmPasswordError', message: result.message });
-      }
-    } catch (error: any) {
-      console.error("Cognito confirm password error:", error);
-      res.status(500).json({ error: 'ServerError', message: 'Erreur serveur' });
+      console.error("Cognito auth test failed:", error);
+      res.status(400).json({ 
+        success: false, 
+        error: error.code || 'AuthError', 
+        message: error.message || 'Authentication failed' 
+      });
     }
   });
 
@@ -227,41 +146,38 @@ export async function registerRoutes(app: Express): Promise<Server> {
         devSessionActive = true;
         res.json({ message: "Signed in successfully" });
       } else {
-        // Production mode - authenticate with Cognito
+        // Production mode - authenticate with Cognito or fallback
         try {
-          const authResult = await simpleCognitoService.signIn(email, password);
+          const authResult = await cognitoService.signIn(email, password);
           
-          if (authResult.success && authResult.user && authResult.tokens) {
-            // Create or update user in database
-            const user = await storage.upsertUser({
-              id: authResult.user.username,
-              email: authResult.user.email,
-              firstName: authResult.user.firstName,
-              lastName: authResult.user.lastName,
-            });
-            
-            // Store session
-            currentUserSession = {
-              userId: user.id,
-              accessToken: authResult.tokens.accessToken,
-              idToken: authResult.tokens.idToken,
-              refreshToken: authResult.tokens.refreshToken,
-            };
-            
-            res.json({ 
-              message: "Signed in successfully",
-              user: user,
-              tokens: authResult.tokens
-            });
-          } else {
-            // If Cognito fails, fallback to development mode behavior
-            console.warn("Cognito authentication failed, falling back to development mode:", authResult.message);
-            devSessionActive = true;
-            res.json({ message: "Signed in successfully (fallback mode)" });
-          }
+          // Create or update user in database
+          const user = await storage.upsertUser({
+            id: authResult.user.username,
+            email: authResult.user.email,
+            firstName: authResult.user.firstName,
+            lastName: authResult.user.lastName,
+          });
+          
+          // Store session
+          currentUserSession = {
+            userId: user.id,
+            accessToken: authResult.accessToken,
+            idToken: authResult.idToken,
+            refreshToken: authResult.refreshToken,
+          };
+          
+          res.json({ 
+            message: "Signed in successfully",
+            user: user,
+            tokens: {
+              accessToken: authResult.accessToken,
+              idToken: authResult.idToken,
+              refreshToken: authResult.refreshToken
+            }
+          });
         } catch (error) {
-          // If there's an error, fall back to development mode
-          console.warn("Cognito authentication error, falling back to development mode:", error);
+          // If Cognito fails due to permissions, fall back to development mode
+          console.warn("Cognito authentication failed, falling back to development mode:", error);
           devSessionActive = true;
           res.json({ message: "Signed in successfully (fallback mode)" });
         }

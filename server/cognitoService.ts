@@ -172,12 +172,6 @@ export class CognitoService {
       throw {
         code: error.name || "SignInError",
         message: error.message || "Erreur de connexion",
-        };
-      }
-      
-      throw {
-        code: error.name,
-        message: error.message,
       };
     }
   }
