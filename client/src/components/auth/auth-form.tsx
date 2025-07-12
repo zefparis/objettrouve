@@ -6,10 +6,8 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Alert, AlertDescription } from "@/components/ui/alert";
 import { Loader2, Eye, EyeOff } from "lucide-react";
 import { useMutation } from "@tanstack/react-query";
-import { apiRequest } from "@/lib/queryClient";
 import { useToast } from "@/hooks/use-toast";
 
 const signUpSchema = z.object({
@@ -65,8 +63,18 @@ export default function AuthForm({ onSuccess }: AuthFormProps) {
   // Sign up mutation
   const signUpMutation = useMutation({
     mutationFn: async (data: z.infer<typeof signUpSchema>) => {
-      const response = await apiRequest('POST', '/api/auth/signup', data);
-      return await response.json();
+      const response = await fetch('/api/auth/signup', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      });
+      
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.message || 'Erreur lors de l\'inscription');
+      }
+      
+      return response.json();
     },
     onSuccess: (data) => {
       setEmail(signUpForm.getValues('email'));
@@ -88,8 +96,18 @@ export default function AuthForm({ onSuccess }: AuthFormProps) {
   // Sign in mutation
   const signInMutation = useMutation({
     mutationFn: async (data: z.infer<typeof signInSchema>) => {
-      const response = await apiRequest('POST', '/api/auth/signin', data);
-      return await response.json();
+      const response = await fetch('/api/auth/signin', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      });
+      
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.message || 'Erreur lors de la connexion');
+      }
+      
+      return response.json();
     },
     onSuccess: (data) => {
       if (data.requiresPasswordChange) {
@@ -120,8 +138,18 @@ export default function AuthForm({ onSuccess }: AuthFormProps) {
   // Confirm signup mutation
   const confirmMutation = useMutation({
     mutationFn: async (data: z.infer<typeof confirmSchema>) => {
-      const response = await apiRequest('POST', '/api/auth/confirm-signup', data);
-      return await response.json();
+      const response = await fetch('/api/auth/confirm-signup', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      });
+      
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.message || 'Erreur lors de la confirmation');
+      }
+      
+      return response.json();
     },
     onSuccess: () => {
       setMode('signin');
@@ -434,6 +462,9 @@ export default function AuthForm({ onSuccess }: AuthFormProps) {
             </CardHeader>
             <CardContent>
               <form onSubmit={signInForm.handleSubmit(signInMutation.mutate)} className="space-y-4">
+                {signInForm.formState.errors.formError && (
+                  <p className="text-sm text-red-500">{signInForm.formState.errors.formError.message}</p>
+                )}
                 <div className="space-y-2">
                   <Label htmlFor="email">Email</Label>
                   <Input
