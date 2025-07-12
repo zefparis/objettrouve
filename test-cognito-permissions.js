@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
 // Test script to verify Cognito permissions after AWS configuration
-const { CognitoIdentityProviderClient, AdminInitiateAuthCommand } = require("@aws-sdk/client-cognito-identity-provider");
-const crypto = require("crypto");
+import { CognitoIdentityProviderClient, AdminInitiateAuthCommand } from "@aws-sdk/client-cognito-identity-provider";
+import crypto from "crypto";
 
 const CLIENT_ID = process.env.VITE_COGNITO_CLIENT_ID || "1d8m1u4lrh78ra0hc3fq3mhbr8";
 const CLIENT_SECRET = process.env.VITE_COGNITO_CLIENT_SECRET || "1kv9uirpfepv9on3i6pguikda30gpmqm3pjpfb53vhu9q5vdgj8p";
