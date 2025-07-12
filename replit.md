@@ -137,11 +137,12 @@ Preferred communication style: Simple, everyday language.
 
 - **July 12, 2025**: Fixed critical Cognito authentication issues
   - Created simplified Cognito service (cognito-simple.ts) using standard methods
-  - Resolved AWS permissions issues by avoiding admin operations
+  - Resolved AWS permissions issues by adding AmazonCognitoPowerUser policy to IAM user
   - Implemented robust fallback authentication system for production
   - Authentication now works reliably with automatic fallback to development mode when Cognito fails
   - Updated frontend auth modal to use new simplified service
   - Tested connection/disconnection cycle successfully in both development and production modes
   - Build time optimized to 20ms with working deployment pipeline
+  - **BREAKTHROUGH**: AWS IAM permissions now functional - Cognito responds correctly (UserNotConfirmedException instead of AccessDeniedException)
 - Resolved Vite build timeout issues with optimized build.sh script
 - Successfully deployed application to production environment
