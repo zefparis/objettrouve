@@ -97,7 +97,30 @@
     "ctaTitle": "¿Listo para encontrar tus objetos?",
     "ctaSubtitle": "Únete a miles de usuarios que confían en ObjetsTrouvés",
     "publishAd": "Publicar anuncio",
-    "myDashboard": "Mi panel"
+    "myDashboard": "Mi panel",
+    "premium": {
+      "badge": "🚀 Nuevas funcionalidades",
+      "title": "Funcionalidades Premium",
+      "subtitle": "Descubre todas las funcionalidades de monetización y administración",
+      "pricing": "Precios",
+      "pricingDesc": "Servicios premium y suscripciones con integración Stripe/PayPal",
+      "viewPricing": "Ver precios",
+      "paymentSystem": "Sistema de pago",
+      "paymentSystemDesc": "Proceso completo de pedido con verificación de pagos",
+      "viewCheckout": "Ver checkout",
+      "adminDashboard": "Panel Admin",
+      "adminDashboardDesc": "Panel administrador con análisis de ingresos",
+      "viewAdmin": "Ver admin",
+      "paymentConfirm": "Confirmación de pago",
+      "paymentConfirmDesc": "Página de confirmación después del pago exitoso",
+      "viewConfirm": "Ver confirmación",
+      "apiPayment": "API de pago",
+      "apiPaymentDesc": "Rutas API completas para Stripe, PayPal y gestión admin",
+      "viewDocs": "Ver documentación",
+      "revenueAnalytics": "Análisis de ingresos",
+      "revenueAnalyticsDesc": "Estadísticas detalladas de ingresos y usuarios pagantes",
+      "viewAnalytics": "Ver análisis"
+    }
   },
   "map": {
     "title": "Mapa interactivo",

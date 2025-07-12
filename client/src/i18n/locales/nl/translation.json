@@ -1,9 +1,10 @@
 {
   "nav": {
-    "home": "Thuis",
+    "home": "Home",
     "search": "Zoeken",
     "publish": "Publiceren",
     "dashboard": "Dashboard",
+    "profile": "Profiel",
     "chat": "Berichten",
     "login": "Inloggen",
     "logout": "Uitloggen",
@@ -12,80 +13,37 @@
     "contact": "Contact",
     "pricing": "Prijzen"
   },
-  "pricing": {
-    "title": "Prijzen",
-    "subtitle": "Kies het plan dat bij u past",
-    "popular": "Populair",
-    "select": "Selecteren",
-    "tabs": {
-      "services": "Diensten",
-      "subscriptions": "Abonnementen"
-    },
-    "services": {
-      "boost": {
-        "name": "Advertentie boosten",
-        "description": "Markeer uw advertentie voor betere zichtbaarheid",
-        "features": {
-          "priority": "Prioriteit weergave",
-          "highlight": "Kleurmarkering",
-          "duration": "Duur: 7 dagen"
-        }
-      },
-      "search": {
-        "name": "Premium zoeken",
-        "description": "Geavanceerde waarschuwingen en filters voor uw zoekopdrachten",
-        "features": {
-          "alerts": "Gepersonaliseerde e-mailwaarschuwingen",
-          "radius": "Uitgebreide zoekradius",
-          "priority": "Prioriteit toegang tot nieuwe advertenties"
-        }
-      },
-      "verification": {
-        "name": "Identiteitsverificatie",
-        "description": "Vertrouwensbadge voor uw advertenties",
-        "features": {
-          "badge": "Geverifieerde vertrouwensbadge",
-          "trust": "Verhoogt het vertrouwen van gebruikers",
-          "priority": "Prioriteit ondersteuning"
-        }
-      }
-    },
-    "plans": {
-      "pro": {
-        "name": "Pro",
-        "description": "Voor regelmatige gebruikers",
-        "features": {
-          "listings": "Onbeperkte advertenties",
-          "priority": "Prioriteit ondersteuning",
-          "analytics": "Gedetailleerde analytics",
-          "support": "24/7 ondersteuning"
-        }
-      },
-      "advanced": {
-        "name": "Geavanceerd",
-        "description": "Voor frequente gebruikers",
-        "features": {
-          "listings": "Onbeperkte advertenties",
-          "team": "Team beheer",
-          "api": "API-toegang",
-          "custom": "Aangepaste integraties"
-        }
-      },
-      "premium": {
-        "name": "Premium",
-        "description": "Voor professionals",
-        "features": {
-          "unlimited": "Alles onbeperkt",
-          "dedicated": "Toegewijde accountmanager",
-          "white_label": "White-label oplossing",
-          "training": "Gepersonaliseerde training"
-        }
-      }
-    },
-    "subscribe": "Abonneren",
-    "payment": {
-      "title": "Kies betaalmethode",
-      "description": "Selecteer uw gewenste betaalmethode"
+  "home": {
+    "recentItems": "Recent gerapporteerde items",
+    "recentItemsDesc": "Ontdek de nieuwste verloren en gevonden items in uw omgeving",
+    "noItemsYet": "Nog geen items gerapporteerd",
+    "viewAllItems": "Alle items bekijken",
+    "ctaTitle": "Klaar om uw items te vinden?",
+    "ctaSubtitle": "Sluit u aan bij duizenden gebruikers die ObjetsTrouvés vertrouwen",
+    "publishAd": "Advertentie plaatsen",
+    "myDashboard": "Mijn dashboard",
+    "premium": {
+      "badge": "🚀 Nieuwe functies",
+      "title": "Premium functies",
+      "subtitle": "Ontdek alle monetisatie en beheer functies",
+      "pricing": "Prijzen",
+      "pricingDesc": "Premium diensten en abonnementen met Stripe/PayPal integratie",
+      "viewPricing": "Prijzen bekijken",
+      "paymentSystem": "Betaalsysteem",
+      "paymentSystemDesc": "Volledig bestelproces met betaalverificatie",
+      "viewCheckout": "Afrekenen bekijken",
+      "adminDashboard": "Beheer dashboard",
+      "adminDashboardDesc": "Beheerder dashboard met omzet analyses",
+      "viewAdmin": "Beheer bekijken",
+      "paymentConfirm": "Betaalbevestiging",
+      "paymentConfirmDesc": "Bevestigingspagina na succesvolle betaling",
+      "viewConfirm": "Bevestiging bekijken",
+      "apiPayment": "Betaal API",
+      "apiPaymentDesc": "Volledige API routes voor Stripe, PayPal en beheer",
+      "viewDocs": "Documentatie bekijken",
+      "revenueAnalytics": "Omzet analyses",
+      "revenueAnalyticsDesc": "Gedetailleerde statistieken over omzet en betalende gebruikers",
+      "viewAnalytics": "Analyses bekijken"
     }
   }
 }

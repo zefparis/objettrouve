@@ -206,7 +206,30 @@
     "ctaTitle": "Prêt à retrouver vos objets ?",
     "ctaSubtitle": "Rejoignez des milliers d'utilisateurs qui font confiance à ObjetsTrouvés",
     "publishAd": "Publier une annonce",
-    "myDashboard": "Mon tableau de bord"
+    "myDashboard": "Mon tableau de bord",
+    "premium": {
+      "badge": "🚀 Nouvelles fonctionnalités",
+      "title": "Fonctionnalités Premium",
+      "subtitle": "Découvrez toutes les fonctionnalités de monétisation et d'administration",
+      "pricing": "Tarification",
+      "pricingDesc": "Services premium et abonnements avec intégration Stripe/PayPal",
+      "viewPricing": "Voir les tarifs",
+      "paymentSystem": "Système de paiement",
+      "paymentSystemDesc": "Processus de commande complet avec vérification des paiements",
+      "viewCheckout": "Voir checkout",
+      "adminDashboard": "Dashboard Admin",
+      "adminDashboardDesc": "Tableau de bord administrateur avec analyses de revenus",
+      "viewAdmin": "Voir admin",
+      "paymentConfirm": "Confirmation de paiement",
+      "paymentConfirmDesc": "Page de confirmation après paiement réussi",
+      "viewConfirm": "Voir confirmation",
+      "apiPayment": "API de paiement",
+      "apiPaymentDesc": "Routes API complètes pour Stripe, PayPal et gestion admin",
+      "viewDocs": "Voir documentation",
+      "revenueAnalytics": "Analyses de revenus",
+      "revenueAnalyticsDesc": "Statistiques détaillées des revenus et utilisateurs payants",
+      "viewAnalytics": "Voir analyses"
+    }
   },
   "map": {
     "title": "Carte interactive",

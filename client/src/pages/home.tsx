@@ -107,12 +107,12 @@ export default function Home() {
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <Badge className="mb-4">🚀 Nouvelles fonctionnalités</Badge>
+            <Badge className="mb-4">{t("home.premium.badge")}</Badge>
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Fonctionnalités Premium
+              {t("home.premium.title")}
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Découvrez toutes les fonctionnalités de monétisation et d'administration
+              {t("home.premium.subtitle")}
             </p>
           </div>
           
@@ -122,16 +122,16 @@ export default function Home() {
               <CardHeader>
                 <CardTitle className="flex items-center">
                   <Star className="w-5 h-5 mr-2 text-yellow-500" />
-                  Tarification
+                  {t("home.premium.pricing")}
                 </CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600 mb-4">
-                  Services premium et abonnements avec intégration Stripe/PayPal
+                  {t("home.premium.pricingDesc")}
                 </p>
                 <Link href="/pricing">
                   <Button className="w-full">
-                    Voir les tarifs
+                    {t("home.premium.viewPricing")}
                   </Button>
                 </Link>
               </CardContent>
@@ -142,16 +142,16 @@ export default function Home() {
               <CardHeader>
                 <CardTitle className="flex items-center">
                   <ShoppingCart className="w-5 h-5 mr-2 text-green-500" />
-                  Système de paiement
+                  {t("home.premium.paymentSystem")}
                 </CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600 mb-4">
-                  Processus de commande complet avec vérification des paiements
+                  {t("home.premium.paymentSystemDesc")}
                 </p>
                 <Link href="/checkout">
                   <Button className="w-full">
-                    Voir checkout
+                    {t("home.premium.viewCheckout")}
                   </Button>
                 </Link>
               </CardContent>
@@ -162,16 +162,16 @@ export default function Home() {
               <CardHeader>
                 <CardTitle className="flex items-center">
                   <Crown className="w-5 h-5 mr-2 text-purple-500" />
-                  Dashboard Admin
+                  {t("home.premium.adminDashboard")}
                 </CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600 mb-4">
-                  Tableau de bord administrateur avec analyses de revenus
+                  {t("home.premium.adminDashboardDesc")}
                 </p>
                 <Link href="/admin">
                   <Button className="w-full">
-                    Voir admin
+                    {t("home.premium.viewAdmin")}
                   </Button>
                 </Link>
               </CardContent>
@@ -182,16 +182,16 @@ export default function Home() {
               <CardHeader>
                 <CardTitle className="flex items-center">
                   <CreditCard className="w-5 h-5 mr-2 text-blue-500" />
-                  Confirmation de paiement
+                  {t("home.premium.paymentConfirm")}
                 </CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600 mb-4">
-                  Page de confirmation après paiement réussi
+                  {t("home.premium.paymentConfirmDesc")}
                 </p>
                 <Link href="/payment-success">
                   <Button className="w-full">
-                    Voir confirmation
+                    {t("home.premium.viewConfirm")}
                   </Button>
                 </Link>
               </CardContent>
@@ -202,15 +202,15 @@ export default function Home() {
               <CardHeader>
                 <CardTitle className="flex items-center">
                   <Settings className="w-5 h-5 mr-2 text-gray-500" />
-                  API de paiement
+                  {t("home.premium.apiPayment")}
                 </CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600 mb-4">
-                  Routes API complètes pour Stripe, PayPal et gestion admin
+                  {t("home.premium.apiPaymentDesc")}
                 </p>
                 <Button className="w-full" variant="outline">
-                  Voir documentation
+                  {t("home.premium.viewDocs")}
                 </Button>
               </CardContent>
             </Card>
@@ -220,16 +220,16 @@ export default function Home() {
               <CardHeader>
                 <CardTitle className="flex items-center">
                   <DollarSign className="w-5 h-5 mr-2 text-green-600" />
-                  Analyses de revenus
+                  {t("home.premium.revenueAnalytics")}
                 </CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600 mb-4">
-                  Statistiques détaillées des revenus et utilisateurs payants
+                  {t("home.premium.revenueAnalyticsDesc")}
                 </p>
                 <Link href="/admin">
                   <Button className="w-full" variant="outline">
-                    Voir analyses
+                    {t("home.premium.viewAnalytics")}
                   </Button>
                 </Link>
               </CardContent>

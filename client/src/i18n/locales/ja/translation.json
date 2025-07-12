@@ -4,6 +4,7 @@
     "search": "検索",
     "publish": "投稿",
     "dashboard": "ダッシュボード",
+    "profile": "プロフィール",
     "chat": "メッセージ",
     "login": "ログイン",
     "logout": "ログアウト",
@@ -12,80 +13,37 @@
     "contact": "お問い合わせ",
     "pricing": "料金"
   },
-  "pricing": {
-    "title": "料金",
-    "subtitle": "あなたに合ったプランを選択してください",
-    "popular": "人気",
-    "select": "選択",
-    "tabs": {
-      "services": "サービス",
-      "subscriptions": "サブスクリプション"
-    },
-    "services": {
-      "boost": {
-        "name": "広告ブースト",
-        "description": "より良い可視性のために広告をハイライトします",
-        "features": {
-          "priority": "優先表示",
-          "highlight": "カラーハイライト",
-          "duration": "期間：7日"
-        }
-      },
-      "search": {
-        "name": "プレミアム検索",
-        "description": "検索用の高度なアラートとフィルター",
-        "features": {
-          "alerts": "カスタマイズされたメールアラート",
-          "radius": "拡張検索半径",
-          "priority": "新しい広告への優先アクセス"
-        }
-      },
-      "verification": {
-        "name": "身元確認",
-        "description": "広告の信頼バッジ",
-        "features": {
-          "badge": "確認済み信頼バッジ",
-          "trust": "ユーザーの信頼を高める",
-          "priority": "優先サポート"
-        }
-      }
-    },
-    "plans": {
-      "pro": {
-        "name": "プロ",
-        "description": "一般ユーザー向け",
-        "features": {
-          "listings": "無制限の広告",
-          "priority": "優先サポート",
-          "analytics": "詳細な分析",
-          "support": "24時間サポート"
-        }
-      },
-      "advanced": {
-        "name": "アドバンス",
-        "description": "頻繁なユーザー向け",
-        "features": {
-          "listings": "無制限の広告",
-          "team": "チーム管理",
-          "api": "API アクセス",
-          "custom": "カスタム統合"
-        }
-      },
-      "premium": {
-        "name": "プレミアム",
-        "description": "プロフェッショナル向け",
-        "features": {
-          "unlimited": "すべて無制限",
-          "dedicated": "専用アカウントマネージャー",
-          "white_label": "ホワイトラベルソリューション",
-          "training": "個人向けトレーニング"
-        }
-      }
-    },
-    "subscribe": "購読",
-    "payment": {
-      "title": "支払い方法を選択",
-      "description": "お好みの支払い方法を選択してください"
+  "home": {
+    "recentItems": "最近報告された物品",
+    "recentItemsDesc": "お住まいの地域で最新の紛失物・発見物を発見する",
+    "noItemsYet": "まだ報告された物品はありません",
+    "viewAllItems": "すべての物品を見る",
+    "ctaTitle": "あなたの物品を見つける準備はできましたか？",
+    "ctaSubtitle": "ObjetsTrouvésを信頼する何千人ものユーザーに参加しましょう",
+    "publishAd": "広告を投稿",
+    "myDashboard": "マイダッシュボード",
+    "premium": {
+      "badge": "🚀 新機能",
+      "title": "プレミアム機能",
+      "subtitle": "すべての収益化と管理機能を発見する",
+      "pricing": "料金",
+      "pricingDesc": "Stripe/PayPal統合でプレミアムサービスとサブスクリプション",
+      "viewPricing": "料金を見る",
+      "paymentSystem": "支払いシステム",
+      "paymentSystemDesc": "支払い確認付きの完全な注文プロセス",
+      "viewCheckout": "チェックアウトを見る",
+      "adminDashboard": "管理ダッシュボード",
+      "adminDashboardDesc": "収益分析付きの管理者ダッシュボード",
+      "viewAdmin": "管理者を見る",
+      "paymentConfirm": "支払い確認",
+      "paymentConfirmDesc": "支払い成功後の確認ページ",
+      "viewConfirm": "確認を見る",
+      "apiPayment": "支払いAPI",
+      "apiPaymentDesc": "Stripe、PayPal、管理者管理のための完全なAPIルート",
+      "viewDocs": "ドキュメントを見る",
+      "revenueAnalytics": "収益分析",
+      "revenueAnalyticsDesc": "収益と有料ユーザーの詳細統計",
+      "viewAnalytics": "分析を見る"
     }
   }
 }

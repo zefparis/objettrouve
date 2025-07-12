@@ -87,5 +87,38 @@
       "title": "Scegli metodo di pagamento",
       "description": "Seleziona il tuo metodo di pagamento preferito"
     }
+  },
+  "home": {
+    "recentItems": "Oggetti segnalati di recente",
+    "recentItemsDesc": "Scopri gli ultimi oggetti smarriti e trovati nella tua zona",
+    "noItemsYet": "Nessun oggetto segnalato ancora",
+    "viewAllItems": "Vedi tutti gli oggetti",
+    "ctaTitle": "Pronto a trovare i tuoi oggetti?",
+    "ctaSubtitle": "Unisciti a migliaia di utenti che si fidano di ObjetsTrouvés",
+    "publishAd": "Pubblica annuncio",
+    "myDashboard": "La mia dashboard",
+    "premium": {
+      "badge": "🚀 Nuove funzionalità",
+      "title": "Funzionalità Premium",
+      "subtitle": "Scopri tutte le funzionalità di monetizzazione e amministrazione",
+      "pricing": "Prezzi",
+      "pricingDesc": "Servizi premium e abbonamenti con integrazione Stripe/PayPal",
+      "viewPricing": "Vedi prezzi",
+      "paymentSystem": "Sistema di pagamento",
+      "paymentSystemDesc": "Processo completo di ordine con verifica pagamenti",
+      "viewCheckout": "Vedi checkout",
+      "adminDashboard": "Dashboard Admin",
+      "adminDashboardDesc": "Dashboard amministratore con analisi dei ricavi",
+      "viewAdmin": "Vedi admin",
+      "paymentConfirm": "Conferma pagamento",
+      "paymentConfirmDesc": "Pagina di conferma dopo pagamento riuscito",
+      "viewConfirm": "Vedi conferma",
+      "apiPayment": "API pagamento",
+      "apiPaymentDesc": "Route API complete per Stripe, PayPal e gestione admin",
+      "viewDocs": "Vedi documentazione",
+      "revenueAnalytics": "Analisi ricavi",
+      "revenueAnalyticsDesc": "Statistiche dettagliate su ricavi e utenti paganti",
+      "viewAnalytics": "Vedi analisi"
+    }
   }
 }

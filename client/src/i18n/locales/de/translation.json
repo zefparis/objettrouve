@@ -87,5 +87,38 @@
       "title": "Zahlungsmethode wählen",
       "description": "Wählen Sie Ihre bevorzugte Zahlungsmethode"
     }
+  },
+  "home": {
+    "recentItems": "Kürzlich gemeldete Objekte",
+    "recentItemsDesc": "Entdecken Sie die neuesten verlorenen und gefundenen Gegenstände in Ihrer Umgebung",
+    "noItemsYet": "Noch keine Objekte gemeldet",
+    "viewAllItems": "Alle Objekte anzeigen",
+    "ctaTitle": "Bereit, Ihre Objekte zu finden?",
+    "ctaSubtitle": "Schließen Sie sich tausenden Nutzern an, die ObjetsTrouvés vertrauen",
+    "publishAd": "Anzeige veröffentlichen",
+    "myDashboard": "Mein Dashboard",
+    "premium": {
+      "badge": "🚀 Neue Funktionen",
+      "title": "Premium-Funktionen",
+      "subtitle": "Entdecken Sie alle Monetarisierungs- und Verwaltungsfunktionen",
+      "pricing": "Preise",
+      "pricingDesc": "Premium-Services und Abonnements mit Stripe/PayPal-Integration",
+      "viewPricing": "Preise anzeigen",
+      "paymentSystem": "Zahlungssystem",
+      "paymentSystemDesc": "Vollständiger Bestellprozess mit Zahlungsverifizierung",
+      "viewCheckout": "Checkout anzeigen",
+      "adminDashboard": "Admin-Dashboard",
+      "adminDashboardDesc": "Administrator-Dashboard mit Umsatzanalysen",
+      "viewAdmin": "Admin anzeigen",
+      "paymentConfirm": "Zahlungsbestätigung",
+      "paymentConfirmDesc": "Bestätigungsseite nach erfolgreicher Zahlung",
+      "viewConfirm": "Bestätigung anzeigen",
+      "apiPayment": "Zahlungs-API",
+      "apiPaymentDesc": "Vollständige API-Routen für Stripe, PayPal und Admin-Verwaltung",
+      "viewDocs": "Dokumentation anzeigen",
+      "revenueAnalytics": "Umsatzanalysen",
+      "revenueAnalyticsDesc": "Detaillierte Statistiken zu Umsätzen und zahlenden Nutzern",
+      "viewAnalytics": "Analysen anzeigen"
+    }
   }
 }
