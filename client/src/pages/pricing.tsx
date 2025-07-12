@@ -9,13 +9,15 @@ import { useAuth } from "@/hooks/useAuth";
 import { Link } from "wouter";
 import { ArrowLeft, Home } from "lucide-react";
 import SimpleAuthModal from "@/components/auth/simple-auth-modal";
+import StripeCheckoutModal from "@/components/stripe-checkout-modal";
 
 export default function Pricing() {
   const { t } = useTranslation();
   const { isAuthenticated } = useAuth();
-  const [selectedService, setSelectedService] = useState<string | null>(null);
+  const [selectedService, setSelectedService] = useState<any>(null);
   const [showModal, setShowModal] = useState(false);
   const [showAuthModal, setShowAuthModal] = useState(false);
+  const [showStripeModal, setShowStripeModal] = useState(false);
 
   const services = [
     {
@@ -61,13 +63,13 @@ export default function Pricing() {
     },
   ];
 
-  const handleSelect = (serviceId: string) => {
+  const handleSelect = (service: any) => {
     if (!isAuthenticated) {
-      setSelectedService(serviceId);
+      setSelectedService(service);
       setShowAuthModal(true);
       return;
     }
-    setSelectedService(serviceId);
+    setSelectedService(service);
     setShowModal(true);
   };
 
@@ -78,7 +80,12 @@ export default function Pricing() {
 
   const handlePayment = (method: "stripe" | "paypal") => {
     if (selectedService) {
-      window.location.href = `/checkout?type=service&id=${selectedService}&method=${method}`;
+      if (method === "stripe") {
+        setShowModal(false);
+        setShowStripeModal(true);
+      } else {
+        window.location.href = `/checkout?type=service&id=${selectedService.id}&method=${method}`;
+      }
     }
   };
 
@@ -130,7 +137,7 @@ export default function Pricing() {
                     </li>
                   ))}
                 </ul>
-                <Button onClick={() => handleSelect(service.id)} className="w-full">
+                <Button onClick={() => handleSelect(service)} className="w-full">
                   Acheter
                 </Button>
               </CardContent>
@@ -161,6 +168,14 @@ export default function Pricing() {
           onClose={() => setShowAuthModal(false)}
           onSuccess={handleAuthSuccess}
         />
+
+        {selectedService && (
+          <StripeCheckoutModal
+            isOpen={showStripeModal}
+            onClose={() => setShowStripeModal(false)}
+            service={selectedService}
+          />
+        )}
       </div>
     </div>
   );
