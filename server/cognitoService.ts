@@ -123,10 +123,11 @@ export class CognitoService {
 
   async signIn(email: string, password: string): Promise<AuthResult> {
     try {
-      // Try USER_PASSWORD_AUTH first (most straightforward approach)
-      const command = new InitiateAuthCommand({
+      // Use ADMIN_NO_SRP_AUTH for simpler authentication
+      const command = new AdminInitiateAuthCommand({
+        UserPoolId: USER_POOL_ID,
         ClientId: CLIENT_ID,
-        AuthFlow: "USER_PASSWORD_AUTH",
+        AuthFlow: "ADMIN_NO_SRP_AUTH",
         AuthParameters: {
           USERNAME: email,
           PASSWORD: password,
@@ -168,11 +169,9 @@ export class CognitoService {
     } catch (error: any) {
       console.error("SignIn error:", error);
       
-      // Provide helpful error message for USER_PASSWORD_AUTH flow
-      if (error.name === "InvalidParameterException" && error.message.includes("USER_PASSWORD_AUTH flow not enabled")) {
-        throw {
-          code: "ConfigurationRequired",
-          message: "Pour utiliser l'authentification par mot de passe, vous devez activer le flow USER_PASSWORD_AUTH dans votre configuration AWS Cognito.\n\nÉtapes:\n1. Ouvrez AWS Console → Amazon Cognito\n2. Sélectionnez votre User Pool\n3. Allez dans App integration → App client\n4. Cliquez sur Edit\n5. Dans Authentication flows, cochez ALLOW_USER_PASSWORD_AUTH\n6. Sauvegardez les changements",
+      throw {
+        code: error.name || "SignInError",
+        message: error.message || "Erreur de connexion",
         };
       }
       

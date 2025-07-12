@@ -7,7 +7,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Eye, EyeOff, Mail, Lock, User, ArrowLeft, Shield } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
-import { cognitoService } from "@/lib/cognito";
+import { simpleCognitoService } from "@/lib/cognito-simple";
 
 type AuthModalProps = {
   isOpen: boolean;
@@ -125,19 +125,21 @@ export default function AuthModal({ isOpen, onClose, onSuccess }: AuthModalProps
         }
       } else {
         // Production mode - use Cognito
-        const result = await cognitoService.signIn(formData.email, formData.password);
+        const result = await simpleCognitoService.signIn(formData.email, formData.password);
         
-        if (result.challengeName === 'NEW_PASSWORD_REQUIRED') {
-          setEmail(formData.email);
-          setTempPassword(formData.password);
-          setStep("new-password");
-        } else {
+        if (result.success && result.user) {
           toast({
             title: t("auth.success.loginTitle"),
             description: t("auth.success.loginDescription"),
           });
           onSuccess(result.user);
           onClose();
+        } else if (result.challengeName === 'NEW_PASSWORD_REQUIRED') {
+          setEmail(formData.email);
+          setTempPassword(formData.password);
+          setStep("new-password");
+        } else {
+          throw new Error(result.message || "Erreur de connexion");
         }
       }
     } catch (error: any) {
@@ -158,17 +160,17 @@ export default function AuthModal({ isOpen, onClose, onSuccess }: AuthModalProps
     
     setIsLoading(true);
     try {
-      await cognitoService.signUp(formData.email, formData.password, {
-        given_name: formData.firstName,
-        family_name: formData.lastName,
-      });
+      const result = await simpleCognitoService.signUp(formData.email, formData.password, formData.firstName, formData.lastName);
       
-      setEmail(formData.email);
-      setStep("otp-verification");
-      toast({
-        title: t("auth.success.registerTitle"),
-        description: t("auth.success.registerDescription"),
-      });
+      if (result.success) {
+        toast({
+          title: t("auth.success.registerTitle"),
+          description: result.message,
+        });
+        setStep("login");
+      } else {
+        throw new Error(result.message || "Erreur lors de l'inscription");
+      }
     } catch (error: any) {
       console.error("SignUp error:", error);
       toast({
@@ -187,13 +189,18 @@ export default function AuthModal({ isOpen, onClose, onSuccess }: AuthModalProps
     
     setIsLoading(true);
     try {
-      await cognitoService.forgotPassword(formData.email);
-      setEmail(formData.email);
-      setStep("otp-verification");
-      toast({
-        title: t("auth.success.forgotPasswordTitle"),
-        description: t("auth.success.forgotPasswordDescription"),
-      });
+      const result = await simpleCognitoService.forgotPassword(formData.email);
+      
+      if (result.success) {
+        setEmail(formData.email);
+        setStep("otp-verification");
+        toast({
+          title: t("auth.success.forgotPasswordTitle"),
+          description: result.message,
+        });
+      } else {
+        throw new Error(result.message || "Erreur lors de l'envoi du code");
+      }
     } catch (error: any) {
       console.error("ForgotPassword error:", error);
       toast({
