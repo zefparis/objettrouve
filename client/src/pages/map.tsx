@@ -1,10 +1,9 @@
 import { useTranslation } from 'react-i18next';
 import { useQuery } from '@tanstack/react-query';
 import { Button } from '@/components/ui/button';
-import { ArrowLeft, Home } from 'lucide-react';
+import { ArrowLeft, Home, Map, MapPin } from 'lucide-react';
 import { Link } from 'wouter';
-import { Card, CardContent } from '@/components/ui/card';
-import { MapPin, Map } from 'lucide-react';
+import { Card } from '@/components/ui/card';
 
 export default function MapPage() {
   const { t } = useTranslation();
