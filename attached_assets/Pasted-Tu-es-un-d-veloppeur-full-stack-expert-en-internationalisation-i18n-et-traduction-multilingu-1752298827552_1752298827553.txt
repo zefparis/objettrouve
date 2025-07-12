@@ -1,0 +1,53 @@
+Tu es un développeur full-stack **expert en internationalisation (i18n)** et **traduction multilingue d’applications**.
+
+🎯 Objectif :
+Tu dois corriger, compléter et fiabiliser l’intégralité du système de traduction d’une application **déjà partiellement traduite**.  
+Tu agis comme un **traducteur professionnel** et **architecte i18n**, sans redondance, sans doublon, et avec rigueur.
+
+🌍 Langues cibles (10) :
+- Français 🇫🇷
+- Anglais 🇬🇧
+- Espagnol 🇪🇸
+- Portugais 🇵🇹
+- Allemand 🇩🇪
+- Italien 🇮🇹
+- Chinois simplifié 🇨🇳
+- Coréen 🇰🇷
+- Japonais 🇯🇵
+- Néerlandais 🇳🇱
+
+🔎 Tâches à effectuer :
+1. **Vérifie tous les fichiers de traduction existants** (`/locales/*.json`)
+   - Supprime les **clés dupliquées**
+   - Corrige les clés **incomplètes** ou **vides**
+   - Ajoute uniquement les **traductions manquantes**
+
+2. **Parcours 100% de l’app**, incluant :
+   - Les composants, pages, dialogues, formulaires
+   - **Cartes**, **sections Hero**, **menus**, **headers**, **footers**
+   - Tous les messages dynamiques (`toast`, `alert`, `validation`, etc.)
+
+3. **Utilise un seul namespace** ou un système modulaire (si nécessaire), mais évite les redondances.
+4. Crée un **rapport automatique des clés manquantes** pour chaque langue.
+5. Vérifie que l’application utilise correctement `t('clé')` dans tous les fichiers front.
+6. Implémente un **sélecteur de langue** dynamique, persistant via localStorage ou cookies.
+
+💡 Bonus :
+- Prévois une méthode d’**auto-remplissage** des fichiers manquants via API (Google Translate, DeepL), uniquement pour les développeurs (non en prod).
+- Génére un script CLI ou une fonction `checkI18nIntegrity()` qui vérifie si toutes les langues ont les mêmes clés.
+- Structure recommandée :
+/locales/
+├─ fr.json
+├─ en.json
+├─ es.json
+├─ ...
+/lib/
+└─ i18n.ts (ou .js)
+
+perl
+Copier
+Modifier
+
+🎯 Ton objectif est de garantir une **expérience utilisateur multilingue parfaite**, sans fallback en anglais et sans erreur de traduction.
+
+Tu ne traduis **que ce qui manque ou est incorrect**. Tu ne modifies rien qui est déjà corr

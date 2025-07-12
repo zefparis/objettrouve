@@ -10,31 +10,8 @@
     "features": "Recursos",
     "howItWorks": "Como funciona",
     "contact": "Contato",
-    "pricing": "Preços"
-  },
-  "hero": {
-    "title": "Encontre seus objetos perdidos",
-    "subtitle": "A plataforma francesa de referência para encontrar seus objetos perdidos ou reportar seus achados",
-    "searchPlaceholder": "Buscar um objeto...",
-    "searchButton": "Buscar",
-    "publishButton": "Publicar anúncio",
-    "iLostSomething": "Perdi algo",
-    "iFoundSomething": "Encontrei algo"
-  },
-  "common": {
-    "back": "Voltar",
-    "success": "Sucesso",
-    "error": "Erro",
-    "loading": "Carregando...",
-    "cancel": "Cancelar",
-    "save": "Salvar",
-    "close": "Fechar",
-    "next": "Próximo",
-    "previous": "Anterior",
-    "viewDetails": "Ver Detalhes",
-    "noImage": "Sem Imagem",
-    "unauthorized": "Não autorizado",
-    "loginRequired": "Você deve estar logado. Redirecionando..."
+    "pricing": "Preços",
+    "profile": "Perfil"
   },
   "hero": {
     "title": "Encontre seus objetos perdidos",
@@ -44,6 +21,36 @@
     "publishButton": "Publicar anúncio",
     "iLostSomething": "Perdi algo",
     "iFoundSomething": "Encontrei algo"
+  },
+  "common": {
+    "loading": "Carregando...",
+    "error": "Erro",
+    "success": "Sucesso",
+    "cancel": "Cancelar",
+    "save": "Salvar",
+    "close": "Fechar",
+    "back": "Voltar",
+    "next": "Próximo",
+    "previous": "Anterior",
+    "viewDetails": "Ver detalhes",
+    "noImage": "Sem imagem",
+    "unauthorized": "Não autorizado",
+    "loginRequired": "Você deve estar logado. Redirecionando...",
+    "timeAgo": {
+      "now": "Agora",
+      "minutes": "há {{count}} minuto",
+      "minutes_plural": "há {{count}} minutos",
+      "hours": "há {{count}} hora",
+      "hours_plural": "há {{count}} horas",
+      "days": "há {{count}} dia",
+      "days_plural": "há {{count}} dias",
+      "weeks": "há {{count}} semana",
+      "weeks_plural": "há {{count}} semanas",
+      "months": "há {{count}} mês",
+      "months_plural": "há {{count}} meses",
+      "years": "há {{count}} ano",
+      "years_plural": "há {{count}} anos"
+    }
   },
   "stats": {
     "totalItems": "Objetos declarados",
@@ -64,22 +71,80 @@
     "sports": "Esportes",
     "books": "Livros",
     "pets": "Animais",
-    "other": "Outro"
+    "other": "Outro",
+    "phones": "Telefones",
+    "wallets": "Carteiras",
+    "glasses": "Óculos",
+    "computers": "Computadores"
   },
   "howItWorks": {
+    "badge": "Guia Completo",
     "title": "Como funciona?",
-    "subtitle": "Encontre seus objetos perdidos em 3 passos simples",
+    "subtitle": "Encontre seus objetos perdidos em 3 passos simples e eficazes",
+    "stepNumber": "Passo {{number}}",
     "step1": {
       "title": "Reporte seu objeto",
-      "description": "Publique um anúncio com foto e descrição detalhada"
+      "description": "Publique um anúncio com foto e descrição detalhada",
+      "detail1": "Adicione fotos claras do seu objeto",
+      "detail2": "Descreva precisamente as características",
+      "detail3": "Indique o local e data da perda"
     },
     "step2": {
       "title": "Busque e filtre",
-      "description": "Use nossos filtros para encontrar rapidamente o que procura"
+      "description": "Use nossos filtros para encontrar rapidamente o que procura",
+      "detail1": "Filtre por categoria e localização",
+      "detail2": "Use busca por palavras-chave",
+      "detail3": "Navegue por anúncios recentes"
     },
     "step3": {
       "title": "Contate e recupere",
-      "description": "Troque mensagens com segurança com outros usuários"
+      "description": "Troque mensagens com segurança com outros usuários",
+      "detail1": "Mensagens seguras integradas",
+      "detail2": "Verificação de identidade",
+      "detail3": "Sistema de avaliação comunitária"
+    },
+    "features": {
+      "title": "Características Principais",
+      "security": {
+        "title": "Segurança Garantida",
+        "description": "Seus dados e trocas estão protegidos por um sistema de segurança avançado"
+      },
+      "location": {
+        "title": "Geolocalização",
+        "description": "Encontre objetos perto de você graças ao nosso sistema de localização preciso"
+      },
+      "notifications": {
+        "title": "Alertas Inteligentes",
+        "description": "Receba notificações de objetos que correspondam aos seus critérios"
+      },
+      "community": {
+        "title": "Comunidade Ativa",
+        "description": "Junte-se a uma comunidade de milhares de usuários solidários"
+      }
+    },
+    "timeline": {
+      "title": "Cronologia Típica",
+      "immediate": "Imediato",
+      "minutes": "Poucos minutos",
+      "hours": "Poucas horas",
+      "step1": {
+        "title": "Publicação do Anúncio",
+        "description": "Seu anúncio está online e visível para todos"
+      },
+      "step2": {
+        "title": "Primeira Visibilidade",
+        "description": "Seu anúncio começa a ser visto por outros usuários"
+      },
+      "step3": {
+        "title": "Contatos Potenciais",
+        "description": "Você recebe suas primeiras mensagens de pessoas interessadas"
+      }
+    },
+    "cta": {
+      "title": "Pronto para encontrar seus objetos?",
+      "description": "Junte-se a milhares de usuários que confiam no ObjetsTrouvés",
+      "publishButton": "Publicar anúncio",
+      "searchButton": "Buscar objetos"
     }
   },
   "search": {
@@ -96,7 +161,9 @@
     "itemType": {
       "lost": "Perdido",
       "found": "Encontrado"
-    }
+    },
+    "filters": "Filtros",
+    "location": "Localização"
   },
   "home": {
     "recentItems": "Objetos reportados recentemente",
@@ -132,7 +199,7 @@
     }
   },
   "map": {
-    "title": "Mapa interativo",
+    "title": "Mapa Interativo",
     "subtitle": "Visualize objetos perdidos e encontrados perto de você",
     "interactiveMap": "Mapa interativo com geolocalização",
     "integration": "Integração com Google Maps ou OpenStreetMap",
@@ -188,7 +255,7 @@
     "welcome": "Bem-vindo",
     "user": "Usuário",
     "activity": "Atividade",
-    "publishFirstAd": "Publicar seu primeiro anúncio",
+    "publishFirstAd": "Publique seu primeiro anúncio",
     "reportLost": "Reportar item perdido",
     "reportFound": "Reportar item encontrado",
     "totalViews": "Visualizações totais",
@@ -209,8 +276,7 @@
       "edit": "Editar",
       "delete": "Excluir",
       "view": "Ver"
-    },
-    "publishFirstAd": "Publique seu primeiro anúncio"
+    }
   },
   "chat": {
     "title": "Mensagens",
@@ -223,9 +289,6 @@
     "backToDashboard": "Voltar ao painel",
     "loginToMessage": "Você deve estar logado para enviar uma mensagem.",
     "messageError": "Ocorreu um erro ao enviar a mensagem",
-    "noMessages": "Nenhuma mensagem",
-    "startConversation": "Comece a conversa!",
-    "conversation": "Conversa",
     "noMessages": "Nenhuma mensagem",
     "startConversation": "Inicie a conversa!",
     "conversation": "Conversa"
@@ -254,64 +317,13 @@
     "alertDescription": "Crie um alerta para ser notificado de objetos similares",
     "createAlert": "Criar alerta"
   },
-  "map": {
-    "title": "Mapa Interativo",
-    "subtitle": "Visualize objetos perdidos e encontrados perto de você",
-    "interactiveMap": "Mapa interativo com geolocalização",
-    "integration": "Integração com Google Maps ou OpenStreetMap",
-    "lostItems": "Objetos perdidos",
-    "foundItems": "Objetos encontrados",
-    "fullscreen": "Ver em tela cheia"
-  },
-  "common": {
-    "loading": "Carregando...",
-    "error": "Erro",
-    "success": "Sucesso",
-    "cancel": "Cancelar",
-    "save": "Salvar",
-    "close": "Fechar",
-    "back": "Voltar",
-    "next": "Próximo",
-    "previous": "Anterior",
-    "viewDetails": "Ver detalhes",
-    "noImage": "Sem imagem",
-    "unauthorized": "Não autorizado",
-    "loginRequired": "Você deve estar logado. Redirecionando...",
-    "timeAgo": {
-      "now": "Agora mesmo",
-      "minutes": "há {{count}} minuto",
-      "minutes_plural": "há {{count}} minutos",
-      "hours": "há {{count}} hora",
-      "hours_plural": "há {{count}} horas",
-      "days": "há {{count}} dia",
-      "days_plural": "há {{count}} dias",
-      "weeks": "há {{count}} semana",
-      "weeks_plural": "há {{count}} semanas",
-      "months": "há {{count}} mês",
-      "months_plural": "há {{count}} meses",
-      "years": "há {{count}} ano",
-      "years_plural": "há {{count}} anos"
-    }
-  },
   "footer": {
-    "description": "A plataforma francesa de referência para encontrar seus objetos perdidos",
-    "interactiveMap": "Mapa interativo",
-    "emailAlerts": "Alertas por email",
-    "support": "Suporte",
-    "helpCenter": "Central de ajuda",
-    "faq": "FAQ",
-    "reportIssue": "Reportar problema",
-    "legal": "Legal",
+    "description": "A plataforma francesa de referência para encontrar seus objetos perdidos ou reportar seus achados.",
+    "quickLinks": "Links rápidos",
+    "legal": "Informações legais",
     "legalNotice": "Aviso legal",
-    "cookies": "Cookies",
-    "links": {
-      "about": "Sobre",
-      "contact": "Contato",
-      "privacy": "Política de privacidade",
-      "terms": "Termos de serviço"
-    },
-    "followUs": "Nos siga",
-    "copyright": "© 2024 ObjetsTrouvés. Todos os direitos reservados."
+    "privacyPolicy": "Política de privacidade",
+    "termsOfUse": "Termos de uso"
   },
   "pricing": {
     "title": "Preços",
@@ -403,76 +415,6 @@
   },
   "sidebar": {
     "toggle": "Alternar barra lateral"
-  },
-  "howItWorks": {
-    "badge": "Guia Completo",
-    "title": "Como funciona?",
-    "subtitle": "Encontre seus objetos perdidos em 3 passos simples e eficazes",
-    "stepNumber": "Passo {{number}}",
-    "step1": {
-      "title": "Reporte seu objeto",
-      "description": "Publique um anúncio com foto e descrição detalhada",
-      "detail1": "Adicione fotos claras do seu objeto",
-      "detail2": "Descreva precisamente as características",
-      "detail3": "Indique o local e data da perda"
-    },
-    "step2": {
-      "title": "Busque e filtre",
-      "description": "Use nossos filtros para encontrar rapidamente o que procura",
-      "detail1": "Filtre por categoria e localização",
-      "detail2": "Use busca por palavras-chave",
-      "detail3": "Navegue por anúncios recentes"
-    },
-    "step3": {
-      "title": "Contate e recupere",
-      "description": "Troque mensagens com segurança com outros usuários",
-      "detail1": "Mensagens seguras integradas",
-      "detail2": "Verificação de identidade",
-      "detail3": "Sistema de avaliação comunitária"
-    },
-    "features": {
-      "title": "Características Principais",
-      "security": {
-        "title": "Segurança Garantida",
-        "description": "Seus dados e trocas estão protegidos por um sistema de segurança avançado"
-      },
-      "location": {
-        "title": "Geolocalização",
-        "description": "Encontre objetos perto de você graças ao nosso sistema de localização preciso"
-      },
-      "notifications": {
-        "title": "Alertas Inteligentes",
-        "description": "Receba notificações de objetos que correspondam aos seus critérios"
-      },
-      "community": {
-        "title": "Comunidade Ativa",
-        "description": "Junte-se a uma comunidade de milhares de usuários solidários"
-      }
-    },
-    "timeline": {
-      "title": "Cronologia Típica",
-      "immediate": "Imediato",
-      "minutes": "Poucos minutos",
-      "hours": "Poucas horas",
-      "step1": {
-        "title": "Publicação do Anúncio",
-        "description": "Seu anúncio está online e visível para todos"
-      },
-      "step2": {
-        "title": "Primeira Visibilidade",
-        "description": "Seu anúncio começa a ser visto por outros usuários"
-      },
-      "step3": {
-        "title": "Contatos Potenciais",
-        "description": "Você recebe suas primeiras mensagens de pessoas interessadas"
-      }
-    },
-    "cta": {
-      "title": "Pronto para encontrar seus objetos?",
-      "description": "Junte-se a milhares de usuários que confiam no ObjetsTrouvés",
-      "publishButton": "Publicar anúncio",
-      "searchButton": "Buscar objetos"
-    }
   },
   "contact": {
     "badge": "Suporte",
@@ -722,14 +664,6 @@
       "publishing": "Publicando..."
     }
   },
-  "footer": {
-    "description": "A plataforma francesa de referência para encontrar seus objetos perdidos ou reportar seus achados.",
-    "quickLinks": "Links rápidos",
-    "legal": "Informações legais",
-    "legalNotice": "Aviso legal",
-    "privacyPolicy": "Política de privacidade",
-    "termsOfUse": "Termos de uso"
-  },
   "testimonials": {
     "title": "Depoimentos",
     "subtitle": "Descubra as histórias de reencontro da nossa comunidade",
@@ -744,13 +678,50 @@
       "content": "Encontrei uma carteira e graças a esta plataforma, consegui devolvê-la ao seu dono rapidamente. O sistema é simples e eficaz!"
     }
   },
-  "map": {
-    "title": "Mapa Interativo",
-    "subtitle": "Visualize objetos perdidos e encontrados perto de você",
-    "interactiveMap": "Mapa interativo com geolocalização",
-    "integration": "Integração com Google Maps ou OpenStreetMap",
-    "lostItems": "Objetos perdidos",
-    "foundItems": "Objetos encontrados",
-    "fullscreen": "Ver em tela cheia"
+  "profile": {
+    "title": "Perfil",
+    "profilePicture": "Foto do perfil",
+    "editProfile": "Editar perfil",
+    "save": "Salvar",
+    "cancel": "Cancelar",
+    "memberSince": "Membro desde",
+    "itemsPosted": "Itens publicados",
+    "itemsFound": "Itens encontrados",
+    "conversations": "Conversas",
+    "personalInfo": "Informações pessoais",
+    "preferences": "Preferências",
+    "privacy": "Privacidade",
+    "firstName": "Nome",
+    "lastName": "Sobrenome",
+    "email": "Email",
+    "phone": "Telefone",
+    "location": "Localização",
+    "bio": "Biografia",
+    "bioPlaceholder": "Conte-nos sobre você...",
+    "notifications": "Notificações",
+    "notificationsDesc": "Receber notificações por email",
+    "language": "Idioma",
+    "languageDesc": "Alterar idioma da interface",
+    "visibility": "Visibilidade",
+    "visibilityDesc": "Controlar quem pode ver seu perfil",
+    "changePassword": "Alterar senha",
+    "changePasswordDesc": "Atualizar sua senha",
+    "twoFactor": "Autenticação de dois fatores",
+    "twoFactorDesc": "Melhorar a segurança da sua conta",
+    "dataExport": "Exportar dados",
+    "dataExportDesc": "Baixar todos os seus dados",
+    "enabled": "Ativado",
+    "currentLanguage": "Idioma atual",
+    "public": "Público",
+    "change": "Alterar",
+    "enable": "Ativar",
+    "export": "Exportar",
+    "updateSuccess": "Perfil atualizado",
+    "updateSuccessDesc": "Seu perfil foi atualizado com sucesso",
+    "updateError": "Erro ao atualizar",
+    "updateErrorDesc": "Houve um erro ao atualizar seu perfil",
+    "imageError": "Erro de imagem",
+    "imageTypeError": "Tipo de arquivo inválido",
+    "imageSizeError": "Arquivo muito grande"
   }
 }

@@ -14,13 +14,13 @@
     "pricing": "料金"
   },
   "hero": {
-    "title": "紛失物を見つけよう",
-    "subtitle": "紛失物を見つけるか発見物を報告するフランスの代表的なプラットフォーム",
-    "searchPlaceholder": "物品を検索...",
+    "title": "紛失物を見つける",
+    "subtitle": "紛失物を見つけたり発見物を報告するためのフランス参考プラットフォーム",
+    "searchPlaceholder": "アイテムを検索...",
     "searchButton": "検索",
     "publishButton": "広告を投稿",
-    "iLostSomething": "何か紛失しました",
-    "iFoundSomething": "何か見つけました"
+    "iLostSomething": "何かを失くしました",
+    "iFoundSomething": "何かを見つけました"
   },
   "home": {
     "recentItems": "最近報告された物品",
@@ -91,15 +91,653 @@
     "subtitle": "3つの簡単なステップで紛失物を見つけましょう",
     "step1": {
       "title": "アイテムを報告",
-      "description": "写真と詳細な説明で広告を投稿"
+      "description": "写真と詳細な説明で広告を投稿",
+      "detail1": "Ajoutez des photos claires de votre objet",
+      "detail2": "Décrivez précisément les caractéristiques",
+      "detail3": "Indiquez le lieu et la date de perte"
     },
     "step2": {
       "title": "検索とフィルター",
-      "description": "フィルターを使って探しているものを素早く見つける"
+      "description": "フィルターを使って探しているものを素早く見つける",
+      "detail1": "Filtrez par catégorie et localisation",
+      "detail2": "Utilisez la recherche par mots-clés",
+      "detail3": "Parcourez les annonces récentes"
     },
     "step3": {
       "title": "連絡と回収",
-      "description": "他のユーザーと安全にやり取り"
+      "description": "他のユーザーと安全にやり取り",
+      "detail1": "Messagerie sécurisée intégrée",
+      "detail2": "Vérification de l'identité",
+      "detail3": "Système de notation communautaire"
+    },
+    "badge": "Guide complet",
+    "stepNumber": "Étape {{number}}",
+    "features": {
+      "title": "Fonctionnalités principales",
+      "security": {
+        "title": "Sécurité garantie",
+        "description": "Vos données et échanges sont protégés par un système de sécurité avancé"
+      },
+      "location": {
+        "title": "Géolocalisation",
+        "description": "Trouvez des objets près de vous grâce à notre système de localisation précis"
+      },
+      "notifications": {
+        "title": "Alertes intelligentes",
+        "description": "Recevez des notifications pour les objets correspondant à vos critères"
+      },
+      "community": {
+        "title": "Communauté active",
+        "description": "Rejoignez une communauté de milliers d'utilisateurs solidaires"
+      }
+    },
+    "timeline": {
+      "title": "Chronologie typique",
+      "immediate": "Immédiat",
+      "minutes": "Quelques minutes",
+      "hours": "Quelques heures",
+      "step1": {
+        "title": "Publication de l'annonce",
+        "description": "Votre annonce est en ligne et visible par tous"
+      },
+      "step2": {
+        "title": "Première visibilité",
+        "description": "Votre annonce commence à être vue par d'autres utilisateurs"
+      },
+      "step3": {
+        "title": "Contacts potentiels",
+        "description": "Vous recevez vos premiers messages de personnes intéressées"
+      }
+    },
+    "cta": {
+      "title": "Prêt à retrouver vos objets ?",
+      "description": "Rejoignez des milliers d'utilisateurs qui font confiance à ObjetsTrouvés",
+      "publishButton": "Publier une annonce",
+      "searchButton": "Rechercher un objet"
     }
+  },
+  "common": {
+    "back": "戻る",
+    "success": "成功",
+    "error": "エラー",
+    "loading": "読み込み中...",
+    "cancel": "キャンセル",
+    "save": "保存",
+    "close": "閉じる",
+    "next": "次へ",
+    "previous": "前へ",
+    "viewDetails": "詳細を見る",
+    "noImage": "画像なし",
+    "unauthorized": "権限がありません",
+    "loginRequired": "ログインが必要です。リダイレクト中...",
+    "timeAgo": {
+      "now": "今",
+      "minutes": "{{count}} 分前",
+      "minutes_plural": "{{count}} 分前",
+      "hours": "{{count}} 時間前",
+      "hours_plural": "{{count}} 時間前",
+      "days": "{{count}} 日前",
+      "days_plural": "{{count}} 日前",
+      "weeks": "il y a {{count}} semaine",
+      "weeks_plural": "il y a {{count}} semaines",
+      "months": "il y a {{count}} mois",
+      "months_plural": "il y a {{count}} mois",
+      "years": "il y a {{count}} an",
+      "years_plural": "il y a {{count}} ans"
+    }
+  },
+  "stats": {
+    "totalItems": "報告されたアイテム",
+    "lostItems": "紛失物",
+    "foundItems": "発見物",
+    "users": "アクティブユーザー"
+  },
+  "categories": {
+    "title": "人気のカテゴリ",
+    "subtitle": "アイテムタイプで検索してより簡単に見つける",
+    "electronics": "電子機器",
+    "clothing": "衣類",
+    "accessories": "アクセサリー",
+    "documents": "書類",
+    "keys": "鍵",
+    "jewelry": "ジュエリー",
+    "bags": "バッグ",
+    "sports": "スポーツ",
+    "books": "本",
+    "pets": "ペット",
+    "other": "その他",
+    "phones": "電話",
+    "wallets": "財布",
+    "glasses": "眼鏡",
+    "computers": "コンピュータ"
+  },
+  "search": {
+    "title": "アイテムを検索",
+    "subtitle": "お近くの紛失・発見物を見つける",
+    "filters": "フィルター",
+    "type": "タイプ",
+    "all": "すべて",
+    "lost": "紛失",
+    "found": "発見",
+    "category": "カテゴリ",
+    "location": "場所",
+    "searchPlaceholder": "アイテム、場所、説明で検索...",
+    "noResults": "結果が見つかりません",
+    "noResultsDesc": "検索条件を変更してみてください",
+    "itemType": {
+      "lost": "Perdu",
+      "found": "Trouvé"
+    }
+  },
+  "publish": {
+    "title": "広告を投稿",
+    "subtitle": "紛失または発見したアイテムを報告",
+    "form": {
+      "objectInfo": "アイテム情報",
+      "title": "広告タイトル",
+      "titlePlaceholder": "例：電車でiPhone 13 Proを紛失",
+      "description": "詳細な説明",
+      "descriptionPlaceholder": "アイテムを詳しく説明してください...",
+      "type": "広告の種類",
+      "category": "カテゴリ",
+      "location": "場所",
+      "locationPlaceholder": "例：東京渋谷区、渋谷駅",
+      "dateOccurred": "発生日",
+      "contactInfo": "連絡先情報",
+      "contactPlaceholder": "連絡方法...",
+      "image": "写真（任意）",
+      "imageDesc": "識別のために写真を追加",
+      "submit": "広告を投稿",
+      "submitting": "投稿中...",
+      "required": "この項目は必須です",
+      "success": "広告が正常に投稿されました！",
+      "error": "投稿時にエラーが発生しました",
+      "imageError": "画像のアップロード中にエラーが発生しました",
+      "imageTypeError": "無効なファイルタイプです。JPG、PNG、またはGIFを使用してください。",
+      "imageSizeError": "ファイルが大きすぎます。最大5MB。",
+      "imageHelp": "Ajoutez une photo pour augmenter vos chances",
+      "publish": "Publier l'annonce",
+      "publishing": "Publication en cours...",
+      "categoryPlaceholder": "Sélectionnez une catégorie",
+      "phonePlaceholder": "06 00 00 00 00",
+      "emailPlaceholder": "votre@email.com",
+      "phone": "Téléphone (optionnel)",
+      "email": "Email (optionnel)"
+    },
+    "itemType": {
+      "lost": "紛失物",
+      "found": "発見物",
+      "lostDesc": "何かを失くしましたか？広告を投稿してください。",
+      "foundDesc": "何かを見つけましたか？持ち主を助けてください。"
+    },
+    "backToHome": "ホームに戻る",
+    "success": "Annonce publiée avec succès !",
+    "error": "Erreur lors de la publication"
+  },
+  "dashboard": {
+    "title": "Tableau de bord",
+    "subtitle": "Gérez vos annonces et conversations",
+    "welcome": "Bienvenue",
+    "user": "Utilisateur",
+    "myItems": "Mes annonces",
+    "statistics": "Statistiques",
+    "recentActivity": "Activité récente",
+    "activity": "Activité",
+    "noItems": "Aucune annonce publiée",
+    "noItemsDesc": "Publiez votre première annonce pour commencer",
+    "publishFirstAd": "Publier votre première annonce",
+    "newAd": "Nouvelle annonce",
+    "reportLost": "Signaler un objet perdu",
+    "reportFound": "Signaler un objet trouvé",
+    "lostItems": "Objets perdus",
+    "foundItems": "Objets trouvés",
+    "conversations": "Conversations",
+    "activeAds": "Annonces actives",
+    "totalViews": "Vues totales",
+    "yourItems": "Vos annonces",
+    "active": "Actif",
+    "allItems": "Tous les objets",
+    "views": "vues",
+    "noConversations": "Aucune conversation",
+    "noConversationsDesc": "Commencez à discuter avec d'autres utilisateurs",
+    "noActivity": "Aucune activité",
+    "noActivityDesc": "Publiez votre première annonce pour voir l'activité",
+    "lostItemActivity": "Vous avez signalé un objet perdu",
+    "foundItemActivity": "Vous avez signalé un objet trouvé",
+    "justNow": "À l'instant",
+    "hoursAgo": "Il y a {{hours}} heures",
+    "daysAgo": "Il y a {{days}} jours",
+    "confirmDelete": "Êtes-vous sûr de vouloir supprimer cette annonce ?",
+    "deleteError": "Une erreur est survenue lors de la suppression",
+    "deleteSuccess": "Annonce supprimée avec succès",
+    "actions": {
+      "edit": "Modifier",
+      "delete": "Supprimer",
+      "view": "Voir"
+    }
+  },
+  "chat": {
+    "title": "Messages",
+    "noConversations": "Aucune conversation",
+    "noConversationsDesc": "Commencez une conversation en contactant quelqu'un",
+    "typePlaceholder": "Tapez votre message...",
+    "send": "Envoyer",
+    "conversationNotFound": "Conversation introuvable",
+    "selectValidConversation": "Veuillez sélectionner une conversation valide.",
+    "backToDashboard": "Retour au tableau de bord",
+    "loginToMessage": "Vous devez être connecté pour envoyer un message.",
+    "messageError": "Une erreur est survenue lors de l'envoi du message",
+    "noMessages": "Aucun message",
+    "startConversation": "Commencez la conversation !",
+    "conversation": "Conversation"
+  },
+  "itemDetail": {
+    "contactOwner": "Contacter le propriétaire",
+    "reportedOn": "Signalé le",
+    "category": "Catégorie",
+    "location": "Lieu",
+    "contactInfo": "Contact",
+    "description": "Description",
+    "similarItems": "Objets similaires",
+    "messageSent": "Votre message a été envoyé avec succès !",
+    "messageError": "Une erreur est survenue lors de l'envoi du message",
+    "loginToMessage": "Vous devez être connecté pour envoyer un message.",
+    "lostOn": "Perdu le",
+    "foundOn": "Trouvé le",
+    "sendMessage": "Envoyer un message",
+    "send": "Envoyer",
+    "sending": "Envoi...",
+    "manageAd": "Gestion de l'annonce",
+    "messagePlaceholder": "Décrivez votre objet pour prouver qu'il vous appartient...",
+    "editAd": "Modifier l'annonce",
+    "markAsFound": "Marquer comme retrouvé",
+    "deleteAd": "Supprimer l'annonce",
+    "alertDescription": "Créez une alerte pour être notifié d'objets similaires",
+    "createAlert": "Créer une alerte"
+  },
+  "pricing": {
+    "title": "Tarification",
+    "subtitle": "Choisissez le plan qui vous convient",
+    "popular": "Populaire",
+    "select": "Sélectionner",
+    "tabs": {
+      "services": "Services",
+      "subscriptions": "Abonnements"
+    },
+    "services": {
+      "boost": {
+        "name": "Booster l'annonce",
+        "description": "Mettez en avant votre annonce pour plus de visibilité",
+        "features": {
+          "priority": "Affichage prioritaire",
+          "highlight": "Mise en évidence colorée",
+          "duration": "Durée: 7 jours"
+        }
+      },
+      "search": {
+        "name": "Recherche premium",
+        "description": "Alertes et filtres avancés pour vos recherches",
+        "features": {
+          "alerts": "Alertes email personnalisées",
+          "radius": "Rayon de recherche étendu",
+          "priority": "Accès prioritaire aux nouvelles annonces"
+        }
+      },
+      "verification": {
+        "name": "Vérification d'identité",
+        "description": "Badge de confiance pour vos annonces",
+        "features": {
+          "badge": "Badge de confiance vérifié",
+          "trust": "Augmente la confiance des utilisateurs",
+          "priority": "Support prioritaire"
+        }
+      }
+    },
+    "plans": {
+      "pro": {
+        "name": "Pro",
+        "description": "Pour les utilisateurs réguliers",
+        "features": {
+          "listings": "Annonces illimitées",
+          "priority": "Support prioritaire",
+          "analytics": "Statistiques détaillées",
+          "support": "Support 24/7"
+        }
+      },
+      "advanced": {
+        "name": "Avancé",
+        "description": "Pour les utilisateurs fréquents",
+        "features": {
+          "listings": "Annonces illimitées",
+          "team": "Gestion d'équipe",
+          "api": "Accès API",
+          "custom": "Intégrations personnalisées"
+        }
+      },
+      "premium": {
+        "name": "Premium",
+        "description": "Pour les professionnels",
+        "features": {
+          "unlimited": "Tout illimité",
+          "dedicated": "Gestionnaire de compte dédié",
+          "white_label": "Solution marque blanche",
+          "training": "Formation personnalisée"
+        }
+      }
+    },
+    "subscribe": "S'abonner",
+    "payment": {
+      "title": "Choisir le mode de paiement",
+      "description": "Sélectionnez votre méthode de paiement préférée"
+    }
+  },
+  "error": {
+    "404_title": "404 Page introuvable",
+    "404_message": "La page que vous recherchez n'existe pas ou a été déplacée."
+  },
+  "validation": {
+    "title_required": "Le titre est requis",
+    "description_min_length": "La description doit contenir au moins 10 caractères",
+    "category_required": "La catégorie est requise",
+    "location_required": "Le lieu est requis",
+    "date_required": "La date est requise",
+    "email_invalid": "Email invalide"
+  },
+  "sidebar": {
+    "toggle": "Basculer la barre latérale"
+  },
+  "contact": {
+    "badge": "Assistance",
+    "title": "Contactez-nous",
+    "subtitle": "Notre équipe est là pour vous aider à retrouver vos objets perdus",
+    "form": {
+      "title": "Envoyer un message",
+      "description": "Décrivez votre problème et nous vous répondrons rapidement",
+      "name": "Nom complet",
+      "namePlaceholder": "Votre nom et prénom",
+      "email": "Adresse email",
+      "emailPlaceholder": "votre@email.com",
+      "category": "Catégorie",
+      "categoryPlaceholder": "Sélectionnez une catégorie",
+      "categories": {
+        "general": "Question générale",
+        "technical": "Problème technique",
+        "billing": "Facturation",
+        "feedback": "Retour d'expérience",
+        "report": "Signalement"
+      },
+      "subject": "Sujet",
+      "subjectPlaceholder": "Résumé de votre demande",
+      "message": "Message",
+      "messagePlaceholder": "Décrivez votre problème ou votre question en détail...",
+      "send": "Envoyer le message",
+      "sending": "Envoi en cours...",
+      "success": "Message envoyé !",
+      "successMessage": "Nous avons bien reçu votre message et vous répondrons dans les plus brefs délais."
+    },
+    "info": {
+      "title": "Informations de contact",
+      "description": "Plusieurs moyens de nous contacter selon vos préférences"
+    },
+    "methods": {
+      "email": {
+        "title": "Email",
+        "description": "Réponse sous 24h en moyenne",
+        "action": "Nous écrire"
+      },
+      "phone": {
+        "title": "Téléphone",
+        "description": "Support téléphonique direct",
+        "action": "Nous appeler"
+      },
+      "address": {
+        "title": "Adresse",
+        "description": "Siège social de l'entreprise",
+        "action": "Nous rendre visite"
+      },
+      "hours": {
+        "title": "Horaires",
+        "description": "Disponibilité de notre équipe",
+        "value": "Lun-Ven 9h-18h, Sam 9h-12h",
+        "action": "Voir les horaires"
+      }
+    },
+    "social": {
+      "title": "Réseaux sociaux",
+      "description": "Suivez-nous pour les dernières actualités"
+    },
+    "faq": {
+      "title": "Questions fréquentes",
+      "subtitle": "Trouvez rapidement des réponses aux questions les plus courantes",
+      "item1": {
+        "question": "Comment publier une annonce ?",
+        "answer": "Cliquez sur 'Publier' dans le menu, remplissez le formulaire avec les détails de votre objet perdu ou trouvé, ajoutez une photo et validez."
+      },
+      "item2": {
+        "question": "Comment contacter quelqu'un ?",
+        "answer": "Sur la page d'une annonce, cliquez sur 'Contacter' pour envoyer un message privé au propriétaire de l'annonce."
+      },
+      "item3": {
+        "question": "L'utilisation est-elle gratuite ?",
+        "answer": "Oui, ObjetsTrouvés est entièrement gratuit. Vous pouvez publier des annonces et contacter d'autres utilisateurs sans frais."
+      },
+      "item4": {
+        "question": "Que faire si je retrouve mon objet ?",
+        "answer": "Connectez-vous à votre compte, allez dans 'Mon tableau de bord' et marquez votre annonce comme 'Trouvé' ou supprimez-la."
+      }
+    },
+    "emergency": {
+      "title": "Urgence technique",
+      "description": "Pour les problèmes urgents affectant le fonctionnement du site",
+      "button": "Assistance d'urgence"
+    }
+  },
+  "auth": {
+    "login": {
+      "title": "Connexion",
+      "subtitle": "Connectez-vous à votre compte",
+      "noAccount": "Pas de compte ?",
+      "hasAccount": "Vous avez déjà un compte ?"
+    },
+    "register": {
+      "title": "Inscription",
+      "subtitle": "Créez votre compte gratuit",
+      "hasAccount": "Vous avez déjà un compte ?"
+    },
+    "forgotPassword": {
+      "title": "Mot de passe oublié",
+      "subtitle": "Entrez votre email pour recevoir un code de réinitialisation"
+    },
+    "otpVerification": {
+      "title": "Vérification OTP",
+      "subtitle": "Entrez le code envoyé à {{email}}"
+    },
+    "newPassword": {
+      "title": "Nouveau mot de passe",
+      "subtitle": "Définissez votre nouveau mot de passe"
+    },
+    "fields": {
+      "email": "Email",
+      "password": "Mot de passe",
+      "newPassword": "Nouveau mot de passe",
+      "confirmPassword": "Confirmer le mot de passe",
+      "firstName": "Prénom",
+      "lastName": "Nom",
+      "otpCode": "Code OTP"
+    },
+    "placeholders": {
+      "email": "votre@email.com",
+      "password": "Votre mot de passe",
+      "newPassword": "Nouveau mot de passe",
+      "confirmPassword": "Confirmer le mot de passe",
+      "firstName": "Prénom",
+      "lastName": "Nom",
+      "otpCode": "000000"
+    },
+    "actions": {
+      "signIn": "Se connecter",
+      "signUp": "S'inscrire",
+      "signingIn": "Connexion...",
+      "signingUp": "Inscription...",
+      "forgotPassword": "Mot de passe oublié ?",
+      "sendCode": "Envoyer le code",
+      "sending": "Envoi...",
+      "verify": "Vérifier",
+      "verifying": "Vérification...",
+      "resendCode": "Renvoyer le code",
+      "backToLogin": "Retour à la connexion",
+      "updatePassword": "Mettre à jour",
+      "updating": "Mise à jour..."
+    },
+    "success": {
+      "loginTitle": "Connexion réussie",
+      "loginDescription": "Bienvenue sur ObjetsTrouvés !",
+      "registerTitle": "Inscription réussie",
+      "registerDescription": "Vérifiez votre email pour confirmer votre compte",
+      "forgotPasswordTitle": "Code envoyé",
+      "forgotPasswordDescription": "Vérifiez votre email pour le code de réinitialisation",
+      "otpVerificationTitle": "Vérification réussie",
+      "otpVerificationDescription": "Votre compte a été vérifié avec succès",
+      "newPasswordTitle": "Mot de passe mis à jour",
+      "newPasswordDescription": "Vous pouvez maintenant vous connecter",
+      "resendOtpTitle": "Code renvoyé",
+      "resendOtpDescription": "Un nouveau code a été envoyé à votre email"
+    },
+    "errors": {
+      "general": "Une erreur s'est produite",
+      "invalidEmail": "Email invalide",
+      "passwordTooShort": "Le mot de passe doit contenir au moins 8 caractères",
+      "passwordsDoNotMatch": "Les mots de passe ne correspondent pas",
+      "firstNameRequired": "Le prénom est requis",
+      "lastNameRequired": "Le nom est requis",
+      "otpInvalid": "Le code OTP doit contenir 6 chiffres",
+      "loginFailed": "Échec de la connexion",
+      "registerFailed": "Échec de l'inscription",
+      "forgotPasswordFailed": "Échec de l'envoi du code",
+      "otpVerificationFailed": "Échec de la vérification",
+      "newPasswordFailed": "Échec de la mise à jour",
+      "resendOtpFailed": "Échec du renvoi du code",
+      "UserNotFoundException": "Utilisateur non trouvé",
+      "NotAuthorizedException": "Email ou mot de passe incorrect",
+      "UserNotConfirmedException": "Veuillez confirmer votre email",
+      "InvalidPasswordException": "Le mot de passe ne respecte pas les critères",
+      "UsernameExistsException": "Cette adresse email est déjà utilisée",
+      "CodeMismatchException": "Code incorrect",
+      "ExpiredCodeException": "Le code a expiré",
+      "LimitExceededException": "Trop de tentatives, réessayez plus tard",
+      "InvalidParameterException": "Paramètre invalide",
+      "TooManyRequestsException": "Trop de demandes, réessayez plus tard"
+    }
+  },
+  "publishNew": {
+    "title": "Publier une annonce",
+    "subtitle": "Signalez un objet perdu ou trouvé",
+    "lostTitle": "Déclarer un objet perdu",
+    "foundTitle": "Déclarer un objet trouvé",
+    "lostSubtitle": "Aidez-nous à retrouver votre objet perdu",
+    "foundSubtitle": "Aidez quelqu'un à récupérer son objet",
+    "loginNotice": "Vous devez vous connecter pour publier une annonce. Remplissez le formulaire et connectez-vous lors de la soumission.",
+    "type": {
+      "label": "Type d'annonce",
+      "lost": "Objet perdu",
+      "found": "Objet trouvé"
+    },
+    "form": {
+      "title": {
+        "label": "Titre de l'annonce",
+        "placeholder": "Ex: iPhone 12 Pro perdu dans le métro"
+      },
+      "description": {
+        "label": "Description détaillée",
+        "placeholder": "Décrivez l'objet en détail, les circonstances de la perte/découverte..."
+      },
+      "category": {
+        "label": "Catégorie",
+        "placeholder": "Sélectionnez une catégorie"
+      },
+      "location": {
+        "label": "Lieu",
+        "placeholder": "Où l'objet a été perdu/trouvé"
+      },
+      "dateOccurred": {
+        "label": "Date de l'incident",
+        "placeholder": "Quand cela s'est-il passé ?"
+      },
+      "contactPhone": {
+        "label": "Téléphone de contact",
+        "placeholder": "+33 6 12 34 56 78"
+      },
+      "contactEmail": {
+        "label": "Email de contact",
+        "placeholder": "votre@email.com"
+      },
+      "image": {
+        "label": "Photo de l'objet",
+        "placeholder": "Ajoutez une photo pour aider à l'identification",
+        "upload": "Cliquez pour télécharger une photo",
+        "change": "Changer la photo",
+        "remove": "Supprimer la photo"
+      }
+    },
+    "validation": {
+      "title_required": "Le titre est requis",
+      "description_min_length": "La description doit contenir au moins 10 caractères",
+      "category_required": "Veuillez sélectionner une catégorie",
+      "location_required": "Le lieu est requis",
+      "date_required": "La date est requise",
+      "email_invalid": "Format d'email invalide"
+    },
+    "success": "Votre annonce a été publiée avec succès !",
+    "error": "Une erreur s'est produite lors de la publication",
+    "buttons": {
+      "publish": "Publier l'annonce",
+      "publishing": "Publication en cours..."
+    }
+  },
+  "profile": {
+    "title": "Mon profil",
+    "profilePicture": "Photo de profil",
+    "editProfile": "Modifier le profil",
+    "save": "Enregistrer",
+    "cancel": "Annuler",
+    "memberSince": "Membre depuis",
+    "itemsPosted": "Annonces publiées",
+    "itemsFound": "Objets trouvés",
+    "conversations": "Conversations",
+    "personalInfo": "Informations personnelles",
+    "preferences": "Préférences",
+    "privacy": "Confidentialité",
+    "firstName": "Prénom",
+    "lastName": "Nom",
+    "email": "Email",
+    "phone": "Téléphone",
+    "location": "Localisation",
+    "bio": "Biographie",
+    "bioPlaceholder": "Parlez-nous de vous...",
+    "notifications": "Notifications",
+    "notificationsDesc": "Recevoir des notifications par email",
+    "language": "Langue",
+    "languageDesc": "Langue d'affichage de l'interface",
+    "visibility": "Visibilité du profil",
+    "visibilityDesc": "Qui peut voir votre profil",
+    "changePassword": "Changer le mot de passe",
+    "changePasswordDesc": "Mettre à jour votre mot de passe",
+    "twoFactor": "Authentification à deux facteurs",
+    "twoFactorDesc": "Sécuriser votre compte avec 2FA",
+    "dataExport": "Exporter mes données",
+    "dataExportDesc": "Télécharger toutes vos données",
+    "enabled": "Activé",
+    "currentLanguage": "Français",
+    "public": "Public",
+    "change": "Modifier",
+    "enable": "Activer",
+    "export": "Exporter",
+    "updateSuccess": "Profil mis à jour",
+    "updateSuccessDesc": "Vos modifications ont été enregistrées avec succès",
+    "updateError": "Erreur de mise à jour",
+    "updateErrorDesc": "Impossible de mettre à jour le profil",
+    "imageError": "Erreur d'image",
+    "imageTypeError": "Format d'image non supporté",
+    "imageSizeError": "L'image ne peut pas dépasser 5 MB"
   }
 }

@@ -1,0 +1,190 @@
+{
+  "missing": {
+    "en": [],
+    "es": [],
+    "pt": [],
+    "it": [],
+    "de": [],
+    "nl": [],
+    "zh": [],
+    "ja": [],
+    "ko": []
+  },
+  "extra": {
+    "en": [],
+    "es": [],
+    "pt": [],
+    "it": [
+      "publish.form.imageDesc",
+      "publish.form.submit",
+      "publish.form.submitting",
+      "publish.form.required",
+      "publish.form.success",
+      "publish.form.error",
+      "publish.form.imageError",
+      "publish.form.imageTypeError",
+      "publish.form.imageSizeError",
+      "publish.itemType.lost",
+      "publish.itemType.found",
+      "publish.itemType.lostDesc",
+      "publish.itemType.foundDesc",
+      "publish.backToHome"
+    ],
+    "de": [
+      "publish.form.imageDesc",
+      "publish.form.submit",
+      "publish.form.submitting",
+      "publish.form.required",
+      "publish.form.success",
+      "publish.form.error",
+      "publish.form.imageError",
+      "publish.form.imageTypeError",
+      "publish.form.imageSizeError",
+      "publish.itemType.lost",
+      "publish.itemType.found",
+      "publish.itemType.lostDesc",
+      "publish.itemType.foundDesc",
+      "publish.backToHome"
+    ],
+    "nl": [
+      "publish.form.imageDesc",
+      "publish.form.submit",
+      "publish.form.submitting",
+      "publish.form.required",
+      "publish.form.success",
+      "publish.form.error",
+      "publish.form.imageError",
+      "publish.form.imageTypeError",
+      "publish.form.imageSizeError",
+      "publish.itemType.lost",
+      "publish.itemType.found",
+      "publish.itemType.lostDesc",
+      "publish.itemType.foundDesc",
+      "publish.backToHome"
+    ],
+    "zh": [
+      "publish.form.imageDesc",
+      "publish.form.submit",
+      "publish.form.submitting",
+      "publish.form.required",
+      "publish.form.success",
+      "publish.form.error",
+      "publish.form.imageError",
+      "publish.form.imageTypeError",
+      "publish.form.imageSizeError",
+      "publish.itemType.lost",
+      "publish.itemType.found",
+      "publish.itemType.lostDesc",
+      "publish.itemType.foundDesc",
+      "publish.backToHome"
+    ],
+    "ja": [
+      "publish.form.imageDesc",
+      "publish.form.submit",
+      "publish.form.submitting",
+      "publish.form.required",
+      "publish.form.success",
+      "publish.form.error",
+      "publish.form.imageError",
+      "publish.form.imageTypeError",
+      "publish.form.imageSizeError",
+      "publish.itemType.lost",
+      "publish.itemType.found",
+      "publish.itemType.lostDesc",
+      "publish.itemType.foundDesc",
+      "publish.backToHome"
+    ],
+    "ko": [
+      "publish.form.imageDesc",
+      "publish.form.submit",
+      "publish.form.submitting",
+      "publish.form.required",
+      "publish.form.success",
+      "publish.form.error",
+      "publish.form.imageError",
+      "publish.form.imageTypeError",
+      "publish.form.imageSizeError",
+      "publish.itemType.lost",
+      "publish.itemType.found",
+      "publish.itemType.lostDesc",
+      "publish.itemType.foundDesc",
+      "publish.backToHome"
+    ]
+  },
+  "empty": {
+    "en": [],
+    "es": [],
+    "pt": [],
+    "it": [],
+    "de": [],
+    "nl": [],
+    "zh": [],
+    "ja": [],
+    "ko": []
+  },
+  "statistics": {
+    "en": {
+      "total": 533,
+      "missing": 0,
+      "extra": 0,
+      "empty": 0,
+      "completeness": 100
+    },
+    "es": {
+      "total": 533,
+      "missing": 0,
+      "extra": 0,
+      "empty": 0,
+      "completeness": 100
+    },
+    "pt": {
+      "total": 533,
+      "missing": 0,
+      "extra": 0,
+      "empty": 0,
+      "completeness": 100
+    },
+    "it": {
+      "total": 547,
+      "missing": 0,
+      "extra": 14,
+      "empty": 0,
+      "completeness": 100
+    },
+    "de": {
+      "total": 547,
+      "missing": 0,
+      "extra": 14,
+      "empty": 0,
+      "completeness": 100
+    },
+    "nl": {
+      "total": 547,
+      "missing": 0,
+      "extra": 14,
+      "empty": 0,
+      "completeness": 100
+    },
+    "zh": {
+      "total": 547,
+      "missing": 0,
+      "extra": 14,
+      "empty": 0,
+      "completeness": 100
+    },
+    "ja": {
+      "total": 547,
+      "missing": 0,
+      "extra": 14,
+      "empty": 0,
+      "completeness": 100
+    },
+    "ko": {
+      "total": 547,
+      "missing": 0,
+      "extra": 14,
+      "empty": 0,
+      "completeness": 100
+    }
+  }
+}

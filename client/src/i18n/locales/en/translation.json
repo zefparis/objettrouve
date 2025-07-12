@@ -15,36 +15,42 @@
   },
   "hero": {
     "title": "Find Your Lost Items",
-    "subtitle": "The French reference platform to find your lost items or report your findings",
-    "searchPlaceholder": "Search for an item...",
-    "searchButton": "Search",
-    "publishButton": "Publish an ad",
-    "iLostSomething": "I lost something",
-    "iFoundSomething": "I found something"
-  },
-  "common": {
-    "back": "Back",
-    "success": "Success",
-    "error": "Error",
-    "loading": "Loading...",
-    "cancel": "Cancel",
-    "save": "Save",
-    "close": "Close",
-    "next": "Next",
-    "previous": "Previous",
-    "viewDetails": "View Details",
-    "noImage": "No Image",
-    "unauthorized": "Unauthorized",
-    "loginRequired": "You must be logged in. Redirecting..."
-  },
-  "hero": {
-    "title": "Find Your Lost Items",
     "subtitle": "The French reference platform to recover your lost items or report your findings",
     "searchPlaceholder": "Search for an item...",
     "searchButton": "Search",
     "publishButton": "Post an ad",
     "iLostSomething": "I lost something",
     "iFoundSomething": "I found something"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "cancel": "Cancel",
+    "save": "Save",
+    "close": "Close",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "viewDetails": "View Details",
+    "noImage": "No Image",
+    "unauthorized": "Unauthorized",
+    "loginRequired": "You must be logged in. Redirecting...",
+    "timeAgo": {
+      "now": "Just now",
+      "minutes": "{{count}} minute ago",
+      "minutes_plural": "{{count}} minutes ago",
+      "hours": "{{count}} hour ago",
+      "hours_plural": "{{count}} hours ago",
+      "days": "{{count}} day ago",
+      "days_plural": "{{count}} days ago",
+      "weeks": "{{count}} week ago",
+      "weeks_plural": "{{count}} weeks ago",
+      "months": "{{count}} month ago",
+      "months_plural": "{{count}} months ago",
+      "years": "{{count}} year ago",
+      "years_plural": "{{count}} years ago"
+    }
   },
   "stats": {
     "totalItems": "Declared items",
@@ -65,22 +71,80 @@
     "sports": "Sports",
     "books": "Books",
     "pets": "Pets",
-    "other": "Other"
+    "other": "Other",
+    "phones": "Phones",
+    "wallets": "Wallets",
+    "glasses": "Glasses",
+    "computers": "Computers"
   },
   "howItWorks": {
+    "badge": "Complete Guide",
     "title": "How it works?",
-    "subtitle": "Find your lost items in 3 simple steps",
+    "subtitle": "Find your lost items in 3 simple and effective steps",
+    "stepNumber": "Step {{number}}",
     "step1": {
       "title": "Report your item",
-      "description": "Post an ad with photo and detailed description"
+      "description": "Post an ad with photo and detailed description",
+      "detail1": "Add clear photos of your item",
+      "detail2": "Describe precisely the characteristics",
+      "detail3": "Indicate the place and date of loss"
     },
     "step2": {
       "title": "Search and filter",
-      "description": "Use our filters to quickly find what you're looking for"
+      "description": "Use our filters to quickly find what you're looking for",
+      "detail1": "Filter by category and location",
+      "detail2": "Use keyword search",
+      "detail3": "Browse recent ads"
     },
     "step3": {
       "title": "Contact and recover",
-      "description": "Safely exchange with other users"
+      "description": "Exchange safely with other users",
+      "detail1": "Integrated secure messaging",
+      "detail2": "Identity verification",
+      "detail3": "Community rating system"
+    },
+    "features": {
+      "title": "Main Features",
+      "security": {
+        "title": "Guaranteed Security",
+        "description": "Your data and exchanges are protected by an advanced security system"
+      },
+      "location": {
+        "title": "Geolocation",
+        "description": "Find items near you thanks to our precise location system"
+      },
+      "notifications": {
+        "title": "Smart Alerts",
+        "description": "Receive notifications for items matching your criteria"
+      },
+      "community": {
+        "title": "Active Community",
+        "description": "Join a community of thousands of supportive users"
+      }
+    },
+    "timeline": {
+      "title": "Typical Timeline",
+      "immediate": "Immediate",
+      "minutes": "Few minutes",
+      "hours": "Few hours",
+      "step1": {
+        "title": "Ad Publication",
+        "description": "Your ad is online and visible to everyone"
+      },
+      "step2": {
+        "title": "First Visibility",
+        "description": "Your ad starts being seen by other users"
+      },
+      "step3": {
+        "title": "Potential Contacts",
+        "description": "You receive your first messages from interested people"
+      }
+    },
+    "cta": {
+      "title": "Ready to find your items?",
+      "description": "Join thousands of users who trust ObjetsTrouvés",
+      "publishButton": "Post an ad",
+      "searchButton": "Search for items"
     }
   },
   "search": {
@@ -97,7 +161,9 @@
     "itemType": {
       "lost": "Lost",
       "found": "Found"
-    }
+    },
+    "filters": "Filters",
+    "location": "Location"
   },
   "home": {
     "recentItems": "Recently Reported Items",
@@ -134,7 +200,7 @@
   },
   "map": {
     "title": "Interactive Map",
-    "subtitle": "Visualize lost and found items near you",
+    "subtitle": "Visualize lost and found objects near you",
     "interactiveMap": "Interactive map with geolocation",
     "integration": "Integration with Google Maps or OpenStreetMap",
     "lostItems": "Lost items",
@@ -210,8 +276,7 @@
       "edit": "Edit",
       "delete": "Delete",
       "view": "View"
-    },
-    "publishFirstAd": "Publish your first ad"
+    }
   },
   "chat": {
     "title": "Messages",
@@ -224,9 +289,6 @@
     "backToDashboard": "Back to Dashboard",
     "loginToMessage": "You must be logged in to send a message.",
     "messageError": "An error occurred while sending the message",
-    "noMessages": "No messages",
-    "startConversation": "Start the conversation!",
-    "conversation": "Conversation",
     "noMessages": "No messages",
     "startConversation": "Start the conversation!",
     "conversation": "Conversation"
@@ -255,64 +317,13 @@
     "alertDescription": "Create an alert to be notified of similar objects",
     "createAlert": "Create Alert"
   },
-  "map": {
-    "title": "Interactive Map",
-    "subtitle": "Visualize lost and found objects near you",
-    "interactiveMap": "Interactive map with geolocation",
-    "integration": "Integration with Google Maps or OpenStreetMap",
-    "lostItems": "Lost items",
-    "foundItems": "Found items",
-    "fullscreen": "View fullscreen"
-  },
-  "common": {
-    "loading": "Loading...",
-    "error": "Error",
-    "success": "Success",
-    "cancel": "Cancel",
-    "save": "Save",
-    "close": "Close",
-    "back": "Back",
-    "next": "Next",
-    "previous": "Previous",
-    "viewDetails": "View Details",
-    "noImage": "No Image",
-    "unauthorized": "Unauthorized",
-    "loginRequired": "You must be logged in. Redirecting...",
-    "timeAgo": {
-      "now": "Just now",
-      "minutes": "{{count}} minute ago",
-      "minutes_plural": "{{count}} minutes ago",
-      "hours": "{{count}} hour ago",
-      "hours_plural": "{{count}} hours ago",
-      "days": "{{count}} day ago",
-      "days_plural": "{{count}} days ago",
-      "weeks": "{{count}} week ago",
-      "weeks_plural": "{{count}} weeks ago",
-      "months": "{{count}} month ago",
-      "months_plural": "{{count}} months ago",
-      "years": "{{count}} year ago",
-      "years_plural": "{{count}} years ago"
-    }
-  },
   "footer": {
-    "description": "The French reference platform for finding your lost items",
-    "interactiveMap": "Interactive Map",
-    "emailAlerts": "Email Alerts",
-    "support": "Support",
-    "helpCenter": "Help Center",
-    "faq": "FAQ",
-    "reportIssue": "Report Issue",
-    "legal": "Legal",
+    "description": "The French reference platform to find your lost items or report your findings.",
+    "quickLinks": "Quick Links",
+    "legal": "Legal Information",
     "legalNotice": "Legal Notice",
-    "cookies": "Cookies",
-    "links": {
-      "about": "About",
-      "contact": "Contact",
-      "privacy": "Privacy Policy",
-      "terms": "Terms of Service"
-    },
-    "followUs": "Follow Us",
-    "copyright": "© 2024 ObjetsTrouvés. All rights reserved."
+    "privacyPolicy": "Privacy Policy",
+    "termsOfUse": "Terms of Use"
   },
   "pricing": {
     "title": "Pricing",
@@ -404,76 +415,6 @@
   },
   "sidebar": {
     "toggle": "Toggle Sidebar"
-  },
-  "howItWorks": {
-    "badge": "Complete Guide",
-    "title": "How it works?",
-    "subtitle": "Find your lost items in 3 simple and effective steps",
-    "stepNumber": "Step {{number}}",
-    "step1": {
-      "title": "Report your item",
-      "description": "Post an ad with photo and detailed description",
-      "detail1": "Add clear photos of your item",
-      "detail2": "Describe precisely the characteristics",
-      "detail3": "Indicate the place and date of loss"
-    },
-    "step2": {
-      "title": "Search and filter",
-      "description": "Use our filters to quickly find what you're looking for",
-      "detail1": "Filter by category and location",
-      "detail2": "Use keyword search",
-      "detail3": "Browse recent ads"
-    },
-    "step3": {
-      "title": "Contact and recover",
-      "description": "Exchange safely with other users",
-      "detail1": "Integrated secure messaging",
-      "detail2": "Identity verification",
-      "detail3": "Community rating system"
-    },
-    "features": {
-      "title": "Main Features",
-      "security": {
-        "title": "Guaranteed Security",
-        "description": "Your data and exchanges are protected by an advanced security system"
-      },
-      "location": {
-        "title": "Geolocation",
-        "description": "Find items near you thanks to our precise location system"
-      },
-      "notifications": {
-        "title": "Smart Alerts",
-        "description": "Receive notifications for items matching your criteria"
-      },
-      "community": {
-        "title": "Active Community",
-        "description": "Join a community of thousands of supportive users"
-      }
-    },
-    "timeline": {
-      "title": "Typical Timeline",
-      "immediate": "Immediate",
-      "minutes": "Few minutes",
-      "hours": "Few hours",
-      "step1": {
-        "title": "Ad Publication",
-        "description": "Your ad is online and visible to everyone"
-      },
-      "step2": {
-        "title": "First Visibility",
-        "description": "Your ad starts being seen by other users"
-      },
-      "step3": {
-        "title": "Potential Contacts",
-        "description": "You receive your first messages from interested people"
-      }
-    },
-    "cta": {
-      "title": "Ready to find your items?",
-      "description": "Join thousands of users who trust ObjetsTrouvés",
-      "publishButton": "Post an ad",
-      "searchButton": "Search for items"
-    }
   },
   "contact": {
     "badge": "Support",
@@ -768,14 +709,6 @@
     "imageError": "Image error",
     "imageTypeError": "Unsupported image format",
     "imageSizeError": "Image cannot exceed 5 MB"
-  },
-  "footer": {
-    "description": "The French reference platform to find your lost items or report your findings.",
-    "quickLinks": "Quick Links",
-    "legal": "Legal Information",
-    "legalNotice": "Legal Notice",
-    "privacyPolicy": "Privacy Policy",
-    "termsOfUse": "Terms of Use"
   },
   "testimonials": {
     "title": "Testimonials",
