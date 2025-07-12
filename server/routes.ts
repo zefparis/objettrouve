@@ -122,10 +122,18 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
+  // Simple session tracking for development mode
+  let devSessionActive = true;
+
   // Auth routes - return development user data for testing
   app.get('/api/auth/user', async (req: any, res) => {
     try {
-      // In development mode, return a mock user or get real user data
+      // In development mode, check if session is active
+      if (!devSessionActive) {
+        return res.status(401).json({ error: "Not authenticated" });
+      }
+      
+      // Return a mock user or get real user data
       const userId = 'dev-user-123';
       let user = await storage.getUser(userId);
       
@@ -153,12 +161,26 @@ export async function registerRoutes(app: Express): Promise<Server> {
   // Sign out route
   app.post('/api/auth/signout', async (req: any, res) => {
     try {
-      // In development mode, just return success
-      // In production, this would handle actual session cleanup
+      // In development mode, deactivate session
+      devSessionActive = false;
+      
       res.json({ message: "Signed out successfully" });
     } catch (error) {
       console.error("Error signing out:", error);
       res.status(500).json({ message: "Failed to sign out" });
+    }
+  });
+
+  // Sign in route for development
+  app.post('/api/auth/signin', async (req: any, res) => {
+    try {
+      // In development mode, reactivate session
+      devSessionActive = true;
+      
+      res.json({ message: "Signed in successfully" });
+    } catch (error) {
+      console.error("Error signing in:", error);
+      res.status(500).json({ message: "Failed to sign in" });
     }
   });
 

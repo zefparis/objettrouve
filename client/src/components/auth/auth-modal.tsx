@@ -100,19 +100,40 @@ export default function AuthModal({ isOpen, onClose, onSuccess }: AuthModalProps
     
     setIsLoading(true);
     try {
-      const result = await cognitoService.signIn(formData.email, formData.password);
-      
-      if (result.challengeName === 'NEW_PASSWORD_REQUIRED') {
-        setEmail(formData.email);
-        setTempPassword(formData.password);
-        setStep("new-password");
-      } else {
-        toast({
-          title: t("auth.success.loginTitle"),
-          description: t("auth.success.loginDescription"),
+      // In development mode, use simple endpoint
+      if (import.meta.env.DEV) {
+        const response = await fetch("/api/auth/signin", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ email: formData.email, password: formData.password })
         });
-        onSuccess(result.user);
-        onClose();
+        
+        if (response.ok) {
+          toast({
+            title: t("auth.success.loginTitle"),
+            description: t("auth.success.loginDescription"),
+          });
+          onSuccess({ email: formData.email });
+          onClose();
+        } else {
+          throw new Error("Login failed");
+        }
+      } else {
+        // Production mode - use Cognito
+        const result = await cognitoService.signIn(formData.email, formData.password);
+        
+        if (result.challengeName === 'NEW_PASSWORD_REQUIRED') {
+          setEmail(formData.email);
+          setTempPassword(formData.password);
+          setStep("new-password");
+        } else {
+          toast({
+            title: t("auth.success.loginTitle"),
+            description: t("auth.success.loginDescription"),
+          });
+          onSuccess(result.user);
+          onClose();
+        }
       }
     } catch (error: any) {
       console.error("SignIn error:", error);

@@ -37,6 +37,7 @@ export function useAuth(): AuthState & {
     retry: false,
     staleTime: 5 * 60 * 1000, // 5 minutes
     gcTime: 10 * 60 * 1000, // 10 minutes
+    throwOnError: false, // Don't throw on 401 errors
   });
 
   // Sign out mutation
