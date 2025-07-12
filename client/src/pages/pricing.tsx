@@ -8,7 +8,7 @@ import { Check, Zap, Shield, Star, Mail, ImageIcon, MapPin } from "lucide-react"
 import { useAuth } from "@/hooks/useAuth";
 import { Link } from "wouter";
 import { ArrowLeft, Home } from "lucide-react";
-import AuthModal from "@/components/auth/auth-modal";
+import SimpleAuthModal from "@/components/auth/simple-auth-modal";
 
 export default function Pricing() {
   const { t } = useTranslation();
@@ -156,7 +156,7 @@ export default function Pricing() {
           </DialogContent>
         </Dialog>
 
-        <AuthModal
+        <SimpleAuthModal
           isOpen={showAuthModal}
           onClose={() => setShowAuthModal(false)}
           onSuccess={handleAuthSuccess}

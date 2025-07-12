@@ -6,9 +6,6 @@ export interface User {
   email: string;
   firstName?: string;
   lastName?: string;
-  emailVerified: boolean;
-  phoneVerified?: boolean;
-  attributes: Record<string, string>;
 }
 
 export interface AuthState {

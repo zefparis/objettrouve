@@ -8,7 +8,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { Menu, Search, Plus, User, Settings, LogOut, X, Crown } from "lucide-react";
 import LanguageSelector from "./language-selector";
-import AuthModal from "./auth/auth-modal";
+import SimpleAuthModal from "./auth/simple-auth-modal";
 
 export default function Navbar() {
   const [location] = useLocation();
@@ -241,7 +241,7 @@ export default function Navbar() {
       </div>
       
       {/* Auth Modal */}
-      <AuthModal
+      <SimpleAuthModal
         isOpen={authModalOpen}
         onClose={() => setAuthModalOpen(false)}
         onSuccess={(user) => {
