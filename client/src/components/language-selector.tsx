@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Globe, ChevronDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -22,10 +22,48 @@ const languages = [
   { code: 'ko', name: '한국어', flag: 'KR', emoji: '🇰🇷' },
 ];
 
-const FlagIcon = ({ emoji, className = "" }: { emoji: string; className?: string }) => {
+// Test emoji support
+const testEmoji = () => {
+  const canvas = document.createElement('canvas');
+  const ctx = canvas.getContext('2d');
+  if (!ctx) return false;
+  
+  const testFlag = '🇫🇷';
+  ctx.fillText(testFlag, 0, 0);
+  
+  return canvas.toDataURL().length > 6000; // Simple emoji support test
+};
+
+const FlagIcon = ({ emoji, fallback, className = "" }: { emoji: string; fallback: string; className?: string }) => {
+  const [showEmoji, setShowEmoji] = useState(true);
+  
+  useEffect(() => {
+    // Test if emoji is supported
+    const supportsEmoji = testEmoji();
+    setShowEmoji(supportsEmoji);
+  }, []);
+  
+  if (!showEmoji) {
+    return (
+      <span className={`inline-flex items-center justify-center ${className} bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs font-bold rounded px-1`}>
+        {fallback}
+      </span>
+    );
+  }
+  
   return (
     <span className={`inline-flex items-center justify-center ${className}`}>
-      <span className="text-base" style={{ fontFamily: 'Apple Color Emoji, Segoe UI Emoji, system-ui' }}>{emoji}</span>
+      <span 
+        className="text-base select-none" 
+        style={{ 
+          fontFamily: 'Apple Color Emoji, Segoe UI Emoji, Noto Color Emoji, system-ui',
+          fontSize: '16px',
+          lineHeight: '1',
+          WebkitFontSmoothing: 'antialiased'
+        }}
+      >
+        {emoji}
+      </span>
     </span>
   );
 };
@@ -50,6 +88,7 @@ export default function LanguageSelector() {
         >
           <FlagIcon 
             emoji={currentLanguage.emoji}
+            fallback={currentLanguage.flag}
             className="w-4 h-4" 
           />
           <span className="hidden sm:inline text-xs sm:text-sm font-medium">{currentLanguage.flag}</span>
@@ -65,6 +104,7 @@ export default function LanguageSelector() {
           >
             <FlagIcon 
               emoji={language.emoji}
+              fallback={language.flag}
               className="w-5 h-5" 
             />
             <span className="text-xs font-medium text-gray-600 dark:text-gray-400">{language.flag}</span>
