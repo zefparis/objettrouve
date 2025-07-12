@@ -43,13 +43,7 @@ function Router() {
       <Route path="/payment-success" component={PaymentSuccess} />
       <Route path="/map" component={MapPage} />
       <Route path="/admin" component={AdminDashboard} />
-      {isLoading || !isAuthenticated ? (
-        <Route path="/" component={Landing} />
-      ) : (
-        <>
-          <Route path="/" component={Home} />
-        </>
-      )}
+      <Route path="/" component={isLoading || !isAuthenticated ? Landing : Home} />
       <Route component={NotFound} />
     </Switch>
   );
