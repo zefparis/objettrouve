@@ -31,18 +31,20 @@ export default function MapPage() {
     document.body.appendChild(script);
   };
 
-  const map = new window.google.maps.Map(mapRef.current, {
-  center: { lat: 48.8566, lng: 2.3522 }, // Paris
-  zoom: 12,
-  scrollwheel: false,
-  gestureHandling: "greedy", // ou "cooperative" selon ton besoin
-  disableDefaultUI: false,   // optionnel : true pour retirer tous les boutons natifs
-  zoomControl: true,
-  mapTypeControl: false,
-});
+  const initMap = () => {
+    if (!mapRef.current) return;
 
+    const map = new window.google.maps.Map(mapRef.current, {
+      center: { lat: 48.8566, lng: 2.3522 }, // Paris
+      zoom: 12,
+      scrollwheel: false,
+      gestureHandling: "greedy",
+      disableDefaultUI: false,
+      zoomControl: true,
+      mapTypeControl: false,
+    });
 
-    // 🔴 Marqueurs de test
+    // Test markers
     const markers = [
       { lat: 48.857, lng: 2.355, color: 'red' },
       { lat: 48.860, lng: 2.350, color: 'green' },
