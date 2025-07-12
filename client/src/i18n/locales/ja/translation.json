@@ -435,6 +435,66 @@
     "404_title": "404 Page introuvable",
     "404_message": "La page que vous recherchez n'existe pas ou a été déplacée."
   },
+  "publishNew": {
+    "title": "広告を投稿",
+    "subtitle": "コミュニティを助けるために紛失または発見した物を報告する",
+    "loginNotice": "広告を投稿して物品を管理するにはログインしてください",
+    "lostTitle": "紛失物を報告",
+    "lostSubtitle": "何か紛失しましたか？コミュニティに助けを求める広告を投稿しましょう",
+    "foundTitle": "拾得物を報告",
+    "foundSubtitle": "何か見つけましたか？誰かが物を取り戻すのを手伝いましょう",
+    "success": "広告が正常に投稿されました！",
+    "error": "広告の投稿中にエラーが発生しました",
+    "type": {
+      "label": "広告タイプ",
+      "lost": "紛失物",
+      "found": "拾得物"
+    },
+    "form": {
+      "title": {
+        "label": "広告タイトル",
+        "placeholder": "例：地下鉄で紛失したiPhone 13 Pro"
+      },
+      "description": {
+        "label": "詳細な説明",
+        "placeholder": "物品を詳しく説明してください、状況など"
+      },
+      "category": {
+        "label": "カテゴリー",
+        "placeholder": "カテゴリーを選択してください"
+      },
+      "location": {
+        "label": "場所",
+        "placeholder": "例：パリ15区、モンパルナス駅"
+      },
+      "dateOccurred": {
+        "label": "事故の日付",
+        "placeholder": "いつ物を紛失/発見しましたか？"
+      },
+      "contactPhone": {
+        "label": "電話（任意）",
+        "placeholder": "06 00 00 00 00"
+      },
+      "contactEmail": {
+        "label": "メール（任意）",
+        "placeholder": "あなたの@email.com"
+      },
+      "image": {
+        "label": "物品の写真",
+        "placeholder": "チャンスを増やすために写真を追加してください"
+      },
+      "submit": "広告を投稿",
+      "submitting": "投稿中..."
+    },
+    "validation": {
+      "title_required": "タイトルは必須です",
+      "description_min_length": "説明は少なくとも10文字以上である必要があります",
+      "category_required": "カテゴリーは必須です",
+      "location_required": "場所は必須です",
+      "date_required": "日付は必須です",
+      "email_invalid": "無効なメールアドレスです"
+    }
+  },
   "validation": {
     "title_required": "Le titre est requis",
     "description_min_length": "La description doit contenir au moins 10 caractères",

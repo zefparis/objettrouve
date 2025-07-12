@@ -435,6 +435,66 @@
     "404_title": "404 Page introuvable",
     "404_message": "La page que vous recherchez n'existe pas ou a été déplacée."
   },
+  "publishNew": {
+    "title": "发布广告",
+    "subtitle": "报告丢失或发现的物品来帮助社区",
+    "loginNotice": "登录以发布广告并管理您的物品",
+    "lostTitle": "报告丢失物品",
+    "lostSubtitle": "丢失了什么吗？发布广告向社区寻求帮助",
+    "foundTitle": "报告发现物品",
+    "foundSubtitle": "发现了什么吗？帮助某人找回他们的物品",
+    "success": "广告发布成功！",
+    "error": "发布广告时出错",
+    "type": {
+      "label": "广告类型",
+      "lost": "丢失物品",
+      "found": "发现物品"
+    },
+    "form": {
+      "title": {
+        "label": "广告标题",
+        "placeholder": "例如：在地铁中丢失的iPhone 13 Pro"
+      },
+      "description": {
+        "label": "详细描述",
+        "placeholder": "详细描述您的物品、情况等"
+      },
+      "category": {
+        "label": "类别",
+        "placeholder": "选择一个类别"
+      },
+      "location": {
+        "label": "位置",
+        "placeholder": "例如：巴黎15区，蒙帕纳斯车站"
+      },
+      "dateOccurred": {
+        "label": "事发日期",
+        "placeholder": "您何时丢失/发现物品？"
+      },
+      "contactPhone": {
+        "label": "电话（可选）",
+        "placeholder": "06 00 00 00 00"
+      },
+      "contactEmail": {
+        "label": "邮箱（可选）",
+        "placeholder": "您的@email.com"
+      },
+      "image": {
+        "label": "物品照片",
+        "placeholder": "添加照片以增加找回机会"
+      },
+      "submit": "发布广告",
+      "submitting": "发布中..."
+    },
+    "validation": {
+      "title_required": "标题是必需的",
+      "description_min_length": "描述必须至少包含10个字符",
+      "category_required": "类别是必需的",
+      "location_required": "位置是必需的",
+      "date_required": "日期是必需的",
+      "email_invalid": "邮箱无效"
+    }
+  },
   "validation": {
     "title_required": "Le titre est requis",
     "description_min_length": "La description doit contenir au moins 10 caractères",

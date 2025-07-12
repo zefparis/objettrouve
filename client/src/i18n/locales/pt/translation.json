@@ -405,6 +405,66 @@
     "404_title": "404 Página não encontrada",
     "404_message": "A página que você está procurando não existe ou foi movida."
   },
+  "publishNew": {
+    "title": "Publicar um anúncio",
+    "subtitle": "Reporte um objeto perdido ou encontrado para ajudar a comunidade",
+    "loginNotice": "Faça login para publicar um anúncio e gerenciar seus objetos",
+    "lostTitle": "Reportar um objeto perdido",
+    "lostSubtitle": "Perdeu algo? Publique um anúncio para pedir ajuda à comunidade",
+    "foundTitle": "Reportar um objeto encontrado",
+    "foundSubtitle": "Encontrou algo? Ajude alguém a recuperar seu objeto",
+    "success": "Anúncio publicado com sucesso!",
+    "error": "Erro ao publicar o anúncio",
+    "type": {
+      "label": "Tipo de anúncio",
+      "lost": "Objeto perdido",
+      "found": "Objeto encontrado"
+    },
+    "form": {
+      "title": {
+        "label": "Título do anúncio",
+        "placeholder": "Ex: iPhone 13 Pro perdido no metrô"
+      },
+      "description": {
+        "label": "Descrição detalhada",
+        "placeholder": "Descreva seu objeto em detalhes, circunstâncias, etc."
+      },
+      "category": {
+        "label": "Categoria",
+        "placeholder": "Selecione uma categoria"
+      },
+      "location": {
+        "label": "Localização",
+        "placeholder": "Ex: Paris 15º, Estação Montparnasse"
+      },
+      "dateOccurred": {
+        "label": "Data do incidente",
+        "placeholder": "Quando você perdeu/encontrou o objeto?"
+      },
+      "contactPhone": {
+        "label": "Telefone (opcional)",
+        "placeholder": "06 00 00 00 00"
+      },
+      "contactEmail": {
+        "label": "Email (opcional)",
+        "placeholder": "seu@email.com"
+      },
+      "image": {
+        "label": "Foto do objeto",
+        "placeholder": "Adicione uma foto para aumentar suas chances"
+      },
+      "submit": "Publicar anúncio",
+      "submitting": "Publicando..."
+    },
+    "validation": {
+      "title_required": "O título é obrigatório",
+      "description_min_length": "A descrição deve ter pelo menos 10 caracteres",
+      "category_required": "A categoria é obrigatória",
+      "location_required": "A localização é obrigatória",
+      "date_required": "A data é obrigatória",
+      "email_invalid": "Email inválido"
+    }
+  },
   "validation": {
     "title_required": "O título é obrigatório",
     "description_min_length": "A descrição deve ter pelo menos 10 caracteres",

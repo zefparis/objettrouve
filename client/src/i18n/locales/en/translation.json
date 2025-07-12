@@ -405,6 +405,66 @@
     "404_title": "404 Page Not Found",
     "404_message": "The page you are looking for does not exist or has been moved."
   },
+  "publishNew": {
+    "title": "Post an Ad",
+    "subtitle": "Report a lost or found item to help the community",
+    "loginNotice": "Log in to publish an ad and manage your items",
+    "lostTitle": "Report a Lost Item",
+    "lostSubtitle": "Lost something? Post an ad to ask the community for help",
+    "foundTitle": "Report a Found Item",
+    "foundSubtitle": "Found something? Help someone recover their item",
+    "success": "Ad published successfully!",
+    "error": "Error publishing ad",
+    "type": {
+      "label": "Ad Type",
+      "lost": "Lost Item",
+      "found": "Found Item"
+    },
+    "form": {
+      "title": {
+        "label": "Ad Title",
+        "placeholder": "Ex: iPhone 13 Pro lost in the subway"
+      },
+      "description": {
+        "label": "Detailed Description",
+        "placeholder": "Describe your item in detail, circumstances, etc."
+      },
+      "category": {
+        "label": "Category",
+        "placeholder": "Select a category"
+      },
+      "location": {
+        "label": "Location",
+        "placeholder": "Ex: Paris 15th, Montparnasse Station"
+      },
+      "dateOccurred": {
+        "label": "Date of Incident",
+        "placeholder": "When did you lose/find the item?"
+      },
+      "contactPhone": {
+        "label": "Phone (optional)",
+        "placeholder": "06 00 00 00 00"
+      },
+      "contactEmail": {
+        "label": "Email (optional)",
+        "placeholder": "your@email.com"
+      },
+      "image": {
+        "label": "Item Photo",
+        "placeholder": "Add a photo to increase your chances"
+      },
+      "submit": "Publish Ad",
+      "submitting": "Publishing..."
+    },
+    "validation": {
+      "title_required": "Title is required",
+      "description_min_length": "Description must be at least 10 characters long",
+      "category_required": "Category is required",
+      "location_required": "Location is required",
+      "date_required": "Date is required",
+      "email_invalid": "Invalid email"
+    }
+  },
   "validation": {
     "title_required": "Title is required",
     "description_min_length": "Description must be at least 10 characters long",

@@ -435,6 +435,66 @@
     "404_title": "404 Page introuvable",
     "404_message": "La page que vous recherchez n'existe pas ou a été déplacée."
   },
+  "publishNew": {
+    "title": "Advertentie plaatsen",
+    "subtitle": "Meld een verloren of gevonden voorwerp om de gemeenschap te helpen",
+    "loginNotice": "Log in om een advertentie te plaatsen en uw voorwerpen te beheren",
+    "lostTitle": "Verloren voorwerp melden",
+    "lostSubtitle": "Iets verloren? Plaats een advertentie om hulp te vragen aan de gemeenschap",
+    "foundTitle": "Gevonden voorwerp melden",
+    "foundSubtitle": "Iets gevonden? Help iemand zijn voorwerp terug te krijgen",
+    "success": "Advertentie succesvol geplaatst!",
+    "error": "Fout bij het plaatsen van de advertentie",
+    "type": {
+      "label": "Type advertentie",
+      "lost": "Verloren voorwerp",
+      "found": "Gevonden voorwerp"
+    },
+    "form": {
+      "title": {
+        "label": "Titel van advertentie",
+        "placeholder": "Bijv: iPhone 13 Pro verloren in de metro"
+      },
+      "description": {
+        "label": "Gedetailleerde beschrijving",
+        "placeholder": "Beschrijf uw voorwerp in detail, omstandigheden, enz."
+      },
+      "category": {
+        "label": "Categorie",
+        "placeholder": "Selecteer een categorie"
+      },
+      "location": {
+        "label": "Locatie",
+        "placeholder": "Bijv: Parijs 15e, Station Montparnasse"
+      },
+      "dateOccurred": {
+        "label": "Datum van het incident",
+        "placeholder": "Wanneer heeft u het voorwerp verloren/gevonden?"
+      },
+      "contactPhone": {
+        "label": "Telefoon (optioneel)",
+        "placeholder": "06 00 00 00 00"
+      },
+      "contactEmail": {
+        "label": "Email (optioneel)",
+        "placeholder": "uw@email.com"
+      },
+      "image": {
+        "label": "Foto van het voorwerp",
+        "placeholder": "Voeg een foto toe om uw kansen te vergroten"
+      },
+      "submit": "Advertentie plaatsen",
+      "submitting": "Plaatsen..."
+    },
+    "validation": {
+      "title_required": "Titel is vereist",
+      "description_min_length": "Beschrijving moet minimaal 10 tekens bevatten",
+      "category_required": "Categorie is vereist",
+      "location_required": "Locatie is vereist",
+      "date_required": "Datum is vereist",
+      "email_invalid": "Ongeldig email"
+    }
+  },
   "validation": {
     "title_required": "Le titre est requis",
     "description_min_length": "La description doit contenir au moins 10 caractères",

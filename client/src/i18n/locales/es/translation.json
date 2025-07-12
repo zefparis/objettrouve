@@ -405,6 +405,66 @@
     "404_title": "404 Página no encontrada",
     "404_message": "La página que buscas no existe o ha sido movida."
   },
+  "publishNew": {
+    "title": "Publicar un anuncio",
+    "subtitle": "Reporta un objeto perdido o encontrado para ayudar a la comunidad",
+    "loginNotice": "Inicia sesión para publicar un anuncio y gestionar tus objetos",
+    "lostTitle": "Reportar un objeto perdido",
+    "lostSubtitle": "¿Perdiste algo? Publica un anuncio para pedir ayuda a la comunidad",
+    "foundTitle": "Reportar un objeto encontrado",
+    "foundSubtitle": "¿Encontraste algo? Ayuda a alguien a recuperar su objeto",
+    "success": "¡Anuncio publicado exitosamente!",
+    "error": "Error al publicar el anuncio",
+    "type": {
+      "label": "Tipo de anuncio",
+      "lost": "Objeto perdido",
+      "found": "Objeto encontrado"
+    },
+    "form": {
+      "title": {
+        "label": "Título del anuncio",
+        "placeholder": "Ej: iPhone 13 Pro perdido en el metro"
+      },
+      "description": {
+        "label": "Descripción detallada",
+        "placeholder": "Describe tu objeto en detalle, circunstancias, etc."
+      },
+      "category": {
+        "label": "Categoría",
+        "placeholder": "Selecciona una categoría"
+      },
+      "location": {
+        "label": "Ubicación",
+        "placeholder": "Ej: París 15º, Estación Montparnasse"
+      },
+      "dateOccurred": {
+        "label": "Fecha del incidente",
+        "placeholder": "¿Cuándo perdiste/encontraste el objeto?"
+      },
+      "contactPhone": {
+        "label": "Teléfono (opcional)",
+        "placeholder": "06 00 00 00 00"
+      },
+      "contactEmail": {
+        "label": "Email (opcional)",
+        "placeholder": "tu@email.com"
+      },
+      "image": {
+        "label": "Foto del objeto",
+        "placeholder": "Agrega una foto para aumentar tus posibilidades"
+      },
+      "submit": "Publicar anuncio",
+      "submitting": "Publicando..."
+    },
+    "validation": {
+      "title_required": "El título es requerido",
+      "description_min_length": "La descripción debe tener al menos 10 caracteres",
+      "category_required": "La categoría es requerida",
+      "location_required": "La ubicación es requerida",
+      "date_required": "La fecha es requerida",
+      "email_invalid": "Email inválido"
+    }
+  },
   "validation": {
     "title_required": "El título es requerido",
     "description_min_length": "La descripción debe tener al menos 10 caracteres",
