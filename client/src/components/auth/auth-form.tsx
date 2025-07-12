@@ -66,7 +66,7 @@ export default function AuthForm({ onSuccess }: AuthFormProps) {
   const signUpMutation = useMutation({
     mutationFn: async (data: z.infer<typeof signUpSchema>) => {
       const response = await apiRequest('POST', '/api/auth/signup', data);
-      return response.json();
+      return await response.json();
     },
     onSuccess: (data) => {
       setEmail(signUpForm.getValues('email'));
@@ -89,7 +89,7 @@ export default function AuthForm({ onSuccess }: AuthFormProps) {
   const signInMutation = useMutation({
     mutationFn: async (data: z.infer<typeof signInSchema>) => {
       const response = await apiRequest('POST', '/api/auth/signin', data);
-      return response.json();
+      return await response.json();
     },
     onSuccess: (data) => {
       if (data.requiresPasswordChange) {
@@ -121,7 +121,7 @@ export default function AuthForm({ onSuccess }: AuthFormProps) {
   const confirmMutation = useMutation({
     mutationFn: async (data: z.infer<typeof confirmSchema>) => {
       const response = await apiRequest('POST', '/api/auth/confirm-signup', data);
-      return response.json();
+      return await response.json();
     },
     onSuccess: () => {
       setMode('signin');
@@ -143,7 +143,7 @@ export default function AuthForm({ onSuccess }: AuthFormProps) {
   const resendMutation = useMutation({
     mutationFn: async () => {
       const response = await apiRequest('POST', '/api/auth/resend-code', { email });
-      return response.json();
+      return await response.json();
     },
     onSuccess: () => {
       toast({
@@ -164,7 +164,7 @@ export default function AuthForm({ onSuccess }: AuthFormProps) {
   const forgotMutation = useMutation({
     mutationFn: async (data: z.infer<typeof forgotPasswordSchema>) => {
       const response = await apiRequest('POST', '/api/auth/forgot-password', data);
-      return response.json();
+      return await response.json();
     },
     onSuccess: (data) => {
       setEmail(forgotForm.getValues('email'));
@@ -187,7 +187,7 @@ export default function AuthForm({ onSuccess }: AuthFormProps) {
   const resetMutation = useMutation({
     mutationFn: async (data: z.infer<typeof resetPasswordSchema>) => {
       const response = await apiRequest('POST', '/api/auth/confirm-forgot-password', data);
-      return response.json();
+      return await response.json();
     },
     onSuccess: () => {
       setMode('signin');
