@@ -1,10 +1,30 @@
 import express, { type Request, Response, NextFunction } from "express";
+import session from "express-session";
 import { registerRoutes } from "./routes";
 import { setupVite, serveStatic, log } from "./vite";
+
+declare module 'express-session' {
+  interface SessionData {
+    user?: any;
+    tokens?: any;
+  }
+}
 
 const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+
+// Session middleware
+app.use(session({
+  secret: process.env.SESSION_SECRET || 'dev-secret-key',
+  resave: false,
+  saveUninitialized: false,
+  cookie: {
+    secure: false, // Set to true in production with HTTPS
+    httpOnly: true,
+    maxAge: 24 * 60 * 60 * 1000 // 24 hours
+  }
+}));
 
 app.use((req, res, next) => {
   const start = Date.now();
@@ -137,6 +157,11 @@ app.post('/api/auth/signin', async (req, res) => {
 
     const result = await signIn(email, password);
     
+    // Store user in session for authentication
+    req.session = req.session || {};
+    req.session.user = result.user;
+    req.session.tokens = result.tokens;
+    
     res.json({
       message: "Connexion réussie",
       user: result.user,
@@ -153,6 +178,40 @@ app.post('/api/auth/signin', async (req, res) => {
     }
     
     res.status(400).json({ message });
+  }
+});
+
+// Route pour récupérer l'utilisateur authentifié
+app.get('/api/auth/user', async (req, res) => {
+  try {
+    if (!req.session?.user) {
+      return res.status(401).json({ error: "Non authentifié" });
+    }
+    
+    res.json(req.session.user);
+  } catch (error) {
+    console.error("Get user error:", error);
+    res.status(500).json({ error: "Erreur serveur" });
+  }
+});
+
+// Route pour déconnexion
+app.post('/api/auth/signout', async (req, res) => {
+  try {
+    if (req.session) {
+      req.session.destroy((err) => {
+        if (err) {
+          console.error("Session destruction error:", err);
+          return res.status(500).json({ error: "Erreur lors de la déconnexion" });
+        }
+        res.json({ message: "Déconnexion réussie" });
+      });
+    } else {
+      res.json({ message: "Déconnexion réussie" });
+    }
+  } catch (error) {
+    console.error("Signout error:", error);
+    res.status(500).json({ error: "Erreur serveur" });
   }
 });
 
