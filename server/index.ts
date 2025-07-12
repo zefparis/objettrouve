@@ -157,6 +157,7 @@ app.post('/api/auth/signin', async (req, res) => {
 });
 
 (async () => {
+  // Setup API routes first, before Vite middleware
   const server = await registerRoutes(app);
 
   app.use((err: any, _req: Request, res: Response, _next: NextFunction) => {
