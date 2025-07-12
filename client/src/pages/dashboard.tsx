@@ -39,33 +39,7 @@ export default function Dashboard() {
   const { toast } = useToast();
   const queryClient = useQueryClient();
 
-  // Show loading state while checking authentication
-  if (isLoading) {
-    return (
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center">
-        <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
-          <p className="text-gray-600">{t("common.loading")}</p>
-        </div>
-      </div>
-    );
-  }
-
-  // Redirect to login if not authenticated
-  if (!isAuthenticated) {
-    return (
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-2xl font-bold text-gray-900 mb-4">Accès restreint</h1>
-          <p className="text-gray-600 mb-6">Vous devez être connecté pour accéder au tableau de bord.</p>
-          <Link href="/">
-            <Button>Retour à l'accueil</Button>
-          </Link>
-        </div>
-      </div>
-    );
-  }
-
+  // Always call hooks in the same order
   const { data: items, isLoading: itemsLoading } = useQuery({
     queryKey: ["/api/user/items"],
     queryFn: async () => {
@@ -121,6 +95,33 @@ export default function Dashboard() {
       });
     },
   });
+
+  // Show loading state while checking authentication
+  if (isLoading) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
+          <p className="text-gray-600">{t("common.loading")}</p>
+        </div>
+      </div>
+    );
+  }
+
+  // Redirect to login if not authenticated
+  if (!isAuthenticated) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-2xl font-bold text-gray-900 mb-4">Accès restreint</h1>
+          <p className="text-gray-600 mb-6">Vous devez être connecté pour accéder au tableau de bord.</p>
+          <Link href="/">
+            <Button>Retour à l'accueil</Button>
+          </Link>
+        </div>
+      </div>
+    );
+  }
 
   const handleDeleteItem = (itemId: number) => {
     if (confirm(t("dashboard.confirmDelete"))) {
