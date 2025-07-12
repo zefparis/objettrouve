@@ -39,8 +39,6 @@ export default function Dashboard() {
   const { toast } = useToast();
   const queryClient = useQueryClient();
 
-  // Removed automatic redirect logic - let the App router handle authentication routing
-  
   // Show loading state while checking authentication
   if (isLoading) {
     return (
@@ -48,6 +46,21 @@ export default function Dashboard() {
         <div className="text-center">
           <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
           <p className="text-gray-600">{t("common.loading")}</p>
+        </div>
+      </div>
+    );
+  }
+
+  // Redirect to login if not authenticated
+  if (!isAuthenticated) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-2xl font-bold text-gray-900 mb-4">Accès restreint</h1>
+          <p className="text-gray-600 mb-6">Vous devez être connecté pour accéder au tableau de bord.</p>
+          <Link href="/">
+            <Button>Retour à l'accueil</Button>
+          </Link>
         </div>
       </div>
     );
@@ -62,6 +75,7 @@ export default function Dashboard() {
       }
       return response.json();
     },
+    enabled: isAuthenticated,
   });
 
   const { data: conversations, isLoading: conversationsLoading } = useQuery({
@@ -73,6 +87,7 @@ export default function Dashboard() {
       }
       return response.json();
     },
+    enabled: isAuthenticated,
   });
 
   const { data: stats, isLoading: statsLoading } = useQuery({
@@ -84,6 +99,7 @@ export default function Dashboard() {
       }
       return response.json();
     },
+    enabled: isAuthenticated,
   });
 
   const deleteItemMutation = useMutation({
