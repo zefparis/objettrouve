@@ -42,24 +42,25 @@ export function useAuth(): AuthState & {
   // Sign out mutation
   const signOutMutation = useMutation({
     mutationFn: async () => {
-      // In development mode, just clear local storage and server session
+      // In development mode, just clear everything and redirect
       if (import.meta.env.DEV) {
         // Clear any local storage
         try {
-          localStorage.removeItem('cognito_access_token');
-          localStorage.removeItem('cognito_id_token');
-          localStorage.removeItem('cognito_refresh_token');
-          localStorage.removeItem('cognito_user');
+          localStorage.clear();
         } catch (error) {
           console.warn("Error clearing storage:", error);
         }
         
-        // Clear server session
-        try {
-          await apiRequest("POST", "/api/auth/signout", {});
-        } catch (error) {
-          console.warn("Server signout failed:", error);
-        }
+        // Clear server session without waiting
+        fetch("/api/auth/signout", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({})
+        }).catch(() => {
+          // Ignore errors in development
+        });
+        
+        return;
       } else {
         // In production, use Cognito signout
         if (typeof window !== 'undefined' && cognitoService.isAuthenticated()) {
@@ -81,11 +82,20 @@ export function useAuth(): AuthState & {
       // Clear all cached data
       queryClient.clear();
       
-      // Always redirect to home after signout
-      window.location.href = '/';
+      // Immediate redirect in development
+      if (import.meta.env.DEV) {
+        window.location.href = '/';
+      } else {
+        // Wait a moment for cleanup then redirect in production
+        setTimeout(() => {
+          window.location.href = '/';
+        }, 100);
+      }
     },
     onError: (error) => {
       console.error("Sign out failed:", error);
+      // Force redirect even on error
+      window.location.href = '/';
     },
   });
 
