@@ -58,9 +58,68 @@ app.post('/api/auth/signup', async (req, res) => {
     
     let message = "Erreur lors de l'inscription";
     if (error.name === 'UsernameExistsException') {
-      message = "Cet email est déjà utilisé";
+      message = "Cet email est déjà utilisé. Essayez de vous connecter ou de réinitialiser votre mot de passe.";
     } else if (error.name === 'InvalidPasswordException') {
       message = "Le mot de passe ne respecte pas les critères requis";
+    }
+    
+    res.status(400).json({ message });
+  }
+});
+
+// Route pour renvoyer le code de confirmation
+app.post('/api/auth/resend-code', async (req, res) => {
+  try {
+    const { resendConfirmationCode } = await import("./auth");
+    const { email } = req.body;
+    
+    if (!email) {
+      return res.status(400).json({ message: "Email requis" });
+    }
+
+    const result = await resendConfirmationCode(email);
+    
+    res.json({
+      message: "Code de confirmation renvoyé. Vérifiez votre email.",
+      codeDeliveryDetails: result,
+    });
+  } catch (error: any) {
+    console.error("Resend code error:", error);
+    
+    let message = "Erreur lors de l'envoi du code";
+    if (error.name === 'UserNotFoundException') {
+      message = "Utilisateur non trouvé";
+    } else if (error.name === 'InvalidParameterException') {
+      message = "Utilisateur déjà confirmé";
+    }
+    
+    res.status(400).json({ message });
+  }
+});
+
+// Route pour confirmer l'inscription
+app.post('/api/auth/confirm-signup', async (req, res) => {
+  try {
+    const { confirmSignUp } = await import("./auth");
+    const { email, code } = req.body;
+    
+    if (!email || !code) {
+      return res.status(400).json({ message: "Email et code requis" });
+    }
+
+    await confirmSignUp(email, code);
+    
+    res.json({
+      message: "Compte confirmé avec succès. Vous pouvez maintenant vous connecter.",
+    });
+  } catch (error: any) {
+    console.error("Confirm signup error:", error);
+    
+    let message = "Erreur lors de la confirmation";
+    if (error.name === 'CodeMismatchException') {
+      message = "Code de confirmation invalide";
+    } else if (error.name === 'ExpiredCodeException') {
+      message = "Code de confirmation expiré";
     }
     
     res.status(400).json({ message });
