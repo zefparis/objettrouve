@@ -1,0 +1,736 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "search": "Buscar",
+    "publish": "Publicar",
+    "dashboard": "Panel",
+    "chat": "Mensajes",
+    "login": "Iniciar sesión",
+    "logout": "Cerrar sesión",
+    "features": "Características",
+    "howItWorks": "Cómo funciona",
+    "contact": "Contacto",
+    "pricing": "Precios",
+    "profile": "Perfil",
+    "map": "Carte"
+  },
+  "common": {
+    "loading": "Cargando...",
+    "error": "Error",
+    "success": "Éxito",
+    "cancel": "Cancelar",
+    "save": "Guardar",
+    "close": "Cerrar",
+    "back": "Atrás",
+    "next": "Siguiente",
+    "previous": "Anterior",
+    "viewDetails": "Ver detalles",
+    "noImage": "Sin imagen",
+    "unauthorized": "No autorizado",
+    "loginRequired": "Debes iniciar sesión. Redirigiendo...",
+    "timeAgo": {
+      "now": "Ahora",
+      "minutes": "hace {{count}} minuto",
+      "minutes_plural": "hace {{count}} minutos",
+      "hours": "hace {{count}} hora",
+      "hours_plural": "hace {{count}} horas",
+      "days": "hace {{count}} día",
+      "days_plural": "hace {{count}} días",
+      "weeks": "hace {{count}} semana",
+      "weeks_plural": "hace {{count}} semanas",
+      "months": "hace {{count}} mes",
+      "months_plural": "hace {{count}} meses",
+      "years": "hace {{count}} año",
+      "years_plural": "hace {{count}} años"
+    }
+  },
+  "hero": {
+    "title": "Encuentra tus objetos perdidos",
+    "subtitle": "La plataforma francesa de referencia para recuperar tus objetos perdidos o reportar tus hallazgos",
+    "searchPlaceholder": "Buscar un objeto...",
+    "searchButton": "Buscar",
+    "publishButton": "Publicar anuncio",
+    "iLostSomething": "Perdí algo",
+    "iFoundSomething": "Encontré algo"
+  },
+  "stats": {
+    "totalItems": "Objetos declarados",
+    "lostItems": "Objetos perdidos",
+    "foundItems": "Objetos encontrados",
+    "users": "Usuarios activos"
+  },
+  "categories": {
+    "title": "Categorías populares",
+    "subtitle": "Busca por tipo de objeto para encontrar más fácilmente",
+    "electronics": "Electrónicos",
+    "clothing": "Ropa",
+    "accessories": "Accesorios",
+    "documents": "Documentos",
+    "keys": "Llaves",
+    "jewelry": "Joyas",
+    "bags": "Bolsas",
+    "sports": "Deportes",
+    "books": "Libros",
+    "pets": "Mascotas",
+    "other": "Otro",
+    "phones": "Teléfonos",
+    "wallets": "Carteras",
+    "glasses": "Gafas",
+    "computers": "Computadoras"
+  },
+  "howItWorks": {
+    "badge": "Guía Completa",
+    "title": "¿Cómo funciona?",
+    "subtitle": "Encuentra tus objetos perdidos en 3 pasos simples y efectivos",
+    "stepNumber": "Paso {{number}}",
+    "step1": {
+      "title": "Reporta tu objeto",
+      "description": "Publica un anuncio con foto y descripción detallada",
+      "detail1": "Añade fotos claras de tu objeto",
+      "detail2": "Describe precisamente las características",
+      "detail3": "Indica el lugar y fecha de pérdida"
+    },
+    "step2": {
+      "title": "Busca y filtra",
+      "description": "Usa nuestros filtros para encontrar rápidamente lo que buscas",
+      "detail1": "Filtra por categoría y ubicación",
+      "detail2": "Usa búsqueda por palabras clave",
+      "detail3": "Navega por anuncios recientes"
+    },
+    "step3": {
+      "title": "Contacta y recupera",
+      "description": "Intercambia de forma segura con otros usuarios",
+      "detail1": "Mensajería segura integrada",
+      "detail2": "Verificación de identidad",
+      "detail3": "Sistema de calificación comunitaria"
+    },
+    "features": {
+      "title": "Características Principales",
+      "security": {
+        "title": "Seguridad Garantizada",
+        "description": "Tus datos e intercambios están protegidos por un sistema de seguridad avanzado"
+      },
+      "location": {
+        "title": "Geolocalización",
+        "description": "Encuentra objetos cerca de ti gracias a nuestro sistema de ubicación preciso"
+      },
+      "notifications": {
+        "title": "Alertas Inteligentes",
+        "description": "Recibe notificaciones de objetos que coincidan con tus criterios"
+      },
+      "community": {
+        "title": "Comunidad Activa",
+        "description": "Únete a una comunidad de miles de usuarios solidarios"
+      }
+    },
+    "timeline": {
+      "title": "Cronología Típica",
+      "immediate": "Inmediato",
+      "minutes": "Pocos minutos",
+      "hours": "Pocas horas",
+      "step1": {
+        "title": "Publicación del Anuncio",
+        "description": "Tu anuncio está en línea y visible para todos"
+      },
+      "step2": {
+        "title": "Primera Visibilidad",
+        "description": "Tu anuncio comienza a ser visto por otros usuarios"
+      },
+      "step3": {
+        "title": "Contactos Potenciales",
+        "description": "Recibes tus primeros mensajes de personas interesadas"
+      }
+    },
+    "cta": {
+      "title": "¿Listo para encontrar tus objetos?",
+      "description": "Únete a miles de usuarios que confían en ObjetsTrouvés",
+      "publishButton": "Publicar anuncio",
+      "searchButton": "Buscar objetos"
+    }
+  },
+  "search": {
+    "title": "Buscar objetos",
+    "subtitle": "Descubre los últimos objetos perdidos y encontrados en tu área",
+    "searchPlaceholder": "Buscar por objeto, ubicación, descripción...",
+    "type": "Tipo",
+    "all": "Todos",
+    "lost": "Perdidos",
+    "found": "Encontrados",
+    "category": "Categoría",
+    "noResults": "No se encontraron resultados",
+    "noResultsDesc": "Intenta modificar tus criterios de búsqueda",
+    "itemType": {
+      "lost": "Perdido",
+      "found": "Encontrado"
+    },
+    "filters": "Filtros",
+    "location": "Ubicación"
+  },
+  "home": {
+    "recentItems": "Objetos reportados recientemente",
+    "recentItemsDesc": "Descubre los últimos objetos perdidos y encontrados en tu área",
+    "noItemsYet": "Aún no hay objetos reportados",
+    "viewAllItems": "Ver todos los objetos",
+    "ctaTitle": "¿Listo para encontrar tus objetos?",
+    "ctaSubtitle": "Únete a miles de usuarios que confían en ObjetsTrouvés",
+    "publishAd": "Publicar anuncio",
+    "myDashboard": "Mi panel",
+    "premium": {
+      "badge": "🚀 Nuevas funcionalidades",
+      "title": "Funcionalidades Premium",
+      "subtitle": "Descubre todas las funcionalidades de monetización y administración",
+      "pricing": "Precios",
+      "pricingDesc": "Servicios premium y suscripciones con integración Stripe/PayPal",
+      "viewPricing": "Ver precios",
+      "paymentSystem": "Sistema de pago",
+      "paymentSystemDesc": "Proceso completo de pedido con verificación de pagos",
+      "viewCheckout": "Ver checkout",
+      "adminDashboard": "Panel Admin",
+      "adminDashboardDesc": "Panel administrador con análisis de ingresos",
+      "viewAdmin": "Ver admin",
+      "paymentConfirm": "Confirmación de pago",
+      "paymentConfirmDesc": "Página de confirmación después del pago exitoso",
+      "viewConfirm": "Ver confirmación",
+      "apiPayment": "API de pago",
+      "apiPaymentDesc": "Rutas API completas para Stripe, PayPal y gestión admin",
+      "viewDocs": "Ver documentación",
+      "revenueAnalytics": "Análisis de ingresos",
+      "revenueAnalyticsDesc": "Estadísticas detalladas de ingresos y usuarios pagantes",
+      "viewAnalytics": "Ver análisis"
+    }
+  },
+  "map": {
+    "title": "Mapa Interactivo",
+    "subtitle": "Visualiza objetos perdidos y encontrados cerca de ti",
+    "interactiveMap": "Mapa interactivo con geolocalización",
+    "integration": "Integración con Google Maps o OpenStreetMap",
+    "lostItems": "Objetos perdidos",
+    "foundItems": "Objetos encontrados",
+    "fullscreen": "Ver en pantalla completa",
+    "loading": "Chargement de la carte...",
+    "loadError": "Erreur de chargement de la carte",
+    "loadErrorDesc": "Impossible de charger Google Maps. Vérifiez votre connexion.",
+    "myLocation": "Ma position",
+    "yourLocation": "Votre position",
+    "totalItems": "objets",
+    "viewOnMap": "Voir sur la carte",
+    "centerOnLocation": "Centrer sur cette position"
+  },
+  "publish": {
+    "title": "Publicar anuncio",
+    "subtitle": "Ayuda a alguien a encontrar su objeto perdido o reporta un hallazgo",
+    "form": {
+      "objectInfo": "Información del objeto",
+      "title": "Título del anuncio",
+      "titlePlaceholder": "Ej: iPhone 13 Pro perdido en metro",
+      "description": "Descripción detallada",
+      "descriptionPlaceholder": "Describe tu objeto en detalle...",
+      "type": "Tipo de anuncio",
+      "category": "Categoría",
+      "location": "Ubicación",
+      "locationPlaceholder": "Ej: París 15, Estación Montparnasse",
+      "dateOccurred": "Fecha del incidente",
+      "contactInfo": "Información de contacto",
+      "contactPlaceholder": "Cómo contactarte...",
+      "image": "Foto del objeto",
+      "imageHelp": "Agrega una foto para aumentar tus posibilidades",
+      "publish": "Publicar anuncio",
+      "publishing": "Publicando...",
+      "categoryPlaceholder": "Selecciona una categoría",
+      "phonePlaceholder": "06 00 00 00 00",
+      "emailPlaceholder": "tu@email.com",
+      "phone": "Teléfono (opcional)",
+      "email": "Email (opcional)"
+    },
+    "success": "¡Anuncio publicado exitosamente!",
+    "error": "Error al publicar el anuncio"
+  },
+  "dashboard": {
+    "title": "Panel de control",
+    "subtitle": "Gestiona tus anuncios y conversaciones",
+    "welcome": "Bienvenido",
+    "user": "Usuario",
+    "myItems": "Mis anuncios",
+    "statistics": "Estadísticas",
+    "recentActivity": "Actividad reciente",
+    "activity": "Actividad",
+    "noItems": "No hay anuncios publicados",
+    "noItemsDesc": "Publica tu primer anuncio para comenzar",
+    "publishFirstAd": "Publica tu primer anuncio",
+    "newAd": "Nuevo anuncio",
+    "reportLost": "Reportar objeto perdido",
+    "reportFound": "Reportar objeto encontrado",
+    "lostItems": "Objetos perdidos",
+    "foundItems": "Objetos encontrados",
+    "conversations": "Conversaciones",
+    "activeAds": "Anuncios activos",
+    "totalViews": "Vistas totales",
+    "yourItems": "Tus elementos",
+    "active": "Activo",
+    "allItems": "Todos los elementos",
+    "views": "vistas",
+    "noConversations": "Sin conversaciones",
+    "noConversationsDesc": "Comienza a chatear con otros usuarios",
+    "noActivity": "Sin actividad",
+    "noActivityDesc": "Publica tu primer anuncio para ver actividad",
+    "lostItemActivity": "Reportaste un objeto perdido",
+    "foundItemActivity": "Reportaste un objeto encontrado",
+    "justNow": "Ahora mismo",
+    "hoursAgo": "Hace {{hours}} horas",
+    "daysAgo": "Hace {{days}} días",
+    "confirmDelete": "¿Estás seguro de que quieres eliminar este anuncio?",
+    "deleteError": "Ocurrió un error al eliminar",
+    "deleteSuccess": "Anuncio eliminado exitosamente",
+    "actions": {
+      "edit": "Editar",
+      "delete": "Eliminar",
+      "view": "Ver"
+    }
+  },
+  "chat": {
+    "title": "Mensajes",
+    "noConversations": "No hay conversaciones",
+    "noConversationsDesc": "Inicia una conversación contactando a alguien",
+    "typePlaceholder": "Escribe tu mensaje...",
+    "send": "Enviar",
+    "conversationNotFound": "Conversación no encontrada",
+    "selectValidConversation": "Por favor selecciona una conversación válida.",
+    "backToDashboard": "Volver al panel",
+    "loginToMessage": "Debes iniciar sesión para enviar un mensaje.",
+    "messageError": "Ocurrió un error al enviar el mensaje",
+    "noMessages": "No hay mensajes",
+    "startConversation": "¡Inicia la conversación!",
+    "conversation": "Conversación"
+  },
+  "itemDetail": {
+    "contactOwner": "Contactar propietario",
+    "reportedOn": "Reportado el",
+    "category": "Categoría",
+    "location": "Ubicación",
+    "contactInfo": "Contacto",
+    "description": "Descripción",
+    "similarItems": "Objetos similares",
+    "messageSent": "¡Tu mensaje ha sido enviado exitosamente!",
+    "messageError": "Ocurrió un error al enviar el mensaje",
+    "loginToMessage": "Debes iniciar sesión para enviar un mensaje.",
+    "lostOn": "Perdido el",
+    "foundOn": "Encontrado el",
+    "sendMessage": "Enviar mensaje",
+    "send": "Enviar",
+    "sending": "Enviando...",
+    "manageAd": "Gestionar anuncio",
+    "messagePlaceholder": "Describe tu objeto para probar que te pertenece...",
+    "editAd": "Editar anuncio",
+    "markAsFound": "Marcar como encontrado",
+    "deleteAd": "Eliminar anuncio",
+    "alertDescription": "Crea una alerta para ser notificado de objetos similares",
+    "createAlert": "Crear alerta"
+  },
+  "footer": {
+    "description": "La plataforma francesa de referencia para encontrar tus objetos perdidos o reportar tus hallazgos.",
+    "quickLinks": "Enlaces rápidos",
+    "legal": "Información legal",
+    "legalNotice": "Aviso legal",
+    "privacyPolicy": "Política de privacidad",
+    "termsOfUse": "Términos de uso"
+  },
+  "pricing": {
+    "title": "Precios",
+    "subtitle": "Elige el plan que te conviene",
+    "popular": "Popular",
+    "select": "Seleccionar",
+    "tabs": {
+      "services": "Servicios",
+      "subscriptions": "Suscripciones"
+    },
+    "services": {
+      "boost": {
+        "name": "Impulsar anuncio",
+        "description": "Destaca tu anuncio para mayor visibilidad",
+        "features": {
+          "priority": "Visualización prioritaria",
+          "highlight": "Resaltado en color",
+          "duration": "Duración: 7 días"
+        }
+      },
+      "search": {
+        "name": "Búsqueda premium",
+        "description": "Alertas y filtros avanzados para tus búsquedas",
+        "features": {
+          "alerts": "Alertas personalizadas por email",
+          "radius": "Radio de búsqueda extendido",
+          "priority": "Acceso prioritario a nuevos anuncios"
+        }
+      },
+      "verification": {
+        "name": "Verificación de identidad",
+        "description": "Insignia de confianza para tus anuncios",
+        "features": {
+          "badge": "Insignia de confianza verificada",
+          "trust": "Aumenta la confianza de los usuarios",
+          "priority": "Soporte prioritario"
+        }
+      }
+    },
+    "plans": {
+      "pro": {
+        "name": "Pro",
+        "description": "Para usuarios regulares",
+        "features": {
+          "listings": "Anuncios ilimitados",
+          "priority": "Soporte prioritario",
+          "analytics": "Análisis detallados",
+          "support": "Soporte 24/7"
+        }
+      },
+      "advanced": {
+        "name": "Avanzado",
+        "description": "Para usuarios frecuentes",
+        "features": {
+          "listings": "Anuncios ilimitados",
+          "team": "Gestión de equipo",
+          "api": "Acceso a API",
+          "custom": "Integraciones personalizadas"
+        }
+      },
+      "premium": {
+        "name": "Premium",
+        "description": "Para profesionales",
+        "features": {
+          "unlimited": "Todo ilimitado",
+          "dedicated": "Gestor de cuenta dedicado",
+          "white_label": "Solución de marca blanca",
+          "training": "Entrenamiento personalizado"
+        }
+      }
+    },
+    "subscribe": "Suscribirse",
+    "payment": {
+      "title": "Elegir método de pago",
+      "description": "Selecciona tu método de pago preferido"
+    }
+  },
+  "error": {
+    "404_title": "404 Página no encontrada",
+    "404_message": "La página que buscas no existe o ha sido movida."
+  },
+  "publishNew": {
+    "title": "Publicar Anuncio",
+    "subtitle": "Reportar un objeto perdido o encontrado",
+    "lostTitle": "Reportar Objeto Perdido",
+    "foundTitle": "Reportar Objeto Encontrado",
+    "lostSubtitle": "Ayúdanos a encontrar tu objeto perdido",
+    "foundSubtitle": "Ayuda a alguien a recuperar su objeto",
+    "loginNotice": "Debes iniciar sesión para publicar un anuncio. Completa el formulario e inicia sesión al enviar.",
+    "type": {
+      "label": "Tipo de Anuncio",
+      "lost": "Objeto Perdido",
+      "found": "Objeto Encontrado"
+    },
+    "form": {
+      "title": {
+        "label": "Título del Anuncio",
+        "placeholder": "ej: iPhone 12 Pro perdido en el metro"
+      },
+      "description": {
+        "label": "Descripción Detallada",
+        "placeholder": "Describe el objeto en detalle, circunstancias de pérdida/hallazgo..."
+      },
+      "category": {
+        "label": "Categoría",
+        "placeholder": "Selecciona una categoría"
+      },
+      "location": {
+        "label": "Ubicación",
+        "placeholder": "Dónde se perdió/encontró el objeto"
+      },
+      "dateOccurred": {
+        "label": "Fecha del Incidente",
+        "placeholder": "¿Cuándo ocurrió esto?"
+      },
+      "contactPhone": {
+        "label": "Teléfono de Contacto",
+        "placeholder": "+34 612 34 56 78"
+      },
+      "contactEmail": {
+        "label": "Email de Contacto",
+        "placeholder": "tu@email.com"
+      },
+      "image": {
+        "label": "Foto del Objeto",
+        "placeholder": "Agrega una foto para ayudar en la identificación",
+        "upload": "Haz clic para subir una foto",
+        "change": "Cambiar foto",
+        "remove": "Eliminar foto"
+      }
+    },
+    "validation": {
+      "title_required": "El título es requerido",
+      "description_min_length": "La descripción debe tener al menos 10 caracteres",
+      "category_required": "Por favor selecciona una categoría",
+      "location_required": "La ubicación es requerida",
+      "date_required": "La fecha es requerida",
+      "email_invalid": "Formato de email inválido"
+    },
+    "success": "¡Tu anuncio ha sido publicado exitosamente!",
+    "error": "Ocurrió un error al publicar",
+    "buttons": {
+      "publish": "Publicar Anuncio",
+      "publishing": "Publicando..."
+    }
+  },
+  "validation": {
+    "title_required": "El título es requerido",
+    "description_min_length": "La descripción debe tener al menos 10 caracteres",
+    "category_required": "La categoría es requerida",
+    "location_required": "La ubicación es requerida",
+    "date_required": "La fecha es requerida",
+    "email_invalid": "Email inválido"
+  },
+  "sidebar": {
+    "toggle": "Alternar barra lateral"
+  },
+  "contact": {
+    "badge": "Soporte",
+    "title": "Contáctanos",
+    "subtitle": "Nuestro equipo está aquí para ayudarte a encontrar tus objetos perdidos",
+    "form": {
+      "title": "Enviar un Mensaje",
+      "description": "Describe tu problema y te responderemos rápidamente",
+      "name": "Nombre Completo",
+      "namePlaceholder": "Tu nombre y apellido",
+      "email": "Dirección de Email",
+      "emailPlaceholder": "tu@email.com",
+      "category": "Categoría",
+      "categoryPlaceholder": "Selecciona una categoría",
+      "categories": {
+        "general": "Pregunta General",
+        "technical": "Problema Técnico",
+        "billing": "Facturación",
+        "feedback": "Comentarios",
+        "report": "Reportar"
+      },
+      "subject": "Asunto",
+      "subjectPlaceholder": "Resumen de tu solicitud",
+      "message": "Mensaje",
+      "messagePlaceholder": "Describe tu problema o pregunta en detalle...",
+      "send": "Enviar Mensaje",
+      "sending": "Enviando...",
+      "success": "¡Mensaje enviado!",
+      "successMessage": "Hemos recibido tu mensaje y responderemos lo antes posible."
+    },
+    "info": {
+      "title": "Información de Contacto",
+      "description": "Múltiples formas de contactarnos según tus preferencias"
+    },
+    "methods": {
+      "email": {
+        "title": "Email",
+        "description": "Respuesta en 24h promedio",
+        "action": "Escríbenos"
+      },
+      "phone": {
+        "title": "Teléfono",
+        "description": "Soporte telefónico directo",
+        "action": "Llámanos"
+      },
+      "address": {
+        "title": "Dirección",
+        "description": "Sede central de la empresa",
+        "action": "Visítanos"
+      },
+      "hours": {
+        "title": "Horarios",
+        "description": "Disponibilidad de nuestro equipo",
+        "value": "Lun-Vie 9h-18h, Sáb 9h-12h",
+        "action": "Ver horarios"
+      }
+    },
+    "social": {
+      "title": "Redes Sociales",
+      "description": "Síguenos para las últimas noticias"
+    },
+    "faq": {
+      "title": "Preguntas Frecuentes",
+      "subtitle": "Encuentra rápidamente respuestas a las preguntas más comunes",
+      "item1": {
+        "question": "¿Cómo publicar un anuncio?",
+        "answer": "Haz clic en 'Publicar' en el menú, llena el formulario con los detalles de tu objeto perdido o encontrado, añade una foto y valida."
+      },
+      "item2": {
+        "question": "¿Cómo contactar a alguien?",
+        "answer": "En la página de un anuncio, haz clic en 'Contactar' para enviar un mensaje privado al propietario del anuncio."
+      },
+      "item3": {
+        "question": "¿Es gratis usar la plataforma?",
+        "answer": "Sí, ObjetsTrouvés es completamente gratis. Puedes publicar anuncios y contactar otros usuarios sin costo."
+      },
+      "item4": {
+        "question": "¿Qué hacer si encuentro mi objeto?",
+        "answer": "Inicia sesión en tu cuenta, ve a 'Mi Panel' y marca tu anuncio como 'Encontrado' o elimínalo."
+      }
+    },
+    "emergency": {
+      "title": "Emergencia Técnica",
+      "description": "Para problemas urgentes que afecten el funcionamiento del sitio",
+      "button": "Soporte de Emergencia"
+    }
+  },
+  "auth": {
+    "login": {
+      "title": "Iniciar sesión",
+      "subtitle": "Accede a tu cuenta",
+      "noAccount": "¿No tienes cuenta?",
+      "hasAccount": "¿Ya tienes cuenta?"
+    },
+    "register": {
+      "title": "Registrarse",
+      "subtitle": "Crea tu cuenta gratuita",
+      "hasAccount": "¿Ya tienes cuenta?"
+    },
+    "forgotPassword": {
+      "title": "Olvidé mi contraseña",
+      "subtitle": "Ingresa tu email para recibir un código de restablecimiento"
+    },
+    "otpVerification": {
+      "title": "Verificación OTP",
+      "subtitle": "Ingresa el código enviado a {{email}}"
+    },
+    "newPassword": {
+      "title": "Nueva contraseña",
+      "subtitle": "Establece tu nueva contraseña"
+    },
+    "fields": {
+      "email": "Email",
+      "password": "Contraseña",
+      "newPassword": "Nueva contraseña",
+      "confirmPassword": "Confirmar contraseña",
+      "firstName": "Nombre",
+      "lastName": "Apellido",
+      "otpCode": "Código OTP"
+    },
+    "placeholders": {
+      "email": "tu@email.com",
+      "password": "Tu contraseña",
+      "newPassword": "Nueva contraseña",
+      "confirmPassword": "Confirmar contraseña",
+      "firstName": "Nombre",
+      "lastName": "Apellido",
+      "otpCode": "000000"
+    },
+    "actions": {
+      "signIn": "Iniciar sesión",
+      "signUp": "Registrarse",
+      "signingIn": "Iniciando sesión...",
+      "signingUp": "Registrándose...",
+      "forgotPassword": "¿Olvidaste tu contraseña?",
+      "sendCode": "Enviar código",
+      "sending": "Enviando...",
+      "verify": "Verificar",
+      "verifying": "Verificando...",
+      "resendCode": "Reenviar código",
+      "backToLogin": "Volver al inicio de sesión",
+      "updatePassword": "Actualizar contraseña",
+      "updating": "Actualizando..."
+    },
+    "success": {
+      "loginTitle": "Inicio de sesión exitoso",
+      "loginDescription": "¡Bienvenido a ObjetsTrouvés!",
+      "registerTitle": "Registro exitoso",
+      "registerDescription": "Por favor revisa tu email para confirmar tu cuenta",
+      "forgotPasswordTitle": "Código enviado",
+      "forgotPasswordDescription": "Revisa tu email para el código de restablecimiento",
+      "otpVerificationTitle": "Verificación exitosa",
+      "otpVerificationDescription": "Tu cuenta ha sido verificada exitosamente",
+      "newPasswordTitle": "Contraseña actualizada",
+      "newPasswordDescription": "Ahora puedes iniciar sesión con tu nueva contraseña",
+      "resendOtpTitle": "Código reenviado",
+      "resendOtpDescription": "Un nuevo código ha sido enviado a tu email"
+    },
+    "errors": {
+      "general": "Ocurrió un error",
+      "invalidEmail": "Dirección de email inválida",
+      "passwordTooShort": "La contraseña debe tener al menos 8 caracteres",
+      "passwordsDoNotMatch": "Las contraseñas no coinciden",
+      "firstNameRequired": "El nombre es requerido",
+      "lastNameRequired": "El apellido es requerido",
+      "otpInvalid": "El código OTP debe tener 6 dígitos",
+      "loginFailed": "Inicio de sesión fallido",
+      "registerFailed": "Registro fallido",
+      "forgotPasswordFailed": "Fallo al enviar código de restablecimiento",
+      "otpVerificationFailed": "Verificación fallida",
+      "newPasswordFailed": "Fallo al actualizar contraseña",
+      "resendOtpFailed": "Fallo al reenviar código",
+      "UserNotFoundException": "Usuario no encontrado",
+      "NotAuthorizedException": "Email o contraseña incorrectos",
+      "UserNotConfirmedException": "Por favor confirma tu dirección de email",
+      "InvalidPasswordException": "La contraseña no cumple con los requisitos",
+      "UsernameExistsException": "Esta dirección de email ya está en uso",
+      "CodeMismatchException": "Código incorrecto",
+      "ExpiredCodeException": "El código ha expirado",
+      "LimitExceededException": "Demasiados intentos, intenta más tarde",
+      "InvalidParameterException": "Parámetro inválido",
+      "TooManyRequestsException": "Demasiadas solicitudes, intenta más tarde"
+    }
+  },
+  "testimonials": {
+    "title": "Testimonios",
+    "subtitle": "Descubre las historias de reencuentro de nuestra comunidad",
+    "testimonial1": {
+      "name": "María L.",
+      "location": "Madrid Centro",
+      "content": "¡Encontré mi teléfono perdido en el metro en menos de 24 horas! Alguien lo había encontrado y lo publicó en ObjetsTrouvés. El chat integrado nos permitió ponernos en contacto fácilmente."
+    },
+    "testimonial2": {
+      "name": "Pedro M.",
+      "location": "Barcelona Eixample",
+      "content": "Encontré una cartera y gracias a esta plataforma, pude devolvérsela a su dueño rápidamente. ¡El sistema es simple y eficaz!"
+    }
+  },
+  "profile": {
+    "title": "Perfil",
+    "profilePicture": "Foto de perfil",
+    "editProfile": "Editar perfil",
+    "save": "Guardar",
+    "cancel": "Cancelar",
+    "memberSince": "Miembro desde",
+    "itemsPosted": "Elementos publicados",
+    "itemsFound": "Elementos encontrados",
+    "conversations": "Conversaciones",
+    "personalInfo": "Información personal",
+    "preferences": "Preferencias",
+    "privacy": "Privacidad",
+    "firstName": "Nombre",
+    "lastName": "Apellido",
+    "email": "Correo electrónico",
+    "phone": "Teléfono",
+    "location": "Ubicación",
+    "bio": "Biografía",
+    "bioPlaceholder": "Cuéntanos sobre ti...",
+    "notifications": "Notificaciones",
+    "notificationsDesc": "Recibir notificaciones por email",
+    "language": "Idioma",
+    "languageDesc": "Cambiar idioma de la interfaz",
+    "visibility": "Visibilidad",
+    "visibilityDesc": "Controlar quién puede ver tu perfil",
+    "changePassword": "Cambiar contraseña",
+    "changePasswordDesc": "Actualizar tu contraseña",
+    "twoFactor": "Autenticación de dos factores",
+    "twoFactorDesc": "Mejorar la seguridad de tu cuenta",
+    "dataExport": "Exportar datos",
+    "dataExportDesc": "Descargar todos tus datos",
+    "enabled": "Activado",
+    "currentLanguage": "Idioma actual",
+    "public": "Público",
+    "change": "Cambiar",
+    "enable": "Activar",
+    "export": "Exportar",
+    "updateSuccess": "Perfil actualizado",
+    "updateSuccessDesc": "Tu perfil se ha actualizado correctamente",
+    "updateError": "Error al actualizar",
+    "updateErrorDesc": "Hubo un error al actualizar tu perfil",
+    "imageError": "Error de imagen",
+    "imageTypeError": "Tipo de archivo no válido",
+    "imageSizeError": "Archivo demasiado grande"
+  }
+}
