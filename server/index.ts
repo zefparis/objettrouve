@@ -149,7 +149,7 @@ app.post('/api/auth/signin', async (req, res) => {
     if (error.name === 'NotAuthorizedException') {
       message = "Email ou mot de passe incorrect";
     } else if (error.name === 'UserNotConfirmedException') {
-      message = "Veuillez confirmer votre email avant de vous connecter";
+      message = "Votre compte n'est pas encore confirmé. Vérifiez votre email pour le code de confirmation.";
     }
     
     res.status(400).json({ message });
