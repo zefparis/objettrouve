@@ -23,19 +23,7 @@ export default function Home() {
   const { toast } = useToast();
   const { isAuthenticated, isLoading } = useAuth();
 
-  useEffect(() => {
-    if (!isLoading && !isAuthenticated) {
-      toast({
-        title: t("common.unauthorized"),
-        description: t("common.loginRequired"),
-        variant: "destructive",
-      });
-      setTimeout(() => {
-        window.location.href = "/api/login";
-      }, 500);
-      return;
-    }
-  }, [isAuthenticated, isLoading, toast]);
+  // Removed automatic redirect logic - let the App router handle authentication routing
 
   const { data: items, isLoading: itemsLoading } = useQuery({
     queryKey: ["/api/items"],

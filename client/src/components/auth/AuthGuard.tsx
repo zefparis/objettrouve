@@ -25,27 +25,7 @@ export default function AuthGuard({
   const { toast } = useToast();
   const { t } = useTranslation();
 
-  useEffect(() => {
-    if (!isLoading && requireAuth && !isAuthenticated) {
-      toast({
-        title: t("common.unauthorized"),
-        description: t("common.loginRequired"),
-        variant: "destructive",
-      });
-      
-      // In development, redirect to home
-      if (import.meta.env.DEV) {
-        setTimeout(() => {
-          window.location.href = redirectTo;
-        }, 500);
-      } else {
-        // In production, redirect to login
-        setTimeout(() => {
-          window.location.href = "/api/login";
-        }, 500);
-      }
-    }
-  }, [isAuthenticated, isLoading, requireAuth, toast, t, redirectTo]);
+  // Removed automatic redirect logic - let the App router handle authentication routing
 
   // Show loading state
   if (isLoading) {

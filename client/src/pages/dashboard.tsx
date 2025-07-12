@@ -39,26 +39,10 @@ export default function Dashboard() {
   const { toast } = useToast();
   const queryClient = useQueryClient();
 
-  // In development, allow access to dashboard without authentication
-  const isDevelopment = import.meta.env.DEV;
+  // Removed automatic redirect logic - let the App router handle authentication routing
   
-  // Redirect to login if not authenticated (except in development)
-  useEffect(() => {
-    if (!isDevelopment && !isLoading && !isAuthenticated) {
-      toast({
-        title: t("common.unauthorized"),
-        description: t("common.loginRequired"),
-        variant: "destructive",
-      });
-      setTimeout(() => {
-        window.location.href = "/api/login";
-      }, 500);
-      return;
-    }
-  }, [isAuthenticated, isLoading, toast, t, isDevelopment]);
-
-  // Show loading state while checking authentication (except in development)
-  if (!isDevelopment && isLoading) {
+  // Show loading state while checking authentication
+  if (isLoading) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center">
         <div className="text-center">
@@ -67,11 +51,6 @@ export default function Dashboard() {
         </div>
       </div>
     );
-  }
-
-  // Don't render dashboard if not authenticated (except in development)
-  if (!isDevelopment && !isAuthenticated) {
-    return null;
   }
 
   const { data: items, isLoading: itemsLoading } = useQuery({
