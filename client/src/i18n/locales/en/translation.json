@@ -13,6 +13,15 @@
     "contact": "Contact",
     "pricing": "Pricing"
   },
+  "hero": {
+    "title": "Find Your Lost Items",
+    "subtitle": "The French reference platform to find your lost items or report your findings",
+    "searchPlaceholder": "Search for an item...",
+    "searchButton": "Search",
+    "publishButton": "Publish an ad",
+    "iLostSomething": "I lost something",
+    "iFoundSomething": "I found something"
+  },
   "common": {
     "back": "Back",
     "success": "Success",

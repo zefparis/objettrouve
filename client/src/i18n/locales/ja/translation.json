@@ -13,6 +13,15 @@
     "contact": "お問い合わせ",
     "pricing": "料金"
   },
+  "hero": {
+    "title": "紛失物を見つけよう",
+    "subtitle": "紛失物を見つけるか発見物を報告するフランスの代表的なプラットフォーム",
+    "searchPlaceholder": "物品を検索...",
+    "searchButton": "検索",
+    "publishButton": "広告を投稿",
+    "iLostSomething": "何か紛失しました",
+    "iFoundSomething": "何か見つけました"
+  },
   "home": {
     "recentItems": "最近報告された物品",
     "recentItemsDesc": "お住まいの地域で最新の紛失物・発見物を発見する",

@@ -13,6 +13,15 @@
     "contact": "联系",
     "pricing": "价格"
   },
+  "hero": {
+    "title": "找回您的丢失物品",
+    "subtitle": "法国权威平台，帮助您找回丢失物品或报告发现物品",
+    "searchPlaceholder": "搜索物品...",
+    "searchButton": "搜索",
+    "publishButton": "发布广告",
+    "iLostSomething": "我丢了东西",
+    "iFoundSomething": "我找到了东西"
+  },
   "home": {
     "recentItems": "最近报告的物品",
     "recentItemsDesc": "发现您所在地区最新的丢失和发现物品",

@@ -88,6 +88,15 @@
       "description": "Wählen Sie Ihre bevorzugte Zahlungsmethode"
     }
   },
+  "hero": {
+    "title": "Finden Sie Ihre verlorenen Gegenstände",
+    "subtitle": "Die französische Referenzplattform, um Ihre verlorenen Gegenstände zu finden oder Ihre Funde zu melden",
+    "searchPlaceholder": "Nach einem Gegenstand suchen...",
+    "searchButton": "Suchen",
+    "publishButton": "Anzeige veröffentlichen",
+    "iLostSomething": "Ich habe etwas verloren",
+    "iFoundSomething": "Ich habe etwas gefunden"
+  },
   "home": {
     "recentItems": "Kürzlich gemeldete Objekte",
     "recentItemsDesc": "Entdecken Sie die neuesten verlorenen und gefundenen Gegenstände in Ihrer Umgebung",

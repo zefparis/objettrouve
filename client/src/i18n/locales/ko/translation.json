@@ -13,6 +13,15 @@
     "contact": "문의",
     "pricing": "요금"
   },
+  "hero": {
+    "title": "분실물을 찾아보세요",
+    "subtitle": "분실물을 찾거나 발견물을 신고하는 한국의 대표 플랫폼",
+    "searchPlaceholder": "물품 검색...",
+    "searchButton": "검색",
+    "publishButton": "광고 게시",
+    "iLostSomething": "뭔가 잃어버렸어요",
+    "iFoundSomething": "뭔가 발견했어요"
+  },
   "home": {
     "recentItems": "최근 신고된 물품",
     "recentItemsDesc": "귀하의 지역에서 최신 분실물·발견물을 찾아보세요",

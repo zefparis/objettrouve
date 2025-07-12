@@ -13,6 +13,15 @@
     "contact": "Contact",
     "pricing": "Prijzen"
   },
+  "hero": {
+    "title": "Vind uw verloren items",
+    "subtitle": "Het Franse referentieplatform om uw verloren items te vinden of uw vondsten te melden",
+    "searchPlaceholder": "Zoek naar een item...",
+    "searchButton": "Zoeken",
+    "publishButton": "Advertentie plaatsen",
+    "iLostSomething": "Ik ben iets kwijt",
+    "iFoundSomething": "Ik heb iets gevonden"
+  },
   "home": {
     "recentItems": "Recent gerapporteerde items",
     "recentItemsDesc": "Ontdek de nieuwste verloren en gevonden items in uw omgeving",

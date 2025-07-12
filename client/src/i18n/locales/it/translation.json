@@ -88,6 +88,15 @@
       "description": "Seleziona il tuo metodo di pagamento preferito"
     }
   },
+  "hero": {
+    "title": "Trova i tuoi oggetti smarriti",
+    "subtitle": "La piattaforma francese di riferimento per trovare i tuoi oggetti smarriti o segnalare i tuoi ritrovamenti",
+    "searchPlaceholder": "Cerca un oggetto...",
+    "searchButton": "Cerca",
+    "publishButton": "Pubblica annuncio",
+    "iLostSomething": "Ho perso qualcosa",
+    "iFoundSomething": "Ho trovato qualcosa"
+  },
   "home": {
     "recentItems": "Oggetti segnalati di recente",
     "recentItemsDesc": "Scopri gli ultimi oggetti smarriti e trovati nella tua zona",

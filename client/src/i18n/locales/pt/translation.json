@@ -12,6 +12,15 @@
     "contact": "Contato",
     "pricing": "Preços"
   },
+  "hero": {
+    "title": "Encontre seus objetos perdidos",
+    "subtitle": "A plataforma francesa de referência para encontrar seus objetos perdidos ou reportar seus achados",
+    "searchPlaceholder": "Buscar um objeto...",
+    "searchButton": "Buscar",
+    "publishButton": "Publicar anúncio",
+    "iLostSomething": "Perdi algo",
+    "iFoundSomething": "Encontrei algo"
+  },
   "common": {
     "back": "Voltar",
     "success": "Sucesso",
