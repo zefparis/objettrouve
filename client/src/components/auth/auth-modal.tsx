@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
+import { useQueryClient } from "@tanstack/react-query";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -19,6 +20,7 @@ type AuthStep = "login" | "register" | "forgot-password" | "otp-verification" | 
 export default function AuthModal({ isOpen, onClose, onSuccess }: AuthModalProps) {
   const { t } = useTranslation();
   const { toast } = useToast();
+  const queryClient = useQueryClient();
   
   const [step, setStep] = useState<AuthStep>("login");
   const [isLoading, setIsLoading] = useState(false);
@@ -109,6 +111,9 @@ export default function AuthModal({ isOpen, onClose, onSuccess }: AuthModalProps
         });
         
         if (response.ok) {
+          // Invalidate auth cache to trigger re-fetch
+          queryClient.invalidateQueries({ queryKey: ['/api/auth/user'] });
+          
           toast({
             title: t("auth.success.loginTitle"),
             description: t("auth.success.loginDescription"),
