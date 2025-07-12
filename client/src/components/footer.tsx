@@ -12,7 +12,7 @@ export default function Footer() {
           <div className="col-span-1 md:col-span-2">
             <h3 className="text-lg font-semibold mb-4">ObjetsTrouvés</h3>
             <p className="text-gray-300 mb-4">
-              La plateforme française de référence pour retrouver vos objets perdus ou déclarer vos trouvailles.
+              {t("footer.description")}
             </p>
             <div className="text-sm text-gray-400">
               <p>IA-Solution</p>
@@ -26,31 +26,31 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Liens rapides</h4>
+            <h4 className="text-lg font-semibold mb-4">{t("footer.quickLinks")}</h4>
             <ul className="space-y-2 text-gray-300">
               <li>
                 <Link href="/" className="hover:text-orange-400 transition-colors">
-                  Accueil
+                  {t("nav.home")}
                 </Link>
               </li>
               <li>
                 <Link href="/search" className="hover:text-orange-400 transition-colors">
-                  Rechercher
+                  {t("nav.search")}
                 </Link>
               </li>
               <li>
                 <Link href="/publier" className="hover:text-orange-400 transition-colors">
-                  Publier une annonce
+                  {t("nav.publish")}
                 </Link>
               </li>
               <li>
                 <Link href="/how-it-works" className="hover:text-orange-400 transition-colors">
-                  Comment ça marche
+                  {t("nav.howItWorks")}
                 </Link>
               </li>
               <li>
                 <Link href="/contact" className="hover:text-orange-400 transition-colors">
-                  Contact
+                  {t("nav.contact")}
                 </Link>
               </li>
             </ul>
@@ -58,21 +58,21 @@ export default function Footer() {
 
           {/* Legal Links */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Informations légales</h4>
+            <h4 className="text-lg font-semibold mb-4">{t("footer.legal")}</h4>
             <ul className="space-y-2 text-gray-300">
               <li>
                 <Link href="/mentions-legales" className="hover:text-orange-400 transition-colors">
-                  Mentions légales
+                  {t("footer.legalNotice")}
                 </Link>
               </li>
               <li>
                 <Link href="/politique-confidentialite" className="hover:text-orange-400 transition-colors">
-                  Politique de confidentialité
+                  {t("footer.privacyPolicy")}
                 </Link>
               </li>
               <li>
                 <Link href="/cgu" className="hover:text-orange-400 transition-colors">
-                  Conditions générales d'utilisation
+                  {t("footer.termsOfUse")}
                 </Link>
               </li>
               <li>

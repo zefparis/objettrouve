@@ -54,5 +54,13 @@
       "revenueAnalyticsDesc": "Gedetailleerde statistieken over omzet en betalende gebruikers",
       "viewAnalytics": "Analyses bekijken"
     }
+  },
+  "footer": {
+    "description": "Het Franse referentieplatform om uw verloren items te vinden of uw vondsten te melden.",
+    "quickLinks": "Snelle links",
+    "legal": "Juridische informatie",
+    "legalNotice": "Juridische kennisgeving",
+    "privacyPolicy": "Privacybeleid",
+    "termsOfUse": "Gebruiksvoorwaarden"
   }
 }

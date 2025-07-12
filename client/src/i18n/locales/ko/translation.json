@@ -54,5 +54,13 @@
       "revenueAnalyticsDesc": "수익 및 유료 사용자에 대한 상세 통계",
       "viewAnalytics": "분석 보기"
     }
+  },
+  "footer": {
+    "description": "분실물을 찾거나 발견물을 신고하는 한국의 대표적인 플랫폼입니다.",
+    "quickLinks": "빠른 링크",
+    "legal": "법적 정보",
+    "legalNotice": "법적 고지",
+    "privacyPolicy": "개인정보 정책",
+    "termsOfUse": "이용 약관"
   }
 }

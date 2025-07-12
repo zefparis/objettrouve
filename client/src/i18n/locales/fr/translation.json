@@ -748,5 +748,13 @@
     "imageError": "Erreur d'image",
     "imageTypeError": "Format d'image non supporté",
     "imageSizeError": "L'image ne peut pas dépasser 5 MB"
+  },
+  "footer": {
+    "description": "La plateforme française de référence pour retrouver vos objets perdus ou déclarer vos trouvailles.",
+    "quickLinks": "Liens rapides",
+    "legal": "Informations légales",
+    "legalNotice": "Mentions légales",
+    "privacyPolicy": "Politique de confidentialité",
+    "termsOfUse": "Conditions générales d'utilisation"
   }
 }

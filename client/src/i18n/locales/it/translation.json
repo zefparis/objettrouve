@@ -129,5 +129,13 @@
       "revenueAnalyticsDesc": "Statistiche dettagliate su ricavi e utenti paganti",
       "viewAnalytics": "Vedi analisi"
     }
+  },
+  "footer": {
+    "description": "La piattaforma francese di riferimento per trovare i tuoi oggetti smarriti o segnalare i tuoi ritrovamenti.",
+    "quickLinks": "Collegamenti rapidi",
+    "legal": "Informazioni legali",
+    "legalNotice": "Note legali",
+    "privacyPolicy": "Politica sulla privacy",
+    "termsOfUse": "Termini di utilizzo"
   }
 }

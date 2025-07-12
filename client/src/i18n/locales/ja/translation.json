@@ -54,5 +54,13 @@
       "revenueAnalyticsDesc": "収益と有料ユーザーの詳細統計",
       "viewAnalytics": "分析を見る"
     }
+  },
+  "footer": {
+    "description": "紛失物を見つけるか発見物を報告するフランスの代表的なプラットフォーム。",
+    "quickLinks": "クイックリンク",
+    "legal": "法的情報",
+    "legalNotice": "法的通知",
+    "privacyPolicy": "プライバシーポリシー",
+    "termsOfUse": "利用規約"
   }
 }

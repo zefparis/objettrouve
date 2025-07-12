@@ -54,5 +54,13 @@
       "revenueAnalyticsDesc": "收入和付费用户的详细统计",
       "viewAnalytics": "查看分析"
     }
+  },
+  "footer": {
+    "description": "法国权威平台，帮助您找回丢失物品或报告发现物品。",
+    "quickLinks": "快速链接",
+    "legal": "法律信息",
+    "legalNotice": "法律声明",
+    "privacyPolicy": "隐私政策",
+    "termsOfUse": "使用条款"
   }
 }

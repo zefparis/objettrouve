@@ -129,5 +129,13 @@
       "revenueAnalyticsDesc": "Detaillierte Statistiken zu Umsätzen und zahlenden Nutzern",
       "viewAnalytics": "Analysen anzeigen"
     }
+  },
+  "footer": {
+    "description": "Die französische Referenzplattform, um Ihre verlorenen Gegenstände zu finden oder Ihre Funde zu melden.",
+    "quickLinks": "Schnelle Links",
+    "legal": "Rechtliche Hinweise",
+    "legalNotice": "Impressum",
+    "privacyPolicy": "Datenschutzerklärung",
+    "termsOfUse": "Nutzungsbedingungen"
   }
 }

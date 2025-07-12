@@ -712,5 +712,13 @@
       "publish": "Publicar Anuncio",
       "publishing": "Publicando..."
     }
+  },
+  "footer": {
+    "description": "La plataforma francesa de referencia para encontrar tus objetos perdidos o reportar tus hallazgos.",
+    "quickLinks": "Enlaces rápidos",
+    "legal": "Información legal",
+    "legalNotice": "Aviso legal",
+    "privacyPolicy": "Política de privacidad",
+    "termsOfUse": "Términos de uso"
   }
 }

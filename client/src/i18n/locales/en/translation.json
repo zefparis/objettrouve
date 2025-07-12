@@ -768,5 +768,13 @@
     "imageError": "Image error",
     "imageTypeError": "Unsupported image format",
     "imageSizeError": "Image cannot exceed 5 MB"
+  },
+  "footer": {
+    "description": "The French reference platform to find your lost items or report your findings.",
+    "quickLinks": "Quick Links",
+    "legal": "Legal Information",
+    "legalNotice": "Legal Notice",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfUse": "Terms of Use"
   }
 }
