@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { Check, Zap, Shield, Star, Mail, ImageIcon, MapPin } from "lucide-react";
 import { useAuth } from "@/hooks/useAuth";
 import { Link } from "wouter";
@@ -149,6 +149,9 @@ export default function Pricing() {
           <DialogContent className="sm:max-w-md">
             <DialogHeader>
               <DialogTitle>Choisissez un mode de paiement</DialogTitle>
+              <DialogDescription>
+                Sélectionnez votre méthode de paiement préférée pour {selectedService?.name}
+              </DialogDescription>
             </DialogHeader>
             <div className="space-y-4">
               <div className="grid grid-cols-2 gap-4">

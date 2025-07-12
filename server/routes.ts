@@ -375,7 +375,15 @@ export async function registerRoutes(app: Express): Promise<Server> {
   // PayPal routes
   app.post('/api/paypal/create-order', createPaypalOrder);
   app.post('/api/paypal/capture-order', capturePaypalOrder);
-  app.get('/api/paypal/load-default', loadPaypalDefault);
+  app.get('/api/paypal/client-token', async (req, res) => {
+    try {
+      const clientToken = await getClientToken();
+      res.json({ client_token: clientToken });
+    } catch (error) {
+      console.error('Error generating PayPal client token:', error);
+      res.status(500).json({ error: 'Erreur lors de la génération du token PayPal' });
+    }
+  });
 
   // Stripe routes
   app.post('/api/stripe/create-payment-intent', async (req, res) => {
