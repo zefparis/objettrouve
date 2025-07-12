@@ -183,11 +183,11 @@ export async function registerRoutes(app: Express): Promise<Server> {
   // Items routes
   app.post('/api/items', upload.single('image'), async (req: any, res) => {
     try {
-      if (!currentUserSession) {
+      if (!req.session.userId) {
         return res.status(401).json({ error: "Non authentifié" });
       }
 
-      const userId = currentUserSession.userId;
+      const userId = req.session.userId;
       
       const itemData = {
         ...req.body,
@@ -261,12 +261,12 @@ export async function registerRoutes(app: Express): Promise<Server> {
 
   app.put('/api/items/:id', upload.single('image'), async (req, res) => {
     try {
-      if (!currentUserSession) {
+      if (!req.session.userId) {
         return res.status(401).json({ error: "Non authentifié" });
       }
 
       const id = parseInt(req.params.id);
-      const userId = currentUserSession.userId;
+      const userId = req.session.userId;
       
       const updates: any = {
         ...req.body,
@@ -299,12 +299,12 @@ export async function registerRoutes(app: Express): Promise<Server> {
 
   app.delete('/api/items/:id', async (req, res) => {
     try {
-      if (!currentUserSession) {
+      if (!req.session.userId) {
         return res.status(401).json({ error: "Non authentifié" });
       }
 
       const id = parseInt(req.params.id);
-      const userId = currentUserSession.userId;
+      const userId = req.session.userId;
       
       const deleted = await storage.deleteItem(id, userId);
       
@@ -316,6 +316,38 @@ export async function registerRoutes(app: Express): Promise<Server> {
     } catch (error) {
       console.error("Error deleting item:", error);
       res.status(500).json({ message: "Erreur lors de la suppression de l'annonce" });
+    }
+  });
+
+  // User-specific routes
+  app.get('/api/user/items', async (req: any, res) => {
+    try {
+      if (!req.session.userId) {
+        return res.status(401).json({ error: "Non authentifié" });
+      }
+
+      const userId = req.session.userId;
+      const items = await storage.getItems({ userId });
+      res.json(items);
+    } catch (error) {
+      console.error("Error fetching user items:", error);
+      res.status(500).json({ message: "Erreur lors de la récupération des annonces" });
+    }
+  });
+
+  // Conversations routes
+  app.get('/api/conversations', async (req: any, res) => {
+    try {
+      if (!req.session.userId) {
+        return res.status(401).json({ error: "Non authentifié" });
+      }
+
+      const userId = req.session.userId;
+      const conversations = await storage.getConversations(userId);
+      res.json(conversations);
+    } catch (error) {
+      console.error("Error fetching conversations:", error);
+      res.status(500).json({ message: "Erreur lors de la récupération des conversations" });
     }
   });
 
