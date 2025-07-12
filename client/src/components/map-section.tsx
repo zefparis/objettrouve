@@ -32,8 +32,11 @@ export default function MapSection() {
               <p className="text-gray-700 text-base sm:text-lg mb-2">
                 {t("map.interactiveMap")}
               </p>
-              <p className="text-gray-500 text-xs sm:text-sm mb-4">
+              <p className="text-gray-500 text-xs sm:text-sm mb-2">
                 {t("map.integration")}
+              </p>
+              <p className="text-xs text-gray-400 mb-4">
+                API Google Maps: {import.meta.env.VITE_GOOGLE_MAPS_API_KEY ? '✅ Configurée' : '❌ Non configurée'}
               </p>
               <Link href="/map">
                 <Button className="bg-primary hover:bg-primary/90">
