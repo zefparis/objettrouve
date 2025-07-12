@@ -42,7 +42,7 @@ export function useAuth(): AuthState & {
   // Sign out mutation
   const signOutMutation = useMutation({
     mutationFn: async () => {
-      // In development mode, just clear everything and redirect
+      // In development mode, just clear everything 
       if (import.meta.env.DEV) {
         // Clear any local storage
         try {
@@ -82,20 +82,12 @@ export function useAuth(): AuthState & {
       // Clear all cached data
       queryClient.clear();
       
-      // Immediate redirect in development
-      if (import.meta.env.DEV) {
-        window.location.href = '/';
-      } else {
-        // Wait a moment for cleanup then redirect in production
-        setTimeout(() => {
-          window.location.href = '/';
-        }, 100);
-      }
+      // Don't redirect automatically - let the caller handle it
     },
     onError: (error) => {
       console.error("Sign out failed:", error);
-      // Force redirect even on error
-      window.location.href = '/';
+      // Clear cache even on error
+      queryClient.clear();
     },
   });
 

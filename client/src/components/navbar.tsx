@@ -147,10 +147,29 @@ export default function Navbar() {
                     </DropdownMenuItem>
                     <DropdownMenuItem onClick={async () => {
                       try {
-                        await signOut();
-                        window.location.href = "/";
+                        // In development mode, just clear everything and redirect
+                        if (import.meta.env.DEV) {
+                          // Clear local storage
+                          localStorage.clear();
+                          
+                          // Call server signout (fire and forget)
+                          fetch("/api/auth/signout", {
+                            method: "POST",
+                            headers: { "Content-Type": "application/json" },
+                            body: JSON.stringify({})
+                          }).catch(() => {});
+                          
+                          // Redirect immediately
+                          window.location.href = "/";
+                        } else {
+                          // In production, use the proper signout method
+                          await signOut();
+                          window.location.href = "/";
+                        }
                       } catch (error) {
                         console.error("Logout error:", error);
+                        // Force redirect even on error
+                        window.location.href = "/";
                       }
                     }}>
                       <LogOut className="h-4 w-4 mr-2" />
