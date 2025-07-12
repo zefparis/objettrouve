@@ -22,10 +22,10 @@ const languages = [
   { code: 'ko', name: '한국어', flag: 'KR', emoji: '🇰🇷' },
 ];
 
-const FlagIcon = ({ countryCode, emoji, className = "" }: { countryCode: string; emoji: string; className?: string }) => {
+const FlagIcon = ({ emoji, className = "" }: { emoji: string; className?: string }) => {
   return (
     <span className={`inline-flex items-center justify-center ${className}`}>
-      <span className="text-base" style={{ fontFamily: 'system-ui, emoji' }}>{emoji}</span>
+      <span className="text-base" style={{ fontFamily: 'Apple Color Emoji, Segoe UI Emoji, system-ui' }}>{emoji}</span>
     </span>
   );
 };
@@ -49,7 +49,6 @@ export default function LanguageSelector() {
           className="flex items-center gap-1 sm:gap-2 h-8 px-1 sm:px-2"
         >
           <FlagIcon 
-            countryCode={currentLanguage.flag} 
             emoji={currentLanguage.emoji}
             className="w-4 h-4" 
           />
@@ -65,7 +64,6 @@ export default function LanguageSelector() {
             className="flex items-center gap-3 cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-800"
           >
             <FlagIcon 
-              countryCode={language.flag} 
               emoji={language.emoji}
               className="w-5 h-5" 
             />
