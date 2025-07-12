@@ -11,7 +11,8 @@
     "features": "功能",
     "howItWorks": "使用方法",
     "contact": "联系",
-    "pricing": "价格"
+    "pricing": "价格",
+    "map": "Carte"
   },
   "hero": {
     "title": "找回您的丢失物品",
@@ -84,7 +85,15 @@
     "integration": "与Google Maps或OpenStreetMap集成",
     "lostItems": "丢失物品",
     "foundItems": "发现物品",
-    "fullscreen": "全屏查看"
+    "fullscreen": "全屏查看",
+    "loading": "Chargement de la carte...",
+    "loadError": "Erreur de chargement de la carte",
+    "loadErrorDesc": "Impossible de charger Google Maps. Vérifiez votre connexion.",
+    "myLocation": "Ma position",
+    "yourLocation": "Votre position",
+    "totalItems": "objets",
+    "viewOnMap": "Voir sur la carte",
+    "centerOnLocation": "Centrer sur cette position"
   },
   "howItWorks": {
     "title": "使用方法",
@@ -436,63 +445,68 @@
     "404_message": "La page que vous recherchez n'existe pas ou a été déplacée."
   },
   "publishNew": {
-    "title": "发布广告",
-    "subtitle": "报告丢失或发现的物品来帮助社区",
-    "loginNotice": "登录以发布广告并管理您的物品",
-    "lostTitle": "报告丢失物品",
-    "lostSubtitle": "丢失了什么吗？发布广告向社区寻求帮助",
-    "foundTitle": "报告发现物品",
-    "foundSubtitle": "发现了什么吗？帮助某人找回他们的物品",
-    "success": "广告发布成功！",
-    "error": "发布广告时出错",
+    "title": "Publier une annonce",
+    "subtitle": "Signalez un objet perdu ou trouvé",
+    "lostTitle": "Déclarer un objet perdu",
+    "foundTitle": "Déclarer un objet trouvé",
+    "lostSubtitle": "Aidez-nous à retrouver votre objet perdu",
+    "foundSubtitle": "Aidez quelqu'un à récupérer son objet",
+    "loginNotice": "Vous devez vous connecter pour publier une annonce. Remplissez le formulaire et connectez-vous lors de la soumission.",
     "type": {
-      "label": "广告类型",
-      "lost": "丢失物品",
-      "found": "发现物品"
+      "label": "Type d'annonce",
+      "lost": "Objet perdu",
+      "found": "Objet trouvé"
     },
     "form": {
       "title": {
-        "label": "广告标题",
-        "placeholder": "例如：在地铁中丢失的iPhone 13 Pro"
+        "label": "Titre de l'annonce",
+        "placeholder": "Ex: iPhone 12 Pro perdu dans le métro"
       },
       "description": {
-        "label": "详细描述",
-        "placeholder": "详细描述您的物品、情况等"
+        "label": "Description détaillée",
+        "placeholder": "Décrivez l'objet en détail, les circonstances de la perte/découverte..."
       },
       "category": {
-        "label": "类别",
-        "placeholder": "选择一个类别"
+        "label": "Catégorie",
+        "placeholder": "Sélectionnez une catégorie"
       },
       "location": {
-        "label": "位置",
-        "placeholder": "例如：巴黎15区，蒙帕纳斯车站"
+        "label": "Lieu",
+        "placeholder": "Où l'objet a été perdu/trouvé"
       },
       "dateOccurred": {
-        "label": "事发日期",
-        "placeholder": "您何时丢失/发现物品？"
+        "label": "Date de l'incident",
+        "placeholder": "Quand cela s'est-il passé ?"
       },
       "contactPhone": {
-        "label": "电话（可选）",
-        "placeholder": "06 00 00 00 00"
+        "label": "Téléphone de contact",
+        "placeholder": "+33 6 12 34 56 78"
       },
       "contactEmail": {
-        "label": "邮箱（可选）",
-        "placeholder": "您的@email.com"
+        "label": "Email de contact",
+        "placeholder": "votre@email.com"
       },
       "image": {
-        "label": "物品照片",
-        "placeholder": "添加照片以增加找回机会"
-      },
-      "submit": "发布广告",
-      "submitting": "发布中..."
+        "label": "Photo de l'objet",
+        "placeholder": "Ajoutez une photo pour aider à l'identification",
+        "upload": "Cliquez pour télécharger une photo",
+        "change": "Changer la photo",
+        "remove": "Supprimer la photo"
+      }
     },
     "validation": {
-      "title_required": "标题是必需的",
-      "description_min_length": "描述必须至少包含10个字符",
-      "category_required": "类别是必需的",
-      "location_required": "位置是必需的",
-      "date_required": "日期是必需的",
-      "email_invalid": "邮箱无效"
+      "title_required": "Le titre est requis",
+      "description_min_length": "La description doit contenir au moins 10 caractères",
+      "category_required": "Veuillez sélectionner une catégorie",
+      "location_required": "Le lieu est requis",
+      "date_required": "La date est requise",
+      "email_invalid": "Format d'email invalide"
+    },
+    "success": "Votre annonce a été publiée avec succès !",
+    "error": "Une erreur s'est produite lors de la publication",
+    "buttons": {
+      "publish": "Publier l'annonce",
+      "publishing": "Publication en cours..."
     }
   },
   "validation": {
@@ -687,71 +701,6 @@
       "LimitExceededException": "Trop de tentatives, réessayez plus tard",
       "InvalidParameterException": "Paramètre invalide",
       "TooManyRequestsException": "Trop de demandes, réessayez plus tard"
-    }
-  },
-  "publishNew": {
-    "title": "Publier une annonce",
-    "subtitle": "Signalez un objet perdu ou trouvé",
-    "lostTitle": "Déclarer un objet perdu",
-    "foundTitle": "Déclarer un objet trouvé",
-    "lostSubtitle": "Aidez-nous à retrouver votre objet perdu",
-    "foundSubtitle": "Aidez quelqu'un à récupérer son objet",
-    "loginNotice": "Vous devez vous connecter pour publier une annonce. Remplissez le formulaire et connectez-vous lors de la soumission.",
-    "type": {
-      "label": "Type d'annonce",
-      "lost": "Objet perdu",
-      "found": "Objet trouvé"
-    },
-    "form": {
-      "title": {
-        "label": "Titre de l'annonce",
-        "placeholder": "Ex: iPhone 12 Pro perdu dans le métro"
-      },
-      "description": {
-        "label": "Description détaillée",
-        "placeholder": "Décrivez l'objet en détail, les circonstances de la perte/découverte..."
-      },
-      "category": {
-        "label": "Catégorie",
-        "placeholder": "Sélectionnez une catégorie"
-      },
-      "location": {
-        "label": "Lieu",
-        "placeholder": "Où l'objet a été perdu/trouvé"
-      },
-      "dateOccurred": {
-        "label": "Date de l'incident",
-        "placeholder": "Quand cela s'est-il passé ?"
-      },
-      "contactPhone": {
-        "label": "Téléphone de contact",
-        "placeholder": "+33 6 12 34 56 78"
-      },
-      "contactEmail": {
-        "label": "Email de contact",
-        "placeholder": "votre@email.com"
-      },
-      "image": {
-        "label": "Photo de l'objet",
-        "placeholder": "Ajoutez une photo pour aider à l'identification",
-        "upload": "Cliquez pour télécharger une photo",
-        "change": "Changer la photo",
-        "remove": "Supprimer la photo"
-      }
-    },
-    "validation": {
-      "title_required": "Le titre est requis",
-      "description_min_length": "La description doit contenir au moins 10 caractères",
-      "category_required": "Veuillez sélectionner une catégorie",
-      "location_required": "Le lieu est requis",
-      "date_required": "La date est requise",
-      "email_invalid": "Format d'email invalide"
-    },
-    "success": "Votre annonce a été publiée avec succès !",
-    "error": "Une erreur s'est produite lors de la publication",
-    "buttons": {
-      "publish": "Publier l'annonce",
-      "publishing": "Publication en cours..."
     }
   },
   "profile": {

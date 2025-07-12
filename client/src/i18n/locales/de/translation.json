@@ -11,7 +11,8 @@
     "howItWorks": "Wie es funktioniert",
     "contact": "Kontakt",
     "pricing": "Preise",
-    "profile": "Profil"
+    "profile": "Profil",
+    "map": "Carte"
   },
   "pricing": {
     "title": "Preise",
@@ -230,7 +231,15 @@
     "integration": "Integration mit Google Maps oder OpenStreetMap",
     "lostItems": "Verlorene Gegenstände",
     "foundItems": "Gefundene Gegenstände",
-    "fullscreen": "Vollbild anzeigen"
+    "fullscreen": "Vollbild anzeigen",
+    "loading": "Chargement de la carte...",
+    "loadError": "Erreur de chargement de la carte",
+    "loadErrorDesc": "Impossible de charger Google Maps. Vérifiez votre connexion.",
+    "myLocation": "Ma position",
+    "yourLocation": "Votre position",
+    "totalItems": "objets",
+    "viewOnMap": "Voir sur la carte",
+    "centerOnLocation": "Centrer sur cette position"
   },
   "common": {
     "back": "Zurück",

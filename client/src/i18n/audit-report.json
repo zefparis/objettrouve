@@ -1,14 +1,104 @@
 {
   "missing": {
-    "en": [],
-    "es": [],
-    "pt": [],
-    "it": [],
-    "de": [],
-    "nl": [],
-    "zh": [],
-    "ja": [],
-    "ko": []
+    "en": [
+      "nav.map",
+      "map.loading",
+      "map.loadError",
+      "map.loadErrorDesc",
+      "map.myLocation",
+      "map.yourLocation",
+      "map.totalItems",
+      "map.viewOnMap",
+      "map.centerOnLocation"
+    ],
+    "es": [
+      "nav.map",
+      "map.loading",
+      "map.loadError",
+      "map.loadErrorDesc",
+      "map.myLocation",
+      "map.yourLocation",
+      "map.totalItems",
+      "map.viewOnMap",
+      "map.centerOnLocation"
+    ],
+    "pt": [
+      "nav.map",
+      "map.loading",
+      "map.loadError",
+      "map.loadErrorDesc",
+      "map.myLocation",
+      "map.yourLocation",
+      "map.totalItems",
+      "map.viewOnMap",
+      "map.centerOnLocation"
+    ],
+    "it": [
+      "nav.map",
+      "map.loading",
+      "map.loadError",
+      "map.loadErrorDesc",
+      "map.myLocation",
+      "map.yourLocation",
+      "map.totalItems",
+      "map.viewOnMap",
+      "map.centerOnLocation"
+    ],
+    "de": [
+      "nav.map",
+      "map.loading",
+      "map.loadError",
+      "map.loadErrorDesc",
+      "map.myLocation",
+      "map.yourLocation",
+      "map.totalItems",
+      "map.viewOnMap",
+      "map.centerOnLocation"
+    ],
+    "nl": [
+      "nav.map",
+      "map.loading",
+      "map.loadError",
+      "map.loadErrorDesc",
+      "map.myLocation",
+      "map.yourLocation",
+      "map.totalItems",
+      "map.viewOnMap",
+      "map.centerOnLocation"
+    ],
+    "zh": [
+      "nav.map",
+      "map.loading",
+      "map.loadError",
+      "map.loadErrorDesc",
+      "map.myLocation",
+      "map.yourLocation",
+      "map.totalItems",
+      "map.viewOnMap",
+      "map.centerOnLocation"
+    ],
+    "ja": [
+      "nav.map",
+      "map.loading",
+      "map.loadError",
+      "map.loadErrorDesc",
+      "map.myLocation",
+      "map.yourLocation",
+      "map.totalItems",
+      "map.viewOnMap",
+      "map.centerOnLocation"
+    ],
+    "ko": [
+      "nav.map",
+      "map.loading",
+      "map.loadError",
+      "map.loadErrorDesc",
+      "map.myLocation",
+      "map.yourLocation",
+      "map.totalItems",
+      "map.viewOnMap",
+      "map.centerOnLocation"
+    ]
   },
   "extra": {
     "en": [],
@@ -125,66 +215,66 @@
   "statistics": {
     "en": {
       "total": 533,
-      "missing": 0,
+      "missing": 9,
       "extra": 0,
       "empty": 0,
-      "completeness": 100
+      "completeness": 98
     },
     "es": {
       "total": 533,
-      "missing": 0,
+      "missing": 9,
       "extra": 0,
       "empty": 0,
-      "completeness": 100
+      "completeness": 98
     },
     "pt": {
       "total": 533,
-      "missing": 0,
+      "missing": 9,
       "extra": 0,
       "empty": 0,
-      "completeness": 100
+      "completeness": 98
     },
     "it": {
       "total": 547,
-      "missing": 0,
+      "missing": 9,
       "extra": 14,
       "empty": 0,
-      "completeness": 100
+      "completeness": 98
     },
     "de": {
       "total": 547,
-      "missing": 0,
+      "missing": 9,
       "extra": 14,
       "empty": 0,
-      "completeness": 100
+      "completeness": 98
     },
     "nl": {
       "total": 547,
-      "missing": 0,
+      "missing": 9,
       "extra": 14,
       "empty": 0,
-      "completeness": 100
+      "completeness": 98
     },
     "zh": {
       "total": 547,
-      "missing": 0,
+      "missing": 9,
       "extra": 14,
       "empty": 0,
-      "completeness": 100
+      "completeness": 98
     },
     "ja": {
       "total": 547,
-      "missing": 0,
+      "missing": 9,
       "extra": 14,
       "empty": 0,
-      "completeness": 100
+      "completeness": 98
     },
     "ko": {
       "total": 547,
-      "missing": 0,
+      "missing": 9,
       "extra": 14,
       "empty": 0,
-      "completeness": 100
+      "completeness": 98
     }
   }
 }
