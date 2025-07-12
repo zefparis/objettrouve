@@ -22,42 +22,14 @@ const languages = [
   { code: 'ko', name: '한국어', flag: 'KR', emoji: '🇰🇷' },
 ];
 
-// Test emoji support
-const testEmoji = () => {
-  const canvas = document.createElement('canvas');
-  const ctx = canvas.getContext('2d');
-  if (!ctx) return false;
-  
-  const testFlag = '🇫🇷';
-  ctx.fillText(testFlag, 0, 0);
-  
-  return canvas.toDataURL().length > 6000; // Simple emoji support test
-};
-
-const FlagIcon = ({ emoji, fallback, className = "" }: { emoji: string; fallback: string; className?: string }) => {
-  const [showEmoji, setShowEmoji] = useState(true);
-  
-  useEffect(() => {
-    // Test if emoji is supported
-    const supportsEmoji = testEmoji();
-    setShowEmoji(supportsEmoji);
-  }, []);
-  
-  if (!showEmoji) {
-    return (
-      <span className={`inline-flex items-center justify-center ${className} bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs font-bold rounded px-1`}>
-        {fallback}
-      </span>
-    );
-  }
-  
+const FlagIcon = ({ emoji, className = "" }: { emoji: string; className?: string }) => {
   return (
     <span className={`inline-flex items-center justify-center ${className}`}>
       <span 
-        className="text-base select-none" 
+        className="text-lg select-none" 
         style={{ 
           fontFamily: 'Apple Color Emoji, Segoe UI Emoji, Noto Color Emoji, system-ui',
-          fontSize: '16px',
+          fontSize: '18px',
           lineHeight: '1',
           WebkitFontSmoothing: 'antialiased'
         }}
@@ -88,8 +60,7 @@ export default function LanguageSelector() {
         >
           <FlagIcon 
             emoji={currentLanguage.emoji}
-            fallback={currentLanguage.flag}
-            className="w-4 h-4" 
+            className="w-5 h-5" 
           />
           <span className="hidden sm:inline text-xs sm:text-sm font-medium">{currentLanguage.flag}</span>
           <ChevronDown className="h-3 w-3 sm:h-4 sm:w-4" />
@@ -104,11 +75,9 @@ export default function LanguageSelector() {
           >
             <FlagIcon 
               emoji={language.emoji}
-              fallback={language.flag}
-              className="w-5 h-5" 
+              className="w-6 h-6" 
             />
-            <span className="text-xs font-medium text-gray-600 dark:text-gray-400">{language.flag}</span>
-            <span className="text-sm">{language.name}</span>
+            <span className="text-sm font-medium">{language.name}</span>
             {language.code === i18n.language && (
               <div className="ml-auto h-2 w-2 rounded-full bg-blue-500"></div>
             )}
