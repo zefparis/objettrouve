@@ -734,5 +734,14 @@
       "location": "Barcelona Eixample",
       "content": "Encontré una cartera y gracias a esta plataforma, pude devolvérsela a su dueño rápidamente. ¡El sistema es simple y eficaz!"
     }
+  },
+  "map": {
+    "title": "Mapa Interactivo",
+    "subtitle": "Visualiza objetos perdidos y encontrados cerca de ti",
+    "interactiveMap": "Mapa interactivo con geolocalización",
+    "integration": "Integración con Google Maps o OpenStreetMap",
+    "lostItems": "Objetos perdidos",
+    "foundItems": "Objetos encontrados",
+    "fullscreen": "Ver en pantalla completa"
   }
 }

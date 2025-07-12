@@ -97,6 +97,22 @@
     "iLostSomething": "Ich habe etwas verloren",
     "iFoundSomething": "Ich habe etwas gefunden"
   },
+  "howItWorks": {
+    "title": "Wie es funktioniert?",
+    "subtitle": "Finden Sie Ihre verlorenen Gegenstände in 3 einfachen Schritten",
+    "step1": {
+      "title": "Melden Sie Ihren Gegenstand",
+      "description": "Veröffentlichen Sie eine Anzeige mit Foto und detaillierter Beschreibung"
+    },
+    "step2": {
+      "title": "Suchen und filtern",
+      "description": "Nutzen Sie unsere Filter, um schnell zu finden, was Sie suchen"
+    },
+    "step3": {
+      "title": "Kontaktieren und abholen",
+      "description": "Tauschen Sie sich sicher mit anderen Benutzern aus"
+    }
+  },
   "home": {
     "recentItems": "Kürzlich gemeldete Objekte",
     "recentItemsDesc": "Entdecken Sie die neuesten verlorenen und gefundenen Gegenstände in Ihrer Umgebung",
@@ -151,5 +167,14 @@
       "location": "München Zentrum",
       "content": "Ich habe eine Brieftasche gefunden und dank dieser Plattform konnte ich sie schnell an ihren Besitzer zurückgeben. Das System ist einfach und effektiv!"
     }
+  },
+  "map": {
+    "title": "Interaktive Karte",
+    "subtitle": "Visualisieren Sie verlorene und gefundene Gegenstände in Ihrer Nähe",
+    "interactiveMap": "Interaktive Karte mit Geolokalisierung",
+    "integration": "Integration mit Google Maps oder OpenStreetMap",
+    "lostItems": "Verlorene Gegenstände",
+    "foundItems": "Gefundene Gegenstände",
+    "fullscreen": "Vollbild anzeigen"
   }
 }

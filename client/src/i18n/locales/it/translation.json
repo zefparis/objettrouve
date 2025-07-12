@@ -97,6 +97,22 @@
     "iLostSomething": "Ho perso qualcosa",
     "iFoundSomething": "Ho trovato qualcosa"
   },
+  "howItWorks": {
+    "title": "Come funziona?",
+    "subtitle": "Trova i tuoi oggetti smarriti in 3 semplici passi",
+    "step1": {
+      "title": "Segnala il tuo oggetto",
+      "description": "Pubblica un annuncio con foto e descrizione dettagliata"
+    },
+    "step2": {
+      "title": "Cerca e filtra",
+      "description": "Usa i nostri filtri per trovare rapidamente quello che cerchi"
+    },
+    "step3": {
+      "title": "Contatta e recupera",
+      "description": "Scambia messaggi in sicurezza con altri utenti"
+    }
+  },
   "home": {
     "recentItems": "Oggetti segnalati di recente",
     "recentItemsDesc": "Scopri gli ultimi oggetti smarriti e trovati nella tua zona",
@@ -151,5 +167,14 @@
       "location": "Milano Brera",
       "content": "Ho trovato un portafoglio e grazie a questa piattaforma, sono riuscito a restituirlo al suo proprietario rapidamente. Il sistema è semplice ed efficace!"
     }
+  },
+  "map": {
+    "title": "Mappa Interattiva",
+    "subtitle": "Visualizza oggetti smarriti e trovati vicino a te",
+    "interactiveMap": "Mappa interattiva con geolocalizzazione",
+    "integration": "Integrazione con Google Maps o OpenStreetMap",
+    "lostItems": "Oggetti smarriti",
+    "foundItems": "Oggetti trovati",
+    "fullscreen": "Visualizza a schermo intero"
   }
 }

@@ -76,5 +76,30 @@
       "location": "上海浦东",
       "content": "我找到了一个钱包，多亏了这个平台，我能够快速将它归还给失主。这个系统简单有效！"
     }
+  },
+  "map": {
+    "title": "互动地图",
+    "subtitle": "可视化您附近的丢失和发现物品",
+    "interactiveMap": "带有地理定位的互动地图",
+    "integration": "与Google Maps或OpenStreetMap集成",
+    "lostItems": "丢失物品",
+    "foundItems": "发现物品",
+    "fullscreen": "全屏查看"
+  },
+  "howItWorks": {
+    "title": "使用方法",
+    "subtitle": "通过3个简单步骤找回您的丢失物品",
+    "step1": {
+      "title": "报告您的物品",
+      "description": "发布带有照片和详细描述的广告"
+    },
+    "step2": {
+      "title": "搜索和筛选",
+      "description": "使用我们的筛选器快速找到您要找的东西"
+    },
+    "step3": {
+      "title": "联系和取回",
+      "description": "与其他用户安全交流"
+    }
   }
 }

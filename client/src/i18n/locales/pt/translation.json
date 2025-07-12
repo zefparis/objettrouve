@@ -743,5 +743,14 @@
       "location": "Porto Baixa",
       "content": "Encontrei uma carteira e graças a esta plataforma, consegui devolvê-la ao seu dono rapidamente. O sistema é simples e eficaz!"
     }
+  },
+  "map": {
+    "title": "Mapa Interativo",
+    "subtitle": "Visualize objetos perdidos e encontrados perto de você",
+    "interactiveMap": "Mapa interativo com geolocalização",
+    "integration": "Integração com Google Maps ou OpenStreetMap",
+    "lostItems": "Objetos perdidos",
+    "foundItems": "Objetos encontrados",
+    "fullscreen": "Ver em tela cheia"
   }
 }

@@ -76,5 +76,30 @@
       "location": "Rotterdam Centrum",
       "content": "Ik vond een portemonnee en dankzij dit platform kon ik hem snel terugbezorgen aan de eigenaar. Het systeem is eenvoudig en effectief!"
     }
+  },
+  "map": {
+    "title": "Interactieve Kaart",
+    "subtitle": "Visualiseer verloren en gevonden objecten bij u in de buurt",
+    "interactiveMap": "Interactieve kaart met geolocatie",
+    "integration": "Integratie met Google Maps of OpenStreetMap",
+    "lostItems": "Verloren items",
+    "foundItems": "Gevonden items",
+    "fullscreen": "Volledig scherm weergeven"
+  },
+  "howItWorks": {
+    "title": "Hoe het werkt",
+    "subtitle": "Vind uw verloren items in 3 eenvoudige stappen",
+    "step1": {
+      "title": "Meld uw item",
+      "description": "Plaats een advertentie met foto en gedetailleerde beschrijving"
+    },
+    "step2": {
+      "title": "Zoek en filter",
+      "description": "Gebruik onze filters om snel te vinden wat u zoekt"
+    },
+    "step3": {
+      "title": "Contact en ophalen",
+      "description": "Wissel veilig berichten uit met andere gebruikers"
+    }
   }
 }

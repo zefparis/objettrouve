@@ -76,5 +76,30 @@
       "location": "大阪梅田",
       "content": "財布を発見し、このプラットフォームのおかげで持ち主に迅速に返すことができました。システムはシンプルで効果的です！"
     }
+  },
+  "map": {
+    "title": "インタラクティブマップ",
+    "subtitle": "お近くの紛失・発見物を可視化",
+    "interactiveMap": "位置情報付きインタラクティブマップ",
+    "integration": "Google MapsまたはOpenStreetMapとの統合",
+    "lostItems": "紛失物",
+    "foundItems": "発見物",
+    "fullscreen": "フルスクリーン表示"
+  },
+  "howItWorks": {
+    "title": "使い方",
+    "subtitle": "3つの簡単なステップで紛失物を見つけましょう",
+    "step1": {
+      "title": "アイテムを報告",
+      "description": "写真と詳細な説明で広告を投稿"
+    },
+    "step2": {
+      "title": "検索とフィルター",
+      "description": "フィルターを使って探しているものを素早く見つける"
+    },
+    "step3": {
+      "title": "連絡と回収",
+      "description": "他のユーザーと安全にやり取り"
+    }
   }
 }
