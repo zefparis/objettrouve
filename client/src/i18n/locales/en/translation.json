@@ -776,5 +776,19 @@
     "legalNotice": "Legal Notice",
     "privacyPolicy": "Privacy Policy",
     "termsOfUse": "Terms of Use"
+  },
+  "testimonials": {
+    "title": "Testimonials",
+    "subtitle": "Discover the reunion stories of our community",
+    "testimonial1": {
+      "name": "Marie L.",
+      "location": "Paris 15th",
+      "content": "I found my phone lost in the subway in less than 24 hours! Someone had found it and posted it on ObjetsTrouvés. The integrated chat allowed us to get in touch easily."
+    },
+    "testimonial2": {
+      "name": "Pierre M.",
+      "location": "Lyon 2nd",
+      "content": "I found a wallet and thanks to this platform, I was able to return it to its owner quickly. The system is simple and effective!"
+    }
   }
 }

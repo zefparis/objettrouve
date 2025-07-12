@@ -720,5 +720,19 @@
     "legalNotice": "Aviso legal",
     "privacyPolicy": "Política de privacidad",
     "termsOfUse": "Términos de uso"
+  },
+  "testimonials": {
+    "title": "Testimonios",
+    "subtitle": "Descubre las historias de reencuentro de nuestra comunidad",
+    "testimonial1": {
+      "name": "María L.",
+      "location": "Madrid Centro",
+      "content": "¡Encontré mi teléfono perdido en el metro en menos de 24 horas! Alguien lo había encontrado y lo publicó en ObjetsTrouvés. El chat integrado nos permitió ponernos en contacto fácilmente."
+    },
+    "testimonial2": {
+      "name": "Pedro M.",
+      "location": "Barcelona Eixample",
+      "content": "Encontré una cartera y gracias a esta plataforma, pude devolvérsela a su dueño rápidamente. ¡El sistema es simple y eficaz!"
+    }
   }
 }

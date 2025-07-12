@@ -137,5 +137,19 @@
     "legalNotice": "Impressum",
     "privacyPolicy": "Datenschutzerklärung",
     "termsOfUse": "Nutzungsbedingungen"
+  },
+  "testimonials": {
+    "title": "Erfahrungsberichte",
+    "subtitle": "Entdecken Sie die Wiederfindungsgeschichten unserer Gemeinschaft",
+    "testimonial1": {
+      "name": "Marie L.",
+      "location": "Berlin Mitte",
+      "content": "Ich habe mein in der U-Bahn verlorenes Handy in weniger als 24 Stunden wiedergefunden! Jemand hatte es gefunden und auf ObjetsTrouvés veröffentlicht. Der integrierte Chat ermöglichte es uns, leicht in Kontakt zu treten."
+    },
+    "testimonial2": {
+      "name": "Peter M.",
+      "location": "München Zentrum",
+      "content": "Ich habe eine Brieftasche gefunden und dank dieser Plattform konnte ich sie schnell an ihren Besitzer zurückgeben. Das System ist einfach und effektiv!"
+    }
   }
 }

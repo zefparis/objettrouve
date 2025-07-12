@@ -242,7 +242,17 @@
   },
   "testimonials": {
     "title": "Témoignages",
-    "subtitle": "Découvrez les histoires de retrouvailles de notre communauté"
+    "subtitle": "Découvrez les histoires de retrouvailles de notre communauté",
+    "testimonial1": {
+      "name": "Marie L.",
+      "location": "Paris 15e",
+      "content": "J'ai retrouvé mon téléphone perdu dans le métro en moins de 24h ! Une personne l'avait trouvé et publié sur ObjetsTrouvés. Le chat intégré nous a permis de nous mettre en contact facilement."
+    },
+    "testimonial2": {
+      "name": "Pierre M.",
+      "location": "Lyon 2e",
+      "content": "J'ai trouvé un portefeuille et grâce à cette plateforme, j'ai pu le restituer à son propriétaire rapidement. Le système est simple et efficace !"
+    }
   },
   "common": {
     "loading": "Chargement...",

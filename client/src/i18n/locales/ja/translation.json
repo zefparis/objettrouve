@@ -62,5 +62,19 @@
     "legalNotice": "法的通知",
     "privacyPolicy": "プライバシーポリシー",
     "termsOfUse": "利用規約"
+  },
+  "testimonials": {
+    "title": "お客様の声",
+    "subtitle": "コミュニティの再会物語をご覧ください",
+    "testimonial1": {
+      "name": "山田花子",
+      "location": "東京渋谷",
+      "content": "地下鉄で紛失したスマートフォンを24時間以内に発見できました！誰かが見つけてObjetsTrouvésに投稿してくれました。統合チャットで簡単に連絡を取ることができました。"
+    },
+    "testimonial2": {
+      "name": "田中太郎",
+      "location": "大阪梅田",
+      "content": "財布を発見し、このプラットフォームのおかげで持ち主に迅速に返すことができました。システムはシンプルで効果的です！"
+    }
   }
 }

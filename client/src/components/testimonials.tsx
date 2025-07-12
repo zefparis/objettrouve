@@ -7,15 +7,15 @@ export default function Testimonials() {
   const { t } = useTranslation();
   const testimonials = [
     {
-      name: "Marie L.",
-      location: "Paris 15e",
-      content: "J'ai retrouvé mon téléphone perdu dans le métro en moins de 24h ! Une personne l'avait trouvé et publié sur ObjetsTrouvés. Le chat intégré nous a permis de nous mettre en contact facilement.",
+      name: t("testimonials.testimonial1.name"),
+      location: t("testimonials.testimonial1.location"),
+      content: t("testimonials.testimonial1.content"),
       rating: 5,
     },
     {
-      name: "Pierre M.",
-      location: "Lyon 2e",
-      content: "J'ai trouvé un portefeuille et grâce à cette plateforme, j'ai pu le restituer à son propriétaire rapidement. Le système est simple et efficace !",
+      name: t("testimonials.testimonial2.name"),
+      location: t("testimonials.testimonial2.location"),
+      content: t("testimonials.testimonial2.content"),
       rating: 5,
     },
   ];

@@ -62,5 +62,19 @@
     "legalNotice": "Juridische kennisgeving",
     "privacyPolicy": "Privacybeleid",
     "termsOfUse": "Gebruiksvoorwaarden"
+  },
+  "testimonials": {
+    "title": "Getuigenissen",
+    "subtitle": "Ontdek de herenigingsverhalen van onze gemeenschap",
+    "testimonial1": {
+      "name": "Marie L.",
+      "location": "Amsterdam Centrum",
+      "content": "Ik vond mijn telefoon die ik in de metro kwijt was in minder dan 24 uur! Iemand had hem gevonden en op ObjetsTrouvés geplaatst. De geïntegreerde chat stelde ons in staat om gemakkelijk contact te maken."
+    },
+    "testimonial2": {
+      "name": "Peter M.",
+      "location": "Rotterdam Centrum",
+      "content": "Ik vond een portemonnee en dankzij dit platform kon ik hem snel terugbezorgen aan de eigenaar. Het systeem is eenvoudig en effectief!"
+    }
   }
 }

@@ -62,5 +62,19 @@
     "legalNotice": "法律声明",
     "privacyPolicy": "隐私政策",
     "termsOfUse": "使用条款"
+  },
+  "testimonials": {
+    "title": "用户评价",
+    "subtitle": "发现我们社区的重聚故事",
+    "testimonial1": {
+      "name": "李小梅",
+      "location": "北京朝阳",
+      "content": "我在地铁丢失的手机在24小时内就找到了！有人发现后在ObjetsTrouvés上发布了。集成聊天功能让我们很容易取得联系。"
+    },
+    "testimonial2": {
+      "name": "王先生",
+      "location": "上海浦东",
+      "content": "我找到了一个钱包，多亏了这个平台，我能够快速将它归还给失主。这个系统简单有效！"
+    }
   }
 }

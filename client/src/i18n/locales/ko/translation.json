@@ -62,5 +62,19 @@
     "legalNotice": "법적 고지",
     "privacyPolicy": "개인정보 정책",
     "termsOfUse": "이용 약관"
+  },
+  "testimonials": {
+    "title": "고객 후기",
+    "subtitle": "우리 커뮤니티의 재회 이야기를 만나보세요",
+    "testimonial1": {
+      "name": "김민지",
+      "location": "서울 강남",
+      "content": "지하철에서 잃어버린 휴대폰을 24시간 이내에 찾았습니다! 누군가가 발견해서 ObjetsTrouvés에 게시해 주었습니다. 통합 채팅을 통해 쉽게 연락할 수 있었습니다."
+    },
+    "testimonial2": {
+      "name": "박상현",
+      "location": "부산 해운대",
+      "content": "지갑을 발견했고, 이 플랫폼 덕분에 주인에게 빠르게 돌려줄 수 있었습니다. 시스템이 간단하고 효과적입니다!"
+    }
   }
 }

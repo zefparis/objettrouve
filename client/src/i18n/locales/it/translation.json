@@ -137,5 +137,19 @@
     "legalNotice": "Note legali",
     "privacyPolicy": "Politica sulla privacy",
     "termsOfUse": "Termini di utilizzo"
+  },
+  "testimonials": {
+    "title": "Testimonianze",
+    "subtitle": "Scopri le storie di ritrovamento della nostra comunità",
+    "testimonial1": {
+      "name": "Maria L.",
+      "location": "Roma Centro",
+      "content": "Ho ritrovato il mio telefono perso nella metro in meno di 24 ore! Qualcuno l'aveva trovato e pubblicato su ObjetsTrouvés. La chat integrata ci ha permesso di metterci in contatto facilmente."
+    },
+    "testimonial2": {
+      "name": "Pietro M.",
+      "location": "Milano Brera",
+      "content": "Ho trovato un portafoglio e grazie a questa piattaforma, sono riuscito a restituirlo al suo proprietario rapidamente. Il sistema è semplice ed efficace!"
+    }
   }
 }
