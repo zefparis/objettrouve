@@ -366,7 +366,11 @@
     "anonymousUser": "Usuário anônimo",
     "startConversation": "Iniciar conversa",
     "contactOwner": "Contactar proprietário",
-    "interested": "Estou interessado neste item"
+    "interested": "Estou interessado neste item",
+    "conversation": "Conversa",
+    "loadingMessages": "Carregando mensagens...",
+    "itemDetails": "Detalhes do item",
+    "messageSentDesc": "Sua mensagem foi enviada com sucesso"
   },
   "itemDetail": {
     "description": "Descrição",

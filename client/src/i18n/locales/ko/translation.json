@@ -366,7 +366,11 @@
     "anonymousUser": "익명 사용자",
     "startConversation": "대화 시작",
     "contactOwner": "소유자에게 연락",
-    "interested": "이 물건에 관심이 있습니다"
+    "interested": "이 물건에 관심이 있습니다",
+    "conversation": "대화",
+    "loadingMessages": "메시지 로딩 중...",
+    "itemDetails": "아이템 세부정보",
+    "messageSentDesc": "메시지가 성공적으로 전송되었습니다"
   },
   "itemDetail": {
     "description": "설명",

@@ -366,7 +366,11 @@
     "anonymousUser": "Anonymous user",
     "startConversation": "Start conversation",
     "contactOwner": "Contact owner",
-    "interested": "I'm interested in this item"
+    "interested": "I'm interested in this item",
+    "conversation": "Conversation",
+    "loadingMessages": "Loading messages...",
+    "itemDetails": "Item details",
+    "messageSentDesc": "Your message has been sent successfully"
   },
   "itemDetail": {
     "description": "Description",

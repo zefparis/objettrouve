@@ -366,7 +366,11 @@
     "anonymousUser": "匿名ユーザー",
     "startConversation": "会話を開始",
     "contactOwner": "所有者に連絡",
-    "interested": "この物品に興味があります"
+    "interested": "この物品に興味があります",
+    "conversation": "会話",
+    "loadingMessages": "メッセージを読み込み中...",
+    "itemDetails": "アイテム詳細",
+    "messageSentDesc": "メッセージが正常に送信されました"
   },
   "itemDetail": {
     "description": "説明",

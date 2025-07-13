@@ -366,7 +366,11 @@
     "anonymousUser": "Anonieme gebruiker",
     "startConversation": "Gesprek starten",
     "contactOwner": "Eigenaar contacteren",
-    "interested": "Ik ben geïnteresseerd in dit item"
+    "interested": "Ik ben geïnteresseerd in dit item",
+    "conversation": "Gesprek",
+    "loadingMessages": "Berichten laden...",
+    "itemDetails": "Item details",
+    "messageSentDesc": "Uw bericht is succesvol verzonden"
   },
   "itemDetail": {
     "description": "Beschrijving",

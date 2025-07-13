@@ -366,7 +366,11 @@
     "anonymousUser": "匿名用户",
     "startConversation": "开始对话",
     "contactOwner": "联系所有者",
-    "interested": "我对这个物品感兴趣"
+    "interested": "我对这个物品感兴趣",
+    "conversation": "对话",
+    "loadingMessages": "正在加载消息...",
+    "itemDetails": "物品详情",
+    "messageSentDesc": "您的消息已成功发送"
   },
   "itemDetail": {
     "description": "描述",
