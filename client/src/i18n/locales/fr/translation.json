@@ -253,6 +253,29 @@
       "viewAnalytics": "Voir les analyses"
     }
   },
+  "admin": {
+    "unauthorized": {
+      "title": "Accès non autorisé",
+      "message": "Vous devez être administrateur pour accéder à cette page"
+    },
+    "title": "Administration",
+    "dashboard": "Tableau de bord administrateur",
+    "users": "Utilisateurs",
+    "items": "Objets",
+    "orders": "Commandes",
+    "revenue": "Revenus",
+    "analytics": "Analyses",
+    "settings": "Paramètres",
+    "login": "Connexion administrateur",
+    "logout": "Déconnexion",
+    "welcome": "Bienvenue dans l'administration",
+    "stats": {
+      "totalUsers": "Utilisateurs totaux",
+      "totalItems": "Objets totaux",
+      "totalOrders": "Commandes totales",
+      "totalRevenue": "Revenus totaux"
+    }
+  },
   "common": {
     "viewDetails": "Voir les détails",
     "backToHome": "Retour à l'accueil",

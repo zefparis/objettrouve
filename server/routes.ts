@@ -418,6 +418,25 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
+  // Admin routes
+  app.get('/api/admin/stats', async (req, res) => {
+    try {
+      const stats = await storage.getStats();
+      const orders = await storage.getOrders();
+      const totalRevenue = orders.reduce((sum, order) => sum + order.amount, 0);
+      
+      res.json({
+        totalUsers: stats.users,
+        totalItems: stats.totalItems,
+        totalOrders: orders.length,
+        totalRevenue: totalRevenue / 100, // Convert from cents to euros
+      });
+    } catch (error) {
+      console.error("Error fetching admin stats:", error);
+      res.status(500).json({ message: "Erreur lors de la récupération des statistiques" });
+    }
+  });
+
   // Serve uploaded files
   app.use('/uploads', express.static('uploads'));
 

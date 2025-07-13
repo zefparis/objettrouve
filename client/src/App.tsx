@@ -19,6 +19,7 @@ import HowItWorks from "@/pages/how-it-works";
 import Contact from "@/pages/contact";
 import Profile from "@/pages/profile";
 import AdminDashboard from "@/pages/admin-dashboard";
+import Admin from "@/pages/admin";
 import Pricing from "@/pages/pricing";
 import Checkout from "@/pages/checkout";
 import PaymentSuccess from "@/pages/payment-success";
@@ -44,7 +45,8 @@ function Router() {
       <Route path="/checkout" component={Checkout} />
       <Route path="/payment-success" component={PaymentSuccess} />
       <Route path="/map" component={MapPage} />
-      <Route path="/admin" component={AdminDashboard} />
+      <Route path="/admin" component={Admin} />
+      <Route path="/admin-dashboard" component={AdminDashboard} />
       <Route path="/" component={isLoading || !isAuthenticated ? Landing : Home} />
       <Route component={NotFound} />
     </Switch>
