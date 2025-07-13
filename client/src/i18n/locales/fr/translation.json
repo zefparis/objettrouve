@@ -138,7 +138,8 @@
     "contact": "Contact"
   },
   "common": {
-    "viewDetails": "Voir les détails"
+    "viewDetails": "Voir les détails",
+    "backToHome": "Retour à l'accueil"
   },
   "howItWorks": {
     "title": "Comment ça marche",

@@ -138,7 +138,8 @@
     "contact": "연락처"
   },
   "common": {
-    "viewDetails": "세부 정보 보기"
+    "viewDetails": "세부 정보 보기",
+    "backToHome": "홈으로 돌아가기"
   },
   "howItWorks": {
     "title": "사용 방법",

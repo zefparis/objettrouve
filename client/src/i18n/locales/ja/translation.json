@@ -138,7 +138,8 @@
     "contact": "連絡先"
   },
   "common": {
-    "viewDetails": "詳細を見る"
+    "viewDetails": "詳細を見る",
+    "backToHome": "ホームに戻る"
   },
   "howItWorks": {
     "title": "使い方",

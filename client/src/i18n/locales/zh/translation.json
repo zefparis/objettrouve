@@ -138,7 +138,8 @@
     "contact": "联系"
   },
   "common": {
-    "viewDetails": "查看详情"
+    "viewDetails": "查看详情",
+    "backToHome": "返回首页"
   },
   "howItWorks": {
     "title": "使用方法",

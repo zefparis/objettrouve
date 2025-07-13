@@ -4,9 +4,10 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
-import { MapPin, Mail, Phone, Clock } from 'lucide-react';
+import { MapPin, Mail, Phone, Clock, Home } from 'lucide-react';
 import { useState } from 'react';
 import { useToast } from '@/hooks/use-toast';
+import { Link } from 'wouter';
 
 export default function Contact() {
   const { t } = useTranslation();
@@ -38,6 +39,16 @@ export default function Contact() {
     <div className="min-h-screen bg-gray-50 py-12">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
+          {/* Back to Home Button */}
+          <div className="mb-6">
+            <Link href="/">
+              <Button variant="ghost" className="flex items-center gap-2">
+                <Home className="w-4 h-4" />
+                {t('common.backToHome')}
+              </Button>
+            </Link>
+          </div>
+          
           {/* Header */}
           <div className="text-center mb-12">
             <h1 className="text-4xl font-bold text-gray-900 mb-4">
