@@ -301,7 +301,32 @@
     "recentItemsDesc": "发现社区报告的最新物品",
     "viewAllItems": "查看所有物品",
     "ctaTitle": "准备找回您丢失的物品了吗？",
-    "ctaSubtitle": "加入我们的社区，立即开始"
+    "ctaSubtitle": "加入我们的社区，立即开始",
+    "premium": {
+      "badge": "高级服务",
+      "title": "优化您的搜索",
+      "subtitle": "发现我们的高级服务，提高您找到物品的机会",
+      "pricing": "灵活定价",
+      "pricingDesc": "查看适合您需求的费率",
+      "viewPricing": "查看价格",
+      "paymentSystem": "安全支付",
+      "paymentSystemDesc": "集成Stripe和PayPal的支付系统",
+      "viewCheckout": "查看支付",
+      "adminDashboard": "管理仪表板",
+      "adminDashboardDesc": "完全访问统计数据和管理",
+      "viewAdmin": "查看管理",
+      "paymentConfirm": "付款确认",
+      "paymentConfirmDesc": "购买后的确认页面",
+      "viewConfirm": "查看确认",
+      "revenueAnalytics": "收入分析",
+      "revenueAnalyticsDesc": "详细的收入统计",
+      "viewAnalytics": "查看分析",
+      "apiPayment": "支付API",
+      "apiPaymentDesc": "完整的API文档",
+      "viewDocs": "查看文档",
+      "features": "高级功能",
+      "secure": "安全"
+    }
   },
   "howItWorks": {
     "badge": "用户指南",

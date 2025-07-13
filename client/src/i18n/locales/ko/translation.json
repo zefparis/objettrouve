@@ -301,7 +301,32 @@
     "recentItemsDesc": "커뮤니티에서 신고한 최신 물건들을 발견하세요",
     "viewAllItems": "모든 항목 보기",
     "ctaTitle": "분실된 물건을 찾을 준비가 되셨나요?",
-    "ctaSubtitle": "커뮤니티에 참여하고 지금 시작하세요"
+    "ctaSubtitle": "커뮤니티에 참여하고 지금 시작하세요",
+    "premium": {
+      "badge": "프리미엄 서비스",
+      "title": "검색을 최적화하세요",
+      "subtitle": "프리미엄 서비스를 발견하여 아이템을 찾을 기회를 향상시키세요",
+      "pricing": "유연한 가격책정",
+      "pricingDesc": "귀하의 필요에 맞는 요금을 확인하세요",
+      "viewPricing": "가격 보기",
+      "paymentSystem": "안전한 결제",
+      "paymentSystemDesc": "Stripe와 PayPal이 통합된 결제 시스템",
+      "viewCheckout": "결제 보기",
+      "adminDashboard": "관리 대시보드",
+      "adminDashboardDesc": "통계 및 관리에 대한 완전한 액세스",
+      "viewAdmin": "관리 보기",
+      "paymentConfirm": "결제 확인",
+      "paymentConfirmDesc": "구매 후 확인 페이지",
+      "viewConfirm": "확인 보기",
+      "revenueAnalytics": "수익 분석",
+      "revenueAnalyticsDesc": "상세한 수익 통계",
+      "viewAnalytics": "분석 보기",
+      "apiPayment": "결제 API",
+      "apiPaymentDesc": "완전한 API 문서",
+      "viewDocs": "문서 보기",
+      "features": "프리미엄 기능",
+      "secure": "보안"
+    }
   },
   "howItWorks": {
     "badge": "사용자 가이드",

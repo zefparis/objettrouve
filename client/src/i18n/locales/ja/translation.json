@@ -301,7 +301,32 @@
     "recentItemsDesc": "コミュニティによって報告された最新のアイテムを発見",
     "viewAllItems": "すべてのアイテムを見る",
     "ctaTitle": "紛失したアイテムを見つける準備はできていますか？",
-    "ctaSubtitle": "コミュニティに参加して今すぐ始めましょう"
+    "ctaSubtitle": "コミュニティに参加して今すぐ始めましょう",
+    "premium": {
+      "badge": "プレミアムサービス",
+      "title": "検索を最適化",
+      "subtitle": "プレミアムサービスを発見して、アイテムを見つける機会を向上させましょう",
+      "pricing": "柔軟な価格設定",
+      "pricingDesc": "ニーズに合わせた料金をご確認ください",
+      "viewPricing": "料金を見る",
+      "paymentSystem": "安全な支払い",
+      "paymentSystemDesc": "StripeとPayPalを統合した支払いシステム",
+      "viewCheckout": "支払いを見る",
+      "adminDashboard": "管理ダッシュボード",
+      "adminDashboardDesc": "統計と管理への完全なアクセス",
+      "viewAdmin": "管理を見る",
+      "paymentConfirm": "支払い確認",
+      "paymentConfirmDesc": "購入後の確認ページ",
+      "viewConfirm": "確認を見る",
+      "revenueAnalytics": "収益分析",
+      "revenueAnalyticsDesc": "詳細な収益統計",
+      "viewAnalytics": "分析を見る",
+      "apiPayment": "支払いAPI",
+      "apiPaymentDesc": "完全なAPIドキュメント",
+      "viewDocs": "ドキュメントを見る",
+      "features": "プレミアム機能",
+      "secure": "セキュア"
+    }
   },
   "howItWorks": {
     "badge": "ユーザーガイド",

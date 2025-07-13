@@ -301,7 +301,32 @@
     "recentItemsDesc": "Discover the latest items reported by the community",
     "viewAllItems": "View all items",
     "ctaTitle": "Ready to find your lost items?",
-    "ctaSubtitle": "Join our community and start now"
+    "ctaSubtitle": "Join our community and start now",
+    "premium": {
+      "badge": "Premium Services",
+      "title": "Optimize your searches",
+      "subtitle": "Discover our premium services to improve your chances of finding your items",
+      "pricing": "Flexible pricing",
+      "pricingDesc": "Check our rates adapted to your needs",
+      "viewPricing": "View pricing",
+      "paymentSystem": "Secure payment",
+      "paymentSystemDesc": "Integrated payment system with Stripe and PayPal",
+      "viewCheckout": "View payment",
+      "adminDashboard": "Admin dashboard",
+      "adminDashboardDesc": "Full access to statistics and management",
+      "viewAdmin": "View admin",
+      "paymentConfirm": "Payment confirmation",
+      "paymentConfirmDesc": "Confirmation page after purchase",
+      "viewConfirm": "View confirmation",
+      "revenueAnalytics": "Revenue analytics",
+      "revenueAnalyticsDesc": "Detailed revenue statistics",
+      "viewAnalytics": "View analytics",
+      "apiPayment": "Payment API",
+      "apiPaymentDesc": "Complete API documentation",
+      "viewDocs": "View documentation",
+      "features": "Premium features",
+      "secure": "Secure"
+    }
   },
   "howItWorks": {
     "badge": "User Guide",

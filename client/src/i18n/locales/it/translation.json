@@ -301,7 +301,32 @@
     "recentItemsDesc": "Scopri gli ultimi oggetti segnalati dalla comunità",
     "viewAllItems": "Vedi tutti gli oggetti",
     "ctaTitle": "Pronto a trovare i tuoi oggetti persi?",
-    "ctaSubtitle": "Unisciti alla nostra comunità e inizia ora"
+    "ctaSubtitle": "Unisciti alla nostra comunità e inizia ora",
+    "premium": {
+      "badge": "Servizi Premium",
+      "title": "Ottimizza le tue ricerche",
+      "subtitle": "Scopri i nostri servizi premium per migliorare le tue possibilità di trovare i tuoi oggetti",
+      "pricing": "Prezzi flessibili",
+      "pricingDesc": "Consulta le nostre tariffe adattate alle tue esigenze",
+      "viewPricing": "Vedi prezzi",
+      "paymentSystem": "Pagamento sicuro",
+      "paymentSystemDesc": "Sistema di pagamento integrato con Stripe e PayPal",
+      "viewCheckout": "Vedi pagamento",
+      "adminDashboard": "Dashboard admin",
+      "adminDashboardDesc": "Accesso completo a statistiche e gestione",
+      "viewAdmin": "Vedi admin",
+      "paymentConfirm": "Conferma pagamento",
+      "paymentConfirmDesc": "Pagina di conferma dopo l'acquisto",
+      "viewConfirm": "Vedi conferma",
+      "revenueAnalytics": "Analisi ricavi",
+      "revenueAnalyticsDesc": "Statistiche dettagliate dei ricavi",
+      "viewAnalytics": "Vedi analisi",
+      "apiPayment": "API di pagamento",
+      "apiPaymentDesc": "Documentazione completa dell'API",
+      "viewDocs": "Vedi documentazione",
+      "features": "Funzionalità premium",
+      "secure": "Sicuro"
+    }
   },
   "howItWorks": {
     "badge": "Guida utente",

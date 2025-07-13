@@ -301,7 +301,32 @@
     "recentItemsDesc": "Ontdek de nieuwste items gerapporteerd door de community",
     "viewAllItems": "Alle items bekijken",
     "ctaTitle": "Klaar om uw verloren items te vinden?",
-    "ctaSubtitle": "Sluit u aan bij onze community en begin nu"
+    "ctaSubtitle": "Sluit u aan bij onze community en begin nu",
+    "premium": {
+      "badge": "Premium Services",
+      "title": "Optimaliseer uw zoekopdrachten",
+      "subtitle": "Ontdek onze premium services om uw kansen te verbeteren om uw items te vinden",
+      "pricing": "Flexibele prijzen",
+      "pricingDesc": "Bekijk onze tarieven aangepast aan uw behoeften",
+      "viewPricing": "Prijzen bekijken",
+      "paymentSystem": "Veilige betaling",
+      "paymentSystemDesc": "Geïntegreerd betalingssysteem met Stripe en PayPal",
+      "viewCheckout": "Betaling bekijken",
+      "adminDashboard": "Admin dashboard",
+      "adminDashboardDesc": "Volledige toegang tot statistieken en beheer",
+      "viewAdmin": "Admin bekijken",
+      "paymentConfirm": "Betalingsbevestiging",
+      "paymentConfirmDesc": "Bevestigingspagina na aankoop",
+      "viewConfirm": "Bevestiging bekijken",
+      "revenueAnalytics": "Inkomstenanalyse",
+      "revenueAnalyticsDesc": "Gedetailleerde inkomstenstatistieken",
+      "viewAnalytics": "Analyse bekijken",
+      "apiPayment": "Betalings-API",
+      "apiPaymentDesc": "Volledige API-documentatie",
+      "viewDocs": "Documentatie bekijken",
+      "features": "Premium functies",
+      "secure": "Veilig"
+    }
   },
   "howItWorks": {
     "badge": "Gebruikershandleiding",

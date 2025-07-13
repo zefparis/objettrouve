@@ -301,7 +301,32 @@
     "recentItemsDesc": "Entdecken Sie die neuesten von der Community gemeldeten Gegenstände",
     "viewAllItems": "Alle Gegenstände anzeigen",
     "ctaTitle": "Bereit, Ihre verlorenen Gegenstände zu finden?",
-    "ctaSubtitle": "Treten Sie unserer Community bei und beginnen Sie jetzt"
+    "ctaSubtitle": "Treten Sie unserer Community bei und beginnen Sie jetzt",
+    "premium": {
+      "badge": "Premium-Services",
+      "title": "Optimieren Sie Ihre Suchen",
+      "subtitle": "Entdecken Sie unsere Premium-Services, um Ihre Chancen zu verbessern, Ihre Gegenstände zu finden",
+      "pricing": "Flexible Preise",
+      "pricingDesc": "Schauen Sie sich unsere an Ihre Bedürfnisse angepassten Tarife an",
+      "viewPricing": "Preise anzeigen",
+      "paymentSystem": "Sichere Zahlung",
+      "paymentSystemDesc": "Integriertes Zahlungssystem mit Stripe und PayPal",
+      "viewCheckout": "Zahlung anzeigen",
+      "adminDashboard": "Admin-Dashboard",
+      "adminDashboardDesc": "Vollzugriff auf Statistiken und Verwaltung",
+      "viewAdmin": "Admin anzeigen",
+      "paymentConfirm": "Zahlungsbestätigung",
+      "paymentConfirmDesc": "Bestätigungsseite nach dem Kauf",
+      "viewConfirm": "Bestätigung anzeigen",
+      "revenueAnalytics": "Umsatzanalyse",
+      "revenueAnalyticsDesc": "Detaillierte Umsatzstatistiken",
+      "viewAnalytics": "Analyse anzeigen",
+      "apiPayment": "Zahlungs-API",
+      "apiPaymentDesc": "Vollständige API-Dokumentation",
+      "viewDocs": "Dokumentation anzeigen",
+      "features": "Premium-Funktionen",
+      "secure": "Sicher"
+    }
   },
   "howItWorks": {
     "badge": "Benutzerhandbuch",
