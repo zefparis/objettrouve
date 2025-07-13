@@ -184,5 +184,20 @@
     "foundItems": "Gevonden items",
     "totalItems": "Totaal items",
     "fullscreen": "Volledig scherm"
+  },
+  "footer": {
+    "description": "Uw vertrouwde platform voor het vinden en melden van verloren items. Herverbind met uw kostbare bezittingen via onze actieve gemeenschap.",
+    "quickLinks": "Snelle links",
+    "support": "Ondersteuning",
+    "legal": "Juridisch",
+    "followUs": "Volg ons",
+    "allRightsReserved": "Alle rechten voorbehouden.",
+    "home": "Home",
+    "about": "Over ons",
+    "contact": "Contact",
+    "help": "Help",
+    "faq": "FAQ",
+    "privacy": "Privacy",
+    "terms": "Voorwaarden"
   }
 }

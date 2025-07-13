@@ -184,5 +184,20 @@
     "foundItems": "発見アイテム",
     "totalItems": "アイテム総数",
     "fullscreen": "フルスクリーン"
+  },
+  "footer": {
+    "description": "紛失物の発見と報告のための信頼できるプラットフォーム。アクティブなコミュニティを通じて大切な所有物と再びつながりましょう。",
+    "quickLinks": "クイックリンク",
+    "support": "サポート",
+    "legal": "法的",
+    "followUs": "フォローする",
+    "allRightsReserved": "無断転載を禁じます。",
+    "home": "ホーム",
+    "about": "について",
+    "contact": "連絡先",
+    "help": "ヘルプ",
+    "faq": "よくある質問",
+    "privacy": "プライバシー",
+    "terms": "利用規約"
   }
 }

@@ -184,5 +184,20 @@
     "foundItems": "找到物品",
     "totalItems": "物品总数",
     "fullscreen": "全屏"
+  },
+  "footer": {
+    "description": "您值得信赖的平台，用于查找和报告丢失物品。通过我们活跃的社区重新连接您的珍贵物品。",
+    "quickLinks": "快速链接",
+    "support": "支持",
+    "legal": "法律",
+    "followUs": "关注我们",
+    "allRightsReserved": "版权所有。",
+    "home": "首页",
+    "about": "关于",
+    "contact": "联系",
+    "help": "帮助",
+    "faq": "常见问题",
+    "privacy": "隐私",
+    "terms": "条款"
   }
 }

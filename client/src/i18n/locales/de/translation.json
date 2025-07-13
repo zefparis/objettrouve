@@ -184,5 +184,20 @@
     "foundItems": "Gefundene Gegenstände",
     "totalItems": "Gesamtzahl der Gegenstände",
     "fullscreen": "Vollbild"
+  },
+  "footer": {
+    "description": "Ihre vertrauensvolle Plattform zum Finden und Melden verlorener Gegenstände. Verbinden Sie sich wieder mit Ihren wertvollen Besitztümern durch unsere aktive Community.",
+    "quickLinks": "Schnelllinks",
+    "support": "Support",
+    "legal": "Rechtliches",
+    "followUs": "Folgen Sie uns",
+    "allRightsReserved": "Alle Rechte vorbehalten.",
+    "home": "Startseite",
+    "about": "Über uns",
+    "contact": "Kontakt",
+    "help": "Hilfe",
+    "faq": "FAQ",
+    "privacy": "Datenschutz",
+    "terms": "Bedingungen"
   }
 }

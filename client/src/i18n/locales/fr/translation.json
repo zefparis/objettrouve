@@ -184,5 +184,20 @@
     "foundItems": "Objets trouvés",
     "totalItems": "Total des objets",
     "fullscreen": "Plein écran"
+  },
+  "footer": {
+    "description": "Votre plateforme de confiance pour retrouver et signaler les objets perdus. Reconnectez-vous avec vos biens précieux grâce à notre communauté active.",
+    "quickLinks": "Liens rapides",
+    "support": "Support",
+    "legal": "Légal",
+    "followUs": "Suivez-nous",
+    "allRightsReserved": "Tous droits réservés.",
+    "home": "Accueil",
+    "about": "À propos",
+    "contact": "Contact",
+    "help": "Aide",
+    "faq": "FAQ",
+    "privacy": "Confidentialité",
+    "terms": "Conditions"
   }
 }

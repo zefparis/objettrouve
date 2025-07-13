@@ -184,5 +184,20 @@
     "foundItems": "Found items",
     "totalItems": "Total items",
     "fullscreen": "Fullscreen"
+  },
+  "footer": {
+    "description": "Your trusted platform for finding and reporting lost items. Reconnect with your precious belongings through our active community.",
+    "quickLinks": "Quick Links",
+    "support": "Support",
+    "legal": "Legal",
+    "followUs": "Follow Us",
+    "allRightsReserved": "All rights reserved.",
+    "home": "Home",
+    "about": "About",
+    "contact": "Contact",
+    "help": "Help",
+    "faq": "FAQ",
+    "privacy": "Privacy",
+    "terms": "Terms"
   }
 }

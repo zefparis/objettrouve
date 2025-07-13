@@ -184,5 +184,20 @@
     "foundItems": "Itens encontrados",
     "totalItems": "Total de itens",
     "fullscreen": "Tela cheia"
+  },
+  "footer": {
+    "description": "Sua plataforma confiável para encontrar e relatar itens perdidos. Reconecte-se com seus pertences preciosos através da nossa comunidade ativa.",
+    "quickLinks": "Links rápidos",
+    "support": "Suporte",
+    "legal": "Legal",
+    "followUs": "Siga-nos",
+    "allRightsReserved": "Todos os direitos reservados.",
+    "home": "Início",
+    "about": "Sobre",
+    "contact": "Contato",
+    "help": "Ajuda",
+    "faq": "FAQ",
+    "privacy": "Privacidade",
+    "terms": "Termos"
   }
 }

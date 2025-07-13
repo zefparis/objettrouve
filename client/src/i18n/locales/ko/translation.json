@@ -184,5 +184,20 @@
     "foundItems": "습득물",
     "totalItems": "전체 항목",
     "fullscreen": "전체 화면"
+  },
+  "footer": {
+    "description": "분실물을 찾고 신고하는 신뢰할 수 있는 플랫폼입니다. 활발한 커뮤니티를 통해 소중한 물건들과 다시 연결하세요.",
+    "quickLinks": "빠른 링크",
+    "support": "지원",
+    "legal": "법적",
+    "followUs": "팔로우",
+    "allRightsReserved": "모든 권리 보유.",
+    "home": "홈",
+    "about": "소개",
+    "contact": "연락처",
+    "help": "도움말",
+    "faq": "자주 묻는 질문",
+    "privacy": "개인정보",
+    "terms": "약관"
   }
 }
