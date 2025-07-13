@@ -207,5 +207,29 @@
     "legalNotice": "Aviso Legal",
     "privacyPolicy": "Política de Privacidade",
     "termsOfUse": "Termos de Uso"
+  },
+  "contact": {
+    "title": "Contate-nos",
+    "subtitle": "Estamos aqui para ajudá-lo. Sinta-se à vontade para nos contatar para qualquer pergunta ou assistência.",
+    "address": "Endereço",
+    "email": "Email",
+    "phone": "Telefone",
+    "hours": "Horário de Funcionamento",
+    "mondayFriday": "Segunda - Sexta",
+    "saturday": "Sábado",
+    "sunday": "Domingo",
+    "closed": "Fechado",
+    "sendMessage": "Enviar Mensagem",
+    "sendMessageDesc": "Preencha o formulário abaixo e entraremos em contato o mais breve possível.",
+    "name": "Nome",
+    "namePlaceholder": "Seu nome completo",
+    "emailPlaceholder": "seu@email.com",
+    "subject": "Assunto",
+    "subjectPlaceholder": "Assunto da sua mensagem",
+    "message": "Mensagem",
+    "messagePlaceholder": "Descreva sua solicitação ou pergunta...",
+    "sendButton": "Enviar Mensagem",
+    "messageSent": "Mensagem Enviada",
+    "messageSentDesc": "Recebemos sua mensagem e responderemos em breve."
   }
 }

@@ -207,5 +207,29 @@
     "legalNotice": "Informativa Legale",
     "privacyPolicy": "Politica sulla Privacy",
     "termsOfUse": "Termini di Utilizzo"
+  },
+  "contact": {
+    "title": "Contattaci",
+    "subtitle": "Siamo qui per aiutarti. Non esitare a contattarci per qualsiasi domanda o assistenza.",
+    "address": "Indirizzo",
+    "email": "Email",
+    "phone": "Telefono",
+    "hours": "Orari di Apertura",
+    "mondayFriday": "Lunedì - Venerdì",
+    "saturday": "Sabato",
+    "sunday": "Domenica",
+    "closed": "Chiuso",
+    "sendMessage": "Invia Messaggio",
+    "sendMessageDesc": "Compila il modulo sottostante e ti risponderemo il prima possibile.",
+    "name": "Nome",
+    "namePlaceholder": "Il tuo nome completo",
+    "emailPlaceholder": "tua@email.com",
+    "subject": "Oggetto",
+    "subjectPlaceholder": "Oggetto del tuo messaggio",
+    "message": "Messaggio",
+    "messagePlaceholder": "Descrivi la tua richiesta o domanda...",
+    "sendButton": "Invia Messaggio",
+    "messageSent": "Messaggio Inviato",
+    "messageSentDesc": "Abbiamo ricevuto il tuo messaggio e ti risponderemo presto."
   }
 }

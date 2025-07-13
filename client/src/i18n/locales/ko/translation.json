@@ -207,5 +207,29 @@
     "legalNotice": "법적 고지",
     "privacyPolicy": "개인정보 보호정책",
     "termsOfUse": "이용약관"
+  },
+  "contact": {
+    "title": "문의하기",
+    "subtitle": "저희가 도와드리겠습니다. 질문이나 도움이 필요하시면 언제든지 연락해 주세요.",
+    "address": "주소",
+    "email": "이메일",
+    "phone": "전화번호",
+    "hours": "운영시간",
+    "mondayFriday": "월요일 - 금요일",
+    "saturday": "토요일",
+    "sunday": "일요일",
+    "closed": "휴무",
+    "sendMessage": "메시지 보내기",
+    "sendMessageDesc": "아래 양식을 작성해 주시면 최대한 빨리 답변드리겠습니다.",
+    "name": "이름",
+    "namePlaceholder": "성함",
+    "emailPlaceholder": "이메일@주소.com",
+    "subject": "제목",
+    "subjectPlaceholder": "메시지 제목",
+    "message": "메시지",
+    "messagePlaceholder": "문의 내용을 설명해 주세요...",
+    "sendButton": "메시지 보내기",
+    "messageSent": "메시지가 전송되었습니다",
+    "messageSentDesc": "메시지를 받았으며 곧 답변드리겠습니다."
   }
 }

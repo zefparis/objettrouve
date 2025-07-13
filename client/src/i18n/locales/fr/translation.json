@@ -207,5 +207,29 @@
     "legalNotice": "Mentions légales",
     "privacyPolicy": "Politique de confidentialité",
     "termsOfUse": "Conditions d'utilisation"
+  },
+  "contact": {
+    "title": "Contactez-nous",
+    "subtitle": "Nous sommes là pour vous aider. N'hésitez pas à nous contacter pour toute question ou assistance.",
+    "address": "Adresse",
+    "email": "Email",
+    "phone": "Téléphone",
+    "hours": "Heures d'ouverture",
+    "mondayFriday": "Lundi - Vendredi",
+    "saturday": "Samedi",
+    "sunday": "Dimanche",
+    "closed": "Fermé",
+    "sendMessage": "Envoyer un message",
+    "sendMessageDesc": "Remplissez le formulaire ci-dessous et nous vous répondrons dans les plus brefs délais.",
+    "name": "Nom",
+    "namePlaceholder": "Votre nom complet",
+    "emailPlaceholder": "votre@email.com",
+    "subject": "Sujet",
+    "subjectPlaceholder": "Sujet de votre message",
+    "message": "Message",
+    "messagePlaceholder": "Décrivez votre demande ou question...",
+    "sendButton": "Envoyer le message",
+    "messageSent": "Message envoyé",
+    "messageSentDesc": "Nous avons reçu votre message et vous répondrons sous peu."
   }
 }

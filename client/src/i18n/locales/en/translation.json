@@ -207,5 +207,29 @@
     "legalNotice": "Legal Notice",
     "privacyPolicy": "Privacy Policy",
     "termsOfUse": "Terms of Use"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "We are here to help you. Feel free to contact us for any questions or assistance.",
+    "address": "Address",
+    "email": "Email",
+    "phone": "Phone",
+    "hours": "Opening Hours",
+    "mondayFriday": "Monday - Friday",
+    "saturday": "Saturday",
+    "sunday": "Sunday",
+    "closed": "Closed",
+    "sendMessage": "Send Message",
+    "sendMessageDesc": "Fill out the form below and we will get back to you as soon as possible.",
+    "name": "Name",
+    "namePlaceholder": "Your full name",
+    "emailPlaceholder": "your@email.com",
+    "subject": "Subject",
+    "subjectPlaceholder": "Subject of your message",
+    "message": "Message",
+    "messagePlaceholder": "Describe your request or question...",
+    "sendButton": "Send Message",
+    "messageSent": "Message Sent",
+    "messageSentDesc": "We have received your message and will respond shortly."
   }
 }

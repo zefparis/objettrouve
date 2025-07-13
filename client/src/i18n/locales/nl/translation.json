@@ -207,5 +207,29 @@
     "legalNotice": "Juridische Kennisgeving",
     "privacyPolicy": "Privacybeleid",
     "termsOfUse": "Gebruiksvoorwaarden"
+  },
+  "contact": {
+    "title": "Neem contact op",
+    "subtitle": "We zijn er om u te helpen. Aarzel niet om contact met ons op te nemen voor vragen of assistentie.",
+    "address": "Adres",
+    "email": "Email",
+    "phone": "Telefoon",
+    "hours": "Openingstijden",
+    "mondayFriday": "Maandag - Vrijdag",
+    "saturday": "Zaterdag",
+    "sunday": "Zondag",
+    "closed": "Gesloten",
+    "sendMessage": "Bericht versturen",
+    "sendMessageDesc": "Vul het onderstaande formulier in en we nemen zo snel mogelijk contact met u op.",
+    "name": "Naam",
+    "namePlaceholder": "Uw volledige naam",
+    "emailPlaceholder": "uw@email.com",
+    "subject": "Onderwerp",
+    "subjectPlaceholder": "Onderwerp van uw bericht",
+    "message": "Bericht",
+    "messagePlaceholder": "Beschrijf uw verzoek of vraag...",
+    "sendButton": "Bericht versturen",
+    "messageSent": "Bericht verzonden",
+    "messageSentDesc": "We hebben uw bericht ontvangen en zullen binnenkort reageren."
   }
 }

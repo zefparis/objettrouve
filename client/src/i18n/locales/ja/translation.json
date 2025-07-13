@@ -207,5 +207,29 @@
     "legalNotice": "法的告知",
     "privacyPolicy": "プライバシーポリシー",
     "termsOfUse": "利用規約"
+  },
+  "contact": {
+    "title": "お問い合わせ",
+    "subtitle": "私たちはあなたをサポートします。ご質問やサポートが必要な場合は、お気軽にお問い合わせください。",
+    "address": "住所",
+    "email": "メール",
+    "phone": "電話",
+    "hours": "営業時間",
+    "mondayFriday": "月曜日 - 金曜日",
+    "saturday": "土曜日",
+    "sunday": "日曜日",
+    "closed": "休業",
+    "sendMessage": "メッセージを送信",
+    "sendMessageDesc": "以下のフォームにご記入いただけば、できるだけ早くご回答いたします。",
+    "name": "名前",
+    "namePlaceholder": "お名前",
+    "emailPlaceholder": "あなたの@メール.com",
+    "subject": "件名",
+    "subjectPlaceholder": "メッセージの件名",
+    "message": "メッセージ",
+    "messagePlaceholder": "お問い合わせ内容を記載してください...",
+    "sendButton": "メッセージを送信",
+    "messageSent": "メッセージを送信しました",
+    "messageSentDesc": "お問い合わせを受け付けました。近日中にご回答いたします。"
   }
 }

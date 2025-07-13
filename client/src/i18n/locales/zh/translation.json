@@ -207,5 +207,29 @@
     "legalNotice": "法律声明",
     "privacyPolicy": "隐私政策",
     "termsOfUse": "使用条款"
+  },
+  "contact": {
+    "title": "联系我们",
+    "subtitle": "我们在这里为您提供帮助。如有任何问题或需要帮助，请随时联系我们。",
+    "address": "地址",
+    "email": "电子邮件",
+    "phone": "电话",
+    "hours": "营业时间",
+    "mondayFriday": "周一 - 周五",
+    "saturday": "周六",
+    "sunday": "周日",
+    "closed": "休息",
+    "sendMessage": "发送消息",
+    "sendMessageDesc": "请填写下面的表格，我们会尽快回复您。",
+    "name": "姓名",
+    "namePlaceholder": "您的全名",
+    "emailPlaceholder": "您的@邮箱.com",
+    "subject": "主题",
+    "subjectPlaceholder": "您的消息主题",
+    "message": "消息",
+    "messagePlaceholder": "描述您的请求或问题...",
+    "sendButton": "发送消息",
+    "messageSent": "消息已发送",
+    "messageSentDesc": "我们已收到您的消息，会很快回复您。"
   }
 }

@@ -207,5 +207,29 @@
     "legalNotice": "Rechtlicher Hinweis",
     "privacyPolicy": "Datenschutzrichtlinie",
     "termsOfUse": "Nutzungsbedingungen"
+  },
+  "contact": {
+    "title": "Kontaktieren Sie uns",
+    "subtitle": "Wir sind hier, um Ihnen zu helfen. Zögern Sie nicht, uns für Fragen oder Unterstützung zu kontaktieren.",
+    "address": "Adresse",
+    "email": "Email",
+    "phone": "Telefon",
+    "hours": "Öffnungszeiten",
+    "mondayFriday": "Montag - Freitag",
+    "saturday": "Samstag",
+    "sunday": "Sonntag",
+    "closed": "Geschlossen",
+    "sendMessage": "Nachricht senden",
+    "sendMessageDesc": "Füllen Sie das untenstehende Formular aus und wir werden uns so schnell wie möglich bei Ihnen melden.",
+    "name": "Name",
+    "namePlaceholder": "Ihr vollständiger Name",
+    "emailPlaceholder": "ihre@email.com",
+    "subject": "Betreff",
+    "subjectPlaceholder": "Betreff Ihrer Nachricht",
+    "message": "Nachricht",
+    "messagePlaceholder": "Beschreiben Sie Ihre Anfrage oder Frage...",
+    "sendButton": "Nachricht senden",
+    "messageSent": "Nachricht gesendet",
+    "messageSentDesc": "Wir haben Ihre Nachricht erhalten und werden in Kürze antworten."
   }
 }
