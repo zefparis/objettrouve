@@ -51,12 +51,17 @@ export async function registerRoutes(app: Express): Promise<Server> {
 
       const result = await signUp(email, password, firstName, lastName);
       
+      // Check if signup was successful
+      if (!result.success || !result.user) {
+        return res.status(400).json({ message: result.message });
+      }
+      
       // Store user ID in session
       req.session.userId = result.user.id;
       req.session.user = result.user;
       
       res.json({
-        message: "Compte créé avec succès",
+        message: result.message,
         user: result.user,
       });
     } catch (error: any) {
@@ -76,12 +81,17 @@ export async function registerRoutes(app: Express): Promise<Server> {
 
       const result = await signIn(email, password);
       
+      // Check if signin was successful
+      if (!result.success || !result.user) {
+        return res.status(400).json({ message: result.message });
+      }
+      
       // Store user ID in session
       req.session.userId = result.user.id;
       req.session.user = result.user;
 
       res.json({
-        message: "Connexion réussie",
+        message: result.message,
         user: result.user,
       });
     } catch (error: any) {
