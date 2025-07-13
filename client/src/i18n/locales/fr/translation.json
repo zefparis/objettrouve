@@ -171,5 +171,16 @@
   "categories": {
     "title": "Catégories populaires",
     "subtitle": "Parcourez les objets par catégorie"
+  },
+  "map": {
+    "title": "Carte interactive",
+    "subtitle": "Explorez les objets perdus et trouvés près de chez vous",
+    "interactiveMap": "Carte interactive",
+    "integration": "Intégration",
+    "viewOnMap": "Voir sur la carte",
+    "lostItems": "Objets perdus",
+    "foundItems": "Objets trouvés",
+    "totalItems": "Total des objets",
+    "fullscreen": "Plein écran"
   }
 }

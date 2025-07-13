@@ -171,5 +171,16 @@
   "categories": {
     "title": "인기 카테고리",
     "subtitle": "카테고리별로 항목 찾아보기"
+  },
+  "map": {
+    "title": "인터랙티브 지도",
+    "subtitle": "근처의 분실물과 습득물을 탐색하세요",
+    "interactiveMap": "인터랙티브 지도",
+    "integration": "통합",
+    "viewOnMap": "지도에서 보기",
+    "lostItems": "분실물",
+    "foundItems": "습득물",
+    "totalItems": "전체 항목",
+    "fullscreen": "전체 화면"
   }
 }

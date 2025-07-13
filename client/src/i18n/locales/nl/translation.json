@@ -171,5 +171,16 @@
   "categories": {
     "title": "Populaire categorieën",
     "subtitle": "Blader door items per categorie"
+  },
+  "map": {
+    "title": "Interactieve kaart",
+    "subtitle": "Ontdek verloren en gevonden items bij u in de buurt",
+    "interactiveMap": "Interactieve kaart",
+    "integration": "Integratie",
+    "viewOnMap": "Bekijk op kaart",
+    "lostItems": "Verloren items",
+    "foundItems": "Gevonden items",
+    "totalItems": "Totaal items",
+    "fullscreen": "Volledig scherm"
   }
 }

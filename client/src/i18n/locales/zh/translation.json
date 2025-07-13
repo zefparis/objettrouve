@@ -171,5 +171,16 @@
   "categories": {
     "title": "热门类别",
     "subtitle": "按类别浏览物品"
+  },
+  "map": {
+    "title": "交互式地图",
+    "subtitle": "探索您附近的失物和拾物",
+    "interactiveMap": "交互式地图",
+    "integration": "集成",
+    "viewOnMap": "在地图上查看",
+    "lostItems": "丢失物品",
+    "foundItems": "找到物品",
+    "totalItems": "物品总数",
+    "fullscreen": "全屏"
   }
 }

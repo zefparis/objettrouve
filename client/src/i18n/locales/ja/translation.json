@@ -171,5 +171,16 @@
   "categories": {
     "title": "人気カテゴリ",
     "subtitle": "カテゴリ別でアイテムを閲覧"
+  },
+  "map": {
+    "title": "インタラクティブマップ",
+    "subtitle": "お近くの紛失物・拾得物を探索",
+    "interactiveMap": "インタラクティブマップ",
+    "integration": "統合",
+    "viewOnMap": "マップで表示",
+    "lostItems": "紛失アイテム",
+    "foundItems": "発見アイテム",
+    "totalItems": "アイテム総数",
+    "fullscreen": "フルスクリーン"
   }
 }

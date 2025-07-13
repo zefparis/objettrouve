@@ -171,5 +171,16 @@
   "categories": {
     "title": "Categorias populares",
     "subtitle": "Navegar itens por categoria"
+  },
+  "map": {
+    "title": "Mapa interativo",
+    "subtitle": "Explore itens perdidos e encontrados perto de você",
+    "interactiveMap": "Mapa interativo",
+    "integration": "Integração",
+    "viewOnMap": "Ver no mapa",
+    "lostItems": "Itens perdidos",
+    "foundItems": "Itens encontrados",
+    "totalItems": "Total de itens",
+    "fullscreen": "Tela cheia"
   }
 }

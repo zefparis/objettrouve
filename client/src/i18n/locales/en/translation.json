@@ -171,5 +171,16 @@
   "categories": {
     "title": "Popular categories",
     "subtitle": "Browse items by category"
+  },
+  "map": {
+    "title": "Interactive map",
+    "subtitle": "Explore lost and found items near you",
+    "interactiveMap": "Interactive map",
+    "integration": "Integration",
+    "viewOnMap": "View on map",
+    "lostItems": "Lost items",
+    "foundItems": "Found items",
+    "totalItems": "Total items",
+    "fullscreen": "Fullscreen"
   }
 }
