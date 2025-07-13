@@ -407,5 +407,75 @@
     },
     "deleteAccount": "Account verwijderen",
     "deleteAccountDesc": "Verwijder je account en alle gegevens permanent"
+  },
+  "howItWorks": {
+    "badge": "Gebruikershandleiding",
+    "title": "Hoe het werkt",
+    "subtitle": "Ontdek hoe je je verloren voorwerpen terugvindt of anderen helpt in een paar eenvoudige stappen",
+    "stepNumber": "Stap {{number}}",
+    "step1": {
+      "title": "Je advertentie plaatsen",
+      "description": "Maak een gedetailleerde advertentie met foto's en locatie",
+      "detail1": "Voeg kwaliteitsvolle foto's toe",
+      "detail2": "Beschrijf het voorwerp nauwkeurig",
+      "detail3": "Specificeer plaats en datum"
+    },
+    "step2": {
+      "title": "Zoeken en filteren",
+      "description": "Gebruik onze geavanceerde zoektools om overeenkomsten te vinden",
+      "detail1": "Filter op categorie en locatie",
+      "detail2": "Gebruik zoekwoorden",
+      "detail3": "Raadpleeg de interactieve kaart"
+    },
+    "step3": {
+      "title": "Veilig communiceren",
+      "description": "Contacteer eigenaren via ons beveiligde berichtensysteem",
+      "detail1": "Geïntegreerde beveiligde chat",
+      "detail2": "Realtime notificaties",
+      "detail3": "Wissel contacten uit indien nodig"
+    },
+    "features": {
+      "title": "Hoofdkenmerken",
+      "security": {
+        "title": "Gegarandeerde veiligheid",
+        "description": "Je persoonlijke gegevens zijn beschermd met geavanceerde versleuteling"
+      },
+      "location": {
+        "title": "Geolocatie",
+        "description": "Lokaliseer nauwkeurig waar het voorwerp verloren of gevonden werd"
+      },
+      "notifications": {
+        "title": "Notificaties",
+        "description": "Ontvang realtime waarschuwingen voor nieuwe voorwerpen"
+      },
+      "community": {
+        "title": "Gemeenschap",
+        "description": "Sluit je aan bij een solidaire gemeenschap die elkaar helpt"
+      }
+    },
+    "timeline": {
+      "title": "Typische tijdlijn",
+      "immediate": "Onmiddellijk",
+      "minutes": "Enkele minuten",
+      "hours": "Enkele uren",
+      "step1": {
+        "title": "Advertentie gepubliceerd",
+        "description": "Je advertentie is gepubliceerd en zichtbaar voor alle gebruikers"
+      },
+      "step2": {
+        "title": "Eerste reactie",
+        "description": "Je ontvangt de eerste berichten van geïnteresseerde personen"
+      },
+      "step3": {
+        "title": "Terugwinning",
+        "description": "Je wint je voorwerp terug of helpt iemand anders het zijne te vinden"
+      }
+    },
+    "cta": {
+      "title": "Klaar om te beginnen?",
+      "description": "Sluit je aan bij onze gemeenschap en begin met het plaatsen of zoeken van verloren voorwerpen",
+      "publishButton": "Advertentie plaatsen",
+      "searchButton": "Voorwerp zoeken"
+    }
   }
 }

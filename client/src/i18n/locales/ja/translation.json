@@ -404,8 +404,76 @@
       "personal": "個人",
       "security": "セキュリティ",
       "preferences": "設定"
+    }
+  },
+  "howItWorks": {
+    "badge": "ユーザーガイド",
+    "title": "使い方",
+    "subtitle": "簡単なステップで紛失物を見つけたり、他の人を助けたりする方法をご確認ください",
+    "stepNumber": "ステップ {{number}}",
+    "step1": {
+      "title": "投稿する",
+      "description": "写真と位置情報を含む詳細な投稿を作成",
+      "detail1": "品質の良い写真を追加",
+      "detail2": "物品を正確に説明",
+      "detail3": "場所と日付を指定"
     },
-    "deleteAccount": "アカウントを削除",
-    "deleteAccountDesc": "アカウントとすべてのデータを永久に削除します"
+    "step2": {
+      "title": "検索とフィルタリング",
+      "description": "高度な検索ツールを使用して一致するものを見つける",
+      "detail1": "カテゴリと場所でフィルタリング",
+      "detail2": "キーワード検索を使用",
+      "detail3": "インタラクティブマップを確認"
+    },
+    "step3": {
+      "title": "安全にコミュニケーション",
+      "description": "セキュアなメッセージシステムを通じて所有者に連絡",
+      "detail1": "統合されたセキュアチャット",
+      "detail2": "リアルタイム通知",
+      "detail3": "必要に応じて連絡先を交換"
+    },
+    "features": {
+      "title": "主な機能",
+      "security": {
+        "title": "セキュリティ保証",
+        "description": "お客様の個人データは高度な暗号化で保護されています"
+      },
+      "location": {
+        "title": "位置情報",
+        "description": "物品が紛失・発見された場所を正確に特定"
+      },
+      "notifications": {
+        "title": "通知",
+        "description": "新しい物品のリアルタイムアラートを受信"
+      },
+      "community": {
+        "title": "コミュニティ",
+        "description": "お互いに助け合う支援コミュニティに参加"
+      }
+    },
+    "timeline": {
+      "title": "一般的なタイムライン",
+      "immediate": "即座に",
+      "minutes": "数分",
+      "hours": "数時間",
+      "step1": {
+        "title": "投稿公開",
+        "description": "あなたの投稿が公開され、すべてのユーザーに表示されます"
+      },
+      "step2": {
+        "title": "初回レスポンス",
+        "description": "興味のある人から最初のメッセージを受信"
+      },
+      "step3": {
+        "title": "回収",
+        "description": "物品を回収するか、他の人が見つけるのを手伝います"
+      }
+    },
+    "cta": {
+      "title": "始める準備はできましたか？",
+      "description": "コミュニティに参加して、紛失物の投稿や検索を開始しましょう",
+      "publishButton": "投稿する",
+      "searchButton": "物品を検索"
+    }
   }
 }

@@ -407,5 +407,75 @@
     },
     "deleteAccount": "Eliminar cuenta",
     "deleteAccountDesc": "Eliminar permanentemente tu cuenta y todos los datos"
+  },
+  "howItWorks": {
+    "badge": "Guía de usuario",
+    "title": "Cómo funciona",
+    "subtitle": "Descubre cómo recuperar tus objetos perdidos o ayudar a otros en simples pasos",
+    "stepNumber": "Paso {{number}}",
+    "step1": {
+      "title": "Publicar tu anuncio",
+      "description": "Crea un anuncio detallado con fotos y ubicación",
+      "detail1": "Añade fotos de calidad",
+      "detail2": "Describe el objeto con precisión",
+      "detail3": "Especifica lugar y fecha"
+    },
+    "step2": {
+      "title": "Buscar y filtrar",
+      "description": "Usa nuestras herramientas de búsqueda avanzada para encontrar coincidencias",
+      "detail1": "Filtra por categoría y ubicación",
+      "detail2": "Usa búsqueda por palabras clave",
+      "detail3": "Consulta el mapa interactivo"
+    },
+    "step3": {
+      "title": "Comunicarse de forma segura",
+      "description": "Contacta a los propietarios a través de nuestro sistema de mensajería seguro",
+      "detail1": "Chat integrado y seguro",
+      "detail2": "Notificaciones en tiempo real",
+      "detail3": "Intercambia contactos si es necesario"
+    },
+    "features": {
+      "title": "Características principales",
+      "security": {
+        "title": "Seguridad garantizada",
+        "description": "Tus datos personales están protegidos con encriptación avanzada"
+      },
+      "location": {
+        "title": "Geolocalización",
+        "description": "Localiza precisamente donde se perdió o encontró el objeto"
+      },
+      "notifications": {
+        "title": "Notificaciones",
+        "description": "Recibe alertas en tiempo real para nuevos objetos"
+      },
+      "community": {
+        "title": "Comunidad",
+        "description": "Únete a una comunidad solidaria que se ayuda mutuamente"
+      }
+    },
+    "timeline": {
+      "title": "Cronología típica",
+      "immediate": "Inmediato",
+      "minutes": "Pocos minutos",
+      "hours": "Pocas horas",
+      "step1": {
+        "title": "Anuncio publicado",
+        "description": "Tu anuncio está publicado y visible para todos los usuarios"
+      },
+      "step2": {
+        "title": "Primera respuesta",
+        "description": "Recibes los primeros mensajes de personas interesadas"
+      },
+      "step3": {
+        "title": "Recuperación",
+        "description": "Recuperas tu objeto o ayudas a alguien a encontrar el suyo"
+      }
+    },
+    "cta": {
+      "title": "¿Listo para comenzar?",
+      "description": "Únete a nuestra comunidad y comienza a publicar o buscar objetos perdidos",
+      "publishButton": "Publicar anuncio",
+      "searchButton": "Buscar objeto"
+    }
   }
 }

@@ -407,5 +407,75 @@
     },
     "deleteAccount": "删除账户",
     "deleteAccountDesc": "永久删除您的账户和所有数据"
+  },
+  "howItWorks": {
+    "badge": "用户指南",
+    "title": "如何使用",
+    "subtitle": "了解如何通过简单的步骤找回您的失物或帮助他人",
+    "stepNumber": "步骤 {{number}}",
+    "step1": {
+      "title": "发布您的信息",
+      "description": "创建包含照片和位置的详细信息",
+      "detail1": "添加优质照片",
+      "detail2": "精确描述物品",
+      "detail3": "指定地点和日期"
+    },
+    "step2": {
+      "title": "搜索和筛选",
+      "description": "使用我们的高级搜索工具找到匹配项",
+      "detail1": "按类别和位置筛选",
+      "detail2": "使用关键词搜索",
+      "detail3": "查看交互式地图"
+    },
+    "step3": {
+      "title": "安全沟通",
+      "description": "通过我们的安全消息系统联系失主",
+      "detail1": "集成安全聊天",
+      "detail2": "实时通知",
+      "detail3": "必要时交换联系方式"
+    },
+    "features": {
+      "title": "主要功能",
+      "security": {
+        "title": "保证安全",
+        "description": "您的个人数据受到高级加密保护"
+      },
+      "location": {
+        "title": "地理定位",
+        "description": "精确定位物品丢失或找到的位置"
+      },
+      "notifications": {
+        "title": "通知",
+        "description": "接收新物品的实时警报"
+      },
+      "community": {
+        "title": "社区",
+        "description": "加入互助的友善社区"
+      }
+    },
+    "timeline": {
+      "title": "典型时间线",
+      "immediate": "立即",
+      "minutes": "几分钟",
+      "hours": "几小时",
+      "step1": {
+        "title": "信息已发布",
+        "description": "您的信息已发布，所有用户都可以看到"
+      },
+      "step2": {
+        "title": "首次回应",
+        "description": "您收到来自感兴趣的人的第一条消息"
+      },
+      "step3": {
+        "title": "找回物品",
+        "description": "您找回物品或帮助他人找到失物"
+      }
+    },
+    "cta": {
+      "title": "准备开始了吗？",
+      "description": "加入我们的社区，开始发布或搜索失物",
+      "publishButton": "发布信息",
+      "searchButton": "搜索物品"
+    }
   }
 }

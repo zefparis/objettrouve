@@ -406,5 +406,75 @@
       "security": "Sécurité",
       "preferences": "Préférences"
     }
+  },
+  "howItWorks": {
+    "badge": "Guide d'utilisation",
+    "title": "Comment ça marche",
+    "subtitle": "Découvrez comment retrouver vos objets perdus ou aider les autres en quelques étapes simples",
+    "stepNumber": "Étape {{number}}",
+    "step1": {
+      "title": "Publier votre annonce",
+      "description": "Créez une annonce détaillée avec photos et localisation",
+      "detail1": "Ajoutez des photos de qualité",
+      "detail2": "Décrivez précisément l'objet",
+      "detail3": "Indiquez le lieu et la date"
+    },
+    "step2": {
+      "title": "Rechercher et filtrer",
+      "description": "Utilisez nos outils de recherche avancés pour trouver des correspondances",
+      "detail1": "Filtrez par catégorie et localisation",
+      "detail2": "Utilisez la recherche par mots-clés",
+      "detail3": "Consultez la carte interactive"
+    },
+    "step3": {
+      "title": "Communiquer en sécurité",
+      "description": "Contactez les propriétaires via notre système de messagerie sécurisé",
+      "detail1": "Chat intégré et sécurisé",
+      "detail2": "Notifications en temps réel",
+      "detail3": "Échangez coordonnées si nécessaire"
+    },
+    "features": {
+      "title": "Fonctionnalités principales",
+      "security": {
+        "title": "Sécurité garantie",
+        "description": "Vos données personnelles sont protégées avec un cryptage avancé"
+      },
+      "location": {
+        "title": "Géolocalisation",
+        "description": "Localisez précisément où l'objet a été perdu ou trouvé"
+      },
+      "notifications": {
+        "title": "Notifications",
+        "description": "Recevez des alertes en temps réel pour les nouveaux objets"
+      },
+      "community": {
+        "title": "Communauté",
+        "description": "Rejoignez une communauté solidaire qui s'entraide"
+      }
+    },
+    "timeline": {
+      "title": "Chronologie typique",
+      "immediate": "Immédiat",
+      "minutes": "Quelques minutes",
+      "hours": "Quelques heures",
+      "step1": {
+        "title": "Publication de l'annonce",
+        "description": "Votre annonce est publiée et visible par tous les utilisateurs"
+      },
+      "step2": {
+        "title": "Première réponse",
+        "description": "Vous recevez les premiers messages de personnes intéressées"
+      },
+      "step3": {
+        "title": "Récupération",
+        "description": "Vous récupérez votre objet ou aidez quelqu'un à retrouver le sien"
+      }
+    },
+    "cta": {
+      "title": "Prêt à commencer ?",
+      "description": "Rejoignez notre communauté et commencez à publier ou rechercher des objets perdus",
+      "publishButton": "Publier une annonce",
+      "searchButton": "Rechercher un objet"
+    }
   }
 }

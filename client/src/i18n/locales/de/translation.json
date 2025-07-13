@@ -407,5 +407,75 @@
     },
     "deleteAccount": "Konto löschen",
     "deleteAccountDesc": "Ihr Konto und alle Daten dauerhaft löschen"
+  },
+  "howItWorks": {
+    "badge": "Benutzerhandbuch",
+    "title": "Wie es funktioniert",
+    "subtitle": "Entdecken Sie, wie Sie Ihre verlorenen Gegenstände wiederfinden oder anderen in wenigen einfachen Schritten helfen können",
+    "stepNumber": "Schritt {{number}}",
+    "step1": {
+      "title": "Ihre Anzeige veröffentlichen",
+      "description": "Erstellen Sie eine detaillierte Anzeige mit Fotos und Standort",
+      "detail1": "Hochwertige Fotos hinzufügen",
+      "detail2": "Gegenstand präzise beschreiben",
+      "detail3": "Ort und Datum angeben"
+    },
+    "step2": {
+      "title": "Suchen und filtern",
+      "description": "Nutzen Sie unsere erweiterten Suchtools, um Übereinstimmungen zu finden",
+      "detail1": "Nach Kategorie und Standort filtern",
+      "detail2": "Stichwortsuche verwenden",
+      "detail3": "Interaktive Karte konsultieren"
+    },
+    "step3": {
+      "title": "Sicher kommunizieren",
+      "description": "Kontaktieren Sie Eigentümer über unser sicheres Nachrichtensystem",
+      "detail1": "Integrierter sicherer Chat",
+      "detail2": "Echtzeitbenachrichtigungen",
+      "detail3": "Kontakte bei Bedarf austauschen"
+    },
+    "features": {
+      "title": "Hauptmerkmale",
+      "security": {
+        "title": "Garantierte Sicherheit",
+        "description": "Ihre persönlichen Daten sind durch fortgeschrittene Verschlüsselung geschützt"
+      },
+      "location": {
+        "title": "Geolokalisierung",
+        "description": "Lokalisieren Sie genau, wo der Gegenstand verloren oder gefunden wurde"
+      },
+      "notifications": {
+        "title": "Benachrichtigungen",
+        "description": "Erhalten Sie Echtzeitwarnungen für neue Gegenstände"
+      },
+      "community": {
+        "title": "Gemeinschaft",
+        "description": "Treten Sie einer solidarischen Gemeinschaft bei, die sich gegenseitig hilft"
+      }
+    },
+    "timeline": {
+      "title": "Typische Zeitleiste",
+      "immediate": "Sofort",
+      "minutes": "Wenige Minuten",
+      "hours": "Wenige Stunden",
+      "step1": {
+        "title": "Anzeige veröffentlicht",
+        "description": "Ihre Anzeige ist veröffentlicht und für alle Benutzer sichtbar"
+      },
+      "step2": {
+        "title": "Erste Antwort",
+        "description": "Sie erhalten die ersten Nachrichten von interessierten Personen"
+      },
+      "step3": {
+        "title": "Wiederherstellung",
+        "description": "Sie holen Ihren Gegenstand ab oder helfen jemandem, seinen zu finden"
+      }
+    },
+    "cta": {
+      "title": "Bereit anzufangen?",
+      "description": "Treten Sie unserer Gemeinschaft bei und beginnen Sie, verlorene Gegenstände zu veröffentlichen oder zu suchen",
+      "publishButton": "Anzeige veröffentlichen",
+      "searchButton": "Gegenstand suchen"
+    }
   }
 }

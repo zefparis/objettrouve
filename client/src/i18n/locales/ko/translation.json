@@ -404,8 +404,76 @@
       "personal": "개인",
       "security": "보안",
       "preferences": "설정"
+    }
+  },
+  "howItWorks": {
+    "badge": "사용자 가이드",
+    "title": "사용 방법",
+    "subtitle": "간단한 단계로 분실물을 찾거나 다른 사람을 도와주는 방법을 알아보세요",
+    "stepNumber": "단계 {{number}}",
+    "step1": {
+      "title": "게시물 작성",
+      "description": "사진과 위치 정보가 포함된 상세한 게시물 작성",
+      "detail1": "고품질 사진 추가",
+      "detail2": "물품을 정확히 설명",
+      "detail3": "장소와 날짜 명시"
     },
-    "deleteAccount": "계정 삭제",
-    "deleteAccountDesc": "계정과 모든 데이터를 영구적으로 삭제하세요"
+    "step2": {
+      "title": "검색 및 필터링",
+      "description": "고급 검색 도구를 사용하여 일치하는 항목 찾기",
+      "detail1": "카테고리와 위치로 필터링",
+      "detail2": "키워드 검색 사용",
+      "detail3": "대화형 지도 확인"
+    },
+    "step3": {
+      "title": "안전한 소통",
+      "description": "보안 메시지 시스템을 통해 소유자에게 연락",
+      "detail1": "통합 보안 채팅",
+      "detail2": "실시간 알림",
+      "detail3": "필요시 연락처 교환"
+    },
+    "features": {
+      "title": "주요 기능",
+      "security": {
+        "title": "보안 보장",
+        "description": "고급 암호화로 개인 데이터 보호"
+      },
+      "location": {
+        "title": "위치 정보",
+        "description": "물품이 분실되거나 발견된 위치를 정확히 찾기"
+      },
+      "notifications": {
+        "title": "알림",
+        "description": "새로운 물품에 대한 실시간 알림 받기"
+      },
+      "community": {
+        "title": "커뮤니티",
+        "description": "서로 도움을 주는 지원 커뮤니티에 참여"
+      }
+    },
+    "timeline": {
+      "title": "일반적인 타임라인",
+      "immediate": "즉시",
+      "minutes": "몇 분",
+      "hours": "몇 시간",
+      "step1": {
+        "title": "게시물 공개",
+        "description": "게시물이 공개되어 모든 사용자가 볼 수 있습니다"
+      },
+      "step2": {
+        "title": "첫 번째 응답",
+        "description": "관심 있는 사람들로부터 첫 메시지를 받습니다"
+      },
+      "step3": {
+        "title": "회수",
+        "description": "물품을 회수하거나 다른 사람이 찾도록 도와줍니다"
+      }
+    },
+    "cta": {
+      "title": "시작할 준비가 되셨나요?",
+      "description": "커뮤니티에 참여하여 분실물 게시 또는 검색을 시작하세요",
+      "publishButton": "게시물 작성",
+      "searchButton": "물품 검색"
+    }
   }
 }

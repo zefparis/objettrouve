@@ -405,5 +405,75 @@
       "security": "Security",
       "preferences": "Preferences"
     }
+  },
+  "howItWorks": {
+    "badge": "User Guide",
+    "title": "How It Works",
+    "subtitle": "Discover how to recover your lost items or help others in just a few simple steps",
+    "stepNumber": "Step {{number}}",
+    "step1": {
+      "title": "Post Your Listing",
+      "description": "Create a detailed listing with photos and location",
+      "detail1": "Add quality photos",
+      "detail2": "Describe the item precisely",
+      "detail3": "Specify location and date"
+    },
+    "step2": {
+      "title": "Search and Filter",
+      "description": "Use our advanced search tools to find matches",
+      "detail1": "Filter by category and location",
+      "detail2": "Use keyword search",
+      "detail3": "Check the interactive map"
+    },
+    "step3": {
+      "title": "Communicate Securely",
+      "description": "Contact owners through our secure messaging system",
+      "detail1": "Integrated secure chat",
+      "detail2": "Real-time notifications",
+      "detail3": "Exchange contacts if needed"
+    },
+    "features": {
+      "title": "Key Features",
+      "security": {
+        "title": "Guaranteed Security",
+        "description": "Your personal data is protected with advanced encryption"
+      },
+      "location": {
+        "title": "Geolocation",
+        "description": "Precisely locate where the item was lost or found"
+      },
+      "notifications": {
+        "title": "Notifications",
+        "description": "Receive real-time alerts for new items"
+      },
+      "community": {
+        "title": "Community",
+        "description": "Join a supportive community that helps each other"
+      }
+    },
+    "timeline": {
+      "title": "Typical Timeline",
+      "immediate": "Immediate",
+      "minutes": "Few minutes",
+      "hours": "Few hours",
+      "step1": {
+        "title": "Listing Published",
+        "description": "Your listing is published and visible to all users"
+      },
+      "step2": {
+        "title": "First Response",
+        "description": "You receive the first messages from interested people"
+      },
+      "step3": {
+        "title": "Recovery",
+        "description": "You recover your item or help someone find theirs"
+      }
+    },
+    "cta": {
+      "title": "Ready to Get Started?",
+      "description": "Join our community and start posting or searching for lost items",
+      "publishButton": "Post a Listing",
+      "searchButton": "Search for Item"
+    }
   }
 }
