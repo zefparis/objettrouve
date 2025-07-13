@@ -52,10 +52,7 @@ export default function Preferences() {
 
   const updatePreferencesMutation = useMutation({
     mutationFn: async (data: PreferencesForm) => {
-      return await apiRequest("/api/preferences", {
-        method: "PUT",
-        body: JSON.stringify(data),
-      });
+      return await apiRequest("PUT", "/api/preferences", data);
     },
     onSuccess: () => {
       toast({

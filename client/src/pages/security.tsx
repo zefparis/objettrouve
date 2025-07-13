@@ -53,12 +53,9 @@ export default function Security() {
 
   const changePasswordMutation = useMutation({
     mutationFn: async (data: ChangePasswordForm) => {
-      return await apiRequest("/api/auth/change-password", {
-        method: "POST",
-        body: JSON.stringify({
-          currentPassword: data.currentPassword,
-          newPassword: data.newPassword,
-        }),
+      return await apiRequest("POST", "/api/auth/change-password", {
+        currentPassword: data.currentPassword,
+        newPassword: data.newPassword,
       });
     },
     onSuccess: () => {
@@ -79,9 +76,7 @@ export default function Security() {
 
   const deleteAccountMutation = useMutation({
     mutationFn: async () => {
-      return await apiRequest("/api/auth/delete-account", {
-        method: "DELETE",
-      });
+      return await apiRequest("DELETE", "/api/auth/delete-account");
     },
     onSuccess: () => {
       toast({

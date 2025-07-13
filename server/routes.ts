@@ -197,6 +197,40 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
+  // Update preferences
+  app.put("/api/preferences", async (req: any, res) => {
+    try {
+      if (!req.session.userId) {
+        return res.status(401).json({ error: "Non authentifié" });
+      }
+
+      const userId = req.session.userId;
+      const { language, theme, emailNotifications, smsNotifications, marketingEmails, profileVisibility, autoLocation, newsletter, bio } = req.body;
+      
+      const updates: any = {};
+      if (language) updates.language = language;
+      if (theme) updates.theme = theme;
+      if (emailNotifications !== undefined) updates.emailNotifications = emailNotifications;
+      if (smsNotifications !== undefined) updates.smsNotifications = smsNotifications;
+      if (marketingEmails !== undefined) updates.marketingEmails = marketingEmails;
+      if (profileVisibility) updates.profileVisibility = profileVisibility;
+      if (autoLocation !== undefined) updates.autoLocation = autoLocation;
+      if (newsletter !== undefined) updates.newsletter = newsletter;
+      if (bio) updates.bio = bio;
+      
+      const updatedUser = await storage.updateAuthUser(userId, updates);
+      
+      if (!updatedUser) {
+        return res.status(404).json({ error: "Utilisateur non trouvé" });
+      }
+      
+      res.json({ message: "Préférences mises à jour avec succès", user: updatedUser });
+    } catch (error) {
+      console.error("Error updating preferences:", error);
+      res.status(500).json({ error: "Erreur lors de la mise à jour des préférences" });
+    }
+  });
+
   // Security routes
   app.post('/api/auth/change-password', async (req: any, res) => {
     try {
@@ -218,7 +252,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       }
 
       // Verify current password
-      const isValidPassword = await verifyPassword(currentPassword, user.password);
+      const isValidPassword = await verifyPassword(currentPassword, user.passwordHash);
       if (!isValidPassword) {
         return res.status(400).json({ message: "Mot de passe actuel incorrect" });
       }
@@ -227,7 +261,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       const hashedPassword = await hashPassword(newPassword);
       
       // Update password
-      const updatedUser = await storage.updateAuthUser(userId, { password: hashedPassword });
+      const updatedUser = await storage.updateAuthUser(userId, { passwordHash: hashedPassword });
       
       if (!updatedUser) {
         return res.status(500).json({ message: "Erreur lors de la mise à jour du mot de passe" });
