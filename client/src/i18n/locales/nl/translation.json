@@ -11,7 +11,16 @@
     "features": "Functies",
     "howItWorks": "Hoe het werkt",
     "contact": "Contact",
-    "pricing": "Prijzen"
+    "pricing": "Prijzen",
+    "map": "Kaart"
+  },
+  "publishNew": {
+    "type": {
+      "lost": "Verloren voorwerp",
+      "found": "Gevonden voorwerp"
+    },
+    "lostSubtitle": "Meld een voorwerp dat u verloren heeft",
+    "foundSubtitle": "Meld een voorwerp dat u gevonden heeft"
   },
   "pricing": {
     "title": "Premium Services",

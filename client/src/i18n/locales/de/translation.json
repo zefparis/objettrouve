@@ -11,7 +11,16 @@
     "features": "Funktionen",
     "howItWorks": "Wie es funktioniert",
     "contact": "Kontakt",
-    "pricing": "Preise"
+    "pricing": "Preise",
+    "map": "Karte"
+  },
+  "publishNew": {
+    "type": {
+      "lost": "Verlorener Gegenstand",
+      "found": "Gefundener Gegenstand"
+    },
+    "lostSubtitle": "Einen Gegenstand melden, den Sie verloren haben",
+    "foundSubtitle": "Einen Gegenstand melden, den Sie gefunden haben"
   },
   "pricing": {
     "title": "Premium-Services",

@@ -11,7 +11,16 @@
     "features": "功能",
     "howItWorks": "如何工作",
     "contact": "联系",
-    "pricing": "价格"
+    "pricing": "价格",
+    "map": "地图"
+  },
+  "publishNew": {
+    "type": {
+      "lost": "丢失物品",
+      "found": "找到物品"
+    },
+    "lostSubtitle": "报告您丢失的物品",
+    "foundSubtitle": "报告您找到的物品"
   },
   "pricing": {
     "title": "高级服务",

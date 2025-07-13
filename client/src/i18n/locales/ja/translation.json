@@ -11,7 +11,16 @@
     "features": "機能",
     "howItWorks": "仕組み",
     "contact": "お問い合わせ",
-    "pricing": "価格"
+    "pricing": "価格",
+    "map": "地図"
+  },
+  "publishNew": {
+    "type": {
+      "lost": "紛失物",
+      "found": "発見物"
+    },
+    "lostSubtitle": "紛失した物品を報告",
+    "foundSubtitle": "発見した物品を報告"
   },
   "pricing": {
     "title": "プレミアムサービス",

@@ -11,7 +11,16 @@
     "features": "Funzionalità",
     "howItWorks": "Come funziona",
     "contact": "Contatto",
-    "pricing": "Prezzi"
+    "pricing": "Prezzi",
+    "map": "Mappa"
+  },
+  "publishNew": {
+    "type": {
+      "lost": "Oggetto smarrito",
+      "found": "Oggetto trovato"
+    },
+    "lostSubtitle": "Segnala un oggetto che hai perso",
+    "foundSubtitle": "Segnala un oggetto che hai trovato"
   },
   "pricing": {
     "title": "Servizi Premium",

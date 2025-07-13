@@ -11,7 +11,16 @@
     "features": "기능",
     "howItWorks": "작동 방식",
     "contact": "연락처",
-    "pricing": "가격"
+    "pricing": "가격",
+    "map": "지도"
+  },
+  "publishNew": {
+    "type": {
+      "lost": "분실물",
+      "found": "발견물"
+    },
+    "lostSubtitle": "분실한 물건을 신고",
+    "foundSubtitle": "발견한 물건을 신고"
   },
   "pricing": {
     "title": "프리미엄 서비스",

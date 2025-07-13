@@ -11,7 +11,16 @@
     "features": "Features",
     "howItWorks": "How it works",
     "contact": "Contact",
-    "pricing": "Pricing"
+    "pricing": "Pricing",
+    "map": "Map"
+  },
+  "publishNew": {
+    "type": {
+      "lost": "Lost Item",
+      "found": "Found Item"
+    },
+    "lostSubtitle": "Report an item you have lost",
+    "foundSubtitle": "Report an item you have found"
   },
   "pricing": {
     "title": "Premium Services",
