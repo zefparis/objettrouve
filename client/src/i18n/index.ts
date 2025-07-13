@@ -18,7 +18,7 @@ i18n
   .use(LanguageDetector)
   .use(initReactI18next)
   .init({
-    debug: true,
+    debug: false,
     lng: 'fr', // Force French as default language
     fallbackLng: 'fr',
     load: 'languageOnly',

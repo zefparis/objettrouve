@@ -228,6 +228,7 @@
     "ctaTitle": "Prêt à retrouver vos objets perdus ?",
     "ctaSubtitle": "Rejoignez notre communauté et commencez dès maintenant",
     "publishAd": "Publier une annonce",
+    "myDashboard": "Mon tableau de bord",
     "premium": {
       "badge": "Services Premium",
       "title": "Optimisez vos recherches",
@@ -243,7 +244,13 @@
       "viewAdmin": "Voir l'admin",
       "paymentConfirm": "Confirmation de paiement",
       "paymentConfirmDesc": "Validez vos transactions en toute sécurité",
-      "viewConfirm": "Voir la confirmation"
+      "viewConfirm": "Voir la confirmation",
+      "apiPayment": "API de paiement",
+      "apiPaymentDesc": "Intégrez nos APIs de paiement dans vos applications",
+      "viewDocs": "Voir la documentation",
+      "revenueAnalytics": "Analyse des revenus",
+      "revenueAnalyticsDesc": "Suivez vos revenus et performances en temps réel",
+      "viewAnalytics": "Voir les analyses"
     }
   },
   "common": {
