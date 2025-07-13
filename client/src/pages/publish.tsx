@@ -90,10 +90,7 @@ export default function Publish() {
         formData.append("image", selectedFile);
       }
       
-      return await apiRequest("/api/items", {
-        method: "POST",
-        body: formData,
-      });
+      return await apiRequest("POST", "/api/items", formData);
     },
     onSuccess: () => {
       toast({
