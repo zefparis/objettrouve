@@ -25,7 +25,7 @@ const preferencesSchema = z.object({
   profileVisibility: z.enum(["public", "private", "contacts"]),
   autoLocation: z.boolean(),
   newsletter: z.boolean(),
-  bio: z.string().max(500, "La biographie ne peut pas dépasser 500 caractères").optional(),
+  bio: z.string().max(500, "Bio cannot exceed 500 characters").optional(),
 });
 
 type PreferencesForm = z.infer<typeof preferencesSchema>;
@@ -56,13 +56,13 @@ export default function Preferences() {
     },
     onSuccess: () => {
       toast({
-        title: "Préférences mises à jour",
-        description: "Vos préférences ont été sauvegardées avec succès.",
+        title: t("profilePage.preferences.success"),
+        description: t("profilePage.preferences.success"),
       });
     },
     onError: (error: Error) => {
       toast({
-        title: "Erreur",
+        title: t("profilePage.preferences.error"),
         description: error.message,
         variant: "destructive",
       });
@@ -74,28 +74,17 @@ export default function Preferences() {
   };
 
   const handleLanguageChange = (language: string) => {
-    form.setValue("language", language);
     i18n.changeLanguage(language);
+    form.setValue("language", language);
   };
 
   const handleThemeChange = (newTheme: "light" | "dark" | "system") => {
     setTheme(newTheme);
     form.setValue("theme", newTheme);
-    
-    // Appliquer le thème immédiatement
-    if (newTheme === "dark") {
-      document.documentElement.classList.add("dark");
-    } else if (newTheme === "light") {
-      document.documentElement.classList.remove("dark");
-    } else {
-      // System theme
-      const isDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-      document.documentElement.classList.toggle("dark", isDark);
-    }
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
+    <div className="min-h-screen bg-gray-50">
       <Navbar />
       
       <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -105,95 +94,88 @@ export default function Preferences() {
             <Button variant="ghost" className="flex items-center gap-2 hover:bg-gray-100 dark:hover:bg-gray-800">
               <ArrowLeft className="w-4 h-4" />
               <User className="w-4 h-4" />
-              <span>Retour au profil</span>
+              <span>{t("profilePage.backToProfile")}</span>
             </Button>
           </Link>
         </div>
 
         <div className="mb-8">
-          <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">Préférences</h1>
-          <p className="text-gray-600 dark:text-gray-300">
-            Personnalisez votre expérience sur la plateforme
+          <h1 className="text-3xl font-bold text-gray-900 mb-2">{t("profilePage.preferences.title")}</h1>
+          <p className="text-gray-600">
+            {t("profilePage.preferences.subtitle")}
           </p>
         </div>
 
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-          {/* Général */}
+          {/* Langue */}
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
-                <Settings className="h-5 w-5" />
-                Paramètres généraux
+                <Globe className="h-5 w-5" />
+                {t("profilePage.preferences.language")}
               </CardTitle>
               <CardDescription>
-                Configurez les paramètres de base de votre compte
+                {t("profilePage.preferences.languageDesc")}
               </CardDescription>
             </CardHeader>
-            <CardContent className="space-y-4">
-              <div>
-                <Label htmlFor="language">Langue</Label>
-                <Select value={form.watch("language")} onValueChange={handleLanguageChange}>
-                  <SelectTrigger className="mt-1">
-                    <SelectValue />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="fr">🇫🇷 Français</SelectItem>
-                    <SelectItem value="en">🇬🇧 English</SelectItem>
-                    <SelectItem value="es">🇪🇸 Español</SelectItem>
-                    <SelectItem value="pt">🇵🇹 Português</SelectItem>
-                    <SelectItem value="it">🇮🇹 Italiano</SelectItem>
-                    <SelectItem value="de">🇩🇪 Deutsch</SelectItem>
-                    <SelectItem value="nl">🇳🇱 Nederlands</SelectItem>
-                    <SelectItem value="zh">🇨🇳 中文</SelectItem>
-                    <SelectItem value="ja">🇯🇵 日本語</SelectItem>
-                    <SelectItem value="ko">🇰🇷 한국어</SelectItem>
-                  </SelectContent>
-                </Select>
-              </div>
+            <CardContent>
+              <Select value={form.watch("language")} onValueChange={handleLanguageChange}>
+                <SelectTrigger>
+                  <SelectValue />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="fr">🇫🇷 Français</SelectItem>
+                  <SelectItem value="en">🇬🇧 English</SelectItem>
+                  <SelectItem value="es">🇪🇸 Español</SelectItem>
+                  <SelectItem value="pt">🇵🇹 Português</SelectItem>
+                  <SelectItem value="it">🇮🇹 Italiano</SelectItem>
+                  <SelectItem value="de">🇩🇪 Deutsch</SelectItem>
+                  <SelectItem value="nl">🇳🇱 Nederlands</SelectItem>
+                  <SelectItem value="zh">🇨🇳 中文</SelectItem>
+                  <SelectItem value="ja">🇯🇵 日本語</SelectItem>
+                  <SelectItem value="ko">🇰🇷 한국어</SelectItem>
+                </SelectContent>
+              </Select>
+            </CardContent>
+          </Card>
 
-              <div>
-                <Label htmlFor="theme">Thème</Label>
-                <Select value={theme} onValueChange={handleThemeChange}>
-                  <SelectTrigger className="mt-1">
-                    <SelectValue />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="light">
-                      <div className="flex items-center gap-2">
-                        <Sun className="h-4 w-4" />
-                        Clair
-                      </div>
-                    </SelectItem>
-                    <SelectItem value="dark">
-                      <div className="flex items-center gap-2">
-                        <Moon className="h-4 w-4" />
-                        Sombre
-                      </div>
-                    </SelectItem>
-                    <SelectItem value="system">
-                      <div className="flex items-center gap-2">
-                        <Settings className="h-4 w-4" />
-                        Système
-                      </div>
-                    </SelectItem>
-                  </SelectContent>
-                </Select>
-              </div>
-
-              <div>
-                <Label htmlFor="bio">Biographie</Label>
-                <Textarea
-                  id="bio"
-                  placeholder="Décrivez-vous en quelques mots..."
-                  className="mt-1"
-                  {...form.register("bio")}
-                />
-                {form.formState.errors.bio && (
-                  <p className="text-sm text-red-600 mt-1">
-                    {form.formState.errors.bio.message}
-                  </p>
-                )}
-              </div>
+          {/* Thème */}
+          <Card>
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2">
+                <Moon className="h-5 w-5" />
+                {t("profilePage.preferences.theme")}
+              </CardTitle>
+              <CardDescription>
+                {t("profilePage.preferences.themeDesc")}
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <Select value={theme} onValueChange={handleThemeChange}>
+                <SelectTrigger>
+                  <SelectValue />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="light">
+                    <div className="flex items-center gap-2">
+                      <Sun className="h-4 w-4" />
+                      {t("profilePage.preferences.themeLight")}
+                    </div>
+                  </SelectItem>
+                  <SelectItem value="dark">
+                    <div className="flex items-center gap-2">
+                      <Moon className="h-4 w-4" />
+                      {t("profilePage.preferences.themeDark")}
+                    </div>
+                  </SelectItem>
+                  <SelectItem value="system">
+                    <div className="flex items-center gap-2">
+                      <Settings className="h-4 w-4" />
+                      {t("profilePage.preferences.themeSystem")}
+                    </div>
+                  </SelectItem>
+                </SelectContent>
+              </Select>
             </CardContent>
           </Card>
 
@@ -202,18 +184,15 @@ export default function Preferences() {
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
                 <Bell className="h-5 w-5" />
-                Notifications
+                {t("profilePage.preferences.notifications")}
               </CardTitle>
-              <CardDescription>
-                Choisissez comment vous souhaitez être informé
-              </CardDescription>
             </CardHeader>
             <CardContent className="space-y-4">
               <div className="flex items-center justify-between">
-                <div className="flex-1">
-                  <h3 className="font-medium">Notifications par email</h3>
-                  <p className="text-sm text-gray-600 dark:text-gray-300 mt-1">
-                    Recevez des notifications pour les nouveaux messages et activités
+                <div className="space-y-0.5">
+                  <Label>{t("profilePage.preferences.emailNotifications")}</Label>
+                  <p className="text-sm text-gray-500">
+                    {t("profilePage.preferences.emailNotificationsDesc")}
                   </p>
                 </div>
                 <Switch
@@ -223,10 +202,10 @@ export default function Preferences() {
               </div>
 
               <div className="flex items-center justify-between">
-                <div className="flex-1">
-                  <h3 className="font-medium">Notifications SMS</h3>
-                  <p className="text-sm text-gray-600 dark:text-gray-300 mt-1">
-                    Recevez des SMS pour les messages urgents
+                <div className="space-y-0.5">
+                  <Label>{t("profilePage.preferences.smsNotifications")}</Label>
+                  <p className="text-sm text-gray-500">
+                    {t("profilePage.preferences.smsNotificationsDesc")}
                   </p>
                 </div>
                 <Switch
@@ -236,10 +215,10 @@ export default function Preferences() {
               </div>
 
               <div className="flex items-center justify-between">
-                <div className="flex-1">
-                  <h3 className="font-medium">Emails marketing</h3>
-                  <p className="text-sm text-gray-600 dark:text-gray-300 mt-1">
-                    Recevez des conseils et promotions par email
+                <div className="space-y-0.5">
+                  <Label>{t("profilePage.preferences.marketingEmails")}</Label>
+                  <p className="text-sm text-gray-500">
+                    {t("profilePage.preferences.marketingEmailsDesc")}
                   </p>
                 </div>
                 <Switch
@@ -249,10 +228,10 @@ export default function Preferences() {
               </div>
 
               <div className="flex items-center justify-between">
-                <div className="flex-1">
-                  <h3 className="font-medium">Newsletter</h3>
-                  <p className="text-sm text-gray-600 dark:text-gray-300 mt-1">
-                    Recevez notre newsletter mensuelle
+                <div className="space-y-0.5">
+                  <Label>{t("profilePage.preferences.newsletter")}</Label>
+                  <p className="text-sm text-gray-500">
+                    {t("profilePage.preferences.newsletterDesc")}
                   </p>
                 </div>
                 <Switch
@@ -268,37 +247,35 @@ export default function Preferences() {
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
                 <Eye className="h-5 w-5" />
-                Confidentialité
+                {t("profilePage.preferences.privacy")}
               </CardTitle>
-              <CardDescription>
-                Contrôlez la visibilité de vos informations
-              </CardDescription>
             </CardHeader>
             <CardContent className="space-y-4">
-              <div>
-                <Label htmlFor="profileVisibility">Visibilité du profil</Label>
-                <Select 
-                  value={form.watch("profileVisibility")} 
-                  onValueChange={(value: "public" | "private" | "contacts") => 
-                    form.setValue("profileVisibility", value)
-                  }
+              <div className="space-y-2">
+                <Label>{t("profilePage.preferences.profileVisibility")}</Label>
+                <p className="text-sm text-gray-500">
+                  {t("profilePage.preferences.profileVisibilityDesc")}
+                </p>
+                <Select
+                  value={form.watch("profileVisibility")}
+                  onValueChange={(value) => form.setValue("profileVisibility", value as "public" | "private" | "contacts")}
                 >
-                  <SelectTrigger className="mt-1">
+                  <SelectTrigger>
                     <SelectValue />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="public">Public - Visible par tous</SelectItem>
-                    <SelectItem value="contacts">Contacts uniquement</SelectItem>
-                    <SelectItem value="private">Privé - Invisible</SelectItem>
+                    <SelectItem value="public">{t("profilePage.preferences.visibilityPublic")}</SelectItem>
+                    <SelectItem value="private">{t("profilePage.preferences.visibilityPrivate")}</SelectItem>
+                    <SelectItem value="contacts">{t("profilePage.preferences.visibilityContacts")}</SelectItem>
                   </SelectContent>
                 </Select>
               </div>
 
               <div className="flex items-center justify-between">
-                <div className="flex-1">
-                  <h3 className="font-medium">Localisation automatique</h3>
-                  <p className="text-sm text-gray-600 dark:text-gray-300 mt-1">
-                    Autoriser la détection automatique de votre position
+                <div className="space-y-0.5">
+                  <Label>{t("profilePage.preferences.autoLocation")}</Label>
+                  <p className="text-sm text-gray-500">
+                    {t("profilePage.preferences.autoLocationDesc")}
                   </p>
                 </div>
                 <Switch
@@ -310,15 +287,17 @@ export default function Preferences() {
           </Card>
 
           {/* Bouton de sauvegarde */}
-          <div className="flex justify-end">
-            <Button 
-              type="submit" 
-              disabled={updatePreferencesMutation.isPending}
-              className="w-full sm:w-auto"
-            >
-              {updatePreferencesMutation.isPending ? "Sauvegarde..." : "Sauvegarder les préférences"}
-            </Button>
-          </div>
+          <Card>
+            <CardContent className="pt-6">
+              <Button 
+                type="submit" 
+                className="w-full"
+                disabled={updatePreferencesMutation.isPending}
+              >
+                {updatePreferencesMutation.isPending ? t("profilePage.preferences.saving") : t("profilePage.preferences.save")}
+              </Button>
+            </CardContent>
+          </Card>
         </form>
       </main>
     </div>

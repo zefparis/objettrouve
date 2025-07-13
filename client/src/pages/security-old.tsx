@@ -82,14 +82,14 @@ export default function Security() {
     },
     onSuccess: () => {
       toast({
-        title: t("profilePage.securityTab.deleteAccount"),
-        description: t("profilePage.securityTab.deleteAccountDesc"),
+        title: "Compte supprimé",
+        description: "Votre compte a été supprimé avec succès.",
       });
       window.location.href = "/";
     },
     onError: (error: Error) => {
       toast({
-        title: t("profilePage.securityTab.passwordError"),
+        title: "Erreur",
         description: error.message,
         variant: "destructive",
       });
@@ -115,15 +115,15 @@ export default function Security() {
             <Button variant="ghost" className="flex items-center gap-2 hover:bg-gray-100 dark:hover:bg-gray-800">
               <ArrowLeft className="w-4 h-4" />
               <User className="w-4 h-4" />
-              <span>{t("profilePage.backToProfile")}</span>
+              <span>Retour au profil</span>
             </Button>
           </Link>
         </div>
 
         <div className="mb-8">
-          <h1 className="text-3xl font-bold text-gray-900 mb-2">{t("profilePage.securityTab.title")}</h1>
+          <h1 className="text-3xl font-bold text-gray-900 mb-2">Sécurité</h1>
           <p className="text-gray-600">
-            {t("profilePage.securityTab.subtitle")}
+            Gérez la sécurité de votre compte et vos paramètres de confidentialité
           </p>
         </div>
 
@@ -133,16 +133,16 @@ export default function Security() {
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
                 <Key className="h-5 w-5" />
-                {t("profilePage.securityTab.changePassword")}
+                Changer le mot de passe
               </CardTitle>
               <CardDescription>
-                {t("profilePage.securityTab.changePasswordDesc")}
+                Mettez à jour votre mot de passe pour sécuriser votre compte
               </CardDescription>
             </CardHeader>
             <CardContent>
               <form onSubmit={changePasswordForm.handleSubmit(onChangePassword)} className="space-y-4">
                 <div>
-                  <Label htmlFor="currentPassword">{t("profilePage.securityTab.currentPassword")}</Label>
+                  <Label htmlFor="currentPassword">Mot de passe actuel</Label>
                   <Input
                     id="currentPassword"
                     type="password"
@@ -157,7 +157,7 @@ export default function Security() {
                 </div>
 
                 <div>
-                  <Label htmlFor="newPassword">{t("profilePage.securityTab.newPassword")}</Label>
+                  <Label htmlFor="newPassword">Nouveau mot de passe</Label>
                   <Input
                     id="newPassword"
                     type="password"
@@ -172,7 +172,7 @@ export default function Security() {
                 </div>
 
                 <div>
-                  <Label htmlFor="confirmPassword">{t("profilePage.securityTab.confirmPassword")}</Label>
+                  <Label htmlFor="confirmPassword">Confirmer le nouveau mot de passe</Label>
                   <Input
                     id="confirmPassword"
                     type="password"
@@ -189,9 +189,9 @@ export default function Security() {
                 <Button 
                   type="submit" 
                   disabled={changePasswordMutation.isPending}
-                  className="w-full"
+                  className="w-full sm:w-auto"
                 >
-                  {changePasswordMutation.isPending ? t("profilePage.securityTab.updating") : t("profilePage.securityTab.updatePassword")}
+                  {changePasswordMutation.isPending ? "Modification..." : "Changer le mot de passe"}
                 </Button>
               </form>
             </CardContent>
@@ -202,96 +202,119 @@ export default function Security() {
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
                 <Smartphone className="h-5 w-5" />
-                {t("profilePage.securityTab.twoFactor")}
+                Authentification à deux facteurs
               </CardTitle>
               <CardDescription>
-                {t("profilePage.securityTab.twoFactorDesc")}
+                Ajoutez une couche de sécurité supplémentaire à votre compte
               </CardDescription>
             </CardHeader>
             <CardContent>
               <div className="flex items-center justify-between">
-                <div className="space-y-0.5">
-                  <div className="text-sm font-medium">
-                    {t("profilePage.securityTab.twoFactor")}
-                  </div>
-                  <div className="text-sm text-gray-500">
-                    {twoFactorEnabled ? t("profilePage.securityTab.disable") : t("profilePage.securityTab.enable")}
-                  </div>
+                <div className="flex-1">
+                  <h3 className="font-medium">Authentification à deux facteurs</h3>
+                  <p className="text-sm text-gray-600 mt-1">
+                    {twoFactorEnabled 
+                      ? "L'authentification à deux facteurs est activée" 
+                      : "Activez l'authentification à deux facteurs pour plus de sécurité"
+                    }
+                  </p>
                 </div>
                 <Switch
                   checked={twoFactorEnabled}
                   onCheckedChange={setTwoFactorEnabled}
                 />
               </div>
+              
+              {twoFactorEnabled && (
+                <div className="mt-4 p-4 bg-green-50 border border-green-200 rounded-md">
+                  <p className="text-sm text-green-800">
+                    L'authentification à deux facteurs est maintenant activée. 
+                    Vous recevrez un code par SMS à chaque connexion.
+                  </p>
+                </div>
+              )}
             </CardContent>
           </Card>
 
-          {/* Notifications de connexion */}
+          {/* Notifications de sécurité */}
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
                 <Shield className="h-5 w-5" />
-                {t("profilePage.securityTab.loginNotifications")}
+                Notifications de sécurité
               </CardTitle>
               <CardDescription>
-                {t("profilePage.securityTab.loginNotificationsDesc")}
+                Configurez les alertes de sécurité pour votre compte
               </CardDescription>
             </CardHeader>
             <CardContent>
-              <div className="flex items-center justify-between">
-                <div className="space-y-0.5">
-                  <div className="text-sm font-medium">
-                    {t("profilePage.securityTab.loginNotifications")}
+              <div className="space-y-4">
+                <div className="flex items-center justify-between">
+                  <div className="flex-1">
+                    <h3 className="font-medium">Notifications de connexion</h3>
+                    <p className="text-sm text-gray-600 mt-1">
+                      Recevez une notification par email lors de nouvelles connexions
+                    </p>
                   </div>
-                  <div className="text-sm text-gray-500">
-                    {loginNotifications ? t("profilePage.securityTab.enable") : t("profilePage.securityTab.disable")}
-                  </div>
+                  <Switch
+                    checked={loginNotifications}
+                    onCheckedChange={setLoginNotifications}
+                  />
                 </div>
-                <Switch
-                  checked={loginNotifications}
-                  onCheckedChange={setLoginNotifications}
-                />
               </div>
             </CardContent>
           </Card>
 
+          <Separator />
+
           {/* Zone de danger */}
-          <Card className="border-red-200 bg-red-50">
+          <Card className="border-red-200">
             <CardHeader>
-              <CardTitle className="flex items-center gap-2 text-red-700">
+              <CardTitle className="flex items-center gap-2 text-red-600">
                 <AlertTriangle className="h-5 w-5" />
-                {t("profilePage.securityTab.dangerZone")}
+                Zone de danger
               </CardTitle>
-              <CardDescription className="text-red-600">
-                {t("profilePage.securityTab.deleteAccountDesc")}
+              <CardDescription>
+                Actions irréversibles concernant votre compte
               </CardDescription>
             </CardHeader>
             <CardContent>
-              <AlertDialog>
-                <AlertDialogTrigger asChild>
-                  <Button variant="destructive" className="w-full">
-                    <Trash2 className="h-4 w-4 mr-2" />
-                    {t("profilePage.securityTab.deleteAccount")}
-                  </Button>
-                </AlertDialogTrigger>
-                <AlertDialogContent>
-                  <AlertDialogHeader>
-                    <AlertDialogTitle>{t("profilePage.securityTab.deleteAccountConfirm")}</AlertDialogTitle>
-                    <AlertDialogDescription>
-                      {t("profilePage.securityTab.deleteAccountWarning")}
-                    </AlertDialogDescription>
-                  </AlertDialogHeader>
-                  <AlertDialogFooter>
-                    <AlertDialogCancel>{t("profilePage.personal.cancel")}</AlertDialogCancel>
-                    <AlertDialogAction
-                      onClick={handleDeleteAccount}
-                      className="bg-red-600 hover:bg-red-700"
-                    >
-                      {t("profilePage.securityTab.deleteAccountButton")}
-                    </AlertDialogAction>
-                  </AlertDialogFooter>
-                </AlertDialogContent>
-              </AlertDialog>
+              <div className="space-y-4">
+                <div className="p-4 bg-red-50 border border-red-200 rounded-md">
+                  <h3 className="font-medium text-red-800 mb-2">Supprimer mon compte</h3>
+                  <p className="text-sm text-red-700 mb-4">
+                    Cette action est irréversible. Toutes vos données seront définitivement supprimées.
+                  </p>
+                  
+                  <AlertDialog>
+                    <AlertDialogTrigger asChild>
+                      <Button variant="destructive" size="sm">
+                        <Trash2 className="h-4 w-4 mr-2" />
+                        Supprimer mon compte
+                      </Button>
+                    </AlertDialogTrigger>
+                    <AlertDialogContent>
+                      <AlertDialogHeader>
+                        <AlertDialogTitle>Êtes-vous sûr ?</AlertDialogTitle>
+                        <AlertDialogDescription>
+                          Cette action est irréversible. Votre compte et toutes vos données 
+                          seront définitivement supprimées. Vous ne pourrez pas récupérer 
+                          vos annonces, messages ou autres informations.
+                        </AlertDialogDescription>
+                      </AlertDialogHeader>
+                      <AlertDialogFooter>
+                        <AlertDialogCancel>Annuler</AlertDialogCancel>
+                        <AlertDialogAction
+                          onClick={handleDeleteAccount}
+                          className="bg-red-600 hover:bg-red-700"
+                        >
+                          Supprimer définitivement
+                        </AlertDialogAction>
+                      </AlertDialogFooter>
+                    </AlertDialogContent>
+                  </AlertDialog>
+                </div>
+              </div>
             </CardContent>
           </Card>
         </div>
