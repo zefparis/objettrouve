@@ -15,7 +15,8 @@ import {
   BarChart3,
   Settings,
   LogOut,
-  Shield
+  Shield,
+  ArrowLeft
 } from "lucide-react";
 import { Link } from "wouter";
 
@@ -114,6 +115,15 @@ export default function Admin() {
       <div className="min-h-screen bg-gray-50 flex items-center justify-center">
         <Card className="w-full max-w-md">
           <CardHeader className="text-center">
+            <div className="flex items-center justify-between mb-4">
+              <Link href="/">
+                <Button variant="ghost" size="sm">
+                  <ArrowLeft className="w-4 h-4 mr-2" />
+                  Retour
+                </Button>
+              </Link>
+              <div></div>
+            </div>
             <Shield className="w-12 h-12 mx-auto mb-4 text-blue-500" />
             <CardTitle className="text-2xl">{t("admin.login")}</CardTitle>
           </CardHeader>
