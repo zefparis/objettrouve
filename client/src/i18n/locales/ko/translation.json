@@ -23,10 +23,18 @@
     "foundSubtitle": "발견한 물건을 신고"
   },
   "pricing": {
-    "title": "프리미엄 서비스",
-    "subtitle": "단품 옵션으로 광고의 가시성과 효율성을 향상시킵니다",
+    "title": "검색을 최적화하세요",
+    "subtitle": "아이템을 찾을 기회를 개선하는 프리미엄 서비스를 발견하세요",
     "popular": "인기",
     "select": "구매",
+    "flexiblePricing": "유연한 가격",
+    "flexiblePricingDesc": "귀하의 필요에 맞게 조정된 요금을 확인하세요",
+    "viewPricing": "가격 보기",
+    "securePayment": "안전한 결제",
+    "securePaymentDesc": "신뢰할 수 있고 안전한 결제 시스템",
+    "viewCheckout": "체크아웃 보기",
+    "adminDashboard": "관리자 대시보드",
+    "adminDashboardDesc": "완전한 관리 인터페이스",
     "services": {
       "boost": {
         "name": "광고 강조",

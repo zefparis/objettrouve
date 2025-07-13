@@ -23,10 +23,18 @@
     "foundSubtitle": "発見した物品を報告"
   },
   "pricing": {
-    "title": "プレミアムサービス",
-    "subtitle": "アラカルトオプションで広告の可視性と効率を向上させます",
+    "title": "検索を最適化",
+    "subtitle": "アイテムを見つけるチャンスを改善するプレミアムサービスを発見",
     "popular": "人気",
     "select": "購入",
+    "flexiblePricing": "柔軟な価格設定",
+    "flexiblePricingDesc": "あなたのニーズに適応した料金を確認",
+    "viewPricing": "価格を表示",
+    "securePayment": "安全な支払い",
+    "securePaymentDesc": "信頼性の高い安全な支払いシステム",
+    "viewCheckout": "チェックアウトを表示",
+    "adminDashboard": "管理者ダッシュボード",
+    "adminDashboardDesc": "完全な管理インターフェース",
     "services": {
       "boost": {
         "name": "広告をハイライト",

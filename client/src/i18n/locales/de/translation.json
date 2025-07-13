@@ -23,10 +23,18 @@
     "foundSubtitle": "Einen Gegenstand melden, den Sie gefunden haben"
   },
   "pricing": {
-    "title": "Premium-Services",
-    "subtitle": "Verbessern Sie die Sichtbarkeit und Effizienz Ihrer Anzeigen mit unseren à la carte Optionen",
+    "title": "Optimieren Sie Ihre Suchen",
+    "subtitle": "Entdecken Sie unsere Premium-Services zur Verbesserung Ihrer Chancen, Ihre Gegenstände zu finden",
     "popular": "Beliebt",
     "select": "Kaufen",
+    "flexiblePricing": "Flexible Preise",
+    "flexiblePricingDesc": "Konsultieren Sie unsere an Ihre Bedürfnisse angepassten Tarife",
+    "viewPricing": "Preise anzeigen",
+    "securePayment": "Sichere Zahlung",
+    "securePaymentDesc": "Zuverlässiges und sicheres Zahlungssystem",
+    "viewCheckout": "Checkout anzeigen",
+    "adminDashboard": "Admin-Dashboard",
+    "adminDashboardDesc": "Vollständige Administrationsoberfläche",
     "services": {
       "boost": {
         "name": "Anzeige hervorheben",

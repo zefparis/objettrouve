@@ -23,10 +23,18 @@
     "foundSubtitle": "Report an item you have found"
   },
   "pricing": {
-    "title": "Premium Services",
-    "subtitle": "Improve your listing's visibility and efficiency with our à la carte options",
+    "title": "Optimize your searches",
+    "subtitle": "Discover our premium services to improve your chances of finding your items",
     "popular": "Popular",
     "select": "Buy",
+    "flexiblePricing": "Flexible pricing",
+    "flexiblePricingDesc": "Check our rates tailored to your needs",
+    "viewPricing": "View pricing",
+    "securePayment": "Secure payment",
+    "securePaymentDesc": "Reliable and secure payment system",
+    "viewCheckout": "View checkout",
+    "adminDashboard": "Admin dashboard",
+    "adminDashboardDesc": "Complete administration interface",
     "services": {
       "boost": {
         "name": "Boost Listing",

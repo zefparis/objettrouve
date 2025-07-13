@@ -23,10 +23,18 @@
     "foundSubtitle": "报告您找到的物品"
   },
   "pricing": {
-    "title": "高级服务",
-    "subtitle": "通过我们的单点服务选项提升您广告的可见性和效率",
+    "title": "优化您的搜索",
+    "subtitle": "发现我们的高级服务，提高您找到物品的机会",
     "popular": "热门",
     "select": "购买",
+    "flexiblePricing": "灵活定价",
+    "flexiblePricingDesc": "查看我们适合您需求的定价方案",
+    "viewPricing": "查看定价",
+    "securePayment": "安全支付",
+    "securePaymentDesc": "可靠且安全的支付系统",
+    "viewCheckout": "查看结账",
+    "adminDashboard": "管理员仪表板",
+    "adminDashboardDesc": "完整的管理界面",
     "services": {
       "boost": {
         "name": "推广广告",

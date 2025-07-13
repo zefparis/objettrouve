@@ -23,10 +23,18 @@
     "foundSubtitle": "Reportar un objeto que has encontrado"
   },
   "pricing": {
-    "title": "Servicios Premium",
-    "subtitle": "Mejora la visibilidad y eficiencia de tus anuncios con nuestras opciones à la carta",
+    "title": "Optimiza tus búsquedas",
+    "subtitle": "Descubre nuestros servicios premium para mejorar tus posibilidades de encontrar tus objetos",
     "popular": "Popular",
     "select": "Comprar",
+    "flexiblePricing": "Tarificación flexible",
+    "flexiblePricingDesc": "Consulta nuestras tarifas adaptadas a tus necesidades",
+    "viewPricing": "Ver tarifas",
+    "securePayment": "Pago seguro",
+    "securePaymentDesc": "Sistema de pago confiable y seguro",
+    "viewCheckout": "Ver checkout",
+    "adminDashboard": "Panel de administración",
+    "adminDashboardDesc": "Interfaz de administración completa",
     "services": {
       "boost": {
         "name": "Destacar anuncio",
