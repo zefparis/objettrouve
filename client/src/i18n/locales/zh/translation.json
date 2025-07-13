@@ -105,6 +105,28 @@
     "itemType": {
       "lost": "丢失",
       "found": "找到"
-    }
+    },
+    "all": "全部",
+    "lost": "丢失",
+    "found": "找到"
+  },
+  "hero": {
+    "title": "轻松找回您丢失的物品",
+    "subtitle": "社区平台，用于查找和报告丢失和找到的物品",
+    "iLostSomething": "我丢失了什么",
+    "iFoundSomething": "我找到了什么",
+    "searchPlaceholder": "搜索丢失的物品..."
+  },
+  "stats": {
+    "totalItems": "已报告物品",
+    "foundItems": "找到物品",
+    "users": "活跃用户"
+  },
+  "home": {
+    "recentItems": "最近物品",
+    "recentItemsDesc": "发现社区报告的最新物品"
+  },
+  "nav": {
+    "map": "地图"
   }
 }

@@ -105,6 +105,28 @@
     "itemType": {
       "lost": "Lost",
       "found": "Found"
-    }
+    },
+    "all": "All",
+    "lost": "Lost",
+    "found": "Found"
+  },
+  "hero": {
+    "title": "Find your lost items easily",
+    "subtitle": "Community platform to find and report lost and found items",
+    "iLostSomething": "I lost something",
+    "iFoundSomething": "I found something",
+    "searchPlaceholder": "Search for a lost item..."
+  },
+  "stats": {
+    "totalItems": "Reported items",
+    "foundItems": "Items found",
+    "users": "Active users"
+  },
+  "home": {
+    "recentItems": "Recent items",
+    "recentItemsDesc": "Discover the latest items reported by the community"
+  },
+  "nav": {
+    "map": "Map"
   }
 }

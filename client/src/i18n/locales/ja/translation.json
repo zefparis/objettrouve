@@ -105,6 +105,28 @@
     "itemType": {
       "lost": "紛失",
       "found": "発見"
-    }
+    },
+    "all": "全て",
+    "lost": "紛失",
+    "found": "発見"
+  },
+  "hero": {
+    "title": "紛失したアイテムを簡単に見つける",
+    "subtitle": "紛失物・拾得物を見つけて報告するコミュニティプラットフォーム",
+    "iLostSomething": "何かを紛失しました",
+    "iFoundSomething": "何かを見つけました",
+    "searchPlaceholder": "紛失したアイテムを検索..."
+  },
+  "stats": {
+    "totalItems": "報告されたアイテム",
+    "foundItems": "発見されたアイテム",
+    "users": "アクティブユーザー"
+  },
+  "home": {
+    "recentItems": "最近のアイテム",
+    "recentItemsDesc": "コミュニティによって報告された最新のアイテムを発見"
+  },
+  "nav": {
+    "map": "マップ"
   }
 }

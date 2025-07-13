@@ -105,6 +105,28 @@
     "itemType": {
       "lost": "Verloren",
       "found": "Gevonden"
-    }
+    },
+    "all": "Alle",
+    "lost": "Verloren",
+    "found": "Gevonden"
+  },
+  "hero": {
+    "title": "Vind uw verloren items gemakkelijk",
+    "subtitle": "Community platform om verloren en gevonden items te vinden en te rapporteren",
+    "iLostSomething": "Ik ben iets verloren",
+    "iFoundSomething": "Ik heb iets gevonden",
+    "searchPlaceholder": "Zoeken naar een verloren item..."
+  },
+  "stats": {
+    "totalItems": "Gerapporteerde items",
+    "foundItems": "Items gevonden",
+    "users": "Actieve gebruikers"
+  },
+  "home": {
+    "recentItems": "Recente items",
+    "recentItemsDesc": "Ontdek de nieuwste items gerapporteerd door de community"
+  },
+  "nav": {
+    "map": "Kaart"
   }
 }
