@@ -404,6 +404,8 @@
       "personal": "Pessoal",
       "security": "Segurança",
       "preferences": "Preferências"
-    }
+    },
+    "deleteAccount": "Excluir conta",
+    "deleteAccountDesc": "Excluir permanentemente sua conta e todos os dados"
   }
 }

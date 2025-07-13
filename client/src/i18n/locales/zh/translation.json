@@ -404,6 +404,8 @@
       "personal": "个人",
       "security": "安全",
       "preferences": "偏好"
-    }
+    },
+    "deleteAccount": "删除账户",
+    "deleteAccountDesc": "永久删除您的账户和所有数据"
   }
 }

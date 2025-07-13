@@ -404,6 +404,8 @@
       "personal": "개인",
       "security": "보안",
       "preferences": "설정"
-    }
+    },
+    "deleteAccount": "계정 삭제",
+    "deleteAccountDesc": "계정과 모든 데이터를 영구적으로 삭제하세요"
   }
 }

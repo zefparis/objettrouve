@@ -404,6 +404,8 @@
       "personal": "Persoonlijk",
       "security": "Beveiliging",
       "preferences": "Voorkeuren"
-    }
+    },
+    "deleteAccount": "Account verwijderen",
+    "deleteAccountDesc": "Verwijder je account en alle gegevens permanent"
   }
 }

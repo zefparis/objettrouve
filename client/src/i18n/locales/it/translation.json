@@ -404,6 +404,8 @@
       "personal": "Personale",
       "security": "Sicurezza",
       "preferences": "Preferenze"
-    }
+    },
+    "deleteAccount": "Elimina account",
+    "deleteAccountDesc": "Elimina definitivamente il tuo account e tutti i dati"
   }
 }

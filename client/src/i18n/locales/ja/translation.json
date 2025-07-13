@@ -404,6 +404,8 @@
       "personal": "個人",
       "security": "セキュリティ",
       "preferences": "設定"
-    }
+    },
+    "deleteAccount": "アカウントを削除",
+    "deleteAccountDesc": "アカウントとすべてのデータを永久に削除します"
   }
 }
