@@ -50,9 +50,19 @@ export default function Chat() {
 
   const sendMessageMutation = useMutation({
     mutationFn: async (content: string) => {
+      // Determine receiver ID: if current user is item owner, find the other participant
+      let receiverId = item.userId;
+      if (item.userId === user?.id && messages && messages.length > 0) {
+        // Find the other participant in the conversation
+        const otherParticipant = messages.find(msg => msg.senderId !== user.id);
+        if (otherParticipant) {
+          receiverId = otherParticipant.senderId;
+        }
+      }
+      
       return await apiRequest("POST", "/api/messages", {
         itemId: parseInt(itemId!),
-        receiverId: item.userId === user?.id ? messages?.[0]?.senderId : item.userId,
+        receiverId,
         content,
       });
     },

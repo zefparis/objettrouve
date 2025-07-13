@@ -403,6 +403,49 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
+  app.get('/api/conversations/:itemId', async (req: any, res) => {
+    try {
+      if (!req.session.userId) {
+        return res.status(401).json({ error: "Non authentifié" });
+      }
+
+      const userId = req.session.userId;
+      const itemId = parseInt(req.params.itemId);
+      const messages = await storage.getConversation(itemId, userId);
+      res.json(messages);
+    } catch (error) {
+      console.error("Error fetching conversation:", error);
+      res.status(500).json({ message: "Erreur lors de la récupération de la conversation" });
+    }
+  });
+
+  app.post('/api/messages', async (req: any, res) => {
+    try {
+      if (!req.session.userId) {
+        return res.status(401).json({ error: "Non authentifié" });
+      }
+
+      const userId = req.session.userId;
+      const { itemId, receiverId, content } = req.body;
+      
+      if (!itemId || !receiverId || !content) {
+        return res.status(400).json({ message: "Données manquantes" });
+      }
+
+      const message = await storage.createMessage({
+        itemId: parseInt(itemId),
+        senderId: userId,
+        receiverId,
+        content,
+      });
+      
+      res.json(message);
+    } catch (error) {
+      console.error("Error creating message:", error);
+      res.status(500).json({ message: "Erreur lors de l'envoi du message" });
+    }
+  });
+
   // Statistics routes
   app.get('/api/stats', async (req, res) => {
     try {
