@@ -539,5 +539,23 @@
     "password": "Contraseña",
     "firstName": "Nombre",
     "lastName": "Apellido"
+  },
+  "itemManagement": {
+    "manageAd": "Gestionar anuncio",
+    "editAd": "Editar anuncio",
+    "markAsFound": "Marcar como encontrado",
+    "deleteAd": "Eliminar anuncio",
+    "confirmDelete": "¿Está seguro de que desea eliminar este anuncio?",
+    "confirmMarkFound": "¿Está seguro de que desea marcar este artículo como encontrado?",
+    "editSuccess": "Anuncio editado exitosamente",
+    "markFoundSuccess": "Artículo marcado como encontrado exitosamente",
+    "deleteSuccess": "Anuncio eliminado exitosamente",
+    "editError": "Error al editar anuncio",
+    "markFoundError": "Error al actualizar estado",
+    "deleteError": "Error al eliminar anuncio",
+    "itemNotFound": "Artículo no encontrado",
+    "unauthorized": "No está autorizado para realizar esta acción",
+    "editTitle": "Editar su anuncio",
+    "backToItem": "Volver al anuncio"
   }
 }

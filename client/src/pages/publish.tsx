@@ -44,9 +44,17 @@ export default function Publish() {
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [previewUrl, setPreviewUrl] = useState<string | null>(null);
 
-  // Get type from URL parameters
+  // Get type and edit ID from URL parameters
   const urlParams = new URLSearchParams(search);
   const typeFromUrl = urlParams.get('type') as 'lost' | 'found' | null;
+  const editId = urlParams.get('edit');
+  const isEditing = !!editId;
+
+  // Fetch existing item for editing
+  const { data: existingItem, isLoading: isLoadingItem } = useQuery({
+    queryKey: ['/api/items', editId],
+    enabled: isEditing,
+  });
 
   const form = useForm<PublishFormData>({
     resolver: zodResolver(publishSchema),
@@ -61,6 +69,24 @@ export default function Publish() {
       contactEmail: "",
     },
   });
+
+  // Populate form with existing item data when editing
+  useEffect(() => {
+    if (isEditing && existingItem) {
+      form.setValue('type', existingItem.type);
+      form.setValue('title', existingItem.title);
+      form.setValue('description', existingItem.description);
+      form.setValue('category', existingItem.category);
+      form.setValue('location', existingItem.location);
+      form.setValue('dateOccurred', existingItem.dateOccurred.split('T')[0]);
+      form.setValue('contactPhone', existingItem.contactPhone || '');
+      form.setValue('contactEmail', existingItem.contactEmail || '');
+      
+      if (existingItem.imageUrl) {
+        setPreviewUrl(existingItem.imageUrl);
+      }
+    }
+  }, [isEditing, existingItem, form]);
 
   // Update form type when URL parameter changes
   useEffect(() => {
@@ -90,15 +116,25 @@ export default function Publish() {
         formData.append("image", selectedFile);
       }
       
-      return await apiRequest("POST", "/api/items", formData);
+      // Use PUT for editing, POST for creating
+      const method = isEditing ? "PUT" : "POST";
+      const url = isEditing ? `/api/items/${editId}` : "/api/items";
+      
+      return await apiRequest(method, url, formData);
     },
     onSuccess: () => {
       toast({
         title: t("common.success"),
-        description: t("publishNew.success"),
+        description: isEditing ? t("itemManagement.editSuccess") : t("publishNew.success"),
       });
       queryClient.invalidateQueries({ queryKey: ["/api/items"] });
-      setLocation("/dashboard");
+      queryClient.invalidateQueries({ queryKey: ["/api/items", editId] });
+      
+      if (isEditing) {
+        setLocation(`/item/${editId}`);
+      } else {
+        setLocation("/dashboard");
+      }
     },
     onError: (error: any) => {
       console.error("Publication error:", error);
@@ -196,12 +232,18 @@ export default function Publish() {
             <h1 className={`text-3xl font-bold mb-4 ${
               isLostType ? 'text-red-900' : 'text-green-900'
             }`}>
-              {isLostType ? t("publishNew.lostTitle") : t("publishNew.foundTitle")}
+              {isEditing 
+                ? t("itemManagement.editTitle") 
+                : (isLostType ? t("publishNew.lostTitle") : t("publishNew.foundTitle"))
+              }
             </h1>
             <p className={`${
               isLostType ? 'text-red-700' : 'text-green-700'
             }`}>
-              {isLostType ? t("publishNew.lostSubtitle") : t("publishNew.foundSubtitle")}
+              {isEditing 
+                ? "Modifiez les détails de votre annonce ci-dessous" 
+                : (isLostType ? t("publishNew.lostSubtitle") : t("publishNew.foundSubtitle"))
+              }
             </p>
           </div>
         </div>
@@ -462,12 +504,12 @@ export default function Publish() {
                   {createItemMutation.isPending ? (
                     <>
                       <Upload className="mr-2 h-4 w-4 animate-spin" />
-                      {t("publishNew.submit.publishing")}
+                      {isEditing ? "Modification en cours..." : t("publishNew.submit.publishing")}
                     </>
                   ) : (
                     <>
-                      <Upload className="mr-2 h-4 w-4" />
-                      {t("publishNew.submit.publish")}
+                      {isEditing ? <Edit className="mr-2 h-4 w-4" /> : <Upload className="mr-2 h-4 w-4" />}
+                      {isEditing ? t("itemManagement.editAd") : t("publishNew.submit.publish")}
                     </>
                   )}
                 </Button>

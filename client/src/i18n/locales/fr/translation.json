@@ -626,5 +626,23 @@
       "publishButton": "Publier une annonce",
       "searchButton": "Rechercher un objet"
     }
+  },
+  "itemManagement": {
+    "manageAd": "Gérer l'annonce",
+    "editAd": "Modifier l'annonce",
+    "markAsFound": "Marquer comme trouvé",
+    "deleteAd": "Supprimer l'annonce",
+    "confirmDelete": "Êtes-vous sûr de vouloir supprimer cette annonce ?",
+    "confirmMarkFound": "Êtes-vous sûr de vouloir marquer cet objet comme trouvé ?",
+    "editSuccess": "Annonce modifiée avec succès",
+    "markFoundSuccess": "Objet marqué comme trouvé avec succès",
+    "deleteSuccess": "Annonce supprimée avec succès",
+    "editError": "Erreur lors de la modification de l'annonce",
+    "markFoundError": "Erreur lors de la mise à jour du statut",
+    "deleteError": "Erreur lors de la suppression de l'annonce",
+    "itemNotFound": "Objet non trouvé",
+    "unauthorized": "Vous n'êtes pas autorisé à effectuer cette action",
+    "editTitle": "Modifier votre annonce",
+    "backToItem": "Retour à l'annonce"
   }
 }

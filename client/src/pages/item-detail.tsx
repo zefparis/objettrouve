@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useParams } from "wouter";
+import { useParams, useLocation } from "wouter";
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import { useTranslation } from "react-i18next";
 import { useAuth } from "@/hooks/useAuth";
@@ -11,7 +11,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Separator } from "@/components/ui/separator";
 import { useToast } from "@/hooks/use-toast";
 import { apiRequest } from "@/lib/queryClient";
-import { MapPin, Calendar, Phone, Mail, MessageCircle, User, ArrowLeft, Home } from "lucide-react";
+import { MapPin, Calendar, Phone, Mail, MessageCircle, User, ArrowLeft, Home, Edit, Check, Trash2 } from "lucide-react";
 import { Link } from "wouter";
 import { CATEGORIES } from "@shared/schema";
 
@@ -21,6 +21,7 @@ export default function ItemDetail() {
   const { user } = useAuth();
   const { toast } = useToast();
   const queryClient = useQueryClient();
+  const [location, setLocation] = useLocation();
   const [message, setMessage] = useState("");
   const [showContact, setShowContact] = useState(false);
 
@@ -61,6 +62,50 @@ export default function ItemDetail() {
     },
   });
 
+  const deleteItemMutation = useMutation({
+    mutationFn: async () => {
+      return await apiRequest("DELETE", `/api/items/${id}`, {});
+    },
+    onSuccess: () => {
+      toast({
+        title: t("common.success"),
+        description: t("itemManagement.deleteSuccess"),
+      });
+      queryClient.invalidateQueries({ queryKey: ["/api/items"] });
+      queryClient.invalidateQueries({ queryKey: ["/api/user/items"] });
+      setLocation("/dashboard");
+    },
+    onError: (error) => {
+      toast({
+        title: t("common.error"),
+        description: t("itemManagement.deleteError"),
+        variant: "destructive",
+      });
+    },
+  });
+
+  const markFoundMutation = useMutation({
+    mutationFn: async () => {
+      return await apiRequest("PUT", `/api/items/${id}/mark-found`, {});
+    },
+    onSuccess: () => {
+      toast({
+        title: t("common.success"),
+        description: t("itemManagement.markFoundSuccess"),
+      });
+      queryClient.invalidateQueries({ queryKey: ["/api/items", id] });
+      queryClient.invalidateQueries({ queryKey: ["/api/items"] });
+      queryClient.invalidateQueries({ queryKey: ["/api/user/items"] });
+    },
+    onError: (error) => {
+      toast({
+        title: t("common.error"),
+        description: t("itemManagement.markFoundError"),
+        variant: "destructive",
+      });
+    },
+  });
+
   const handleSendMessage = () => {
     if (!message.trim()) return;
     sendMessageMutation.mutate(message);
@@ -68,6 +113,22 @@ export default function ItemDetail() {
 
   const handleContactReveal = () => {
     setShowContact(true);
+  };
+
+  const handleEditItem = () => {
+    setLocation(`/publish?edit=${id}`);
+  };
+
+  const handleDeleteItem = () => {
+    if (window.confirm(t("itemManagement.confirmDelete"))) {
+      deleteItemMutation.mutate();
+    }
+  };
+
+  const handleMarkFound = () => {
+    if (window.confirm(t("itemManagement.confirmMarkFound"))) {
+      markFoundMutation.mutate();
+    }
   };
 
   if (isLoading) {
@@ -261,17 +322,34 @@ export default function ItemDetail() {
             {isOwnItem && (
               <Card>
                 <CardHeader>
-                  <CardTitle>{t("itemDetail.manageAd")}</CardTitle>
+                  <CardTitle>{t("itemManagement.manageAd")}</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-4">
-                  <Button variant="outline" className="w-full">
-                    {t("itemDetail.editAd")}
+                  <Button 
+                    variant="outline" 
+                    className="w-full flex items-center gap-2"
+                    onClick={handleEditItem}
+                  >
+                    <Edit className="h-4 w-4" />
+                    {t("itemManagement.editAd")}
                   </Button>
-                  <Button variant="outline" className="w-full">
-                    {t("itemDetail.markAsFound")}
+                  <Button 
+                    variant="outline" 
+                    className="w-full flex items-center gap-2"
+                    onClick={handleMarkFound}
+                    disabled={markFoundMutation.isPending}
+                  >
+                    <Check className="h-4 w-4" />
+                    {t("itemManagement.markAsFound")}
                   </Button>
-                  <Button variant="destructive" className="w-full">
-                    {t("itemDetail.deleteAd")}
+                  <Button 
+                    variant="destructive" 
+                    className="w-full flex items-center gap-2"
+                    onClick={handleDeleteItem}
+                    disabled={deleteItemMutation.isPending}
+                  >
+                    <Trash2 className="h-4 w-4" />
+                    {t("itemManagement.deleteAd")}
                   </Button>
                 </CardContent>
               </Card>

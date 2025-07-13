@@ -539,5 +539,23 @@
     "password": "Password",
     "firstName": "First Name",
     "lastName": "Last Name"
+  },
+  "itemManagement": {
+    "manageAd": "Manage listing",
+    "editAd": "Edit listing",
+    "markAsFound": "Mark as found",
+    "deleteAd": "Delete listing",
+    "confirmDelete": "Are you sure you want to delete this listing?",
+    "confirmMarkFound": "Are you sure you want to mark this item as found?",
+    "editSuccess": "Listing edited successfully",
+    "markFoundSuccess": "Item marked as found successfully",
+    "deleteSuccess": "Listing deleted successfully",
+    "editError": "Error editing listing",
+    "markFoundError": "Error updating status",
+    "deleteError": "Error deleting listing",
+    "itemNotFound": "Item not found",
+    "unauthorized": "You are not authorized to perform this action",
+    "editTitle": "Edit your listing",
+    "backToItem": "Back to listing"
   }
 }

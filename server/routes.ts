@@ -343,6 +343,34 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
+  app.put('/api/items/:id/mark-found', async (req, res) => {
+    try {
+      if (!req.session.userId) {
+        return res.status(401).json({ error: "Non authentifié" });
+      }
+
+      const id = parseInt(req.params.id);
+      const userId = req.session.userId;
+      
+      // Check if user owns the item
+      const item = await storage.getItem(id);
+      if (!item || item.userId !== userId) {
+        return res.status(403).json({ message: "Non autorisé" });
+      }
+      
+      const updatedItem = await storage.updateItem(id, { isActive: false });
+      
+      if (!updatedItem) {
+        return res.status(404).json({ message: "Annonce non trouvée" });
+      }
+      
+      res.json(updatedItem);
+    } catch (error) {
+      console.error("Error marking item as found:", error);
+      res.status(500).json({ message: "Erreur lors de la mise à jour du statut" });
+    }
+  });
+
   // User-specific routes
   app.get('/api/user/items', async (req: any, res) => {
     try {
