@@ -20,10 +20,9 @@ import {
 } from "lucide-react";
 import { Link } from "wouter";
 
-const ADMIN_CREDENTIALS = {
-  email: "congo.gaming.rdc@gmail.com",
-  password: "Benji28041970@"
-};
+// Admin credentials now loaded from environment variables
+const ADMIN_EMAIL = import.meta.env.VITE_ADMIN_EMAIL || "congo.gaming.rdc@gmail.com";
+const ADMIN_SECRET = import.meta.env.VITE_ADMIN_SECRET;
 
 export default function Admin() {
   const { t } = useTranslation();
@@ -35,7 +34,7 @@ export default function Admin() {
 
   // Check if user is admin on mount
   useEffect(() => {
-    if (user?.email === ADMIN_CREDENTIALS.email) {
+    if (user?.email === ADMIN_EMAIL) {
       setIsAdminAuthenticated(true);
     }
   }, [user]);
@@ -55,8 +54,17 @@ export default function Admin() {
     setIsLoading(true);
 
     try {
-      if (loginForm.email === ADMIN_CREDENTIALS.email && 
-          loginForm.password === ADMIN_CREDENTIALS.password) {
+      if (!ADMIN_SECRET) {
+        toast({
+          title: "Erreur",
+          description: "Admin access denied. Configuration missing.",
+          variant: "destructive",
+        });
+        return;
+      }
+      
+      if (loginForm.email === ADMIN_EMAIL && 
+          loginForm.password === ADMIN_SECRET) {
         setIsAdminAuthenticated(true);
         toast({
           title: "Succès",

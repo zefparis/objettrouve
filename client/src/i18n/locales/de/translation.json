@@ -1,26 +1,76 @@
 {
   "nav": {
+    "map": "Karte",
     "home": "Startseite",
     "search": "Suchen",
     "publish": "Veröffentlichen",
-    "dashboard": "Dashboard",
-    "profile": "Profil",
-    "chat": "Nachrichten",
-    "login": "Anmelden",
-    "logout": "Abmelden",
-    "features": "Funktionen",
     "howItWorks": "Wie es funktioniert",
     "contact": "Kontakt",
-    "pricing": "Preise",
-    "map": "Karte"
+    "chat": "Nachrichten",
+    "dashboard": "Dashboard",
+    "profile": "Profil",
+    "login": "Anmelden",
+    "logout": "Abmelden",
+    "features": "Funktionen"
   },
   "publishNew": {
+    "lostTitle": "Verlorener Gegenstand",
+    "foundTitle": "Gefundener Gegenstand",
+    "lostSubtitle": "Beschreiben Sie den verlorenen Gegenstand, damit andere Ihnen helfen können, ihn zu finden.",
+    "foundSubtitle": "Beschreiben Sie den gefundenen Gegenstand, damit der Besitzer Sie kontaktieren kann.",
     "type": {
+      "label": "Anzeigentyp",
       "lost": "Verlorener Gegenstand",
       "found": "Gefundener Gegenstand"
     },
-    "lostSubtitle": "Einen Gegenstand melden, den Sie verloren haben",
-    "foundSubtitle": "Einen Gegenstand melden, den Sie gefunden haben"
+    "title": {
+      "label": "Titel",
+      "placeholder": "z.B. Schwarzes iPhone 14 Pro"
+    },
+    "description": {
+      "label": "Detaillierte Beschreibung",
+      "placeholder": "Beschreiben Sie den Gegenstand so detailliert wie möglich..."
+    },
+    "category": {
+      "label": "Kategorie",
+      "placeholder": "Wählen Sie eine Kategorie"
+    },
+    "location": {
+      "label": "Ort",
+      "placeholder": "z.B. Bahnhof Lyon, Paris"
+    },
+    "date": {
+      "label": "Datum",
+      "placeholder": "Wann haben Sie diesen Gegenstand verloren/gefunden?"
+    },
+    "contact": {
+      "label": "Kontaktinformationen",
+      "phone": "Telefonnummer",
+      "email": "E-Mail-Adresse",
+      "phonePlaceholder": "z.B. +49 172 123 456",
+      "emailPlaceholder": "z.B. ihre@email.com"
+    },
+    "image": {
+      "label": "Foto des Gegenstands",
+      "upload": "Foto hochladen",
+      "change": "Foto ändern",
+      "remove": "Foto entfernen"
+    },
+    "submit": {
+      "publish": "Anzeige veröffentlichen",
+      "publishing": "Veröffentlichen..."
+    },
+    "validation": {
+      "title_required": "Titel ist erforderlich",
+      "description_min_length": "Beschreibung muss mindestens 10 Zeichen haben",
+      "category_required": "Kategorie ist erforderlich",
+      "location_required": "Ort ist erforderlich",
+      "date_required": "Datum ist erforderlich",
+      "email_invalid": "E-Mail-Adresse ist ungültig"
+    },
+    "success": "Ihre Anzeige wurde erfolgreich veröffentlicht!",
+    "error": "Fehler beim Veröffentlichen der Anzeige",
+    "loginNotice": "Sie müssen angemeldet sein, um eine Anzeige zu veröffentlichen. Ihre Anzeige wird nach der Anmeldung gespeichert."
   },
   "pricing": {
     "title": "Optimieren Sie Ihre Suchen",
@@ -88,24 +138,42 @@
     }
   },
   "chat": {
-    "conversation": "Unterhaltung",
+    "title": "Nachrichten",
     "conversationNotFound": "Unterhaltung nicht gefunden",
     "selectValidConversation": "Bitte wählen Sie eine gültige Unterhaltung",
     "backToDashboard": "Zurück zum Dashboard",
-    "noMessages": "Keine Nachrichten",
-    "startConversation": "Starten Sie eine Unterhaltung, indem Sie eine Nachricht senden",
-    "typePlaceholder": "Geben Sie Ihre Nachricht ein...",
     "messageError": "Fehler beim Senden der Nachricht",
-    "messageSuccess": "Nachricht erfolgreich gesendet",
-    "typing": "Tippt...",
+    "sendMessage": "Nachricht senden",
+    "typePlaceholder": "Schreiben Sie Ihre Nachricht...",
+    "noMessages": "Keine Nachrichten",
+    "noMessagesDesc": "Beginnen Sie die Unterhaltung, indem Sie eine Nachricht senden",
     "online": "Online",
     "offline": "Offline",
-    "loadingMessages": "Nachrichten werden geladen...",
-    "contactSeller": "Verkäufer kontaktieren",
-    "contactBuyer": "Käufer kontaktieren",
-    "itemDetails": "Objektdetails",
+    "lastSeen": "Zuletzt gesehen",
+    "itemOwner": "Eigentümer des Gegenstands",
     "reportUser": "Benutzer melden",
-    "blockUser": "Benutzer blockieren"
+    "blockUser": "Benutzer blockieren",
+    "messageOptions": "Nachrichtenoptionen",
+    "copyMessage": "Nachricht kopieren",
+    "deleteMessage": "Nachricht löschen",
+    "editMessage": "Nachricht bearbeiten",
+    "replyMessage": "Auf Nachricht antworten",
+    "messageDeleted": "Nachricht gelöscht",
+    "messageEdited": "Nachricht bearbeitet",
+    "typing": "Schreibt...",
+    "conversationWith": "Unterhaltung mit",
+    "conversationsDesc": "Verwalten Sie Ihre Unterhaltungen über verlorene und gefundene Gegenstände",
+    "noConversations": "Noch keine Unterhaltungen",
+    "noConversationsDesc": "Beginnen Sie eine Unterhaltung, indem Sie jemanden wegen seines verlorenen oder gefundenen Gegenstands kontaktieren",
+    "you": "Sie",
+    "anonymousUser": "Anonymer Benutzer",
+    "startConversation": "Unterhaltung beginnen",
+    "contactOwner": "Eigentümer kontaktieren",
+    "interested": "Ich bin an diesem Gegenstand interessiert",
+    "conversation": "Unterhaltung",
+    "loadingMessages": "Nachrichten werden geladen...",
+    "itemDetails": "Gegenstand Details",
+    "messageSentDesc": "Ihre Nachricht wurde erfolgreich gesendet"
   },
   "dashboard": {
     "title": "Dashboard",
@@ -178,9 +246,8 @@
     "markResolvedError": "Fehler beim Aktualisieren des Gegenstands"
   },
   "common": {
-    "error": "Fehler",
-    "success": "Erfolg",
-    "loading": "Wird geladen..."
+    "viewDetails": "Details anzeigen",
+    "backToHome": "Zurück zur Startseite"
   },
   "search": {
     "title": "Objektsuche",
@@ -235,288 +302,6 @@
     "viewAllItems": "Alle Gegenstände anzeigen",
     "ctaTitle": "Bereit, Ihre verlorenen Gegenstände zu finden?",
     "ctaSubtitle": "Treten Sie unserer Community bei und beginnen Sie jetzt"
-  },
-  "nav": {
-    "map": "Karte",
-    "home": "Startseite",
-    "search": "Suchen",
-    "publish": "Veröffentlichen",
-    "howItWorks": "Wie es funktioniert",
-    "contact": "Kontakt",
-    "chat": "Nachrichten",
-    "dashboard": "Dashboard"
-  },
-  "common": {
-    "viewDetails": "Details anzeigen",
-    "backToHome": "Zurück zur Startseite"
-  },
-  "howItWorks": {
-    "title": "Wie es funktioniert",
-    "subtitle": "Finden oder melden Sie einen verlorenen Gegenstand in 3 einfachen Schritten",
-    "step1": {
-      "title": "Veröffentlichen Sie Ihre Anzeige",
-      "description": "Beschreiben Sie Ihren verlorenen oder gefundenen Gegenstand mit Details und Fotos"
-    },
-    "step2": {
-      "title": "Suchen und durchsuchen",
-      "description": "Erkunden Sie Anzeigen und verwenden Sie unsere erweiterten Suchfilter"
-    },
-    "step3": {
-      "title": "Verbinden",
-      "description": "Kontaktieren Sie Eigentümer direkt über unser Nachrichtensystem"
-    }
-  },
-  "testimonials": {
-    "title": "Erfahrungsberichte",
-    "subtitle": "Was unsere Nutzer sagen",
-    "testimonial1": {
-      "name": "Maria Müller",
-      "location": "Berlin, Deutschland",
-      "content": "Ich habe mein verlorenes Handy in nur 2 Tagen gefunden! Die Community ist unglaublich hilfsbereit und aktiv."
-    },
-    "testimonial2": {
-      "name": "Thomas Schmidt",
-      "location": "München, Deutschland",
-      "content": "Einfache und effektive Benutzeroberfläche. Ich konnte jemandem helfen, seine Schlüssel zu finden, und es war ein tolles Gefühl."
-    },
-    "testimonial3": {
-      "name": "Anna Weber",
-      "location": "Hamburg, Deutschland",
-      "content": "Das integrierte Nachrichtensystem ist perfekt für sichere Kommunikation. Ich empfehle diese Plattform sehr."
-    }
-  },
-  "categories": {
-    "title": "Beliebte Kategorien",
-    "subtitle": "Gegenstände nach Kategorie durchsuchen"
-  },
-  "map": {
-    "title": "Interaktive Karte",
-    "subtitle": "Erkunden Sie verlorene und gefundene Gegenstände in Ihrer Nähe",
-    "interactiveMap": "Interaktive Karte",
-    "integration": "Integration",
-    "viewOnMap": "Auf Karte anzeigen",
-    "lostItems": "Verlorene Gegenstände",
-    "foundItems": "Gefundene Gegenstände",
-    "totalItems": "Gesamtzahl der Gegenstände",
-    "fullscreen": "Vollbild"
-  },
-  "footer": {
-    "description": "Ihre vertrauensvolle Plattform zum Finden und Melden verlorener Gegenstände. Verbinden Sie sich wieder mit Ihren wertvollen Besitztümern durch unsere aktive Community.",
-    "quickLinks": "Schnelllinks",
-    "support": "Support",
-    "legal": "Rechtliches",
-    "followUs": "Folgen Sie uns",
-    "allRightsReserved": "Alle Rechte vorbehalten.",
-    "home": "Startseite",
-    "about": "Über uns",
-    "contact": "Kontakt",
-    "help": "Hilfe",
-    "faq": "FAQ",
-    "privacy": "Datenschutz",
-    "terms": "Bedingungen",
-    "legalNotice": "Rechtlicher Hinweis",
-    "privacyPolicy": "Datenschutzrichtlinie",
-    "termsOfUse": "Nutzungsbedingungen"
-  },
-  "contact": {
-    "title": "Kontaktieren Sie uns",
-    "subtitle": "Wir sind hier, um Ihnen zu helfen. Zögern Sie nicht, uns für Fragen oder Unterstützung zu kontaktieren.",
-    "address": "Adresse",
-    "email": "Email",
-    "phone": "Telefon",
-    "hours": "Öffnungszeiten",
-    "mondayFriday": "Montag - Freitag",
-    "saturday": "Samstag",
-    "sunday": "Sonntag",
-    "closed": "Geschlossen",
-    "sendMessage": "Nachricht senden",
-    "sendMessageDesc": "Füllen Sie das untenstehende Formular aus und wir werden uns so schnell wie möglich bei Ihnen melden.",
-    "name": "Name",
-    "namePlaceholder": "Ihr vollständiger Name",
-    "emailPlaceholder": "ihre@email.com",
-    "subject": "Betreff",
-    "subjectPlaceholder": "Betreff Ihrer Nachricht",
-    "message": "Nachricht",
-    "messagePlaceholder": "Beschreiben Sie Ihre Anfrage oder Frage...",
-    "sendButton": "Nachricht senden",
-    "messageSent": "Nachricht gesendet",
-    "messageSentDesc": "Wir haben Ihre Nachricht erhalten und werden in Kürze antworten."
-  },
-  "chat": {
-    "title": "Nachrichten",
-    "conversationNotFound": "Unterhaltung nicht gefunden",
-    "selectValidConversation": "Bitte wählen Sie eine gültige Unterhaltung",
-    "backToDashboard": "Zurück zum Dashboard",
-    "messageError": "Fehler beim Senden der Nachricht",
-    "sendMessage": "Nachricht senden",
-    "typePlaceholder": "Schreiben Sie Ihre Nachricht...",
-    "noMessages": "Keine Nachrichten",
-    "noMessagesDesc": "Beginnen Sie die Unterhaltung, indem Sie eine Nachricht senden",
-    "online": "Online",
-    "offline": "Offline",
-    "lastSeen": "Zuletzt gesehen",
-    "itemOwner": "Eigentümer des Gegenstands",
-    "reportUser": "Benutzer melden",
-    "blockUser": "Benutzer blockieren",
-    "messageOptions": "Nachrichtenoptionen",
-    "copyMessage": "Nachricht kopieren",
-    "deleteMessage": "Nachricht löschen",
-    "editMessage": "Nachricht bearbeiten",
-    "replyMessage": "Auf Nachricht antworten",
-    "messageDeleted": "Nachricht gelöscht",
-    "messageEdited": "Nachricht bearbeitet",
-    "typing": "Schreibt...",
-    "conversationWith": "Unterhaltung mit",
-    "conversationsDesc": "Verwalten Sie Ihre Unterhaltungen über verlorene und gefundene Gegenstände",
-    "noConversations": "Noch keine Unterhaltungen",
-    "noConversationsDesc": "Beginnen Sie eine Unterhaltung, indem Sie jemanden wegen seines verlorenen oder gefundenen Gegenstands kontaktieren",
-    "you": "Sie",
-    "anonymousUser": "Anonymer Benutzer",
-    "startConversation": "Unterhaltung beginnen",
-    "contactOwner": "Eigentümer kontaktieren",
-    "interested": "Ich bin an diesem Gegenstand interessiert",
-    "conversation": "Unterhaltung",
-    "loadingMessages": "Nachrichten werden geladen...",
-    "itemDetails": "Gegenstand Details",
-    "messageSentDesc": "Ihre Nachricht wurde erfolgreich gesendet"
-  },
-  "itemDetail": {
-    "description": "Beschreibung",
-    "lostOn": "Verloren am",
-    "foundOn": "Gefunden am",
-    "publishedOn": "Veröffentlicht am",
-    "contactOwner": "Eigentümer kontaktieren",
-    "sendMessage": "Nachricht senden",
-    "messagePlaceholder": "Schreiben Sie Ihre Nachricht hier...",
-    "send": "Senden",
-    "sending": "Sende...",
-    "messageSent": "Nachricht erfolgreich gesendet",
-    "messageError": "Fehler beim Senden der Nachricht",
-    "manageAd": "Anzeige verwalten",
-    "editAd": "Anzeige bearbeiten",
-    "markAsFound": "Als gefunden markieren",
-    "deleteAd": "Anzeige löschen",
-    "notFound": "Anzeige nicht gefunden",
-    "notFoundDesc": "Die Anzeige, die Sie suchen, existiert nicht oder wurde gelöscht.",
-    "backButton": "Zurück",
-    "reportAd": "Anzeige melden",
-    "shareAd": "Anzeige teilen",
-    "saveAd": "Anzeige speichern",
-    "location": "Standort",
-    "category": "Kategorie",
-    "loginToContact": "Anmelden zum Kontaktieren",
-    "loginToContactDesc": "Sie müssen angemeldet sein, um eine Nachricht zu senden.",
-    "similarItems": "Ähnliche Gegenstände",
-    "alertDescription": "Erhalten Sie Benachrichtigungen, wenn ähnliche Gegenstände veröffentlicht werden.",
-    "createAlert": "Benachrichtigung erstellen"
-  },
-  "publishNew": {
-    "lostTitle": "Verlorener Gegenstand",
-    "foundTitle": "Gefundener Gegenstand",
-    "lostSubtitle": "Beschreiben Sie den verlorenen Gegenstand, damit andere Ihnen helfen können, ihn zu finden.",
-    "foundSubtitle": "Beschreiben Sie den gefundenen Gegenstand, damit der Besitzer Sie kontaktieren kann.",
-    "type": {
-      "label": "Anzeigentyp",
-      "lost": "Verlorener Gegenstand",
-      "found": "Gefundener Gegenstand"
-    },
-    "title": {
-      "label": "Titel",
-      "placeholder": "z.B. Schwarzes iPhone 14 Pro"
-    },
-    "description": {
-      "label": "Detaillierte Beschreibung",
-      "placeholder": "Beschreiben Sie den Gegenstand so detailliert wie möglich..."
-    },
-    "category": {
-      "label": "Kategorie",
-      "placeholder": "Wählen Sie eine Kategorie"
-    },
-    "location": {
-      "label": "Ort",
-      "placeholder": "z.B. Bahnhof Lyon, Paris"
-    },
-    "date": {
-      "label": "Datum",
-      "placeholder": "Wann haben Sie diesen Gegenstand verloren/gefunden?"
-    },
-    "contact": {
-      "label": "Kontaktinformationen",
-      "phone": "Telefonnummer",
-      "email": "E-Mail-Adresse",
-      "phonePlaceholder": "z.B. +49 172 123 456",
-      "emailPlaceholder": "z.B. ihre@email.com"
-    },
-    "image": {
-      "label": "Foto des Gegenstands",
-      "upload": "Foto hochladen",
-      "change": "Foto ändern",
-      "remove": "Foto entfernen"
-    },
-    "submit": {
-      "publish": "Anzeige veröffentlichen",
-      "publishing": "Veröffentlichen..."
-    },
-    "validation": {
-      "title_required": "Titel ist erforderlich",
-      "description_min_length": "Beschreibung muss mindestens 10 Zeichen haben",
-      "category_required": "Kategorie ist erforderlich",
-      "location_required": "Ort ist erforderlich",
-      "date_required": "Datum ist erforderlich",
-      "email_invalid": "E-Mail-Adresse ist ungültig"
-    },
-    "success": "Ihre Anzeige wurde erfolgreich veröffentlicht!",
-    "error": "Fehler beim Veröffentlichen der Anzeige",
-    "loginNotice": "Sie müssen angemeldet sein, um eine Anzeige zu veröffentlichen. Ihre Anzeige wird nach der Anmeldung gespeichert."
-  },
-  "profile": {
-    "title": "Profil",
-    "editProfile": "Profil bearbeiten",
-    "saveChanges": "Änderungen speichern",
-    "cancel": "Abbrechen",
-    "profilePicture": "Profilbild",
-    "personalInfo": "Persönliche Informationen",
-    "firstName": "Vorname",
-    "lastName": "Nachname",
-    "email": "E-Mail",
-    "phone": "Telefon",
-    "location": "Standort",
-    "bio": "Biografie",
-    "firstNamePlaceholder": "Geben Sie Ihren Vornamen ein",
-    "lastNamePlaceholder": "Geben Sie Ihren Nachnamen ein",
-    "phonePlaceholder": "Geben Sie Ihre Telefonnummer ein",
-    "locationPlaceholder": "Geben Sie Ihren Standort ein",
-    "bioPlaceholder": "Erzählen Sie uns von sich...",
-    "notProvided": "Nicht angegeben",
-    "memberSince": "Mitglied seit",
-    "accessRestricted": "Zugang beschränkt",
-    "loginRequired": "Sie müssen angemeldet sein, um auf diese Seite zugreifen zu können",
-    "updateSuccess": "Profil erfolgreich aktualisiert",
-    "updateError": "Fehler beim Aktualisieren des Profils",
-    "imageTooLarge": "Bild zu groß (max 5MB)",
-    "security": "Sicherheit",
-    "preferences": "Einstellungen",
-    "changePassword": "Passwort ändern",
-    "changePasswordDesc": "Aktualisieren Sie Ihr Passwort, um Ihr Konto zu sichern",
-    "twoFactorAuth": "Zwei-Faktor-Authentifizierung",
-    "twoFactorAuthDesc": "Fügen Sie eine zusätzliche Sicherheitsebene zu Ihrem Konto hinzu",
-    "deleteAccount": "Konto löschen",
-    "deleteAccountDesc": "Löschen Sie Ihr Konto und alle Ihre Daten dauerhaft",
-    "enable": "Aktivieren",
-    "notifications": "Benachrichtigungen",
-    "notificationsDesc": "Verwalten Sie Ihre Benachrichtigungseinstellungen",
-    "privacy": "Datenschutz",
-    "privacyDesc": "Kontrollieren Sie die Sichtbarkeit Ihrer Informationen",
-    "language": "Sprache",
-    "languageDesc": "Wählen Sie Ihre bevorzugte Sprache",
-    "configure": "Konfigurieren",
-    "tabs": {
-      "personal": "Persönlich",
-      "security": "Sicherheit",
-      "preferences": "Einstellungen"
-    },
-    "deleteAccount": "Konto löschen",
-    "deleteAccountDesc": "Ihr Konto und alle Daten dauerhaft löschen"
   },
   "howItWorks": {
     "badge": "Benutzerhandbuch",
@@ -587,5 +372,172 @@
       "publishButton": "Anzeige veröffentlichen",
       "searchButton": "Gegenstand suchen"
     }
+  },
+  "testimonials": {
+    "title": "Erfahrungsberichte",
+    "subtitle": "Was unsere Nutzer sagen",
+    "testimonial1": {
+      "name": "Maria Müller",
+      "location": "Berlin, Deutschland",
+      "content": "Ich habe mein verlorenes Handy in nur 2 Tagen gefunden! Die Community ist unglaublich hilfsbereit und aktiv."
+    },
+    "testimonial2": {
+      "name": "Thomas Schmidt",
+      "location": "München, Deutschland",
+      "content": "Einfache und effektive Benutzeroberfläche. Ich konnte jemandem helfen, seine Schlüssel zu finden, und es war ein tolles Gefühl."
+    },
+    "testimonial3": {
+      "name": "Anna Weber",
+      "location": "Hamburg, Deutschland",
+      "content": "Das integrierte Nachrichtensystem ist perfekt für sichere Kommunikation. Ich empfehle diese Plattform sehr."
+    }
+  },
+  "categories": {
+    "title": "Beliebte Kategorien",
+    "subtitle": "Gegenstände nach Kategorie durchsuchen"
+  },
+  "map": {
+    "title": "Interaktive Karte",
+    "subtitle": "Erkunden Sie verlorene und gefundene Gegenstände in Ihrer Nähe",
+    "interactiveMap": "Interaktive Karte",
+    "integration": "Integration",
+    "viewOnMap": "Auf Karte anzeigen",
+    "lostItems": "Verlorene Gegenstände",
+    "foundItems": "Gefundene Gegenstände",
+    "totalItems": "Gesamtanzahl",
+    "fullscreen": "Vollbild",
+    "loading": "Karte wird geladen...",
+    "loadError": "Fehler beim Laden der Karte",
+    "loadErrorDesc": "Karte konnte nicht geladen werden. Bitte überprüfen Sie Ihre Internetverbindung.",
+    "myLocation": "Mein Standort",
+    "yourLocation": "Ihr Standort",
+    "centerOnLocation": "Auf Standort zentrieren"
+  },
+  "footer": {
+    "description": "Ihre vertrauensvolle Plattform zum Finden und Melden verlorener Gegenstände. Verbinden Sie sich wieder mit Ihren wertvollen Besitztümern durch unsere aktive Community.",
+    "quickLinks": "Schnelllinks",
+    "support": "Support",
+    "legal": "Rechtliches",
+    "followUs": "Folgen Sie uns",
+    "allRightsReserved": "Alle Rechte vorbehalten.",
+    "home": "Startseite",
+    "about": "Über uns",
+    "contact": "Kontakt",
+    "help": "Hilfe",
+    "faq": "FAQ",
+    "privacy": "Datenschutz",
+    "terms": "Bedingungen",
+    "legalNotice": "Rechtlicher Hinweis",
+    "privacyPolicy": "Datenschutzrichtlinie",
+    "termsOfUse": "Nutzungsbedingungen"
+  },
+  "contact": {
+    "title": "Kontaktieren Sie uns",
+    "subtitle": "Wir sind hier, um Ihnen zu helfen. Zögern Sie nicht, uns für Fragen oder Unterstützung zu kontaktieren.",
+    "address": "Adresse",
+    "email": "Email",
+    "phone": "Telefon",
+    "hours": "Öffnungszeiten",
+    "mondayFriday": "Montag - Freitag",
+    "saturday": "Samstag",
+    "sunday": "Sonntag",
+    "closed": "Geschlossen",
+    "sendMessage": "Nachricht senden",
+    "sendMessageDesc": "Füllen Sie das untenstehende Formular aus und wir werden uns so schnell wie möglich bei Ihnen melden.",
+    "name": "Name",
+    "namePlaceholder": "Ihr vollständiger Name",
+    "emailPlaceholder": "ihre@email.com",
+    "subject": "Betreff",
+    "subjectPlaceholder": "Betreff Ihrer Nachricht",
+    "message": "Nachricht",
+    "messagePlaceholder": "Beschreiben Sie Ihre Anfrage oder Frage...",
+    "sendButton": "Nachricht senden",
+    "messageSent": "Nachricht gesendet",
+    "messageSentDesc": "Wir haben Ihre Nachricht erhalten und werden in Kürze antworten."
+  },
+  "itemDetail": {
+    "description": "Beschreibung",
+    "lostOn": "Verloren am",
+    "foundOn": "Gefunden am",
+    "publishedOn": "Veröffentlicht am",
+    "contactOwner": "Eigentümer kontaktieren",
+    "sendMessage": "Nachricht senden",
+    "messagePlaceholder": "Schreiben Sie Ihre Nachricht hier...",
+    "send": "Senden",
+    "sending": "Sende...",
+    "messageSent": "Nachricht erfolgreich gesendet",
+    "messageError": "Fehler beim Senden der Nachricht",
+    "manageAd": "Anzeige verwalten",
+    "editAd": "Anzeige bearbeiten",
+    "markAsFound": "Als gefunden markieren",
+    "deleteAd": "Anzeige löschen",
+    "notFound": "Anzeige nicht gefunden",
+    "notFoundDesc": "Die Anzeige, die Sie suchen, existiert nicht oder wurde gelöscht.",
+    "backButton": "Zurück",
+    "reportAd": "Anzeige melden",
+    "shareAd": "Anzeige teilen",
+    "saveAd": "Anzeige speichern",
+    "location": "Standort",
+    "category": "Kategorie",
+    "loginToContact": "Anmelden zum Kontaktieren",
+    "loginToContactDesc": "Sie müssen angemeldet sein, um eine Nachricht zu senden.",
+    "similarItems": "Ähnliche Gegenstände",
+    "alertDescription": "Erhalten Sie Benachrichtigungen, wenn ähnliche Gegenstände veröffentlicht werden.",
+    "createAlert": "Benachrichtigung erstellen"
+  },
+  "profile": {
+    "title": "Profil",
+    "editProfile": "Profil bearbeiten",
+    "saveChanges": "Änderungen speichern",
+    "cancel": "Abbrechen",
+    "profilePicture": "Profilbild",
+    "personalInfo": "Persönliche Informationen",
+    "firstName": "Vorname",
+    "lastName": "Nachname",
+    "email": "E-Mail",
+    "phone": "Telefon",
+    "location": "Standort",
+    "bio": "Biografie",
+    "firstNamePlaceholder": "Geben Sie Ihren Vornamen ein",
+    "lastNamePlaceholder": "Geben Sie Ihren Nachnamen ein",
+    "phonePlaceholder": "Geben Sie Ihre Telefonnummer ein",
+    "locationPlaceholder": "Geben Sie Ihren Standort ein",
+    "bioPlaceholder": "Erzählen Sie uns von sich...",
+    "notProvided": "Nicht angegeben",
+    "memberSince": "Mitglied seit",
+    "accessRestricted": "Zugang beschränkt",
+    "loginRequired": "Sie müssen angemeldet sein, um auf diese Seite zugreifen zu können",
+    "updateSuccess": "Profil erfolgreich aktualisiert",
+    "updateError": "Fehler beim Aktualisieren des Profils",
+    "imageTooLarge": "Bild zu groß (max 5MB)",
+    "security": "Sicherheit",
+    "preferences": "Einstellungen",
+    "changePassword": "Passwort ändern",
+    "changePasswordDesc": "Aktualisieren Sie Ihr Passwort, um Ihr Konto zu sichern",
+    "twoFactorAuth": "Zwei-Faktor-Authentifizierung",
+    "twoFactorAuthDesc": "Fügen Sie eine zusätzliche Sicherheitsebene zu Ihrem Konto hinzu",
+    "deleteAccount": "Konto löschen",
+    "deleteAccountDesc": "Ihr Konto und alle Daten dauerhaft löschen",
+    "enable": "Aktivieren",
+    "notifications": "Benachrichtigungen",
+    "notificationsDesc": "Verwalten Sie Ihre Benachrichtigungseinstellungen",
+    "privacy": "Datenschutz",
+    "privacyDesc": "Kontrollieren Sie die Sichtbarkeit Ihrer Informationen",
+    "language": "Sprache",
+    "languageDesc": "Wählen Sie Ihre bevorzugte Sprache",
+    "configure": "Konfigurieren",
+    "tabs": {
+      "personal": "Persönlich",
+      "security": "Sicherheit",
+      "preferences": "Einstellungen"
+    }
+  },
+  "auth": {
+    "signUp": "Registrieren",
+    "signIn": "Anmelden",
+    "email": "E-Mail",
+    "password": "Passwort",
+    "firstName": "Vorname",
+    "lastName": "Nachname"
   }
 }

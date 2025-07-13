@@ -1,26 +1,76 @@
 {
   "nav": {
-    "home": "主页",
+    "map": "地图",
+    "home": "首页",
     "search": "搜索",
     "publish": "发布",
+    "howItWorks": "使用方法",
+    "contact": "联系",
+    "chat": "消息",
     "dashboard": "仪表板",
     "profile": "个人资料",
-    "chat": "消息",
     "login": "登录",
     "logout": "退出",
-    "features": "功能",
-    "howItWorks": "如何工作",
-    "contact": "联系",
-    "pricing": "价格",
-    "map": "地图"
+    "features": "功能"
   },
   "publishNew": {
+    "lostTitle": "丢失物品",
+    "foundTitle": "拾获物品",
+    "lostSubtitle": "描述您丢失的物品，以便其他人能帮助您找到它。",
+    "foundSubtitle": "描述您拾获的物品，以便失主能联系您。",
     "type": {
+      "label": "广告类型",
       "lost": "丢失物品",
-      "found": "找到物品"
+      "found": "拾获物品"
     },
-    "lostSubtitle": "报告您丢失的物品",
-    "foundSubtitle": "报告您找到的物品"
+    "title": {
+      "label": "标题",
+      "placeholder": "例如：黑色iPhone 14 Pro"
+    },
+    "description": {
+      "label": "详细描述",
+      "placeholder": "尽可能详细地描述物品..."
+    },
+    "category": {
+      "label": "类别",
+      "placeholder": "选择类别"
+    },
+    "location": {
+      "label": "地点",
+      "placeholder": "例如：里昂车站，巴黎"
+    },
+    "date": {
+      "label": "日期",
+      "placeholder": "您什么时候丢失/拾获这个物品？"
+    },
+    "contact": {
+      "label": "联系信息",
+      "phone": "电话号码",
+      "email": "邮箱地址",
+      "phonePlaceholder": "例如：+86 138 0013 8000",
+      "emailPlaceholder": "例如：your@email.com"
+    },
+    "image": {
+      "label": "物品照片",
+      "upload": "上传照片",
+      "change": "更换照片",
+      "remove": "删除照片"
+    },
+    "submit": {
+      "publish": "发布广告",
+      "publishing": "发布中..."
+    },
+    "validation": {
+      "title_required": "标题是必需的",
+      "description_min_length": "描述至少需要10个字符",
+      "category_required": "类别是必需的",
+      "location_required": "地点是必需的",
+      "date_required": "日期是必需的",
+      "email_invalid": "邮箱地址无效"
+    },
+    "success": "您的广告已成功发布！",
+    "error": "发布广告时出错",
+    "loginNotice": "您必须登录才能发布广告。登录后您的广告将被保存。"
   },
   "pricing": {
     "title": "优化您的搜索",
@@ -88,24 +138,42 @@
     }
   },
   "chat": {
-    "conversation": "对话",
+    "title": "消息",
     "conversationNotFound": "未找到对话",
     "selectValidConversation": "请选择有效的对话",
     "backToDashboard": "返回仪表板",
-    "noMessages": "无消息",
-    "startConversation": "发送消息开始对话",
+    "messageError": "发送消息错误",
+    "sendMessage": "发送消息",
     "typePlaceholder": "输入您的消息...",
-    "messageError": "发送消息时出错",
-    "messageSuccess": "消息发送成功",
-    "typing": "正在输入...",
+    "noMessages": "无消息",
+    "noMessagesDesc": "发送消息开始对话",
     "online": "在线",
     "offline": "离线",
-    "loadingMessages": "加载消息中...",
-    "contactSeller": "联系卖家",
-    "contactBuyer": "联系买家",
-    "itemDetails": "物品详情",
+    "lastSeen": "最后在线",
+    "itemOwner": "物品所有者",
     "reportUser": "举报用户",
-    "blockUser": "拉黑用户"
+    "blockUser": "屏蔽用户",
+    "messageOptions": "消息选项",
+    "copyMessage": "复制消息",
+    "deleteMessage": "删除消息",
+    "editMessage": "编辑消息",
+    "replyMessage": "回复消息",
+    "messageDeleted": "消息已删除",
+    "messageEdited": "消息已编辑",
+    "typing": "正在输入...",
+    "conversationWith": "与...对话",
+    "conversationsDesc": "管理您关于丢失和发现物品的对话",
+    "noConversations": "还没有对话",
+    "noConversationsDesc": "通过联系某人关于他们丢失或发现的物品开始对话",
+    "you": "您",
+    "anonymousUser": "匿名用户",
+    "startConversation": "开始对话",
+    "contactOwner": "联系所有者",
+    "interested": "我对这个物品感兴趣",
+    "conversation": "对话",
+    "loadingMessages": "正在加载消息...",
+    "itemDetails": "物品详情",
+    "messageSentDesc": "您的消息已成功发送"
   },
   "dashboard": {
     "title": "仪表板",
@@ -178,9 +246,8 @@
     "markResolvedError": "更新物品时出错"
   },
   "common": {
-    "error": "错误",
-    "success": "成功",
-    "loading": "加载中..."
+    "viewDetails": "查看详情",
+    "backToHome": "返回首页"
   },
   "search": {
     "title": "物品搜索",
@@ -235,288 +302,6 @@
     "viewAllItems": "查看所有物品",
     "ctaTitle": "准备找回您丢失的物品了吗？",
     "ctaSubtitle": "加入我们的社区，立即开始"
-  },
-  "nav": {
-    "map": "地图",
-    "home": "首页",
-    "search": "搜索",
-    "publish": "发布",
-    "howItWorks": "使用方法",
-    "contact": "联系",
-    "chat": "消息",
-    "dashboard": "仪表板"
-  },
-  "common": {
-    "viewDetails": "查看详情",
-    "backToHome": "返回首页"
-  },
-  "howItWorks": {
-    "title": "使用方法",
-    "subtitle": "通过3个简单步骤找到或报告丢失物品",
-    "step1": {
-      "title": "发布您的信息",
-      "description": "用详细信息和照片描述您丢失或找到的物品"
-    },
-    "step2": {
-      "title": "搜索和浏览",
-      "description": "探索信息并使用我们的高级搜索过滤器"
-    },
-    "step3": {
-      "title": "联系",
-      "description": "通过我们的消息系统直接联系物主"
-    }
-  },
-  "testimonials": {
-    "title": "用户评价",
-    "subtitle": "用户怎么说",
-    "testimonial1": {
-      "name": "李晓明",
-      "location": "北京, 中国",
-      "content": "我在短短2天内找到了我丢失的手机！社区非常有帮助且活跃。"
-    },
-    "testimonial2": {
-      "name": "王美丽",
-      "location": "上海, 中国",
-      "content": "界面简单有效。我帮助别人找到了钥匙，感觉很棒。"
-    },
-    "testimonial3": {
-      "name": "张强",
-      "location": "广州, 中国",
-      "content": "集成的消息系统非常适合安全通信。我强烈推荐这个平台。"
-    }
-  },
-  "categories": {
-    "title": "热门类别",
-    "subtitle": "按类别浏览物品"
-  },
-  "map": {
-    "title": "交互式地图",
-    "subtitle": "探索您附近的失物和拾物",
-    "interactiveMap": "交互式地图",
-    "integration": "集成",
-    "viewOnMap": "在地图上查看",
-    "lostItems": "丢失物品",
-    "foundItems": "找到物品",
-    "totalItems": "物品总数",
-    "fullscreen": "全屏"
-  },
-  "footer": {
-    "description": "您值得信赖的平台，用于查找和报告丢失物品。通过我们活跃的社区重新连接您的珍贵物品。",
-    "quickLinks": "快速链接",
-    "support": "支持",
-    "legal": "法律",
-    "followUs": "关注我们",
-    "allRightsReserved": "版权所有。",
-    "home": "首页",
-    "about": "关于",
-    "contact": "联系",
-    "help": "帮助",
-    "faq": "常见问题",
-    "privacy": "隐私",
-    "terms": "条款",
-    "legalNotice": "法律声明",
-    "privacyPolicy": "隐私政策",
-    "termsOfUse": "使用条款"
-  },
-  "contact": {
-    "title": "联系我们",
-    "subtitle": "我们在这里为您提供帮助。如有任何问题或需要帮助，请随时联系我们。",
-    "address": "地址",
-    "email": "电子邮件",
-    "phone": "电话",
-    "hours": "营业时间",
-    "mondayFriday": "周一 - 周五",
-    "saturday": "周六",
-    "sunday": "周日",
-    "closed": "休息",
-    "sendMessage": "发送消息",
-    "sendMessageDesc": "请填写下面的表格，我们会尽快回复您。",
-    "name": "姓名",
-    "namePlaceholder": "您的全名",
-    "emailPlaceholder": "您的@邮箱.com",
-    "subject": "主题",
-    "subjectPlaceholder": "您的消息主题",
-    "message": "消息",
-    "messagePlaceholder": "描述您的请求或问题...",
-    "sendButton": "发送消息",
-    "messageSent": "消息已发送",
-    "messageSentDesc": "我们已收到您的消息，会很快回复您。"
-  },
-  "chat": {
-    "title": "消息",
-    "conversationNotFound": "未找到对话",
-    "selectValidConversation": "请选择有效的对话",
-    "backToDashboard": "返回仪表板",
-    "messageError": "发送消息错误",
-    "sendMessage": "发送消息",
-    "typePlaceholder": "输入您的消息...",
-    "noMessages": "无消息",
-    "noMessagesDesc": "发送消息开始对话",
-    "online": "在线",
-    "offline": "离线",
-    "lastSeen": "最后在线",
-    "itemOwner": "物品所有者",
-    "reportUser": "举报用户",
-    "blockUser": "屏蔽用户",
-    "messageOptions": "消息选项",
-    "copyMessage": "复制消息",
-    "deleteMessage": "删除消息",
-    "editMessage": "编辑消息",
-    "replyMessage": "回复消息",
-    "messageDeleted": "消息已删除",
-    "messageEdited": "消息已编辑",
-    "typing": "正在输入...",
-    "conversationWith": "与...对话",
-    "conversationsDesc": "管理您关于丢失和发现物品的对话",
-    "noConversations": "还没有对话",
-    "noConversationsDesc": "通过联系某人关于他们丢失或发现的物品开始对话",
-    "you": "您",
-    "anonymousUser": "匿名用户",
-    "startConversation": "开始对话",
-    "contactOwner": "联系所有者",
-    "interested": "我对这个物品感兴趣",
-    "conversation": "对话",
-    "loadingMessages": "正在加载消息...",
-    "itemDetails": "物品详情",
-    "messageSentDesc": "您的消息已成功发送"
-  },
-  "itemDetail": {
-    "description": "描述",
-    "lostOn": "丢失于",
-    "foundOn": "发现于",
-    "publishedOn": "发布于",
-    "contactOwner": "联系所有者",
-    "sendMessage": "发送消息",
-    "messagePlaceholder": "在此输入您的消息...",
-    "send": "发送",
-    "sending": "发送中...",
-    "messageSent": "消息发送成功",
-    "messageError": "消息发送失败",
-    "manageAd": "管理广告",
-    "editAd": "编辑广告",
-    "markAsFound": "标记为已找到",
-    "deleteAd": "删除广告",
-    "notFound": "广告未找到",
-    "notFoundDesc": "您要查找的广告不存在或已被删除。",
-    "backButton": "返回",
-    "reportAd": "举报广告",
-    "shareAd": "分享广告",
-    "saveAd": "保存广告",
-    "location": "位置",
-    "category": "类别",
-    "loginToContact": "登录以联系",
-    "loginToContactDesc": "您必须登录才能发送消息。",
-    "similarItems": "相似物品",
-    "alertDescription": "当发布相似物品时收到提醒。",
-    "createAlert": "创建提醒"
-  },
-  "publishNew": {
-    "lostTitle": "丢失物品",
-    "foundTitle": "拾获物品",
-    "lostSubtitle": "描述您丢失的物品，以便其他人能帮助您找到它。",
-    "foundSubtitle": "描述您拾获的物品，以便失主能联系您。",
-    "type": {
-      "label": "广告类型",
-      "lost": "丢失物品",
-      "found": "拾获物品"
-    },
-    "title": {
-      "label": "标题",
-      "placeholder": "例如：黑色iPhone 14 Pro"
-    },
-    "description": {
-      "label": "详细描述",
-      "placeholder": "尽可能详细地描述物品..."
-    },
-    "category": {
-      "label": "类别",
-      "placeholder": "选择类别"
-    },
-    "location": {
-      "label": "地点",
-      "placeholder": "例如：里昂车站，巴黎"
-    },
-    "date": {
-      "label": "日期",
-      "placeholder": "您什么时候丢失/拾获这个物品？"
-    },
-    "contact": {
-      "label": "联系信息",
-      "phone": "电话号码",
-      "email": "邮箱地址",
-      "phonePlaceholder": "例如：+86 138 0013 8000",
-      "emailPlaceholder": "例如：your@email.com"
-    },
-    "image": {
-      "label": "物品照片",
-      "upload": "上传照片",
-      "change": "更换照片",
-      "remove": "删除照片"
-    },
-    "submit": {
-      "publish": "发布广告",
-      "publishing": "发布中..."
-    },
-    "validation": {
-      "title_required": "标题是必需的",
-      "description_min_length": "描述至少需要10个字符",
-      "category_required": "类别是必需的",
-      "location_required": "地点是必需的",
-      "date_required": "日期是必需的",
-      "email_invalid": "邮箱地址无效"
-    },
-    "success": "您的广告已成功发布！",
-    "error": "发布广告时出错",
-    "loginNotice": "您必须登录才能发布广告。登录后您的广告将被保存。"
-  },
-  "profile": {
-    "title": "个人资料",
-    "editProfile": "编辑个人资料",
-    "saveChanges": "保存更改",
-    "cancel": "取消",
-    "profilePicture": "头像",
-    "personalInfo": "个人信息",
-    "firstName": "名字",
-    "lastName": "姓氏",
-    "email": "邮箱",
-    "phone": "电话",
-    "location": "位置",
-    "bio": "个人简介",
-    "firstNamePlaceholder": "请输入您的名字",
-    "lastNamePlaceholder": "请输入您的姓氏",
-    "phonePlaceholder": "请输入您的电话号码",
-    "locationPlaceholder": "请输入您的位置",
-    "bioPlaceholder": "请介绍一下自己...",
-    "notProvided": "未提供",
-    "memberSince": "会员自",
-    "accessRestricted": "访问受限",
-    "loginRequired": "您必须登录才能访问此页面",
-    "updateSuccess": "个人资料更新成功",
-    "updateError": "更新个人资料时出错",
-    "imageTooLarge": "图片过大（最大5MB）",
-    "security": "安全设置",
-    "preferences": "偏好设置",
-    "changePassword": "更改密码",
-    "changePasswordDesc": "更新您的密码以保护账户安全",
-    "twoFactorAuth": "双重验证",
-    "twoFactorAuthDesc": "为您的账户添加额外的安全层",
-    "deleteAccount": "删除账户",
-    "deleteAccountDesc": "永久删除您的账户和所有数据",
-    "enable": "启用",
-    "notifications": "通知",
-    "notificationsDesc": "管理您的通知偏好",
-    "privacy": "隐私",
-    "privacyDesc": "控制您的信息可见性",
-    "language": "语言",
-    "languageDesc": "选择您的首选语言",
-    "configure": "配置",
-    "tabs": {
-      "personal": "个人",
-      "security": "安全",
-      "preferences": "偏好"
-    },
-    "deleteAccount": "删除账户",
-    "deleteAccountDesc": "永久删除您的账户和所有数据"
   },
   "howItWorks": {
     "badge": "用户指南",
@@ -587,5 +372,172 @@
       "publishButton": "发布信息",
       "searchButton": "搜索物品"
     }
+  },
+  "testimonials": {
+    "title": "用户评价",
+    "subtitle": "用户怎么说",
+    "testimonial1": {
+      "name": "李晓明",
+      "location": "北京, 中国",
+      "content": "我在短短2天内找到了我丢失的手机！社区非常有帮助且活跃。"
+    },
+    "testimonial2": {
+      "name": "王美丽",
+      "location": "上海, 中国",
+      "content": "界面简单有效。我帮助别人找到了钥匙，感觉很棒。"
+    },
+    "testimonial3": {
+      "name": "张强",
+      "location": "广州, 中国",
+      "content": "集成的消息系统非常适合安全通信。我强烈推荐这个平台。"
+    }
+  },
+  "categories": {
+    "title": "热门类别",
+    "subtitle": "按类别浏览物品"
+  },
+  "map": {
+    "title": "交互式地图",
+    "subtitle": "探索您附近的失物和拾物",
+    "interactiveMap": "交互式地图",
+    "integration": "集成",
+    "viewOnMap": "在地图上查看",
+    "lostItems": "丢失物品",
+    "foundItems": "找到物品",
+    "totalItems": "总项目",
+    "fullscreen": "全屏",
+    "loading": "加载地图中...",
+    "loadError": "地图加载错误",
+    "loadErrorDesc": "无法加载地图。请检查您的网络连接。",
+    "myLocation": "我的位置",
+    "yourLocation": "您的位置",
+    "centerOnLocation": "在位置上居中"
+  },
+  "footer": {
+    "description": "您值得信赖的平台，用于查找和报告丢失物品。通过我们活跃的社区重新连接您的珍贵物品。",
+    "quickLinks": "快速链接",
+    "support": "支持",
+    "legal": "法律",
+    "followUs": "关注我们",
+    "allRightsReserved": "版权所有。",
+    "home": "首页",
+    "about": "关于",
+    "contact": "联系",
+    "help": "帮助",
+    "faq": "常见问题",
+    "privacy": "隐私",
+    "terms": "条款",
+    "legalNotice": "法律声明",
+    "privacyPolicy": "隐私政策",
+    "termsOfUse": "使用条款"
+  },
+  "contact": {
+    "title": "联系我们",
+    "subtitle": "我们在这里为您提供帮助。如有任何问题或需要帮助，请随时联系我们。",
+    "address": "地址",
+    "email": "电子邮件",
+    "phone": "电话",
+    "hours": "营业时间",
+    "mondayFriday": "周一 - 周五",
+    "saturday": "周六",
+    "sunday": "周日",
+    "closed": "休息",
+    "sendMessage": "发送消息",
+    "sendMessageDesc": "请填写下面的表格，我们会尽快回复您。",
+    "name": "姓名",
+    "namePlaceholder": "您的全名",
+    "emailPlaceholder": "您的@邮箱.com",
+    "subject": "主题",
+    "subjectPlaceholder": "您的消息主题",
+    "message": "消息",
+    "messagePlaceholder": "描述您的请求或问题...",
+    "sendButton": "发送消息",
+    "messageSent": "消息已发送",
+    "messageSentDesc": "我们已收到您的消息，会很快回复您。"
+  },
+  "itemDetail": {
+    "description": "描述",
+    "lostOn": "丢失于",
+    "foundOn": "发现于",
+    "publishedOn": "发布于",
+    "contactOwner": "联系所有者",
+    "sendMessage": "发送消息",
+    "messagePlaceholder": "在此输入您的消息...",
+    "send": "发送",
+    "sending": "发送中...",
+    "messageSent": "消息发送成功",
+    "messageError": "消息发送失败",
+    "manageAd": "管理广告",
+    "editAd": "编辑广告",
+    "markAsFound": "标记为已找到",
+    "deleteAd": "删除广告",
+    "notFound": "广告未找到",
+    "notFoundDesc": "您要查找的广告不存在或已被删除。",
+    "backButton": "返回",
+    "reportAd": "举报广告",
+    "shareAd": "分享广告",
+    "saveAd": "保存广告",
+    "location": "位置",
+    "category": "类别",
+    "loginToContact": "登录以联系",
+    "loginToContactDesc": "您必须登录才能发送消息。",
+    "similarItems": "相似物品",
+    "alertDescription": "当发布相似物品时收到提醒。",
+    "createAlert": "创建提醒"
+  },
+  "profile": {
+    "title": "个人资料",
+    "editProfile": "编辑个人资料",
+    "saveChanges": "保存更改",
+    "cancel": "取消",
+    "profilePicture": "头像",
+    "personalInfo": "个人信息",
+    "firstName": "名字",
+    "lastName": "姓氏",
+    "email": "邮箱",
+    "phone": "电话",
+    "location": "位置",
+    "bio": "个人简介",
+    "firstNamePlaceholder": "请输入您的名字",
+    "lastNamePlaceholder": "请输入您的姓氏",
+    "phonePlaceholder": "请输入您的电话号码",
+    "locationPlaceholder": "请输入您的位置",
+    "bioPlaceholder": "请介绍一下自己...",
+    "notProvided": "未提供",
+    "memberSince": "会员自",
+    "accessRestricted": "访问受限",
+    "loginRequired": "您必须登录才能访问此页面",
+    "updateSuccess": "个人资料更新成功",
+    "updateError": "更新个人资料时出错",
+    "imageTooLarge": "图片过大（最大5MB）",
+    "security": "安全",
+    "preferences": "偏好",
+    "changePassword": "更改密码",
+    "changePasswordDesc": "更新您的密码以保护账户安全",
+    "twoFactorAuth": "双重验证",
+    "twoFactorAuthDesc": "为您的账户添加额外的安全层",
+    "deleteAccount": "删除账户",
+    "deleteAccountDesc": "永久删除您的账户和所有数据",
+    "enable": "启用",
+    "notifications": "通知",
+    "notificationsDesc": "管理您的通知偏好",
+    "privacy": "隐私",
+    "privacyDesc": "控制您的信息可见性",
+    "language": "语言",
+    "languageDesc": "选择您的首选语言",
+    "configure": "配置",
+    "tabs": {
+      "personal": "个人",
+      "security": "安全",
+      "preferences": "偏好"
+    }
+  },
+  "auth": {
+    "signUp": "注册",
+    "signIn": "登录",
+    "email": "邮箱",
+    "password": "密码",
+    "firstName": "名字",
+    "lastName": "姓氏"
   }
 }

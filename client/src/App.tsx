@@ -18,7 +18,7 @@ import Conversations from "@/pages/conversations";
 import HowItWorks from "@/pages/how-it-works";
 import Contact from "@/pages/contact";
 import Profile from "@/pages/profile";
-import AdminDashboard from "@/pages/admin-dashboard";
+// AdminDashboard removed - consolidated into Admin component
 import Admin from "@/pages/admin";
 import AdminUsers from "@/pages/admin-users";
 import AdminItems from "@/pages/admin-items";
@@ -58,7 +58,7 @@ function Router() {
       <Route path="/admin/revenue" component={AdminRevenue} />
       <Route path="/admin/analytics" component={AdminAnalytics} />
       <Route path="/admin/settings" component={AdminSettings} />
-      <Route path="/admin-dashboard" component={AdminDashboard} />
+      <Route path="/admin-dashboard" component={() => <Admin />} />
       <Route path="/" component={isLoading || !isAuthenticated ? Landing : Home} />
       <Route component={NotFound} />
     </Switch>

@@ -1,26 +1,76 @@
 {
   "nav": {
+    "map": "Mappa",
     "home": "Home",
     "search": "Cerca",
     "publish": "Pubblica",
-    "dashboard": "Dashboard",
-    "profile": "Profilo",
-    "chat": "Messaggi",
-    "login": "Accedi",
-    "logout": "Disconnetti",
-    "features": "Funzionalità",
     "howItWorks": "Come funziona",
     "contact": "Contatto",
-    "pricing": "Prezzi",
-    "map": "Mappa"
+    "chat": "Messaggi",
+    "dashboard": "Dashboard",
+    "profile": "Profilo",
+    "login": "Accedi",
+    "logout": "Disconnetti",
+    "features": "Funzionalità"
   },
   "publishNew": {
+    "lostTitle": "Oggetto perso",
+    "foundTitle": "Oggetto trovato",
+    "lostSubtitle": "Descrivi l'oggetto che hai perso così altri possono aiutarti a trovarlo.",
+    "foundSubtitle": "Descrivi l'oggetto che hai trovato così il proprietario può contattarti.",
     "type": {
-      "lost": "Oggetto smarrito",
+      "label": "Tipo di annuncio",
+      "lost": "Oggetto perso",
       "found": "Oggetto trovato"
     },
-    "lostSubtitle": "Segnala un oggetto che hai perso",
-    "foundSubtitle": "Segnala un oggetto che hai trovato"
+    "title": {
+      "label": "Titolo",
+      "placeholder": "es. iPhone 14 Pro nero"
+    },
+    "description": {
+      "label": "Descrizione dettagliata",
+      "placeholder": "Descrivi l'oggetto con il maggior dettaglio possibile..."
+    },
+    "category": {
+      "label": "Categoria",
+      "placeholder": "Seleziona una categoria"
+    },
+    "location": {
+      "label": "Posizione",
+      "placeholder": "es. Stazione di Lyon, Parigi"
+    },
+    "date": {
+      "label": "Data",
+      "placeholder": "Quando hai perso/trovato questo oggetto?"
+    },
+    "contact": {
+      "label": "Informazioni di contatto",
+      "phone": "Numero di telefono",
+      "email": "Indirizzo email",
+      "phonePlaceholder": "es. +39 333 123 456",
+      "emailPlaceholder": "es. tuo@email.com"
+    },
+    "image": {
+      "label": "Foto dell'oggetto",
+      "upload": "Carica una foto",
+      "change": "Cambia foto",
+      "remove": "Rimuovi foto"
+    },
+    "submit": {
+      "publish": "Pubblica annuncio",
+      "publishing": "Pubblicando..."
+    },
+    "validation": {
+      "title_required": "Il titolo è obbligatorio",
+      "description_min_length": "La descrizione deve avere almeno 10 caratteri",
+      "category_required": "La categoria è obbligatoria",
+      "location_required": "La posizione è obbligatoria",
+      "date_required": "La data è obbligatoria",
+      "email_invalid": "L'indirizzo email non è valido"
+    },
+    "success": "Il tuo annuncio è stato pubblicato con successo!",
+    "error": "Errore nella pubblicazione dell'annuncio",
+    "loginNotice": "Devi essere loggato per pubblicare un annuncio. Il tuo annuncio sarà salvato dopo il login."
   },
   "pricing": {
     "title": "Ottimizza le tue ricerche",
@@ -88,24 +138,42 @@
     }
   },
   "chat": {
-    "conversation": "Conversazione",
+    "title": "Messaggi",
     "conversationNotFound": "Conversazione non trovata",
-    "selectValidConversation": "Seleziona una conversazione valida",
-    "backToDashboard": "Torna alla dashboard",
-    "noMessages": "Nessun messaggio",
-    "startConversation": "Inizia una conversazione inviando un messaggio",
-    "typePlaceholder": "Digita il tuo messaggio...",
+    "selectValidConversation": "Per favore seleziona una conversazione valida",
+    "backToDashboard": "Torna alla Dashboard",
     "messageError": "Errore nell'invio del messaggio",
-    "messageSuccess": "Messaggio inviato con successo",
-    "typing": "Scrivendo...",
+    "sendMessage": "Invia messaggio",
+    "typePlaceholder": "Scrivi il tuo messaggio...",
+    "noMessages": "Nessun messaggio",
+    "noMessagesDesc": "Inizia la conversazione inviando un messaggio",
     "online": "Online",
     "offline": "Offline",
-    "loadingMessages": "Caricamento messaggi...",
-    "contactSeller": "Contatta venditore",
-    "contactBuyer": "Contatta compratore",
-    "itemDetails": "Dettagli oggetto",
+    "lastSeen": "Visto l'ultima volta",
+    "itemOwner": "Proprietario dell'oggetto",
     "reportUser": "Segnala utente",
-    "blockUser": "Blocca utente"
+    "blockUser": "Blocca utente",
+    "messageOptions": "Opzioni messaggio",
+    "copyMessage": "Copia messaggio",
+    "deleteMessage": "Elimina messaggio",
+    "editMessage": "Modifica messaggio",
+    "replyMessage": "Rispondi al messaggio",
+    "messageDeleted": "Messaggio eliminato",
+    "messageEdited": "Messaggio modificato",
+    "typing": "Sta scrivendo...",
+    "conversationWith": "Conversazione con",
+    "conversationsDesc": "Gestisci le tue conversazioni sugli oggetti persi e trovati",
+    "noConversations": "Nessuna conversazione ancora",
+    "noConversationsDesc": "Inizia una conversazione contattando qualcuno riguardo al suo oggetto perso o trovato",
+    "you": "Tu",
+    "anonymousUser": "Utente anonimo",
+    "startConversation": "Inizia conversazione",
+    "contactOwner": "Contatta proprietario",
+    "interested": "Sono interessato a questo oggetto",
+    "conversation": "Conversazione",
+    "loadingMessages": "Caricamento messaggi...",
+    "itemDetails": "Dettagli oggetto",
+    "messageSentDesc": "Il tuo messaggio è stato inviato con successo"
   },
   "dashboard": {
     "title": "Pannello di Controllo",
@@ -178,9 +246,8 @@
     "markResolvedError": "Errore nell'aggiornamento dell'oggetto"
   },
   "common": {
-    "error": "Errore",
-    "success": "Successo",
-    "loading": "Caricamento..."
+    "viewDetails": "Vedi dettagli",
+    "backToHome": "Torna alla Home"
   },
   "search": {
     "title": "Ricerca oggetti",
@@ -235,288 +302,6 @@
     "viewAllItems": "Vedi tutti gli oggetti",
     "ctaTitle": "Pronto a trovare i tuoi oggetti persi?",
     "ctaSubtitle": "Unisciti alla nostra comunità e inizia ora"
-  },
-  "nav": {
-    "map": "Mappa",
-    "home": "Home",
-    "search": "Cerca",
-    "publish": "Pubblica",
-    "howItWorks": "Come funziona",
-    "contact": "Contatto",
-    "chat": "Messaggi",
-    "dashboard": "Dashboard"
-  },
-  "common": {
-    "viewDetails": "Vedi dettagli",
-    "backToHome": "Torna alla Home"
-  },
-  "howItWorks": {
-    "title": "Come funziona",
-    "subtitle": "Trova o segnala un oggetto perso in 3 semplici passaggi",
-    "step1": {
-      "title": "Pubblica il tuo annuncio",
-      "description": "Descrivi il tuo oggetto perso o trovato con dettagli e foto"
-    },
-    "step2": {
-      "title": "Cerca e naviga",
-      "description": "Esplora annunci e usa i nostri filtri di ricerca avanzati"
-    },
-    "step3": {
-      "title": "Connettiti",
-      "description": "Contatta direttamente i proprietari tramite il nostro sistema di messaggi"
-    }
-  },
-  "testimonials": {
-    "title": "Testimonianze",
-    "subtitle": "Cosa dicono i nostri utenti",
-    "testimonial1": {
-      "name": "Maria Rossi",
-      "location": "Roma, Italia",
-      "content": "Ho trovato il mio telefono perso in soli 2 giorni! La comunità è incredibilmente utile e attiva."
-    },
-    "testimonial2": {
-      "name": "Marco Bianchi",
-      "location": "Milano, Italia",
-      "content": "Interfaccia semplice ed efficace. Sono riuscito ad aiutare qualcuno a trovare le sue chiavi ed è stata una sensazione fantastica."
-    },
-    "testimonial3": {
-      "name": "Anna Verdi",
-      "location": "Napoli, Italia",
-      "content": "Il sistema di messaggistica integrato è perfetto per comunicare in sicurezza. Consiglio vivamente questa piattaforma."
-    }
-  },
-  "categories": {
-    "title": "Categorie popolari",
-    "subtitle": "Sfoglia oggetti per categoria"
-  },
-  "map": {
-    "title": "Mappa interattiva",
-    "subtitle": "Esplora oggetti persi e trovati vicino a te",
-    "interactiveMap": "Mappa interattiva",
-    "integration": "Integrazione",
-    "viewOnMap": "Vedi sulla mappa",
-    "lostItems": "Oggetti persi",
-    "foundItems": "Oggetti trovati",
-    "totalItems": "Totale oggetti",
-    "fullscreen": "Schermo intero"
-  },
-  "footer": {
-    "description": "La tua piattaforma di fiducia per trovare e segnalare oggetti persi. Riconnettiti con i tuoi beni preziosi attraverso la nostra comunità attiva.",
-    "quickLinks": "Link rapidi",
-    "support": "Supporto",
-    "legal": "Legale",
-    "followUs": "Seguici",
-    "allRightsReserved": "Tutti i diritti riservati.",
-    "home": "Home",
-    "about": "Chi siamo",
-    "contact": "Contatto",
-    "help": "Aiuto",
-    "faq": "FAQ",
-    "privacy": "Privacy",
-    "terms": "Termini",
-    "legalNotice": "Informativa Legale",
-    "privacyPolicy": "Politica sulla Privacy",
-    "termsOfUse": "Termini di Utilizzo"
-  },
-  "contact": {
-    "title": "Contattaci",
-    "subtitle": "Siamo qui per aiutarti. Non esitare a contattarci per qualsiasi domanda o assistenza.",
-    "address": "Indirizzo",
-    "email": "Email",
-    "phone": "Telefono",
-    "hours": "Orari di Apertura",
-    "mondayFriday": "Lunedì - Venerdì",
-    "saturday": "Sabato",
-    "sunday": "Domenica",
-    "closed": "Chiuso",
-    "sendMessage": "Invia Messaggio",
-    "sendMessageDesc": "Compila il modulo sottostante e ti risponderemo il prima possibile.",
-    "name": "Nome",
-    "namePlaceholder": "Il tuo nome completo",
-    "emailPlaceholder": "tua@email.com",
-    "subject": "Oggetto",
-    "subjectPlaceholder": "Oggetto del tuo messaggio",
-    "message": "Messaggio",
-    "messagePlaceholder": "Descrivi la tua richiesta o domanda...",
-    "sendButton": "Invia Messaggio",
-    "messageSent": "Messaggio Inviato",
-    "messageSentDesc": "Abbiamo ricevuto il tuo messaggio e ti risponderemo presto."
-  },
-  "chat": {
-    "title": "Messaggi",
-    "conversationNotFound": "Conversazione non trovata",
-    "selectValidConversation": "Per favore seleziona una conversazione valida",
-    "backToDashboard": "Torna alla Dashboard",
-    "messageError": "Errore nell'invio del messaggio",
-    "sendMessage": "Invia messaggio",
-    "typePlaceholder": "Scrivi il tuo messaggio...",
-    "noMessages": "Nessun messaggio",
-    "noMessagesDesc": "Inizia la conversazione inviando un messaggio",
-    "online": "Online",
-    "offline": "Offline",
-    "lastSeen": "Visto l'ultima volta",
-    "itemOwner": "Proprietario dell'oggetto",
-    "reportUser": "Segnala utente",
-    "blockUser": "Blocca utente",
-    "messageOptions": "Opzioni messaggio",
-    "copyMessage": "Copia messaggio",
-    "deleteMessage": "Elimina messaggio",
-    "editMessage": "Modifica messaggio",
-    "replyMessage": "Rispondi al messaggio",
-    "messageDeleted": "Messaggio eliminato",
-    "messageEdited": "Messaggio modificato",
-    "typing": "Sta scrivendo...",
-    "conversationWith": "Conversazione con",
-    "conversationsDesc": "Gestisci le tue conversazioni sugli oggetti persi e trovati",
-    "noConversations": "Nessuna conversazione ancora",
-    "noConversationsDesc": "Inizia una conversazione contattando qualcuno riguardo al suo oggetto perso o trovato",
-    "you": "Tu",
-    "anonymousUser": "Utente anonimo",
-    "startConversation": "Inizia conversazione",
-    "contactOwner": "Contatta proprietario",
-    "interested": "Sono interessato a questo oggetto",
-    "conversation": "Conversazione",
-    "loadingMessages": "Caricamento messaggi...",
-    "itemDetails": "Dettagli oggetto",
-    "messageSentDesc": "Il tuo messaggio è stato inviato con successo"
-  },
-  "itemDetail": {
-    "description": "Descrizione",
-    "lostOn": "Perso il",
-    "foundOn": "Trovato il",
-    "publishedOn": "Pubblicato il",
-    "contactOwner": "Contatta proprietario",
-    "sendMessage": "Invia messaggio",
-    "messagePlaceholder": "Scrivi il tuo messaggio qui...",
-    "send": "Invia",
-    "sending": "Invio...",
-    "messageSent": "Messaggio inviato con successo",
-    "messageError": "Errore nell'invio del messaggio",
-    "manageAd": "Gestisci annuncio",
-    "editAd": "Modifica annuncio",
-    "markAsFound": "Segna come trovato",
-    "deleteAd": "Elimina annuncio",
-    "notFound": "Annuncio non trovato",
-    "notFoundDesc": "L'annuncio che stai cercando non esiste o è stato eliminato.",
-    "backButton": "Indietro",
-    "reportAd": "Segnala annuncio",
-    "shareAd": "Condividi annuncio",
-    "saveAd": "Salva annuncio",
-    "location": "Posizione",
-    "category": "Categoria",
-    "loginToContact": "Accedi per contattare",
-    "loginToContactDesc": "Devi essere loggato per inviare un messaggio.",
-    "similarItems": "Oggetti simili",
-    "alertDescription": "Ricevi avvisi quando vengono pubblicati oggetti simili.",
-    "createAlert": "Crea avviso"
-  },
-  "publishNew": {
-    "lostTitle": "Oggetto perso",
-    "foundTitle": "Oggetto trovato",
-    "lostSubtitle": "Descrivi l'oggetto che hai perso così altri possono aiutarti a trovarlo.",
-    "foundSubtitle": "Descrivi l'oggetto che hai trovato così il proprietario può contattarti.",
-    "type": {
-      "label": "Tipo di annuncio",
-      "lost": "Oggetto perso",
-      "found": "Oggetto trovato"
-    },
-    "title": {
-      "label": "Titolo",
-      "placeholder": "es. iPhone 14 Pro nero"
-    },
-    "description": {
-      "label": "Descrizione dettagliata",
-      "placeholder": "Descrivi l'oggetto con il maggior dettaglio possibile..."
-    },
-    "category": {
-      "label": "Categoria",
-      "placeholder": "Seleziona una categoria"
-    },
-    "location": {
-      "label": "Posizione",
-      "placeholder": "es. Stazione di Lyon, Parigi"
-    },
-    "date": {
-      "label": "Data",
-      "placeholder": "Quando hai perso/trovato questo oggetto?"
-    },
-    "contact": {
-      "label": "Informazioni di contatto",
-      "phone": "Numero di telefono",
-      "email": "Indirizzo email",
-      "phonePlaceholder": "es. +39 333 123 456",
-      "emailPlaceholder": "es. tuo@email.com"
-    },
-    "image": {
-      "label": "Foto dell'oggetto",
-      "upload": "Carica una foto",
-      "change": "Cambia foto",
-      "remove": "Rimuovi foto"
-    },
-    "submit": {
-      "publish": "Pubblica annuncio",
-      "publishing": "Pubblicando..."
-    },
-    "validation": {
-      "title_required": "Il titolo è obbligatorio",
-      "description_min_length": "La descrizione deve avere almeno 10 caratteri",
-      "category_required": "La categoria è obbligatoria",
-      "location_required": "La posizione è obbligatoria",
-      "date_required": "La data è obbligatoria",
-      "email_invalid": "L'indirizzo email non è valido"
-    },
-    "success": "Il tuo annuncio è stato pubblicato con successo!",
-    "error": "Errore nella pubblicazione dell'annuncio",
-    "loginNotice": "Devi essere loggato per pubblicare un annuncio. Il tuo annuncio sarà salvato dopo il login."
-  },
-  "profile": {
-    "title": "Profilo",
-    "editProfile": "Modifica Profilo",
-    "saveChanges": "Salva Modifiche",
-    "cancel": "Annulla",
-    "profilePicture": "Foto del Profilo",
-    "personalInfo": "Informazioni Personali",
-    "firstName": "Nome",
-    "lastName": "Cognome",
-    "email": "Email",
-    "phone": "Telefono",
-    "location": "Posizione",
-    "bio": "Biografia",
-    "firstNamePlaceholder": "Inserisci il tuo nome",
-    "lastNamePlaceholder": "Inserisci il tuo cognome",
-    "phonePlaceholder": "Inserisci il tuo numero di telefono",
-    "locationPlaceholder": "Inserisci la tua posizione",
-    "bioPlaceholder": "Raccontaci di te...",
-    "notProvided": "Non fornito",
-    "memberSince": "Membro dal",
-    "accessRestricted": "Accesso Limitato",
-    "loginRequired": "Devi essere loggato per accedere a questa pagina",
-    "updateSuccess": "Profilo aggiornato con successo",
-    "updateError": "Errore nell'aggiornamento del profilo",
-    "imageTooLarge": "Immagine troppo grande (max 5MB)",
-    "security": "Sicurezza",
-    "preferences": "Preferenze",
-    "changePassword": "Cambia Password",
-    "changePasswordDesc": "Aggiorna la tua password per proteggere il tuo account",
-    "twoFactorAuth": "Autenticazione a Due Fattori",
-    "twoFactorAuthDesc": "Aggiungi un livello extra di sicurezza al tuo account",
-    "deleteAccount": "Elimina Account",
-    "deleteAccountDesc": "Elimina permanentemente il tuo account e tutti i tuoi dati",
-    "enable": "Abilita",
-    "notifications": "Notifiche",
-    "notificationsDesc": "Gestisci le tue preferenze di notifica",
-    "privacy": "Privacy",
-    "privacyDesc": "Controlla la visibilità delle tue informazioni",
-    "language": "Lingua",
-    "languageDesc": "Scegli la tua lingua preferita",
-    "configure": "Configura",
-    "tabs": {
-      "personal": "Personale",
-      "security": "Sicurezza",
-      "preferences": "Preferenze"
-    },
-    "deleteAccount": "Elimina account",
-    "deleteAccountDesc": "Elimina definitivamente il tuo account e tutti i dati"
   },
   "howItWorks": {
     "badge": "Guida utente",
@@ -587,5 +372,172 @@
       "publishButton": "Pubblica annuncio",
       "searchButton": "Cerca oggetto"
     }
+  },
+  "testimonials": {
+    "title": "Testimonianze",
+    "subtitle": "Cosa dicono i nostri utenti",
+    "testimonial1": {
+      "name": "Maria Rossi",
+      "location": "Roma, Italia",
+      "content": "Ho trovato il mio telefono perso in soli 2 giorni! La comunità è incredibilmente utile e attiva."
+    },
+    "testimonial2": {
+      "name": "Marco Bianchi",
+      "location": "Milano, Italia",
+      "content": "Interfaccia semplice ed efficace. Sono riuscito ad aiutare qualcuno a trovare le sue chiavi ed è stata una sensazione fantastica."
+    },
+    "testimonial3": {
+      "name": "Anna Verdi",
+      "location": "Napoli, Italia",
+      "content": "Il sistema di messaggistica integrato è perfetto per comunicare in sicurezza. Consiglio vivamente questa piattaforma."
+    }
+  },
+  "categories": {
+    "title": "Categorie popolari",
+    "subtitle": "Sfoglia oggetti per categoria"
+  },
+  "map": {
+    "title": "Mappa interattiva",
+    "subtitle": "Esplora oggetti persi e trovati vicino a te",
+    "interactiveMap": "Mappa interattiva",
+    "integration": "Integrazione",
+    "viewOnMap": "Visualizza sulla mappa",
+    "lostItems": "Oggetti persi",
+    "foundItems": "Oggetti trovati",
+    "totalItems": "Elementi totali",
+    "fullscreen": "Schermo intero",
+    "loading": "Caricamento mappa...",
+    "loadError": "Errore nel caricamento della mappa",
+    "loadErrorDesc": "Impossibile caricare la mappa. Controlla la connessione internet.",
+    "myLocation": "La mia posizione",
+    "yourLocation": "La tua posizione",
+    "centerOnLocation": "Centra sulla posizione"
+  },
+  "footer": {
+    "description": "La tua piattaforma di fiducia per trovare e segnalare oggetti persi. Riconnettiti con i tuoi beni preziosi attraverso la nostra comunità attiva.",
+    "quickLinks": "Link rapidi",
+    "support": "Supporto",
+    "legal": "Legale",
+    "followUs": "Seguici",
+    "allRightsReserved": "Tutti i diritti riservati.",
+    "home": "Home",
+    "about": "Chi siamo",
+    "contact": "Contatto",
+    "help": "Aiuto",
+    "faq": "FAQ",
+    "privacy": "Privacy",
+    "terms": "Termini",
+    "legalNotice": "Informativa Legale",
+    "privacyPolicy": "Politica sulla Privacy",
+    "termsOfUse": "Termini di Utilizzo"
+  },
+  "contact": {
+    "title": "Contattaci",
+    "subtitle": "Siamo qui per aiutarti. Non esitare a contattarci per qualsiasi domanda o assistenza.",
+    "address": "Indirizzo",
+    "email": "Email",
+    "phone": "Telefono",
+    "hours": "Orari di Apertura",
+    "mondayFriday": "Lunedì - Venerdì",
+    "saturday": "Sabato",
+    "sunday": "Domenica",
+    "closed": "Chiuso",
+    "sendMessage": "Invia Messaggio",
+    "sendMessageDesc": "Compila il modulo sottostante e ti risponderemo il prima possibile.",
+    "name": "Nome",
+    "namePlaceholder": "Il tuo nome completo",
+    "emailPlaceholder": "tua@email.com",
+    "subject": "Oggetto",
+    "subjectPlaceholder": "Oggetto del tuo messaggio",
+    "message": "Messaggio",
+    "messagePlaceholder": "Descrivi la tua richiesta o domanda...",
+    "sendButton": "Invia Messaggio",
+    "messageSent": "Messaggio Inviato",
+    "messageSentDesc": "Abbiamo ricevuto il tuo messaggio e ti risponderemo presto."
+  },
+  "itemDetail": {
+    "description": "Descrizione",
+    "lostOn": "Perso il",
+    "foundOn": "Trovato il",
+    "publishedOn": "Pubblicato il",
+    "contactOwner": "Contatta proprietario",
+    "sendMessage": "Invia messaggio",
+    "messagePlaceholder": "Scrivi il tuo messaggio qui...",
+    "send": "Invia",
+    "sending": "Invio...",
+    "messageSent": "Messaggio inviato con successo",
+    "messageError": "Errore nell'invio del messaggio",
+    "manageAd": "Gestisci annuncio",
+    "editAd": "Modifica annuncio",
+    "markAsFound": "Segna come trovato",
+    "deleteAd": "Elimina annuncio",
+    "notFound": "Annuncio non trovato",
+    "notFoundDesc": "L'annuncio che stai cercando non esiste o è stato eliminato.",
+    "backButton": "Indietro",
+    "reportAd": "Segnala annuncio",
+    "shareAd": "Condividi annuncio",
+    "saveAd": "Salva annuncio",
+    "location": "Posizione",
+    "category": "Categoria",
+    "loginToContact": "Accedi per contattare",
+    "loginToContactDesc": "Devi essere loggato per inviare un messaggio.",
+    "similarItems": "Oggetti simili",
+    "alertDescription": "Ricevi avvisi quando vengono pubblicati oggetti simili.",
+    "createAlert": "Crea avviso"
+  },
+  "profile": {
+    "title": "Profilo",
+    "editProfile": "Modifica Profilo",
+    "saveChanges": "Salva Modifiche",
+    "cancel": "Annulla",
+    "profilePicture": "Foto del Profilo",
+    "personalInfo": "Informazioni personali",
+    "firstName": "Nome",
+    "lastName": "Cognome",
+    "email": "Email",
+    "phone": "Telefono",
+    "location": "Posizione",
+    "bio": "Biografia",
+    "firstNamePlaceholder": "Inserisci il tuo nome",
+    "lastNamePlaceholder": "Inserisci il tuo cognome",
+    "phonePlaceholder": "Inserisci il tuo numero di telefono",
+    "locationPlaceholder": "Inserisci la tua posizione",
+    "bioPlaceholder": "Raccontaci di te...",
+    "notProvided": "Non fornito",
+    "memberSince": "Membro dal",
+    "accessRestricted": "Accesso Limitato",
+    "loginRequired": "Devi essere loggato per accedere a questa pagina",
+    "updateSuccess": "Profilo aggiornato con successo",
+    "updateError": "Errore nell'aggiornamento del profilo",
+    "imageTooLarge": "Immagine troppo grande (max 5MB)",
+    "security": "Sicurezza",
+    "preferences": "Preferenze",
+    "changePassword": "Cambia Password",
+    "changePasswordDesc": "Aggiorna la tua password per proteggere il tuo account",
+    "twoFactorAuth": "Autenticazione a Due Fattori",
+    "twoFactorAuthDesc": "Aggiungi un livello extra di sicurezza al tuo account",
+    "deleteAccount": "Elimina account",
+    "deleteAccountDesc": "Elimina definitivamente il tuo account e tutti i dati",
+    "enable": "Abilita",
+    "notifications": "Notifiche",
+    "notificationsDesc": "Gestisci le tue preferenze di notifica",
+    "privacy": "Privacy",
+    "privacyDesc": "Controlla la visibilità delle tue informazioni",
+    "language": "Lingua",
+    "languageDesc": "Scegli la tua lingua preferita",
+    "configure": "Configura",
+    "tabs": {
+      "personal": "Personale",
+      "security": "Sicurezza",
+      "preferences": "Preferenze"
+    }
+  },
+  "auth": {
+    "signUp": "Registrati",
+    "signIn": "Accedi",
+    "email": "Email",
+    "password": "Password",
+    "firstName": "Nome",
+    "lastName": "Cognome"
   }
 }

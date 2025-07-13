@@ -1,26 +1,76 @@
 {
   "nav": {
+    "map": "Kaart",
     "home": "Home",
     "search": "Zoeken",
     "publish": "Publiceren",
-    "dashboard": "Dashboard",
-    "profile": "Profiel",
-    "chat": "Berichten",
-    "login": "Inloggen",
-    "logout": "Uitloggen",
-    "features": "Functies",
     "howItWorks": "Hoe het werkt",
     "contact": "Contact",
-    "pricing": "Prijzen",
-    "map": "Kaart"
+    "chat": "Berichten",
+    "dashboard": "Dashboard",
+    "profile": "Profiel",
+    "login": "Inloggen",
+    "logout": "Uitloggen",
+    "features": "Functies"
   },
   "publishNew": {
+    "lostTitle": "Verloren item",
+    "foundTitle": "Gevonden item",
+    "lostSubtitle": "Beschrijf het item dat je verloren hebt zodat anderen je kunnen helpen het te vinden.",
+    "foundSubtitle": "Beschrijf het item dat je gevonden hebt zodat de eigenaar je kan contacteren.",
     "type": {
-      "lost": "Verloren voorwerp",
-      "found": "Gevonden voorwerp"
+      "label": "Advertentie type",
+      "lost": "Verloren item",
+      "found": "Gevonden item"
     },
-    "lostSubtitle": "Meld een voorwerp dat u verloren heeft",
-    "foundSubtitle": "Meld een voorwerp dat u gevonden heeft"
+    "title": {
+      "label": "Titel",
+      "placeholder": "bijv. Zwarte iPhone 14 Pro"
+    },
+    "description": {
+      "label": "Gedetailleerde beschrijving",
+      "placeholder": "Beschrijf het item met zoveel mogelijk detail..."
+    },
+    "category": {
+      "label": "Categorie",
+      "placeholder": "Selecteer een categorie"
+    },
+    "location": {
+      "label": "Locatie",
+      "placeholder": "bijv. Lyon Station, Parijs"
+    },
+    "date": {
+      "label": "Datum",
+      "placeholder": "Wanneer heb je dit item verloren/gevonden?"
+    },
+    "contact": {
+      "label": "Contactinformatie",
+      "phone": "Telefoonnummer",
+      "email": "E-mailadres",
+      "phonePlaceholder": "bijv. +31 6 12 34 56 78",
+      "emailPlaceholder": "bijv. jouw@email.com"
+    },
+    "image": {
+      "label": "Foto van het item",
+      "upload": "Foto uploaden",
+      "change": "Foto wijzigen",
+      "remove": "Foto verwijderen"
+    },
+    "submit": {
+      "publish": "Advertentie publiceren",
+      "publishing": "Publiceren..."
+    },
+    "validation": {
+      "title_required": "Titel is verplicht",
+      "description_min_length": "Beschrijving moet minimaal 10 tekens hebben",
+      "category_required": "Categorie is verplicht",
+      "location_required": "Locatie is verplicht",
+      "date_required": "Datum is verplicht",
+      "email_invalid": "E-mailadres is ongeldig"
+    },
+    "success": "Uw advertentie is succesvol gepubliceerd!",
+    "error": "Fout bij het publiceren van de advertentie",
+    "loginNotice": "Je moet ingelogd zijn om een advertentie te publiceren. Je advertentie wordt opgeslagen na het inloggen."
   },
   "pricing": {
     "title": "Optimaliseer uw zoekopdrachten",
@@ -88,24 +138,42 @@
     }
   },
   "chat": {
-    "conversation": "Gesprek",
+    "title": "Berichten",
     "conversationNotFound": "Gesprek niet gevonden",
     "selectValidConversation": "Selecteer een geldig gesprek",
-    "backToDashboard": "Terug naar dashboard",
-    "noMessages": "Geen berichten",
-    "startConversation": "Start een gesprek door een bericht te sturen",
-    "typePlaceholder": "Typ uw bericht...",
+    "backToDashboard": "Terug naar Dashboard",
     "messageError": "Fout bij het verzenden van bericht",
-    "messageSuccess": "Bericht succesvol verzonden",
-    "typing": "Aan het typen...",
+    "sendMessage": "Bericht verzenden",
+    "typePlaceholder": "Typ uw bericht...",
+    "noMessages": "Geen berichten",
+    "noMessagesDesc": "Begin het gesprek door een bericht te sturen",
     "online": "Online",
     "offline": "Offline",
-    "loadingMessages": "Berichten laden...",
-    "contactSeller": "Contact verkoper",
-    "contactBuyer": "Contact koper",
-    "itemDetails": "Item details",
+    "lastSeen": "Laatst gezien",
+    "itemOwner": "Eigenaar van het item",
     "reportUser": "Gebruiker rapporteren",
-    "blockUser": "Gebruiker blokkeren"
+    "blockUser": "Gebruiker blokkeren",
+    "messageOptions": "Berichtopties",
+    "copyMessage": "Bericht kopiëren",
+    "deleteMessage": "Bericht verwijderen",
+    "editMessage": "Bericht bewerken",
+    "replyMessage": "Antwoorden op bericht",
+    "messageDeleted": "Bericht verwijderd",
+    "messageEdited": "Bericht bewerkt",
+    "typing": "Aan het typen...",
+    "conversationWith": "Gesprek met",
+    "conversationsDesc": "Beheer uw gesprekken over verloren en gevonden items",
+    "noConversations": "Nog geen gesprekken",
+    "noConversationsDesc": "Start een gesprek door contact op te nemen met iemand over hun verloren of gevonden item",
+    "you": "U",
+    "anonymousUser": "Anonieme gebruiker",
+    "startConversation": "Gesprek starten",
+    "contactOwner": "Eigenaar contacteren",
+    "interested": "Ik ben geïnteresseerd in dit item",
+    "conversation": "Gesprek",
+    "loadingMessages": "Berichten laden...",
+    "itemDetails": "Item details",
+    "messageSentDesc": "Uw bericht is succesvol verzonden"
   },
   "dashboard": {
     "title": "Dashboard",
@@ -178,9 +246,8 @@
     "markResolvedError": "Fout bij bijwerken van voorwerp"
   },
   "common": {
-    "error": "Fout",
-    "success": "Succes",
-    "loading": "Laden..."
+    "viewDetails": "Details bekijken",
+    "backToHome": "Terug naar Home"
   },
   "search": {
     "title": "Zoeken naar items",
@@ -235,288 +302,6 @@
     "viewAllItems": "Alle items bekijken",
     "ctaTitle": "Klaar om uw verloren items te vinden?",
     "ctaSubtitle": "Sluit u aan bij onze community en begin nu"
-  },
-  "nav": {
-    "map": "Kaart",
-    "home": "Home",
-    "search": "Zoeken",
-    "publish": "Publiceren",
-    "howItWorks": "Hoe het werkt",
-    "contact": "Contact",
-    "chat": "Berichten",
-    "dashboard": "Dashboard"
-  },
-  "common": {
-    "viewDetails": "Details bekijken",
-    "backToHome": "Terug naar Home"
-  },
-  "howItWorks": {
-    "title": "Hoe het werkt",
-    "subtitle": "Vind of meld een verloren item in 3 eenvoudige stappen",
-    "step1": {
-      "title": "Plaats uw advertentie",
-      "description": "Beschrijf uw verloren of gevonden item met details en foto's"
-    },
-    "step2": {
-      "title": "Zoek en blader",
-      "description": "Verken advertenties en gebruik onze geavanceerde zoekfilters"
-    },
-    "step3": {
-      "title": "Verbind",
-      "description": "Neem direct contact op met eigenaren via ons berichtensysteem"
-    }
-  },
-  "testimonials": {
-    "title": "Getuigenissen",
-    "subtitle": "Wat onze gebruikers zeggen",
-    "testimonial1": {
-      "name": "Maria van der Berg",
-      "location": "Amsterdam, Nederland",
-      "content": "Ik vond mijn verloren telefoon in slechts 2 dagen! De gemeenschap is ongelooflijk behulpzaam en actief."
-    },
-    "testimonial2": {
-      "name": "Jan de Vries",
-      "location": "Rotterdam, Nederland",
-      "content": "Eenvoudige en effectieve interface. Ik kon iemand helpen zijn sleutels te vinden en het voelde geweldig om te helpen."
-    },
-    "testimonial3": {
-      "name": "Anna Bakker",
-      "location": "Utrecht, Nederland",
-      "content": "Het geïntegreerde berichtensysteem is perfect voor veilige communicatie. Ik beveel dit platform ten zeerste aan."
-    }
-  },
-  "categories": {
-    "title": "Populaire categorieën",
-    "subtitle": "Blader door items per categorie"
-  },
-  "map": {
-    "title": "Interactieve kaart",
-    "subtitle": "Ontdek verloren en gevonden items bij u in de buurt",
-    "interactiveMap": "Interactieve kaart",
-    "integration": "Integratie",
-    "viewOnMap": "Bekijk op kaart",
-    "lostItems": "Verloren items",
-    "foundItems": "Gevonden items",
-    "totalItems": "Totaal items",
-    "fullscreen": "Volledig scherm"
-  },
-  "footer": {
-    "description": "Uw vertrouwde platform voor het vinden en melden van verloren items. Herverbind met uw kostbare bezittingen via onze actieve gemeenschap.",
-    "quickLinks": "Snelle links",
-    "support": "Ondersteuning",
-    "legal": "Juridisch",
-    "followUs": "Volg ons",
-    "allRightsReserved": "Alle rechten voorbehouden.",
-    "home": "Home",
-    "about": "Over ons",
-    "contact": "Contact",
-    "help": "Help",
-    "faq": "FAQ",
-    "privacy": "Privacy",
-    "terms": "Voorwaarden",
-    "legalNotice": "Juridische Kennisgeving",
-    "privacyPolicy": "Privacybeleid",
-    "termsOfUse": "Gebruiksvoorwaarden"
-  },
-  "contact": {
-    "title": "Neem contact op",
-    "subtitle": "We zijn er om u te helpen. Aarzel niet om contact met ons op te nemen voor vragen of assistentie.",
-    "address": "Adres",
-    "email": "Email",
-    "phone": "Telefoon",
-    "hours": "Openingstijden",
-    "mondayFriday": "Maandag - Vrijdag",
-    "saturday": "Zaterdag",
-    "sunday": "Zondag",
-    "closed": "Gesloten",
-    "sendMessage": "Bericht versturen",
-    "sendMessageDesc": "Vul het onderstaande formulier in en we nemen zo snel mogelijk contact met u op.",
-    "name": "Naam",
-    "namePlaceholder": "Uw volledige naam",
-    "emailPlaceholder": "uw@email.com",
-    "subject": "Onderwerp",
-    "subjectPlaceholder": "Onderwerp van uw bericht",
-    "message": "Bericht",
-    "messagePlaceholder": "Beschrijf uw verzoek of vraag...",
-    "sendButton": "Bericht versturen",
-    "messageSent": "Bericht verzonden",
-    "messageSentDesc": "We hebben uw bericht ontvangen en zullen binnenkort reageren."
-  },
-  "chat": {
-    "title": "Berichten",
-    "conversationNotFound": "Gesprek niet gevonden",
-    "selectValidConversation": "Selecteer een geldig gesprek",
-    "backToDashboard": "Terug naar Dashboard",
-    "messageError": "Fout bij het verzenden van bericht",
-    "sendMessage": "Bericht verzenden",
-    "typePlaceholder": "Typ uw bericht...",
-    "noMessages": "Geen berichten",
-    "noMessagesDesc": "Begin het gesprek door een bericht te sturen",
-    "online": "Online",
-    "offline": "Offline",
-    "lastSeen": "Laatst gezien",
-    "itemOwner": "Eigenaar van het item",
-    "reportUser": "Gebruiker rapporteren",
-    "blockUser": "Gebruiker blokkeren",
-    "messageOptions": "Berichtopties",
-    "copyMessage": "Bericht kopiëren",
-    "deleteMessage": "Bericht verwijderen",
-    "editMessage": "Bericht bewerken",
-    "replyMessage": "Antwoorden op bericht",
-    "messageDeleted": "Bericht verwijderd",
-    "messageEdited": "Bericht bewerkt",
-    "typing": "Aan het typen...",
-    "conversationWith": "Gesprek met",
-    "conversationsDesc": "Beheer uw gesprekken over verloren en gevonden items",
-    "noConversations": "Nog geen gesprekken",
-    "noConversationsDesc": "Start een gesprek door contact op te nemen met iemand over hun verloren of gevonden item",
-    "you": "U",
-    "anonymousUser": "Anonieme gebruiker",
-    "startConversation": "Gesprek starten",
-    "contactOwner": "Eigenaar contacteren",
-    "interested": "Ik ben geïnteresseerd in dit item",
-    "conversation": "Gesprek",
-    "loadingMessages": "Berichten laden...",
-    "itemDetails": "Item details",
-    "messageSentDesc": "Uw bericht is succesvol verzonden"
-  },
-  "itemDetail": {
-    "description": "Beschrijving",
-    "lostOn": "Verloren op",
-    "foundOn": "Gevonden op",
-    "publishedOn": "Gepubliceerd op",
-    "contactOwner": "Eigenaar contacteren",
-    "sendMessage": "Bericht versturen",
-    "messagePlaceholder": "Typ hier uw bericht...",
-    "send": "Verstuur",
-    "sending": "Versturen...",
-    "messageSent": "Bericht succesvol verzonden",
-    "messageError": "Fout bij het versturen van bericht",
-    "manageAd": "Advertentie beheren",
-    "editAd": "Advertentie bewerken",
-    "markAsFound": "Markeren als gevonden",
-    "deleteAd": "Advertentie verwijderen",
-    "notFound": "Advertentie niet gevonden",
-    "notFoundDesc": "De advertentie die u zoekt bestaat niet of is verwijderd.",
-    "backButton": "Terug",
-    "reportAd": "Advertentie rapporteren",
-    "shareAd": "Advertentie delen",
-    "saveAd": "Advertentie opslaan",
-    "location": "Locatie",
-    "category": "Categorie",
-    "loginToContact": "Inloggen om contact op te nemen",
-    "loginToContactDesc": "Je moet ingelogd zijn om een bericht te versturen.",
-    "similarItems": "Vergelijkbare items",
-    "alertDescription": "Ontvang waarschuwingen wanneer vergelijkbare items worden geplaatst.",
-    "createAlert": "Waarschuwing maken"
-  },
-  "publishNew": {
-    "lostTitle": "Verloren item",
-    "foundTitle": "Gevonden item",
-    "lostSubtitle": "Beschrijf het item dat je verloren hebt zodat anderen je kunnen helpen het te vinden.",
-    "foundSubtitle": "Beschrijf het item dat je gevonden hebt zodat de eigenaar je kan contacteren.",
-    "type": {
-      "label": "Advertentie type",
-      "lost": "Verloren item",
-      "found": "Gevonden item"
-    },
-    "title": {
-      "label": "Titel",
-      "placeholder": "bijv. Zwarte iPhone 14 Pro"
-    },
-    "description": {
-      "label": "Gedetailleerde beschrijving",
-      "placeholder": "Beschrijf het item met zoveel mogelijk detail..."
-    },
-    "category": {
-      "label": "Categorie",
-      "placeholder": "Selecteer een categorie"
-    },
-    "location": {
-      "label": "Locatie",
-      "placeholder": "bijv. Lyon Station, Parijs"
-    },
-    "date": {
-      "label": "Datum",
-      "placeholder": "Wanneer heb je dit item verloren/gevonden?"
-    },
-    "contact": {
-      "label": "Contactinformatie",
-      "phone": "Telefoonnummer",
-      "email": "E-mailadres",
-      "phonePlaceholder": "bijv. +31 6 12 34 56 78",
-      "emailPlaceholder": "bijv. jouw@email.com"
-    },
-    "image": {
-      "label": "Foto van het item",
-      "upload": "Foto uploaden",
-      "change": "Foto wijzigen",
-      "remove": "Foto verwijderen"
-    },
-    "submit": {
-      "publish": "Advertentie publiceren",
-      "publishing": "Publiceren..."
-    },
-    "validation": {
-      "title_required": "Titel is verplicht",
-      "description_min_length": "Beschrijving moet minimaal 10 tekens hebben",
-      "category_required": "Categorie is verplicht",
-      "location_required": "Locatie is verplicht",
-      "date_required": "Datum is verplicht",
-      "email_invalid": "E-mailadres is ongeldig"
-    },
-    "success": "Uw advertentie is succesvol gepubliceerd!",
-    "error": "Fout bij het publiceren van de advertentie",
-    "loginNotice": "Je moet ingelogd zijn om een advertentie te publiceren. Je advertentie wordt opgeslagen na het inloggen."
-  },
-  "profile": {
-    "title": "Profiel",
-    "editProfile": "Profiel bewerken",
-    "saveChanges": "Wijzigingen opslaan",
-    "cancel": "Annuleren",
-    "profilePicture": "Profielfoto",
-    "personalInfo": "Persoonlijke informatie",
-    "firstName": "Voornaam",
-    "lastName": "Achternaam",
-    "email": "E-mail",
-    "phone": "Telefoon",
-    "location": "Locatie",
-    "bio": "Biografie",
-    "firstNamePlaceholder": "Voer je voornaam in",
-    "lastNamePlaceholder": "Voer je achternaam in",
-    "phonePlaceholder": "Voer je telefoonnummer in",
-    "locationPlaceholder": "Voer je locatie in",
-    "bioPlaceholder": "Vertel ons over jezelf...",
-    "notProvided": "Niet opgegeven",
-    "memberSince": "Lid sinds",
-    "accessRestricted": "Toegang beperkt",
-    "loginRequired": "Je moet ingelogd zijn om deze pagina te bekijken",
-    "updateSuccess": "Profiel succesvol bijgewerkt",
-    "updateError": "Fout bij het bijwerken van profiel",
-    "imageTooLarge": "Afbeelding te groot (max 5MB)",
-    "security": "Beveiliging",
-    "preferences": "Voorkeuren",
-    "changePassword": "Wachtwoord wijzigen",
-    "changePasswordDesc": "Werk je wachtwoord bij om je account te beveiligen",
-    "twoFactorAuth": "Twee-factor authenticatie",
-    "twoFactorAuthDesc": "Voeg een extra beveiligingslaag toe aan je account",
-    "deleteAccount": "Account verwijderen",
-    "deleteAccountDesc": "Verwijder je account en alle gegevens permanent",
-    "enable": "Inschakelen",
-    "notifications": "Meldingen",
-    "notificationsDesc": "Beheer je meldingsvoorkeuren",
-    "privacy": "Privacy",
-    "privacyDesc": "Controleer de zichtbaarheid van je informatie",
-    "language": "Taal",
-    "languageDesc": "Kies je voorkeurstaal",
-    "configure": "Configureren",
-    "tabs": {
-      "personal": "Persoonlijk",
-      "security": "Beveiliging",
-      "preferences": "Voorkeuren"
-    },
-    "deleteAccount": "Account verwijderen",
-    "deleteAccountDesc": "Verwijder je account en alle gegevens permanent"
   },
   "howItWorks": {
     "badge": "Gebruikershandleiding",
@@ -587,5 +372,172 @@
       "publishButton": "Advertentie plaatsen",
       "searchButton": "Voorwerp zoeken"
     }
+  },
+  "testimonials": {
+    "title": "Getuigenissen",
+    "subtitle": "Wat onze gebruikers zeggen",
+    "testimonial1": {
+      "name": "Maria van der Berg",
+      "location": "Amsterdam, Nederland",
+      "content": "Ik vond mijn verloren telefoon in slechts 2 dagen! De gemeenschap is ongelooflijk behulpzaam en actief."
+    },
+    "testimonial2": {
+      "name": "Jan de Vries",
+      "location": "Rotterdam, Nederland",
+      "content": "Eenvoudige en effectieve interface. Ik kon iemand helpen zijn sleutels te vinden en het voelde geweldig om te helpen."
+    },
+    "testimonial3": {
+      "name": "Anna Bakker",
+      "location": "Utrecht, Nederland",
+      "content": "Het geïntegreerde berichtensysteem is perfect voor veilige communicatie. Ik beveel dit platform ten zeerste aan."
+    }
+  },
+  "categories": {
+    "title": "Populaire categorieën",
+    "subtitle": "Blader door items per categorie"
+  },
+  "map": {
+    "title": "Interactieve kaart",
+    "subtitle": "Ontdek verloren en gevonden items bij u in de buurt",
+    "interactiveMap": "Interactieve kaart",
+    "integration": "Integratie",
+    "viewOnMap": "Bekijk op kaart",
+    "lostItems": "Verloren items",
+    "foundItems": "Gevonden items",
+    "totalItems": "Totale items",
+    "fullscreen": "Volledig scherm",
+    "loading": "Kaart laden...",
+    "loadError": "Fout bij het laden van kaart",
+    "loadErrorDesc": "Kon kaart niet laden. Controleer uw internetverbinding.",
+    "myLocation": "Mijn locatie",
+    "yourLocation": "Uw locatie",
+    "centerOnLocation": "Centreren op locatie"
+  },
+  "footer": {
+    "description": "Uw vertrouwde platform voor het vinden en melden van verloren items. Herverbind met uw kostbare bezittingen via onze actieve gemeenschap.",
+    "quickLinks": "Snelle links",
+    "support": "Ondersteuning",
+    "legal": "Juridisch",
+    "followUs": "Volg ons",
+    "allRightsReserved": "Alle rechten voorbehouden.",
+    "home": "Home",
+    "about": "Over ons",
+    "contact": "Contact",
+    "help": "Help",
+    "faq": "FAQ",
+    "privacy": "Privacy",
+    "terms": "Voorwaarden",
+    "legalNotice": "Juridische Kennisgeving",
+    "privacyPolicy": "Privacybeleid",
+    "termsOfUse": "Gebruiksvoorwaarden"
+  },
+  "contact": {
+    "title": "Neem contact op",
+    "subtitle": "We zijn er om u te helpen. Aarzel niet om contact met ons op te nemen voor vragen of assistentie.",
+    "address": "Adres",
+    "email": "Email",
+    "phone": "Telefoon",
+    "hours": "Openingstijden",
+    "mondayFriday": "Maandag - Vrijdag",
+    "saturday": "Zaterdag",
+    "sunday": "Zondag",
+    "closed": "Gesloten",
+    "sendMessage": "Bericht versturen",
+    "sendMessageDesc": "Vul het onderstaande formulier in en we nemen zo snel mogelijk contact met u op.",
+    "name": "Naam",
+    "namePlaceholder": "Uw volledige naam",
+    "emailPlaceholder": "uw@email.com",
+    "subject": "Onderwerp",
+    "subjectPlaceholder": "Onderwerp van uw bericht",
+    "message": "Bericht",
+    "messagePlaceholder": "Beschrijf uw verzoek of vraag...",
+    "sendButton": "Bericht versturen",
+    "messageSent": "Bericht verzonden",
+    "messageSentDesc": "We hebben uw bericht ontvangen en zullen binnenkort reageren."
+  },
+  "itemDetail": {
+    "description": "Beschrijving",
+    "lostOn": "Verloren op",
+    "foundOn": "Gevonden op",
+    "publishedOn": "Gepubliceerd op",
+    "contactOwner": "Eigenaar contacteren",
+    "sendMessage": "Bericht versturen",
+    "messagePlaceholder": "Typ hier uw bericht...",
+    "send": "Verstuur",
+    "sending": "Versturen...",
+    "messageSent": "Bericht succesvol verzonden",
+    "messageError": "Fout bij het versturen van bericht",
+    "manageAd": "Advertentie beheren",
+    "editAd": "Advertentie bewerken",
+    "markAsFound": "Markeren als gevonden",
+    "deleteAd": "Advertentie verwijderen",
+    "notFound": "Advertentie niet gevonden",
+    "notFoundDesc": "De advertentie die u zoekt bestaat niet of is verwijderd.",
+    "backButton": "Terug",
+    "reportAd": "Advertentie rapporteren",
+    "shareAd": "Advertentie delen",
+    "saveAd": "Advertentie opslaan",
+    "location": "Locatie",
+    "category": "Categorie",
+    "loginToContact": "Inloggen om contact op te nemen",
+    "loginToContactDesc": "Je moet ingelogd zijn om een bericht te versturen.",
+    "similarItems": "Vergelijkbare items",
+    "alertDescription": "Ontvang waarschuwingen wanneer vergelijkbare items worden geplaatst.",
+    "createAlert": "Waarschuwing maken"
+  },
+  "profile": {
+    "title": "Profiel",
+    "editProfile": "Profiel bewerken",
+    "saveChanges": "Wijzigingen opslaan",
+    "cancel": "Annuleren",
+    "profilePicture": "Profielfoto",
+    "personalInfo": "Persoonlijke informatie",
+    "firstName": "Voornaam",
+    "lastName": "Achternaam",
+    "email": "E-mail",
+    "phone": "Telefoon",
+    "location": "Locatie",
+    "bio": "Biografie",
+    "firstNamePlaceholder": "Voer je voornaam in",
+    "lastNamePlaceholder": "Voer je achternaam in",
+    "phonePlaceholder": "Voer je telefoonnummer in",
+    "locationPlaceholder": "Voer je locatie in",
+    "bioPlaceholder": "Vertel ons over jezelf...",
+    "notProvided": "Niet opgegeven",
+    "memberSince": "Lid sinds",
+    "accessRestricted": "Toegang beperkt",
+    "loginRequired": "Je moet ingelogd zijn om deze pagina te bekijken",
+    "updateSuccess": "Profiel succesvol bijgewerkt",
+    "updateError": "Fout bij het bijwerken van profiel",
+    "imageTooLarge": "Afbeelding te groot (max 5MB)",
+    "security": "Beveiliging",
+    "preferences": "Voorkeuren",
+    "changePassword": "Wachtwoord wijzigen",
+    "changePasswordDesc": "Werk je wachtwoord bij om je account te beveiligen",
+    "twoFactorAuth": "Twee-factor authenticatie",
+    "twoFactorAuthDesc": "Voeg een extra beveiligingslaag toe aan je account",
+    "deleteAccount": "Account verwijderen",
+    "deleteAccountDesc": "Verwijder je account en alle gegevens permanent",
+    "enable": "Inschakelen",
+    "notifications": "Meldingen",
+    "notificationsDesc": "Beheer je meldingsvoorkeuren",
+    "privacy": "Privacy",
+    "privacyDesc": "Controleer de zichtbaarheid van je informatie",
+    "language": "Taal",
+    "languageDesc": "Kies je voorkeurstaal",
+    "configure": "Configureren",
+    "tabs": {
+      "personal": "Persoonlijk",
+      "security": "Beveiliging",
+      "preferences": "Voorkeuren"
+    }
+  },
+  "auth": {
+    "signUp": "Registreren",
+    "signIn": "Inloggen",
+    "email": "E-mail",
+    "password": "Wachtwoord",
+    "firstName": "Voornaam",
+    "lastName": "Achternaam"
   }
 }

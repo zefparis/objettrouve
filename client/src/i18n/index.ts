@@ -20,10 +20,17 @@ i18n
   .init({
     debug: false,
     lng: 'fr', // Force French as default language
-    fallbackLng: 'fr',
+    fallbackLng: ['en', 'fr'], // Fallback to English first, then French
     load: 'languageOnly',
     interpolation: {
       escapeValue: false,
+    },
+    
+    // Add missing key handler for better debugging
+    missingKeyHandler: (lng, ns, key, fallbackValue) => {
+      if (import.meta.env.DEV) {
+        console.warn(`Missing translation key: ${key} for language: ${lng}`);
+      }
     },
     resources: {
       fr: {

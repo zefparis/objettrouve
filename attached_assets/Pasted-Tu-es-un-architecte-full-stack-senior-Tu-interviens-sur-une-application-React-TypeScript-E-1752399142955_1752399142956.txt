@@ -1,0 +1,85 @@
+Tu es un architecte full-stack senior.
+
+Tu interviens sur une **application React + TypeScript + Express + PostgreSQL + Stripe + Cognito**, déjà quasiment prête pour la production (95%).
+
+Tu ne dois **en aucun cas déstructurer l’architecture actuelle** ni supprimer les bonnes pratiques existantes.
+
+---
+
+🎯 Ta mission : FIX ciblé, **sans casser le reste du code**
+
+Voici le **rapport d’audit technique** de l’app sur laquelle tu travailles :
+
+---
+
+## ✅ Éléments déjà VALIDÉS (ne rien toucher sauf si dépendance directe) :
+- Auth : fonctionne (Cognito, sessions, Zod, bcrypt)
+- DB : 7 tables bien liées, ORM Drizzle OK
+- Paiement : Stripe et PayPal bien intégrés
+- UI/UX : Tailwind + Shadcn, responsive propre
+- Routing frontend : OK sauf doublons admin
+- Sécurité : validation + CORS + upload sécurisé
+- Performance : build rapide, lazy loading, query caching actif
+
+---
+
+## 🔧 FIXES À RÉALISER (et seulement ceux-ci) :
+
+### 1. 🌍 TRADUCTIONS INCOMPLÈTES
+- Complète automatiquement les 56 clés manquantes par langue
+- Priorité : nav.*, auth.*, form.*, pricing.*, profile.*
+- Ne pas supprimer les clés existantes
+- Génère un fichier `missingKeysReport.json` avec les clés ajoutées automatiquement
+- Ajoute une fallback logique (`en`) dans `i18n.ts`
+
+---
+
+### 2. 🛣️ ROUTES ADMIN DUPLIQUÉES
+- Problème : `/admin` et `/admin-dashboard` affichent des composants différents
+- Solution :
+  - Garde un seul point d’entrée `/admin`
+  - Supprime `/admin-dashboard` et redirige ses usages
+  - Met à jour les imports `Link`, `Nav`, etc.
+
+---
+
+### 3. 🗺️ COMPOSANTS GOOGLE MAPS REDONDANTS
+- 4 composants : `GoogleMap`, `SimpleGoogleMap`, `WorkingGoogleMap`, `google-map`
+- Unifie les 4 dans un seul composant réutilisable : `UnifiedMap.tsx`
+- Refactor tous les composants/pages qui les appellent
+- Supprime les fichiers inutilisés une fois le refactor appliqué
+
+---
+
+### 4. 🔐 CREDENTIALS ADMIN HARDCODÉS
+- Fichier concerné : `client/src/pages/admin.tsx`
+- Le mot de passe ou token admin est hardcodé
+- Solution : Remplace par `process.env.ADMIN_SECRET` et crée un fichier `.env.example` à jour
+- Si non défini, afficher une erreur sécurisée “Admin access denied.”
+
+---
+
+### 5. ✅ BONUS (si rapide)
+- Ajoute la pagination sur les pages `/items` et `/search`
+- Ajoute un filtre dynamique `?status=lost|found` si non présent
+
+---
+
+🎁 En fin de tâche :
+- Génère un `FIX_REPORT.md` qui liste :
+  - Les fichiers modifiés
+  - Les fonctions créées ou supprimées
+  - Les composants renommés ou fusionnés
+  - Les traductions ajoutées par langue
+
+Tu n’interviens QUE sur ces points. Tu laisses **intact** tout ce qui fonctionne.
+
+Fais attention à :
+- ne rien casser dans le flux de publication d’un objet
+- ne pas perdre le responsive
+- ne pas supprimer les appels à Stripe/PayPal
+- ne pas altérer l’arborescence des composants si ce n’est pas nécessaire
+
+---
+
+Tu peux commencer maintenant. Chaque fix doit être propre, testé, et commenté.

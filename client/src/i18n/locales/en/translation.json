@@ -1,26 +1,76 @@
 {
   "nav": {
+    "map": "Map",
     "home": "Home",
     "search": "Search",
     "publish": "Publish",
-    "dashboard": "Dashboard",
-    "profile": "Profile",
-    "chat": "Messages",
-    "login": "Login",
-    "logout": "Logout",
-    "features": "Features",
     "howItWorks": "How it works",
     "contact": "Contact",
-    "pricing": "Pricing",
-    "map": "Map"
+    "chat": "Messages",
+    "dashboard": "Dashboard",
+    "profile": "Profile",
+    "login": "Login",
+    "logout": "Logout",
+    "features": "Features"
   },
   "publishNew": {
+    "lostTitle": "Lost Item",
+    "foundTitle": "Found Item",
+    "lostSubtitle": "Describe the item you lost so others can help you find it.",
+    "foundSubtitle": "Describe the item you found so its owner can contact you.",
     "type": {
-      "lost": "Lost Item",
-      "found": "Found Item"
+      "label": "Listing type",
+      "lost": "Lost item",
+      "found": "Found item"
     },
-    "lostSubtitle": "Report an item you have lost",
-    "foundSubtitle": "Report an item you have found"
+    "title": {
+      "label": "Title",
+      "placeholder": "e.g. Black iPhone 14 Pro"
+    },
+    "description": {
+      "label": "Detailed description",
+      "placeholder": "Describe the item with as much detail as possible..."
+    },
+    "category": {
+      "label": "Category",
+      "placeholder": "Select a category"
+    },
+    "location": {
+      "label": "Location",
+      "placeholder": "e.g. Lyon Station, Paris"
+    },
+    "date": {
+      "label": "Date",
+      "placeholder": "When did you lose/find this item?"
+    },
+    "contact": {
+      "label": "Contact information",
+      "phone": "Phone number",
+      "email": "Email address",
+      "phonePlaceholder": "e.g. +33 6 12 34 56 78",
+      "emailPlaceholder": "e.g. your@email.com"
+    },
+    "image": {
+      "label": "Item photo",
+      "upload": "Upload a photo",
+      "change": "Change photo",
+      "remove": "Remove photo"
+    },
+    "submit": {
+      "publish": "Publish listing",
+      "publishing": "Publishing..."
+    },
+    "validation": {
+      "title_required": "Title is required",
+      "description_min_length": "Description must be at least 10 characters",
+      "category_required": "Category is required",
+      "location_required": "Location is required",
+      "date_required": "Date is required",
+      "email_invalid": "Email address is invalid"
+    },
+    "success": "Your listing has been published successfully!",
+    "error": "Error publishing listing",
+    "loginNotice": "You must be logged in to publish a listing. Your listing will be saved after login."
   },
   "pricing": {
     "title": "Optimize your searches",
@@ -88,24 +138,42 @@
     }
   },
   "chat": {
-    "conversation": "Conversation",
+    "title": "Messages",
     "conversationNotFound": "Conversation not found",
     "selectValidConversation": "Please select a valid conversation",
-    "backToDashboard": "Back to dashboard",
-    "noMessages": "No messages",
-    "startConversation": "Start a conversation by sending a message",
-    "typePlaceholder": "Type your message...",
+    "backToDashboard": "Back to Dashboard",
     "messageError": "Error sending message",
-    "messageSuccess": "Message sent successfully",
-    "typing": "Typing...",
+    "sendMessage": "Send message",
+    "typePlaceholder": "Type your message...",
+    "noMessages": "No messages",
+    "noMessagesDesc": "Start the conversation by sending a message",
     "online": "Online",
     "offline": "Offline",
-    "loadingMessages": "Loading messages...",
-    "contactSeller": "Contact seller",
-    "contactBuyer": "Contact buyer",
-    "itemDetails": "Item details",
+    "lastSeen": "Last seen",
+    "itemOwner": "Item owner",
     "reportUser": "Report user",
-    "blockUser": "Block user"
+    "blockUser": "Block user",
+    "messageOptions": "Message options",
+    "copyMessage": "Copy message",
+    "deleteMessage": "Delete message",
+    "editMessage": "Edit message",
+    "replyMessage": "Reply to message",
+    "messageDeleted": "Message deleted",
+    "messageEdited": "Message edited",
+    "typing": "Typing...",
+    "conversationWith": "Conversation with",
+    "conversationsDesc": "Manage your conversations about lost and found items",
+    "noConversations": "No conversations yet",
+    "noConversationsDesc": "Start a conversation by contacting someone about their lost or found item",
+    "you": "You",
+    "anonymousUser": "Anonymous user",
+    "startConversation": "Start conversation",
+    "contactOwner": "Contact owner",
+    "interested": "I'm interested in this item",
+    "conversation": "Conversation",
+    "loadingMessages": "Loading messages...",
+    "itemDetails": "Item details",
+    "messageSentDesc": "Your message has been sent successfully"
   },
   "dashboard": {
     "title": "Dashboard",
@@ -178,9 +246,8 @@
     "markResolvedError": "Error updating item"
   },
   "common": {
-    "error": "Error",
-    "success": "Success",
-    "loading": "Loading..."
+    "viewDetails": "View details",
+    "backToHome": "Back to Home"
   },
   "search": {
     "title": "Search Items",
@@ -235,286 +302,6 @@
     "viewAllItems": "View all items",
     "ctaTitle": "Ready to find your lost items?",
     "ctaSubtitle": "Join our community and start now"
-  },
-  "nav": {
-    "map": "Map",
-    "home": "Home",
-    "search": "Search",
-    "publish": "Publish",
-    "howItWorks": "How it works",
-    "contact": "Contact",
-    "chat": "Messages",
-    "dashboard": "Dashboard"
-  },
-  "common": {
-    "viewDetails": "View details",
-    "backToHome": "Back to Home"
-  },
-  "howItWorks": {
-    "title": "How it works",
-    "subtitle": "Find or report a lost item in 3 simple steps",
-    "step1": {
-      "title": "Post your listing",
-      "description": "Describe your lost or found item with details and photos"
-    },
-    "step2": {
-      "title": "Search and browse",
-      "description": "Explore listings and use our advanced search filters"
-    },
-    "step3": {
-      "title": "Connect",
-      "description": "Contact owners directly through our messaging system"
-    }
-  },
-  "testimonials": {
-    "title": "Testimonials",
-    "subtitle": "What our users say",
-    "testimonial1": {
-      "name": "Sarah Johnson",
-      "location": "New York, USA",
-      "content": "Found my lost wallet in just 2 days! The community is incredibly helpful and responsive."
-    },
-    "testimonial2": {
-      "name": "Michael Chen",
-      "location": "San Francisco, USA",
-      "content": "Simple and effective interface. I was able to help someone find their keys and it felt amazing to give back."
-    },
-    "testimonial3": {
-      "name": "Emily Davis",
-      "location": "London, UK",
-      "content": "The integrated messaging system is perfect for safe communication. I highly recommend this platform."
-    }
-  },
-  "categories": {
-    "title": "Popular categories",
-    "subtitle": "Browse items by category"
-  },
-  "map": {
-    "title": "Interactive map",
-    "subtitle": "Explore lost and found items near you",
-    "interactiveMap": "Interactive map",
-    "integration": "Integration",
-    "viewOnMap": "View on map",
-    "lostItems": "Lost items",
-    "foundItems": "Found items",
-    "totalItems": "Total items",
-    "fullscreen": "Fullscreen"
-  },
-  "footer": {
-    "description": "Your trusted platform for finding and reporting lost items. Reconnect with your precious belongings through our active community.",
-    "quickLinks": "Quick Links",
-    "support": "Support",
-    "legal": "Legal",
-    "followUs": "Follow Us",
-    "allRightsReserved": "All rights reserved.",
-    "home": "Home",
-    "about": "About",
-    "contact": "Contact",
-    "help": "Help",
-    "faq": "FAQ",
-    "privacy": "Privacy",
-    "terms": "Terms",
-    "legalNotice": "Legal Notice",
-    "privacyPolicy": "Privacy Policy",
-    "termsOfUse": "Terms of Use"
-  },
-  "contact": {
-    "title": "Contact Us",
-    "subtitle": "We are here to help you. Feel free to contact us for any questions or assistance.",
-    "address": "Address",
-    "email": "Email",
-    "phone": "Phone",
-    "hours": "Opening Hours",
-    "mondayFriday": "Monday - Friday",
-    "saturday": "Saturday",
-    "sunday": "Sunday",
-    "closed": "Closed",
-    "sendMessage": "Send Message",
-    "sendMessageDesc": "Fill out the form below and we will get back to you as soon as possible.",
-    "name": "Name",
-    "namePlaceholder": "Your full name",
-    "emailPlaceholder": "your@email.com",
-    "subject": "Subject",
-    "subjectPlaceholder": "Subject of your message",
-    "message": "Message",
-    "messagePlaceholder": "Describe your request or question...",
-    "sendButton": "Send Message",
-    "messageSent": "Message Sent",
-    "messageSentDesc": "We have received your message and will respond shortly."
-  },
-  "chat": {
-    "title": "Messages",
-    "conversationNotFound": "Conversation not found",
-    "selectValidConversation": "Please select a valid conversation",
-    "backToDashboard": "Back to Dashboard",
-    "messageError": "Error sending message",
-    "sendMessage": "Send message",
-    "typePlaceholder": "Type your message...",
-    "noMessages": "No messages",
-    "noMessagesDesc": "Start the conversation by sending a message",
-    "online": "Online",
-    "offline": "Offline",
-    "lastSeen": "Last seen",
-    "itemOwner": "Item owner",
-    "reportUser": "Report user",
-    "blockUser": "Block user",
-    "messageOptions": "Message options",
-    "copyMessage": "Copy message",
-    "deleteMessage": "Delete message",
-    "editMessage": "Edit message",
-    "replyMessage": "Reply to message",
-    "messageDeleted": "Message deleted",
-    "messageEdited": "Message edited",
-    "typing": "Typing...",
-    "conversationWith": "Conversation with",
-    "conversationsDesc": "Manage your conversations about lost and found items",
-    "noConversations": "No conversations yet",
-    "noConversationsDesc": "Start a conversation by contacting someone about their lost or found item",
-    "you": "You",
-    "anonymousUser": "Anonymous user",
-    "startConversation": "Start conversation",
-    "contactOwner": "Contact owner",
-    "interested": "I'm interested in this item",
-    "conversation": "Conversation",
-    "loadingMessages": "Loading messages...",
-    "itemDetails": "Item details",
-    "messageSentDesc": "Your message has been sent successfully"
-  },
-  "itemDetail": {
-    "description": "Description",
-    "lostOn": "Lost on",
-    "foundOn": "Found on",
-    "publishedOn": "Published on",
-    "contactOwner": "Contact owner",
-    "sendMessage": "Send message",
-    "messagePlaceholder": "Type your message here...",
-    "send": "Send",
-    "sending": "Sending...",
-    "messageSent": "Message sent successfully",
-    "messageError": "Error sending message",
-    "manageAd": "Manage listing",
-    "editAd": "Edit listing",
-    "markAsFound": "Mark as found",
-    "deleteAd": "Delete listing",
-    "notFound": "Listing not found",
-    "notFoundDesc": "The listing you're looking for doesn't exist or has been deleted.",
-    "backButton": "Back",
-    "reportAd": "Report listing",
-    "shareAd": "Share listing",
-    "saveAd": "Save listing",
-    "location": "Location",
-    "category": "Category",
-    "loginToContact": "Login to contact",
-    "loginToContactDesc": "You must be logged in to send a message.",
-    "similarItems": "Similar items",
-    "alertDescription": "Get alerts when similar items are posted.",
-    "createAlert": "Create alert"
-  },
-  "publishNew": {
-    "lostTitle": "Lost Item",
-    "foundTitle": "Found Item",
-    "lostSubtitle": "Describe the item you lost so others can help you find it.",
-    "foundSubtitle": "Describe the item you found so its owner can contact you.",
-    "type": {
-      "label": "Listing type",
-      "lost": "Lost item",
-      "found": "Found item"
-    },
-    "title": {
-      "label": "Title",
-      "placeholder": "e.g. Black iPhone 14 Pro"
-    },
-    "description": {
-      "label": "Detailed description",
-      "placeholder": "Describe the item with as much detail as possible..."
-    },
-    "category": {
-      "label": "Category",
-      "placeholder": "Select a category"
-    },
-    "location": {
-      "label": "Location",
-      "placeholder": "e.g. Lyon Station, Paris"
-    },
-    "date": {
-      "label": "Date",
-      "placeholder": "When did you lose/find this item?"
-    },
-    "contact": {
-      "label": "Contact information",
-      "phone": "Phone number",
-      "email": "Email address",
-      "phonePlaceholder": "e.g. +33 6 12 34 56 78",
-      "emailPlaceholder": "e.g. your@email.com"
-    },
-    "image": {
-      "label": "Item photo",
-      "upload": "Upload a photo",
-      "change": "Change photo",
-      "remove": "Remove photo"
-    },
-    "submit": {
-      "publish": "Publish listing",
-      "publishing": "Publishing..."
-    },
-    "validation": {
-      "title_required": "Title is required",
-      "description_min_length": "Description must be at least 10 characters",
-      "category_required": "Category is required",
-      "location_required": "Location is required",
-      "date_required": "Date is required",
-      "email_invalid": "Email address is invalid"
-    },
-    "success": "Your listing has been published successfully!",
-    "error": "Error publishing listing",
-    "loginNotice": "You must be logged in to publish a listing. Your listing will be saved after login."
-  },
-  "profile": {
-    "title": "Profile",
-    "editProfile": "Edit Profile",
-    "saveChanges": "Save Changes",
-    "cancel": "Cancel",
-    "profilePicture": "Profile Picture",
-    "personalInfo": "Personal Information",
-    "firstName": "First Name",
-    "lastName": "Last Name",
-    "email": "Email",
-    "phone": "Phone",
-    "location": "Location",
-    "bio": "Bio",
-    "firstNamePlaceholder": "Enter your first name",
-    "lastNamePlaceholder": "Enter your last name",
-    "phonePlaceholder": "Enter your phone number",
-    "locationPlaceholder": "Enter your location",
-    "bioPlaceholder": "Tell us about yourself...",
-    "notProvided": "Not provided",
-    "memberSince": "Member since",
-    "accessRestricted": "Access Restricted",
-    "loginRequired": "You must be logged in to access this page",
-    "updateSuccess": "Profile updated successfully",
-    "updateError": "Error updating profile",
-    "imageTooLarge": "Image too large (max 5MB)",
-    "security": "Security",
-    "preferences": "Preferences",
-    "changePassword": "Change Password",
-    "changePasswordDesc": "Update your password to secure your account",
-    "twoFactorAuth": "Two-Factor Authentication",
-    "twoFactorAuthDesc": "Add an extra layer of security to your account",
-    "deleteAccount": "Delete Account",
-    "deleteAccountDesc": "Permanently delete your account and all your data",
-    "enable": "Enable",
-    "notifications": "Notifications",
-    "notificationsDesc": "Manage your notification preferences",
-    "privacy": "Privacy",
-    "privacyDesc": "Control the visibility of your information",
-    "language": "Language",
-    "languageDesc": "Choose your preferred language",
-    "configure": "Configure",
-    "tabs": {
-      "personal": "Personal",
-      "security": "Security",
-      "preferences": "Preferences"
-    }
   },
   "howItWorks": {
     "badge": "User Guide",
@@ -585,5 +372,172 @@
       "publishButton": "Post a Listing",
       "searchButton": "Search for Item"
     }
+  },
+  "testimonials": {
+    "title": "Testimonials",
+    "subtitle": "What our users say",
+    "testimonial1": {
+      "name": "Sarah Johnson",
+      "location": "New York, USA",
+      "content": "Found my lost wallet in just 2 days! The community is incredibly helpful and responsive."
+    },
+    "testimonial2": {
+      "name": "Michael Chen",
+      "location": "San Francisco, USA",
+      "content": "Simple and effective interface. I was able to help someone find their keys and it felt amazing to give back."
+    },
+    "testimonial3": {
+      "name": "Emily Davis",
+      "location": "London, UK",
+      "content": "The integrated messaging system is perfect for safe communication. I highly recommend this platform."
+    }
+  },
+  "categories": {
+    "title": "Popular categories",
+    "subtitle": "Browse items by category"
+  },
+  "map": {
+    "title": "Interactive map",
+    "subtitle": "Explore lost and found items near you",
+    "interactiveMap": "Interactive map",
+    "integration": "Integration",
+    "viewOnMap": "View on Map",
+    "lostItems": "Lost items",
+    "foundItems": "Found items",
+    "totalItems": "Total Items",
+    "fullscreen": "Fullscreen",
+    "loading": "Loading map...",
+    "loadError": "Error loading map",
+    "loadErrorDesc": "Could not load the map. Please check your internet connection.",
+    "myLocation": "My Location",
+    "yourLocation": "Your Location",
+    "centerOnLocation": "Center on Location"
+  },
+  "footer": {
+    "description": "Your trusted platform for finding and reporting lost items. Reconnect with your precious belongings through our active community.",
+    "quickLinks": "Quick Links",
+    "support": "Support",
+    "legal": "Legal",
+    "followUs": "Follow Us",
+    "allRightsReserved": "All rights reserved.",
+    "home": "Home",
+    "about": "About",
+    "contact": "Contact",
+    "help": "Help",
+    "faq": "FAQ",
+    "privacy": "Privacy",
+    "terms": "Terms",
+    "legalNotice": "Legal Notice",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfUse": "Terms of Use"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "We are here to help you. Feel free to contact us for any questions or assistance.",
+    "address": "Address",
+    "email": "Email",
+    "phone": "Phone",
+    "hours": "Opening Hours",
+    "mondayFriday": "Monday - Friday",
+    "saturday": "Saturday",
+    "sunday": "Sunday",
+    "closed": "Closed",
+    "sendMessage": "Send Message",
+    "sendMessageDesc": "Fill out the form below and we will get back to you as soon as possible.",
+    "name": "Name",
+    "namePlaceholder": "Your full name",
+    "emailPlaceholder": "your@email.com",
+    "subject": "Subject",
+    "subjectPlaceholder": "Subject of your message",
+    "message": "Message",
+    "messagePlaceholder": "Describe your request or question...",
+    "sendButton": "Send Message",
+    "messageSent": "Message Sent",
+    "messageSentDesc": "We have received your message and will respond shortly."
+  },
+  "itemDetail": {
+    "description": "Description",
+    "lostOn": "Lost on",
+    "foundOn": "Found on",
+    "publishedOn": "Published on",
+    "contactOwner": "Contact owner",
+    "sendMessage": "Send message",
+    "messagePlaceholder": "Type your message here...",
+    "send": "Send",
+    "sending": "Sending...",
+    "messageSent": "Message sent successfully",
+    "messageError": "Error sending message",
+    "manageAd": "Manage listing",
+    "editAd": "Edit listing",
+    "markAsFound": "Mark as found",
+    "deleteAd": "Delete listing",
+    "notFound": "Listing not found",
+    "notFoundDesc": "The listing you're looking for doesn't exist or has been deleted.",
+    "backButton": "Back",
+    "reportAd": "Report listing",
+    "shareAd": "Share listing",
+    "saveAd": "Save listing",
+    "location": "Location",
+    "category": "Category",
+    "loginToContact": "Login to contact",
+    "loginToContactDesc": "You must be logged in to send a message.",
+    "similarItems": "Similar items",
+    "alertDescription": "Get alerts when similar items are posted.",
+    "createAlert": "Create alert"
+  },
+  "profile": {
+    "title": "Profile",
+    "editProfile": "Edit Profile",
+    "saveChanges": "Save Changes",
+    "cancel": "Cancel",
+    "profilePicture": "Profile Picture",
+    "personalInfo": "Personal Information",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "email": "Email",
+    "phone": "Phone",
+    "location": "Location",
+    "bio": "Bio",
+    "firstNamePlaceholder": "Enter your first name",
+    "lastNamePlaceholder": "Enter your last name",
+    "phonePlaceholder": "Enter your phone number",
+    "locationPlaceholder": "Enter your location",
+    "bioPlaceholder": "Tell us about yourself...",
+    "notProvided": "Not provided",
+    "memberSince": "Member since",
+    "accessRestricted": "Access Restricted",
+    "loginRequired": "You must be logged in to access this page",
+    "updateSuccess": "Profile updated successfully",
+    "updateError": "Error updating profile",
+    "imageTooLarge": "Image too large (max 5MB)",
+    "security": "Security",
+    "preferences": "Preferences",
+    "changePassword": "Change Password",
+    "changePasswordDesc": "Update your password to secure your account",
+    "twoFactorAuth": "Two-Factor Authentication",
+    "twoFactorAuthDesc": "Add an extra layer of security to your account",
+    "deleteAccount": "Delete Account",
+    "deleteAccountDesc": "Permanently delete your account and all your data",
+    "enable": "Enable",
+    "notifications": "Notifications",
+    "notificationsDesc": "Manage your notification preferences",
+    "privacy": "Privacy",
+    "privacyDesc": "Control the visibility of your information",
+    "language": "Language",
+    "languageDesc": "Choose your preferred language",
+    "configure": "Configure",
+    "tabs": {
+      "personal": "Personal",
+      "security": "Security",
+      "preferences": "Preferences"
+    }
+  },
+  "auth": {
+    "signUp": "Sign Up",
+    "signIn": "Sign In",
+    "email": "Email",
+    "password": "Password",
+    "firstName": "First Name",
+    "lastName": "Last Name"
   }
 }
