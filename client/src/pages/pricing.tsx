@@ -22,44 +22,64 @@ export default function Pricing() {
   const services = [
     {
       id: "boost_listing",
-      name: "Mise en avant",
-      description: "Votre annonce apparaît en haut de la liste pendant 48h.",
+      name: t("pricing.services.boost.name"),
+      description: t("pricing.services.boost.description"),
       price: 1.99,
       icon: <Zap className="w-8 h-8 text-yellow-500" />,
-      features: ["Visibilité prioritaire", "Badge visible", "Durée 48h"],
+      features: [
+        t("pricing.services.boost.features.priority"),
+        t("pricing.services.boost.features.highlight"),
+        t("pricing.services.boost.features.duration")
+      ],
       popular: true,
     },
     {
       id: "verified_badge",
-      name: "Badge vérifié",
-      description: "Ajoute un badge de confiance à votre annonce.",
+      name: t("pricing.services.verification.name"),
+      description: t("pricing.services.verification.description"),
       price: 2.99,
       icon: <Shield className="w-8 h-8 text-blue-500" />,
-      features: ["Vérification email/téléphone", "Annonces mises en avant", "Plus de confiance"],
+      features: [
+        t("pricing.services.verification.features.badge"),
+        t("pricing.services.verification.features.trust"),
+        t("pricing.services.verification.features.priority")
+      ],
     },
     {
       id: "extra_images",
-      name: "Photos supplémentaires",
-      description: "Ajoutez jusqu'à 5 photos en plus (0.50€ / photo).",
+      name: t("pricing.services.extra_images.name"),
+      description: t("pricing.services.extra_images.description"),
       price: 0.50,
       icon: <ImageIcon className="w-8 h-8 text-pink-500" />,
-      features: ["3 gratuites", "0.50€ par photo supplémentaire", "Maximum 5 en plus"],
+      features: [
+        t("pricing.services.extra_images.features.free"),
+        t("pricing.services.extra_images.features.price"),
+        t("pricing.services.extra_images.features.limit")
+      ],
     },
     {
       id: "wide_search",
-      name: "Zone de recherche élargie",
-      description: "Permet de rechercher dans un rayon étendu.",
+      name: t("pricing.services.search.name"),
+      description: t("pricing.services.search.description"),
       price: 1.00,
       icon: <MapPin className="w-8 h-8 text-green-500" />,
-      features: ["Rayon de 50km+", "Filtres plus puissants", "Alertes élargies"],
+      features: [
+        t("pricing.services.search.features.radius"),
+        t("pricing.services.search.features.alerts"),
+        t("pricing.services.search.features.priority")
+      ],
     },
     {
       id: "priority_contact",
-      name: "Transmission prioritaire",
-      description: "Envoi prioritaire aux autorités ou gestionnaires.",
+      name: t("pricing.services.contact.name"),
+      description: t("pricing.services.contact.description"),
       price: 4.99,
       icon: <Mail className="w-8 h-8 text-red-500" />,
-      features: ["Envoi instantané", "Confirmation email", "Accès prioritaire"],
+      features: [
+        t("pricing.services.contact.features.instant"),
+        t("pricing.services.contact.features.confirmation"),
+        t("pricing.services.contact.features.priority")
+      ],
     },
   ];
 
@@ -105,10 +125,10 @@ export default function Pricing() {
 
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-gray-900 dark:text-white">
-            Services Premium
+            {t("pricing.title")}
           </h1>
           <p className="text-lg text-gray-600 dark:text-gray-300">
-            Améliorez la visibilité et l'efficacité de vos annonces avec nos options à la carte.
+            {t("pricing.subtitle")}
           </p>
         </div>
 
@@ -117,7 +137,7 @@ export default function Pricing() {
             <Card key={service.id} className="relative hover:shadow-lg transition-shadow">
               {service.popular && (
                 <Badge className="absolute -top-2 left-1/2 transform -translate-x-1/2 bg-yellow-500">
-                  Populaire
+                  {t("pricing.popular")}
                 </Badge>
               )}
               <CardHeader className="text-center">
@@ -138,7 +158,7 @@ export default function Pricing() {
                   ))}
                 </ul>
                 <Button onClick={() => handleSelect(service)} className="w-full">
-                  Acheter
+                  {t("pricing.select")}
                 </Button>
               </CardContent>
             </Card>
@@ -148,9 +168,9 @@ export default function Pricing() {
         <Dialog open={showModal} onOpenChange={setShowModal}>
           <DialogContent className="sm:max-w-md">
             <DialogHeader>
-              <DialogTitle>Choisissez un mode de paiement</DialogTitle>
+              <DialogTitle>{t("pricing.payment.title")}</DialogTitle>
               <DialogDescription>
-                Sélectionnez votre méthode de paiement préférée pour {selectedService?.name}
+                {t("pricing.payment.description")} {selectedService?.name}
               </DialogDescription>
             </DialogHeader>
             <div className="space-y-4">

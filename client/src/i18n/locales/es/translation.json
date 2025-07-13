@@ -335,10 +335,10 @@
     "termsOfUse": "Términos de uso"
   },
   "pricing": {
-    "title": "Precios",
-    "subtitle": "Elige el plan que te conviene",
+    "title": "Servicios Premium",
+    "subtitle": "Mejora la visibilidad y eficiencia de tus anuncios con nuestras opciones a la carta",
     "popular": "Popular",
-    "select": "Seleccionar",
+    "select": "Comprar",
     "tabs": {
       "services": "Servicios",
       "subscriptions": "Suscripciones"
@@ -346,29 +346,47 @@
     "services": {
       "boost": {
         "name": "Impulsar anuncio",
-        "description": "Destaca tu anuncio para mayor visibilidad",
+        "description": "Tu anuncio aparece en la parte superior de la lista durante 48h",
         "features": {
-          "priority": "Visualización prioritaria",
-          "highlight": "Resaltado en color",
-          "duration": "Duración: 7 días"
+          "priority": "Visibilidad prioritaria",
+          "highlight": "Insignia visible",
+          "duration": "Duración 48h"
         }
       },
       "search": {
-        "name": "Búsqueda premium",
-        "description": "Alertas y filtros avanzados para tus búsquedas",
+        "name": "Área de búsqueda ampliada",
+        "description": "Buscar dentro de un radio extendido",
         "features": {
-          "alerts": "Alertas personalizadas por email",
-          "radius": "Radio de búsqueda extendido",
-          "priority": "Acceso prioritario a nuevos anuncios"
+          "radius": "Radio de 50km+",
+          "alerts": "Alertas ampliadas",
+          "priority": "Filtros más potentes"
         }
       },
       "verification": {
-        "name": "Verificación de identidad",
-        "description": "Insignia de confianza para tus anuncios",
+        "name": "Insignia verificada",
+        "description": "Añade una insignia de confianza a tu anuncio",
         "features": {
-          "badge": "Insignia de confianza verificada",
-          "trust": "Aumenta la confianza de los usuarios",
-          "priority": "Soporte prioritario"
+          "badge": "Verificación email/teléfono",
+          "trust": "Anuncios destacados",
+          "priority": "Más confianza"
+        }
+      },
+      "extra_images": {
+        "name": "Fotos adicionales",
+        "description": "Añade hasta 5 fotos extras (€0.50 / foto)",
+        "features": {
+          "free": "3 gratis",
+          "price": "€0.50 por foto extra",
+          "limit": "Máximo 5 extras"
+        }
+      },
+      "contact": {
+        "name": "Transmisión prioritaria",
+        "description": "Envío prioritario a autoridades o gestores",
+        "features": {
+          "instant": "Envío instantáneo",
+          "confirmation": "Confirmación por email",
+          "priority": "Acceso prioritario"
         }
       }
     },
@@ -407,7 +425,7 @@
     "subscribe": "Suscribirse",
     "payment": {
       "title": "Elegir método de pago",
-      "description": "Selecciona tu método de pago preferido"
+      "description": "Selecciona tu método de pago preferido para"
     }
   },
   "error": {
