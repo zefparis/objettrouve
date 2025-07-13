@@ -11,7 +11,8 @@ import { Badge } from "@/components/ui/badge";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { useToast } from "@/hooks/use-toast";
 import { apiRequest } from "@/lib/queryClient";
-import { Send, ArrowLeft } from "lucide-react";
+import { Send, ArrowLeft, MoreVertical, Phone, Video, Info, Flag } from "lucide-react";
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 
 export default function Chat() {
   const { t, i18n } = useTranslation();
@@ -108,29 +109,70 @@ export default function Chat() {
       
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <Card className="h-[600px] flex flex-col">
-          <CardHeader className="flex-shrink-0 border-b">
-            <div className="flex items-center space-x-4">
-              <Button
-                variant="ghost"
-                size="sm"
-                onClick={() => window.location.href = "/dashboard"}
-              >
-                <ArrowLeft className="h-4 w-4" />
-              </Button>
-              <div className="flex-1">
-                <CardTitle className="text-lg">
-{item?.title || t("chat.conversation")}
-                </CardTitle>
-                {item && (
-                  <div className="flex items-center gap-2 mt-1">
-                    <Badge variant={item.type === "lost" ? "destructive" : "secondary"}>
-                      {item.type === "lost" ? t("search.itemType.lost") : t("search.itemType.found")}
-                    </Badge>
-                    <span className="text-sm text-gray-500">
-                      {item.location}
-                    </span>
+          <CardHeader className="flex-shrink-0 border-b bg-white">
+            <div className="flex items-center justify-between">
+              <div className="flex items-center space-x-4">
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  onClick={() => window.location.href = "/dashboard"}
+                  className="hover:bg-gray-100"
+                >
+                  <ArrowLeft className="h-4 w-4" />
+                </Button>
+                <div className="flex items-center space-x-3">
+                  <Avatar className="h-10 w-10">
+                    <AvatarImage src={item?.user?.profileImageUrl} />
+                    <AvatarFallback className="bg-blue-500 text-white">
+                      {item?.user?.firstName?.[0] || item?.user?.email?.[0] || '?'}
+                    </AvatarFallback>
+                  </Avatar>
+                  <div className="flex-1">
+                    <CardTitle className="text-lg flex items-center gap-2">
+                      {item?.title || t("chat.conversation")}
+                      <div className="flex items-center gap-1">
+                        <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                        <span className="text-xs text-gray-500">{t("chat.online")}</span>
+                      </div>
+                    </CardTitle>
+                    {item && (
+                      <div className="flex items-center gap-2 mt-1">
+                        <Badge variant={item.type === "lost" ? "destructive" : "secondary"}>
+                          {item.type === "lost" ? t("search.itemType.lost") : t("search.itemType.found")}
+                        </Badge>
+                        <span className="text-sm text-gray-500">
+                          {item.location}
+                        </span>
+                      </div>
+                    )}
                   </div>
-                )}
+                </div>
+              </div>
+              
+              <div className="flex items-center space-x-2">
+                <Button variant="ghost" size="sm" className="hover:bg-gray-100">
+                  <Phone className="h-4 w-4" />
+                </Button>
+                <Button variant="ghost" size="sm" className="hover:bg-gray-100">
+                  <Video className="h-4 w-4" />
+                </Button>
+                <DropdownMenu>
+                  <DropdownMenuTrigger asChild>
+                    <Button variant="ghost" size="sm" className="hover:bg-gray-100">
+                      <MoreVertical className="h-4 w-4" />
+                    </Button>
+                  </DropdownMenuTrigger>
+                  <DropdownMenuContent align="end">
+                    <DropdownMenuItem>
+                      <Info className="h-4 w-4 mr-2" />
+                      {t("chat.itemDetails")}
+                    </DropdownMenuItem>
+                    <DropdownMenuItem className="text-red-600">
+                      <Flag className="h-4 w-4 mr-2" />
+                      {t("chat.reportUser")}
+                    </DropdownMenuItem>
+                  </DropdownMenuContent>
+                </DropdownMenu>
               </div>
             </div>
           </CardHeader>
@@ -138,10 +180,13 @@ export default function Chat() {
           <CardContent className="flex-1 p-0 overflow-hidden">
             <div className="h-full flex flex-col">
               {/* Messages */}
-              <div className="flex-1 overflow-y-auto p-4 space-y-4">
+              <div className="flex-1 overflow-y-auto p-4 space-y-4 bg-gray-50">
                 {isLoading ? (
                   <div className="flex items-center justify-center h-full">
-                    <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary"></div>
+                    <div className="text-center">
+                      <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary mx-auto mb-2"></div>
+                      <p className="text-gray-500 text-sm">{t("chat.loadingMessages")}</p>
+                    </div>
                   </div>
                 ) : messages && messages.length > 0 ? (
                   messages.map((msg: any) => {
@@ -149,34 +194,47 @@ export default function Chat() {
                     return (
                       <div
                         key={msg.id}
-                        className={`flex ${isOwnMessage ? 'justify-end' : 'justify-start'}`}
+                        className={`flex ${isOwnMessage ? 'justify-end' : 'justify-start'} group`}
                       >
-                        <div
-                          className={`max-w-xs lg:max-w-md px-4 py-2 rounded-lg ${
-                            isOwnMessage
-                              ? 'bg-primary text-white'
-                              : 'bg-gray-100 text-gray-900'
-                          }`}
-                        >
-                          <p className="text-sm">{msg.content}</p>
-                          <p className={`text-xs mt-1 ${
-                            isOwnMessage ? 'text-blue-100' : 'text-gray-500'
-                          }`}>
-                            {new Date(msg.createdAt).toLocaleTimeString(i18n.language, {
-                              hour: '2-digit',
-                              minute: '2-digit'
-                            })}
-                          </p>
+                        <div className={`flex items-end space-x-2 ${isOwnMessage ? 'flex-row-reverse space-x-reverse' : ''}`}>
+                          {!isOwnMessage && (
+                            <Avatar className="h-8 w-8">
+                              <AvatarImage src={item?.user?.profileImageUrl} />
+                              <AvatarFallback className="bg-gray-400 text-white text-xs">
+                                {item?.user?.firstName?.[0] || item?.user?.email?.[0] || '?'}
+                              </AvatarFallback>
+                            </Avatar>
+                          )}
+                          <div
+                            className={`max-w-xs lg:max-w-md px-4 py-2 rounded-2xl shadow-sm ${
+                              isOwnMessage
+                                ? 'bg-blue-500 text-white rounded-br-md'
+                                : 'bg-white text-gray-900 rounded-bl-md border'
+                            }`}
+                          >
+                            <p className="text-sm">{msg.content}</p>
+                            <p className={`text-xs mt-1 ${
+                              isOwnMessage ? 'text-blue-100' : 'text-gray-500'
+                            }`}>
+                              {new Date(msg.createdAt).toLocaleTimeString(i18n.language, {
+                                hour: '2-digit',
+                                minute: '2-digit'
+                              })}
+                            </p>
+                          </div>
                         </div>
                       </div>
                     );
                   })
                 ) : (
                   <div className="flex items-center justify-center h-full">
-                    <div className="text-center">
-                      <p className="text-gray-500 mb-2">{t("chat.noMessages")}</p>
+                    <div className="text-center bg-white p-8 rounded-lg shadow-sm">
+                      <div className="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <Send className="h-8 w-8 text-gray-400" />
+                      </div>
+                      <p className="text-gray-500 mb-2 font-medium">{t("chat.noMessages")}</p>
                       <p className="text-gray-400 text-sm">
-{t("chat.startConversation")}
+                        {t("chat.startConversation")}
                       </p>
                     </div>
                   </div>
@@ -185,22 +243,33 @@ export default function Chat() {
               </div>
 
               {/* Message Input */}
-              <div className="flex-shrink-0 border-t p-4">
+              <div className="flex-shrink-0 border-t p-4 bg-white">
                 <form onSubmit={handleSendMessage} className="flex space-x-2">
-                  <Input
-                    value={message}
-                    onChange={(e) => setMessage(e.target.value)}
-                    placeholder={t("chat.typePlaceholder")}
-                    className="flex-1"
-                    disabled={sendMessageMutation.isPending}
-                  />
+                  <div className="flex-1 relative">
+                    <Input
+                      value={message}
+                      onChange={(e) => setMessage(e.target.value)}
+                      placeholder={t("chat.typePlaceholder")}
+                      className="pr-20 rounded-full border-gray-300 focus:border-blue-500 focus:ring-blue-500"
+                      disabled={sendMessageMutation.isPending}
+                    />
+                    {sendMessageMutation.isPending && (
+                      <div className="absolute right-12 top-1/2 transform -translate-y-1/2">
+                        <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-blue-500"></div>
+                      </div>
+                    )}
+                  </div>
                   <Button
                     type="submit"
                     disabled={!message.trim() || sendMessageMutation.isPending}
+                    className="rounded-full px-4 py-2 bg-blue-500 hover:bg-blue-600 disabled:bg-gray-300"
                   >
                     <Send className="h-4 w-4" />
                   </Button>
                 </form>
+                {sendMessageMutation.isPending && (
+                  <p className="text-xs text-gray-500 mt-1">{t("chat.typing")}</p>
+                )}
               </div>
             </div>
           </CardContent>

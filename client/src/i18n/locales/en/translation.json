@@ -69,5 +69,42 @@
       "title": "Choose a payment method",
       "description": "Select your preferred payment method for"
     }
+  },
+  "chat": {
+    "conversation": "Conversation",
+    "conversationNotFound": "Conversation not found",
+    "selectValidConversation": "Please select a valid conversation",
+    "backToDashboard": "Back to dashboard",
+    "noMessages": "No messages",
+    "startConversation": "Start a conversation by sending a message",
+    "typePlaceholder": "Type your message...",
+    "messageError": "Error sending message",
+    "messageSuccess": "Message sent successfully",
+    "typing": "Typing...",
+    "online": "Online",
+    "offline": "Offline",
+    "loadingMessages": "Loading messages...",
+    "contactSeller": "Contact seller",
+    "contactBuyer": "Contact buyer",
+    "itemDetails": "Item details",
+    "reportUser": "Report user",
+    "blockUser": "Block user"
+  },
+  "dashboard": {
+    "conversations": "Conversations",
+    "noConversations": "No conversations",
+    "noConversationsDesc": "You don't have any conversations yet",
+    "active": "active"
+  },
+  "common": {
+    "error": "Error",
+    "success": "Success",
+    "loading": "Loading..."
+  },
+  "search": {
+    "itemType": {
+      "lost": "Lost",
+      "found": "Found"
+    }
   }
 }

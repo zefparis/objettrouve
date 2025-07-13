@@ -69,5 +69,42 @@
       "title": "결제 방법 선택",
       "description": "선호하는 결제 방법을 선택하세요"
     }
+  },
+  "chat": {
+    "conversation": "대화",
+    "conversationNotFound": "대화를 찾을 수 없습니다",
+    "selectValidConversation": "유효한 대화를 선택하세요",
+    "backToDashboard": "대시보드로 돌아가기",
+    "noMessages": "메시지 없음",
+    "startConversation": "메시지를 보내서 대화를 시작하세요",
+    "typePlaceholder": "메시지를 입력하세요...",
+    "messageError": "메시지 전송 오류",
+    "messageSuccess": "메시지가 성공적으로 전송되었습니다",
+    "typing": "입력 중...",
+    "online": "온라인",
+    "offline": "오프라인",
+    "loadingMessages": "메시지 로딩 중...",
+    "contactSeller": "판매자 연락",
+    "contactBuyer": "구매자 연락",
+    "itemDetails": "아이템 상세정보",
+    "reportUser": "사용자 신고",
+    "blockUser": "사용자 차단"
+  },
+  "dashboard": {
+    "conversations": "대화",
+    "noConversations": "대화 없음",
+    "noConversationsDesc": "아직 대화가 없습니다",
+    "active": "활성"
+  },
+  "common": {
+    "error": "오류",
+    "success": "성공",
+    "loading": "로딩 중..."
+  },
+  "search": {
+    "itemType": {
+      "lost": "분실",
+      "found": "발견"
+    }
   }
 }

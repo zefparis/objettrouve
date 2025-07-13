@@ -69,5 +69,42 @@
       "title": "选择付款方式",
       "description": "选择您首选的付款方式"
     }
+  },
+  "chat": {
+    "conversation": "对话",
+    "conversationNotFound": "未找到对话",
+    "selectValidConversation": "请选择有效的对话",
+    "backToDashboard": "返回仪表板",
+    "noMessages": "无消息",
+    "startConversation": "发送消息开始对话",
+    "typePlaceholder": "输入您的消息...",
+    "messageError": "发送消息时出错",
+    "messageSuccess": "消息发送成功",
+    "typing": "正在输入...",
+    "online": "在线",
+    "offline": "离线",
+    "loadingMessages": "加载消息中...",
+    "contactSeller": "联系卖家",
+    "contactBuyer": "联系买家",
+    "itemDetails": "物品详情",
+    "reportUser": "举报用户",
+    "blockUser": "拉黑用户"
+  },
+  "dashboard": {
+    "conversations": "对话",
+    "noConversations": "无对话",
+    "noConversationsDesc": "您还没有对话",
+    "active": "活跃"
+  },
+  "common": {
+    "error": "错误",
+    "success": "成功",
+    "loading": "加载中..."
+  },
+  "search": {
+    "itemType": {
+      "lost": "丢失",
+      "found": "找到"
+    }
   }
 }

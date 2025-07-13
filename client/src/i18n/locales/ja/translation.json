@@ -69,5 +69,42 @@
       "title": "支払い方法を選択",
       "description": "お好みの支払い方法を選択してください"
     }
+  },
+  "chat": {
+    "conversation": "会話",
+    "conversationNotFound": "会話が見つかりません",
+    "selectValidConversation": "有効な会話を選択してください",
+    "backToDashboard": "ダッシュボードに戻る",
+    "noMessages": "メッセージがありません",
+    "startConversation": "メッセージを送信して会話を開始",
+    "typePlaceholder": "メッセージを入力...",
+    "messageError": "メッセージ送信エラー",
+    "messageSuccess": "メッセージを送信しました",
+    "typing": "入力中...",
+    "online": "オンライン",
+    "offline": "オフライン",
+    "loadingMessages": "メッセージを読み込み中...",
+    "contactSeller": "販売者に連絡",
+    "contactBuyer": "購入者に連絡",
+    "itemDetails": "アイテム詳細",
+    "reportUser": "ユーザーを報告",
+    "blockUser": "ユーザーをブロック"
+  },
+  "dashboard": {
+    "conversations": "会話",
+    "noConversations": "会話がありません",
+    "noConversationsDesc": "まだ会話がありません",
+    "active": "アクティブ"
+  },
+  "common": {
+    "error": "エラー",
+    "success": "成功",
+    "loading": "読み込み中..."
+  },
+  "search": {
+    "itemType": {
+      "lost": "紛失",
+      "found": "発見"
+    }
   }
 }

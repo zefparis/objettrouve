@@ -69,5 +69,42 @@
       "title": "Kies een betaalmethode",
       "description": "Selecteer uw voorkeursbetalingsmethode voor"
     }
+  },
+  "chat": {
+    "conversation": "Gesprek",
+    "conversationNotFound": "Gesprek niet gevonden",
+    "selectValidConversation": "Selecteer een geldig gesprek",
+    "backToDashboard": "Terug naar dashboard",
+    "noMessages": "Geen berichten",
+    "startConversation": "Start een gesprek door een bericht te sturen",
+    "typePlaceholder": "Typ uw bericht...",
+    "messageError": "Fout bij het verzenden van bericht",
+    "messageSuccess": "Bericht succesvol verzonden",
+    "typing": "Aan het typen...",
+    "online": "Online",
+    "offline": "Offline",
+    "loadingMessages": "Berichten laden...",
+    "contactSeller": "Contact verkoper",
+    "contactBuyer": "Contact koper",
+    "itemDetails": "Item details",
+    "reportUser": "Gebruiker rapporteren",
+    "blockUser": "Gebruiker blokkeren"
+  },
+  "dashboard": {
+    "conversations": "Gesprekken",
+    "noConversations": "Geen gesprekken",
+    "noConversationsDesc": "U heeft nog geen gesprekken",
+    "active": "actief"
+  },
+  "common": {
+    "error": "Fout",
+    "success": "Succes",
+    "loading": "Laden..."
+  },
+  "search": {
+    "itemType": {
+      "lost": "Verloren",
+      "found": "Gevonden"
+    }
   }
 }

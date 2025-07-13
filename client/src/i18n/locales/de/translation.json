@@ -69,5 +69,42 @@
       "title": "Wählen Sie eine Zahlungsmethode",
       "description": "Wählen Sie Ihre bevorzugte Zahlungsmethode für"
     }
+  },
+  "chat": {
+    "conversation": "Unterhaltung",
+    "conversationNotFound": "Unterhaltung nicht gefunden",
+    "selectValidConversation": "Bitte wählen Sie eine gültige Unterhaltung",
+    "backToDashboard": "Zurück zum Dashboard",
+    "noMessages": "Keine Nachrichten",
+    "startConversation": "Starten Sie eine Unterhaltung, indem Sie eine Nachricht senden",
+    "typePlaceholder": "Geben Sie Ihre Nachricht ein...",
+    "messageError": "Fehler beim Senden der Nachricht",
+    "messageSuccess": "Nachricht erfolgreich gesendet",
+    "typing": "Tippt...",
+    "online": "Online",
+    "offline": "Offline",
+    "loadingMessages": "Nachrichten werden geladen...",
+    "contactSeller": "Verkäufer kontaktieren",
+    "contactBuyer": "Käufer kontaktieren",
+    "itemDetails": "Objektdetails",
+    "reportUser": "Benutzer melden",
+    "blockUser": "Benutzer blockieren"
+  },
+  "dashboard": {
+    "conversations": "Unterhaltungen",
+    "noConversations": "Keine Unterhaltungen",
+    "noConversationsDesc": "Sie haben noch keine Unterhaltungen",
+    "active": "aktiv"
+  },
+  "common": {
+    "error": "Fehler",
+    "success": "Erfolg",
+    "loading": "Wird geladen..."
+  },
+  "search": {
+    "itemType": {
+      "lost": "Verloren",
+      "found": "Gefunden"
+    }
   }
 }

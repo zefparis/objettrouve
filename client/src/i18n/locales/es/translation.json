@@ -69,5 +69,42 @@
       "title": "Elige un método de pago",
       "description": "Selecciona tu método de pago preferido para"
     }
+  },
+  "chat": {
+    "conversation": "Conversación",
+    "conversationNotFound": "Conversación no encontrada",
+    "selectValidConversation": "Por favor selecciona una conversación válida",
+    "backToDashboard": "Volver al panel",
+    "noMessages": "Sin mensajes",
+    "startConversation": "Inicia una conversación enviando un mensaje",
+    "typePlaceholder": "Escribe tu mensaje...",
+    "messageError": "Error al enviar mensaje",
+    "messageSuccess": "Mensaje enviado con éxito",
+    "typing": "Escribiendo...",
+    "online": "En línea",
+    "offline": "Desconectado",
+    "loadingMessages": "Cargando mensajes...",
+    "contactSeller": "Contactar vendedor",
+    "contactBuyer": "Contactar comprador",
+    "itemDetails": "Detalles del objeto",
+    "reportUser": "Reportar usuario",
+    "blockUser": "Bloquear usuario"
+  },
+  "dashboard": {
+    "conversations": "Conversaciones",
+    "noConversations": "Sin conversaciones",
+    "noConversationsDesc": "No tienes conversaciones aún",
+    "active": "activas"
+  },
+  "common": {
+    "error": "Error",
+    "success": "Éxito",
+    "loading": "Cargando..."
+  },
+  "search": {
+    "itemType": {
+      "lost": "Perdido",
+      "found": "Encontrado"
+    }
   }
 }
