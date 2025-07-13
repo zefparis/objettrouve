@@ -135,7 +135,9 @@
     "search": "Search",
     "publish": "Publish",
     "howItWorks": "How it works",
-    "contact": "Contact"
+    "contact": "Contact",
+    "chat": "Messages",
+    "dashboard": "Dashboard"
   },
   "common": {
     "viewDetails": "View details",
@@ -232,5 +234,39 @@
     "sendButton": "Send Message",
     "messageSent": "Message Sent",
     "messageSentDesc": "We have received your message and will respond shortly."
+  },
+  "chat": {
+    "title": "Messages",
+    "conversationNotFound": "Conversation not found",
+    "selectValidConversation": "Please select a valid conversation",
+    "backToDashboard": "Back to Dashboard",
+    "messageError": "Error sending message",
+    "sendMessage": "Send message",
+    "typePlaceholder": "Type your message...",
+    "noMessages": "No messages",
+    "noMessagesDesc": "Start the conversation by sending a message",
+    "online": "Online",
+    "offline": "Offline",
+    "lastSeen": "Last seen",
+    "itemOwner": "Item owner",
+    "reportUser": "Report user",
+    "blockUser": "Block user",
+    "messageOptions": "Message options",
+    "copyMessage": "Copy message",
+    "deleteMessage": "Delete message",
+    "editMessage": "Edit message",
+    "replyMessage": "Reply to message",
+    "messageDeleted": "Message deleted",
+    "messageEdited": "Message edited",
+    "typing": "Typing...",
+    "conversationWith": "Conversation with",
+    "conversationsDesc": "Manage your conversations about lost and found items",
+    "noConversations": "No conversations yet",
+    "noConversationsDesc": "Start a conversation by contacting someone about their lost or found item",
+    "you": "You",
+    "anonymousUser": "Anonymous user",
+    "startConversation": "Start conversation",
+    "contactOwner": "Contact owner",
+    "interested": "I'm interested in this item"
   }
 }

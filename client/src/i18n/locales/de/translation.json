@@ -135,7 +135,9 @@
     "search": "Suchen",
     "publish": "Veröffentlichen",
     "howItWorks": "Wie es funktioniert",
-    "contact": "Kontakt"
+    "contact": "Kontakt",
+    "chat": "Nachrichten",
+    "dashboard": "Dashboard"
   },
   "common": {
     "viewDetails": "Details anzeigen",
@@ -232,5 +234,39 @@
     "sendButton": "Nachricht senden",
     "messageSent": "Nachricht gesendet",
     "messageSentDesc": "Wir haben Ihre Nachricht erhalten und werden in Kürze antworten."
+  },
+  "chat": {
+    "title": "Nachrichten",
+    "conversationNotFound": "Unterhaltung nicht gefunden",
+    "selectValidConversation": "Bitte wählen Sie eine gültige Unterhaltung",
+    "backToDashboard": "Zurück zum Dashboard",
+    "messageError": "Fehler beim Senden der Nachricht",
+    "sendMessage": "Nachricht senden",
+    "typePlaceholder": "Schreiben Sie Ihre Nachricht...",
+    "noMessages": "Keine Nachrichten",
+    "noMessagesDesc": "Beginnen Sie die Unterhaltung, indem Sie eine Nachricht senden",
+    "online": "Online",
+    "offline": "Offline",
+    "lastSeen": "Zuletzt gesehen",
+    "itemOwner": "Eigentümer des Gegenstands",
+    "reportUser": "Benutzer melden",
+    "blockUser": "Benutzer blockieren",
+    "messageOptions": "Nachrichtenoptionen",
+    "copyMessage": "Nachricht kopieren",
+    "deleteMessage": "Nachricht löschen",
+    "editMessage": "Nachricht bearbeiten",
+    "replyMessage": "Auf Nachricht antworten",
+    "messageDeleted": "Nachricht gelöscht",
+    "messageEdited": "Nachricht bearbeitet",
+    "typing": "Schreibt...",
+    "conversationWith": "Unterhaltung mit",
+    "conversationsDesc": "Verwalten Sie Ihre Unterhaltungen über verlorene und gefundene Gegenstände",
+    "noConversations": "Noch keine Unterhaltungen",
+    "noConversationsDesc": "Beginnen Sie eine Unterhaltung, indem Sie jemanden wegen seines verlorenen oder gefundenen Gegenstands kontaktieren",
+    "you": "Sie",
+    "anonymousUser": "Anonymer Benutzer",
+    "startConversation": "Unterhaltung beginnen",
+    "contactOwner": "Eigentümer kontaktieren",
+    "interested": "Ich bin an diesem Gegenstand interessiert"
   }
 }

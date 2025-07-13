@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
-import { Menu, Search, Plus, User, Settings, LogOut, X, Crown } from "lucide-react";
+import { Menu, Search, Plus, User, Settings, LogOut, X, Crown, MessageCircle } from "lucide-react";
 import LanguageSelector from "./language-selector";
 import SimpleAuthModal from "./auth/simple-auth-modal";
 
@@ -31,7 +31,7 @@ export default function Navbar() {
     { name: t("nav.search"), href: "/search" },
     { name: t("nav.map"), href: "/map" },
     { name: t("nav.dashboard"), href: "/dashboard" },
-    { name: t("nav.chat"), href: "/chat" },
+    { name: t("nav.chat"), href: "/conversations" },
     { name: t("nav.pricing"), href: "/pricing" },
   ];
 
@@ -129,8 +129,8 @@ export default function Navbar() {
                       <Settings className="h-4 w-4 mr-2" />
                       {t("nav.profile")}
                     </DropdownMenuItem>
-                    <DropdownMenuItem onClick={() => window.location.href = "/chat"}>
-                      <Search className="h-4 w-4 mr-2" />
+                    <DropdownMenuItem onClick={() => window.location.href = "/conversations"}>
+                      <MessageCircle className="h-4 w-4 mr-2" />
                       {t("nav.chat")}
                     </DropdownMenuItem>
                     <DropdownMenuItem onClick={() => window.location.href = "/admin"}>

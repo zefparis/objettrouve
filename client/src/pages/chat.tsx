@@ -60,11 +60,16 @@ export default function Chat() {
       setMessage("");
       queryClient.invalidateQueries({ queryKey: ["/api/conversations", itemId] });
       queryClient.invalidateQueries({ queryKey: ["/api/conversations"] });
+      toast({
+        title: t("chat.messageSent") || "Message envoyé",
+        description: t("chat.messageSentDesc") || "Votre message a été envoyé avec succès",
+        variant: "default",
+      });
     },
     onError: (error) => {
       toast({
-        title: t("common.error"),
-        description: t("chat.messageError"),
+        title: t("common.error") || "Erreur",
+        description: t("chat.messageError") || "Erreur lors de l'envoi du message",
         variant: "destructive",
       });
     },
@@ -93,7 +98,7 @@ export default function Chat() {
               <p className="text-gray-600 mb-6">
                 {t("chat.selectValidConversation")}
               </p>
-              <Button onClick={() => window.location.href = "/dashboard"}>
+              <Button onClick={() => window.location.href = "/conversations"}>
                 {t("chat.backToDashboard")}
               </Button>
             </CardContent>
@@ -115,7 +120,7 @@ export default function Chat() {
                 <Button
                   variant="ghost"
                   size="sm"
-                  onClick={() => window.location.href = "/dashboard"}
+                  onClick={() => window.location.href = "/conversations"}
                   className="hover:bg-gray-100"
                 >
                   <ArrowLeft className="h-4 w-4" />

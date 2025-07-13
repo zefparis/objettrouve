@@ -135,7 +135,9 @@
     "search": "搜索",
     "publish": "发布",
     "howItWorks": "使用方法",
-    "contact": "联系"
+    "contact": "联系",
+    "chat": "消息",
+    "dashboard": "仪表板"
   },
   "common": {
     "viewDetails": "查看详情",
@@ -232,5 +234,39 @@
     "sendButton": "发送消息",
     "messageSent": "消息已发送",
     "messageSentDesc": "我们已收到您的消息，会很快回复您。"
+  },
+  "chat": {
+    "title": "消息",
+    "conversationNotFound": "未找到对话",
+    "selectValidConversation": "请选择有效的对话",
+    "backToDashboard": "返回仪表板",
+    "messageError": "发送消息错误",
+    "sendMessage": "发送消息",
+    "typePlaceholder": "输入您的消息...",
+    "noMessages": "无消息",
+    "noMessagesDesc": "发送消息开始对话",
+    "online": "在线",
+    "offline": "离线",
+    "lastSeen": "最后在线",
+    "itemOwner": "物品所有者",
+    "reportUser": "举报用户",
+    "blockUser": "屏蔽用户",
+    "messageOptions": "消息选项",
+    "copyMessage": "复制消息",
+    "deleteMessage": "删除消息",
+    "editMessage": "编辑消息",
+    "replyMessage": "回复消息",
+    "messageDeleted": "消息已删除",
+    "messageEdited": "消息已编辑",
+    "typing": "正在输入...",
+    "conversationWith": "与...对话",
+    "conversationsDesc": "管理您关于丢失和发现物品的对话",
+    "noConversations": "还没有对话",
+    "noConversationsDesc": "通过联系某人关于他们丢失或发现的物品开始对话",
+    "you": "您",
+    "anonymousUser": "匿名用户",
+    "startConversation": "开始对话",
+    "contactOwner": "联系所有者",
+    "interested": "我对这个物品感兴趣"
   }
 }

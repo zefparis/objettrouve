@@ -135,7 +135,9 @@
     "search": "검색",
     "publish": "게시",
     "howItWorks": "사용 방법",
-    "contact": "연락처"
+    "contact": "연락처",
+    "chat": "메시지",
+    "dashboard": "대시보드"
   },
   "common": {
     "viewDetails": "세부 정보 보기",
@@ -232,5 +234,39 @@
     "sendButton": "메시지 보내기",
     "messageSent": "메시지가 전송되었습니다",
     "messageSentDesc": "메시지를 받았으며 곧 답변드리겠습니다."
+  },
+  "chat": {
+    "title": "메시지",
+    "conversationNotFound": "대화를 찾을 수 없습니다",
+    "selectValidConversation": "유효한 대화를 선택해주세요",
+    "backToDashboard": "대시보드로 돌아가기",
+    "messageError": "메시지 전송 오류",
+    "sendMessage": "메시지 보내기",
+    "typePlaceholder": "메시지를 입력하세요...",
+    "noMessages": "메시지가 없습니다",
+    "noMessagesDesc": "메시지를 보내서 대화를 시작하세요",
+    "online": "온라인",
+    "offline": "오프라인",
+    "lastSeen": "마지막 접속",
+    "itemOwner": "아이템 소유자",
+    "reportUser": "사용자 신고",
+    "blockUser": "사용자 차단",
+    "messageOptions": "메시지 옵션",
+    "copyMessage": "메시지 복사",
+    "deleteMessage": "메시지 삭제",
+    "editMessage": "메시지 수정",
+    "replyMessage": "메시지 답장",
+    "messageDeleted": "메시지가 삭제되었습니다",
+    "messageEdited": "메시지가 수정되었습니다",
+    "typing": "입력 중...",
+    "conversationWith": "와의 대화",
+    "conversationsDesc": "분실물과 발견물에 대한 대화를 관리하세요",
+    "noConversations": "아직 대화가 없습니다",
+    "noConversationsDesc": "분실물이나 발견물에 대해 누군가에게 연락하여 대화를 시작하세요",
+    "you": "당신",
+    "anonymousUser": "익명 사용자",
+    "startConversation": "대화 시작",
+    "contactOwner": "소유자에게 연락",
+    "interested": "이 물건에 관심이 있습니다"
   }
 }

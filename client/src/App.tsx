@@ -14,6 +14,7 @@ import Publish from "@/pages/publish";
 import ItemDetail from "@/pages/item-detail";
 import Dashboard from "@/pages/dashboard";
 import Chat from "@/pages/chat";
+import Conversations from "@/pages/conversations";
 import HowItWorks from "@/pages/how-it-works";
 import Contact from "@/pages/contact";
 import Profile from "@/pages/profile";
@@ -34,8 +35,9 @@ function Router() {
       <Route path="/search" component={Search} />
       <Route path="/publish" component={Publish} />
       <Route path="/item/:id" component={ItemDetail} />
-      <Route path="/chat" component={Chat} />
+      <Route path="/chat" component={Conversations} />
       <Route path="/chat/:itemId" component={Chat} />
+      <Route path="/conversations" component={Conversations} />
       <Route path="/dashboard" component={Dashboard} />
       <Route path="/profile" component={Profile} />
       <Route path="/pricing" component={Pricing} />

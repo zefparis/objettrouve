@@ -209,12 +209,12 @@ export default function ItemDetail() {
                 <CardContent className="space-y-4">
                   {!showContact ? (
                     <Button
-                      onClick={handleContactReveal}
+                      onClick={() => window.location.href = `/chat/${item.id}`}
                       className="w-full"
                       size="lg"
                     >
                       <MessageCircle className="h-4 w-4 mr-2" />
-                      Cet objet m'appartient
+                      {t("chat.contactOwner")}
                     </Button>
                   ) : (
                     <div className="space-y-4">

@@ -135,7 +135,9 @@
     "search": "検索",
     "publish": "投稿",
     "howItWorks": "使い方",
-    "contact": "連絡先"
+    "contact": "連絡先",
+    "chat": "メッセージ",
+    "dashboard": "ダッシュボード"
   },
   "common": {
     "viewDetails": "詳細を見る",
@@ -232,5 +234,39 @@
     "sendButton": "メッセージを送信",
     "messageSent": "メッセージを送信しました",
     "messageSentDesc": "お問い合わせを受け付けました。近日中にご回答いたします。"
+  },
+  "chat": {
+    "title": "メッセージ",
+    "conversationNotFound": "会話が見つかりません",
+    "selectValidConversation": "有効な会話を選択してください",
+    "backToDashboard": "ダッシュボードに戻る",
+    "messageError": "メッセージの送信エラー",
+    "sendMessage": "メッセージを送信",
+    "typePlaceholder": "メッセージを入力してください...",
+    "noMessages": "メッセージがありません",
+    "noMessagesDesc": "メッセージを送信して会話を開始する",
+    "online": "オンライン",
+    "offline": "オフライン",
+    "lastSeen": "最終ログイン",
+    "itemOwner": "アイテムの所有者",
+    "reportUser": "ユーザーを報告",
+    "blockUser": "ユーザーをブロック",
+    "messageOptions": "メッセージオプション",
+    "copyMessage": "メッセージをコピー",
+    "deleteMessage": "メッセージを削除",
+    "editMessage": "メッセージを編集",
+    "replyMessage": "メッセージに返信",
+    "messageDeleted": "メッセージが削除されました",
+    "messageEdited": "メッセージが編集されました",
+    "typing": "入力中...",
+    "conversationWith": "との会話",
+    "conversationsDesc": "紛失物と発見物に関する会話を管理する",
+    "noConversations": "まだ会話がありません",
+    "noConversationsDesc": "紛失物や発見物について誰かに連絡して会話を始める",
+    "you": "あなた",
+    "anonymousUser": "匿名ユーザー",
+    "startConversation": "会話を開始",
+    "contactOwner": "所有者に連絡",
+    "interested": "この物品に興味があります"
   }
 }

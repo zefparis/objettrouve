@@ -135,7 +135,9 @@
     "search": "Zoeken",
     "publish": "Publiceren",
     "howItWorks": "Hoe het werkt",
-    "contact": "Contact"
+    "contact": "Contact",
+    "chat": "Berichten",
+    "dashboard": "Dashboard"
   },
   "common": {
     "viewDetails": "Details bekijken",
@@ -232,5 +234,39 @@
     "sendButton": "Bericht versturen",
     "messageSent": "Bericht verzonden",
     "messageSentDesc": "We hebben uw bericht ontvangen en zullen binnenkort reageren."
+  },
+  "chat": {
+    "title": "Berichten",
+    "conversationNotFound": "Gesprek niet gevonden",
+    "selectValidConversation": "Selecteer een geldig gesprek",
+    "backToDashboard": "Terug naar Dashboard",
+    "messageError": "Fout bij het verzenden van bericht",
+    "sendMessage": "Bericht verzenden",
+    "typePlaceholder": "Typ uw bericht...",
+    "noMessages": "Geen berichten",
+    "noMessagesDesc": "Begin het gesprek door een bericht te sturen",
+    "online": "Online",
+    "offline": "Offline",
+    "lastSeen": "Laatst gezien",
+    "itemOwner": "Eigenaar van het item",
+    "reportUser": "Gebruiker rapporteren",
+    "blockUser": "Gebruiker blokkeren",
+    "messageOptions": "Berichtopties",
+    "copyMessage": "Bericht kopiëren",
+    "deleteMessage": "Bericht verwijderen",
+    "editMessage": "Bericht bewerken",
+    "replyMessage": "Antwoorden op bericht",
+    "messageDeleted": "Bericht verwijderd",
+    "messageEdited": "Bericht bewerkt",
+    "typing": "Aan het typen...",
+    "conversationWith": "Gesprek met",
+    "conversationsDesc": "Beheer uw gesprekken over verloren en gevonden items",
+    "noConversations": "Nog geen gesprekken",
+    "noConversationsDesc": "Start een gesprek door contact op te nemen met iemand over hun verloren of gevonden item",
+    "you": "U",
+    "anonymousUser": "Anonieme gebruiker",
+    "startConversation": "Gesprek starten",
+    "contactOwner": "Eigenaar contacteren",
+    "interested": "Ik ben geïnteresseerd in dit item"
   }
 }

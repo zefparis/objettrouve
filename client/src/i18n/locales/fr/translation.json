@@ -135,7 +135,9 @@
     "search": "Rechercher",
     "publish": "Publier",
     "howItWorks": "Comment ça marche",
-    "contact": "Contact"
+    "contact": "Contact",
+    "chat": "Messages",
+    "dashboard": "Tableau de bord"
   },
   "common": {
     "viewDetails": "Voir les détails",
@@ -232,5 +234,39 @@
     "sendButton": "Envoyer le message",
     "messageSent": "Message envoyé",
     "messageSentDesc": "Nous avons reçu votre message et vous répondrons sous peu."
+  },
+  "chat": {
+    "title": "Messages",
+    "conversationNotFound": "Conversation non trouvée",
+    "selectValidConversation": "Veuillez sélectionner une conversation valide",
+    "backToDashboard": "Retour au tableau de bord",
+    "messageError": "Erreur lors de l'envoi du message",
+    "sendMessage": "Envoyer un message",
+    "typePlaceholder": "Tapez votre message...",
+    "noMessages": "Aucun message",
+    "noMessagesDesc": "Commencez la conversation en envoyant un message",
+    "online": "En ligne",
+    "offline": "Hors ligne",
+    "lastSeen": "Vu pour la dernière fois",
+    "itemOwner": "Propriétaire de l'objet",
+    "reportUser": "Signaler l'utilisateur",
+    "blockUser": "Bloquer l'utilisateur",
+    "messageOptions": "Options du message",
+    "copyMessage": "Copier le message",
+    "deleteMessage": "Supprimer le message",
+    "editMessage": "Modifier le message",
+    "replyMessage": "Répondre au message",
+    "messageDeleted": "Message supprimé",
+    "messageEdited": "Message modifié",
+    "typing": "En train d'écrire...",
+    "conversationWith": "Conversation avec",
+    "conversationsDesc": "Gérez vos conversations sur les objets perdus et trouvés",
+    "noConversations": "Aucune conversation pour le moment",
+    "noConversationsDesc": "Commencez une conversation en contactant quelqu'un à propos de son objet perdu ou trouvé",
+    "you": "Vous",
+    "anonymousUser": "Utilisateur anonyme",
+    "startConversation": "Commencer une conversation",
+    "contactOwner": "Contacter le propriétaire",
+    "interested": "Je suis intéressé par cet objet"
   }
 }

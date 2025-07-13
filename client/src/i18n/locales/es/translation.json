@@ -135,7 +135,9 @@
     "search": "Buscar",
     "publish": "Publicar",
     "howItWorks": "Cómo funciona",
-    "contact": "Contacto"
+    "contact": "Contacto",
+    "chat": "Mensajes",
+    "dashboard": "Panel"
   },
   "common": {
     "viewDetails": "Ver detalles",
@@ -232,5 +234,39 @@
     "sendButton": "Enviar Mensaje",
     "messageSent": "Mensaje Enviado",
     "messageSentDesc": "Hemos recibido tu mensaje y te responderemos pronto."
+  },
+  "chat": {
+    "title": "Mensajes",
+    "conversationNotFound": "Conversación no encontrada",
+    "selectValidConversation": "Por favor selecciona una conversación válida",
+    "backToDashboard": "Volver al Panel",
+    "messageError": "Error al enviar mensaje",
+    "sendMessage": "Enviar mensaje",
+    "typePlaceholder": "Escribe tu mensaje...",
+    "noMessages": "Sin mensajes",
+    "noMessagesDesc": "Inicia la conversación enviando un mensaje",
+    "online": "En línea",
+    "offline": "Desconectado",
+    "lastSeen": "Visto por última vez",
+    "itemOwner": "Propietario del objeto",
+    "reportUser": "Reportar usuario",
+    "blockUser": "Bloquear usuario",
+    "messageOptions": "Opciones del mensaje",
+    "copyMessage": "Copiar mensaje",
+    "deleteMessage": "Eliminar mensaje",
+    "editMessage": "Editar mensaje",
+    "replyMessage": "Responder mensaje",
+    "messageDeleted": "Mensaje eliminado",
+    "messageEdited": "Mensaje editado",
+    "typing": "Escribiendo...",
+    "conversationWith": "Conversación con",
+    "conversationsDesc": "Gestiona tus conversaciones sobre objetos perdidos y encontrados",
+    "noConversations": "Sin conversaciones aún",
+    "noConversationsDesc": "Inicia una conversación contactando a alguien sobre su objeto perdido o encontrado",
+    "you": "Tú",
+    "anonymousUser": "Usuario anónimo",
+    "startConversation": "Iniciar conversación",
+    "contactOwner": "Contactar propietario",
+    "interested": "Estoy interesado en este objeto"
   }
 }
