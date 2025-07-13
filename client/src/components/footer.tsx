@@ -20,7 +20,7 @@ export default function Footer() {
               <p>Roquebrune-Cap-Martin 06190</p>
               <p>Alpes-Maritimes, France</p>
               <p>Email: contact@ia-solution.fr</p>
-              <p>Téléphone: +33 1 23 45 67 89</p>
+              <p>Téléphone: +33 620 478 241</p>
             </div>
           </div>
 
@@ -62,22 +62,22 @@ export default function Footer() {
             <ul className="space-y-2 text-gray-300">
               <li>
                 <Link href="/mentions-legales" className="hover:text-orange-400 transition-colors">
-                  {t("footer.legalNotice")}
+                  Mentions légales
                 </Link>
               </li>
               <li>
                 <Link href="/politique-confidentialite" className="hover:text-orange-400 transition-colors">
-                  {t("footer.privacyPolicy")}
+                  Politique de confidentialité
                 </Link>
               </li>
               <li>
-                <Link href="/cgu" className="hover:text-orange-400 transition-colors">
-                  {t("footer.termsOfUse")}
+                <Link href="/conditions-utilisation" className="hover:text-orange-400 transition-colors">
+                  Conditions d'utilisation
                 </Link>
               </li>
               <li>
-                <Link href="/cookies" className="hover:text-orange-400 transition-colors">
-                  Politique relative aux cookies
+                <Link href="/politique-cookies" className="hover:text-orange-400 transition-colors">
+                  Politique cookies
                 </Link>
               </li>
             </ul>

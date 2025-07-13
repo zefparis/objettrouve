@@ -30,6 +30,10 @@ import Pricing from "@/pages/pricing";
 import Checkout from "@/pages/checkout";
 import PaymentSuccess from "@/pages/payment-success";
 import MapPage from "@/pages/map";
+import MentionsLegales from "@/pages/mentions-legales";
+import PolitiqueConfidentialite from "@/pages/politique-confidentialite";
+import ConditionsUtilisation from "@/pages/conditions-utilisation";
+import PolitiqueCookies from "@/pages/politique-cookies";
 
 
 function Router() {
@@ -59,6 +63,13 @@ function Router() {
       <Route path="/admin/analytics" component={AdminAnalytics} />
       <Route path="/admin/settings" component={AdminSettings} />
       <Route path="/admin-dashboard" component={() => <Admin />} />
+      
+      {/* Pages légales */}
+      <Route path="/mentions-legales" component={MentionsLegales} />
+      <Route path="/politique-confidentialite" component={PolitiqueConfidentialite} />
+      <Route path="/conditions-utilisation" component={ConditionsUtilisation} />
+      <Route path="/politique-cookies" component={PolitiqueCookies} />
+      
       <Route path="/" component={isLoading || !isAuthenticated ? Landing : Home} />
       <Route component={NotFound} />
     </Switch>
