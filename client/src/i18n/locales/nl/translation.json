@@ -102,13 +102,39 @@
     "loading": "Laden..."
   },
   "search": {
+    "title": "Zoeken naar items",
+    "subtitle": "Zoek tussen verloren en gevonden items gemeld door de gemeenschap",
+    "searchPlaceholder": "Zoek naar een item (bijv. iPhone, sleutels, portemonnee...)",
+    "searchButton": "Zoeken",
+    "filters": "Filters",
+    "typeFilter": "Itemtype",
+    "categoryFilter": "Categorie",
+    "locationFilter": "Locatie",
+    "dateFilter": "Datum",
+    "sortBy": "Sorteren op",
+    "sortByDate": "Datum",
+    "sortByRelevance": "Relevantie",
+    "sortByDistance": "Afstand",
+    "noResults": "Geen resultaten gevonden",
+    "noResultsDesc": "Probeer uw zoekcriteria te wijzigen of enkele filters te verwijderen",
+    "resultsCount": "{{count}} resultaat/resultaten gevonden",
+    "clearFilters": "Filters wissen",
     "itemType": {
       "lost": "Verloren",
       "found": "Gevonden"
     },
     "all": "Alle",
     "lost": "Verloren",
-    "found": "Gevonden"
+    "found": "Gevonden",
+    "allCategories": "Alle categorieën",
+    "allTypes": "Alle types",
+    "advanced": "Geavanceerd zoeken",
+    "keywords": "Trefwoorden",
+    "loading": "Zoeken...",
+    "searchTips": "Zoektips",
+    "tip1": "Gebruik specifieke trefwoorden zoals 'zwarte iPhone' of 'Toyota sleutels'",
+    "tip2": "Probeer verschillende varianten: 'mobiel', 'telefoon', 'smartphone'",
+    "tip3": "Gebruik filters om uw zoekopdracht te verfijnen op type en categorie"
   },
   "hero": {
     "title": "Vind uw verloren items gemakkelijk",

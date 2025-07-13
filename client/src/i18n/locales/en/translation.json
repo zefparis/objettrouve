@@ -102,13 +102,39 @@
     "loading": "Loading..."
   },
   "search": {
+    "title": "Search Items",
+    "subtitle": "Search among lost and found items reported by the community",
+    "searchPlaceholder": "Search for an item (e.g., iPhone, keys, wallet...)",
+    "searchButton": "Search",
+    "filters": "Filters",
+    "typeFilter": "Item type",
+    "categoryFilter": "Category",
+    "locationFilter": "Location",
+    "dateFilter": "Date",
+    "sortBy": "Sort by",
+    "sortByDate": "Date",
+    "sortByRelevance": "Relevance",
+    "sortByDistance": "Distance",
+    "noResults": "No results found",
+    "noResultsDesc": "Try modifying your search criteria or removing some filters",
+    "resultsCount": "{{count}} result(s) found",
+    "clearFilters": "Clear filters",
     "itemType": {
       "lost": "Lost",
       "found": "Found"
     },
     "all": "All",
     "lost": "Lost",
-    "found": "Found"
+    "found": "Found",
+    "allCategories": "All categories",
+    "allTypes": "All types",
+    "advanced": "Advanced search",
+    "keywords": "Keywords",
+    "loading": "Searching...",
+    "searchTips": "Search tips",
+    "tip1": "Use specific keywords like 'black iPhone' or 'Toyota keys'",
+    "tip2": "Try different variants: 'mobile', 'phone', 'smartphone'",
+    "tip3": "Use filters to narrow down your search by type and category"
   },
   "hero": {
     "title": "Find your lost items easily",

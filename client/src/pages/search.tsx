@@ -82,32 +82,51 @@ export default function Search() {
                 </div>
                 <Select value={selectedType} onValueChange={setSelectedType}>
                   <SelectTrigger className="w-full md:w-48">
-                    <SelectValue placeholder={t("search.type")} />
+                    <SelectValue placeholder={t("search.typeFilter")} />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="all">{t("search.all")}</SelectItem>
-                    <SelectItem value="lost">{t("search.lost")}</SelectItem>
-                    <SelectItem value="found">{t("search.found")}</SelectItem>
+                    <SelectItem value="all">{t("search.allTypes")}</SelectItem>
+                    <SelectItem value="lost">{t("search.itemType.lost")}</SelectItem>
+                    <SelectItem value="found">{t("search.itemType.found")}</SelectItem>
                   </SelectContent>
                 </Select>
                 <Select value={selectedCategory} onValueChange={setSelectedCategory}>
                   <SelectTrigger className="w-full md:w-48">
-                    <SelectValue placeholder={t("search.category")} />
+                    <SelectValue placeholder={t("search.categoryFilter")} />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="all">{t("search.all")}</SelectItem>
+                    <SelectItem value="all">{t("search.allCategories")}</SelectItem>
                     {CATEGORIES.map((category) => (
                       <SelectItem key={category.id} value={category.id}>
-                        {t(`categories.${category.id}`)}
+                        <div className="flex items-center">
+                          <i className={`${category.icon} mr-2`} />
+                          {category.name}
+                        </div>
                       </SelectItem>
                     ))}
                   </SelectContent>
                 </Select>
               </div>
-              <Button type="submit" className="w-full md:w-auto">
-                <SearchIcon className="h-4 w-4 mr-2" />
-                {t("nav.search")}
-              </Button>
+              <div className="flex flex-col md:flex-row gap-4 items-center">
+                <Button type="submit" className="w-full md:w-auto">
+                  <SearchIcon className="h-4 w-4 mr-2" />
+                  {t("search.searchButton")}
+                </Button>
+                {(search || selectedType !== "all" || selectedCategory !== "all") && (
+                  <Button 
+                    type="button" 
+                    variant="outline" 
+                    className="w-full md:w-auto"
+                    onClick={() => {
+                      setSearch("");
+                      setSelectedType("all");
+                      setSelectedCategory("all");
+                    }}
+                  >
+                    {t("search.clearFilters")}
+                  </Button>
+                )}
+              </div>
             </form>
           </CardContent>
         </Card>
@@ -116,17 +135,22 @@ export default function Search() {
         <div className="mb-6">
           <div className="flex items-center justify-between">
             <h2 className="text-xl font-semibold text-gray-900">
-              {isLoading ? t("common.loading") : `${items?.length || 0} résultat(s)`}
+              {isLoading ? t("search.loading") : t("search.resultsCount", { count: items?.length || 0 })}
             </h2>
             <div className="flex gap-2">
               {selectedType !== "all" && (
                 <Badge variant="secondary">
-                  {t("search.type")}: {selectedType === "lost" ? t("search.itemType.lost") : t("search.itemType.found")}
+                  {t("search.typeFilter")}: {selectedType === "lost" ? t("search.itemType.lost") : t("search.itemType.found")}
                 </Badge>
               )}
               {selectedCategory !== "all" && (
                 <Badge variant="secondary">
-                  {t("search.category")}: {t(`categories.${selectedCategory}`)}
+                  {t("search.categoryFilter")}: {CATEGORIES.find(c => c.id === selectedCategory)?.name}
+                </Badge>
+              )}
+              {search && (
+                <Badge variant="secondary">
+                  {t("search.keywords")}: "{search}"
                 </Badge>
               )}
             </div>
@@ -154,18 +178,32 @@ export default function Search() {
             <div className="col-span-full text-center py-12">
               <SearchIcon className="h-12 w-12 text-gray-400 mx-auto mb-4" />
               <h3 className="text-lg font-medium text-gray-900 mb-2">
-                Aucun résultat trouvé
+                {t("search.noResults")}
               </h3>
               <p className="text-gray-600 mb-4">
-                Essayez de modifier vos critères de recherche
+                {t("search.noResultsDesc")}
               </p>
-              <Button onClick={() => {
-                setSearch("");
-                setSelectedType("all");
-                setSelectedCategory("all");
-              }}>
-                Réinitialiser les filtres
-              </Button>
+              {(search || selectedType !== "all" || selectedCategory !== "all") && (
+                <Button onClick={() => {
+                  setSearch("");
+                  setSelectedType("all");
+                  setSelectedCategory("all");
+                }}>
+                  {t("search.clearFilters")}
+                </Button>
+              )}
+              
+              {/* Search Tips */}
+              <div className="mt-8 max-w-md mx-auto">
+                <h4 className="text-sm font-medium text-gray-900 mb-3">
+                  {t("search.searchTips")}
+                </h4>
+                <ul className="text-sm text-gray-600 space-y-1">
+                  <li>• {t("search.tip1")}</li>
+                  <li>• {t("search.tip2")}</li>
+                  <li>• {t("search.tip3")}</li>
+                </ul>
+              </div>
             </div>
           )}
         </div>

@@ -102,13 +102,39 @@
     "loading": "読み込み中..."
   },
   "search": {
+    "title": "アイテム検索",
+    "subtitle": "コミュニティによって報告された紛失物と発見物の中から検索",
+    "searchPlaceholder": "アイテムを検索（例：iPhone、鍵、財布...）",
+    "searchButton": "検索",
+    "filters": "フィルター",
+    "typeFilter": "アイテムタイプ",
+    "categoryFilter": "カテゴリー",
+    "locationFilter": "場所",
+    "dateFilter": "日付",
+    "sortBy": "並べ替え",
+    "sortByDate": "日付",
+    "sortByRelevance": "関連性",
+    "sortByDistance": "距離",
+    "noResults": "結果が見つかりません",
+    "noResultsDesc": "検索条件を変更するか、フィルターを削除してください",
+    "resultsCount": "{{count}} 件の結果が見つかりました",
+    "clearFilters": "フィルターをクリア",
     "itemType": {
       "lost": "紛失",
       "found": "発見"
     },
     "all": "全て",
     "lost": "紛失",
-    "found": "発見"
+    "found": "発見",
+    "allCategories": "すべてのカテゴリー",
+    "allTypes": "すべてのタイプ",
+    "advanced": "詳細検索",
+    "keywords": "キーワード",
+    "loading": "検索中...",
+    "searchTips": "検索のヒント",
+    "tip1": "'黒いiPhone'や'トヨタの鍵'など具体的なキーワードを使用",
+    "tip2": "さまざまなバリエーションを試す：'携帯'、'電話'、'スマートフォン'",
+    "tip3": "フィルターを使用してタイプとカテゴリーで検索を絞り込む"
   },
   "hero": {
     "title": "紛失したアイテムを簡単に見つける",

@@ -102,13 +102,39 @@
     "loading": "로딩 중..."
   },
   "search": {
+    "title": "물건 검색",
+    "subtitle": "커뮤니티에서 신고된 분실물과 발견물 중에서 검색",
+    "searchPlaceholder": "물건을 검색하세요 (예: iPhone, 열쇠, 지갑...)",
+    "searchButton": "검색",
+    "filters": "필터",
+    "typeFilter": "물건 유형",
+    "categoryFilter": "카테고리",
+    "locationFilter": "위치",
+    "dateFilter": "날짜",
+    "sortBy": "정렬 기준",
+    "sortByDate": "날짜",
+    "sortByRelevance": "관련성",
+    "sortByDistance": "거리",
+    "noResults": "결과를 찾을 수 없습니다",
+    "noResultsDesc": "검색 조건을 수정하거나 일부 필터를 제거해 보세요",
+    "resultsCount": "{{count}}개의 결과를 찾았습니다",
+    "clearFilters": "필터 지우기",
     "itemType": {
       "lost": "분실",
       "found": "발견"
     },
     "all": "전체",
     "lost": "분실",
-    "found": "발견"
+    "found": "발견",
+    "allCategories": "모든 카테고리",
+    "allTypes": "모든 유형",
+    "advanced": "고급 검색",
+    "keywords": "키워드",
+    "loading": "검색 중...",
+    "searchTips": "검색 팁",
+    "tip1": "'검은색 iPhone'이나 '토요타 열쇠'와 같은 구체적인 키워드 사용",
+    "tip2": "다양한 변형을 시도해보세요: '휴대폰', '전화', '스마트폰'",
+    "tip3": "필터를 사용하여 유형과 카테고리별로 검색 범위를 좁히세요"
   },
   "hero": {
     "title": "분실된 물건을 쉽게 찾으세요",

@@ -102,13 +102,39 @@
     "loading": "加载中..."
   },
   "search": {
+    "title": "物品搜索",
+    "subtitle": "在社区报告的丢失和找到的物品中搜索",
+    "searchPlaceholder": "搜索物品（例如：iPhone、钥匙、钱包...）",
+    "searchButton": "搜索",
+    "filters": "筛选器",
+    "typeFilter": "物品类型",
+    "categoryFilter": "类别",
+    "locationFilter": "位置",
+    "dateFilter": "日期",
+    "sortBy": "排序方式",
+    "sortByDate": "日期",
+    "sortByRelevance": "相关性",
+    "sortByDistance": "距离",
+    "noResults": "未找到结果",
+    "noResultsDesc": "请尝试修改搜索条件或删除一些筛选器",
+    "resultsCount": "找到 {{count}} 个结果",
+    "clearFilters": "清除筛选器",
     "itemType": {
       "lost": "丢失",
       "found": "找到"
     },
     "all": "全部",
     "lost": "丢失",
-    "found": "找到"
+    "found": "找到",
+    "allCategories": "所有类别",
+    "allTypes": "所有类型",
+    "advanced": "高级搜索",
+    "keywords": "关键词",
+    "loading": "搜索中...",
+    "searchTips": "搜索提示",
+    "tip1": "使用具体的关键词，如'黑色iPhone'或'丰田钥匙'",
+    "tip2": "尝试不同的变体：'手机'、'电话'、'智能手机'",
+    "tip3": "使用筛选器按类型和类别精确搜索"
   },
   "hero": {
     "title": "轻松找回您丢失的物品",

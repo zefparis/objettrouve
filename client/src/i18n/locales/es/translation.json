@@ -102,13 +102,39 @@
     "loading": "Cargando..."
   },
   "search": {
+    "title": "Búsqueda de objetos",
+    "subtitle": "Busca entre los objetos perdidos y encontrados reportados por la comunidad",
+    "searchPlaceholder": "Buscar un objeto (ej: iPhone, llaves, billetera...)",
+    "searchButton": "Buscar",
+    "filters": "Filtros",
+    "typeFilter": "Tipo de objeto",
+    "categoryFilter": "Categoría",
+    "locationFilter": "Ubicación",
+    "dateFilter": "Fecha",
+    "sortBy": "Ordenar por",
+    "sortByDate": "Fecha",
+    "sortByRelevance": "Relevancia",
+    "sortByDistance": "Distancia",
+    "noResults": "No se encontraron resultados",
+    "noResultsDesc": "Intenta modificar tus criterios de búsqueda o eliminar algunos filtros",
+    "resultsCount": "{{count}} resultado(s) encontrado(s)",
+    "clearFilters": "Limpiar filtros",
     "itemType": {
       "lost": "Perdido",
       "found": "Encontrado"
     },
     "all": "Todos",
     "lost": "Perdidos",
-    "found": "Encontrados"
+    "found": "Encontrados",
+    "allCategories": "Todas las categorías",
+    "allTypes": "Todos los tipos",
+    "advanced": "Búsqueda avanzada",
+    "keywords": "Palabras clave",
+    "loading": "Buscando...",
+    "searchTips": "Consejos de búsqueda",
+    "tip1": "Usa palabras clave específicas como 'iPhone negro' o 'llaves Toyota'",
+    "tip2": "Prueba diferentes variantes: 'móvil', 'teléfono', 'smartphone'",
+    "tip3": "Usa filtros para afinar tu búsqueda por tipo y categoría"
   },
   "hero": {
     "title": "Encuentra tus objetos perdidos fácilmente",
