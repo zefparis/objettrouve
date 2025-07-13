@@ -148,5 +148,24 @@
       "title": "Connettiti",
       "description": "Contatta direttamente i proprietari tramite il nostro sistema di messaggi"
     }
+  },
+  "testimonials": {
+    "title": "Testimonianze",
+    "subtitle": "Cosa dicono i nostri utenti",
+    "testimonial1": {
+      "name": "Maria Rossi",
+      "location": "Roma, Italia",
+      "content": "Ho trovato il mio telefono perso in soli 2 giorni! La comunità è incredibilmente utile e attiva."
+    },
+    "testimonial2": {
+      "name": "Marco Bianchi",
+      "location": "Milano, Italia",
+      "content": "Interfaccia semplice ed efficace. Sono riuscito ad aiutare qualcuno a trovare le sue chiavi ed è stata una sensazione fantastica."
+    },
+    "testimonial3": {
+      "name": "Anna Verdi",
+      "location": "Napoli, Italia",
+      "content": "Il sistema di messaggistica integrato è perfetto per comunicare in sicurezza. Consiglio vivamente questa piattaforma."
+    }
   }
 }

@@ -148,5 +148,24 @@
       "title": "Verbinden",
       "description": "Kontaktieren Sie Eigentümer direkt über unser Nachrichtensystem"
     }
+  },
+  "testimonials": {
+    "title": "Erfahrungsberichte",
+    "subtitle": "Was unsere Nutzer sagen",
+    "testimonial1": {
+      "name": "Maria Müller",
+      "location": "Berlin, Deutschland",
+      "content": "Ich habe mein verlorenes Handy in nur 2 Tagen gefunden! Die Community ist unglaublich hilfsbereit und aktiv."
+    },
+    "testimonial2": {
+      "name": "Thomas Schmidt",
+      "location": "München, Deutschland",
+      "content": "Einfache und effektive Benutzeroberfläche. Ich konnte jemandem helfen, seine Schlüssel zu finden, und es war ein tolles Gefühl."
+    },
+    "testimonial3": {
+      "name": "Anna Weber",
+      "location": "Hamburg, Deutschland",
+      "content": "Das integrierte Nachrichtensystem ist perfekt für sichere Kommunikation. Ich empfehle diese Plattform sehr."
+    }
   }
 }

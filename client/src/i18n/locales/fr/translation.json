@@ -148,5 +148,24 @@
       "title": "Connectez-vous",
       "description": "Contactez directement les propriétaires via notre système de messagerie"
     }
+  },
+  "testimonials": {
+    "title": "Témoignages",
+    "subtitle": "Ce que disent nos utilisateurs",
+    "testimonial1": {
+      "name": "Marie Dubois",
+      "location": "Paris, France",
+      "content": "J'ai retrouvé mon téléphone perdu grâce à cette plateforme en seulement 2 jours ! La communauté est vraiment active et bienveillante."
+    },
+    "testimonial2": {
+      "name": "Antoine Martin",
+      "location": "Lyon, France",
+      "content": "Interface simple et efficace. J'ai pu aider quelqu'un à retrouver ses clés et c'est un sentiment formidable de rendre service."
+    },
+    "testimonial3": {
+      "name": "Sophie Leroy",
+      "location": "Marseille, France",
+      "content": "Le système de messagerie intégré est parfait pour échanger en toute sécurité. Je recommande vivement cette plateforme."
+    }
   }
 }

@@ -148,5 +148,24 @@
       "title": "Conecta",
       "description": "Contacta directamente con los propietarios a través de nuestro sistema de mensajería"
     }
+  },
+  "testimonials": {
+    "title": "Testimonios",
+    "subtitle": "Lo que dicen nuestros usuarios",
+    "testimonial1": {
+      "name": "María García",
+      "location": "Madrid, España",
+      "content": "¡Encontré mi teléfono perdido en solo 2 días! La comunidad es increíblemente útil y activa."
+    },
+    "testimonial2": {
+      "name": "Carlos Rodríguez",
+      "location": "Barcelona, España",
+      "content": "Interfaz simple y efectiva. Pude ayudar a alguien a encontrar sus llaves y fue una sensación increíble."
+    },
+    "testimonial3": {
+      "name": "Ana López",
+      "location": "Sevilla, España",
+      "content": "El sistema de mensajería integrado es perfecto para comunicarse de forma segura. Recomiendo mucho esta plataforma."
+    }
   }
 }

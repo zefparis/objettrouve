@@ -148,5 +148,24 @@
       "title": "Connect",
       "description": "Contact owners directly through our messaging system"
     }
+  },
+  "testimonials": {
+    "title": "Testimonials",
+    "subtitle": "What our users say",
+    "testimonial1": {
+      "name": "Sarah Johnson",
+      "location": "New York, USA",
+      "content": "Found my lost wallet in just 2 days! The community is incredibly helpful and responsive."
+    },
+    "testimonial2": {
+      "name": "Michael Chen",
+      "location": "San Francisco, USA",
+      "content": "Simple and effective interface. I was able to help someone find their keys and it felt amazing to give back."
+    },
+    "testimonial3": {
+      "name": "Emily Davis",
+      "location": "London, UK",
+      "content": "The integrated messaging system is perfect for safe communication. I highly recommend this platform."
+    }
   }
 }

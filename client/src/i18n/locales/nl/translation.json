@@ -148,5 +148,24 @@
       "title": "Verbind",
       "description": "Neem direct contact op met eigenaren via ons berichtensysteem"
     }
+  },
+  "testimonials": {
+    "title": "Getuigenissen",
+    "subtitle": "Wat onze gebruikers zeggen",
+    "testimonial1": {
+      "name": "Maria van der Berg",
+      "location": "Amsterdam, Nederland",
+      "content": "Ik vond mijn verloren telefoon in slechts 2 dagen! De gemeenschap is ongelooflijk behulpzaam en actief."
+    },
+    "testimonial2": {
+      "name": "Jan de Vries",
+      "location": "Rotterdam, Nederland",
+      "content": "Eenvoudige en effectieve interface. Ik kon iemand helpen zijn sleutels te vinden en het voelde geweldig om te helpen."
+    },
+    "testimonial3": {
+      "name": "Anna Bakker",
+      "location": "Utrecht, Nederland",
+      "content": "Het geïntegreerde berichtensysteem is perfect voor veilige communicatie. Ik beveel dit platform ten zeerste aan."
+    }
   }
 }

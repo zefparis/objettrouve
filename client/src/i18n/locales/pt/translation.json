@@ -148,5 +148,24 @@
       "title": "Conecte-se",
       "description": "Contate proprietários diretamente através do nosso sistema de mensagens"
     }
+  },
+  "testimonials": {
+    "title": "Depoimentos",
+    "subtitle": "O que nossos usuários dizem",
+    "testimonial1": {
+      "name": "Maria Silva",
+      "location": "São Paulo, Brasil",
+      "content": "Encontrei meu celular perdido em apenas 2 dias! A comunidade é incrivelmente útil e ativa."
+    },
+    "testimonial2": {
+      "name": "João Santos",
+      "location": "Rio de Janeiro, Brasil",
+      "content": "Interface simples e eficaz. Consegui ajudar alguém a encontrar suas chaves e foi uma sensação incrível."
+    },
+    "testimonial3": {
+      "name": "Ana Costa",
+      "location": "Belo Horizonte, Brasil",
+      "content": "O sistema de mensagens integrado é perfeito para comunicação segura. Recomendo muito esta plataforma."
+    }
   }
 }

@@ -148,5 +148,24 @@
       "title": "联系",
       "description": "通过我们的消息系统直接联系物主"
     }
+  },
+  "testimonials": {
+    "title": "用户评价",
+    "subtitle": "用户怎么说",
+    "testimonial1": {
+      "name": "李晓明",
+      "location": "北京, 中国",
+      "content": "我在短短2天内找到了我丢失的手机！社区非常有帮助且活跃。"
+    },
+    "testimonial2": {
+      "name": "王美丽",
+      "location": "上海, 中国",
+      "content": "界面简单有效。我帮助别人找到了钥匙，感觉很棒。"
+    },
+    "testimonial3": {
+      "name": "张强",
+      "location": "广州, 中国",
+      "content": "集成的消息系统非常适合安全通信。我强烈推荐这个平台。"
+    }
   }
 }
