@@ -91,10 +91,74 @@
     "blockUser": "Bloquear usuário"
   },
   "dashboard": {
+    "title": "Painel de Controle",
+    "welcome": "Bem-vindo, {{name}}!",
+    "overview": "Visão Geral",
+    "myItems": "Meus Itens",
     "conversations": "Conversas",
+    "statistics": "Estatísticas",
+    "recentActivity": "Atividade Recente",
+    "quickActions": "Ações Rápidas",
+    "publishItem": "Publicar Item",
+    "searchItems": "Buscar Itens",
+    "viewMap": "Ver Mapa",
+    "manageAccount": "Gerenciar Conta",
     "noConversations": "Nenhuma conversa",
     "noConversationsDesc": "Você ainda não tem conversas",
-    "active": "ativas"
+    "active": "ativas",
+    "totalItems": "Total de Itens",
+    "lostItems": "Itens Perdidos",
+    "foundItems": "Itens Encontrados",
+    "activeConversations": "Conversas Ativas",
+    "viewsThisMonth": "Visualizações Este Mês",
+    "successRate": "Taxa de Sucesso",
+    "noItems": "Sem itens",
+    "noItemsDesc": "Você ainda não publicou itens",
+    "createFirst": "Criar seu primeiro item",
+    "itemStatus": {
+      "active": "Ativo",
+      "resolved": "Resolvido",
+      "expired": "Expirado"
+    },
+    "itemActions": {
+      "edit": "Editar",
+      "delete": "Excluir",
+      "view": "Ver",
+      "boost": "Impulsionar",
+      "mark_resolved": "Marcar como Resolvido"
+    },
+    "tabs": {
+      "overview": "Visão Geral",
+      "items": "Meus Itens",
+      "conversations": "Mensagens",
+      "statistics": "Estatísticas"
+    },
+    "stats": {
+      "title": "Suas Estatísticas",
+      "thisMonth": "Este Mês",
+      "lastMonth": "Mês Anterior",
+      "growth": "Crescimento",
+      "views": "visualizações",
+      "messages": "mensagens",
+      "success": "sucesso"
+    },
+    "filters": {
+      "all": "Todos",
+      "active": "Ativos",
+      "resolved": "Resolvidos",
+      "expired": "Expirados"
+    },
+    "sort": {
+      "newest": "Mais Recente",
+      "oldest": "Mais Antigo",
+      "most_viewed": "Mais Visualizados",
+      "alphabetical": "Alfabético"
+    },
+    "confirmDelete": "Tem certeza que deseja excluir este item?",
+    "deleteSuccess": "Item excluído com sucesso",
+    "deleteError": "Erro ao excluir item",
+    "markResolvedSuccess": "Item marcado como resolvido",
+    "markResolvedError": "Erro ao atualizar item"
   },
   "common": {
     "error": "Erro",

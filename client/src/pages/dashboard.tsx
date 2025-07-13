@@ -174,10 +174,10 @@ export default function Dashboard() {
         <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-8">
           <div className="mb-4 md:mb-0">
             <h1 className="text-4xl font-bold text-gray-900 mb-2">
-              {t("dashboard.welcome")}, {user?.firstName || user?.email?.split('@')[0] || t("dashboard.user")}!
+              {t("dashboard.welcome", { name: user?.firstName || user?.email?.split('@')[0] || "Utilisateur" })}
             </h1>
             <p className="text-lg text-gray-600">
-              {t("dashboard.subtitle")}
+              {t("dashboard.overview")}
             </p>
           </div>
           <div className="flex gap-3">
@@ -187,14 +187,14 @@ export default function Dashboard() {
               className="border-red-200 text-red-700 hover:bg-red-50"
             >
               <AlertCircle className="h-4 w-4 mr-2" />
-              {t("dashboard.reportLost")}
+              {t("dashboard.publishItem")}
             </Button>
             <Button 
-              onClick={() => window.location.href = "/publish?type=found"}
-              className="bg-green-600 hover:bg-green-700"
+              onClick={() => window.location.href = "/search"}
+              className="bg-blue-600 hover:bg-blue-700"
             >
-              <CheckCircle className="h-4 w-4 mr-2" />
-              {t("dashboard.reportFound")}
+              <Search className="h-4 w-4 mr-2" />
+              {t("dashboard.searchItems")}
             </Button>
           </div>
         </div>
@@ -209,7 +209,7 @@ export default function Dashboard() {
                   <p className="text-3xl font-bold text-red-600">
                     {lostItems.length}
                   </p>
-                  <p className="text-xs text-gray-500 mt-1">{t("dashboard.yourItems")}</p>
+                  <p className="text-xs text-gray-500 mt-1">{t("dashboard.myItems")}</p>
                 </div>
                 <div className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center">
                   <AlertCircle className="h-6 w-6 text-red-600" />
@@ -226,7 +226,7 @@ export default function Dashboard() {
                   <p className="text-3xl font-bold text-green-600">
                     {foundItems.length}
                   </p>
-                  <p className="text-xs text-gray-500 mt-1">{t("dashboard.yourItems")}</p>
+                  <p className="text-xs text-gray-500 mt-1">{t("dashboard.myItems")}</p>
                 </div>
                 <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
                   <CheckCircle className="h-6 w-6 text-green-600" />
@@ -256,11 +256,11 @@ export default function Dashboard() {
             <CardContent className="p-6">
               <div className="flex items-center justify-between">
                 <div>
-                  <p className="text-sm font-medium text-gray-600 mb-1">{t("dashboard.totalViews")}</p>
+                  <p className="text-sm font-medium text-gray-600 mb-1">{t("dashboard.viewsThisMonth")}</p>
                   <p className="text-3xl font-bold text-purple-600">
                     {items?.reduce((sum: number, item: any) => sum + (item.views || 0), 0) || 0}
                   </p>
-                  <p className="text-xs text-gray-500 mt-1">{t("dashboard.allItems")}</p>
+                  <p className="text-xs text-gray-500 mt-1">{t("dashboard.stats.views")}</p>
                 </div>
                 <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center">
                   <Eye className="h-6 w-6 text-purple-600" />
@@ -275,15 +275,15 @@ export default function Dashboard() {
           <TabsList className="grid w-full grid-cols-3 bg-white shadow-sm">
             <TabsTrigger value="items" className="flex items-center gap-2">
               <Package className="h-4 w-4" />
-              {t("dashboard.myItems")}
+              {t("dashboard.tabs.items")}
             </TabsTrigger>
             <TabsTrigger value="conversations" className="flex items-center gap-2">
               <MessageSquare className="h-4 w-4" />
-              {t("dashboard.conversations")}
+              {t("dashboard.tabs.conversations")}
             </TabsTrigger>
             <TabsTrigger value="activity" className="flex items-center gap-2">
               <Activity className="h-4 w-4" />
-              {t("dashboard.activity")}
+              {t("dashboard.recentActivity")}
             </TabsTrigger>
           </TabsList>
 
@@ -346,7 +346,7 @@ export default function Dashboard() {
                             </div>
                             <div className="flex items-center gap-1">
                               <Eye className="h-4 w-4" />
-                              {item.views || 0} {t("dashboard.views")}
+                              {item.views || 0} {t("dashboard.stats.views")}
                             </div>
                           </div>
                         </div>
@@ -388,7 +388,7 @@ export default function Dashboard() {
                     </p>
                     <Button onClick={() => window.location.href = "/publish"}>
                       <Plus className="h-4 w-4 mr-2" />
-                      {t("dashboard.publishFirstAd")}
+                      {t("dashboard.createFirst")}
                     </Button>
                   </div>
                 )}
@@ -476,7 +476,7 @@ export default function Dashboard() {
                         </div>
                         <div className="flex-1 min-w-0">
                           <p className="text-sm font-medium text-gray-900">
-                            {item.type === "lost" ? t("dashboard.lostItemActivity") : t("dashboard.foundItemActivity")}
+                            {item.type === "lost" ? t("dashboard.lostItems") : t("dashboard.foundItems")}
                           </p>
                           <p className="text-sm text-gray-500 truncate">
                             {item.title}
@@ -491,10 +491,10 @@ export default function Dashboard() {
                     <div className="text-center py-12">
                       <Activity className="h-16 w-16 text-gray-400 mx-auto mb-4" />
                       <h3 className="text-lg font-medium text-gray-900 mb-2">
-                        {t("dashboard.noActivity")}
+                        {t("dashboard.recentActivity")}
                       </h3>
                       <p className="text-gray-500">
-                        {t("dashboard.noActivityDesc")}
+                        {t("dashboard.noItemsDesc")}
                       </p>
                     </div>
                   )}

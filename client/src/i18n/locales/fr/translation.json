@@ -91,10 +91,74 @@
     "blockUser": "Bloquer l'utilisateur"
   },
   "dashboard": {
+    "title": "Tableau de bord",
+    "welcome": "Bienvenue, {{name}}!",
+    "overview": "Vue d'ensemble",
+    "myItems": "Mes objets",
     "conversations": "Conversations",
+    "statistics": "Statistiques",
+    "recentActivity": "Activité récente",
+    "quickActions": "Actions rapides",
+    "publishItem": "Publier un objet",
+    "searchItems": "Rechercher des objets",
+    "viewMap": "Voir la carte",
+    "manageAccount": "Gérer le compte",
     "noConversations": "Aucune conversation",
     "noConversationsDesc": "Vous n'avez pas encore de conversations",
-    "active": "actives"
+    "active": "actives",
+    "totalItems": "Objets total",
+    "lostItems": "Objets perdus",
+    "foundItems": "Objets trouvés",
+    "activeConversations": "Conversations actives",
+    "viewsThisMonth": "Vues ce mois",
+    "successRate": "Taux de réussite",
+    "noItems": "Aucun objet",
+    "noItemsDesc": "Vous n'avez pas encore publié d'objets",
+    "createFirst": "Créer votre premier objet",
+    "itemStatus": {
+      "active": "Actif",
+      "resolved": "Résolu",
+      "expired": "Expiré"
+    },
+    "itemActions": {
+      "edit": "Modifier",
+      "delete": "Supprimer",
+      "view": "Voir",
+      "boost": "Booster",
+      "mark_resolved": "Marquer comme résolu"
+    },
+    "tabs": {
+      "overview": "Vue d'ensemble",
+      "items": "Mes objets",
+      "conversations": "Messages",
+      "statistics": "Statistiques"
+    },
+    "stats": {
+      "title": "Vos statistiques",
+      "thisMonth": "Ce mois-ci",
+      "lastMonth": "Le mois dernier",
+      "growth": "Croissance",
+      "views": "vues",
+      "messages": "messages",
+      "success": "succès"
+    },
+    "filters": {
+      "all": "Tous",
+      "active": "Actifs",
+      "resolved": "Résolus",
+      "expired": "Expirés"
+    },
+    "sort": {
+      "newest": "Plus récent",
+      "oldest": "Plus ancien",
+      "most_viewed": "Plus vus",
+      "alphabetical": "Alphabétique"
+    },
+    "confirmDelete": "Êtes-vous sûr de vouloir supprimer cet objet ?",
+    "deleteSuccess": "Objet supprimé avec succès",
+    "deleteError": "Erreur lors de la suppression",
+    "markResolvedSuccess": "Objet marqué comme résolu",
+    "markResolvedError": "Erreur lors de la mise à jour"
   },
   "common": {
     "error": "Erreur",

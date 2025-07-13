@@ -91,10 +91,74 @@
     "blockUser": "Benutzer blockieren"
   },
   "dashboard": {
+    "title": "Dashboard",
+    "welcome": "Willkommen, {{name}}!",
+    "overview": "Übersicht",
+    "myItems": "Meine Gegenstände",
     "conversations": "Unterhaltungen",
+    "statistics": "Statistiken",
+    "recentActivity": "Neueste Aktivität",
+    "quickActions": "Schnellaktionen",
+    "publishItem": "Gegenstand veröffentlichen",
+    "searchItems": "Gegenstände suchen",
+    "viewMap": "Karte anzeigen",
+    "manageAccount": "Konto verwalten",
     "noConversations": "Keine Unterhaltungen",
     "noConversationsDesc": "Sie haben noch keine Unterhaltungen",
-    "active": "aktiv"
+    "active": "aktiv",
+    "totalItems": "Gesamt Gegenstände",
+    "lostItems": "Verlorene Gegenstände",
+    "foundItems": "Gefundene Gegenstände",
+    "activeConversations": "Aktive Unterhaltungen",
+    "viewsThisMonth": "Aufrufe diesen Monat",
+    "successRate": "Erfolgsrate",
+    "noItems": "Keine Gegenstände",
+    "noItemsDesc": "Sie haben noch keine Gegenstände veröffentlicht",
+    "createFirst": "Erstellen Sie Ihren ersten Gegenstand",
+    "itemStatus": {
+      "active": "Aktiv",
+      "resolved": "Gelöst",
+      "expired": "Abgelaufen"
+    },
+    "itemActions": {
+      "edit": "Bearbeiten",
+      "delete": "Löschen",
+      "view": "Anzeigen",
+      "boost": "Verstärken",
+      "mark_resolved": "Als gelöst markieren"
+    },
+    "tabs": {
+      "overview": "Übersicht",
+      "items": "Meine Gegenstände",
+      "conversations": "Nachrichten",
+      "statistics": "Statistiken"
+    },
+    "stats": {
+      "title": "Ihre Statistiken",
+      "thisMonth": "Dieser Monat",
+      "lastMonth": "Letzter Monat",
+      "growth": "Wachstum",
+      "views": "Aufrufe",
+      "messages": "Nachrichten",
+      "success": "Erfolg"
+    },
+    "filters": {
+      "all": "Alle",
+      "active": "Aktiv",
+      "resolved": "Gelöst",
+      "expired": "Abgelaufen"
+    },
+    "sort": {
+      "newest": "Neueste",
+      "oldest": "Älteste",
+      "most_viewed": "Meistangesehen",
+      "alphabetical": "Alphabetisch"
+    },
+    "confirmDelete": "Sind Sie sicher, dass Sie diesen Gegenstand löschen möchten?",
+    "deleteSuccess": "Gegenstand erfolgreich gelöscht",
+    "deleteError": "Fehler beim Löschen des Gegenstands",
+    "markResolvedSuccess": "Gegenstand als gelöst markiert",
+    "markResolvedError": "Fehler beim Aktualisieren des Gegenstands"
   },
   "common": {
     "error": "Fehler",

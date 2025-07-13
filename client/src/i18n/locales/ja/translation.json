@@ -91,10 +91,74 @@
     "blockUser": "ユーザーをブロック"
   },
   "dashboard": {
+    "title": "ダッシュボード",
+    "welcome": "{{name}}さん、ようこそ！",
+    "overview": "概要",
+    "myItems": "マイアイテム",
     "conversations": "会話",
+    "statistics": "統計",
+    "recentActivity": "最近の活動",
+    "quickActions": "クイックアクション",
+    "publishItem": "アイテムを投稿",
+    "searchItems": "アイテムを検索",
+    "viewMap": "地図を表示",
+    "manageAccount": "アカウント管理",
     "noConversations": "会話がありません",
     "noConversationsDesc": "まだ会話がありません",
-    "active": "アクティブ"
+    "active": "アクティブ",
+    "totalItems": "アイテム合計",
+    "lostItems": "紛失アイテム",
+    "foundItems": "発見アイテム",
+    "activeConversations": "アクティブな会話",
+    "viewsThisMonth": "今月の閲覧数",
+    "successRate": "成功率",
+    "noItems": "アイテムがありません",
+    "noItemsDesc": "まだアイテムを投稿していません",
+    "createFirst": "最初のアイテムを作成",
+    "itemStatus": {
+      "active": "アクティブ",
+      "resolved": "解決済み",
+      "expired": "期限切れ"
+    },
+    "itemActions": {
+      "edit": "編集",
+      "delete": "削除",
+      "view": "表示",
+      "boost": "ブースト",
+      "mark_resolved": "解決済みにマーク"
+    },
+    "tabs": {
+      "overview": "概要",
+      "items": "マイアイテム",
+      "conversations": "メッセージ",
+      "statistics": "統計"
+    },
+    "stats": {
+      "title": "あなたの統計",
+      "thisMonth": "今月",
+      "lastMonth": "先月",
+      "growth": "成長",
+      "views": "閲覧数",
+      "messages": "メッセージ",
+      "success": "成功"
+    },
+    "filters": {
+      "all": "すべて",
+      "active": "アクティブ",
+      "resolved": "解決済み",
+      "expired": "期限切れ"
+    },
+    "sort": {
+      "newest": "最新",
+      "oldest": "最古",
+      "most_viewed": "最多閲覧",
+      "alphabetical": "アルファベット順"
+    },
+    "confirmDelete": "このアイテムを削除してよろしいですか？",
+    "deleteSuccess": "アイテムが正常に削除されました",
+    "deleteError": "アイテムの削除中にエラーが発生しました",
+    "markResolvedSuccess": "アイテムが解決済みにマークされました",
+    "markResolvedError": "アイテムの更新中にエラーが発生しました"
   },
   "common": {
     "error": "エラー",

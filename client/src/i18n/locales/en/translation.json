@@ -91,10 +91,74 @@
     "blockUser": "Block user"
   },
   "dashboard": {
+    "title": "Dashboard",
+    "welcome": "Welcome, {{name}}!",
+    "overview": "Overview",
+    "myItems": "My Items",
     "conversations": "Conversations",
+    "statistics": "Statistics",
+    "recentActivity": "Recent Activity",
+    "quickActions": "Quick Actions",
+    "publishItem": "Publish Item",
+    "searchItems": "Search Items",
+    "viewMap": "View Map",
+    "manageAccount": "Manage Account",
     "noConversations": "No conversations",
     "noConversationsDesc": "You don't have any conversations yet",
-    "active": "active"
+    "active": "active",
+    "totalItems": "Total Items",
+    "lostItems": "Lost Items",
+    "foundItems": "Found Items",
+    "activeConversations": "Active Conversations",
+    "viewsThisMonth": "Views This Month",
+    "successRate": "Success Rate",
+    "noItems": "No items",
+    "noItemsDesc": "You haven't published any items yet",
+    "createFirst": "Create your first item",
+    "itemStatus": {
+      "active": "Active",
+      "resolved": "Resolved",
+      "expired": "Expired"
+    },
+    "itemActions": {
+      "edit": "Edit",
+      "delete": "Delete",
+      "view": "View",
+      "boost": "Boost",
+      "mark_resolved": "Mark as Resolved"
+    },
+    "tabs": {
+      "overview": "Overview",
+      "items": "My Items",
+      "conversations": "Messages",
+      "statistics": "Statistics"
+    },
+    "stats": {
+      "title": "Your Statistics",
+      "thisMonth": "This Month",
+      "lastMonth": "Last Month",
+      "growth": "Growth",
+      "views": "views",
+      "messages": "messages",
+      "success": "success"
+    },
+    "filters": {
+      "all": "All",
+      "active": "Active",
+      "resolved": "Resolved",
+      "expired": "Expired"
+    },
+    "sort": {
+      "newest": "Newest",
+      "oldest": "Oldest",
+      "most_viewed": "Most Viewed",
+      "alphabetical": "Alphabetical"
+    },
+    "confirmDelete": "Are you sure you want to delete this item?",
+    "deleteSuccess": "Item deleted successfully",
+    "deleteError": "Error deleting item",
+    "markResolvedSuccess": "Item marked as resolved",
+    "markResolvedError": "Error updating item"
   },
   "common": {
     "error": "Error",

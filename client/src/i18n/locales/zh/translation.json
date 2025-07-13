@@ -91,10 +91,74 @@
     "blockUser": "拉黑用户"
   },
   "dashboard": {
+    "title": "仪表板",
+    "welcome": "欢迎，{{name}}！",
+    "overview": "概览",
+    "myItems": "我的物品",
     "conversations": "对话",
+    "statistics": "统计",
+    "recentActivity": "最近活动",
+    "quickActions": "快速操作",
+    "publishItem": "发布物品",
+    "searchItems": "搜索物品",
+    "viewMap": "查看地图",
+    "manageAccount": "管理账户",
     "noConversations": "无对话",
     "noConversationsDesc": "您还没有对话",
-    "active": "活跃"
+    "active": "活跃",
+    "totalItems": "总物品",
+    "lostItems": "丢失物品",
+    "foundItems": "找到物品",
+    "activeConversations": "活跃对话",
+    "viewsThisMonth": "本月浏览",
+    "successRate": "成功率",
+    "noItems": "没有物品",
+    "noItemsDesc": "您还没有发布物品",
+    "createFirst": "创建您的第一个物品",
+    "itemStatus": {
+      "active": "活跃",
+      "resolved": "已解决",
+      "expired": "已过期"
+    },
+    "itemActions": {
+      "edit": "编辑",
+      "delete": "删除",
+      "view": "查看",
+      "boost": "推广",
+      "mark_resolved": "标记为已解决"
+    },
+    "tabs": {
+      "overview": "概览",
+      "items": "我的物品",
+      "conversations": "消息",
+      "statistics": "统计"
+    },
+    "stats": {
+      "title": "您的统计",
+      "thisMonth": "本月",
+      "lastMonth": "上月",
+      "growth": "增长",
+      "views": "浏览",
+      "messages": "消息",
+      "success": "成功"
+    },
+    "filters": {
+      "all": "全部",
+      "active": "活跃",
+      "resolved": "已解决",
+      "expired": "已过期"
+    },
+    "sort": {
+      "newest": "最新",
+      "oldest": "最旧",
+      "most_viewed": "最多浏览",
+      "alphabetical": "按字母顺序"
+    },
+    "confirmDelete": "您确定要删除此物品吗？",
+    "deleteSuccess": "物品删除成功",
+    "deleteError": "删除物品时出错",
+    "markResolvedSuccess": "物品标记为已解决",
+    "markResolvedError": "更新物品时出错"
   },
   "common": {
     "error": "错误",

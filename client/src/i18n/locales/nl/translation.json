@@ -91,10 +91,74 @@
     "blockUser": "Gebruiker blokkeren"
   },
   "dashboard": {
+    "title": "Dashboard",
+    "welcome": "Welkom, {{name}}!",
+    "overview": "Overzicht",
+    "myItems": "Mijn Voorwerpen",
     "conversations": "Gesprekken",
+    "statistics": "Statistieken",
+    "recentActivity": "Recente Activiteit",
+    "quickActions": "Snelle Acties",
+    "publishItem": "Voorwerp Publiceren",
+    "searchItems": "Voorwerpen Zoeken",
+    "viewMap": "Kaart Bekijken",
+    "manageAccount": "Account Beheren",
     "noConversations": "Geen gesprekken",
     "noConversationsDesc": "U heeft nog geen gesprekken",
-    "active": "actief"
+    "active": "actief",
+    "totalItems": "Totaal Voorwerpen",
+    "lostItems": "Verloren Voorwerpen",
+    "foundItems": "Gevonden Voorwerpen",
+    "activeConversations": "Actieve Gesprekken",
+    "viewsThisMonth": "Weergaven Deze Maand",
+    "successRate": "Succespercentage",
+    "noItems": "Geen voorwerpen",
+    "noItemsDesc": "U heeft nog geen voorwerpen gepubliceerd",
+    "createFirst": "Maak uw eerste voorwerp",
+    "itemStatus": {
+      "active": "Actief",
+      "resolved": "Opgelost",
+      "expired": "Verlopen"
+    },
+    "itemActions": {
+      "edit": "Bewerken",
+      "delete": "Verwijderen",
+      "view": "Bekijken",
+      "boost": "Boost",
+      "mark_resolved": "Markeren als Opgelost"
+    },
+    "tabs": {
+      "overview": "Overzicht",
+      "items": "Mijn Voorwerpen",
+      "conversations": "Berichten",
+      "statistics": "Statistieken"
+    },
+    "stats": {
+      "title": "Uw Statistieken",
+      "thisMonth": "Deze Maand",
+      "lastMonth": "Vorige Maand",
+      "growth": "Groei",
+      "views": "weergaven",
+      "messages": "berichten",
+      "success": "succes"
+    },
+    "filters": {
+      "all": "Alle",
+      "active": "Actief",
+      "resolved": "Opgelost",
+      "expired": "Verlopen"
+    },
+    "sort": {
+      "newest": "Nieuwste",
+      "oldest": "Oudste",
+      "most_viewed": "Meest Bekeken",
+      "alphabetical": "Alfabetisch"
+    },
+    "confirmDelete": "Weet u zeker dat u dit voorwerp wilt verwijderen?",
+    "deleteSuccess": "Voorwerp succesvol verwijderd",
+    "deleteError": "Fout bij verwijderen van voorwerp",
+    "markResolvedSuccess": "Voorwerp gemarkeerd als opgelost",
+    "markResolvedError": "Fout bij bijwerken van voorwerp"
   },
   "common": {
     "error": "Fout",

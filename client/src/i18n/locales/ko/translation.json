@@ -91,10 +91,74 @@
     "blockUser": "사용자 차단"
   },
   "dashboard": {
+    "title": "대시보드",
+    "welcome": "{{name}}님, 환영합니다!",
+    "overview": "개요",
+    "myItems": "내 물품",
     "conversations": "대화",
+    "statistics": "통계",
+    "recentActivity": "최근 활동",
+    "quickActions": "빠른 작업",
+    "publishItem": "물품 게시",
+    "searchItems": "물품 검색",
+    "viewMap": "지도 보기",
+    "manageAccount": "계정 관리",
     "noConversations": "대화 없음",
     "noConversationsDesc": "아직 대화가 없습니다",
-    "active": "활성"
+    "active": "활성",
+    "totalItems": "전체 물품",
+    "lostItems": "분실 물품",
+    "foundItems": "발견 물품",
+    "activeConversations": "활성 대화",
+    "viewsThisMonth": "이번 달 조회수",
+    "successRate": "성공률",
+    "noItems": "물품 없음",
+    "noItemsDesc": "아직 물품을 게시하지 않았습니다",
+    "createFirst": "첫 번째 물품 만들기",
+    "itemStatus": {
+      "active": "활성",
+      "resolved": "해결됨",
+      "expired": "만료됨"
+    },
+    "itemActions": {
+      "edit": "수정",
+      "delete": "삭제",
+      "view": "보기",
+      "boost": "부스트",
+      "mark_resolved": "해결됨으로 표시"
+    },
+    "tabs": {
+      "overview": "개요",
+      "items": "내 물품",
+      "conversations": "메시지",
+      "statistics": "통계"
+    },
+    "stats": {
+      "title": "당신의 통계",
+      "thisMonth": "이번 달",
+      "lastMonth": "지난 달",
+      "growth": "성장",
+      "views": "조회수",
+      "messages": "메시지",
+      "success": "성공"
+    },
+    "filters": {
+      "all": "모두",
+      "active": "활성",
+      "resolved": "해결됨",
+      "expired": "만료됨"
+    },
+    "sort": {
+      "newest": "최신",
+      "oldest": "오래된",
+      "most_viewed": "가장 많이 본",
+      "alphabetical": "알파벳순"
+    },
+    "confirmDelete": "이 물품을 삭제하시겠습니까?",
+    "deleteSuccess": "물품이 성공적으로 삭제되었습니다",
+    "deleteError": "물품 삭제 중 오류가 발생했습니다",
+    "markResolvedSuccess": "물품이 해결됨으로 표시되었습니다",
+    "markResolvedError": "물품 업데이트 중 오류가 발생했습니다"
   },
   "common": {
     "error": "오류",
