@@ -124,9 +124,29 @@
   },
   "home": {
     "recentItems": "Neueste Gegenstände",
-    "recentItemsDesc": "Entdecken Sie die neuesten von der Community gemeldeten Gegenstände"
+    "recentItemsDesc": "Entdecken Sie die neuesten von der Community gemeldeten Gegenstände",
+    "viewAllItems": "Alle Gegenstände anzeigen"
   },
   "nav": {
     "map": "Karte"
+  },
+  "common": {
+    "viewDetails": "Details anzeigen"
+  },
+  "howItWorks": {
+    "title": "Wie es funktioniert",
+    "subtitle": "Finden oder melden Sie einen verlorenen Gegenstand in 3 einfachen Schritten",
+    "step1": {
+      "title": "Veröffentlichen Sie Ihre Anzeige",
+      "description": "Beschreiben Sie Ihren verlorenen oder gefundenen Gegenstand mit Details und Fotos"
+    },
+    "step2": {
+      "title": "Suchen und durchsuchen",
+      "description": "Erkunden Sie Anzeigen und verwenden Sie unsere erweiterten Suchfilter"
+    },
+    "step3": {
+      "title": "Verbinden",
+      "description": "Kontaktieren Sie Eigentümer direkt über unser Nachrichtensystem"
+    }
   }
 }

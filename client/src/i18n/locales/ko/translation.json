@@ -124,9 +124,29 @@
   },
   "home": {
     "recentItems": "최근 물건",
-    "recentItemsDesc": "커뮤니티에서 신고한 최신 물건들을 발견하세요"
+    "recentItemsDesc": "커뮤니티에서 신고한 최신 물건들을 발견하세요",
+    "viewAllItems": "모든 항목 보기"
   },
   "nav": {
     "map": "지도"
+  },
+  "common": {
+    "viewDetails": "세부 정보 보기"
+  },
+  "howItWorks": {
+    "title": "사용 방법",
+    "subtitle": "3가지 간단한 단계로 분실된 물건을 찾거나 신고하세요",
+    "step1": {
+      "title": "게시물 작성",
+      "description": "분실되거나 발견된 물건을 세부사항과 사진으로 설명하세요"
+    },
+    "step2": {
+      "title": "검색 및 탐색",
+      "description": "게시물을 탐색하고 고급 검색 필터를 사용하세요"
+    },
+    "step3": {
+      "title": "연결",
+      "description": "메시지 시스템을 통해 소유자에게 직접 연락하세요"
+    }
   }
 }

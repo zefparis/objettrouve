@@ -124,9 +124,29 @@
   },
   "home": {
     "recentItems": "Recent items",
-    "recentItemsDesc": "Discover the latest items reported by the community"
+    "recentItemsDesc": "Discover the latest items reported by the community",
+    "viewAllItems": "View all items"
   },
   "nav": {
     "map": "Map"
+  },
+  "common": {
+    "viewDetails": "View details"
+  },
+  "howItWorks": {
+    "title": "How it works",
+    "subtitle": "Find or report a lost item in 3 simple steps",
+    "step1": {
+      "title": "Post your listing",
+      "description": "Describe your lost or found item with details and photos"
+    },
+    "step2": {
+      "title": "Search and browse",
+      "description": "Explore listings and use our advanced search filters"
+    },
+    "step3": {
+      "title": "Connect",
+      "description": "Contact owners directly through our messaging system"
+    }
   }
 }

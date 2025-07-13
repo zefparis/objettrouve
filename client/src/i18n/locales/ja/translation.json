@@ -124,9 +124,29 @@
   },
   "home": {
     "recentItems": "最近のアイテム",
-    "recentItemsDesc": "コミュニティによって報告された最新のアイテムを発見"
+    "recentItemsDesc": "コミュニティによって報告された最新のアイテムを発見",
+    "viewAllItems": "すべてのアイテムを見る"
   },
   "nav": {
     "map": "マップ"
+  },
+  "common": {
+    "viewDetails": "詳細を見る"
+  },
+  "howItWorks": {
+    "title": "使い方",
+    "subtitle": "3つの簡単なステップで紛失したアイテムを見つけるか報告する",
+    "step1": {
+      "title": "リスティングを投稿",
+      "description": "紛失または発見したアイテムを詳細と写真で説明"
+    },
+    "step2": {
+      "title": "検索と閲覧",
+      "description": "リスティングを探索し、高度な検索フィルターを使用"
+    },
+    "step3": {
+      "title": "接続",
+      "description": "メッセージシステムを通じて所有者に直接連絡"
+    }
   }
 }

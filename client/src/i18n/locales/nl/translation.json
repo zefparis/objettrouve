@@ -124,9 +124,29 @@
   },
   "home": {
     "recentItems": "Recente items",
-    "recentItemsDesc": "Ontdek de nieuwste items gerapporteerd door de community"
+    "recentItemsDesc": "Ontdek de nieuwste items gerapporteerd door de community",
+    "viewAllItems": "Alle items bekijken"
   },
   "nav": {
     "map": "Kaart"
+  },
+  "common": {
+    "viewDetails": "Details bekijken"
+  },
+  "howItWorks": {
+    "title": "Hoe het werkt",
+    "subtitle": "Vind of meld een verloren item in 3 eenvoudige stappen",
+    "step1": {
+      "title": "Plaats uw advertentie",
+      "description": "Beschrijf uw verloren of gevonden item met details en foto's"
+    },
+    "step2": {
+      "title": "Zoek en blader",
+      "description": "Verken advertenties en gebruik onze geavanceerde zoekfilters"
+    },
+    "step3": {
+      "title": "Verbind",
+      "description": "Neem direct contact op met eigenaren via ons berichtensysteem"
+    }
   }
 }

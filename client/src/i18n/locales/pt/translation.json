@@ -124,9 +124,29 @@
   },
   "home": {
     "recentItems": "Itens recentes",
-    "recentItemsDesc": "Descubra os últimos itens reportados pela comunidade"
+    "recentItemsDesc": "Descubra os últimos itens reportados pela comunidade",
+    "viewAllItems": "Ver todos os itens"
   },
   "nav": {
     "map": "Mapa"
+  },
+  "common": {
+    "viewDetails": "Ver detalhes"
+  },
+  "howItWorks": {
+    "title": "Como funciona",
+    "subtitle": "Encontre ou relate um item perdido em 3 passos simples",
+    "step1": {
+      "title": "Publique seu anúncio",
+      "description": "Descreva seu item perdido ou encontrado com detalhes e fotos"
+    },
+    "step2": {
+      "title": "Pesquise e navegue",
+      "description": "Explore anúncios e use nossos filtros de pesquisa avançados"
+    },
+    "step3": {
+      "title": "Conecte-se",
+      "description": "Contate proprietários diretamente através do nosso sistema de mensagens"
+    }
   }
 }

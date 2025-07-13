@@ -124,9 +124,29 @@
   },
   "home": {
     "recentItems": "最近物品",
-    "recentItemsDesc": "发现社区报告的最新物品"
+    "recentItemsDesc": "发现社区报告的最新物品",
+    "viewAllItems": "查看所有物品"
   },
   "nav": {
     "map": "地图"
+  },
+  "common": {
+    "viewDetails": "查看详情"
+  },
+  "howItWorks": {
+    "title": "使用方法",
+    "subtitle": "通过3个简单步骤找到或报告丢失物品",
+    "step1": {
+      "title": "发布您的信息",
+      "description": "用详细信息和照片描述您丢失或找到的物品"
+    },
+    "step2": {
+      "title": "搜索和浏览",
+      "description": "探索信息并使用我们的高级搜索过滤器"
+    },
+    "step3": {
+      "title": "联系",
+      "description": "通过我们的消息系统直接联系物主"
+    }
   }
 }
