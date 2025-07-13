@@ -20,6 +20,12 @@ import Contact from "@/pages/contact";
 import Profile from "@/pages/profile";
 import AdminDashboard from "@/pages/admin-dashboard";
 import Admin from "@/pages/admin";
+import AdminUsers from "@/pages/admin-users";
+import AdminItems from "@/pages/admin-items";
+import AdminOrders from "@/pages/admin-orders";
+import AdminRevenue from "@/pages/admin-revenue";
+import AdminAnalytics from "@/pages/admin-analytics";
+import AdminSettings from "@/pages/admin-settings";
 import Pricing from "@/pages/pricing";
 import Checkout from "@/pages/checkout";
 import PaymentSuccess from "@/pages/payment-success";
@@ -46,6 +52,12 @@ function Router() {
       <Route path="/payment-success" component={PaymentSuccess} />
       <Route path="/map" component={MapPage} />
       <Route path="/admin" component={Admin} />
+      <Route path="/admin/users" component={AdminUsers} />
+      <Route path="/admin/items" component={AdminItems} />
+      <Route path="/admin/orders" component={AdminOrders} />
+      <Route path="/admin/revenue" component={AdminRevenue} />
+      <Route path="/admin/analytics" component={AdminAnalytics} />
+      <Route path="/admin/settings" component={AdminSettings} />
       <Route path="/admin-dashboard" component={AdminDashboard} />
       <Route path="/" component={isLoading || !isAuthenticated ? Landing : Home} />
       <Route component={NotFound} />

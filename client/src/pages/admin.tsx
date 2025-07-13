@@ -17,6 +17,7 @@ import {
   LogOut,
   Shield
 } from "lucide-react";
+import { Link } from "wouter";
 
 const ADMIN_CREDENTIALS = {
   email: "congo.gaming.rdc@gmail.com",
@@ -225,9 +226,11 @@ export default function Admin() {
             </CardHeader>
             <CardContent>
               <p className="text-gray-600 mb-4">Gérer les utilisateurs et leurs permissions</p>
-              <Button className="w-full">
-                Gérer les utilisateurs
-              </Button>
+              <Link href="/admin/users">
+                <Button className="w-full">
+                  Gérer les utilisateurs
+                </Button>
+              </Link>
             </CardContent>
           </Card>
 
@@ -240,9 +243,11 @@ export default function Admin() {
             </CardHeader>
             <CardContent>
               <p className="text-gray-600 mb-4">Modérer les objets perdus et trouvés</p>
-              <Button className="w-full">
-                Gérer les objets
-              </Button>
+              <Link href="/admin/items">
+                <Button className="w-full">
+                  Gérer les objets
+                </Button>
+              </Link>
             </CardContent>
           </Card>
 
@@ -255,9 +260,11 @@ export default function Admin() {
             </CardHeader>
             <CardContent>
               <p className="text-gray-600 mb-4">Voir et gérer les commandes</p>
-              <Button className="w-full">
-                Gérer les commandes
-              </Button>
+              <Link href="/admin/orders">
+                <Button className="w-full">
+                  Gérer les commandes
+                </Button>
+              </Link>
             </CardContent>
           </Card>
 
@@ -270,9 +277,11 @@ export default function Admin() {
             </CardHeader>
             <CardContent>
               <p className="text-gray-600 mb-4">Analyse des revenus et finances</p>
-              <Button className="w-full">
-                Voir les revenus
-              </Button>
+              <Link href="/admin/revenue">
+                <Button className="w-full">
+                  Voir les revenus
+                </Button>
+              </Link>
             </CardContent>
           </Card>
 
@@ -285,9 +294,11 @@ export default function Admin() {
             </CardHeader>
             <CardContent>
               <p className="text-gray-600 mb-4">Statistiques et analyses détaillées</p>
-              <Button className="w-full">
-                Voir les analyses
-              </Button>
+              <Link href="/admin/analytics">
+                <Button className="w-full">
+                  Voir les analyses
+                </Button>
+              </Link>
             </CardContent>
           </Card>
 
@@ -300,9 +311,11 @@ export default function Admin() {
             </CardHeader>
             <CardContent>
               <p className="text-gray-600 mb-4">Configuration du système</p>
-              <Button className="w-full">
-                Paramètres
-              </Button>
+              <Link href="/admin/settings">
+                <Button className="w-full">
+                  Paramètres
+                </Button>
+              </Link>
             </CardContent>
           </Card>
         </div>

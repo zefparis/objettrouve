@@ -437,6 +437,189 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
+  app.get('/api/admin/users', async (req, res) => {
+    try {
+      const users = await storage.getAllUsers();
+      res.json(users);
+    } catch (error) {
+      console.error("Error fetching admin users:", error);
+      res.status(500).json({ message: "Erreur lors de la récupération des utilisateurs" });
+    }
+  });
+
+  app.post('/api/admin/users/:id/toggle', async (req, res) => {
+    try {
+      const { id } = req.params;
+      const { isActive } = req.body;
+      
+      const user = await storage.updateAuthUser(id, { isActive });
+      res.json(user);
+    } catch (error) {
+      console.error("Error toggling user status:", error);
+      res.status(500).json({ message: "Erreur lors de la modification du statut utilisateur" });
+    }
+  });
+
+  app.get('/api/admin/items', async (req, res) => {
+    try {
+      const items = await storage.getAllItems();
+      res.json(items);
+    } catch (error) {
+      console.error("Error fetching admin items:", error);
+      res.status(500).json({ message: "Erreur lors de la récupération des objets" });
+    }
+  });
+
+  app.post('/api/admin/items/:id/toggle', async (req, res) => {
+    try {
+      const { id } = req.params;
+      const { isActive } = req.body;
+      
+      const item = await storage.updateItem(parseInt(id), { isActive });
+      res.json(item);
+    } catch (error) {
+      console.error("Error toggling item status:", error);
+      res.status(500).json({ message: "Erreur lors de la modification du statut de l'objet" });
+    }
+  });
+
+  app.delete('/api/admin/items/:id', async (req, res) => {
+    try {
+      const { id } = req.params;
+      
+      const success = await storage.deleteItem(parseInt(id), "admin");
+      if (success) {
+        res.json({ message: "Objet supprimé avec succès" });
+      } else {
+        res.status(404).json({ message: "Objet non trouvé" });
+      }
+    } catch (error) {
+      console.error("Error deleting item:", error);
+      res.status(500).json({ message: "Erreur lors de la suppression de l'objet" });
+    }
+  });
+
+  app.get('/api/admin/orders', async (req, res) => {
+    try {
+      const orders = await storage.getOrders();
+      res.json(orders);
+    } catch (error) {
+      console.error("Error fetching admin orders:", error);
+      res.status(500).json({ message: "Erreur lors de la récupération des commandes" });
+    }
+  });
+
+  app.post('/api/admin/orders/:id/refund', async (req, res) => {
+    try {
+      const { id } = req.params;
+      const { amount, reason } = req.body;
+      
+      const success = await storage.processRefund(parseInt(id), amount, reason);
+      if (success) {
+        res.json({ message: "Remboursement traité avec succès" });
+      } else {
+        res.status(404).json({ message: "Commande non trouvée" });
+      }
+    } catch (error) {
+      console.error("Error processing refund:", error);
+      res.status(500).json({ message: "Erreur lors du traitement du remboursement" });
+    }
+  });
+
+  app.get('/api/admin/revenue', async (req, res) => {
+    try {
+      const { period = '30d' } = req.query;
+      const revenueData = await storage.getRevenueStats(period as string);
+      res.json(revenueData);
+    } catch (error) {
+      console.error("Error fetching revenue data:", error);
+      res.status(500).json({ message: "Erreur lors de la récupération des revenus" });
+    }
+  });
+
+  app.get('/api/admin/paying-users', async (req, res) => {
+    try {
+      const payingUsers = await storage.getPayingUsers();
+      res.json(payingUsers);
+    } catch (error) {
+      console.error("Error fetching paying users:", error);
+      res.status(500).json({ message: "Erreur lors de la récupération des utilisateurs payants" });
+    }
+  });
+
+  app.get('/api/admin/analytics', async (req, res) => {
+    try {
+      const { period = '30d' } = req.query;
+      
+      const stats = await storage.getStats();
+      const categoryStats = await storage.getCategoryStats();
+      
+      // Mock analytics data - in real app, this would come from database
+      const analytics = {
+        activeUsers: stats.users,
+        newUsers: Math.floor(stats.users * 0.2), // 20% new users
+        newItems: Math.floor(stats.totalItems * 0.3), // 30% new items
+        successRate: 85, // 85% success rate
+        topCategories: categoryStats.slice(0, 5).map(cat => ({
+          name: cat.category,
+          count: cat.count
+        })),
+        recentActivity: [
+          { type: 'user', description: 'Nouvel utilisateur inscrit', timestamp: '2 minutes ago' },
+          { type: 'item', description: 'Objet publié: Téléphone perdu', timestamp: '5 minutes ago' },
+          { type: 'message', description: 'Message envoyé sur un objet', timestamp: '10 minutes ago' },
+        ]
+      };
+      
+      res.json(analytics);
+    } catch (error) {
+      console.error("Error fetching analytics:", error);
+      res.status(500).json({ message: "Erreur lors de la récupération des analyses" });
+    }
+  });
+
+  app.get('/api/admin/settings', async (req, res) => {
+    try {
+      // Mock settings - in real app, this would come from database
+      const settings = {
+        siteName: "Objets Perdus",
+        siteDescription: "Plateforme communautaire pour retrouver les objets perdus",
+        adminEmail: "congo.gaming.rdc@gmail.com",
+        maintenanceMode: false,
+        userRegistration: true,
+        emailNotifications: true,
+        maxFileSize: 5,
+        autoDeleteDays: 90,
+        moderationEnabled: true,
+        contactEmail: "contact@ia-solution.fr",
+        supportPhone: "+33 620478241",
+        privacyPolicy: "Politique de confidentialité...",
+        termsOfService: "Conditions d'utilisation...",
+        backupEnabled: true,
+        backupFrequency: "daily",
+      };
+      
+      res.json(settings);
+    } catch (error) {
+      console.error("Error fetching settings:", error);
+      res.status(500).json({ message: "Erreur lors de la récupération des paramètres" });
+    }
+  });
+
+  app.put('/api/admin/settings', async (req, res) => {
+    try {
+      const settings = req.body;
+      
+      // Mock update - in real app, this would update database
+      console.log("Updating settings:", settings);
+      
+      res.json({ message: "Paramètres mis à jour avec succès" });
+    } catch (error) {
+      console.error("Error updating settings:", error);
+      res.status(500).json({ message: "Erreur lors de la mise à jour des paramètres" });
+    }
+  });
+
   // Serve uploaded files
   app.use('/uploads', express.static('uploads'));
 

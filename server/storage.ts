@@ -71,6 +71,8 @@ export interface IStorage {
   getPremiumService(id: string): Promise<PremiumService | undefined>;
   
   // Admin operations
+  getAllUsers(): Promise<AuthUser[]>;
+  getAllItems(): Promise<Item[]>;
   getRevenueStats(period: string): Promise<{
     totalRevenue: number;
     revenueGrowth: number;
@@ -560,6 +562,26 @@ export class DatabaseStorage implements IStorage {
       monthlyOrders: currentCount,
       orderGrowth
     };
+  }
+
+  async getAllUsers(): Promise<AuthUser[]> {
+    try {
+      const allUsers = await db.select().from(authUsers);
+      return allUsers;
+    } catch (error) {
+      console.error("Error fetching all users:", error);
+      return [];
+    }
+  }
+
+  async getAllItems(): Promise<Item[]> {
+    try {
+      const allItems = await db.select().from(items);
+      return allItems;
+    } catch (error) {
+      console.error("Error fetching all items:", error);
+      return [];
+    }
   }
 
   async processRefund(orderId: number, amount: number, reason: string): Promise<boolean> {
