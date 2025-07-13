@@ -94,13 +94,13 @@ export default function ItemDetail() {
           <Card>
             <CardContent className="text-center py-12">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">
-                Annonce non trouvée
+                {t("itemDetail.notFound")}
               </h2>
               <p className="text-gray-600 mb-6">
-                L'annonce que vous recherchez n'existe pas ou a été supprimée.
+                {t("itemDetail.notFoundDesc")}
               </p>
               <Button onClick={() => window.history.back()}>
-                Retour
+                {t("itemDetail.backButton")}
               </Button>
             </CardContent>
           </Card>
@@ -167,7 +167,7 @@ export default function ItemDetail() {
                 {/* Description */}
                 <div className="mb-6">
                   <h3 className="text-lg font-semibold text-gray-900 mb-3">
-                    Description
+                    {t("itemDetail.description")}
                   </h3>
                   <p className="text-gray-700 whitespace-pre-line">
                     {item.description}
@@ -190,7 +190,7 @@ export default function ItemDetail() {
                   <div className="flex items-center text-gray-600">
                     <User className="h-5 w-5 mr-2" />
                     <span>
-                      Publié le {new Date(item.createdAt).toLocaleDateString("fr-FR")}
+                      {t("itemDetail.publishedOn")} {new Date(item.createdAt).toLocaleDateString()}
                     </span>
                   </div>
                 </div>
@@ -265,13 +265,13 @@ export default function ItemDetail() {
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <Button variant="outline" className="w-full">
-{t("itemDetail.editAd")}
+                    {t("itemDetail.editAd")}
                   </Button>
                   <Button variant="outline" className="w-full">
-{t("itemDetail.markAsFound")}
+                    {t("itemDetail.markAsFound")}
                   </Button>
                   <Button variant="destructive" className="w-full">
-{t("itemDetail.deleteAd")}
+                    {t("itemDetail.deleteAd")}
                   </Button>
                 </CardContent>
               </Card>
