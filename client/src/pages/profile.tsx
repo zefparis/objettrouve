@@ -89,7 +89,7 @@ export default function Profile() {
     onSuccess: () => {
       toast({
         title: t("common.success"),
-        description: t("profile.updateSuccess"),
+        description: t("profilePage.personal.success"),
       });
       setIsEditing(false);
       setProfileImage(null);
@@ -99,7 +99,7 @@ export default function Profile() {
     onError: (error) => {
       toast({
         title: t("common.error"),
-        description: t("profile.updateError"),
+        description: t("profilePage.personal.error"),
         variant: "destructive",
       });
     },
@@ -111,7 +111,7 @@ export default function Profile() {
       if (file.size > 5 * 1024 * 1024) { // 5MB limit
         toast({
           title: t("common.error"),
-          description: t("profile.imageTooLarge"),
+          description: t("common.imageTooLarge"),
           variant: "destructive",
         });
         return;
@@ -164,8 +164,8 @@ export default function Profile() {
     return (
       <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center">
         <div className="text-center">
-          <h1 className="text-2xl font-bold text-gray-900 mb-4">{t("profile.accessRestricted")}</h1>
-          <p className="text-gray-600 mb-6">{t("profile.loginRequired")}</p>
+          <h1 className="text-2xl font-bold text-gray-900 mb-4">{t("common.accessRestricted")}</h1>
+          <p className="text-gray-600 mb-6">{t("common.loginRequired")}</p>
           <Link href="/">
             <Button>{t("nav.home")}</Button>
           </Link>
@@ -205,7 +205,7 @@ export default function Profile() {
                 <Avatar className="h-32 w-32">
                   <AvatarImage 
                     src={profileImagePreview || user?.profileImageUrl || ""} 
-                    alt={t("profile.profilePicture")}
+                    alt={t("profilePage.personal.photo")}
                   />
                   <AvatarFallback className="text-2xl font-bold">
                     {getUserInitials()}
@@ -254,7 +254,7 @@ export default function Profile() {
                     {!isEditing ? (
                       <Button onClick={() => setIsEditing(true)} className="flex items-center gap-2">
                         <Edit className="h-4 w-4" />
-                        {t("profile.editProfile")}
+                        {t("profilePage.personal.edit")}
                       </Button>
                     ) : (
                       <div className="flex gap-2">
@@ -264,7 +264,7 @@ export default function Profile() {
                           className="flex items-center gap-2"
                         >
                           <Save className="h-4 w-4" />
-                          {t("profile.saveChanges")}
+                          {t("profilePage.personal.save")}
                         </Button>
                         <Button 
                           variant="outline" 
@@ -272,7 +272,7 @@ export default function Profile() {
                           className="flex items-center gap-2"
                         >
                           <X className="h-4 w-4" />
-                          {t("profile.cancel")}
+                          {t("profilePage.personal.cancel")}
                         </Button>
                       </div>
                     )}
@@ -282,7 +282,7 @@ export default function Profile() {
                 {/* Member Since */}
                 <div className="flex items-center gap-2 text-sm text-gray-500 justify-center md:justify-start">
                   <Calendar className="h-4 w-4" />
-                  <span>{t("profile.memberSince")} {new Date(user?.createdAt || Date.now()).toLocaleDateString()}</span>
+                  <span>{t("common.memberSince")} {new Date(user?.createdAt || Date.now()).toLocaleDateString()}</span>
                 </div>
               </div>
             </div>
@@ -294,15 +294,15 @@ export default function Profile() {
           <TabsList className="grid w-full grid-cols-3 bg-white shadow-sm">
             <TabsTrigger value="personal" className="flex items-center gap-2">
               <User className="h-4 w-4" />
-              {t("profile.tabs.personal")}
+              {t("profilePage.tabs.personal")}
             </TabsTrigger>
             <TabsTrigger value="security" className="flex items-center gap-2">
               <Shield className="h-4 w-4" />
-              {t("profile.tabs.security")}
+              {t("profilePage.tabs.security")}
             </TabsTrigger>
             <TabsTrigger value="preferences" className="flex items-center gap-2">
               <Settings className="h-4 w-4" />
-              {t("profile.tabs.preferences")}
+              {t("profilePage.tabs.preferences")}
             </TabsTrigger>
           </TabsList>
 
@@ -312,41 +312,41 @@ export default function Profile() {
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <User className="h-5 w-5" />
-                  {t("profile.personalInfo")}
+                  {t("profilePage.personal.title")}
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="space-y-2">
-                    <Label htmlFor="firstName">{t("profile.firstName")}</Label>
+                    <Label htmlFor="firstName">{t("profilePage.personal.firstName")}</Label>
                     {isEditing ? (
                       <Input
                         id="firstName"
                         value={formData.firstName}
                         onChange={(e) => setFormData({...formData, firstName: e.target.value})}
-                        placeholder={t("profile.firstNamePlaceholder")}
+                        placeholder={t("profilePage.personal.firstName")}
                       />
                     ) : (
-                      <p className="text-gray-900 py-2">{user?.firstName || t("profile.notProvided")}</p>
+                      <p className="text-gray-900 py-2">{user?.firstName || "-"}</p>
                     )}
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="lastName">{t("profile.lastName")}</Label>
+                    <Label htmlFor="lastName">{t("profilePage.personal.lastName")}</Label>
                     {isEditing ? (
                       <Input
                         id="lastName"
                         value={formData.lastName}
                         onChange={(e) => setFormData({...formData, lastName: e.target.value})}
-                        placeholder={t("profile.lastNamePlaceholder")}
+                        placeholder={t("profilePage.personal.lastName")}
                       />
                     ) : (
-                      <p className="text-gray-900 py-2">{user?.lastName || t("profile.notProvided")}</p>
+                      <p className="text-gray-900 py-2">{user?.lastName || "-"}</p>
                     )}
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="email">{t("profile.email")}</Label>
+                    <Label htmlFor="email">{t("profilePage.personal.email")}</Label>
                     <div className="flex items-center gap-2">
                       <Mail className="h-4 w-4 text-gray-500" />
                       <p className="text-gray-900">{user?.email}</p>
@@ -354,52 +354,52 @@ export default function Profile() {
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="phone">{t("profile.phone")}</Label>
+                    <Label htmlFor="phone">{t("profilePage.personal.phone")}</Label>
                     {isEditing ? (
                       <Input
                         id="phone"
                         value={formData.phone}
                         onChange={(e) => setFormData({...formData, phone: e.target.value})}
-                        placeholder={t("profile.phonePlaceholder")}
+                        placeholder={t("profilePage.personal.phone")}
                       />
                     ) : (
                       <div className="flex items-center gap-2">
                         <Phone className="h-4 w-4 text-gray-500" />
-                        <p className="text-gray-900">{user?.phone || t("profile.notProvided")}</p>
+                        <p className="text-gray-900">{user?.phone || "-"}</p>
                       </div>
                     )}
                   </div>
 
                   <div className="space-y-2 md:col-span-2">
-                    <Label htmlFor="location">{t("profile.location")}</Label>
+                    <Label htmlFor="location">{t("profilePage.personal.location")}</Label>
                     {isEditing ? (
                       <Input
                         id="location"
                         value={formData.location}
                         onChange={(e) => setFormData({...formData, location: e.target.value})}
-                        placeholder={t("profile.locationPlaceholder")}
+                        placeholder={t("profilePage.personal.location")}
                       />
                     ) : (
                       <div className="flex items-center gap-2">
                         <MapPin className="h-4 w-4 text-gray-500" />
-                        <p className="text-gray-900">{user?.location || t("profile.notProvided")}</p>
+                        <p className="text-gray-900">{user?.location || "-"}</p>
                       </div>
                     )}
                   </div>
 
                   <div className="space-y-2 md:col-span-2">
-                    <Label htmlFor="bio">{t("profile.bio")}</Label>
+                    <Label htmlFor="bio">{t("profilePage.personal.bio")}</Label>
                     {isEditing ? (
                       <textarea
                         id="bio"
                         value={formData.bio}
                         onChange={(e) => setFormData({...formData, bio: e.target.value})}
-                        placeholder={t("profile.bioPlaceholder")}
+                        placeholder={t("profilePage.personal.bioPlaceholder")}
                         rows={4}
                         className="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500 resize-none"
                       />
                     ) : (
-                      <p className="text-gray-900 py-2">{user?.bio || t("profile.notProvided")}</p>
+                      <p className="text-gray-900 py-2">{user?.bio || "-"}</p>
                     )}
                   </div>
                 </div>
@@ -413,20 +413,20 @@ export default function Profile() {
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <Shield className="h-5 w-5" />
-                  Sécurité
+                  {t("profilePage.securityTab.title")}
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-6">
                 <div className="space-y-4">
                   <div className="flex items-center justify-between p-4 bg-gray-50 rounded-lg">
                     <div>
-                      <h3 className="font-medium text-gray-900">Paramètres de sécurité</h3>
-                      <p className="text-sm text-gray-600">Gérez votre mot de passe et les paramètres de sécurité avancés</p>
+                      <h3 className="font-medium text-gray-900">{t("profilePage.securityTab.changePassword")}</h3>
+                      <p className="text-sm text-gray-600">{t("profilePage.securityTab.changePasswordDesc")}</p>
                     </div>
                     <Link href="/security">
                       <Button>
                         <Shield className="h-4 w-4 mr-2" />
-                        Accéder aux paramètres
+                        {t("profilePage.securityTab.enable")}
                       </Button>
                     </Link>
                   </div>
@@ -441,20 +441,20 @@ export default function Profile() {
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <Settings className="h-5 w-5" />
-                  Préférences
+                  {t("profilePage.preferences.title")}
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-6">
                 <div className="space-y-4">
                   <div className="flex items-center justify-between p-4 bg-gray-50 rounded-lg">
                     <div>
-                      <h3 className="font-medium text-gray-900">Paramètres de préférences</h3>
-                      <p className="text-sm text-gray-600">Configurez vos notifications, thème et paramètres d'affichage</p>
+                      <h3 className="font-medium text-gray-900">{t("profilePage.preferences.language")}</h3>
+                      <p className="text-sm text-gray-600">{t("profilePage.preferences.languageDesc")}</p>
                     </div>
                     <Link href="/preferences">
                       <Button>
                         <Settings className="h-4 w-4 mr-2" />
-                        Configurer
+                        {t("profilePage.preferences.save")}
                       </Button>
                     </Link>
                   </div>
