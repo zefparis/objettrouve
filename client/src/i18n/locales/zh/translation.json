@@ -402,6 +402,65 @@
     "alertDescription": "当发布相似物品时收到提醒。",
     "createAlert": "创建提醒"
   },
+  "publishNew": {
+    "lostTitle": "丢失物品",
+    "foundTitle": "拾获物品",
+    "lostSubtitle": "描述您丢失的物品，以便其他人能帮助您找到它。",
+    "foundSubtitle": "描述您拾获的物品，以便失主能联系您。",
+    "type": {
+      "label": "广告类型",
+      "lost": "丢失物品",
+      "found": "拾获物品"
+    },
+    "title": {
+      "label": "标题",
+      "placeholder": "例如：黑色iPhone 14 Pro"
+    },
+    "description": {
+      "label": "详细描述",
+      "placeholder": "尽可能详细地描述物品..."
+    },
+    "category": {
+      "label": "类别",
+      "placeholder": "选择类别"
+    },
+    "location": {
+      "label": "地点",
+      "placeholder": "例如：里昂车站，巴黎"
+    },
+    "date": {
+      "label": "日期",
+      "placeholder": "您什么时候丢失/拾获这个物品？"
+    },
+    "contact": {
+      "label": "联系信息",
+      "phone": "电话号码",
+      "email": "邮箱地址",
+      "phonePlaceholder": "例如：+86 138 0013 8000",
+      "emailPlaceholder": "例如：your@email.com"
+    },
+    "image": {
+      "label": "物品照片",
+      "upload": "上传照片",
+      "change": "更换照片",
+      "remove": "删除照片"
+    },
+    "submit": {
+      "publish": "发布广告",
+      "publishing": "发布中..."
+    },
+    "validation": {
+      "title_required": "标题是必需的",
+      "description_min_length": "描述至少需要10个字符",
+      "category_required": "类别是必需的",
+      "location_required": "地点是必需的",
+      "date_required": "日期是必需的",
+      "email_invalid": "邮箱地址无效"
+    },
+    "success": "您的广告已成功发布！",
+    "error": "发布广告时出错",
+    "loginNotice": "您必须登录才能发布广告。登录后您的广告将被保存。"
+  },
   "profile": {
     "title": "个人资料",
     "editProfile": "编辑个人资料",

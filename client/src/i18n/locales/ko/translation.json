@@ -402,6 +402,65 @@
     "alertDescription": "유사한 항목이 게시될 때 알림을 받으세요.",
     "createAlert": "알림 생성"
   },
+  "publishNew": {
+    "lostTitle": "분실물",
+    "foundTitle": "습득물",
+    "lostSubtitle": "분실한 물건을 설명하여 다른 사람들이 찾는 것을 도와줄 수 있도록 하세요.",
+    "foundSubtitle": "습득한 물건을 설명하여 소유자가 연락할 수 있도록 하세요.",
+    "type": {
+      "label": "광고 유형",
+      "lost": "분실물",
+      "found": "습득물"
+    },
+    "title": {
+      "label": "제목",
+      "placeholder": "예: 검은색 iPhone 14 Pro"
+    },
+    "description": {
+      "label": "상세 설명",
+      "placeholder": "가능한 한 자세히 물건을 설명하세요..."
+    },
+    "category": {
+      "label": "카테고리",
+      "placeholder": "카테고리를 선택하세요"
+    },
+    "location": {
+      "label": "위치",
+      "placeholder": "예: 리옹 역, 파리"
+    },
+    "date": {
+      "label": "날짜",
+      "placeholder": "이 물건을 언제 분실/습득했나요?"
+    },
+    "contact": {
+      "label": "연락처 정보",
+      "phone": "전화번호",
+      "email": "이메일 주소",
+      "phonePlaceholder": "예: +82 10 1234 5678",
+      "emailPlaceholder": "예: your@email.com"
+    },
+    "image": {
+      "label": "물건 사진",
+      "upload": "사진 업로드",
+      "change": "사진 변경",
+      "remove": "사진 삭제"
+    },
+    "submit": {
+      "publish": "광고 게시",
+      "publishing": "게시 중..."
+    },
+    "validation": {
+      "title_required": "제목은 필수입니다",
+      "description_min_length": "설명은 최소 10자 이상이어야 합니다",
+      "category_required": "카테고리는 필수입니다",
+      "location_required": "위치는 필수입니다",
+      "date_required": "날짜는 필수입니다",
+      "email_invalid": "이메일 주소가 유효하지 않습니다"
+    },
+    "success": "광고가 성공적으로 게시되었습니다!",
+    "error": "광고 게시 중 오류가 발생했습니다",
+    "loginNotice": "광고를 게시하려면 로그인해야 합니다. 로그인 후 광고가 저장됩니다."
+  },
   "profile": {
     "title": "프로필",
     "editProfile": "프로필 편집",

@@ -402,6 +402,65 @@
     "alertDescription": "Receba alertas quando itens similares forem publicados.",
     "createAlert": "Criar alerta"
   },
+  "publishNew": {
+    "lostTitle": "Item perdido",
+    "foundTitle": "Item encontrado",
+    "lostSubtitle": "Descreva o item que você perdeu para que outros possam ajudá-lo a encontrá-lo.",
+    "foundSubtitle": "Descreva o item que você encontrou para que seu proprietário possa contactá-lo.",
+    "type": {
+      "label": "Tipo de anúncio",
+      "lost": "Item perdido",
+      "found": "Item encontrado"
+    },
+    "title": {
+      "label": "Título",
+      "placeholder": "ex. iPhone 14 Pro preto"
+    },
+    "description": {
+      "label": "Descrição detalhada",
+      "placeholder": "Descreva o item com o maior detalhe possível..."
+    },
+    "category": {
+      "label": "Categoria",
+      "placeholder": "Selecione uma categoria"
+    },
+    "location": {
+      "label": "Localização",
+      "placeholder": "ex. Estação de Lyon, Paris"
+    },
+    "date": {
+      "label": "Data",
+      "placeholder": "Quando você perdeu/encontrou este item?"
+    },
+    "contact": {
+      "label": "Informações de contacto",
+      "phone": "Número de telefone",
+      "email": "Endereço de email",
+      "phonePlaceholder": "ex. +351 966 123 456",
+      "emailPlaceholder": "ex. seu@email.com"
+    },
+    "image": {
+      "label": "Foto do item",
+      "upload": "Enviar uma foto",
+      "change": "Alterar foto",
+      "remove": "Remover foto"
+    },
+    "submit": {
+      "publish": "Publicar anúncio",
+      "publishing": "Publicando..."
+    },
+    "validation": {
+      "title_required": "O título é obrigatório",
+      "description_min_length": "A descrição deve ter pelo menos 10 caracteres",
+      "category_required": "A categoria é obrigatória",
+      "location_required": "A localização é obrigatória",
+      "date_required": "A data é obrigatória",
+      "email_invalid": "O endereço de email é inválido"
+    },
+    "success": "Seu anúncio foi publicado com sucesso!",
+    "error": "Erro ao publicar o anúncio",
+    "loginNotice": "Você deve fazer login para publicar um anúncio. Seu anúncio será salvo após o login."
+  },
   "profile": {
     "title": "Perfil",
     "editProfile": "Editar Perfil",

@@ -451,6 +451,65 @@
     "alertDescription": "Recevez des alertes lorsque des objets similaires sont publiés.",
     "createAlert": "Créer une alerte"
   },
+  "publishNew": {
+    "lostTitle": "Objet perdu",
+    "foundTitle": "Objet trouvé",
+    "lostSubtitle": "Décrivez l'objet que vous avez perdu pour que d'autres puissent vous aider à le retrouver.",
+    "foundSubtitle": "Décrivez l'objet que vous avez trouvé pour que son propriétaire puisse vous contacter.",
+    "type": {
+      "label": "Type d'annonce",
+      "lost": "Objet perdu",
+      "found": "Objet trouvé"
+    },
+    "title": {
+      "label": "Titre",
+      "placeholder": "Ex: iPhone 14 Pro noir"
+    },
+    "description": {
+      "label": "Description détaillée",
+      "placeholder": "Décrivez l'objet avec le plus de détails possible..."
+    },
+    "category": {
+      "label": "Catégorie",
+      "placeholder": "Sélectionnez une catégorie"
+    },
+    "location": {
+      "label": "Lieu",
+      "placeholder": "Ex: Gare de Lyon, Paris"
+    },
+    "date": {
+      "label": "Date",
+      "placeholder": "Quand avez-vous perdu/trouvé cet objet ?"
+    },
+    "contact": {
+      "label": "Informations de contact",
+      "phone": "Numéro de téléphone",
+      "email": "Adresse email",
+      "phonePlaceholder": "Ex: 06 12 34 56 78",
+      "emailPlaceholder": "Ex: votre@email.com"
+    },
+    "image": {
+      "label": "Photo de l'objet",
+      "upload": "Télécharger une photo",
+      "change": "Changer la photo",
+      "remove": "Supprimer la photo"
+    },
+    "submit": {
+      "publish": "Publier l'annonce",
+      "publishing": "Publication en cours..."
+    },
+    "validation": {
+      "title_required": "Le titre est requis",
+      "description_min_length": "La description doit contenir au moins 10 caractères",
+      "category_required": "La catégorie est requise",
+      "location_required": "Le lieu est requis",
+      "date_required": "La date est requise",
+      "email_invalid": "L'adresse email n'est pas valide"
+    },
+    "success": "Votre annonce a été publiée avec succès !",
+    "error": "Erreur lors de la publication de l'annonce",
+    "loginNotice": "Vous devez être connecté pour publier une annonce. Votre annonce sera enregistrée après la connexion."
+  },
   "profile": {
     "title": "Profil",
     "editProfile": "Modifier le profil",

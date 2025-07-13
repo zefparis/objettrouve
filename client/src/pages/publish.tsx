@@ -254,10 +254,10 @@ export default function Publish() {
                   name="title"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>{t("publishNew.form.title.label")}</FormLabel>
+                      <FormLabel>{t("publishNew.title.label")}</FormLabel>
                       <FormControl>
                         <Input
-                          placeholder={t("publishNew.form.title.placeholder")}
+                          placeholder={t("publishNew.title.placeholder")}
                           {...field}
                         />
                       </FormControl>
@@ -272,11 +272,11 @@ export default function Publish() {
                   name="category"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>{t("publishNew.form.category.label")}</FormLabel>
+                      <FormLabel>{t("publishNew.category.label")}</FormLabel>
                       <Select value={field.value} onValueChange={field.onChange}>
                         <FormControl>
                           <SelectTrigger>
-                            <SelectValue placeholder={t("publishNew.form.category.placeholder")} />
+                            <SelectValue placeholder={t("publishNew.category.placeholder")} />
                           </SelectTrigger>
                         </FormControl>
                         <SelectContent>
@@ -301,10 +301,10 @@ export default function Publish() {
                   name="description"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>{t("publishNew.form.description.label")}</FormLabel>
+                      <FormLabel>{t("publishNew.description.label")}</FormLabel>
                       <FormControl>
                         <Textarea
-                          placeholder={t("publishNew.form.description.placeholder")}
+                          placeholder={t("publishNew.description.placeholder")}
                           rows={4}
                           {...field}
                         />
@@ -320,12 +320,12 @@ export default function Publish() {
                   name="location"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>{t("publishNew.form.location.label")}</FormLabel>
+                      <FormLabel>{t("publishNew.location.label")}</FormLabel>
                       <FormControl>
                         <div className="relative">
                           <MapPin className="absolute left-3 top-3 h-4 w-4 text-gray-400" />
                           <Input
-                            placeholder={t("publishNew.form.location.placeholder")}
+                            placeholder={t("publishNew.location.placeholder")}
                             className="pl-10"
                             {...field}
                           />
@@ -342,14 +342,14 @@ export default function Publish() {
                   name="dateOccurred"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>{t("publishNew.form.dateOccurred.label")}</FormLabel>
+                      <FormLabel>{t("publishNew.date.label")}</FormLabel>
                       <FormControl>
                         <div className="relative">
                           <Calendar className="absolute left-3 top-3 h-4 w-4 text-gray-400" />
                           <Input
                             type="date"
                             className="pl-10"
-                            placeholder={t("publishNew.form.dateOccurred.placeholder")}
+                            placeholder={t("publishNew.date.placeholder")}
                             {...field}
                           />
                         </div>
@@ -366,10 +366,10 @@ export default function Publish() {
                     name="contactPhone"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>{t("publishNew.form.contactPhone.label")}</FormLabel>
+                        <FormLabel>{t("publishNew.contact.phone")}</FormLabel>
                         <FormControl>
                           <Input
-                            placeholder={t("publishNew.form.contactPhone.placeholder")}
+                            placeholder={t("publishNew.contact.phonePlaceholder")}
                             {...field}
                           />
                         </FormControl>
@@ -382,11 +382,11 @@ export default function Publish() {
                     name="contactEmail"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>{t("publishNew.form.contactEmail.label")}</FormLabel>
+                        <FormLabel>{t("publishNew.contact.email")}</FormLabel>
                         <FormControl>
                           <Input
                             type="email"
-                            placeholder={t("publishNew.form.contactEmail.placeholder")}
+                            placeholder={t("publishNew.contact.emailPlaceholder")}
                             {...field}
                           />
                         </FormControl>
@@ -398,7 +398,7 @@ export default function Publish() {
 
                 {/* Image Upload */}
                 <div className="space-y-4">
-                  <Label>{t("publishNew.form.image.label")}</Label>
+                  <Label>{t("publishNew.image.label")}</Label>
                   <div className="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center">
                     {previewUrl ? (
                       <div className="space-y-4">
@@ -415,7 +415,7 @@ export default function Publish() {
                             setPreviewUrl(null);
                           }}
                         >
-                          {t("publishNew.form.image.remove")}
+                          {t("publishNew.image.remove")}
                         </Button>
                       </div>
                     ) : (
@@ -424,7 +424,7 @@ export default function Publish() {
                         <div>
                           <Label htmlFor="image-upload" className="cursor-pointer">
                             <span className="text-primary hover:underline">
-                              {t("publishNew.form.image.upload")}
+                              {t("publishNew.image.upload")}
                             </span>
                           </Label>
                           <Input
@@ -435,9 +435,6 @@ export default function Publish() {
                             className="hidden"
                           />
                         </div>
-                        <p className="text-sm text-gray-500">
-                          {t("publishNew.form.image.placeholder")}
-                        </p>
                       </div>
                     )}
                   </div>
@@ -455,12 +452,12 @@ export default function Publish() {
                   {createItemMutation.isPending ? (
                     <>
                       <Upload className="mr-2 h-4 w-4 animate-spin" />
-                      {t("publishNew.buttons.publishing")}
+                      {t("publishNew.submit.publishing")}
                     </>
                   ) : (
                     <>
                       <Upload className="mr-2 h-4 w-4" />
-                      {t("publishNew.buttons.publish")}
+                      {t("publishNew.submit.publish")}
                     </>
                   )}
                 </Button>

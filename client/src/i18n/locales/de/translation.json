@@ -402,6 +402,65 @@
     "alertDescription": "Erhalten Sie Benachrichtigungen, wenn ähnliche Gegenstände veröffentlicht werden.",
     "createAlert": "Benachrichtigung erstellen"
   },
+  "publishNew": {
+    "lostTitle": "Verlorener Gegenstand",
+    "foundTitle": "Gefundener Gegenstand",
+    "lostSubtitle": "Beschreiben Sie den verlorenen Gegenstand, damit andere Ihnen helfen können, ihn zu finden.",
+    "foundSubtitle": "Beschreiben Sie den gefundenen Gegenstand, damit der Besitzer Sie kontaktieren kann.",
+    "type": {
+      "label": "Anzeigentyp",
+      "lost": "Verlorener Gegenstand",
+      "found": "Gefundener Gegenstand"
+    },
+    "title": {
+      "label": "Titel",
+      "placeholder": "z.B. Schwarzes iPhone 14 Pro"
+    },
+    "description": {
+      "label": "Detaillierte Beschreibung",
+      "placeholder": "Beschreiben Sie den Gegenstand so detailliert wie möglich..."
+    },
+    "category": {
+      "label": "Kategorie",
+      "placeholder": "Wählen Sie eine Kategorie"
+    },
+    "location": {
+      "label": "Ort",
+      "placeholder": "z.B. Bahnhof Lyon, Paris"
+    },
+    "date": {
+      "label": "Datum",
+      "placeholder": "Wann haben Sie diesen Gegenstand verloren/gefunden?"
+    },
+    "contact": {
+      "label": "Kontaktinformationen",
+      "phone": "Telefonnummer",
+      "email": "E-Mail-Adresse",
+      "phonePlaceholder": "z.B. +49 172 123 456",
+      "emailPlaceholder": "z.B. ihre@email.com"
+    },
+    "image": {
+      "label": "Foto des Gegenstands",
+      "upload": "Foto hochladen",
+      "change": "Foto ändern",
+      "remove": "Foto entfernen"
+    },
+    "submit": {
+      "publish": "Anzeige veröffentlichen",
+      "publishing": "Veröffentlichen..."
+    },
+    "validation": {
+      "title_required": "Titel ist erforderlich",
+      "description_min_length": "Beschreibung muss mindestens 10 Zeichen haben",
+      "category_required": "Kategorie ist erforderlich",
+      "location_required": "Ort ist erforderlich",
+      "date_required": "Datum ist erforderlich",
+      "email_invalid": "E-Mail-Adresse ist ungültig"
+    },
+    "success": "Ihre Anzeige wurde erfolgreich veröffentlicht!",
+    "error": "Fehler beim Veröffentlichen der Anzeige",
+    "loginNotice": "Sie müssen angemeldet sein, um eine Anzeige zu veröffentlichen. Ihre Anzeige wird nach der Anmeldung gespeichert."
+  },
   "profile": {
     "title": "Profil",
     "editProfile": "Profil bearbeiten",

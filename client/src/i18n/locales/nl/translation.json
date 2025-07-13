@@ -402,6 +402,65 @@
     "alertDescription": "Ontvang waarschuwingen wanneer vergelijkbare items worden geplaatst.",
     "createAlert": "Waarschuwing maken"
   },
+  "publishNew": {
+    "lostTitle": "Verloren item",
+    "foundTitle": "Gevonden item",
+    "lostSubtitle": "Beschrijf het item dat je verloren hebt zodat anderen je kunnen helpen het te vinden.",
+    "foundSubtitle": "Beschrijf het item dat je gevonden hebt zodat de eigenaar je kan contacteren.",
+    "type": {
+      "label": "Advertentie type",
+      "lost": "Verloren item",
+      "found": "Gevonden item"
+    },
+    "title": {
+      "label": "Titel",
+      "placeholder": "bijv. Zwarte iPhone 14 Pro"
+    },
+    "description": {
+      "label": "Gedetailleerde beschrijving",
+      "placeholder": "Beschrijf het item met zoveel mogelijk detail..."
+    },
+    "category": {
+      "label": "Categorie",
+      "placeholder": "Selecteer een categorie"
+    },
+    "location": {
+      "label": "Locatie",
+      "placeholder": "bijv. Lyon Station, Parijs"
+    },
+    "date": {
+      "label": "Datum",
+      "placeholder": "Wanneer heb je dit item verloren/gevonden?"
+    },
+    "contact": {
+      "label": "Contactinformatie",
+      "phone": "Telefoonnummer",
+      "email": "E-mailadres",
+      "phonePlaceholder": "bijv. +31 6 12 34 56 78",
+      "emailPlaceholder": "bijv. jouw@email.com"
+    },
+    "image": {
+      "label": "Foto van het item",
+      "upload": "Foto uploaden",
+      "change": "Foto wijzigen",
+      "remove": "Foto verwijderen"
+    },
+    "submit": {
+      "publish": "Advertentie publiceren",
+      "publishing": "Publiceren..."
+    },
+    "validation": {
+      "title_required": "Titel is verplicht",
+      "description_min_length": "Beschrijving moet minimaal 10 tekens hebben",
+      "category_required": "Categorie is verplicht",
+      "location_required": "Locatie is verplicht",
+      "date_required": "Datum is verplicht",
+      "email_invalid": "E-mailadres is ongeldig"
+    },
+    "success": "Uw advertentie is succesvol gepubliceerd!",
+    "error": "Fout bij het publiceren van de advertentie",
+    "loginNotice": "Je moet ingelogd zijn om een advertentie te publiceren. Je advertentie wordt opgeslagen na het inloggen."
+  },
   "profile": {
     "title": "Profiel",
     "editProfile": "Profiel bewerken",

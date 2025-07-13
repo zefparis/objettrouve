@@ -402,6 +402,65 @@
     "alertDescription": "類似アイテムが投稿されたときにアラートを受け取る。",
     "createAlert": "アラートを作成"
   },
+  "publishNew": {
+    "lostTitle": "紛失物",
+    "foundTitle": "拾得物",
+    "lostSubtitle": "紛失した物品を説明して、他の人があなたがそれを見つけるのを手伝えるようにしてください。",
+    "foundSubtitle": "拾得した物品を説明して、所有者があなたに連絡できるようにしてください。",
+    "type": {
+      "label": "広告タイプ",
+      "lost": "紛失物",
+      "found": "拾得物"
+    },
+    "title": {
+      "label": "タイトル",
+      "placeholder": "例：黒いiPhone 14 Pro"
+    },
+    "description": {
+      "label": "詳細な説明",
+      "placeholder": "できるだけ詳しく物品を説明してください..."
+    },
+    "category": {
+      "label": "カテゴリ",
+      "placeholder": "カテゴリを選択してください"
+    },
+    "location": {
+      "label": "場所",
+      "placeholder": "例：リヨン駅、パリ"
+    },
+    "date": {
+      "label": "日付",
+      "placeholder": "この物品をいつ紛失/拾得しましたか？"
+    },
+    "contact": {
+      "label": "連絡先情報",
+      "phone": "電話番号",
+      "email": "メールアドレス",
+      "phonePlaceholder": "例：+81 90 1234 5678",
+      "emailPlaceholder": "例：your@email.com"
+    },
+    "image": {
+      "label": "物品の写真",
+      "upload": "写真をアップロード",
+      "change": "写真を変更",
+      "remove": "写真を削除"
+    },
+    "submit": {
+      "publish": "広告を投稿",
+      "publishing": "投稿中..."
+    },
+    "validation": {
+      "title_required": "タイトルは必須です",
+      "description_min_length": "説明は少なくとも10文字必要です",
+      "category_required": "カテゴリは必須です",
+      "location_required": "場所は必須です",
+      "date_required": "日付は必須です",
+      "email_invalid": "メールアドレスが無効です"
+    },
+    "success": "広告が正常に投稿されました！",
+    "error": "広告の投稿中にエラーが発生しました",
+    "loginNotice": "広告を投稿するにはログインが必要です。ログイン後に広告が保存されます。"
+  },
   "profile": {
     "title": "プロフィール",
     "editProfile": "プロフィールを編集",

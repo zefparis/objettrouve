@@ -402,6 +402,65 @@
     "alertDescription": "Get alerts when similar items are posted.",
     "createAlert": "Create alert"
   },
+  "publishNew": {
+    "lostTitle": "Lost Item",
+    "foundTitle": "Found Item",
+    "lostSubtitle": "Describe the item you lost so others can help you find it.",
+    "foundSubtitle": "Describe the item you found so its owner can contact you.",
+    "type": {
+      "label": "Listing type",
+      "lost": "Lost item",
+      "found": "Found item"
+    },
+    "title": {
+      "label": "Title",
+      "placeholder": "e.g. Black iPhone 14 Pro"
+    },
+    "description": {
+      "label": "Detailed description",
+      "placeholder": "Describe the item with as much detail as possible..."
+    },
+    "category": {
+      "label": "Category",
+      "placeholder": "Select a category"
+    },
+    "location": {
+      "label": "Location",
+      "placeholder": "e.g. Lyon Station, Paris"
+    },
+    "date": {
+      "label": "Date",
+      "placeholder": "When did you lose/find this item?"
+    },
+    "contact": {
+      "label": "Contact information",
+      "phone": "Phone number",
+      "email": "Email address",
+      "phonePlaceholder": "e.g. +33 6 12 34 56 78",
+      "emailPlaceholder": "e.g. your@email.com"
+    },
+    "image": {
+      "label": "Item photo",
+      "upload": "Upload a photo",
+      "change": "Change photo",
+      "remove": "Remove photo"
+    },
+    "submit": {
+      "publish": "Publish listing",
+      "publishing": "Publishing..."
+    },
+    "validation": {
+      "title_required": "Title is required",
+      "description_min_length": "Description must be at least 10 characters",
+      "category_required": "Category is required",
+      "location_required": "Location is required",
+      "date_required": "Date is required",
+      "email_invalid": "Email address is invalid"
+    },
+    "success": "Your listing has been published successfully!",
+    "error": "Error publishing listing",
+    "loginNotice": "You must be logged in to publish a listing. Your listing will be saved after login."
+  },
   "profile": {
     "title": "Profile",
     "editProfile": "Edit Profile",
