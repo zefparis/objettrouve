@@ -11,7 +11,7 @@ import { Separator } from "@/components/ui/separator";
 import { useToast } from "@/hooks/use-toast";
 import { useMutation } from "@tanstack/react-query";
 import { apiRequest } from "@/lib/queryClient";
-import { Shield, Key, Smartphone, Trash2, AlertTriangle } from "lucide-react";
+import { Shield, Key, Smartphone, Trash2, AlertTriangle, ArrowLeft, User } from "lucide-react";
 import Navbar from "@/components/navbar";
 import {
   AlertDialog,
@@ -24,6 +24,7 @@ import {
   AlertDialogTitle,
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
+import { Link } from "wouter";
 
 const changePasswordSchema = z.object({
   currentPassword: z.string().min(1, "Mot de passe actuel requis"),
@@ -111,6 +112,17 @@ export default function Security() {
       <Navbar />
       
       <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        {/* Back to Profile Button */}
+        <div className="mb-6">
+          <Link href="/profile">
+            <Button variant="ghost" className="flex items-center gap-2 hover:bg-gray-100 dark:hover:bg-gray-800">
+              <ArrowLeft className="w-4 h-4" />
+              <User className="w-4 h-4" />
+              <span>Retour au profil</span>
+            </Button>
+          </Link>
+        </div>
+
         <div className="mb-8">
           <h1 className="text-3xl font-bold text-gray-900 mb-2">Sécurité</h1>
           <p className="text-gray-600">

@@ -11,9 +11,10 @@ import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { useMutation } from "@tanstack/react-query";
 import { apiRequest } from "@/lib/queryClient";
-import { Settings, Bell, Eye, Globe, Moon, Sun } from "lucide-react";
+import { Settings, Bell, Eye, Globe, Moon, Sun, ArrowLeft, User } from "lucide-react";
 import Navbar from "@/components/navbar";
 import { useTranslation } from "react-i18next";
+import { Link } from "wouter";
 
 const preferencesSchema = z.object({
   language: z.string(),
@@ -101,6 +102,17 @@ export default function Preferences() {
       <Navbar />
       
       <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        {/* Back to Profile Button */}
+        <div className="mb-6">
+          <Link href="/profile">
+            <Button variant="ghost" className="flex items-center gap-2 hover:bg-gray-100 dark:hover:bg-gray-800">
+              <ArrowLeft className="w-4 h-4" />
+              <User className="w-4 h-4" />
+              <span>Retour au profil</span>
+            </Button>
+          </Link>
+        </div>
+
         <div className="mb-8">
           <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">Préférences</h1>
           <p className="text-gray-600 dark:text-gray-300">
