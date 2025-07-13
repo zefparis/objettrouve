@@ -413,39 +413,22 @@ export default function Profile() {
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <Shield className="h-5 w-5" />
-                  {t("profile.security")}
+                  Sécurité
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-6">
                 <div className="space-y-4">
                   <div className="flex items-center justify-between p-4 bg-gray-50 rounded-lg">
                     <div>
-                      <h3 className="font-medium text-gray-900">{t("profile.changePassword")}</h3>
-                      <p className="text-sm text-gray-600">{t("profile.changePasswordDesc")}</p>
+                      <h3 className="font-medium text-gray-900">Paramètres de sécurité</h3>
+                      <p className="text-sm text-gray-600">Gérez votre mot de passe et les paramètres de sécurité avancés</p>
                     </div>
-                    <Button variant="outline">
-                      {t("profile.changePassword")}
-                    </Button>
-                  </div>
-
-                  <div className="flex items-center justify-between p-4 bg-gray-50 rounded-lg">
-                    <div>
-                      <h3 className="font-medium text-gray-900">{t("profile.twoFactorAuth")}</h3>
-                      <p className="text-sm text-gray-600">{t("profile.twoFactorAuthDesc")}</p>
-                    </div>
-                    <Button variant="outline">
-                      {t("profile.enable")}
-                    </Button>
-                  </div>
-
-                  <div className="flex items-center justify-between p-4 bg-gray-50 rounded-lg">
-                    <div>
-                      <h3 className="font-medium text-gray-900">{t("profile.deleteAccount")}</h3>
-                      <p className="text-sm text-gray-600">{t("profile.deleteAccountDesc")}</p>
-                    </div>
-                    <Button variant="destructive">
-                      {t("profile.deleteAccount")}
-                    </Button>
+                    <Link href="/security">
+                      <Button>
+                        <Shield className="h-4 w-4 mr-2" />
+                        Accéder aux paramètres
+                      </Button>
+                    </Link>
                   </div>
                 </div>
               </CardContent>
@@ -458,41 +441,22 @@ export default function Profile() {
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <Settings className="h-5 w-5" />
-                  {t("profile.preferences")}
+                  Préférences
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-6">
                 <div className="space-y-4">
                   <div className="flex items-center justify-between p-4 bg-gray-50 rounded-lg">
                     <div>
-                      <h3 className="font-medium text-gray-900">{t("profile.notifications")}</h3>
-                      <p className="text-sm text-gray-600">{t("profile.notificationsDesc")}</p>
+                      <h3 className="font-medium text-gray-900">Paramètres de préférences</h3>
+                      <p className="text-sm text-gray-600">Configurez vos notifications, thème et paramètres d'affichage</p>
                     </div>
-                    <Button variant="outline">
-                      <Bell className="h-4 w-4 mr-2" />
-                      {t("profile.configure")}
-                    </Button>
-                  </div>
-
-                  <div className="flex items-center justify-between p-4 bg-gray-50 rounded-lg">
-                    <div>
-                      <h3 className="font-medium text-gray-900">{t("profile.privacy")}</h3>
-                      <p className="text-sm text-gray-600">{t("profile.privacyDesc")}</p>
-                    </div>
-                    <Button variant="outline">
-                      <Eye className="h-4 w-4 mr-2" />
-                      {t("profile.configure")}
-                    </Button>
-                  </div>
-
-                  <div className="flex items-center justify-between p-4 bg-gray-50 rounded-lg">
-                    <div>
-                      <h3 className="font-medium text-gray-900">{t("profile.language")}</h3>
-                      <p className="text-sm text-gray-600">{t("profile.languageDesc")}</p>
-                    </div>
-                    <Button variant="outline">
-                      {t("profile.configure")}
-                    </Button>
+                    <Link href="/preferences">
+                      <Button>
+                        <Settings className="h-4 w-4 mr-2" />
+                        Configurer
+                      </Button>
+                    </Link>
                   </div>
                 </div>
               </CardContent>

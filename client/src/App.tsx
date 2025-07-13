@@ -18,6 +18,8 @@ import Conversations from "@/pages/conversations";
 import HowItWorks from "@/pages/how-it-works";
 import Contact from "@/pages/contact";
 import Profile from "@/pages/profile";
+import Security from "@/pages/security";
+import Preferences from "@/pages/preferences";
 // AdminDashboard removed - consolidated into Admin component
 import Admin from "@/pages/admin";
 import AdminUsers from "@/pages/admin-users";
@@ -51,6 +53,8 @@ function Router() {
       <Route path="/conversations" component={Conversations} />
       <Route path="/dashboard" component={Dashboard} />
       <Route path="/profile" component={Profile} />
+      <Route path="/security" component={Security} />
+      <Route path="/preferences" component={Preferences} />
       <Route path="/pricing" component={Pricing} />
       <Route path="/checkout" component={Checkout} />
       <Route path="/payment-success" component={PaymentSuccess} />
