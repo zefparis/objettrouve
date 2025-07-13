@@ -130,7 +130,12 @@
     "ctaSubtitle": "Unisciti alla nostra comunità e inizia ora"
   },
   "nav": {
-    "map": "Mappa"
+    "map": "Mappa",
+    "home": "Home",
+    "search": "Cerca",
+    "publish": "Pubblica",
+    "howItWorks": "Come funziona",
+    "contact": "Contatto"
   },
   "common": {
     "viewDetails": "Vedi dettagli"
@@ -198,6 +203,9 @@
     "help": "Aiuto",
     "faq": "FAQ",
     "privacy": "Privacy",
-    "terms": "Termini"
+    "terms": "Termini",
+    "legalNotice": "Informativa Legale",
+    "privacyPolicy": "Politica sulla Privacy",
+    "termsOfUse": "Termini di Utilizzo"
   }
 }

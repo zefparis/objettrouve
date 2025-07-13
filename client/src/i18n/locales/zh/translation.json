@@ -130,7 +130,12 @@
     "ctaSubtitle": "加入我们的社区，立即开始"
   },
   "nav": {
-    "map": "地图"
+    "map": "地图",
+    "home": "首页",
+    "search": "搜索",
+    "publish": "发布",
+    "howItWorks": "使用方法",
+    "contact": "联系"
   },
   "common": {
     "viewDetails": "查看详情"
@@ -198,6 +203,9 @@
     "help": "帮助",
     "faq": "常见问题",
     "privacy": "隐私",
-    "terms": "条款"
+    "terms": "条款",
+    "legalNotice": "法律声明",
+    "privacyPolicy": "隐私政策",
+    "termsOfUse": "使用条款"
   }
 }

@@ -130,7 +130,12 @@
     "ctaSubtitle": "커뮤니티에 참여하고 지금 시작하세요"
   },
   "nav": {
-    "map": "지도"
+    "map": "지도",
+    "home": "홈",
+    "search": "검색",
+    "publish": "게시",
+    "howItWorks": "사용 방법",
+    "contact": "연락처"
   },
   "common": {
     "viewDetails": "세부 정보 보기"
@@ -198,6 +203,9 @@
     "help": "도움말",
     "faq": "자주 묻는 질문",
     "privacy": "개인정보",
-    "terms": "약관"
+    "terms": "약관",
+    "legalNotice": "법적 고지",
+    "privacyPolicy": "개인정보 보호정책",
+    "termsOfUse": "이용약관"
   }
 }

@@ -130,7 +130,12 @@
     "ctaSubtitle": "Sluit u aan bij onze community en begin nu"
   },
   "nav": {
-    "map": "Kaart"
+    "map": "Kaart",
+    "home": "Home",
+    "search": "Zoeken",
+    "publish": "Publiceren",
+    "howItWorks": "Hoe het werkt",
+    "contact": "Contact"
   },
   "common": {
     "viewDetails": "Details bekijken"
@@ -198,6 +203,9 @@
     "help": "Help",
     "faq": "FAQ",
     "privacy": "Privacy",
-    "terms": "Voorwaarden"
+    "terms": "Voorwaarden",
+    "legalNotice": "Juridische Kennisgeving",
+    "privacyPolicy": "Privacybeleid",
+    "termsOfUse": "Gebruiksvoorwaarden"
   }
 }

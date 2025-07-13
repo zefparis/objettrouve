@@ -130,7 +130,12 @@
     "ctaSubtitle": "コミュニティに参加して今すぐ始めましょう"
   },
   "nav": {
-    "map": "マップ"
+    "map": "マップ",
+    "home": "ホーム",
+    "search": "検索",
+    "publish": "投稿",
+    "howItWorks": "使い方",
+    "contact": "連絡先"
   },
   "common": {
     "viewDetails": "詳細を見る"
@@ -198,6 +203,9 @@
     "help": "ヘルプ",
     "faq": "よくある質問",
     "privacy": "プライバシー",
-    "terms": "利用規約"
+    "terms": "利用規約",
+    "legalNotice": "法的告知",
+    "privacyPolicy": "プライバシーポリシー",
+    "termsOfUse": "利用規約"
   }
 }
