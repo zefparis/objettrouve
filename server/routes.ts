@@ -220,6 +220,13 @@ export async function registerRoutes(app: Express): Promise<Server> {
           delete itemData[key];
         }
       });
+      
+      // Ensure required fields are present
+      if (!itemData.type || !itemData.title || !itemData.description || !itemData.category || !itemData.location) {
+        return res.status(400).json({ 
+          message: "Champs obligatoires manquants: type, titre, description, catégorie, et lieu sont requis" 
+        });
+      }
 
       const validatedData = insertItemSchema.parse(itemData);
       const item = await storage.createItem(validatedData);

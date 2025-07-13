@@ -23,13 +23,13 @@ import { Link } from "wouter";
 
 const publishSchema = z.object({
   type: z.enum(["lost", "found"]),
-  title: z.string().min(1, "publishNew.validation.title_required"),
-  description: z.string().min(10, "publishNew.validation.description_min_length"),
-  category: z.string().min(1, "publishNew.validation.category_required"),
-  location: z.string().min(1, "publishNew.validation.location_required"),
-  dateOccurred: z.string().min(1, "publishNew.validation.date_required"),
+  title: z.string().min(1, "Le titre est requis"),
+  description: z.string().min(10, "La description doit contenir au moins 10 caractères"),
+  category: z.string().min(1, "La catégorie est requise"),
+  location: z.string().min(1, "Le lieu est requis"),
+  dateOccurred: z.string().min(1, "La date est requise"),
   contactPhone: z.string().optional(),
-  contactEmail: z.string().email("publishNew.validation.email_invalid").optional(),
+  contactEmail: z.string().email("Email invalide").optional().or(z.literal("")),
 });
 
 type PublishFormData = z.infer<typeof publishSchema>;
@@ -90,7 +90,10 @@ export default function Publish() {
         formData.append("image", selectedFile);
       }
       
-      return await apiRequest("POST", "/api/items", formData);
+      return await apiRequest("/api/items", {
+        method: "POST",
+        body: formData,
+      });
     },
     onSuccess: () => {
       toast({
@@ -100,10 +103,20 @@ export default function Publish() {
       queryClient.invalidateQueries({ queryKey: ["/api/items"] });
       setLocation("/dashboard");
     },
-    onError: (error) => {
+    onError: (error: any) => {
+      console.error("Publication error:", error);
+      let errorMessage = t("publishNew.error");
+      
+      // Try to extract more specific error message
+      if (error.message && error.message.includes("Données invalides")) {
+        errorMessage = "Veuillez vérifier que tous les champs obligatoires sont remplis correctement.";
+      } else if (error.message && error.message.includes("Non authentifié")) {
+        errorMessage = "Vous devez être connecté pour publier une annonce.";
+      }
+      
       toast({
         title: t("common.error"),
-        description: t("publishNew.error"),
+        description: errorMessage,
         variant: "destructive",
       });
     },

@@ -61,7 +61,7 @@ export const authUsers = pgTable("auth_users", {
 // Items table for lost/found objects
 export const items = pgTable("items", {
   id: serial("id").primaryKey(),
-  userId: varchar("user_id").notNull().references(() => users.id),
+  userId: varchar("user_id").notNull().references(() => authUsers.id),
   type: varchar("type").notNull(), // 'lost' or 'found'
   title: varchar("title").notNull(),
   description: text("description").notNull(),
@@ -82,8 +82,8 @@ export const items = pgTable("items", {
 export const messages = pgTable("messages", {
   id: serial("id").primaryKey(),
   itemId: integer("item_id").notNull().references(() => items.id),
-  senderId: varchar("sender_id").notNull().references(() => users.id),
-  receiverId: varchar("receiver_id").notNull().references(() => users.id),
+  senderId: varchar("sender_id").notNull().references(() => authUsers.id),
+  receiverId: varchar("receiver_id").notNull().references(() => authUsers.id),
   content: text("content").notNull(),
   createdAt: timestamp("created_at").defaultNow(),
 });
@@ -91,7 +91,7 @@ export const messages = pgTable("messages", {
 // Orders table for purchases
 export const orders = pgTable("orders", {
   id: serial("id").primaryKey(),
-  userId: varchar("user_id").notNull().references(() => users.id),
+  userId: varchar("user_id").notNull().references(() => authUsers.id),
   stripePaymentIntentId: varchar("stripe_payment_intent_id"),
   paypalOrderId: varchar("paypal_order_id"),
   amount: integer("amount").notNull(), // in cents
@@ -127,10 +127,17 @@ export const usersRelations = relations(users, ({ many }) => ({
   orders: many(orders),
 }));
 
+export const authUsersRelations = relations(authUsers, ({ many }) => ({
+  items: many(items),
+  sentMessages: many(messages, { relationName: "sender" }),
+  receivedMessages: many(messages, { relationName: "receiver" }),
+  orders: many(orders),
+}));
+
 export const itemsRelations = relations(items, ({ one, many }) => ({
-  user: one(users, {
+  user: one(authUsers, {
     fields: [items.userId],
-    references: [users.id],
+    references: [authUsers.id],
   }),
   messages: many(messages),
 }));
@@ -140,22 +147,22 @@ export const messagesRelations = relations(messages, ({ one }) => ({
     fields: [messages.itemId],
     references: [items.id],
   }),
-  sender: one(users, {
+  sender: one(authUsers, {
     fields: [messages.senderId],
-    references: [users.id],
+    references: [authUsers.id],
     relationName: "sender",
   }),
-  receiver: one(users, {
+  receiver: one(authUsers, {
     fields: [messages.receiverId],
-    references: [users.id],
+    references: [authUsers.id],
     relationName: "receiver",
   }),
 }));
 
 export const ordersRelations = relations(orders, ({ one }) => ({
-  user: one(users, {
+  user: one(authUsers, {
     fields: [orders.userId],
-    references: [users.id],
+    references: [authUsers.id],
   }),
 }));
 
