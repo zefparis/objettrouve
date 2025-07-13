@@ -1,0 +1,489 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "search": "Rechercher",
+    "publish": "Publier",
+    "dashboard": "Tableau de bord",
+    "profile": "Profil",
+    "chat": "Messages",
+    "login": "Connexion",
+    "logout": "Déconnexion",
+    "features": "Fonctionnalités",
+    "howItWorks": "Comment ça marche",
+    "contact": "Contact",
+    "pricing": "Tarification",
+    "map": "Carte"
+  },
+  "publishNew": {
+    "type": {
+      "lost": "Objet perdu",
+      "found": "Objet trouvé"
+    },
+    "lostSubtitle": "Signaler un objet que vous avez perdu",
+    "foundSubtitle": "Signaler un objet que vous avez trouvé"
+  },
+  "pricing": {
+    "title": "Services Premium",
+    "subtitle": "Améliorez la visibilité et l'efficacité de vos annonces avec nos options à la carte",
+    "popular": "Populaire",
+    "select": "Acheter",
+    "services": {
+      "boost": {
+        "name": "Mise en avant",
+        "description": "Votre annonce apparaît en haut de la liste pendant 48h",
+        "features": {
+          "priority": "Visibilité prioritaire",
+          "highlight": "Badge visible",
+          "duration": "Durée 48h"
+        }
+      },
+      "search": {
+        "name": "Zone de recherche élargie",
+        "description": "Permet de rechercher dans un rayon étendu",
+        "features": {
+          "radius": "Rayon de 50km+",
+          "alerts": "Alertes élargies",
+          "priority": "Filtres plus puissants"
+        }
+      },
+      "verification": {
+        "name": "Badge vérifié",
+        "description": "Ajoute un badge de confiance à votre annonce",
+        "features": {
+          "badge": "Vérification email/téléphone",
+          "trust": "Annonces mises en avant",
+          "priority": "Plus de confiance"
+        }
+      },
+      "extra_images": {
+        "name": "Photos supplémentaires",
+        "description": "Ajoutez jusqu'à 5 photos en plus (0.50€ / photo)",
+        "features": {
+          "free": "3 gratuites",
+          "price": "0.50€ par photo supplémentaire",
+          "limit": "Maximum 5 en plus"
+        }
+      },
+      "contact": {
+        "name": "Transmission prioritaire",
+        "description": "Envoi prioritaire aux autorités ou gestionnaires",
+        "features": {
+          "instant": "Envoi instantané",
+          "confirmation": "Confirmation email",
+          "priority": "Accès prioritaire"
+        }
+      }
+    },
+    "payment": {
+      "title": "Choisissez un mode de paiement",
+      "description": "Sélectionnez votre méthode de paiement préférée pour"
+    }
+  },
+  "chat": {
+    "conversation": "Conversation",
+    "conversationNotFound": "Conversation non trouvée",
+    "selectValidConversation": "Veuillez sélectionner une conversation valide",
+    "backToDashboard": "Retour au tableau de bord",
+    "noMessages": "Aucun message",
+    "startConversation": "Commencez une conversation en envoyant un message",
+    "typePlaceholder": "Tapez votre message...",
+    "messageError": "Erreur lors de l'envoi du message",
+    "messageSuccess": "Message envoyé avec succès",
+    "typing": "En cours de frappe...",
+    "online": "En ligne",
+    "offline": "Hors ligne",
+    "loadingMessages": "Chargement des messages...",
+    "contactSeller": "Contacter le vendeur",
+    "contactBuyer": "Contacter l'acheteur",
+    "itemDetails": "Détails de l'objet",
+    "reportUser": "Signaler l'utilisateur",
+    "blockUser": "Bloquer l'utilisateur"
+  },
+  "dashboard": {
+    "title": "Tableau de bord",
+    "welcome": "Bienvenue, {{name}}!",
+    "overview": "Vue d'ensemble",
+    "myItems": "Mes objets",
+    "conversations": "Conversations",
+    "statistics": "Statistiques",
+    "recentActivity": "Activité récente",
+    "quickActions": "Actions rapides",
+    "publishItem": "Publier un objet",
+    "searchItems": "Rechercher des objets",
+    "viewMap": "Voir la carte",
+    "manageAccount": "Gérer le compte",
+    "noConversations": "Aucune conversation",
+    "noConversationsDesc": "Vous n'avez pas encore de conversations",
+    "active": "actives",
+    "totalItems": "Objets total",
+    "lostItems": "Objets perdus",
+    "foundItems": "Objets trouvés",
+    "activeConversations": "Conversations actives",
+    "viewsThisMonth": "Vues ce mois",
+    "successRate": "Taux de réussite",
+    "noItems": "Aucun objet",
+    "noItemsDesc": "Vous n'avez pas encore publié d'objets",
+    "createFirst": "Créer votre premier objet",
+    "itemStatus": {
+      "active": "Actif",
+      "resolved": "Résolu",
+      "expired": "Expiré"
+    },
+    "itemActions": {
+      "edit": "Modifier",
+      "delete": "Supprimer",
+      "view": "Voir",
+      "boost": "Booster",
+      "mark_resolved": "Marquer comme résolu"
+    },
+    "tabs": {
+      "overview": "Vue d'ensemble",
+      "items": "Mes objets",
+      "conversations": "Messages",
+      "statistics": "Statistiques"
+    },
+    "stats": {
+      "title": "Vos statistiques",
+      "thisMonth": "Ce mois-ci",
+      "lastMonth": "Le mois dernier",
+      "growth": "Croissance",
+      "views": "vues",
+      "messages": "messages",
+      "success": "succès"
+    },
+    "filters": {
+      "all": "Tous",
+      "active": "Actifs",
+      "resolved": "Résolus",
+      "expired": "Expirés"
+    },
+    "sort": {
+      "newest": "Plus récent",
+      "oldest": "Plus ancien",
+      "most_viewed": "Plus vus",
+      "alphabetical": "Alphabétique"
+    },
+    "confirmDelete": "Êtes-vous sûr de vouloir supprimer cet objet ?",
+    "deleteSuccess": "Objet supprimé avec succès",
+    "deleteError": "Erreur lors de la suppression",
+    "markResolvedSuccess": "Objet marqué comme résolu",
+    "markResolvedError": "Erreur lors de la mise à jour"
+  },
+  "common": {
+    "error": "Erreur",
+    "success": "Succès",
+    "loading": "Chargement..."
+  },
+  "search": {
+    "title": "Recherche d'objets",
+    "subtitle": "Recherchez parmi les objets perdus et trouvés signalés par la communauté",
+    "searchPlaceholder": "Rechercher un objet (ex: iPhone, clés, portefeuille...)",
+    "searchButton": "Rechercher",
+    "filters": "Filtres",
+    "typeFilter": "Type d'objet",
+    "categoryFilter": "Catégorie",
+    "locationFilter": "Lieu",
+    "dateFilter": "Date",
+    "sortBy": "Trier par",
+    "sortByDate": "Date",
+    "sortByRelevance": "Pertinence",
+    "sortByDistance": "Distance",
+    "noResults": "Aucun résultat trouvé",
+    "noResultsDesc": "Essayez de modifier vos critères de recherche ou de supprimer certains filtres",
+    "resultsCount": "{{count}} résultat(s) trouvé(s)",
+    "clearFilters": "Effacer les filtres",
+    "itemType": {
+      "lost": "Perdu",
+      "found": "Trouvé"
+    },
+    "all": "Tous",
+    "lost": "Perdus",
+    "found": "Trouvés",
+    "allCategories": "Toutes les catégories",
+    "allTypes": "Tous les types",
+    "advanced": "Recherche avancée",
+    "keywords": "Mots-clés",
+    "loading": "Recherche en cours...",
+    "searchTips": "Conseils de recherche",
+    "tip1": "Utilisez des mots-clés spécifiques comme 'iPhone noir' ou 'clés Toyota'",
+    "tip2": "Essayez différentes variantes : 'portable', 'téléphone', 'smartphone'",
+    "tip3": "Utilisez les filtres pour affiner votre recherche par type et catégorie"
+  },
+  "hero": {
+    "title": "Retrouvez vos objets perdus facilement",
+    "subtitle": "Plateforme communautaire pour retrouver et signaler les objets perdus et trouvés",
+    "iLostSomething": "J'ai perdu quelque chose",
+    "iFoundSomething": "J'ai trouvé quelque chose",
+    "searchPlaceholder": "Rechercher un objet perdu..."
+  },
+  "stats": {
+    "totalItems": "Objets signalés",
+    "foundItems": "Objets retrouvés",
+    "users": "Utilisateurs actifs"
+  },
+  "home": {
+    "recentItems": "Objets récents",
+    "recentItemsDesc": "Découvrez les derniers objets signalés par la communauté",
+    "viewAllItems": "Voir tous les objets",
+    "ctaTitle": "Prêt à retrouver vos objets perdus ?",
+    "ctaSubtitle": "Rejoignez notre communauté et commencez dès maintenant"
+  },
+  "nav": {
+    "map": "Carte",
+    "home": "Accueil",
+    "search": "Rechercher",
+    "publish": "Publier",
+    "howItWorks": "Comment ça marche",
+    "contact": "Contact",
+    "chat": "Messages",
+    "dashboard": "Tableau de bord"
+  },
+  "common": {
+    "viewDetails": "Voir les détails",
+    "backToHome": "Retour à l'accueil",
+    "back": "Retour"
+  },
+  "howItWorks": {
+    "title": "Comment ça marche",
+    "subtitle": "Trouvez ou signalez un objet perdu en 3 étapes simples",
+    "step1": {
+      "title": "Publiez votre annonce",
+      "description": "Décrivez votre objet perdu ou trouvé avec des détails et photos"
+    },
+    "step2": {
+      "title": "Recherchez et parcourez",
+      "description": "Explorez les annonces et utilisez nos filtres de recherche avancés"
+    },
+    "step3": {
+      "title": "Connectez-vous",
+      "description": "Contactez directement les propriétaires via notre système de messagerie"
+    }
+  },
+  "testimonials": {
+    "title": "Témoignages",
+    "subtitle": "Ce que disent nos utilisateurs",
+    "testimonial1": {
+      "name": "Marie Dubois",
+      "location": "Paris, France",
+      "content": "J'ai retrouvé mon téléphone perdu grâce à cette plateforme en seulement 2 jours ! La communauté est vraiment active et bienveillante."
+    },
+    "testimonial2": {
+      "name": "Antoine Martin",
+      "location": "Lyon, France",
+      "content": "Interface simple et efficace. J'ai pu aider quelqu'un à retrouver ses clés et c'est un sentiment formidable de rendre service."
+    },
+    "testimonial3": {
+      "name": "Sophie Leroy",
+      "location": "Marseille, France",
+      "content": "Le système de messagerie intégré est parfait pour échanger en toute sécurité. Je recommande vivement cette plateforme."
+    }
+  },
+  "categories": {
+    "title": "Catégories populaires",
+    "subtitle": "Parcourez les objets par catégorie"
+  },
+  "map": {
+    "title": "Carte interactive",
+    "subtitle": "Explorez les objets perdus et trouvés près de chez vous",
+    "interactiveMap": "Carte interactive",
+    "integration": "Intégration",
+    "viewOnMap": "Voir sur la carte",
+    "lostItems": "Objets perdus",
+    "foundItems": "Objets trouvés",
+    "totalItems": "Total des objets",
+    "fullscreen": "Plein écran"
+  },
+  "footer": {
+    "description": "Votre plateforme de confiance pour retrouver et signaler les objets perdus. Reconnectez-vous avec vos biens précieux grâce à notre communauté active.",
+    "quickLinks": "Liens rapides",
+    "support": "Support",
+    "legal": "Légal",
+    "followUs": "Suivez-nous",
+    "allRightsReserved": "Tous droits réservés.",
+    "home": "Accueil",
+    "about": "À propos",
+    "contact": "Contact",
+    "help": "Aide",
+    "faq": "FAQ",
+    "privacy": "Confidentialité",
+    "terms": "Conditions",
+    "legalNotice": "Mentions légales",
+    "privacyPolicy": "Politique de confidentialité",
+    "termsOfUse": "Conditions d'utilisation"
+  },
+  "contact": {
+    "title": "Contactez-nous",
+    "subtitle": "Nous sommes là pour vous aider. N'hésitez pas à nous contacter pour toute question ou assistance.",
+    "address": "Adresse",
+    "email": "Email",
+    "phone": "Téléphone",
+    "hours": "Heures d'ouverture",
+    "mondayFriday": "Lundi - Vendredi",
+    "saturday": "Samedi",
+    "sunday": "Dimanche",
+    "closed": "Fermé",
+    "sendMessage": "Envoyer un message",
+    "sendMessageDesc": "Remplissez le formulaire ci-dessous et nous vous répondrons dans les plus brefs délais.",
+    "name": "Nom",
+    "namePlaceholder": "Votre nom complet",
+    "emailPlaceholder": "votre@email.com",
+    "subject": "Sujet",
+    "subjectPlaceholder": "Sujet de votre message",
+    "message": "Message",
+    "messagePlaceholder": "Décrivez votre demande ou question...",
+    "sendButton": "Envoyer le message",
+    "messageSent": "Message envoyé",
+    "messageSentDesc": "Nous avons reçu votre message et vous répondrons sous peu."
+  },
+  "chat": {
+    "title": "Messages",
+    "conversationNotFound": "Conversation non trouvée",
+    "selectValidConversation": "Veuillez sélectionner une conversation valide",
+    "backToDashboard": "Retour au tableau de bord",
+    "messageError": "Erreur lors de l'envoi du message",
+    "sendMessage": "Envoyer un message",
+    "typePlaceholder": "Tapez votre message...",
+    "noMessages": "Aucun message",
+    "noMessagesDesc": "Commencez la conversation en envoyant un message",
+    "online": "En ligne",
+    "offline": "Hors ligne",
+    "lastSeen": "Vu pour la dernière fois",
+    "itemOwner": "Propriétaire de l'objet",
+    "reportUser": "Signaler l'utilisateur",
+    "blockUser": "Bloquer l'utilisateur",
+    "messageOptions": "Options du message",
+    "copyMessage": "Copier le message",
+    "deleteMessage": "Supprimer le message",
+    "editMessage": "Modifier le message",
+    "replyMessage": "Répondre au message",
+    "messageDeleted": "Message supprimé",
+    "messageEdited": "Message modifié",
+    "typing": "En train d'écrire...",
+    "conversationWith": "Conversation avec",
+    "conversationsDesc": "Gérez vos conversations sur les objets perdus et trouvés",
+    "noConversations": "Aucune conversation pour le moment",
+    "noConversationsDesc": "Commencez une conversation en contactant quelqu'un à propos de son objet perdu ou trouvé",
+    "you": "Vous",
+    "anonymousUser": "Utilisateur anonyme",
+    "startConversation": "Commencer une conversation",
+    "contactOwner": "Contacter le propriétaire",
+    "interested": "Je suis intéressé par cet objet"
+  },
+  "profile": {
+    "title": "Profil",
+    "editProfile": "Modifier le profil",
+    "saveChanges": "Enregistrer les modifications",
+    "cancel": "Annuler",
+    "profilePicture": "Photo de profil",
+    "personalInfo": "Informations personnelles",
+    "firstName": "Prénom",
+    "lastName": "Nom",
+    "email": "Email",
+    "phone": "Téléphone",
+    "location": "Localisation",
+    "bio": "Biographie",
+    "firstNamePlaceholder": "Entrez votre prénom",
+    "lastNamePlaceholder": "Entrez votre nom",
+    "phonePlaceholder": "Entrez votre numéro de téléphone",
+    "locationPlaceholder": "Entrez votre localisation",
+    "bioPlaceholder": "Parlez-nous de vous...",
+    "notProvided": "Non renseigné",
+    "memberSince": "Membre depuis",
+    "accessRestricted": "Accès restreint",
+    "loginRequired": "Vous devez être connecté pour accéder à cette page",
+    "updateSuccess": "Profil mis à jour avec succès",
+    "updateError": "Erreur lors de la mise à jour du profil",
+    "imageTooLarge": "L'image est trop volumineuse (max 5MB)",
+    "security": "Sécurité",
+    "preferences": "Préférences",
+    "changePassword": "Changer le mot de passe",
+    "changePasswordDesc": "Modifiez votre mot de passe pour sécuriser votre compte",
+    "twoFactorAuth": "Authentification à deux facteurs",
+    "twoFactorAuthDesc": "Ajoutez une couche de sécurité supplémentaire à votre compte",
+    "deleteAccount": "Supprimer le compte",
+    "deleteAccountDesc": "Supprimez définitivement votre compte et toutes vos données",
+    "enable": "Activer",
+    "notifications": "Notifications",
+    "notificationsDesc": "Gérez vos préférences de notification",
+    "privacy": "Confidentialité",
+    "privacyDesc": "Contrôlez la visibilité de vos informations",
+    "language": "Langue",
+    "languageDesc": "Choisissez votre langue préférée",
+    "configure": "Configurer",
+    "tabs": {
+      "personal": "Personnel",
+      "security": "Sécurité",
+      "preferences": "Préférences"
+    }
+  },
+  "howItWorks": {
+    "badge": "Guide d'utilisation",
+    "title": "Comment ça marche",
+    "subtitle": "Découvrez comment retrouver vos objets perdus ou aider les autres en quelques étapes simples",
+    "stepNumber": "Étape {{number}}",
+    "step1": {
+      "title": "Publier votre annonce",
+      "description": "Créez une annonce détaillée avec photos et localisation",
+      "detail1": "Ajoutez des photos de qualité",
+      "detail2": "Décrivez précisément l'objet",
+      "detail3": "Indiquez le lieu et la date"
+    },
+    "step2": {
+      "title": "Rechercher et filtrer",
+      "description": "Utilisez nos outils de recherche avancés pour trouver des correspondances",
+      "detail1": "Filtrez par catégorie et localisation",
+      "detail2": "Utilisez la recherche par mots-clés",
+      "detail3": "Consultez la carte interactive"
+    },
+    "step3": {
+      "title": "Communiquer en sécurité",
+      "description": "Contactez les propriétaires via notre système de messagerie sécurisé",
+      "detail1": "Chat intégré et sécurisé",
+      "detail2": "Notifications en temps réel",
+      "detail3": "Échangez coordonnées si nécessaire"
+    },
+    "features": {
+      "title": "Fonctionnalités principales",
+      "security": {
+        "title": "Sécurité garantie",
+        "description": "Vos données personnelles sont protégées avec un cryptage avancé"
+      },
+      "location": {
+        "title": "Géolocalisation",
+        "description": "Localisez précisément où l'objet a été perdu ou trouvé"
+      },
+      "notifications": {
+        "title": "Notifications",
+        "description": "Recevez des alertes en temps réel pour les nouveaux objets"
+      },
+      "community": {
+        "title": "Communauté",
+        "description": "Rejoignez une communauté solidaire qui s'entraide"
+      }
+    },
+    "timeline": {
+      "title": "Chronologie typique",
+      "immediate": "Immédiat",
+      "minutes": "Quelques minutes",
+      "hours": "Quelques heures",
+      "step1": {
+        "title": "Publication de l'annonce",
+        "description": "Votre annonce est publiée et visible par tous les utilisateurs"
+      },
+      "step2": {
+        "title": "Première réponse",
+        "description": "Vous recevez les premiers messages de personnes intéressées"
+      },
+      "step3": {
+        "title": "Récupération",
+        "description": "Vous récupérez votre objet ou aidez quelqu'un à retrouver le sien"
+      }
+    },
+    "cta": {
+      "title": "Prêt à commencer ?",
+      "description": "Rejoignez notre communauté et commencez à publier ou rechercher des objets perdus",
+      "publishButton": "Publier une annonce",
+      "searchButton": "Rechercher un objet"
+    }
+  }
+}
