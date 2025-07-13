@@ -29,6 +29,7 @@ export interface IStorage {
   getAuthUser(id: string): Promise<AuthUser | undefined>;
   getAuthUserByEmail(email: string): Promise<AuthUser | undefined>;
   upsertAuthUser(user: UpsertAuthUser): Promise<AuthUser>;
+  updateAuthUser(id: string, updates: Partial<UpsertAuthUser>): Promise<AuthUser | undefined>;
   
   // Item operations
   createItem(item: InsertItem): Promise<Item>;
@@ -133,10 +134,31 @@ export class DatabaseStorage implements IStorage {
       .onConflictDoUpdate({
         target: authUsers.id,
         set: {
-          ...userData,
+          // Only update non-null fields to preserve existing data
+          ...(userData.email && { email: userData.email }),
+          ...(userData.firstName !== undefined && { firstName: userData.firstName }),
+          ...(userData.lastName !== undefined && { lastName: userData.lastName }),
+          ...(userData.phone !== undefined && { phone: userData.phone }),
+          ...(userData.location !== undefined && { location: userData.location }),
+          ...(userData.bio !== undefined && { bio: userData.bio }),
+          ...(userData.profileImageUrl !== undefined && { profileImageUrl: userData.profileImageUrl }),
+          ...(userData.passwordHash && { passwordHash: userData.passwordHash }),
+          ...(userData.emailVerified !== undefined && { emailVerified: userData.emailVerified }),
           updatedAt: new Date(),
         },
       })
+      .returning();
+    return user;
+  }
+
+  async updateAuthUser(id: string, updates: Partial<UpsertAuthUser>): Promise<AuthUser | undefined> {
+    const [user] = await db
+      .update(authUsers)
+      .set({
+        ...updates,
+        updatedAt: new Date(),
+      })
+      .where(eq(authUsers.id, id))
       .returning();
     return user;
   }

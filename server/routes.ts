@@ -53,6 +53,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       
       // Store user ID in session
       req.session.userId = result.user.id;
+      req.session.user = result.user;
       
       res.json({
         message: "Compte créé avec succès",
@@ -77,6 +78,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       
       // Store user ID in session
       req.session.userId = result.user.id;
+      req.session.user = result.user;
 
       res.json({
         message: "Connexion réussie",
@@ -124,7 +126,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
   });
 
   // User profile routes
-  app.get('/api/user/profile', async (req, res) => {
+  app.get('/api/profile', async (req, res) => {
     try {
       if (!req.session.userId) {
         return res.status(401).json({ error: "Non authentifié" });
@@ -142,7 +144,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
-  app.put('/api/user/profile', upload.single('profileImage'), async (req, res) => {
+  app.put('/api/profile', upload.single('profileImage'), async (req, res) => {
     try {
       if (!req.session.userId) {
         return res.status(401).json({ error: "Non authentifié" });
@@ -157,7 +159,6 @@ export async function registerRoutes(app: Express): Promise<Server> {
         phone: phone || null,
         location: location || null,
         bio: bio || null,
-        updatedAt: new Date(),
       };
 
       // Only update profile image if a new one is uploaded
@@ -172,8 +173,14 @@ export async function registerRoutes(app: Express): Promise<Server> {
         }
       });
 
-      const updatedUser = await storage.upsertAuthUser({ id: userId, ...updates });
-      res.json(updatedUser);
+      // Update user profile using direct update instead of upsert
+      const updateResult = await storage.updateAuthUser(userId, updates);
+      
+      if (!updateResult) {
+        return res.status(404).json({ message: "Utilisateur non trouvé" });
+      }
+      
+      res.json(updateResult);
     } catch (error) {
       console.error("Error updating profile:", error);
       res.status(500).json({ message: "Erreur lors de la mise à jour du profil" });

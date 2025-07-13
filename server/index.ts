@@ -57,98 +57,10 @@ app.use((req, res, next) => {
 });
 
 (async () => {
-  // SIMPLE AUTH ROUTES - PRIORITY SETUP BEFORE OTHER ROUTES
-  app.post('/api/auth/signup', async (req, res) => {
-    try {
-      const { signUp } = await import("./simple-auth");
-      const { email, password, firstName, lastName } = req.body;
-      
-      if (!email || !password) {
-        return res.status(400).json({ message: "Email et mot de passe requis" });
-      }
+  // Routes d'authentification gérées dans routes.ts
 
-      const result = await signUp(email, password, firstName, lastName);
-      
-      if (result.success) {
-        req.session = req.session || {};
-        req.session.user = result.user;
-        res.json({
-          message: result.message,
-          user: result.user,
-        });
-      } else {
-        res.status(400).json({ message: result.message });
-      }
-    } catch (error: any) {
-      console.error("Sign up error:", error);
-      res.status(500).json({ message: "Erreur lors de l'inscription" });
-    }
-  });
-
-
-
-  app.post('/api/auth/signin', async (req, res) => {
-    try {
-      const { signIn } = await import("./simple-auth");
-      const { email, password } = req.body;
-      
-      if (!email || !password) {
-        return res.status(400).json({ message: "Email et mot de passe requis" });
-      }
-
-      const result = await signIn(email, password);
-      
-      if (result.success) {
-        // Store user in session for authentication
-        req.session = req.session || {};
-        req.session.user = result.user;
-        
-        res.json({
-          message: result.message,
-          user: result.user,
-        });
-      } else {
-        res.status(400).json({ message: result.message });
-      }
-    } catch (error: any) {
-      console.error("Sign in error:", error);
-      res.status(500).json({ message: "Erreur lors de la connexion" });
-    }
-  });
-
-  // Route pour récupérer l'utilisateur authentifié
-  app.get('/api/auth/user', async (req, res) => {
-    try {
-      if (!req.session?.user) {
-        return res.status(401).json({ error: "Non authentifié" });
-      }
-      
-      res.json(req.session.user);
-    } catch (error) {
-      console.error("Get user error:", error);
-      res.status(500).json({ error: "Erreur serveur" });
-    }
-  });
-
-  // Route pour déconnexion
-  app.post('/api/auth/signout', async (req, res) => {
-    try {
-      if (req.session) {
-        req.session.destroy((err) => {
-          if (err) {
-            console.error("Session destruction error:", err);
-            return res.status(500).json({ error: "Erreur lors de la déconnexion" });
-          }
-          res.json({ message: "Déconnexion réussie" });
-        });
-      } else {
-        res.json({ message: "Déconnexion réussie" });
-      }
-    } catch (error) {
-      console.error("Signout error:", error);
-      res.status(500).json({ error: "Erreur serveur" });
-    }
-  });
+  // Serve uploaded files statically
+  app.use('/uploads', express.static('uploads'));
 
   // Setup API routes after direct auth routes
   const server = await registerRoutes(app);
