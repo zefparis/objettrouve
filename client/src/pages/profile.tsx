@@ -1,8 +1,7 @@
-import { useState, useEffect } from "react";
-import { useTranslation } from "react-i18next";
+import { useState, useRef, useEffect } from "react";
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
-import { useToast } from "@/hooks/use-toast";
-import { apiRequest } from "@/lib/queryClient";
+import { useTranslation } from "react-i18next";
+import { useAuth } from "@/hooks/useAuth";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import { Button } from "@/components/ui/button";
@@ -11,186 +10,145 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
-import { Separator } from "@/components/ui/separator";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import {
-  User,
+import { useToast } from "@/hooks/use-toast";
+import { apiRequest } from "@/lib/queryClient";
+import { 
+  User, 
+  Camera, 
+  Edit, 
+  Save, 
+  X,
   Mail,
   Phone,
   MapPin,
   Calendar,
-  Edit3,
-  Camera,
-  Save,
-  X,
   Shield,
+  Settings,
   Bell,
-  Globe,
   Eye,
-  Lock,
+  EyeOff,
   ArrowLeft,
-  Home
+  Home,
+  Upload,
+  Trash2
 } from "lucide-react";
 import { Link } from "wouter";
 
 export default function Profile() {
   const { t } = useTranslation();
-  // Use the standard API endpoint for user data
-  const { data: user, isLoading, isError } = useQuery({
-    queryKey: ['/api/auth/user'],
-    retry: false,
-  });
-  
-  const isAuthenticated = !!user;
+  const { user, isAuthenticated, isLoading } = useAuth();
   const { toast } = useToast();
   const queryClient = useQueryClient();
+  const fileInputRef = useRef<HTMLInputElement>(null);
+
   const [isEditing, setIsEditing] = useState(false);
-  const [profileData, setProfileData] = useState({
+  const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
     email: "",
     phone: "",
     location: "",
-    bio: "",
-    profileImage: ""
+    bio: ""
   });
-  const [selectedFile, setSelectedFile] = useState<File | null>(null);
-  const [previewUrl, setPreviewUrl] = useState<string | null>(null);
+  const [profileImage, setProfileImage] = useState<File | null>(null);
+  const [profileImagePreview, setProfileImagePreview] = useState<string | null>(null);
 
-  // In development, allow access to profile without authentication
-  const isDevelopment = import.meta.env.DEV;
-
-  // Redirect to login if not authenticated (except in development)
-  useEffect(() => {
-    if (!isDevelopment && !isLoading && !isAuthenticated) {
-      toast({
-        title: t("common.unauthorized"),
-        description: t("common.loginRequired"),
-        variant: "destructive",
-      });
-      setTimeout(() => {
-        window.location.href = "/api/login";
-      }, 500);
-      return;
-    }
-  }, [isAuthenticated, isLoading, toast, t, isDevelopment]);
-
-  // Load user data
+  // Initialize form data when user data is available
   useEffect(() => {
     if (user) {
-      setProfileData({
+      setFormData({
         firstName: user.firstName || "",
         lastName: user.lastName || "",
         email: user.email || "",
         phone: user.phone || "",
         location: user.location || "",
-        bio: user.bio || "",
-        profileImage: user.profileImageUrl || ""
+        bio: user.bio || ""
       });
     }
   }, [user]);
 
-  // Handle file selection
-  const handleFileSelect = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const file = event.target.files?.[0];
-    if (file) {
-      // Check file type
-      if (!file.type.startsWith('image/')) {
-        toast({
-          title: t("profile.imageError"),
-          description: t("profile.imageTypeError"),
-          variant: "destructive",
-        });
-        return;
-      }
-      
-      // Check file size (5MB limit)
-      if (file.size > 5 * 1024 * 1024) {
-        toast({
-          title: t("profile.imageError"),
-          description: t("profile.imageSizeError"),
-          variant: "destructive",
-        });
-        return;
-      }
-
-      setSelectedFile(file);
-      
-      // Create preview URL
-      const url = URL.createObjectURL(file);
-      setPreviewUrl(url);
-    }
-  };
-
-  // Update profile mutation
   const updateProfileMutation = useMutation({
-    mutationFn: async (formData: FormData) => {
-      const res = await fetch("/api/profile", {
-        method: "PUT",
-        body: formData,
-        credentials: "include",
+    mutationFn: async (data: any) => {
+      const formDataToSend = new FormData();
+      
+      // Add text fields
+      Object.keys(data).forEach(key => {
+        if (key !== 'profileImage' && data[key]) {
+          formDataToSend.append(key, data[key]);
+        }
       });
       
-      if (!res.ok) {
-        const text = (await res.text()) || res.statusText;
-        throw new Error(`${res.status}: ${text}`);
+      // Add profile image if selected
+      if (profileImage) {
+        formDataToSend.append('profileImage', profileImage);
       }
       
-      return await res.json();
+      return await apiRequest("PUT", "/api/profile", formDataToSend);
     },
-    onSuccess: (data) => {
+    onSuccess: () => {
       toast({
-        title: t("profile.updateSuccess"),
-        description: t("profile.updateSuccessDesc"),
+        title: t("common.success"),
+        description: t("profile.updateSuccess"),
       });
       setIsEditing(false);
-      setSelectedFile(null);
-      setPreviewUrl(null);
-      
-      // Update profile data with the returned data to preserve photo
-      setProfileData(prev => ({
-        ...prev,
-        firstName: data.firstName || "",
-        lastName: data.lastName || "",
-        email: data.email || "",
-        phone: data.phone || "",
-        location: data.location || "",
-        bio: data.bio || "",
-        profileImage: data.profileImageUrl || prev.profileImage
-      }));
-      
+      setProfileImage(null);
+      setProfileImagePreview(null);
       queryClient.invalidateQueries({ queryKey: ["/api/auth/user"] });
     },
     onError: (error) => {
       toast({
-        title: t("profile.updateError"),
-        description: t("profile.updateErrorDesc"),
+        title: t("common.error"),
+        description: t("profile.updateError"),
         variant: "destructive",
       });
     },
   });
 
-  // Handle form submission
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    
-    const formData = new FormData();
-    formData.append("firstName", profileData.firstName);
-    formData.append("lastName", profileData.lastName);
-    formData.append("email", profileData.email);
-    formData.append("phone", profileData.phone);
-    formData.append("location", profileData.location);
-    formData.append("bio", profileData.bio);
-    
-    if (selectedFile) {
-      formData.append("profileImage", selectedFile);
+  const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (file) {
+      if (file.size > 5 * 1024 * 1024) { // 5MB limit
+        toast({
+          title: t("common.error"),
+          description: t("profile.imageTooLarge"),
+          variant: "destructive",
+        });
+        return;
+      }
+      
+      setProfileImage(file);
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        setProfileImagePreview(e.target?.result as string);
+      };
+      reader.readAsDataURL(file);
     }
-    
+  };
+
+  const handleSubmit = () => {
     updateProfileMutation.mutate(formData);
   };
 
-  // Show loading state while checking authentication (except in development)
-  if (!isDevelopment && isLoading) {
+  const handleCancel = () => {
+    setIsEditing(false);
+    setProfileImage(null);
+    setProfileImagePreview(null);
+    // Reset form data
+    if (user) {
+      setFormData({
+        firstName: user.firstName || "",
+        lastName: user.lastName || "",
+        email: user.email || "",
+        phone: user.phone || "",
+        location: user.location || "",
+        bio: user.bio || ""
+      });
+    }
+  };
+
+  // Show loading state while checking authentication
+  if (isLoading) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center">
         <div className="text-center">
@@ -201,346 +159,348 @@ export default function Profile() {
     );
   }
 
-  // Don't render profile if not authenticated (except in development)
-  if (!isDevelopment && !isAuthenticated) {
-    return null;
+  // Redirect to login if not authenticated
+  if (!isAuthenticated) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-2xl font-bold text-gray-900 mb-4">{t("profile.accessRestricted")}</h1>
+          <p className="text-gray-600 mb-6">{t("profile.loginRequired")}</p>
+          <Link href="/">
+            <Button>{t("nav.home")}</Button>
+          </Link>
+        </div>
+      </div>
+    );
   }
 
-  // Mock data for development
-  const mockUser = {
-    firstName: "Jean",
-    lastName: "Dupont",
-    email: "jean.dupont@email.com",
-    phone: "+33 1 23 45 67 89",
-    location: "Paris, France",
-    bio: "Passionné de technologie et d'innovation",
-    profileImageUrl: "",
-    createdAt: "2024-01-15T10:00:00Z",
-    itemsCount: 12,
-    foundItemsCount: 5,
-    conversationsCount: 8
+  const getUserInitials = () => {
+    const firstName = user?.firstName || "";
+    const lastName = user?.lastName || "";
+    return `${firstName.charAt(0)}${lastName.charAt(0)}`.toUpperCase();
   };
-
-  const displayUser = user || (isDevelopment ? mockUser : null);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <Navbar />
       
-      <div className="container mx-auto px-4 py-8">
-        <div className="max-w-4xl mx-auto">
-          {/* Bouton retour à l'accueil */}
-          <div className="mb-6">
-            <Link href="/">
-              <Button variant="ghost" className="flex items-center gap-2 hover:bg-gray-100 dark:hover:bg-gray-800">
-                <ArrowLeft className="w-4 h-4" />
-                <Home className="w-4 h-4" />
-                <span>{t("nav.home")}</span>
-              </Button>
-            </Link>
-          </div>
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        {/* Back to Home Button */}
+        <div className="mb-6">
+          <Link href="/">
+            <Button variant="ghost" className="flex items-center gap-2 hover:bg-gray-100 dark:hover:bg-gray-800">
+              <ArrowLeft className="w-4 h-4" />
+              <Home className="w-4 h-4" />
+              <span>{t("nav.home")}</span>
+            </Button>
+          </Link>
+        </div>
 
-          {/* Profile Header */}
-          <Card className="mb-8 overflow-hidden">
-            <div className="h-32 bg-gradient-to-r from-blue-500 to-purple-600"></div>
-            <CardContent className="relative pb-6">
-              <div className="flex flex-col md:flex-row md:items-end md:space-x-6 -mt-16">
-                {/* Profile Picture */}
-                <div className="relative">
-                  <Avatar className="w-32 h-32 border-4 border-white shadow-lg">
-                    <AvatarImage 
-                      src={previewUrl || profileData.profileImage || displayUser?.profileImageUrl} 
-                      alt={t("profile.profilePicture")}
+        {/* Profile Header */}
+        <Card className="bg-white shadow-lg border-0 mb-8">
+          <CardContent className="p-8">
+            <div className="flex flex-col md:flex-row items-center md:items-start gap-6">
+              {/* Profile Picture */}
+              <div className="relative">
+                <Avatar className="h-32 w-32">
+                  <AvatarImage 
+                    src={profileImagePreview || user?.profileImageUrl || ""} 
+                    alt={t("profile.profilePicture")}
+                  />
+                  <AvatarFallback className="text-2xl font-bold">
+                    {getUserInitials()}
+                  </AvatarFallback>
+                </Avatar>
+                {isEditing && (
+                  <div className="absolute bottom-0 right-0">
+                    <Button
+                      size="sm"
+                      variant="outline"
+                      className="rounded-full w-10 h-10 p-0 bg-white border-2 border-gray-300 hover:bg-gray-50"
+                      onClick={() => fileInputRef.current?.click()}
+                    >
+                      <Camera className="h-4 w-4" />
+                    </Button>
+                    <input
+                      ref={fileInputRef}
+                      type="file"
+                      accept="image/*"
+                      onChange={handleImageChange}
+                      className="hidden"
                     />
-                    <AvatarFallback className="text-2xl font-bold bg-gradient-to-br from-blue-500 to-purple-600 text-white">
-                      {displayUser?.firstName?.[0]}{displayUser?.lastName?.[0]}
-                    </AvatarFallback>
-                  </Avatar>
-                  
-                  {isEditing && (
-                    <div className="absolute bottom-0 right-0">
-                      <Label htmlFor="profileImage" className="cursor-pointer">
-                        <div className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center text-white shadow-lg hover:bg-blue-700 transition-colors">
-                          <Camera className="w-5 h-5" />
-                        </div>
-                      </Label>
-                      <Input
-                        id="profileImage"
-                        type="file"
-                        accept="image/*"
-                        onChange={handleFileSelect}
-                        className="hidden"
-                      />
-                    </div>
-                  )}
-                </div>
+                  </div>
+                )}
+              </div>
 
-                {/* Profile Info */}
-                <div className="mt-4 md:mt-0 flex-1">
-                  <div className="flex flex-col md:flex-row md:items-center md:justify-between">
-                    <div>
-                      <h1 className="text-3xl font-bold text-gray-900">
-                        {displayUser?.firstName} {displayUser?.lastName}
-                      </h1>
-                      <p className="text-gray-600 mt-1">{displayUser?.email}</p>
-                      <div className="flex items-center mt-2 text-sm text-gray-500">
-                        <Calendar className="w-4 h-4 mr-1" />
-                        {t("profile.memberSince")} {new Date(displayUser?.createdAt || "2024-01-01").toLocaleDateString()}
+              {/* Profile Info */}
+              <div className="flex-1 text-center md:text-left">
+                <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                  <div>
+                    <h1 className="text-3xl font-bold text-gray-900 mb-2">
+                      {user?.firstName && user?.lastName 
+                        ? `${user.firstName} ${user.lastName}`
+                        : user?.email?.split('@')[0]
+                      }
+                    </h1>
+                    <p className="text-gray-600 mb-2">{user?.email}</p>
+                    {user?.location && (
+                      <div className="flex items-center gap-1 text-gray-500 justify-center md:justify-start">
+                        <MapPin className="h-4 w-4" />
+                        <span>{user.location}</span>
                       </div>
-                    </div>
-                    
-                    <div className="mt-4 md:mt-0">
-                      {!isEditing ? (
+                    )}
+                  </div>
+                  <div className="flex gap-2 mt-4 md:mt-0">
+                    {!isEditing ? (
+                      <Button onClick={() => setIsEditing(true)} className="flex items-center gap-2">
+                        <Edit className="h-4 w-4" />
+                        {t("profile.editProfile")}
+                      </Button>
+                    ) : (
+                      <div className="flex gap-2">
                         <Button 
-                          onClick={() => setIsEditing(true)}
-                          className="bg-blue-600 hover:bg-blue-700"
+                          onClick={handleSubmit}
+                          disabled={updateProfileMutation.isPending}
+                          className="flex items-center gap-2"
                         >
-                          <Edit3 className="w-4 h-4 mr-2" />
-                          {t("profile.editProfile")}
+                          <Save className="h-4 w-4" />
+                          {t("profile.saveChanges")}
                         </Button>
-                      ) : (
-                        <div className="flex space-x-2">
-                          <Button 
-                            onClick={handleSubmit}
-                            disabled={updateProfileMutation.isPending}
-                            className="bg-green-600 hover:bg-green-700"
-                          >
-                            <Save className="w-4 h-4 mr-2" />
-                            {t("profile.save")}
-                          </Button>
-                          <Button 
-                            onClick={() => {
-                              setIsEditing(false);
-                              setSelectedFile(null);
-                              setPreviewUrl(null);
-                            }}
-                            variant="outline"
-                          >
-                            <X className="w-4 h-4 mr-2" />
-                            {t("profile.cancel")}
-                          </Button>
-                        </div>
-                      )}
-                    </div>
+                        <Button 
+                          variant="outline" 
+                          onClick={handleCancel}
+                          className="flex items-center gap-2"
+                        >
+                          <X className="h-4 w-4" />
+                          {t("profile.cancel")}
+                        </Button>
+                      </div>
+                    )}
                   </div>
                 </div>
-              </div>
 
-              {/* Stats */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8">
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-blue-600">{displayUser?.itemsCount || 0}</div>
-                  <div className="text-sm text-gray-600">{t("profile.itemsPosted")}</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-green-600">{displayUser?.foundItemsCount || 0}</div>
-                  <div className="text-sm text-gray-600">{t("profile.itemsFound")}</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-purple-600">{displayUser?.conversationsCount || 0}</div>
-                  <div className="text-sm text-gray-600">{t("profile.conversations")}</div>
+                {/* Member Since */}
+                <div className="flex items-center gap-2 text-sm text-gray-500 justify-center md:justify-start">
+                  <Calendar className="h-4 w-4" />
+                  <span>{t("profile.memberSince")} {new Date(user?.createdAt || Date.now()).toLocaleDateString()}</span>
                 </div>
               </div>
-            </CardContent>
-          </Card>
+            </div>
+          </CardContent>
+        </Card>
 
-          {/* Profile Details */}
-          <Tabs defaultValue="personal" className="space-y-6">
-            <TabsList className="grid w-full grid-cols-3">
-              <TabsTrigger value="personal">{t("profile.personalInfo")}</TabsTrigger>
-              <TabsTrigger value="preferences">{t("profile.preferences")}</TabsTrigger>
-              <TabsTrigger value="privacy">{t("profile.privacy")}</TabsTrigger>
-            </TabsList>
+        {/* Profile Tabs */}
+        <Tabs defaultValue="personal" className="space-y-6">
+          <TabsList className="grid w-full grid-cols-3 bg-white shadow-sm">
+            <TabsTrigger value="personal" className="flex items-center gap-2">
+              <User className="h-4 w-4" />
+              {t("profile.tabs.personal")}
+            </TabsTrigger>
+            <TabsTrigger value="security" className="flex items-center gap-2">
+              <Shield className="h-4 w-4" />
+              {t("profile.tabs.security")}
+            </TabsTrigger>
+            <TabsTrigger value="preferences" className="flex items-center gap-2">
+              <Settings className="h-4 w-4" />
+              {t("profile.tabs.preferences")}
+            </TabsTrigger>
+          </TabsList>
 
-            {/* Personal Information */}
-            <TabsContent value="personal">
-              <Card>
-                <CardHeader>
-                  <CardTitle className="flex items-center">
-                    <User className="w-5 h-5 mr-2" />
-                    {t("profile.personalInfo")}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-6">
-                  <form onSubmit={handleSubmit} className="space-y-4">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                      <div>
-                        <Label htmlFor="firstName">{t("profile.firstName")}</Label>
-                        <Input
-                          id="firstName"
-                          value={profileData.firstName}
-                          onChange={(e) => setProfileData({...profileData, firstName: e.target.value})}
-                          disabled={!isEditing}
-                        />
-                      </div>
-                      <div>
-                        <Label htmlFor="lastName">{t("profile.lastName")}</Label>
-                        <Input
-                          id="lastName"
-                          value={profileData.lastName}
-                          onChange={(e) => setProfileData({...profileData, lastName: e.target.value})}
-                          disabled={!isEditing}
-                        />
-                      </div>
-                    </div>
-
-                    <div>
-                      <Label htmlFor="email">{t("profile.email")}</Label>
+          {/* Personal Information Tab */}
+          <TabsContent value="personal" className="space-y-6">
+            <Card className="bg-white shadow-lg border-0">
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2">
+                  <User className="h-5 w-5" />
+                  {t("profile.personalInfo")}
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="space-y-2">
+                    <Label htmlFor="firstName">{t("profile.firstName")}</Label>
+                    {isEditing ? (
                       <Input
-                        id="email"
-                        type="email"
-                        value={profileData.email}
-                        onChange={(e) => setProfileData({...profileData, email: e.target.value})}
-                        disabled={!isEditing}
+                        id="firstName"
+                        value={formData.firstName}
+                        onChange={(e) => setFormData({...formData, firstName: e.target.value})}
+                        placeholder={t("profile.firstNamePlaceholder")}
                       />
-                    </div>
+                    ) : (
+                      <p className="text-gray-900 py-2">{user?.firstName || t("profile.notProvided")}</p>
+                    )}
+                  </div>
 
-                    <div>
-                      <Label htmlFor="phone">{t("profile.phone")}</Label>
+                  <div className="space-y-2">
+                    <Label htmlFor="lastName">{t("profile.lastName")}</Label>
+                    {isEditing ? (
+                      <Input
+                        id="lastName"
+                        value={formData.lastName}
+                        onChange={(e) => setFormData({...formData, lastName: e.target.value})}
+                        placeholder={t("profile.lastNamePlaceholder")}
+                      />
+                    ) : (
+                      <p className="text-gray-900 py-2">{user?.lastName || t("profile.notProvided")}</p>
+                    )}
+                  </div>
+
+                  <div className="space-y-2">
+                    <Label htmlFor="email">{t("profile.email")}</Label>
+                    <div className="flex items-center gap-2">
+                      <Mail className="h-4 w-4 text-gray-500" />
+                      <p className="text-gray-900">{user?.email}</p>
+                    </div>
+                  </div>
+
+                  <div className="space-y-2">
+                    <Label htmlFor="phone">{t("profile.phone")}</Label>
+                    {isEditing ? (
                       <Input
                         id="phone"
-                        value={profileData.phone}
-                        onChange={(e) => setProfileData({...profileData, phone: e.target.value})}
-                        disabled={!isEditing}
+                        value={formData.phone}
+                        onChange={(e) => setFormData({...formData, phone: e.target.value})}
+                        placeholder={t("profile.phonePlaceholder")}
                       />
-                    </div>
+                    ) : (
+                      <div className="flex items-center gap-2">
+                        <Phone className="h-4 w-4 text-gray-500" />
+                        <p className="text-gray-900">{user?.phone || t("profile.notProvided")}</p>
+                      </div>
+                    )}
+                  </div>
 
-                    <div>
-                      <Label htmlFor="location">{t("profile.location")}</Label>
+                  <div className="space-y-2 md:col-span-2">
+                    <Label htmlFor="location">{t("profile.location")}</Label>
+                    {isEditing ? (
                       <Input
                         id="location"
-                        value={profileData.location}
-                        onChange={(e) => setProfileData({...profileData, location: e.target.value})}
-                        disabled={!isEditing}
+                        value={formData.location}
+                        onChange={(e) => setFormData({...formData, location: e.target.value})}
+                        placeholder={t("profile.locationPlaceholder")}
                       />
-                    </div>
+                    ) : (
+                      <div className="flex items-center gap-2">
+                        <MapPin className="h-4 w-4 text-gray-500" />
+                        <p className="text-gray-900">{user?.location || t("profile.notProvided")}</p>
+                      </div>
+                    )}
+                  </div>
 
-                    <div>
-                      <Label htmlFor="bio">{t("profile.bio")}</Label>
+                  <div className="space-y-2 md:col-span-2">
+                    <Label htmlFor="bio">{t("profile.bio")}</Label>
+                    {isEditing ? (
                       <textarea
                         id="bio"
-                        value={profileData.bio}
-                        onChange={(e) => setProfileData({...profileData, bio: e.target.value})}
-                        disabled={!isEditing}
-                        rows={3}
-                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 disabled:bg-gray-50"
+                        value={formData.bio}
+                        onChange={(e) => setFormData({...formData, bio: e.target.value})}
                         placeholder={t("profile.bioPlaceholder")}
+                        rows={4}
+                        className="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500 resize-none"
                       />
-                    </div>
-                  </form>
-                </CardContent>
-              </Card>
-            </TabsContent>
-
-            {/* Preferences */}
-            <TabsContent value="preferences">
-              <Card>
-                <CardHeader>
-                  <CardTitle className="flex items-center">
-                    <Globe className="w-5 h-5 mr-2" />
-                    {t("profile.preferences")}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-6">
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center space-x-3">
-                      <Bell className="w-5 h-5 text-gray-500" />
-                      <div>
-                        <p className="font-medium">{t("profile.notifications")}</p>
-                        <p className="text-sm text-gray-500">{t("profile.notificationsDesc")}</p>
-                      </div>
-                    </div>
-                    <Badge variant="outline">{t("profile.enabled")}</Badge>
+                    ) : (
+                      <p className="text-gray-900 py-2">{user?.bio || t("profile.notProvided")}</p>
+                    )}
                   </div>
+                </div>
+              </CardContent>
+            </Card>
+          </TabsContent>
 
-                  <Separator />
-
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center space-x-3">
-                      <Globe className="w-5 h-5 text-gray-500" />
-                      <div>
-                        <p className="font-medium">{t("profile.language")}</p>
-                        <p className="text-sm text-gray-500">{t("profile.languageDesc")}</p>
-                      </div>
+          {/* Security Tab */}
+          <TabsContent value="security" className="space-y-6">
+            <Card className="bg-white shadow-lg border-0">
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2">
+                  <Shield className="h-5 w-5" />
+                  {t("profile.security")}
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-6">
+                <div className="space-y-4">
+                  <div className="flex items-center justify-between p-4 bg-gray-50 rounded-lg">
+                    <div>
+                      <h3 className="font-medium text-gray-900">{t("profile.changePassword")}</h3>
+                      <p className="text-sm text-gray-600">{t("profile.changePasswordDesc")}</p>
                     </div>
-                    <Badge variant="outline">{t("profile.currentLanguage")}</Badge>
-                  </div>
-
-                  <Separator />
-
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center space-x-3">
-                      <Eye className="w-5 h-5 text-gray-500" />
-                      <div>
-                        <p className="font-medium">{t("profile.visibility")}</p>
-                        <p className="text-sm text-gray-500">{t("profile.visibilityDesc")}</p>
-                      </div>
-                    </div>
-                    <Badge variant="outline">{t("profile.public")}</Badge>
-                  </div>
-                </CardContent>
-              </Card>
-            </TabsContent>
-
-            {/* Privacy & Security */}
-            <TabsContent value="privacy">
-              <Card>
-                <CardHeader>
-                  <CardTitle className="flex items-center">
-                    <Shield className="w-5 h-5 mr-2" />
-                    {t("profile.privacy")}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-6">
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center space-x-3">
-                      <Lock className="w-5 h-5 text-gray-500" />
-                      <div>
-                        <p className="font-medium">{t("profile.changePassword")}</p>
-                        <p className="text-sm text-gray-500">{t("profile.changePasswordDesc")}</p>
-                      </div>
-                    </div>
-                    <Button variant="outline" size="sm">
-                      {t("profile.change")}
+                    <Button variant="outline">
+                      {t("profile.changePassword")}
                     </Button>
                   </div>
 
-                  <Separator />
-
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center space-x-3">
-                      <Shield className="w-5 h-5 text-gray-500" />
-                      <div>
-                        <p className="font-medium">{t("profile.twoFactor")}</p>
-                        <p className="text-sm text-gray-500">{t("profile.twoFactorDesc")}</p>
-                      </div>
+                  <div className="flex items-center justify-between p-4 bg-gray-50 rounded-lg">
+                    <div>
+                      <h3 className="font-medium text-gray-900">{t("profile.twoFactorAuth")}</h3>
+                      <p className="text-sm text-gray-600">{t("profile.twoFactorAuthDesc")}</p>
                     </div>
-                    <Button variant="outline" size="sm">
+                    <Button variant="outline">
                       {t("profile.enable")}
                     </Button>
                   </div>
 
-                  <Separator />
-
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center space-x-3">
-                      <User className="w-5 h-5 text-gray-500" />
-                      <div>
-                        <p className="font-medium">{t("profile.dataExport")}</p>
-                        <p className="text-sm text-gray-500">{t("profile.dataExportDesc")}</p>
-                      </div>
+                  <div className="flex items-center justify-between p-4 bg-gray-50 rounded-lg">
+                    <div>
+                      <h3 className="font-medium text-gray-900">{t("profile.deleteAccount")}</h3>
+                      <p className="text-sm text-gray-600">{t("profile.deleteAccountDesc")}</p>
                     </div>
-                    <Button variant="outline" size="sm">
-                      {t("profile.export")}
+                    <Button variant="destructive">
+                      {t("profile.deleteAccount")}
                     </Button>
                   </div>
-                </CardContent>
-              </Card>
-            </TabsContent>
-          </Tabs>
-        </div>
-      </div>
+                </div>
+              </CardContent>
+            </Card>
+          </TabsContent>
 
+          {/* Preferences Tab */}
+          <TabsContent value="preferences" className="space-y-6">
+            <Card className="bg-white shadow-lg border-0">
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2">
+                  <Settings className="h-5 w-5" />
+                  {t("profile.preferences")}
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-6">
+                <div className="space-y-4">
+                  <div className="flex items-center justify-between p-4 bg-gray-50 rounded-lg">
+                    <div>
+                      <h3 className="font-medium text-gray-900">{t("profile.notifications")}</h3>
+                      <p className="text-sm text-gray-600">{t("profile.notificationsDesc")}</p>
+                    </div>
+                    <Button variant="outline">
+                      <Bell className="h-4 w-4 mr-2" />
+                      {t("profile.configure")}
+                    </Button>
+                  </div>
+
+                  <div className="flex items-center justify-between p-4 bg-gray-50 rounded-lg">
+                    <div>
+                      <h3 className="font-medium text-gray-900">{t("profile.privacy")}</h3>
+                      <p className="text-sm text-gray-600">{t("profile.privacyDesc")}</p>
+                    </div>
+                    <Button variant="outline">
+                      <Eye className="h-4 w-4 mr-2" />
+                      {t("profile.configure")}
+                    </Button>
+                  </div>
+
+                  <div className="flex items-center justify-between p-4 bg-gray-50 rounded-lg">
+                    <div>
+                      <h3 className="font-medium text-gray-900">{t("profile.language")}</h3>
+                      <p className="text-sm text-gray-600">{t("profile.languageDesc")}</p>
+                    </div>
+                    <Button variant="outline">
+                      {t("profile.configure")}
+                    </Button>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </TabsContent>
+        </Tabs>
+      </div>
+      
       <Footer />
     </div>
   );
