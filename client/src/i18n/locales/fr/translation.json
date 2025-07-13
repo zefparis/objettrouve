@@ -226,7 +226,25 @@
     "recentItemsDesc": "Découvrez les derniers objets signalés par la communauté",
     "viewAllItems": "Voir tous les objets",
     "ctaTitle": "Prêt à retrouver vos objets perdus ?",
-    "ctaSubtitle": "Rejoignez notre communauté et commencez dès maintenant"
+    "ctaSubtitle": "Rejoignez notre communauté et commencez dès maintenant",
+    "publishAd": "Publier une annonce",
+    "premium": {
+      "badge": "Services Premium",
+      "title": "Optimisez vos recherches",
+      "subtitle": "Découvrez nos services premium pour améliorer vos chances de retrouver vos objets",
+      "pricing": "Tarification flexible",
+      "pricingDesc": "Consultez nos tarifs adaptés à vos besoins",
+      "viewPricing": "Voir les tarifs",
+      "paymentSystem": "Paiement sécurisé",
+      "paymentSystemDesc": "Système de paiement fiable et sécurisé",
+      "viewCheckout": "Voir le checkout",
+      "adminDashboard": "Tableau de bord admin",
+      "adminDashboardDesc": "Interface d'administration complète",
+      "viewAdmin": "Voir l'admin",
+      "paymentConfirm": "Confirmation de paiement",
+      "paymentConfirmDesc": "Validez vos transactions en toute sécurité",
+      "viewConfirm": "Voir la confirmation"
+    }
   },
   "common": {
     "viewDetails": "Voir les détails",
@@ -270,7 +288,17 @@
   },
   "categories": {
     "title": "Catégories populaires",
-    "subtitle": "Parcourez les objets par catégorie"
+    "subtitle": "Parcourez les objets par catégorie",
+    "phones": "Téléphones",
+    "wallets": "Portefeuilles",
+    "glasses": "Lunettes",
+    "computers": "Ordinateurs",
+    "keys": "Clés",
+    "jewelry": "Bijoux",
+    "clothing": "Vêtements",
+    "bags": "Sacs",
+    "documents": "Documents",
+    "other": "Autres"
   },
   "map": {
     "title": "Carte interactive",
