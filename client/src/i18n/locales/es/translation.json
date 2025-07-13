@@ -167,5 +167,9 @@
       "location": "Sevilla, España",
       "content": "El sistema de mensajería integrado es perfecto para comunicarse de forma segura. Recomiendo mucho esta plataforma."
     }
+  },
+  "categories": {
+    "title": "Categorías populares",
+    "subtitle": "Explora objetos por categoría"
   }
 }

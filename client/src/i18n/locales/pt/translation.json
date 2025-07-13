@@ -167,5 +167,9 @@
       "location": "Belo Horizonte, Brasil",
       "content": "O sistema de mensagens integrado é perfeito para comunicação segura. Recomendo muito esta plataforma."
     }
+  },
+  "categories": {
+    "title": "Categorias populares",
+    "subtitle": "Navegar itens por categoria"
   }
 }

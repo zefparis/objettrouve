@@ -167,5 +167,9 @@
       "location": "Hamburg, Deutschland",
       "content": "Das integrierte Nachrichtensystem ist perfekt für sichere Kommunikation. Ich empfehle diese Plattform sehr."
     }
+  },
+  "categories": {
+    "title": "Beliebte Kategorien",
+    "subtitle": "Gegenstände nach Kategorie durchsuchen"
   }
 }

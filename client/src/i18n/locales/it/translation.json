@@ -167,5 +167,9 @@
       "location": "Napoli, Italia",
       "content": "Il sistema di messaggistica integrato è perfetto per comunicare in sicurezza. Consiglio vivamente questa piattaforma."
     }
+  },
+  "categories": {
+    "title": "Categorie popolari",
+    "subtitle": "Sfoglia oggetti per categoria"
   }
 }

@@ -167,5 +167,9 @@
       "location": "Utrecht, Nederland",
       "content": "Het geïntegreerde berichtensysteem is perfect voor veilige communicatie. Ik beveel dit platform ten zeerste aan."
     }
+  },
+  "categories": {
+    "title": "Populaire categorieën",
+    "subtitle": "Blader door items per categorie"
   }
 }

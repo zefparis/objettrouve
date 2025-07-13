@@ -167,5 +167,9 @@
       "location": "Marseille, France",
       "content": "Le système de messagerie intégré est parfait pour échanger en toute sécurité. Je recommande vivement cette plateforme."
     }
+  },
+  "categories": {
+    "title": "Catégories populaires",
+    "subtitle": "Parcourez les objets par catégorie"
   }
 }

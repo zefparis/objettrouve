@@ -167,5 +167,9 @@
       "location": "London, UK",
       "content": "The integrated messaging system is perfect for safe communication. I highly recommend this platform."
     }
+  },
+  "categories": {
+    "title": "Popular categories",
+    "subtitle": "Browse items by category"
   }
 }
