@@ -125,7 +125,9 @@
   "home": {
     "recentItems": "最近物品",
     "recentItemsDesc": "发现社区报告的最新物品",
-    "viewAllItems": "查看所有物品"
+    "viewAllItems": "查看所有物品",
+    "ctaTitle": "准备找回您丢失的物品了吗？",
+    "ctaSubtitle": "加入我们的社区，立即开始"
   },
   "nav": {
     "map": "地图"

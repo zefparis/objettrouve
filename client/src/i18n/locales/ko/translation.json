@@ -125,7 +125,9 @@
   "home": {
     "recentItems": "최근 물건",
     "recentItemsDesc": "커뮤니티에서 신고한 최신 물건들을 발견하세요",
-    "viewAllItems": "모든 항목 보기"
+    "viewAllItems": "모든 항목 보기",
+    "ctaTitle": "분실된 물건을 찾을 준비가 되셨나요?",
+    "ctaSubtitle": "커뮤니티에 참여하고 지금 시작하세요"
   },
   "nav": {
     "map": "지도"

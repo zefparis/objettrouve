@@ -125,7 +125,9 @@
   "home": {
     "recentItems": "Objets récents",
     "recentItemsDesc": "Découvrez les derniers objets signalés par la communauté",
-    "viewAllItems": "Voir tous les objets"
+    "viewAllItems": "Voir tous les objets",
+    "ctaTitle": "Prêt à retrouver vos objets perdus ?",
+    "ctaSubtitle": "Rejoignez notre communauté et commencez dès maintenant"
   },
   "nav": {
     "map": "Carte"

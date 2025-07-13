@@ -125,7 +125,9 @@
   "home": {
     "recentItems": "Recente items",
     "recentItemsDesc": "Ontdek de nieuwste items gerapporteerd door de community",
-    "viewAllItems": "Alle items bekijken"
+    "viewAllItems": "Alle items bekijken",
+    "ctaTitle": "Klaar om uw verloren items te vinden?",
+    "ctaSubtitle": "Sluit u aan bij onze community en begin nu"
   },
   "nav": {
     "map": "Kaart"

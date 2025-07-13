@@ -125,7 +125,9 @@
   "home": {
     "recentItems": "最近のアイテム",
     "recentItemsDesc": "コミュニティによって報告された最新のアイテムを発見",
-    "viewAllItems": "すべてのアイテムを見る"
+    "viewAllItems": "すべてのアイテムを見る",
+    "ctaTitle": "紛失したアイテムを見つける準備はできていますか？",
+    "ctaSubtitle": "コミュニティに参加して今すぐ始めましょう"
   },
   "nav": {
     "map": "マップ"
