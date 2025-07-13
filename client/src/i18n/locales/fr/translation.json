@@ -15,12 +15,63 @@
     "map": "Carte"
   },
   "publishNew": {
+    "lostTitle": "Objet perdu",
+    "foundTitle": "Objet trouvé",
+    "lostSubtitle": "Décrivez l'objet que vous avez perdu pour que d'autres puissent vous aider à le retrouver.",
+    "foundSubtitle": "Décrivez l'objet que vous avez trouvé pour que son propriétaire puisse vous contacter.",
     "type": {
+      "label": "Type d'annonce",
       "lost": "Objet perdu",
       "found": "Objet trouvé"
     },
-    "lostSubtitle": "Signaler un objet que vous avez perdu",
-    "foundSubtitle": "Signaler un objet que vous avez trouvé"
+    "title": {
+      "label": "Titre",
+      "placeholder": "Ex: iPhone 14 Pro noir"
+    },
+    "description": {
+      "label": "Description détaillée",
+      "placeholder": "Décrivez l'objet avec le plus de détails possible..."
+    },
+    "category": {
+      "label": "Catégorie",
+      "placeholder": "Sélectionnez une catégorie"
+    },
+    "location": {
+      "label": "Lieu",
+      "placeholder": "Ex: Gare de Lyon, Paris"
+    },
+    "date": {
+      "label": "Date",
+      "placeholder": "Quand avez-vous perdu/trouvé cet objet ?"
+    },
+    "contact": {
+      "label": "Informations de contact",
+      "phone": "Numéro de téléphone",
+      "email": "Adresse email",
+      "phonePlaceholder": "Ex: 06 12 34 56 78",
+      "emailPlaceholder": "Ex: votre@email.com"
+    },
+    "image": {
+      "label": "Photo de l'objet",
+      "upload": "Télécharger une photo",
+      "change": "Changer la photo",
+      "remove": "Supprimer la photo"
+    },
+    "submit": {
+      "publish": "Publier l'annonce",
+      "publishing": "Publication en cours..."
+    },
+    "validation": {
+      "title_required": "Le titre est requis",
+      "description_min_length": "La description doit contenir au moins 10 caractères",
+      "category_required": "La catégorie est requise",
+      "location_required": "Le lieu est requis",
+      "date_required": "La date est requise",
+      "email_invalid": "L'adresse email n'est pas valide"
+    },
+    "success": "Votre annonce a été publiée avec succès !",
+    "error": "Erreur lors de la publication de l'annonce",
+    "loginNotice": "Vous devez être connecté pour publier une annonce. Votre annonce sera enregistrée après la connexion."
   },
   "pricing": {
     "title": "Services Premium",
@@ -80,24 +131,42 @@
     }
   },
   "chat": {
-    "conversation": "Conversation",
+    "title": "Messages",
     "conversationNotFound": "Conversation non trouvée",
     "selectValidConversation": "Veuillez sélectionner une conversation valide",
     "backToDashboard": "Retour au tableau de bord",
-    "noMessages": "Aucun message",
-    "startConversation": "Commencez une conversation en envoyant un message",
-    "typePlaceholder": "Tapez votre message...",
     "messageError": "Erreur lors de l'envoi du message",
-    "messageSuccess": "Message envoyé avec succès",
-    "typing": "En cours de frappe...",
+    "sendMessage": "Envoyer un message",
+    "typePlaceholder": "Tapez votre message...",
+    "noMessages": "Aucun message",
+    "noMessagesDesc": "Commencez la conversation en envoyant un message",
     "online": "En ligne",
     "offline": "Hors ligne",
-    "loadingMessages": "Chargement des messages...",
-    "contactSeller": "Contacter le vendeur",
-    "contactBuyer": "Contacter l'acheteur",
-    "itemDetails": "Détails de l'objet",
+    "lastSeen": "Vu pour la dernière fois",
+    "itemOwner": "Propriétaire de l'objet",
     "reportUser": "Signaler l'utilisateur",
-    "blockUser": "Bloquer l'utilisateur"
+    "blockUser": "Bloquer l'utilisateur",
+    "messageOptions": "Options du message",
+    "copyMessage": "Copier le message",
+    "deleteMessage": "Supprimer le message",
+    "editMessage": "Modifier le message",
+    "replyMessage": "Répondre au message",
+    "messageDeleted": "Message supprimé",
+    "messageEdited": "Message modifié",
+    "typing": "En train d'écrire...",
+    "conversationWith": "Conversation avec",
+    "conversationsDesc": "Gérez vos conversations sur les objets perdus et trouvés",
+    "noConversations": "Aucune conversation pour le moment",
+    "noConversationsDesc": "Commencez une conversation en contactant quelqu'un à propos de son objet perdu ou trouvé",
+    "you": "Vous",
+    "anonymousUser": "Utilisateur anonyme",
+    "startConversation": "Commencer une conversation",
+    "contactOwner": "Contacter le propriétaire",
+    "interested": "Je suis intéressé par cet objet",
+    "conversation": "Conversation",
+    "loadingMessages": "Chargement des messages...",
+    "itemDetails": "Détails de l'objet",
+    "messageSentDesc": "Votre message a été envoyé avec succès"
   },
   "dashboard": {
     "title": "Tableau de bord",
@@ -170,9 +239,9 @@
     "markResolvedError": "Erreur lors de la mise à jour"
   },
   "common": {
-    "error": "Erreur",
-    "success": "Succès",
-    "loading": "Chargement..."
+    "viewDetails": "Voir les détails",
+    "backToHome": "Retour à l'accueil",
+    "back": "Retour"
   },
   "search": {
     "title": "Recherche d'objets",
@@ -276,25 +345,74 @@
       "totalRevenue": "Revenus totaux"
     }
   },
-  "common": {
-    "viewDetails": "Voir les détails",
-    "backToHome": "Retour à l'accueil",
-    "back": "Retour"
-  },
   "howItWorks": {
+    "badge": "Guide d'utilisation",
     "title": "Comment ça marche",
-    "subtitle": "Trouvez ou signalez un objet perdu en 3 étapes simples",
+    "subtitle": "Découvrez comment retrouver vos objets perdus ou aider les autres en quelques étapes simples",
+    "stepNumber": "Étape {{number}}",
     "step1": {
-      "title": "Publiez votre annonce",
-      "description": "Décrivez votre objet perdu ou trouvé avec des détails et photos"
+      "title": "Publier votre annonce",
+      "description": "Créez une annonce détaillée avec photos et localisation",
+      "detail1": "Ajoutez des photos de qualité",
+      "detail2": "Décrivez précisément l'objet",
+      "detail3": "Indiquez le lieu et la date"
     },
     "step2": {
-      "title": "Recherchez et parcourez",
-      "description": "Explorez les annonces et utilisez nos filtres de recherche avancés"
+      "title": "Rechercher et filtrer",
+      "description": "Utilisez nos outils de recherche avancés pour trouver des correspondances",
+      "detail1": "Filtrez par catégorie et localisation",
+      "detail2": "Utilisez la recherche par mots-clés",
+      "detail3": "Consultez la carte interactive"
     },
     "step3": {
-      "title": "Connectez-vous",
-      "description": "Contactez directement les propriétaires via notre système de messagerie"
+      "title": "Communiquer en sécurité",
+      "description": "Contactez les propriétaires via notre système de messagerie sécurisé",
+      "detail1": "Chat intégré et sécurisé",
+      "detail2": "Notifications en temps réel",
+      "detail3": "Échangez coordonnées si nécessaire"
+    },
+    "features": {
+      "title": "Fonctionnalités principales",
+      "security": {
+        "title": "Sécurité garantie",
+        "description": "Vos données personnelles sont protégées avec un cryptage avancé"
+      },
+      "location": {
+        "title": "Géolocalisation",
+        "description": "Localisez précisément où l'objet a été perdu ou trouvé"
+      },
+      "notifications": {
+        "title": "Notifications",
+        "description": "Recevez des alertes en temps réel pour les nouveaux objets"
+      },
+      "community": {
+        "title": "Communauté",
+        "description": "Rejoignez une communauté solidaire qui s'entraide"
+      }
+    },
+    "timeline": {
+      "title": "Chronologie typique",
+      "immediate": "Immédiat",
+      "minutes": "Quelques minutes",
+      "hours": "Quelques heures",
+      "step1": {
+        "title": "Publication de l'annonce",
+        "description": "Votre annonce est publiée et visible par tous les utilisateurs"
+      },
+      "step2": {
+        "title": "Première réponse",
+        "description": "Vous recevez les premiers messages de personnes intéressées"
+      },
+      "step3": {
+        "title": "Récupération",
+        "description": "Vous récupérez votre objet ou aidez quelqu'un à retrouver le sien"
+      }
+    },
+    "cta": {
+      "title": "Prêt à commencer ?",
+      "description": "Rejoignez notre communauté et commencez à publier ou rechercher des objets perdus",
+      "publishButton": "Publier une annonce",
+      "searchButton": "Rechercher un objet"
     }
   },
   "testimonials": {
@@ -383,44 +501,6 @@
     "messageSent": "Message envoyé",
     "messageSentDesc": "Nous avons reçu votre message et vous répondrons sous peu."
   },
-  "chat": {
-    "title": "Messages",
-    "conversationNotFound": "Conversation non trouvée",
-    "selectValidConversation": "Veuillez sélectionner une conversation valide",
-    "backToDashboard": "Retour au tableau de bord",
-    "messageError": "Erreur lors de l'envoi du message",
-    "sendMessage": "Envoyer un message",
-    "typePlaceholder": "Tapez votre message...",
-    "noMessages": "Aucun message",
-    "noMessagesDesc": "Commencez la conversation en envoyant un message",
-    "online": "En ligne",
-    "offline": "Hors ligne",
-    "lastSeen": "Vu pour la dernière fois",
-    "itemOwner": "Propriétaire de l'objet",
-    "reportUser": "Signaler l'utilisateur",
-    "blockUser": "Bloquer l'utilisateur",
-    "messageOptions": "Options du message",
-    "copyMessage": "Copier le message",
-    "deleteMessage": "Supprimer le message",
-    "editMessage": "Modifier le message",
-    "replyMessage": "Répondre au message",
-    "messageDeleted": "Message supprimé",
-    "messageEdited": "Message modifié",
-    "typing": "En train d'écrire...",
-    "conversationWith": "Conversation avec",
-    "conversationsDesc": "Gérez vos conversations sur les objets perdus et trouvés",
-    "noConversations": "Aucune conversation pour le moment",
-    "noConversationsDesc": "Commencez une conversation en contactant quelqu'un à propos de son objet perdu ou trouvé",
-    "you": "Vous",
-    "anonymousUser": "Utilisateur anonyme",
-    "startConversation": "Commencer une conversation",
-    "contactOwner": "Contacter le propriétaire",
-    "interested": "Je suis intéressé par cet objet",
-    "conversation": "Conversation",
-    "loadingMessages": "Chargement des messages...",
-    "itemDetails": "Détails de l'objet",
-    "messageSentDesc": "Votre message a été envoyé avec succès"
-  },
   "itemDetail": {
     "description": "Description",
     "lostOn": "Perdu le",
@@ -450,65 +530,6 @@
     "similarItems": "Objets similaires",
     "alertDescription": "Recevez des alertes lorsque des objets similaires sont publiés.",
     "createAlert": "Créer une alerte"
-  },
-  "publishNew": {
-    "lostTitle": "Objet perdu",
-    "foundTitle": "Objet trouvé",
-    "lostSubtitle": "Décrivez l'objet que vous avez perdu pour que d'autres puissent vous aider à le retrouver.",
-    "foundSubtitle": "Décrivez l'objet que vous avez trouvé pour que son propriétaire puisse vous contacter.",
-    "type": {
-      "label": "Type d'annonce",
-      "lost": "Objet perdu",
-      "found": "Objet trouvé"
-    },
-    "title": {
-      "label": "Titre",
-      "placeholder": "Ex: iPhone 14 Pro noir"
-    },
-    "description": {
-      "label": "Description détaillée",
-      "placeholder": "Décrivez l'objet avec le plus de détails possible..."
-    },
-    "category": {
-      "label": "Catégorie",
-      "placeholder": "Sélectionnez une catégorie"
-    },
-    "location": {
-      "label": "Lieu",
-      "placeholder": "Ex: Gare de Lyon, Paris"
-    },
-    "date": {
-      "label": "Date",
-      "placeholder": "Quand avez-vous perdu/trouvé cet objet ?"
-    },
-    "contact": {
-      "label": "Informations de contact",
-      "phone": "Numéro de téléphone",
-      "email": "Adresse email",
-      "phonePlaceholder": "Ex: 06 12 34 56 78",
-      "emailPlaceholder": "Ex: votre@email.com"
-    },
-    "image": {
-      "label": "Photo de l'objet",
-      "upload": "Télécharger une photo",
-      "change": "Changer la photo",
-      "remove": "Supprimer la photo"
-    },
-    "submit": {
-      "publish": "Publier l'annonce",
-      "publishing": "Publication en cours..."
-    },
-    "validation": {
-      "title_required": "Le titre est requis",
-      "description_min_length": "La description doit contenir au moins 10 caractères",
-      "category_required": "La catégorie est requise",
-      "location_required": "Le lieu est requis",
-      "date_required": "La date est requise",
-      "email_invalid": "L'adresse email n'est pas valide"
-    },
-    "success": "Votre annonce a été publiée avec succès !",
-    "error": "Erreur lors de la publication de l'annonce",
-    "loginNotice": "Vous devez être connecté pour publier une annonce. Votre annonce sera enregistrée après la connexion."
   },
   "profile": {
     "title": "Profil",
@@ -555,76 +576,6 @@
       "personal": "Personnel",
       "security": "Sécurité",
       "preferences": "Préférences"
-    }
-  },
-  "howItWorks": {
-    "badge": "Guide d'utilisation",
-    "title": "Comment ça marche",
-    "subtitle": "Découvrez comment retrouver vos objets perdus ou aider les autres en quelques étapes simples",
-    "stepNumber": "Étape {{number}}",
-    "step1": {
-      "title": "Publier votre annonce",
-      "description": "Créez une annonce détaillée avec photos et localisation",
-      "detail1": "Ajoutez des photos de qualité",
-      "detail2": "Décrivez précisément l'objet",
-      "detail3": "Indiquez le lieu et la date"
-    },
-    "step2": {
-      "title": "Rechercher et filtrer",
-      "description": "Utilisez nos outils de recherche avancés pour trouver des correspondances",
-      "detail1": "Filtrez par catégorie et localisation",
-      "detail2": "Utilisez la recherche par mots-clés",
-      "detail3": "Consultez la carte interactive"
-    },
-    "step3": {
-      "title": "Communiquer en sécurité",
-      "description": "Contactez les propriétaires via notre système de messagerie sécurisé",
-      "detail1": "Chat intégré et sécurisé",
-      "detail2": "Notifications en temps réel",
-      "detail3": "Échangez coordonnées si nécessaire"
-    },
-    "features": {
-      "title": "Fonctionnalités principales",
-      "security": {
-        "title": "Sécurité garantie",
-        "description": "Vos données personnelles sont protégées avec un cryptage avancé"
-      },
-      "location": {
-        "title": "Géolocalisation",
-        "description": "Localisez précisément où l'objet a été perdu ou trouvé"
-      },
-      "notifications": {
-        "title": "Notifications",
-        "description": "Recevez des alertes en temps réel pour les nouveaux objets"
-      },
-      "community": {
-        "title": "Communauté",
-        "description": "Rejoignez une communauté solidaire qui s'entraide"
-      }
-    },
-    "timeline": {
-      "title": "Chronologie typique",
-      "immediate": "Immédiat",
-      "minutes": "Quelques minutes",
-      "hours": "Quelques heures",
-      "step1": {
-        "title": "Publication de l'annonce",
-        "description": "Votre annonce est publiée et visible par tous les utilisateurs"
-      },
-      "step2": {
-        "title": "Première réponse",
-        "description": "Vous recevez les premiers messages de personnes intéressées"
-      },
-      "step3": {
-        "title": "Récupération",
-        "description": "Vous récupérez votre objet ou aidez quelqu'un à retrouver le sien"
-      }
-    },
-    "cta": {
-      "title": "Prêt à commencer ?",
-      "description": "Rejoignez notre communauté et commencez à publier ou rechercher des objets perdus",
-      "publishButton": "Publier une annonce",
-      "searchButton": "Rechercher un objet"
     }
   },
   "itemManagement": {
